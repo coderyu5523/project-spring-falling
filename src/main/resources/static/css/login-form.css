@@ -1,0 +1,75 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+    padding: 10px;
+}
+
+.login-form {
+    width: 600px;
+    height: 450px;
+    padding: 60px 130px 30px 130px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd; /* 아래 선만 추가 */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3F3FFF;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form .options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login-form .options a {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-around; /* 가운데 정렬 */
+    margin-top: 20px;
+}
+
+.social-login button {
+    background-color: transparent; /* 배경색을 투명으로 설정 */
+    display: inline-block; /* 인라인 블록으로 설정 */
+}
+
+.social-login button img {
+    width: 40px;
+    height: 40px;
+    display: block; /* 이미지를 블록 요소로 설정 */
+}
+
+.remember-box {
+    font-size: 13px;
+}
+
+.button-group {
+    display: flex;
+    gap: 0; /* 버튼 사이의 간격을 제거 */
+}
+
+.input-font{
+    font-size: 12px;
+}

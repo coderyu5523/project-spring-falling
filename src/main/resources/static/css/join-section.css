@@ -1,0 +1,118 @@
+.btn {
+    border-radius: 0 !important;
+}
+
+.join-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.join-header {
+    margin-bottom: 2%;
+}
+
+.join-card {
+    width: 400px;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.join-button {
+    height: 46px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.kakao-btn {
+    background-color: #FFEB00;
+    border: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.kakao-login-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.kakao-login-btn {
+    background-color: #FFEB00;
+    border: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.kakao-login-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.naver-btn {
+    background-color: #1EC800;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.naver-login-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.naver-login-btn {
+    background-color: #1EC800;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.naver-login-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.email-signup-btn {
+    height: 46px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    text-decoration: none;
+    background-color: #3F3FFF; /* Bootstrap primary color */
+    border: none;
+    width: 100%;
+}
+
+.section-font{
+    font-size: 13px;
+}
