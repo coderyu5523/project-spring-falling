@@ -39,7 +39,7 @@
 .container.my-ticket {
     padding: 20px;
     margin: 20px auto;
-    max-width: 55%;
+    /*max-width: 55%;*/
     position: relative;
 }
 

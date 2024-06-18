@@ -15,6 +15,8 @@
 @import url(song-chart.css);
 @import url(song-genre.css);
 
+/* album */
+@import url(album-detail.css);
 
 /* subscription  */
 @import url(subscription-list.css);

@@ -1,35 +1,39 @@
 {{>layout/header}}
 
 <!-- login form start -->
-<div class="login-container">
-    <form class="login-form">
-        <input class="input-font" type="text" placeholder="아이디(이메일)" required>
-        <input class="input-font" type="password" placeholder="비밀번호" required>
-        <br>
+<div class="main-container mt-4">
+    <div class="main-login">
+        <div class="login-container">
+            <form class="login-form" action="/login" method="post" enctype="application/x-www-form-urlencoded">
+                <input class="input-font" type="text" placeholder="아이디(이메일)" required>
+                <input class="input-font" type="password" placeholder="비밀번호" required>
+                <br>
 
-        <div class="remember-box">
-            <input type="checkbox" id="remember-id">
-            <label for="remember-id">아이디 저장</label>
+                <div class="remember-box">
+                    <input type="checkbox" id="remember-id">
+                    <label for="remember-id">아이디 저장</label>
+                </div>
+                <br>
+                <button type="submit">로그인</button>
+                <div class="options">
+                    <div>
+                        <a href="#">아이디 찾기</a>
+                        <span style="font-size: 12px;">|</span>
+                        <a href="#">비밀번호 찾기</a>
+                    </div>
+                    <div>
+                        <a href="/join">회원가입</a>
+                    </div>
+                </div>
+                <div class="social-login">
+                    <div class="button-group">
+                        <button type="button"><img src="../images/btn_login_naver.png" alt="naver"></button>
+                        <button type="button"><img src="../images/btn_login_kakao.png" alt="kakao"></button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <br>
-        <button type="submit">로그인</button>
-        <div class="options">
-            <div>
-                <a href="#">아이디 찾기</a>
-                <span style="font-size: 12px;">|</span>
-                <a href="#">비밀번호 찾기</a>
-            </div>
-            <div>
-                <a href="#">회원가입</a>
-            </div>
-        </div>
-        <div class="social-login">
-            <div class="button-group">
-                <button type="button"><img src="../images/btn_login_naver.png" alt="naver"></button>
-                <button type="button"><img src="../images/btn_login_kakao.png" alt="kakao"></button>
-            </div>
-        </div>
-    </form>
+    </div>
 </div>
 <!-- login form end -->
 

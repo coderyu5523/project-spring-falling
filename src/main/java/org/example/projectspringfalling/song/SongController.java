@@ -2,12 +2,13 @@ package org.example.projectspringfalling.song;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class SongController {
 
-    @GetMapping("/song-detail")
-    public String songDetail() {
+    @GetMapping("/songs/{id}")
+    public String songDetail(@PathVariable Integer id) {
         return "song/song-detail";
     }
 
@@ -16,8 +17,8 @@ public class SongController {
         return "index";
     }
 
-    @GetMapping("/playlist")
-    public String playlist() {
+    @GetMapping("/playlists/{id}")
+    public String playlist(@PathVariable Integer id) {
         return "song/playlist";
     }
 
@@ -26,10 +27,7 @@ public class SongController {
         return "search";
     }
 
-    @GetMapping("/song-list")
-    public String songList() {
-        return "song/song-list";
-    }
+
 
     @GetMapping("/song-chart")
     public String songChart() {
