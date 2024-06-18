@@ -1,11 +1,16 @@
 package org.example.projectspringfalling.song;
 
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+@RequiredArgsConstructor
 @Controller
 public class SongController {
+    private final SongService songService;
+    private final HttpSession session;
 
     @GetMapping("/songs/{id}")
     public String songDetail(@PathVariable Integer id) {
@@ -26,7 +31,6 @@ public class SongController {
     public String search() {
         return "search";
     }
-
 
 
     @GetMapping("/song-chart")

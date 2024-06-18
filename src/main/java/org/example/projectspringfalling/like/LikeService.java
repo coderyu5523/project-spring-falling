@@ -1,10 +1,10 @@
-package org.example.projectspringfalling.song;
+package org.example.projectspringfalling.like;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
-public class SongService {
-    private final SongRepository songRepository;
+public class LikeService {
+    private final LikeRepository likeRepository;
 }
