@@ -2,6 +2,11 @@
 
 @import url(header.css);
 @import url(footer.css);
+/* user */
 @import url(login-form.css);
 @import url(join-section.css);
 @import url(join-form.css);
+
+/* song  */
+@import url(song-detail.css);
+@import url(index.css);

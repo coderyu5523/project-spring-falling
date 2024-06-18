@@ -1,0 +1,122 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: grid;
+    justify-content: center;
+    background-size: 100% 100%;
+}
+
+.main-contents {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.badge-area {
+    display: flex;
+    align-items: center;
+    margin: 40px 50px 10px 25px;
+}
+
+.badge-song-cover {
+    margin-right: 20px;
+}
+
+.album-cover {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+.badge-song-detail {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-song-info {
+    position: relative;
+    top: -60px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-song-info p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.badge-song-info .title {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #333333;
+    text-decoration: none;
+}
+
+.song-info div b {
+    margin-right: 30px;
+}
+
+.title a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.artist a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.album a {
+    color: #727272;
+    text-decoration: none;
+}
+
+.badge-song-info .artist,
+.album {
+    font-weight: normal;
+}
+
+.icons {
+    display: flex;
+    margin-left: 20px;
+}
+
+.icons .btn-add-like {
+    color: #000000;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.icons .btn-add-playlist {
+    color: #000000;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.icons .btn-add-list {
+    color: #000000;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.song-info {
+    overflow: hidden;
+    white-space: pre-line;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.lyrics {
+    text-align: left;
+}
