@@ -1,0 +1,261 @@
+{{>layout/header}}
+
+<div class="main-container mt-4">
+    <div class="main-ticket">
+
+
+        <div class="tabs">
+            <div class="tab active" onclick="activateTab(this)">일반</div>
+            <div class="tab" onclick="activateTab(this)">T혜택</div>
+            <div class="tab" onclick="activateTab(this)">제휴</div>
+            <div class="tab" onclick="activateTab(this)">나의 이용권</div>
+            <div class="tab" onclick="activateTab(this)">쿠폰함</div>
+        </div>
+
+        <div class="ticket-container first">
+            <img src="../images/ticket/첫달100.png" alt="첫 달 100원 이미지">
+            <div class="content first">
+                <div class="title-img">(첫 구매) 무제한 듣기 정기결제</div>
+                <div>
+                    <span class="price">정가 8,000원</span>
+                    <span style="color: white;">100원</span>
+                </div>
+                <button class="image-button">구매</button>
+            </div>
+
+        </div>
+
+        <div class="ticket-container split">
+            <div class="left-box">
+                <div class="header">무제한 듣기</div>
+                <div class="subheader">기기제한 없음, 무제한 스트리밍</div>
+            </div>
+            <div class="separator"></div>
+
+            <div class="right-box">
+                <table class="plan-table">
+                    <tr>
+                        <td>
+                            <div class="plan-title">정기결제</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 8,000원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">7,900원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">T멤버십 최소 100원 6개월</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 7,900원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price" style="color: red;">100원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">1개월 이용권</div>
+                        </td>
+                        <td>
+                            <!-- Empty cell for alignment -->
+                        </td>
+                        <td>
+                            <span class="discounted-price">8,000원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">12개월 이용권 15% 할인</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 96,000원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">81,600원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="ticket-container split">
+            <div class="left-box">
+                <div class="header">모바일 무제한 듣기</div>
+                <div class="subheader">모바일 전용, 무제한 스트리밍</div>
+            </div>
+            <div class="separator"></div>
+            <div class="right-box">
+                <table class="plan-table">
+                    <tr>
+                        <td>
+                            <div class="plan-title">정기결제</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 7,000원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">76,900원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">T멤버십 최소 100원 6개월</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 6,900원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">100원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">1개월 이용권</div>
+                        </td>
+                        <td>
+                            <!-- Empty cell for alignment -->
+                        </td>
+                        <td>
+                            <div class="discounted-price">7,000원</div>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">12개월 이용권 15% 할인</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 84,000원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">71,400원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>    </div>
+
+        <div class="ticket-container split">
+            <div class="left-box">
+                <div class="header">무제한 듣기+오프라인 재생</div>
+                <div class="subheader">기기제한 없음, 무제한 스트리밍, 오프라인 재생</div>
+            </div>
+            <div class="separator"></div>
+            <div class="right-box">
+                <table class="plan-table">
+                    <tr>
+                        <td>
+                            <div class="plan-title">정기결제</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 11,000원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">10,900원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">T멤버십 최소 100원 6개월</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 10,900원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">100원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">1개월 이용권</div>
+                        </td>
+                        <td>
+                            <!-- Empty cell for alignment -->
+                        </td>
+                        <td>
+                            <div class="discounted-price">11,000원</div>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="plan-title">12개월 이용권 15% 할인</div>
+                        </td>
+                        <td>
+                            <span class="original-price">정가 132,000원</span>
+                        </td>
+                        <td>
+                            <span class="discounted-price">112,200원</span>
+                        </td>
+                        <td>
+                            <button class="plan-button">구매</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="notice_container">
+            <div>
+                <b>이용권 유의사항</b>
+            </div>
+            <br>
+            <div class="notice_content">300회 듣기 이용권은 결제일로부터 1개월의 사용기간을 기준으로 하는 월 단위 상품으로, 1개월 경과 시 잔여 횟수는 자동 소멸됩니다.<br>
+                300회 듣기 이용권은 1분 이상 재생 시 1회 차감 됩니다. (단, 1분미만 곡인 경우 감상 완료 후 차감 됩니다.)<br>
+                모바일 300회/무제한 듣기 이용권은 결제일로부터 1개월의 사용기간을 기준으로 하는 월 단위 상품으로, FLO APP을 지원하는 스마트폰 및 태블릿에서 사용하실 수 있습니다.<br>
+                300회/무제한 듣기 이용권은 결제일로부터 1개월의 사용기간을 기준으로 하는 월 단위 상품으로, FLO APP을 지원하는 스마트 폰 및 태블릿과 AI 스피커 및 B tv, PC에서도 사용하실 수 있습니다.<br>
+                무제한 듣기+오프라인 재생의 오프라인 파일 저장 및 재생 기능은 인증된 모바일 디바이스 1대에서 가능하며, 오프라인 재생 기능을 통해 데이터 연결 없이 음악을 감상 할 수 있습니다.<br>
+                무제한 듣기+오프라인 재생의 오프라인 파일 저장 및 재생 기능은 FLO 모바일 앱에서만 사용이 가능하며, PC용 플레이어, 웨어러블 디바이스, AI 스피커 등의 환경에서는 지원하지 않습니다.<br>
+                T멤버십 혜택(할인/포인트 적립)은 결제가의 최대 30%까지, T플러스포인트사용은 T멤버십 할인이 적용 된 금액에서 최소 결제가 110원(vat 포함)을 제외한 금액의 최대 100%까지 적용 가능합니다. T멤버십 혜택의 잔여 횟수는 이월되지 않으며, 해가 바뀌면 수동으로 T멤버십 재적용을 해야 하는 점 유의하시기 바랍니다.<br>
+                T멤버십 제휴 계약이 종료 또는 변경되는 경우 제휴 서비스 혜택을 받을 수 없거나 혜택의 내용 및 종류 등이 변경 될 수 있습니다.<br>
+                그 외 T멤버십 관련 상세 내용은 T멤버십 APP에서 확인하실 수 있습니다.<br>
+                네이버페이를 통한 정기결제 이용권 구매는 네이버 ID를 기준으로 이용권 당 1회 구매가 가능하며, 정기결제 이용권 보유 상태에서 네이버페이를 통해 FLO의 다른 계정으로 동일한 이용권 구매를 원하실 경우 다른 네이버 ID로 시도해주시기 바랍니다.<br>
+                최근 1년 이내 FLO 앤 데이터/플러스 가입 및 FLO 앤 데이터/플러스 할인 혜택을 받은 이력이 있을 경우 FLO의 무제한 듣기/모바일 무제한 듣기 T멤버십 이용권 구매가 불가 할 수 있습니다.<br>
+                최근 1년 이내 FLO의 무제한 듣기/모바일 무제한 듣기 T멤버십 이용권 구매 이력이 있을 경우 FLO 앤 데이터/플러스 이용이 불가 할 수 있습니다.<br>
+                이용권 구매 시 부가가치세(10%)가 별도 부과됩니다.<br>
+                정기결제 해지는 [APP]접속>설정>나의 계정/이용권 관리>현재 보유 이용권/[Web]이용권 메뉴 >나의 이용권>상세보기에서 가능합니다.<br>
+                음원 제공사의 요청으로 특정 곡의 경우 서비스 이용이 제한될 수 있습니다.<br>
+                그 외 이용권 구매 관련 문의사항은 고객센터 1599-6034(유료)에 문의해주세요.<br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+{{>layout/footer}}

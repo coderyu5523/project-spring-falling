@@ -8,5 +8,14 @@
 @import url(join-form.css);
 
 /* song  */
-@import url(song-detail.css);
 @import url(index.css);
+@import url(song-detail.css);
+@import url(playlist.css);
+@import url(search.css);
+@import url(song-chart.css);
+@import url(song-genre.css);
+
+
+/* subscription  */
+@import url(subscription-list.css);
+@import url(my-subscription.css);

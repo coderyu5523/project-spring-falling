@@ -1,0 +1,108 @@
+.chart {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.chart-tags {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.chart-tags > ul {
+    margin-top: 50px;
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0%;
+    overflow: hidden;
+}
+
+.chart-tags > ul > li{
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 10px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.chart-header {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chart-header > div {
+    font-size: 14px;
+}
+
+.chart-main {
+    text-align: center;
+    width: 100%;
+}
+
+.chart-main-table{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.chart-main-table-header{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    width: 100%;
+    color: #cdcdcd;
+}
+.chart-main-table-header > th{
+    text-align: center;
+    padding: 15px 0;
+}
+
+.chart-main-table-body {
+    text-align: center;
+    font-size: 13px;
+    width: 100%;
+}
+
+.chart-main-table-body > td {
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.chart-main-table-body-img{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-album-name{
+    color: #cdcdcd;
+    font-size: 12px;
+}
+
+.chart-more-button{
+    margin-bottom: 40px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 10px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.chart-img {
+    width: 60px;
+    height: 60px;
+}

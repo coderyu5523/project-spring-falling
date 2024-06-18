@@ -1,0 +1,220 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+
+.main-search{
+    width: 1100px;
+    /* height: 2200px; */
+}
+
+.search-results {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.search-results h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-tabs button {
+    padding: 5px 10px;
+    border: none; /* 테두리 제거 */
+    background-color: transparent; /* 기본 배경색 투명 */
+    cursor: pointer;
+    border-radius: 20px;
+}
+.filter-tabs button.active, .filter-tabs button:focus, .filter-tabs button:active {
+    background-color: #3F3FFF; /* 클릭 시 파란색 배경 */
+    color: white; /* 클릭 시 텍스트 색상 변경 */
+}
+
+.result-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.result-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.result-info p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.result-table th, .result-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+.result-table th {
+    background-color: #f8f9fa;
+}
+.result-table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.result-table .play-button {
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+}
+.result-table .play-button:hover {
+    text-decoration: underline;
+}
+.result-table .icon {
+    font-size: 20px;
+    color: #6c757d;
+    cursor: pointer;
+}
+/* .result-table .icon:hover {
+    color: #3F3FFF;
+} */
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.album-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.album-item:hover {
+    transform: translateY(-5px);
+}
+
+.album-item img {
+    width: 150px; /* 이미지 크기 조정 */
+    height: 150px; /* 이미지 크기 조정 */
+    border-radius: 10px;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.album-info h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.album-info p {
+    margin: 5px 0 0;
+    color: #6c757d;
+}
+
+.table-album-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 이미지와 텍스트 사이의 간격 */
+    width: 100%;
+}
+.text-container {
+    width:500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-artist{
+    width: 200px;
+    font-size: 14px;
+}
+
+.album-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.search-title{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.album-icon {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.artist-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.artist-list {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+.artist-box {
+    text-align: center;
+    position: relative;
+}
+.artist-box img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+.artist-play-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffff; /* white background */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #000000; /* black color */
+    font-size: 20px;
+    cursor: pointer;
+}
+.artist-name {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.artist-role {
+    font-size: 14px;
+    color: grey;
+}
+.artist-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notice_container {
+    width: 85%; /* 또는 적절한 너비 설정 */
+    margin: 0 auto; /* 좌우 자동 마진으로 중앙 정렬 */
+}

@@ -1,0 +1,151 @@
+{{>layout/header}}
+
+<br>
+<div class="main-container">
+    <div class="contents">
+        <div class="album">
+            <br>
+            <div class="result-item">
+                <div class="album-cover">
+                    <a href="#">
+                        <img src="/images//song/RIIZE_1stmini.jpg" alt="Album Cover">
+                    </a>
+                    <div>
+                        <a href="#"><i class="play-btn fas fa-play play-button"></i></a>
+                    </div>
+                </div>
+                <div class="result-info">
+                    <a href="#">
+                        <h3 style="font-weight: 600;">RIIZING - The 1st Mini Album</h3>
+                    </a>
+                    <a href="#">
+                        <p>RIIZE</p>
+                    </a>
+                    <div class="album-info">
+                        <p class="album-category">미니 | 댄스</p>
+                        <p class="album-release-date">2024.06.17</p>
+                    </div>
+
+                    <div class="icons">
+                        <a href="#"><i class="btn-add-list fas fa-list icon"></i></a>
+                        <a href="#"><i class="btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
+                        <a href="#"><i class="btn-add-like fa-regular fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="tab-button">
+            <button class="album-detail">상세정보</button>
+            <button class="album-songs">수록곡</button>
+        </div>
+        <div class="song-list">
+            <table class="song-list-table">
+                <a href="#" class="all-play"><i class="all-play-btn fas fa-play play-button"></i> 전체듣기</a>
+                <thead>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>번호</td>
+                    <td>곡/앨범</td>
+                    <td class="table-artist">아티스트</td>
+                    <td>듣기</td>
+                    <td>재생목록</td>
+                    <td>내 리스트</td>
+                    <td>더보기</td>
+                </tr>
+                </thead>
+                <tbody>
+                <!--타이틀 곡
+                -->
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <div class="no">
+                            1
+                        </div>
+                    </td>
+                    <td class="table-album-container">
+                        <a href="#">
+                            <img src="/images/song/RIIZE_1stmini.jpg" alt="Album Cover">
+                        </a>
+                        <div class="text-container">
+                            <div class="title-group">
+                                <div class="title-mark">TITLE</div>
+                                <div class="song-title">
+                                    <a href="#"></a>
+                                    Boom Boom Bass
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <p class="album-title" style="font-size: 12px;">RIIZING - The 1st Mini Album</p>
+                            </a>
+                        </div>
+                    </td>
+                    <td class="table-artist">
+                        <a href="#">RIIZE</a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="play-btn fas fa-play play-button"></i></a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="add-playlist-btn fas fa-list icon"></i></a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="add-list-btn fas fa-folder-plus custom-icon"></i></a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="more-btn fas fa-ellipsis-h icon"></i></a>
+                    </td>
+                </tr>
+                <!--타이틀 아닌 곡-->
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>
+                        <div class="no">
+                            2
+                        </div>
+                    </td>
+                    <td class="table-album-container">
+                        <a href="#">
+                            <img src="/images/song/RIIZE_1stmini.jpg" alt="Album Cover">
+                        </a>
+                        <div class="text-container">
+                            <div class="title-group">
+                                <div class="song-title">
+                                    <a href="#"></a>
+                                    Siren
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <p class="album-title" style="font-size: 12px;">RIIZING - The 1st Mini Album</p>
+                            </a>
+                        </div>
+                    </td>
+                    <td class="table-artist">
+                        <a href="#">RIIZE</a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="play-btn fas fa-play play-button"></i></a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="add-playlist-btn fas fa-list icon"></i></a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="add-list-btn fas fa-folder-plus custom-icon"></i></a>
+                    </td>
+                    <td>
+                        <a href="#"><i class="more-btn fas fa-ellipsis-h icon"></i></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+
+
+        {{>layout/footer}}

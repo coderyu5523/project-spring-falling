@@ -1,0 +1,47 @@
+{{>layout/header}}
+<div class="main-container mt-4">
+    <div class="main-subscription">
+
+        <div class="tabs">
+            <div class="tab active" onclick="activateTab(this)">일반</div>
+            <div class="tab" onclick="activateTab(this)">T혜택</div>
+            <div class="tab" onclick="activateTab(this)">제휴</div>
+            <div class="tab" onclick="activateTab(this)">나의 이용권</div>
+            <div class="tab" onclick="activateTab(this)">쿠폰함</div>
+        </div>
+
+        <div class="container my-ticket">
+            <div class="subheader">사용 중인 이용권</div>
+            <div class="content">
+                <div class="header">사용 중인 이용권이 없습니다.</div>
+                <button class="plan-button">이용권 구매</button>
+            </div>
+        </div>
+
+        <div class="container my-ticket">
+            <div class="subheader">사용 대기 이용권</div>
+            <div class="content">
+                <div class="header">사용 대기 중인 이용권이 없습니다.</div>
+            </div>
+        </div>
+
+        <div class="container my-ticket">
+            <div class="subheader">사용 완료된 이용권</div>
+            <div class="content">
+                <div class="header">사용 완료 내역이 없습니다.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function activateTab(tab) {
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+    }
+</script>
+
+
+
+{{>layout/footer}}

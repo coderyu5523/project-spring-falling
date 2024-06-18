@@ -1,0 +1,226 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+
+.main-ticket{
+    width: 1100px;
+}
+
+
+/* 탭 스타일: 탭 영역의 스타일 */
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* 개별 탭 스타일: 탭의 기본 패딩 및 마진 */
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* 활성화된 탭 스타일: 활성화된 탭의 색상 및 배경 색상 */
+.tab.active {
+    color: white;
+    background-color: #3f3fff;
+}
+
+/* 탭 호버 스타일: 탭 위에 마우스를 올렸을 때의 효과 */
+.tab:hover:not(.tab.active) {
+    color: #3f3fff;
+}
+
+/* 컨테이너 이미지 스타일: 이미지 크기를 부모 요소에 맞추고 비율 유지 */
+.ticket-container img {
+    max-width: 100%;
+}
+
+/* 첫 번째 컨테이너 스타일: 배경 색상과 텍스트 정렬 */
+.ticket-container.first {
+    background-color: #3f3fff;
+    margin: 50px auto;
+    max-width: 80%;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* 컨테이너 공통 스타일 */
+.ticket-container {
+    /* max-width: 100%; */
+    margin: 50px auto;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    color: #333;
+}
+
+/* 이미지 버튼 스타일: 둥근 모서리의 흰색 버튼 */
+.image-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* 플랜 버튼 스타일: 파란색 배경과 흰색 텍스트의 둥근 버튼 */
+.plan-button {
+    background-color: #3f3fff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* 첫 번째 콘텐츠 스타일: 중앙 정렬과 패딩 */
+.content.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    column-gap: 10px;
+}
+
+/* 분할 컨테이너 스타일: 좌우 박스와 간격 설정 */
+.ticket-container.split {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+/* 왼쪽 박스 스타일 텍스트 정렬 */
+.left-box {
+    width: 35%;
+    text-align: left;
+}
+
+/* 오른쪽 박스 스타일 텍스트 정렬 */
+.right-box {
+    width: 65%;
+    text-align: left;
+}
+
+/* 분리선 스타일: 박스 사이의 세로 분리선 */
+.separator {
+    width: 1px;
+    background-color: #ccc;
+    height: 80%;
+    margin: 0 20px;
+    align-self: center;
+}
+
+/* 일반 컨테이너 스타일: 기본 배경과 둥근 모서리 */
+.ticket-container {
+    background-color: #F4F5F8;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 기본 콘텐츠 스타일: 중앙 정렬 및 최대 너비 제한 해제 */
+.content {
+    flex: 1;
+    text-align: center;
+    margin: 0 auto;
+    /* 가운데 정렬 */
+}
+
+/* 제목 스타일: 제목 크기와 마진 */
+.plan-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    font-weight: 600;
+}
+
+/* 헤더 스타일: 큰 제목 크기와 굵기 */
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 서브헤더 스타일: 작은 제목 크기와 색상 */
+.subheader {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 정가 스타일: 줄이 그어진 텍스트 */
+.price {
+    font-size: small;
+    text-decoration: line-through;
+}
+
+/* 할인된 가격 스타일: 큰 폰트 크기 */
+.discounted-price {
+    color: #3f3fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+/* 원래 가격 스타일: 줄이 그어진 원래 가격 텍스트 */
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+/* 플랜 스타일: 플랜 항목 간의 정렬 및 간격 */
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* 반응형 조정: 화면이 작을 때의 스타일링 */
+@media (max-width: 768px) {
+
+    /* 좁은 화면에서의 컨테이너 스타일 */
+    .ticket-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}
+
+.plan-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.plan-table td {
+    border: none;
+}
+
+.notice_container {
+    width: 80%;
+    margin: 0 auto; /* 상하 마진은 0, 좌우 마진은 자동으로 설정 */
+}
+.notice_content{
+    color: gray;
+    font-size: 13px;
+}
