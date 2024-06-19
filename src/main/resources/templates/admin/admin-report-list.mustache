@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background-color: #2d3e50;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #1a252f;
+        }
+
+        /*메인 콘텐츠*/
+
+        main {
+            position: relative;
+            width: 80%;
+            min-height: 100vh;
+            margin-left: 25px;
+        }
+
+        .content-tab-bar {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tab-head p {
+            margin-top: 40px;
+            font-size: 32px;
+            font-weight: 700;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .tab-item.detail {
+            align-items: flex-start;
+        }
+
+        .tab-item select {
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            border: 1px solid #333;
+            height: 40px;
+        }
+
+        .search-box {
+            width: 100%;
+            display: flex;
+            margin: 20px 0px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            justify-content: space-between;
+            background: rgb(255, 255, 255);
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .search-box>li {
+            display: flex;
+            padding: 20px 20px 20px 0;
+            align-items: center;
+            font-weight: 900;
+        }
+
+        .search-box span {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+
+
+        .search-left em {
+            color: #403FFF;
+        }
+
+        .tab-item table {
+            width: 100%;
+        }
+
+        .tab-item table tr {
+            background: #fff;
+
+        }
+
+        .tab-item table thead th {
+            padding: 15px 10px;
+            color: #fff;
+            font-weight: 700;
+            border: 1px solid #ddd;
+            color: #00028f;
+            text-align: center;
+        }
+
+        .tab-item table tbody td {
+            border: 1px solid #ddd;
+            text-align: center;
+            height: 55px;
+            line-height: 55px;
+            font-weight: 500;
+            padding: 0 20px;
+        }
+
+        .tab-item table tbody td .state {
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            margin: 0px auto;
+            font-size: 14px;
+        }
+
+        .tab-item table tbody td .detail {
+            border-radius: 5px;
+            background: #343a40;
+            color: #fff;
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            font-size: 14px;
+            margin: 0 auto;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tab-item table tbody td .detail:hover {
+            background: #222;
+        }
+
+
+        .black {
+            background: #2c2c2c;
+        }
+
+        .active {
+            background: #03cf5d;
+        }
+
+        .refuse {
+            background: #FAB80D;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-2 d-none d-md-block sidebar">
+            <div class="sidebar-sticky">
+                <div class="text-center mb-4">
+                    <h4>falling</h4>
+                </div>
+                <a href="#">회원 관리</a>
+                <a href="#">곡 관리</a>
+                <a href="#">앨범 관리</a>
+                <a href="#">아티스트 관리</a>
+                <a href="#">플레이리스트 관리</a>
+                <a href="#">신고 관리</a>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <main role="main">
+            <section id="section n1">
+                <div class="content-page">
+                    <div class="content-tab-bar">
+                        <div class="tab-content current">
+                            <div class="tab-head">
+                                <p>신고 관리</p>
+                            </div>
+                            <div class="tab-item">
+                                <ul class="search-box">
+                                    <li class="search-left">
+                                        <span>총 신고<em> 2</em>건</span>
+                                    </li>
+                                </ul>
+                                <table>
+                                    <colgroup>
+                                        <col width="5%">
+                                        <col width="25%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">번호</th>
+                                        <th scope="col">신고 받은 댓글</th>
+                                        <th scope="col">신고 사유</th>
+                                        <th scope="col">신고 날짜</th>
+                                        <th scope="col">현황</th>
+                                        <th scope="col">상세보기</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>노래 못 하네</td>
+                                        <td>거짓말 하고 있어요</td>
+                                        <td>2024-06-19</td>
+                                        <td>처리 중</td>
+                                        <td><span class="detail" onclick="location.href='#'">상세보기</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>메롱</td>
+                                        <td>기분이 나빠요</td>
+                                        <td>2024-06-18</td>
+                                        <td>처리 완료</td>
+                                        <td><span class="detail" onclick="location.href='#'">상세보기</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+</body>
+
+</html>

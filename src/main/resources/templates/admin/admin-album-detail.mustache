@@ -4,14 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/admin-album-detail.css">
-<!--    <link rel="stylesheet" href="/css/style.css">-->
-
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .main-body{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
 
+        .main-container{
+            width: 70%;
+        }
+
+        .sidebar {
+            /* height: 100vh; */
+            background-color: #2d3e50;
+            color: #fff;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #1a252f;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .notifications, .team-members {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .button-row {
+            margin: 20px 0;
+        }
+        .button-row button {
+            margin-right: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+
+        .album-details {
+            margin-top: 20px;
+        }
+        .album-art img {
+            max-width: 100%;
+            height: auto;
+        }
+        .album-info h2 {
+            margin-top: 0;
+        }
+        .info-section {
+            /* margin-top: 30px; */
+            white-space: pre-line;
+        }
+        .btn-primary, .btn-secondary {
+            margin-right: 10px;
+        }
+        .info-section h3 {
+            color: #007bff;
+        }
+
+    </style>
 </head>
 <body>
 <div class="container-fluid">
@@ -48,7 +114,7 @@
                 <div class="container album-details">
                     <div class="row">
                         <div class="col-md-3 album-art">
-                            <img src="/images/admin/img.png" alt="Image">
+                            <img src="/images/main/img" alt="Album Cover">
                         </div>
                         <div class="col-md-9 album-info">
                             <h2>오래된 노래</h2>

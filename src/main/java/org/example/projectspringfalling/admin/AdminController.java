@@ -1,6 +1,7 @@
 package org.example.projectspringfalling.admin;
 
 import jakarta.servlet.http.HttpSession;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,61 @@ public class AdminController {
     @GetMapping("/admin/albums/{id}")
     public String albumDetail(@PathVariable Integer id) {
         return "admin/admin-album-detail";
+    }
+
+    // 앨범 목록보기
+    @GetMapping("/admin/albums")
+    public String albumList() {
+        return "admin/admin-album-list";
+    }
+
+    // 앨범 등록하기 폼
+    @GetMapping("/admin/albums/save-form")
+    public String albumSaveForm() {
+        return "admin/album-save-form";
+    }
+    // 가수 상세보기
+    @GetMapping("/admin/artists/{id}")
+    public String artistDetail(@PathVariable Integer id) {
+        return "admin/admin-artist-detail";
+    }
+
+    // 가수 목록보기
+    @GetMapping("/admin/artists")
+    public String artistList() {
+        return "admin/admin-artist-list";
+    }
+    // 가수 등록하기 폼
+    @GetMapping("/admin/artists/save-form")
+    public String artistSaveForm() {
+        return "admin/artist-save-form";
+    }
+
+    // 신고 내역 보기
+    @GetMapping("/admin/reports")
+    public String reportList() {
+        return "admin/admin-report-list";
+    }
+
+    // 곡 상세보기
+    @GetMapping("/admin/songs/{id}")
+    public String songDetail(@PathVariable Integer id) {
+        return "admin/admin-song-detail";
+    }
+    // 곡 목록보기
+    @GetMapping("/admin/songs")
+    public String songList() {
+        return "admin/admin-song-list";
+    }
+    // 회원 상세보기
+    @GetMapping("/admin/users/{id}")
+    public String userDetail(@PathVariable Integer id) {
+        return "admin/admin-user-detail";
+    }
+    // 회원 목록보기
+    @GetMapping("/admin/users")
+    public String userList() {
+        return "admin/admin-user-list";
     }
 
 }
