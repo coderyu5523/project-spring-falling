@@ -24,4 +24,9 @@ public class UserController {
     public String loginForm() {
         return "user/login-form";
     }
+    @GetMapping("/profile")
+    public String profile() {
+        return "user/profile-password";
+//        return "user/profile-phone";
+    }
 }
