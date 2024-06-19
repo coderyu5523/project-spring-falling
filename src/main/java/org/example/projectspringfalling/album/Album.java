@@ -29,10 +29,10 @@ public class Album {
     @ManyToOne(fetch = FetchType.LAZY)
     private Song song; // 노래
 
-    private Integer artist_id; // 가수 아이디
+    private Integer artistId; // 가수 아이디
 
     @Builder
-    public Album(Integer id, String title, String distributor, String agency, String intro, String nationality, String category, String albumImg, Timestamp createdAt, Song song, Integer artist_id) {
+    public Album(Integer id, String title, String distributor, String agency, String intro, String nationality, String category, String albumImg, Timestamp createdAt, Song song, Integer artistId) {
         this.id = id;
         this.title = title;
         this.distributor = distributor;
@@ -43,6 +43,6 @@ public class Album {
         this.albumImg = albumImg;
         this.createdAt = createdAt;
         this.song = song;
-        this.artist_id = artist_id;
+        this.artistId = artistId;
     }
 }
