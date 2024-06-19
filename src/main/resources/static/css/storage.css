@@ -1,0 +1,274 @@
+/* 보관함 페이지 */
+
+.storage {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.storage-tabs {
+    width: auto;
+    position: relative;
+    font-size: 15px;
+    color: #565656;
+    gap: 15px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.storage-tabs-mylist {
+    color: #3f3ff5;
+}
+
+.storage-tabs span {
+    position: relative;
+    z-index: 1;
+}
+
+.highlight {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: #3f3ff5;
+    transition: left 0.3s ease, width 0.3s ease;
+    width: 60px;
+}
+
+.storage-tabs-mylist-items {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+}
+
+.storage-tabs-mylist-item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.storage-tabs-mylist-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.storage-tabs-mylist-item a {
+    text-decoration: none !important;
+    color: black;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.storage-tabs-mylist-item-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.storage-tabs-mylist-item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.storage-tabs-mylist-item-info p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.storage-tabs-mylist-addlist {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.storage-tabs-mylist-addlist-button {
+    width: 150px;
+    height: 150px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.storage-tabs-mylist-addlist-text {
+    color: #3f3ff5;
+}
+
+.horizontal-line,
+.vertical-line {
+    position: absolute;
+    background-color: #3f3ff5;
+}
+
+.horizontal-line {
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    /* 원하는 두께 */
+    transform: translateY(-50%);
+}
+
+.vertical-line {
+    top: 25%;
+    left: 50%;
+    width: 2px;
+    /* 원하는 두께 */
+    height: 50%;
+    transform: translateX(-50%);
+}
+
+.storage-tabs-like-chart-main-table {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.storage-tabs-like-chart-tags {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.storage-tabs-like-chart-tags>ul {
+    margin-top: 20px;
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0%;
+    overflow: hidden;
+}
+
+.storage-tabs-like-chart-tags>ul>li {
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 10px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.storage-tabs-like-chart-playall {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.storage-tabs-like-chart-main-table-header {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    width: 100%;
+    color: #cdcdcd;
+}
+
+.storage-tabs-like-chart-main-table-header>th {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.storage-tabs-like-chart-main-table-body {
+    text-align: center;
+    font-size: 13px;
+    width: 100%;
+}
+
+.storage-tabs-like-chart-main-table-body>td {
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.storage-tabs-like-chart-main-table-body-img {
+    margin-left: 20px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.storage-tabs-like-chart-album-name {
+    color: #cdcdcd;
+    font-size: 12px;
+}
+
+.storage-tabs-like-chart-img {
+    width: 60px;
+    height: 60px;
+}
+
+.storage-tabs-like-artists {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.storage-tabs-like-artist-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    gap: 10px;
+}
+
+.storage-tabs-like-artist-box img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
+.storage-tabs-like-artist-info {
+    text-align: left;
+}
+
+.storage-tabs-like-artist-name {
+    font-size: 18px;
+}
+
+.storage-tabs-like-artist-role {
+    font-size: 14px;
+    color: grey;
+}
+
+.storage-tabs-like-artist-play {
+    color: grey;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.storage-tabs-like-artist-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.storage-tabs-like-artist-play-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    /* white background */
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #000000;
+    /* black color */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.storage-tabs-like-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}

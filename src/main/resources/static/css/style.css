@@ -23,6 +23,10 @@
 @import url(artist-album-list.css);
 @import url(artist-song-list.css);
 
+/* playlist */
+@import url(storage.css);
+
+
 /* subscription  */
 @import url(subscription-list.css);
 @import url(my-subscription.css);

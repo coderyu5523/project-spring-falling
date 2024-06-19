@@ -1,0 +1,418 @@
+{{>layout/header}}
+<div class="storage">
+    <div class="storage-tabs">
+        <span class="storage-tabs-mylist">내 리스트</span>
+        <span class="storage-tabs-like">♡ 좋아요</span>
+        <span class="storage-tabs-latest">최근 감상</span>
+        <div class="highlight"></div>
+    </div>
+    <!-- 내 리스트 -->
+    <div class="storage-tabs-mylist-items">
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/HowSweet.webp" alt="Playlist 2">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">내 리스트 1</h3>
+                </a>
+                <a href="#">
+                    <p>총 1곡</p>
+                </a>
+                <a href="#">
+                    <p>2024.06.18</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/Armageddon.webp" alt="Playlist 2">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">내 리스트 2</h3>
+                </a>
+                <a href="#">
+                    <p>총 2곡</p>
+                </a>
+                <a href="#">
+                    <p>2024.06.19</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="storage-tabs-mylist-addlist">
+            <div class="storage-tabs-mylist-addlist-button">
+                <div class="horizontal-line"></div>
+                <div class="vertical-line"></div>
+            </div>
+            <div class="storage-tabs-mylist-addlist-text">
+                새로운 리스트 만들기
+            </div>
+        </div>
+    </div>
+
+    <!-- 좋아요 -->
+    <!-- <div class="storage-tabs-like-chart-tags">
+        <ul>
+            <li>곡</li>
+            <li>앨범</li>
+            <li>아티스트</li>
+            <li>리스트</li>
+        </ul>
+    </div> -->
+    <!-- 좋아요 - 곡 -->
+    <!-- <div class="storage-tabs-like-chart">
+        <div class="storage-tabs-like-chart-playall">
+            <div>▷ 전체듣기</div>
+            <div>편집</div>
+        </div>
+        <table class="storage-tabs-like-chart-main-table">
+            <tr class="storage-tabs-like-chart-main-table-header">
+                <th><input type="checkbox"></th>
+                <th>곡/앨범</th>
+                <th>아티스트</th>
+                <th>듣기</th>
+                <th>재생목록</th>
+                <th>내 리스트</th>
+                <th>더보기</th>
+            </tr>
+            <tr class="storage-tabs-like-chart-main-table-body">
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="storage-tabs-like-chart-main-table-body-img">
+                        <img class="storage-tabs-like-chart-img" src="../images/chart/Armageddon.webp"
+                            alt="Armageddon">
+                        <span>
+                            <div>Supernova</div>
+                            <div class="storage-tabs-like-chart-album-name">Armageddon - The 1st Album</div>
+                        </span>
+                    </div>
+                </td>
+
+                <td>aespa</td>
+                <td><i class="fa-solid fa-play"></i></td>
+                <td><i class="fa-solid fa-list-ul"></i></td>
+                <td><i class="fa-solid fa-folder-plus"></i></td>
+                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+            </tr>
+            <tr class="storage-tabs-like-chart-main-table-body">
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="storage-tabs-like-chart-main-table-body-img">
+                        <img class="storage-tabs-like-chart-img" src="../images/chart/HowSweet.webp" alt="HowSweet">
+                        <span>
+                            <div>How Sweet</div>
+                            <div class="storage-tabs-like-chart-album-name">How Sweet</div>
+                        </span>
+                    </div>
+                </td>
+
+                <td>NewJeans</td>
+                <td><i class="fa-solid fa-play"></i></td>
+                <td><i class="fa-solid fa-list-ul"></i></td>
+                <td><i class="fa-solid fa-folder-plus"></i></td>
+                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+            </tr>
+            <tr class="storage-tabs-like-chart-main-table-body">
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="storage-tabs-like-chart-main-table-body-img">
+                        <img class="storage-tabs-like-chart-img" src="../images/chart/IVE Switch.webp"
+                            alt="IVESwitch">
+                        <span>
+                            <div>해야 (HEYA)</div>
+                            <div class="storage-tabs-like-chart-album-name">IVE Switch</div>
+                        </span>
+                    </div>
+                </td>
+
+                <td>aespa</td>
+                <td><i class="fa-solid fa-play"></i></td>
+                <td><i class="fa-solid fa-list-ul"></i></td>
+                <td><i class="fa-solid fa-folder-plus"></i></td>
+                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+            </tr>
+        </table>
+    </div> -->
+    <!-- 좋아요 - 앨범 -->
+    <!-- <div class="storage-tabs-mylist-items">
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/HowSweet.webp" alt="HowSweet">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">HowSweet</h3>
+                </a>
+                <a href="#">
+                    <p>NewJeans</p>
+                </a>
+                <a href="#">
+                    <p>싱글 | 댄스</p>
+                </a>
+                <a href="#">
+                    <p>2024.05.24</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/Armageddon.webp" alt="Armageddon">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">Armageddon</h3>
+                </a>
+                <a href="#">
+                    <p>aespa</p>
+                </a>
+                <a href="#">
+                    <p>정규 | 댄스팝</p>
+                </a>
+                <a href="#">
+                    <p>2024.05.27</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- 좋아요 - 아티스트 -->
+    <!-- <div class="storage-tabs-like-artists">
+        <div class="storage-tabs-like-artist-box">
+            <div class="storage-tabs-like-artist-img-container">
+                <a href="#">
+                    <img src="../images/search/뉴진스.jpg">
+                    <button class="storage-tabs-like-artist-play-button">▶</button>
+                </a>
+            </div>
+            <div class="storage-tabs-like-artist-info">
+                <div class="storage-tabs-like-artist-name">NewJeans</div>
+                <div class="storage-tabs-like-artist-role">그룹 | 여성</div>
+                <div class="storage-tabs-like-artist-play">▷ 인기곡 듣기</div>
+            </div>
+        </div>
+        <div class="storage-tabs-like-artist-box">
+            <div class="storage-tabs-like-artist-img-container">
+                <a href="#">
+                    <img src="../images/search/뉴진스.jpg">
+                    <button class="storage-tabs-like-artist-play-button">▶</button>
+                </a>
+            </div>
+            <div class="storage-tabs-like-artist-info">
+                <div class="storage-tabs-like-artist-name">NewJeans</div>
+                <div class="storage-tabs-like-artist-role">그룹 | 여성</div>
+                <div class="storage-tabs-like-artist-play">▷ 인기곡 듣기</div>
+            </div>
+        </div>
+        <div class="storage-tabs-like-artist-box">
+            <div class="storage-tabs-like-artist-img-container">
+                <a href="#">
+                    <img src="../images/search/뉴진스.jpg">
+                    <button class="storage-tabs-like-artist-play-button">▶</button>
+                </a>
+            </div>
+            <div class="storage-tabs-like-artist-info">
+                <div class="storage-tabs-like-artist-name">NewJeans</div>
+                <div class="storage-tabs-like-artist-role">그룹 | 여성</div>
+                <div class="storage-tabs-like-artist-play">▷ 인기곡 듣기</div>
+            </div>
+        </div>
+    </div> -->
+    <!-- 좋아요 - 리스트 -->
+    <!-- <div class="storage-tabs-like-list">
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/Armageddon.webp" alt="Armageddon">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">재생목록1</h3>
+                </a>
+                <a href="#">
+                    <p>만든이</p>
+                </a>
+                <a href="#">
+                    <p>10곡</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/HowSweet.webp" alt="Armageddon">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">재생목록2</h3>
+                </a>
+                <a href="#">
+                    <p>만든이</p>
+                </a>
+                <a href="#">
+                    <p>10곡</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- 최근 감상 -->
+    <!-- <div class="storage-tabs-like-chart-tags">
+        <ul>
+            <li>곡</li>
+            <li>리스트</li>
+        </ul>
+    </div> -->
+    <!-- 최근 감상 - 곡 -->
+    <!-- <div class="storage-tabs-like-chart">
+        <div class="storage-tabs-like-chart-playall">
+            <div>▷ 전체듣기</div>
+            <div>편집</div>
+        </div>
+        <table class="storage-tabs-like-chart-main-table">
+            <tr class="storage-tabs-like-chart-main-table-header">
+                <th><input type="checkbox"></th>
+                <th>곡/앨범</th>
+                <th>아티스트</th>
+                <th>듣기</th>
+                <th>재생목록</th>
+                <th>내 리스트</th>
+                <th>더보기</th>
+            </tr>
+            <tr class="storage-tabs-like-chart-main-table-body">
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="storage-tabs-like-chart-main-table-body-img">
+                        <img class="storage-tabs-like-chart-img" src="../images/chart/Armageddon.webp"
+                            alt="Armageddon">
+                        <span>
+                            <div>Supernova</div>
+                            <div class="storage-tabs-like-chart-album-name">Armageddon - The 1st Album</div>
+                        </span>
+                    </div>
+                </td>
+
+                <td>aespa</td>
+                <td><i class="fa-solid fa-play"></i></td>
+                <td><i class="fa-solid fa-list-ul"></i></td>
+                <td><i class="fa-solid fa-folder-plus"></i></td>
+                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+            </tr>
+            <tr class="storage-tabs-like-chart-main-table-body">
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="storage-tabs-like-chart-main-table-body-img">
+                        <img class="storage-tabs-like-chart-img" src="../images/chart/HowSweet.webp" alt="HowSweet">
+                        <span>
+                            <div>How Sweet</div>
+                            <div class="storage-tabs-like-chart-album-name">How Sweet</div>
+                        </span>
+                    </div>
+                </td>
+
+                <td>NewJeans</td>
+                <td><i class="fa-solid fa-play"></i></td>
+                <td><i class="fa-solid fa-list-ul"></i></td>
+                <td><i class="fa-solid fa-folder-plus"></i></td>
+                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+            </tr>
+            <tr class="storage-tabs-like-chart-main-table-body">
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="storage-tabs-like-chart-main-table-body-img">
+                        <img class="storage-tabs-like-chart-img" src="../images/chart/IVE Switch.webp"
+                            alt="IVESwitch">
+                        <span>
+                            <div>해야 (HEYA)</div>
+                            <div class="storage-tabs-like-chart-album-name">IVE Switch</div>
+                        </span>
+                    </div>
+                </td>
+
+                <td>aespa</td>
+                <td><i class="fa-solid fa-play"></i></td>
+                <td><i class="fa-solid fa-list-ul"></i></td>
+                <td><i class="fa-solid fa-folder-plus"></i></td>
+                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+            </tr>
+        </table>
+    </div> -->
+    <!-- 최근 감상 - 리스트 -->
+    <!-- <div class="storage-tabs-like-list">
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/Armageddon.webp" alt="Armageddon">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">재생목록1</h3>
+                </a>
+                <a href="#">
+                    <p>만든이</p>
+                </a>
+                <a href="#">
+                    <p>10곡</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="storage-tabs-mylist-item">
+            <a href="#">
+                <img src="../images/chart/HowSweet.webp" alt="Armageddon">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">재생목록2</h3>
+                </a>
+                <a href="#">
+                    <p>만든이</p>
+                </a>
+                <a href="#">
+                    <p>10곡</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+</div>
+
+<br>
+
+
+{{>layout/footer}}
