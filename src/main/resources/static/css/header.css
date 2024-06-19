@@ -16,7 +16,7 @@ a {
     height: 70px;
     background-size: 100% 100%;
     /*width: 100%;*/
-    max-width: 1200px;
+    max-width: 1500px;
     padding: 0 5px; /* 좌우 패딩을 줄임 */
 }
 
@@ -24,6 +24,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1200px;
 }
 
 .logo {
@@ -46,7 +47,8 @@ a {
 }
 
 .search-bar input {
-    width: 400px;
+    width: 300px;
+    height: 30px;
     padding: 8px 12px 8px 40px; /* 왼쪽 패딩을 늘려 아이콘 공간 확보 */
     border: 1px solid #ccc;
     border-radius: 20px;
