@@ -1,3 +1,12 @@
 @charset "UTF-8";
 
-@import url(admin-album-detail.css);
+@import url(admin/album-detail.css);
+@import url(admin/album-list.css);
+@import url(admin/artist-detail.css);
+@import url(admin/artist-list.css);
+@import url(admin/report-list.css);
+@import url(admin/song-detail.css);
+@import url(admin/song-list.css);
+@import url(admin/user-detail.css);
+@import url(admin/user-list.css);
+

@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #2d3e50;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #1a252f;
+}
+
+/*메인 콘텐츠*/
+main {
+    position: relative;
+    width: 80%;
+    min-height: 100vh;
+    margin-left: 25px;
+}
+
+input {
+    height: 36px;
+    border-radius: 10px;
+    padding-left: 11px;
+}
+
+.tab-title {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab_menu {
+    display: flex;
+
+    justify-content: center;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 900;
+    padding-top: 19px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-wrapper {
+    display: flex;
+    margin-top: 20px;
+}
+
+.button-wrapper button {
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 40px;
+    line-height: 30px;
+    width: 160px;
+    margin: 10px;
+    font-size: 14px;
+    border: none;
+}
+
+.back {
+    background: #8a8a8a;
+}
+
+.approval {
+    background: #03cf5d;
+}
+
+.refuse {
+    background: #FAB80D;
+}

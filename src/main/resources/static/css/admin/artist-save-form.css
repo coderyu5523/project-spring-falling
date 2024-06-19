@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.main-body{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.main-container{
+    width: 70%;
+}
+
+.sidebar {
+    height: 100vh;
+    background-color: #2d3e50;
+    color: #fff;
+    padding-top: 20px;
+}
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #1a252f;
+}
+.card {
+    margin-bottom: 20px;
+}
+.notifications, .team-members {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+.button-row {
+    margin: 20px 0;
+}
+.button-row button {
+    margin-right: 10px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.song-registration-form {
+    border: 2px solid black; /* Add a black border */
+    padding: 20px;
+    border-radius: 5px;
+}
