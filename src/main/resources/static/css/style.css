@@ -17,9 +17,11 @@
 
 /* album */
 @import url(album-detail.css);
+@import url(album-list.css);
 
 /* artist */
-@import url(artist-detail.css);
+@import url(artist-album-list.css);
+@import url(artist-song-list.css);
 
 /* subscription  */
 @import url(subscription-list.css);

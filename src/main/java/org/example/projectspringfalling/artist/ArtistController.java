@@ -12,9 +12,11 @@ public class ArtistController {
     private final ArtistService artistService;
     private final HttpSession session;
 
-    @GetMapping("/artist/{id}")
+    @GetMapping("/artists/{id}")
     public String artistDetail(@PathVariable Integer id) {
-        return "artist/artist-detail";
+//        return "artist/artist-album-list";
+        return "artist/artist-song-list";
+
     }
 
 }

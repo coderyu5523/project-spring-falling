@@ -15,6 +15,7 @@ public class AlbumController {
 
     @GetMapping("/albums/{id}")
     public String songList(@PathVariable Integer id) {
+//        return "album/album-list";
         return "album/album-detail";
     }
 }
