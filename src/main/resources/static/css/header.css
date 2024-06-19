@@ -15,7 +15,7 @@ a {
     margin: 0 auto;
     height: 70px;
     background-size: 100% 100%;
-    width: 100%;
+    /*width: 100%;*/
     max-width: 1200px;
     padding: 0 5px; /* 좌우 패딩을 줄임 */
 }
