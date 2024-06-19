@@ -30,7 +30,7 @@ public class UserController {
     // 마이페이지
     @GetMapping("/profile")
     public String profile() {
-        return "users/profile-password";
-//        return "users/profile-phone";
+        return "user/profile-password";
+//        return "user/profile-phone";
     }
 }
