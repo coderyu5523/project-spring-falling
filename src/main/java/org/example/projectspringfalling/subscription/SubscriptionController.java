@@ -11,11 +11,13 @@ public class SubscriptionController {
     private final SubscriptionService subscriptionService;
     private final HttpSession session;
 
+    // 이용권 목록
     @GetMapping("/subscription-list")
     public String subscriptionList() {
         return "subscription/subscription-list";
     }
 
+    // 내가 구매한 이용권
     @GetMapping("/my-subscription")
     public String mySubscription() {
         return "subscription/my-subscription";

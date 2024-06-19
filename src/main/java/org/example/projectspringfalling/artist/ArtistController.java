@@ -12,6 +12,7 @@ public class ArtistController {
     private final ArtistService artistService;
     private final HttpSession session;
 
+    // 가수 상세보기
     @GetMapping("/artists/{id}")
     public String artistDetail(@PathVariable Integer id) {
 //        return "artist/artist-album-list";

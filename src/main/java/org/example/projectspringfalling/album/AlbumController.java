@@ -12,7 +12,7 @@ public class AlbumController {
     private final AlbumService albumService;
     private final HttpSession session;
 
-
+    // 앨범 상세보기
     @GetMapping("/albums/{id}")
     public String songList(@PathVariable Integer id) {
 //        return "album/album-list";
