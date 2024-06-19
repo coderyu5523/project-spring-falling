@@ -18,6 +18,9 @@
 /* album */
 @import url(album-detail.css);
 
+/* artist */
+@import url(artist-detail.css);
+
 /* subscription  */
 @import url(subscription-list.css);
 @import url(my-subscription.css);
