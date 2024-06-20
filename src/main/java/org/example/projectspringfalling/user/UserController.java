@@ -2,9 +2,11 @@ package org.example.projectspringfalling.user;
 
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequiredArgsConstructor
 @Controller
@@ -12,6 +14,8 @@ public class UserController {
 
     private final UserService userService;
     private final HttpSession session;
+    private final RedisTemplate<String, Object> rt;
+
 
     // 회원가입 선택 페이지
     @GetMapping("/join-section")
@@ -35,7 +39,15 @@ public class UserController {
     @PostMapping("/login")
     public String login(UserRequest.LoginDTO reqDTO) throws Exception {
         User sessionUser = userService.login(reqDTO);
-        session.setAttribute("sessionUser", sessionUser);
+        rt.opsForValue().set("sessionUser", sessionUser);
+        return "redirect:/";
+    }
+
+    // OAuth Redirect URI
+    @GetMapping("/oauth/callback/kakao")
+    public String oauthCallbackKakao(String code) {
+        User sessionUser = userService.kakaoLogin(code);
+        rt.opsForValue().set("sessionUser", sessionUser);
         return "redirect:/";
     }
 
@@ -46,5 +58,11 @@ public class UserController {
 //        return "user/profile-phone";
     }
 
+    @GetMapping("/redis/test")
+    public @ResponseBody String redisTest() {
+        User sessionUser = (User) session.getAttribute("sessionUser");
+        System.out.println("email : " + sessionUser.getEmail());
+        return "redis test";
+    }
 
 }

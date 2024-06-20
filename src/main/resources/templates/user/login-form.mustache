@@ -27,14 +27,20 @@
                 </div>
                 <div class="social-login">
                     <div class="button-group">
-                        <button type="button"><img src="../images/btn_login_naver.png" alt="naver"></button>
-                        <button type="button"><img src="../images/btn_login_kakao.png" alt="kakao"></button>
+                        <button type="button">
+                            <img src="../images/btn_login_naver.png" alt="naver">
+                        </button>
+                        <button type="button"
+                                onclick="location.href='https://kauth.kakao.com/oauth/authorize?redirect_uri=http://localhost:8080/oauth/callback/kakao&response_type=code&client_id=de886838ff478f3a5b83c56cdb2dd412'">
+                            <img src="../images/btn_login_kakao.png" alt="kakao">
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
 <!-- login form end -->
 
 {{>layout/footer}}
