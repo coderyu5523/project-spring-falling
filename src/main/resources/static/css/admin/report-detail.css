@@ -1,0 +1,169 @@
+.content-page {
+    position: relative;
+    width: 80%;
+    min-height: 100vh;
+    margin-left: 25px;
+}
+
+.content-tab-bar {
+    width: 100%;
+    height: 100%;
+}
+
+.tab-head p {
+    margin-top: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.reply-detail-head {
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.reply-table {
+    list-style-type: none;
+}
+
+.reply-user-info {
+    color: #50515f;
+    font-weight: 600;
+}
+
+.report-user-info {
+    position: relative;
+    top: 5px;
+    color: #00028f;
+    font-weight: 600;
+}
+
+.reply-content {
+    text-align: center;
+}
+
+.reply-content p {
+    margin-top: 10px;
+}
+
+
+.report-part {
+    display: flex;
+    justify-content: center;
+}
+
+.report-icon {
+    color: white;
+    background-color: darkcyan;
+    border: none;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.report-reason {
+    display: flex;
+    margin-right: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper {
+    margin-right: 10px;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-item.detail {
+    align-items: flex-start;
+}
+
+.tab-item select {
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #333;
+    height: 40px;
+}
+
+.tab-item table {
+    width: 100%;
+}
+
+.tab-item table tr {
+    background: #fff;
+
+}
+
+.tab-item table thead th {
+    padding: 15px 10px;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #ddd;
+    color: #00028f;
+    text-align: center;
+}
+
+.tab-item table tbody td {
+    border: 1px solid #ddd;
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+.tab-item table tbody td .detail {
+    border-radius: 5px;
+    background: #343a40;
+    color: #fff;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 80px;
+    font-size: 14px;
+    margin: 0 auto;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.tab-item table tbody td .detail:hover {
+    background: #222;
+}
+
+.btn {
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 30px;
+    width: 100px;
+    margin: 0px auto;
+    font-size: 14px;
+}
+
+
+.list {
+    background: #696969;
+}
+
+.approval {
+    background: #03cf5d;
+}
+
+.refuse {
+    background: #FAB80D;
+}
