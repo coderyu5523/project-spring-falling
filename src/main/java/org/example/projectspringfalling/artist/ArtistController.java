@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @RequiredArgsConstructor
 @Controller
@@ -19,6 +20,14 @@ public class ArtistController {
 //        return "artist/artist-album-list";
         return "artist/artist-song-list";
 
+    }
+
+    // 가수 등록하기
+    @PostMapping("/artists/register")
+    public String artistRegister(ArtistRequest.AddArtistDTO requestDTO) {
+        artistService.addArtist(requestDTO);
+
+        return "redirect:/admin/artists";
     }
 
     // todo : 더미 테스트용 , 삭제 예정
