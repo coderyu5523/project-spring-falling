@@ -4,7 +4,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @RequiredArgsConstructor
 @Controller
@@ -31,6 +31,14 @@ public class UserController {
         return "user/login-form";
     }
 
+    // 로그인
+    @PostMapping("/login")
+    public String login(UserRequest.LoginDTO reqDTO) throws Exception {
+        User sessionUser = userService.login(reqDTO);
+        session.setAttribute("sessionUser", sessionUser);
+        return "redirect:/";
+    }
+
     // 마이페이지
     @GetMapping("/profile")
     public String profile() {
@@ -38,11 +46,5 @@ public class UserController {
 //        return "user/profile-phone";
     }
 
-    @GetMapping("/redis/test")
-    public @ResponseBody String redisTest() {
-        User sessionUser = (User) session.getAttribute("sessionUser");
-        System.out.println("username : " + sessionUser.getEmail());
-        return "redis test";
-    }
 
 }
