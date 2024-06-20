@@ -1,6 +1,7 @@
 package org.example.projectspringfalling._core.utils;
 
 import org.apache.commons.io.IOUtils;
+import org.example.projectspringfalling._core.errors.exception.Exception400;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;

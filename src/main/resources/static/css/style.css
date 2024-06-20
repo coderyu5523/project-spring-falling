@@ -36,11 +36,3 @@
 a:link, a:visited {
     color: black;
 }
-/*!* 링크에 마우스를 올렸을 때 *!*/
-/*a:hover {*/
-/*    color: gray;*/
-/*}*/
-/*!* 클릭된 링크 *!*/
-/*a:active {*/
-/*    color: darkgray;*/
-/*}*/

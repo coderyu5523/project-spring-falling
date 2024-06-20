@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/css/current-playlist.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="left-panel">
+        <div style="font-size: 20px; font-weight: 600; margin-bottom: 10px">오래된 노래</div>
+        <div style="font-size: 15px; color: gray; margin-bottom: 20px">허각&임한별&이무진&이진성&김희재&안녕 ></div>
+        <img src="../sample.jpg" class="playlist-img">
+    </div>
+    <div class="right-panel">
+        <div>
+            <h2>Playlist</h2>
+            <hr>
+            <div class="search-bar">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="재생목록에서 검색하세요.">
+            </div>
+
+            <ul>
+                <li class="d-flex">
+                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
+                    <div class="info">
+                        <a href="#">
+                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
+                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
+                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
+                    </div>
+                </li>
+
+                <li class="d-flex">
+                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
+                    <div class="info">
+                        <a href="#">
+                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
+                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
+                        </a>
+                    </div>
+                    <div class="../icon-container">
+                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
+                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
+                    </div>
+                </li>
+
+
+                <li class="d-flex">
+                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
+                    <div class="info">
+                        <a href="#">
+                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
+                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
+                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
+                    </div>
+                </li>
+
+
+                <li class="d-flex">
+                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
+                    <div class="info">
+                        <a href="#">
+                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
+                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
+                        </a>
+                    </div>
+                    <div class="icon-container">
+                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
+                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer album-art">
+    <div class="progress">
+        <span id="currentTime">00:00</span>
+        <input type="range" id="progressBar" min="0" max="100" value="0" onchange="seekAudio()">
+        <span id="duration">00:00</span>
+    </div>
+    <div class="controls">
+        <button onclick="playPrevious()">&#9664;&#9664;</button>
+        <button onclick="togglePlayPause()">&#9654;</button>
+        <button onclick="playNext()">&#9654;&#9654;</button>
+    </div>
+    <audio id="audioPlayer">
+        <source src="../sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<script>
+    const audioPlayer = document.getElementById('audioPlayer');
+    const playPauseButton = document.querySelector('.controls button:nth-child(2)');
+    const progressBar = document.getElementById('progressBar');
+    const currentTimeSpan = document.getElementById('currentTime');
+    const durationSpan = document.getElementById('duration');
+
+    audioPlayer.addEventListener('timeupdate', updateProgress);
+    audioPlayer.addEventListener('loadedmetadata', () => {
+        progressBar.max = audioPlayer.duration;
+        durationSpan.textContent = formatTime(audioPlayer.duration);
+    });
+
+    function togglePlayPause() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseButton.innerHTML = '&#10074;&#10074;';
+        } else {
+            audioPlayer.pause();
+            playPauseButton.innerHTML = '&#9654;';
+        }
+    }
+
+    function playPrevious() {
+        // Add logic to play the previous song in the playlist
+    }
+
+    function playNext() {
+        // Add logic to play the next song in the playlist
+    }
+
+    function updateProgress() {
+        progressBar.value = audioPlayer.currentTime;
+        currentTimeSpan.textContent = formatTime(audioPlayer.currentTime);
+    }
+
+    function seekAudio() {
+        audioPlayer.currentTime = progressBar.value;
+    }
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+</script>
+</body>
+
+</html>
