@@ -28,6 +28,13 @@ public class UserController {
         return "user/join-form";
     }
 
+    // 회원가입
+    @PostMapping("/join")
+    public String join(UserRequest.JoinDTO reqDTO) {
+        userService.join(reqDTO);
+        return "redirect:/login-form";
+    }
+
     // 로그인 페이지
     @GetMapping("/login-form")
     public String loginForm() {
@@ -37,24 +44,24 @@ public class UserController {
     // 로그인
     @PostMapping("/login")
     public String login(UserRequest.LoginDTO reqDTO) {
-        User sessionUser = userService.login(reqDTO);
-        rt.opsForValue().set("sessionUser", sessionUser);
+        UserResponse.LoginDTO sessionUser = userService.login(reqDTO);
+        rt.opsForValue().set("sessionUser", sessionUser); // redis에 저장
         return "redirect:/";
     }
 
     // OAuth Redirect URI(kakao)
     @GetMapping("/oauth/callback/kakao")
     public String oauthCallbackKakao(String code) {
-        User sessionUser = userService.kakaoLogin(code);
-        rt.opsForValue().set("sessionUser", sessionUser);
+        UserResponse.LoginDTO sessionUser = userService.kakaoLogin(code);
+        rt.opsForValue().set("sessionUser", sessionUser); // redis에 저장
         return "redirect:/";
     }
 
     // OAuth Redirect URI(naver)
     @GetMapping("/oauth/callback/naver")
     public String oauthCallbackNaver(String code) {
-        User sessionUser = userService.NaverLogin(code);
-        rt.opsForValue().set("sessionUser", sessionUser);
+        UserResponse.LoginDTO sessionUser = userService.naverLogin(code);
+        rt.opsForValue().set("sessionUser", sessionUser); // redis에 저장
         return "redirect:/";
     }
 

@@ -20,12 +20,12 @@ public class User {
     private String password; // 비밀번호
     private String phone; // 전화번호
     private String birth; // 생년월일
-    private String provider;  // oauth 수단
+    private String provider; // oauth 수단
     @CreationTimestamp
     private Timestamp createdAt; // 생성날짜
 
     @Builder
-    public User(Integer id, String email, String password, String phone,String birth ,String provider, Timestamp createdAt) {
+    public User(Integer id, String email, String password, String phone, String birth, String provider, Timestamp createdAt) {
         this.id = id;
         this.email = email;
         this.password = password;
