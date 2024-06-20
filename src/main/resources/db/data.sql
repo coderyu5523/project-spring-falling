@@ -18,7 +18,7 @@ INSERT INTO user_tb (email, password, phone, provider, created_at, birth) VALUES
 -- 칼럼: 가수이름, 아티스트타입, 아티스트사진, 생성날짜
 
 INSERT INTO artist_tb (name, artist_type, artist_img, created_at) VALUES
-    ('노을', 'Solo', 'upload/노을.jpg',now());
+    ('노을', 'Solo', 'upload/노을.jpg',now()),
     ('aespa', 'Group', 'upload/aespa.jpg', '2023-02-15'),
     ('NewJeans', 'Group', 'upload/newjeans.jpg', '2023-03-20'),
     ('IVE (아이브)', 'Group', 'upload/ive.jpg', '2023-05-05'),
