@@ -1,56 +1,71 @@
 -- 테이블: user
 -- 칼럼: 이메일, 비밀번호, 전화번호, 프로바이더, 생성날짜, 생년월일
 
-INSERT INTO user_tb (email, password, phone, provider, created_at, birth) VALUES
-                                                                              ('ssar@nate.com', '1234', '010-1234-5678', 'Email', '2023-02-15', '1990-01-15'),
-                                                                              ('john@nate.com', '1234', '010-2345-6789', 'Email', '2023-04-25', '1985-03-22'),
-                                                                              ('jane@naver.com', '1234', '010-3456-7890', 'Naver', '2023-06-20', '1992-07-30'),
-                                                                              ('sam@gmail.com', '1234', '010-4567-8901', 'Kakao', '2023-08-05', '1988-12-05'),
-                                                                              ('lisa@naver.com', '1234', '010-5678-9012', 'Naver', '2023-10-12', '1995-05-25'),
-                                                                              ('tom@nate.com', '1234', '010-6789-0123', 'Email', '2023-11-20', '1991-11-10'),
-                                                                              ('emily@naver.com', '1234', '010-7890-1234', 'Kakao', '2023-12-15', '1987-04-05'),
-                                                                              ('chris@nate.com', '1234', '010-8901-2345', 'Email', '2024-01-05', '1993-02-17'),
-                                                                              ('julia@naver.com', '1234', '010-9012-3456', 'Naver', '2024-02-12', '1994-09-09'),
-                                                                              ('mark@gmail.com', '1234', '010-0123-4567', 'Kakao', '2024-03-18', '1986-06-30');
+INSERT INTO user_tb (email, password, phone, provider, created_at, birth)
+VALUES ('ssar@nate.com', '1234', '010-1234-5678', 'Email', '2023-02-15', '1990-01-15'),
+       ('john@nate.com', '1234', '010-2345-6789', 'Email', '2023-04-25', '1985-03-22'),
+       ('jane@naver.com', '1234', '010-3456-7890', 'Naver', '2023-06-20', '1992-07-30'),
+       ('sam@gmail.com', '1234', '010-4567-8901', 'Kakao', '2023-08-05', '1988-12-05'),
+       ('lisa@naver.com', '1234', '010-5678-9012', 'Naver', '2023-10-12', '1995-05-25'),
+       ('tom@nate.com', '1234', '010-6789-0123', 'Email', '2023-11-20', '1991-11-10'),
+       ('emily@naver.com', '1234', '010-7890-1234', 'Kakao', '2023-12-15', '1987-04-05'),
+       ('chris@nate.com', '1234', '010-8901-2345', 'Email', '2024-01-05', '1993-02-17'),
+       ('julia@naver.com', '1234', '010-9012-3456', 'Naver', '2024-02-12', '1994-09-09'),
+       ('mark@gmail.com', '1234', '010-0123-4567', 'Kakao', '2024-03-18', '1986-06-30');
 
 -- 테이블: artist
 -- 칼럼: 가수이름, 아티스트타입, 아티스트사진, 생성날짜
 
-INSERT INTO artist_tb (name, artist_type, artist_img, created_at) VALUES
-                                                                      ('노을', 'Solo', 'upload/노을.jpg',now()),
-                                                                      ('aespa', 'Group', 'upload/에스파.jpg', '2023-02-15'),
-                                                                      ('NewJeans', 'Group', 'upload/뉴진스.jpg', '2023-03-20'),
-                                                                      ('IVE (아이브)', 'Group', 'upload/아이브.jpg', '2023-05-05'),
-                                                                      ('TWS (투어스)', 'Group', 'upload/투어스.jpg', '2023-06-10'),
-                                                                      ('QWER', 'Group', 'upload/qwer.jpg', '2023-07-15'),
-                                                                      ('임영웅', 'Solo', 'upload/임영웅.jpg', '2023-08-20'),
-                                                                      ('지코 (ZICO)', 'Solo', 'upload/지코.jpg', '2023-09-25'),
-                                                                      ('(여자)아이들', 'Group', 'upload/여자아이들.jpg', '2023-10-30'),
-                                                                      ('아일릿(ILLIT)', 'Group', 'upload/아일릿.jpg', '2023-11-15'),
-                                                                      ('이클립스 (ECLIPSE)', 'Solo', 'upload/이클립스.jpg', '2023-12-01');
+INSERT INTO artist_tb (name, artist_type, artist_img, created_at)
+VALUES ('노을', 'Solo', 'upload/노을.jpg', now()),
+       ('aespa', 'Group', 'upload/에스파.jpg', '2023-02-15'),
+       ('NewJeans', 'Group', 'upload/뉴진스.jpg', '2023-03-20'),
+       ('IVE (아이브)', 'Group', 'upload/아이브.jpg', '2023-05-05'),
+       ('TWS (투어스)', 'Group', 'upload/투어스.jpg', '2023-06-10'),
+       ('QWER', 'Group', 'upload/qwer.jpg', '2023-07-15'),
+       ('임영웅', 'Solo', 'upload/임영웅.jpg', '2023-08-20'),
+       ('지코 (ZICO)', 'Solo', 'upload/지코.jpg', '2023-09-25'),
+       ('(여자)아이들', 'Group', 'upload/여자아이들.jpg', '2023-10-30'),
+       ('아일릿(ILLIT)', 'Group', 'upload/아일릿.jpg', '2023-11-15'),
+       ('이클립스 (ECLIPSE)', 'Solo', 'upload/이클립스.jpg', '2023-12-01');
 
 
 --  샘플용 더미
 
 -- 테이블: album
 
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES
-                                                                                                                      ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '발라드', 'upload/전부너였다.jpg', 1, NOW(), '- 섬세한 사랑의 감정을 노래한 "전부 너였다" 붙잡고도, 인연, 아파도 아파도, 청혼 등 2장의 앨범을 통해서 색깔있는 가창력을 선보였던 그룹 ''노을''이 기나긴 작업 기간을 보내고 섬세한 사랑의 감정을 담은 세번째 앨범 "전부 너였다"로 돌아왔다. 데뷔앨범인 "붙잡고도"와 2집 앨범 "아파도 아파도"를 통해 뛰어난 가창력과 멤버 각각의 독특한 보이스 칼라로 최고의 R&B그룹으로 평가 받아왔던 노을이 또 한번의 음악적 변신을 시도한다. 기나긴 작업기간 동안 4명의 멤버가 가장 신경쓴 부분은 각각의 보이스 컬러의 조화와 모든 이들이 공감할 수 있는 편안한 모습으로 팬들에게 다가가는 것이었다. 이번 앨범에서는 그 동안 노을이 보여주었던 슬픔의 극대화가 아닌 슬픈 감정의 절제를 노래하는 노을을 만나볼 수 있을 것이다. 타이틀 곡인 ''전부 너였다''는 제목이 주는 이미지 그대로 누구나 공감할 수 있는 가사가 돋보이는 곡으로 노을의 ''청혼''과 god의 ''보통날''을 작곡했던 권태은의 서정적인 멜로디에 양재선의 감성적인 노랫말과 노을의 Voice가 잘 조화된 곡으로 이별의 슬픈 감정을 절제하면서 덤덤하게 노래하여 이번 앨범의 컨셉을 가장 잘 표현하였다. - "노을스럽다"를 보여주는 곡 "나무" 사랑의 감정을 한 곳에 뿌리박은 나무에 비유한 "나무"는 노을 Voice와 웅장한 오케스트레이션의 조화가 돋보이며 최고의 프로듀서 방시혁의 노랫말이 귀에 쏙쏙 들어오며 가장 ''노을스럽다''라는 말이 어울리는 곡이다. 또한 이외에도 일본의 여가수 아무로 나미에의 최근작인 히트 발라드 "All for you"를 노을 만의 감성으로 새롭게 재해석한 "All for you"와 드라마 궁의 OST "perhaps love"를 작곡한 박근철의 "A better tomorrow", MC몽의 ''180도'', M(이민우)의 "Last first kiss"등을 작곡한 장준호의 멜로디와 "10 Minetes"의 작사가 Maybee의 가사의 조화가 돋보이는 댄스넘버 "남자라서", 조성모, BMK 및 여러 가수들의 앨범을 프로듀서한 mAd sOuL cHiLd가 선사하는 트랜디한 사운드와 감성의 조화가 돋보이는 ''A nice day'', 천상의 목소리 이소은과 노을의 리더 이상곤이 듀엣으로 노래한 러브 발라드 "여행" 등을 통해 또 한번 새로운 노을만의 색깔을 선보일 예정이다. 이번 노을의 세번째 앨범 ''전부 너였다''는 노을의 음악세계에 새로운 변화를 제시하며 동시에 가장 ''노을스럽다''라는 말이 어울리는 듣는이로 하여금 편안한 감동을 선사할 수 있는 최고의 앨범이 될 것이다.'),
-                                                                                                                      ('Armageddon - The 1st Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', 'Dance', 'upload/슈퍼노바.jpg', 2, '2024-05-27', 'aespa, 첫 정규 앨범 ‘Armageddon’ 발매! 힙한 무드 ‘Supernova’→힙합 댄스곡 ‘Armageddon’으로 강렬한 질주! 세계관 시즌 2 서사 담은 역대급 스케일 음악+비주얼! ‘글로벌 히트메이커’ aespa가 첫 정규 앨범 ‘Armageddon’을 발매했다. aespa의 첫 정규 앨범 ‘Armageddon’은 미니멀한 트랙사운드와 캐치한 탑라인이 매력적인 선공개곡 ‘Supernova’와 트렌디한 트랙과 거칠고 절제된 음색이 돋보이는 타이틀 곡 ‘Armageddon’을 포함하여 에너제틱한 힙합부터 밝고 경쾌한 댄스곡, 리드미컬한 모던 팝, 발라드까지 다채로운 장르로 구성되어 aespa만의 독보적인 음악 색깔을 만끽하기에 충분하다. 특히 이번 앨범은 리얼 월드와 디지털 세계를 넘어 다중 우주로 확장되는 aespa 세계관 시즌 2의 서사를 담아, aespa가 평행 세계에 존재하는 각기 다른 ‘나’를 만나 무한한 가능성을 마주하고 완전한 ‘나’로 거듭나는 과정들을 파워풀하고 유니크한 음악과 비주얼을 통해 보여줄 예정이어서 기대가 모인다.'),
-                                                                                                                      ('How Sweet', 'YG PLUS', 'ADOR', '국내', 'Dance', 'upload/sweet.jpg', 3, '2024-05-24', '뉴진스가 2024년 또다시 새로운 모습으로 돌아왔다. 타이틀 곡 ‘How Sweet’은 신선한 느낌을 선사하는 장르적 접근이 돋보이는 새롭고 독특한 매력의 Dance Pop 곡으로 Sparkle한 일렉트로닉 사운드가 중독성있는 곡이다. 또 함께 수록된 ‘Bubble Gum’은 트랙의 진행에 따른 다양한 무드 체인지를 통해 다채로운 매력을 느낄 수 있는 곡이다. 과장되지 않은 자연스러움으로 오히려 신선한 느낌을 선사하는 뉴진스 멤버들의 보컬과 개성있고 매력 넘치는 트랙들로 구성된 싱글 앨범 ‘How Sweet’은 한 번만 들어도 모든 이의 귀를 사로잡을 만큼 뉴진스의 매력을 잘 담아내고 있다. 그간 뉴진스를 기다려 온 전세계 팬들에게 화답이 되는 앨범이 되길 바란다.'),
-                                                                                                                      ('IVE SWITCH', '카카오엔터테인먼트', '스타쉽 엔터테인먼트', '국내', 'Dance', 'upload/해야.jpg', 4, '2024-04-29', '뚜렷한 컬러로 K팝 최고의 순간을 물들인 아이브가 극적인 반전을 선사한다. 아이브의 정체성은 주체적인 자신감과 당당함. 여기에 색다른 매력을 더해 또 다른 변주를 시도했다. 최적의 타이밍에서 맞이한 확신의 변화다. 언제나 자신감 넘치는 애티튜드로 자아 성취를 보여준 아이브가 세련되면서도 감각적인 시도로 새로운 시작을 알린다.'),
-                                                                                                                      ('TWS 1st Mini Album ‘Sparkling Blue’', 'YG PLUS', '플레디스엔터테인먼트', '국내', 'Dance', 'upload/첫만남.jpg', 5, '2024-01-22', '‘2024년 최고 기대주’ TWS, 데뷔 앨범 ‘Sparkling Blue’ 공개 "언제나 TWS와 함께"…반짝이는 음률의 향연 ‘Sparkling Blue’ 설렘 가득한 데뷔 타이틀곡 ‘첫 만남은 계획대로 되지 않아’'),
-                                                                                                                      ('1st Mini Album ''MANITO''', '카카오엔터테인먼트', '타마고 프로덕션', '국내', 'Rock/Metal', 'upload/고민중독.jpg', 6, '2023-08-15', '1st Mini Album ''MANITO'' ‘불협화음에서 만들어낸 하모니’라는 그들만의 독특한 스토리를 써 내려갔던 밴드 QWER이 미니 앨범 ''MANITO''로 돌아왔다. 첫 싱글에서는 각기 다른 출신의 배경을 가진 멤버 쵸단, 마젠타, 히나, 시연 넷의 결성까지의 과정과 팀의 아이덴티티를 이야기했다면, ''MANITO''에서는 운명과도 같은 만남을 경험한 QWER의 속마음을 한 편의 드라마로 풀어나갈 예정이다.'),
-                                                                                                                      ('신사와 아가씨 OST Part.2', 'NHN벅스', '모스트콘텐츠', '국내', 'Ballad', 'upload/도망가.jpg', 7, '2021-10-11', '''임영웅 - 사랑은 늘 도망가'' KBS 2TV 주말드라마 ''신사와 아가씨''는 우연인 듯 인연인 듯 계속된 만남을 가지게 된 박단단(이세희 분)과 이영국(지현우 분)이 한집살이를 시작하며 흥미진진한 서사와 디테일한 연출로 시청자들을 사로잡고 있다.'),
-                                                                                                                      ('SPOT!', '	YG PLUS', 'KOZ 엔터테인먼트', '국내', 'HipHop', 'upload/스팟.jpg', 8, '2024-04-26', '지코의 첫 번째 정규앨범 "SPOT!"는 독창적인 음악성과 심오한 가사를 담은 작품입니다. 타이틀 곡 "Thinking"은 지코 특유의 스타일과 제니의 감각적인 보컬이 어우러진 곡입니다.'),
-                                                                                                                      ('2', '카카오엔터테인먼트', '큐브 엔터테인먼트', '국내', 'K-POP', 'upload/질색.jpg', 9, '2024-01-29', '''Super Lady''의 아름다움과 그 힘에 대한 찬가 콘셉트 장인 (여자)아이들의 화려한 귀환'),
-                                                                                                                      ('SUPER REAL ME', '지니뮤직, Stone Music Entertainment', '빌리프랩', '국내', 'Dance', 'upload/마그넷.jpg', 10, '2024-03-25', '‘하이브 막내딸’ 아일릿, 3월 25일 첫 번째 미니 앨범 ‘SUPER REAL ME’로 데뷔! 엉뚱•발랄•자유로움 아일릿…무엇이든 될 수 있는 무한 가능성의 소녀들 ‘눈 앞에 최선을, 나머지는 되는 대로’, 진짜 ‘나’의 이야기로 전속력으로 달려가는 아일릿 ‘리얼 10대 감성’ 아일릿 시작부터 다르다! 방시혁 프로듀서x10대 프로듀서 만남'),
-                                                                                                                      ('선재 업고 튀어 OST Part 1', 'Stone Music Entertainment', 'BON FACTORY, Stone Music Entertainment', '국내', 'OST', 'upload/소나기.jpg', 11, '2024-01-10', '드라마 속 밴드 ''이클립스''가 선보이는 첫 번째 OST! tvN 월화드라마 ‘선재 업고 튀어’가 드라마의 몰입도를 높일 OST들을 선공개한다');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '발라드', 'upload/전부너였다.jpg', 1, NOW(),
+        '- 섬세한 사랑의 감정을 노래한 "전부 너였다" 붙잡고도, 인연, 아파도 아파도, 청혼 등 2장의 앨범을 통해서 색깔있는 가창력을 선보였던 그룹 ''노을''이 기나긴 작업 기간을 보내고 섬세한 사랑의 감정을 담은 세번째 앨범 "전부 너였다"로 돌아왔다. 데뷔앨범인 "붙잡고도"와 2집 앨범 "아파도 아파도"를 통해 뛰어난 가창력과 멤버 각각의 독특한 보이스 칼라로 최고의 R&B그룹으로 평가 받아왔던 노을이 또 한번의 음악적 변신을 시도한다. 기나긴 작업기간 동안 4명의 멤버가 가장 신경쓴 부분은 각각의 보이스 컬러의 조화와 모든 이들이 공감할 수 있는 편안한 모습으로 팬들에게 다가가는 것이었다. 이번 앨범에서는 그 동안 노을이 보여주었던 슬픔의 극대화가 아닌 슬픈 감정의 절제를 노래하는 노을을 만나볼 수 있을 것이다. 타이틀 곡인 ''전부 너였다''는 제목이 주는 이미지 그대로 누구나 공감할 수 있는 가사가 돋보이는 곡으로 노을의 ''청혼''과 god의 ''보통날''을 작곡했던 권태은의 서정적인 멜로디에 양재선의 감성적인 노랫말과 노을의 Voice가 잘 조화된 곡으로 이별의 슬픈 감정을 절제하면서 덤덤하게 노래하여 이번 앨범의 컨셉을 가장 잘 표현하였다. - "노을스럽다"를 보여주는 곡 "나무" 사랑의 감정을 한 곳에 뿌리박은 나무에 비유한 "나무"는 노을 Voice와 웅장한 오케스트레이션의 조화가 돋보이며 최고의 프로듀서 방시혁의 노랫말이 귀에 쏙쏙 들어오며 가장 ''노을스럽다''라는 말이 어울리는 곡이다. 또한 이외에도 일본의 여가수 아무로 나미에의 최근작인 히트 발라드 "All for you"를 노을 만의 감성으로 새롭게 재해석한 "All for you"와 드라마 궁의 OST "perhaps love"를 작곡한 박근철의 "A better tomorrow", MC몽의 ''180도'', M(이민우)의 "Last first kiss"등을 작곡한 장준호의 멜로디와 "10 Minetes"의 작사가 Maybee의 가사의 조화가 돋보이는 댄스넘버 "남자라서", 조성모, BMK 및 여러 가수들의 앨범을 프로듀서한 mAd sOuL cHiLd가 선사하는 트랜디한 사운드와 감성의 조화가 돋보이는 ''A nice day'', 천상의 목소리 이소은과 노을의 리더 이상곤이 듀엣으로 노래한 러브 발라드 "여행" 등을 통해 또 한번 새로운 노을만의 색깔을 선보일 예정이다. 이번 노을의 세번째 앨범 ''전부 너였다''는 노을의 음악세계에 새로운 변화를 제시하며 동시에 가장 ''노을스럽다''라는 말이 어울리는 듣는이로 하여금 편안한 감동을 선사할 수 있는 최고의 앨범이 될 것이다.'),
+       ('Armageddon - The 1st Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', 'Dance', 'upload/슈퍼노바.jpg', 2,
+        '2024-05-27',
+        'aespa, 첫 정규 앨범 ‘Armageddon’ 발매! 힙한 무드 ‘Supernova’→힙합 댄스곡 ‘Armageddon’으로 강렬한 질주! 세계관 시즌 2 서사 담은 역대급 스케일 음악+비주얼! ‘글로벌 히트메이커’ aespa가 첫 정규 앨범 ‘Armageddon’을 발매했다. aespa의 첫 정규 앨범 ‘Armageddon’은 미니멀한 트랙사운드와 캐치한 탑라인이 매력적인 선공개곡 ‘Supernova’와 트렌디한 트랙과 거칠고 절제된 음색이 돋보이는 타이틀 곡 ‘Armageddon’을 포함하여 에너제틱한 힙합부터 밝고 경쾌한 댄스곡, 리드미컬한 모던 팝, 발라드까지 다채로운 장르로 구성되어 aespa만의 독보적인 음악 색깔을 만끽하기에 충분하다. 특히 이번 앨범은 리얼 월드와 디지털 세계를 넘어 다중 우주로 확장되는 aespa 세계관 시즌 2의 서사를 담아, aespa가 평행 세계에 존재하는 각기 다른 ‘나’를 만나 무한한 가능성을 마주하고 완전한 ‘나’로 거듭나는 과정들을 파워풀하고 유니크한 음악과 비주얼을 통해 보여줄 예정이어서 기대가 모인다.'),
+       ('How Sweet', 'YG PLUS', 'ADOR', '국내', 'Dance', 'upload/sweet.jpg', 3, '2024-05-24',
+        '뉴진스가 2024년 또다시 새로운 모습으로 돌아왔다. 타이틀 곡 ‘How Sweet’은 신선한 느낌을 선사하는 장르적 접근이 돋보이는 새롭고 독특한 매력의 Dance Pop 곡으로 Sparkle한 일렉트로닉 사운드가 중독성있는 곡이다. 또 함께 수록된 ‘Bubble Gum’은 트랙의 진행에 따른 다양한 무드 체인지를 통해 다채로운 매력을 느낄 수 있는 곡이다. 과장되지 않은 자연스러움으로 오히려 신선한 느낌을 선사하는 뉴진스 멤버들의 보컬과 개성있고 매력 넘치는 트랙들로 구성된 싱글 앨범 ‘How Sweet’은 한 번만 들어도 모든 이의 귀를 사로잡을 만큼 뉴진스의 매력을 잘 담아내고 있다. 그간 뉴진스를 기다려 온 전세계 팬들에게 화답이 되는 앨범이 되길 바란다.'),
+       ('IVE SWITCH', '카카오엔터테인먼트', '스타쉽 엔터테인먼트', '국내', 'Dance', 'upload/해야.jpg', 4, '2024-04-29',
+        '뚜렷한 컬러로 K팝 최고의 순간을 물들인 아이브가 극적인 반전을 선사한다. 아이브의 정체성은 주체적인 자신감과 당당함. 여기에 색다른 매력을 더해 또 다른 변주를 시도했다. 최적의 타이밍에서 맞이한 확신의 변화다. 언제나 자신감 넘치는 애티튜드로 자아 성취를 보여준 아이브가 세련되면서도 감각적인 시도로 새로운 시작을 알린다.'),
+       ('TWS 1st Mini Album ‘Sparkling Blue’', 'YG PLUS', '플레디스엔터테인먼트', '국내', 'Dance', 'upload/첫만남.jpg', 5,
+        '2024-01-22',
+        '‘2024년 최고 기대주’ TWS, 데뷔 앨범 ‘Sparkling Blue’ 공개 "언제나 TWS와 함께"…반짝이는 음률의 향연 ‘Sparkling Blue’ 설렘 가득한 데뷔 타이틀곡 ‘첫 만남은 계획대로 되지 않아’'),
+       ('1st Mini Album ''MANITO''', '카카오엔터테인먼트', '타마고 프로덕션', '국내', 'Rock/Metal', 'upload/고민중독.jpg', 6, '2023-08-15',
+        '1st Mini Album ''MANITO'' ‘불협화음에서 만들어낸 하모니’라는 그들만의 독특한 스토리를 써 내려갔던 밴드 QWER이 미니 앨범 ''MANITO''로 돌아왔다. 첫 싱글에서는 각기 다른 출신의 배경을 가진 멤버 쵸단, 마젠타, 히나, 시연 넷의 결성까지의 과정과 팀의 아이덴티티를 이야기했다면, ''MANITO''에서는 운명과도 같은 만남을 경험한 QWER의 속마음을 한 편의 드라마로 풀어나갈 예정이다.'),
+       ('신사와 아가씨 OST Part.2', 'NHN벅스', '모스트콘텐츠', '국내', 'Ballad', 'upload/도망가.jpg', 7, '2021-10-11',
+        '''임영웅 - 사랑은 늘 도망가'' KBS 2TV 주말드라마 ''신사와 아가씨''는 우연인 듯 인연인 듯 계속된 만남을 가지게 된 박단단(이세희 분)과 이영국(지현우 분)이 한집살이를 시작하며 흥미진진한 서사와 디테일한 연출로 시청자들을 사로잡고 있다.'),
+       ('SPOT!', '	YG PLUS', 'KOZ 엔터테인먼트', '국내', 'HipHop', 'upload/스팟.jpg', 8, '2024-04-26',
+        '지코의 첫 번째 정규앨범 "SPOT!"는 독창적인 음악성과 심오한 가사를 담은 작품입니다. 타이틀 곡 "Thinking"은 지코 특유의 스타일과 제니의 감각적인 보컬이 어우러진 곡입니다.'),
+       ('2', '카카오엔터테인먼트', '큐브 엔터테인먼트', '국내', 'K-POP', 'upload/질색.jpg', 9, '2024-01-29',
+        '''Super Lady''의 아름다움과 그 힘에 대한 찬가 콘셉트 장인 (여자)아이들의 화려한 귀환'),
+       ('SUPER REAL ME', '지니뮤직, Stone Music Entertainment', '빌리프랩', '국내', 'Dance', 'upload/마그넷.jpg', 10, '2024-03-25',
+        '‘하이브 막내딸’ 아일릿, 3월 25일 첫 번째 미니 앨범 ‘SUPER REAL ME’로 데뷔! 엉뚱•발랄•자유로움 아일릿…무엇이든 될 수 있는 무한 가능성의 소녀들 ‘눈 앞에 최선을, 나머지는 되는 대로’, 진짜 ‘나’의 이야기로 전속력으로 달려가는 아일릿 ‘리얼 10대 감성’ 아일릿 시작부터 다르다! 방시혁 프로듀서x10대 프로듀서 만남'),
+       ('선재 업고 튀어 OST Part 1', 'Stone Music Entertainment', 'BON FACTORY, Stone Music Entertainment', '국내', 'OST',
+        'upload/소나기.jpg', 11, '2024-01-10',
+        '드라마 속 밴드 ''이클립스''가 선보이는 첫 번째 OST! tvN 월화드라마 ‘선재 업고 튀어’가 드라마의 몰입도를 높일 OST들을 선공개한다');
 
 -- 테이블: song
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id, lyrics) VALUES
-                                                                                                                               ('전부 너였다','런치송 프로젝트','양재선','upload/전부너였다.mp4','Ballad',true,'upload/전부너였다.mp3',now(),1,'가슴을 떼어 놓은
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('전부 너였다', '런치송 프로젝트', '양재선', 'upload/song/전부너였다.mp4', 'Ballad', true, 'upload/song/전부너였다.mp3', now(), 1, '가슴을 떼어 놓은
 채 살 순 없나요
 아무런 느낌도 없는 채로
 눈물을 닦을 힘도
@@ -90,9 +105,8 @@ INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title,
 나는 또 그대겠죠
 '),
 
-                                                                                                                               ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', 'upload/슈퍼노바.mp4', 'Dance', true, 'upload/슈퍼노바.mp3', 2024-05-13, 2, 'I’m like some kind of Supernova
+('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', 'upload/슈퍼노바.mp4', 'Dance',true, 'upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
 Watch out
-
 Look at me go
 재미 좀 볼
 빛의 Core
@@ -178,9 +192,9 @@ Supernova
 질문은 계속돼 Ah Oh Ay
 (Nova)
 Bring the light of a dying star
-Supernova' ),
+Supernova'),
 
-                                                                                                                               ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)', 'upload/Armageddon.mp4', 'Dance', true, 'upload/Armageddon.mp3', 2024-05-27, 2, 'Armageddon
+('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)','upload/Armageddon.mp4', 'Dance', true, 'upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
 Shoot
 Imma get ’em
 Shoot
@@ -302,7 +316,8 @@ Armageddon
 끝과 시작의
 Armageddon'),
 
-                                                                                                                               ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, 'upload/tone.mp3', 2024-05-27, 2, 'We Set The Tone
+       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, 'upload/tone.mp3',
+        '2024-05-27', 2, 'We Set The Tone
 Music on where we go
 미친 Beat drum
 같은 소리로
@@ -436,7 +451,8 @@ We Set The Tone
 We Set The Tone
 We take it home
 We Set The Tone'),
-                                                                                                                               ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance', false, 'upload/Mine.mp3',2024-05-27, 2, '예고 없이
+
+('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',false, 'upload/Mine.mp3', '2024-05-27', 2, '예고 없이
 지는 그림자
 Mine
 두려움을
@@ -577,7 +593,7 @@ know you want it like
 It’s all Mine
 Mine'),
 
-                                                                                                                               ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정', 'upload/Licorice.mp4', 'Dance', false, 'upload/Licorice.mp3', 2024-05-27, 2, '넌 정말
+('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정','upload/Licorice.mp4', 'Dance', false, 'upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
 Licorice
 Licorice
@@ -701,7 +717,7 @@ Licorice
 자꾸 손이 가
 Like Licorice'),
 
-                                                                                                                               ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null, 'Dance', false, 'upload/BAHAMA.mp3', 2024-05-27, 2, 'Bahama,
+('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,'Dance', false, 'upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
 ba ba
 Bahama, hama
 (Bahama)
@@ -836,9 +852,9 @@ Bahama, hama
 We should go
 To the beach
 Take it slow
-Bahama')
+Bahama'),
 
-    ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리', 'upload/Long Chat.mp4', 'Dance', false, 'upload/Long Chat.mp3', 2024-05-27, 2, 'Ha I’ll be the
+('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리','upload/Long Chat.mp4', 'Dance', false, 'upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
 Woo Ah
 
@@ -985,7 +1001,7 @@ Hashtag
 I’ll be the girl who likes a
 Long Chat'),
 
-    ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, 'upload/Prologue.mp3', 2024-05-27, 2, 'Woo Woo Woo
+('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, 'upload/Prologue.mp3','2024-05-27', 2, 'Woo Woo Woo
 La-la
 Woo Woo Woo
 La-la
@@ -1085,7 +1101,8 @@ Woo Woo Woo
 La-la
 '),
 
-    ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', 'upload/Live My Life.mp4', 'Rock/Metal', false, 'upload/Live My Life.mp3', 2024-05-27, 2, 'Bye 따분한
+       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', 'upload/Live My Life.mp4',
+        'Rock/Metal', false, 'upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
 고지식한
 그런 사고방식
 Say 솔직한 마음만
@@ -1187,9 +1204,9 @@ Live My Life
 외쳐봐
 Live My Life
 
-Life')
+Life'),
 
-    ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, 'upload/목소리 (Melody).mp3', 2024-05-27, 2, 'Every night
+('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, 'upload/목소리 (Melody).mp3','2024-05-27', 2, 'Every night
 지친 하루 끝에
 커져가는 빈자리
 그럴 땐
@@ -1230,7 +1247,7 @@ whole world
 가득히 채워주었던
 (너로)
 You making me
-feel like I''m lucky
+feel like I’m lucky
 같은 맘이길
 
 네 시선이 닿는
@@ -1270,7 +1287,7 @@ Oh You’re the one
 우릴 이어준
 목소리'),
 
-    ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman', 'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)', 'upload/How Sweet.mp4', 'Dance', true, 'upload/How Sweet.mp3', 2024-05-24, 3, 'All I know is now
+('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman','Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)','upload/How Sweet.mp4', 'Dance', true, 'upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
 알게 됐어 나 (I know)
 그동안 맨날
 Always up and down (No more)
@@ -1359,104 +1376,104 @@ You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
 Don’t knock on my door, I’ll see you out'),
 
-    ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman', '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', 'upload/해야 (HEYA).mp4', 'Dance', true, 'upload/해야 (HEYA).mp3', 2024-04-29, 4, 'Let’s get it
-Look at it
-Pay attention
+('해야 (HEYA)','Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman','이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)','upload/해야 (HEYA).mp4','Dance',true,'upload/해야 (HEYA).mp3','2024-04-29',4,
+        'Let’s get it
+    Look at it
+    Pay attention
 
-얼어붙은 맘 어디 깨볼까?
-놀라버렸던 네 심장 말이야
-맘에 들었어 넌 그냥 Say yes
-내가 널 부르면 “얼음 땡”
+    얼어붙은 맘 어디 깨볼까?
+    놀라버렸던 네 심장 말이야
+    맘에 들었어 넌 그냥 Say yes
+    내가 널 부르면 “얼음 땡”
 
-(Da da da dun dun)
-널 노리는 내 두 눈
-숨을 죽인 그다음
-한 발 낮춘 attitude
-때를 기다리는 pose
+    (Da da da dun dun)
+    널 노리는 내 두 눈
+    숨을 죽인 그다음
+    한 발 낮춘 attitude
+    때를 기다리는 pose
 
-어둠 속 빛난 tiger eyes
-날 감춘 채로 다가가
-새빨간 말로 홀려 놔
-방심한 순간 claw
+    어둠 속 빛난 tiger eyes
+    날 감춘 채로 다가가
+    새빨간 말로 홀려 놔
+    방심한 순간 claw
 
-우린 더 높이
-하늘에 닿을 것처럼 외쳐 너를 깨워
-올려 봐 노려봐 넌 내 거니까 다
-자꾸 널 보면 탐이 탐이 나
+    우린 더 높이
+    하늘에 닿을 것처럼 외쳐 너를 깨워
+    올려 봐 노려봐 넌 내 거니까 다
+    자꾸 널 보면 탐이 탐이 나
 
-해야 해야 해야
-한입에 널 삼킬 때야
-(탐이 탐이 나)
-해야 해야 해야
-이미 내가 이긴 패야
-(널 보면 탐이 탐이 나)
+    해야 해야 해야
+    한입에 널 삼킬 때야
+    (탐이 탐이 나)
+    해야 해야 해야
+    이미 내가 이긴 패야
+    (널 보면 탐이 탐이 나)
 
-해야 해야 해야
-뜨겁게 떠오르는 해야
-별안간 홀린 그 순간 Bite
-단 한 번에 난 널 휘리휘리 Catch ya
+    해야 해야 해야
+    뜨겁게 떠오르는 해야
+    별안간 홀린 그 순간 Bite
+    단 한 번에 난 널 휘리휘리 Catch ya
 
-더 높이 Keep it up
-Uh huh
-Happily ever after? Nope!
-(Da da da dun dun)
+    더 높이 Keep it up
+    Uh huh
+    Happily ever after? Nope!
+    (Da da da dun dun)
 
-못 기다린대 못 돼버린 내 맘이
-겁 따윈 없는 척하지 마 너 감히
-멀어져 넌 가니
-어차피 한 입 거리 (Hey)
-옳지 착하지 더 이리이리 오렴
+    못 기다린대 못 돼버린 내 맘이
+    겁 따윈 없는 척하지 마 너 감히
+    멀어져 넌 가니
+    어차피 한 입 거리 (Hey)
+    옳지 착하지 더 이리이리 오렴
 
-네 맘 나 주면 안 잡아먹지 Right now
-내 발톱 아래 뭘 숨겼을지 Watch out
+    네 맘 나 주면 안 잡아먹지 Right now
+    내 발톱 아래 뭘 숨겼을지 Watch out
 
-우린 더 높이
-하늘에 닿을 것처럼 외쳐 너를 깨워
-올려 봐 노려봐 넌 내 거니까 다
-자꾸 널 보면 탐이 탐이 나
+    우린 더 높이
+    하늘에 닿을 것처럼 외쳐 너를 깨워
+    올려 봐 노려봐 넌 내 거니까 다
+    자꾸 널 보면 탐이 탐이 나
 
-해야 해야 해야
-한입에 널 삼킬 때야
-(탐이 탐이 나)
-해야 해야 해야
-이미 내가 이긴 패야
-(널 보면 탐이 탐이 나)
+    해야 해야 해야
+    한입에 널 삼킬 때야
+    (탐이 탐이 나)
+    해야 해야 해야
+    이미 내가 이긴 패야
+    (널 보면 탐이 탐이 나)
 
-해야 해야 해야
-뜨겁게 떠오르는 해야
-별안간 홀린 그 순간 Bite
-단 한 번에 난 널 휘리휘리 Catch ya
+    해야 해야 해야
+    뜨겁게 떠오르는 해야
+    별안간 홀린 그 순간 Bite
+    단 한 번에 난 널 휘리휘리 Catch ya
 
-휘리휘리 휘리휘리
-휘리휘리 휘리휘리
+    휘리휘리 휘리휘리
+    휘리휘리 휘리휘리
 
-더 붉게 더 밝게
-타올라 뜨거워도 좋으니
-더 높게 더 높게
-숨어도 넌 내 손바닥 안이니
+    더 붉게 더 밝게
+    타올라 뜨거워도 좋으니
+    더 높게 더 높게
+    숨어도 넌 내 손바닥 안이니
 
-깊은 어둠이 짙은 구름이
-또 긴 밤 아래 널 감출 테니
-Chew and swallow
-Get ready for it, baby
-(Listen when I say)
+    깊은 어둠이 짙은 구름이
+    또 긴 밤 아래 널 감출 테니
+    Chew and swallow
+    Get ready for it, baby
+    (Listen when I say)
 
-자꾸 널 보면 탐이 탐이 나
+    자꾸 널 보면 탐이 탐이 나
 
-해야 해야 해야
-한입에 널 삼킬 때야
-(탐이 탐이 나)
-해야 해야 해야
-이미 내가 이긴 패야
-(널 보면 탐이 탐이 나)
+    해야 해야 해야
+    한입에 널 삼킬 때야
+    (탐이 탐이 나)
+    해야 해야 해야
+    이미 내가 이긴 패야
+    (널 보면 탐이 탐이 나)
 
-해야 해야 해야
-뜨겁게 떠오르는 해야
-별안간 홀린 그 순간 Bite
-Da da da dun dun dun'),
+    해야 해야 해야
+    뜨겁게 떠오르는 해야
+    별안간 홀린 그 순간 Bite
+    Da da da dun dun dun'),
 
-    ('첫 만남은 계획대로 되지 않아', 'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK', 'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', 'upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true, 'upload/첫 만남은 계획대로 되지 않아.mp3', 2024-01-22, 5, 'Ay ay ay ay ay
-
+('첫 만남은 계획대로 되지 않아','WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK','WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', 'upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,'upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
 거울 속에 내 표정 봐 봐
 느낌 So good 기다려온 D-day
 연습했던 손든 인사도 그대로 하면 돼
@@ -1510,8 +1527,7 @@ Na na na-
 내일 또 봐 안녕
 '),
 
-    ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영', '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', 'upload/고민중독.mp4', 'Rock/Metal', true, 'upload/고민중독.mp3', 2024-04-01, 6, 'One! Two! Q! W! E! R!
-
+('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영','이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', 'upload/고민중독.mp4', 'Rock/Metal', true, 'upload/고민중독.mp3','2024-04-01', 6, 'One! Two! Q! W! E! R!
 어떤 인사가 괜찮을까 천 번쯤 상상해 봤어
 근데 오늘도 천 번 하고 한 번 더 고민 중
 
@@ -1551,7 +1567,7 @@ Na na na-
 매일 고민하고 연습했던 말
 좋아해'),
 
-    ('사랑은 늘 도망가', '홍진영', '강태규', 'upload/사랑은 늘 도망가.mp4', 'Ballad', true, 'upload/사랑은 늘 도망가.mp3', 2021-10-11, 7, '눈물이 난다 이 길을 걸으면
+('사랑은 늘 도망가', '홍진영', '강태규', 'upload/사랑은 늘 도망가.mp4', 'Ballad', true, 'upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
 붙잡지 못하고 가슴만 떨었지
 내 아름답던 사람아
@@ -1586,7 +1602,7 @@ Na na na-
 잠시 쉬어가면 좋을 텐데
 잠시 쉬어가면 좋을 텐데'),
 
-    ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', 'upload/SPOT! (feat. JENNIE).mp4', 'HipHop', true, 'upload/SPOT! (feat. JENNIE).mp3', 2024-04-26, 8, 'Everything ok my man
+('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', 'upload/SPOT! (feat. JENNIE).mp4','HipHop', true, 'upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
 Turn the music up
 
 Uhm we’re not going home tonight, alright
@@ -1659,7 +1675,7 @@ Wait a minute ahhh
 Come vibe with us
 Ride with us'),
 
-    ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false, 'upload/나는 아픈 건 딱 질색이니까.mp3', 2024-01-29, 9, '오늘도 아침엔 입에 빵을 물고
+('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,'upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
 똑같이 하루를 시작하고
 온종일 한 손엔 아이스 아메리카노
 피곤해 죽겠네
@@ -1707,7 +1723,7 @@ Ride with us'),
 아냐 지나치는 게 나을 것 같아
 나는 아픈 건 딱 질색이니까'),
 
-    ('Magnetic', 'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES', 'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES', 'upload/Magnetic.mp4', 'Dance', true, 'upload/Magnetic.mp3', 2024-03-25, 10, 'Baby
+('Magnetic','Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES','Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES','upload/Magnetic.mp4', 'Dance', true, 'upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
 I’m just trying to play it cool
 But I just can’t hide that
 I want you
@@ -1785,58 +1801,57 @@ BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
 Baby don’t say no'),
 
-    ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, 'upload/소나기.mp3', 2024-04-08, 11, '' ||
-     '그치지 않기를 바랬죠
-처음 그대 내게로 오던 그날에
-잠시 동안 적시는
-그런 비가 아니길
-간절히 난 바래왔었죠
+('소나기','한성호, 박수석, Moon Kim (Room 01)','한성호, 수윤 (Sooyoon)',null,'Ballad',true,'upload/소나기.mp3','2024-04-08',11,'그치지 않기를 바랬죠
+    처음 그대 내게로 오던 그날에
+    잠시 동안 적시는
+    그런 비가 아니길
+    간절히 난 바래왔었죠
 
-그대도 내 맘 아나요
-매일 그대만 그려왔던 나를
-오늘도 내 맘에 스며들죠
+    그대도 내 맘 아나요
+    매일 그대만 그려왔던 나를
+    오늘도 내 맘에 스며들죠
 
-그대는 선물입니다
-하늘이 내려준
-홀로 선 세상 속에
-그댈 지켜줄게요
-어느 날 문득
-소나기처럼
-내린 그대지만
-오늘도 불러 봅니다
-내겐 소중한 사람
-Oh
+    그대는 선물입니다
+    하늘이 내려준
+    홀로 선 세상 속에
+    그댈 지켜줄게요
+    어느 날 문득
+    소나기처럼
+    내린 그대지만
+    오늘도 불러 봅니다
+    내겐 소중한 사람
+    Oh
 
-떨어지는 빗물이
-어느새 날 깨우고
-그대 생각에 잠겨요
+    떨어지는 빗물이
+    어느새 날 깨우고
+    그대 생각에 잠겨요
 
-이제는 내게로 와요
-언제나처럼 기다리고 있죠
-그대 손을 꼭 잡아줄게요
+    이제는 내게로 와요
+    언제나처럼 기다리고 있죠
+    그대 손을 꼭 잡아줄게요
 
-그대는 선물입니다
-하늘이 내려준
-홀로 선 세상 속에
-그댈 지켜줄게요
-어느 날 문득
-소나기처럼
-내린 그대지만
-오늘도 불러 봅니다
-내겐 소중한 사람
+    그대는 선물입니다
+    하늘이 내려준
+    홀로 선 세상 속에
+    그댈 지켜줄게요
+    어느 날 문득
+    소나기처럼
+    내린 그대지만
+    오늘도 불러 봅니다
+    내겐 소중한 사람
 
-잊고 싶던 아픈 기억들도
-빗방울과 함께 흘려보내면 돼요
-때로는 지쳐도
-하늘이 흐려도
-내가 있다는 걸 잊지 말아요
+    잊고 싶던 아픈 기억들도
+    빗방울과 함께 흘려보내면 돼요
+    때로는 지쳐도
+    하늘이 흐려도
+    내가 있다는 걸 잊지 말아요
 
-그대는 사랑입니다
-하나뿐인 사랑
-다시는 그대와 같은
-사랑 없을 테니
-잊지 않아요
-내게 주었던
-작은 기억 하나도
-오늘도 새겨봅니다
-내겐 선물인 그댈');
+    그대는 사랑입니다
+    하나뿐인 사랑
+    다시는 그대와 같은
+    사랑 없을 테니
+    잊지 않아요
+    내게 주었던
+    작은 기억 하나도
+    오늘도 새겨봅니다
+    내겐 선물인 그댈');
