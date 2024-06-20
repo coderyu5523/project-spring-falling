@@ -7,4 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ArtistService {
     private final ArtistRepository artistRepository;
+
+    public Artist getImage(int id) {
+       Artist artist = artistRepository.findById(id).get();
+       return artist;
+
+    }
 }

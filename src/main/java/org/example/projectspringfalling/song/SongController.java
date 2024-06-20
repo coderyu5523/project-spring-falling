@@ -1,7 +1,10 @@
 package org.example.projectspringfalling.song;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.artist.Artist;
+import org.example.projectspringfalling.artist.ArtistService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +28,6 @@ public class SongController {
     }
 
 
-
     // 검색 페이지
     @GetMapping("/search")
     public String search() {
@@ -40,8 +42,10 @@ public class SongController {
 
     // 장르별 페이지
     @GetMapping("/song-genre")
-    public String songGenre(){
+    public String songGenre() {
         return "song/song-genre";
     }
+
+
 
 }
