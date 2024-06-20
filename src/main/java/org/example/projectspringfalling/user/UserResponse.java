@@ -16,7 +16,7 @@ public class UserResponse {
         private String refreshToken;
         @JsonProperty("expires_in")
         private Integer expiresIn;
-        private String scope; // 조심하자
+        private String scope;
         @JsonProperty("refresh_token_expires_in")
         private Integer refreshTokenExpiresIn;
     }
@@ -34,12 +34,4 @@ public class UserResponse {
         }
     }
 
-//    {
-//        "access_token": "cF8KxpGGr_PZ6RQhX6VW7qy9kAcKPhMJAAAAAQo9c-wAAAGPzRoMqcYNwJ_muSR4",
-//        "token_type": "bearer",
-//        "refresh_token": "CkRmjTlcVkiVgvedDVGT7eCd9LK-T0UbAAAAAgo9c-wAAAGPzRoMpsYNwJ_muSR4",
-//        "expires_in": 21599,
-//        "scope": "profile_nickname",
-//        "refresh_token_expires_in": 5183999
-//    }
 }

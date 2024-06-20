@@ -6,7 +6,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequiredArgsConstructor
 @Controller
@@ -37,7 +36,7 @@ public class UserController {
 
     // 로그인
     @PostMapping("/login")
-    public String login(UserRequest.LoginDTO reqDTO) throws Exception {
+    public String login(UserRequest.LoginDTO reqDTO) {
         User sessionUser = userService.login(reqDTO);
         rt.opsForValue().set("sessionUser", sessionUser);
         return "redirect:/";
@@ -56,13 +55,6 @@ public class UserController {
     public String profile() {
         return "user/profile-password";
 //        return "user/profile-phone";
-    }
-
-    @GetMapping("/redis/test")
-    public @ResponseBody String redisTest() {
-        User sessionUser = (User) session.getAttribute("sessionUser");
-        System.out.println("email : " + sessionUser.getEmail());
-        return "redis test";
     }
 
 }
