@@ -1,6 +1,5 @@
 package org.example.projectspringfalling.album;
 
-import java.sql.Timestamp;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -8,6 +7,9 @@ import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.artist.Artist;
 import org.example.projectspringfalling.song.Song;
 import org.hibernate.annotations.CreationTimestamp;
+
+import java.sql.Timestamp;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -30,7 +32,10 @@ public class Album {
     private Timestamp createdAt; // 생성날짜
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Artist artist; // 노래
+    private Artist artist; // 아티스트
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Song> song;
 
 
     @Builder
@@ -45,5 +50,19 @@ public class Album {
         this.albumImg = albumImg;
         this.createdAt = createdAt;
         this.artist = artist;
+    }
+
+    // 인서트용 생성자
+    // 앨범 이미지는 저장하면서 경로 받아와야 돼서 별도로 받음
+    // 노래 리스트는 엔티티화 후에 받아야해서 별도로 받음
+    public Album(AlbumRequest.SaveDTO requestDTO, String albumImg, List<Song> song) {
+        this.title = requestDTO.getTitle();
+        this.distributor = requestDTO.getDistributor();
+        this.agency = requestDTO.getAgency();
+        this.intro = requestDTO.getIntro();
+        this.nationality = requestDTO.getNationality();
+        this.category = requestDTO.getCategory();
+        this.albumImg = albumImg;
+        this.song = song;
     }
 }

@@ -1,13 +1,13 @@
 package org.example.projectspringfalling.song;
 
 import jakarta.persistence.*;
-import java.sql.Timestamp;
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
 import org.hibernate.annotations.CreationTimestamp;
+
+import java.sql.Timestamp;
 
 @Getter
 @NoArgsConstructor
@@ -35,7 +35,7 @@ public class Song {
     private Album album; // 앨범 아이디
 
     @Builder
-    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt,Album album,String musicFile) {
+    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt, Album album, String musicFile) {
         this.id = id;
         this.title = title;
         this.lyrics = lyrics;
@@ -46,6 +46,19 @@ public class Song {
         this.isTitle = isTitle;
         this.createdAt = createdAt;
         this.album = album;
+        this.musicFile = musicFile;
+    }
+
+    // 인서트용 생성자
+    // 뮤직비디오 및 노래는 저장하면서 경로 받아와야 돼서 별도로 받음
+    public Song(SongRequest.SaveDTO requestDTO, String musicVideo, String musicFile) {
+        this.title = requestDTO.getTitle();
+        this.lyrics = requestDTO.getLyrics();
+        this.songWriter = requestDTO.getSongWriter();
+        this.lyricist = requestDTO.getLyricist();
+        this.musicVideo = musicVideo;
+        this.genre = requestDTO.getGenre();
+        this.isTitle = requestDTO.getIsTitle();
         this.musicFile = musicFile;
     }
 }
