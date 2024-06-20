@@ -7,4 +7,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class AlbumService {
     private final AlbumRepository albumRepository;
+
+    public Album getImage(int id) {
+        Album album = albumRepository.findById(id).get();
+        return album;
+    }
 }
