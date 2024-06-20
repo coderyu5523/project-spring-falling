@@ -3,10 +3,10 @@ package org.example.projectspringfalling.album;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.example.projectspringfalling.artist.Artist;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @RequiredArgsConstructor
 @Controller
@@ -19,6 +19,14 @@ public class AlbumController {
     public String songList(@PathVariable Integer id) {
 //        return "album/album-list";
         return "album/album-detail";
+    }
+
+    // 앨범 추가하기
+    @PostMapping("/albums/register")
+    public String albumRegister(AlbumRequest.SaveDTO requestDTO) {
+        albumService.addAlbum(requestDTO);
+
+        return "redirect:/admin/albums";
     }
 
     // 앨범 더미 테스트

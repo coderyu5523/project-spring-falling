@@ -39,7 +39,7 @@ spring:
         default_batch_fetch_size: 10
     defer-datasource-initialization: true
     open-in-view: false
-#  servlet:
-#    multipart:
-#      max-file-size: 50MB   # 최대 파일 크기를 50MB로 설정
-#      max-request-size: 50MB  # 최대 요청 크기를 50MB로 설정
+  servlet:
+    multipart:
+      max-file-size: 100MB   # 최대 파일 크기를 100MB로 설정
+      max-request-size: 100MB  # 최대 요청 크기를 100MB로 설정
