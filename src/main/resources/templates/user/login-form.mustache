@@ -5,8 +5,8 @@
     <div class="main-login">
         <div class="login-container">
             <form class="login-form" action="/login" method="post" enctype="application/x-www-form-urlencoded">
-                <input class="input-font" type="text" placeholder="아이디(이메일)" required>
-                <input class="input-font" type="password" placeholder="비밀번호" required>
+                <input class="input-font" type="text" placeholder="아이디(이메일)" name="email" required>
+                <input class="input-font" type="password" placeholder="비밀번호" name="password" required>
                 <br>
 
                 <div class="remember-box">
@@ -27,14 +27,20 @@
                 </div>
                 <div class="social-login">
                     <div class="button-group">
-                        <button type="button"><img src="../images/btn_login_naver.png" alt="naver"></button>
-                        <button type="button"><img src="../images/btn_login_kakao.png" alt="kakao"></button>
+                        <button type="button">
+                            <img src="../images/btn_login_naver.png" alt="naver">
+                        </button>
+                        <button type="button"
+                                onclick="location.href='https://kauth.kakao.com/oauth/authorize?redirect_uri=http://localhost:8080/oauth/callback/kakao&response_type=code&client_id=de886838ff478f3a5b83c56cdb2dd412'">
+                            <img src="../images/btn_login_kakao.png" alt="kakao">
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
 <!-- login form end -->
 
 {{>layout/footer}}
