@@ -6,6 +6,7 @@ import java.sql.Timestamp;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.projectspringfalling.album.Album;
 import org.hibernate.annotations.CreationTimestamp;
 
 @Getter
@@ -26,12 +27,11 @@ public class Song {
     @CreationTimestamp
     private Timestamp createdAt; // 생성 날짜
 
-    private Integer album_id; // 앨범 아이디
-    private Integer artist_id; // 아티스트 아이디
-    private Integer playlist_id; // 플레이리스트 아이디;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Album album; // 앨범 아이디
 
     @Builder
-    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt, Integer album_id, Integer artist_id, Integer playlist_id) {
+    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt,Album album) {
         this.id = id;
         this.title = title;
         this.lyrics = lyrics;
@@ -41,8 +41,6 @@ public class Song {
         this.genre = genre;
         this.isTitle = isTitle;
         this.createdAt = createdAt;
-        this.album_id = album_id;
-        this.artist_id = artist_id;
-        this.playlist_id = playlist_id;
+        this.album = album;
     }
 }

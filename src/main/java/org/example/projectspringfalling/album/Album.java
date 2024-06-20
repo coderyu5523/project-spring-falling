@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.projectspringfalling.artist.Artist;
 import org.example.projectspringfalling.song.Song;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -27,12 +28,11 @@ public class Album {
     private Timestamp createdAt; // 생성날짜
 
     @ManyToOne(fetch = FetchType.LAZY)
-    private Song song; // 노래
+    private Artist artist; // 노래
 
-    private Integer artistId; // 가수 아이디
 
     @Builder
-    public Album(Integer id, String title, String distributor, String agency, String intro, String nationality, String category, String albumImg, Timestamp createdAt, Song song, Integer artistId) {
+    public Album(Integer id, String title, String distributor, String agency, String intro, String nationality, String category, String albumImg, Timestamp createdAt, Artist artist) {
         this.id = id;
         this.title = title;
         this.distributor = distributor;
@@ -42,7 +42,6 @@ public class Album {
         this.category = category;
         this.albumImg = albumImg;
         this.createdAt = createdAt;
-        this.song = song;
-        this.artistId = artistId;
+        this.artist = artist;
     }
 }

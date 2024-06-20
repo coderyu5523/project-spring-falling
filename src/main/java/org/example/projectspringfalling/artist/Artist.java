@@ -22,16 +22,12 @@ public class Artist {
     @CreationTimestamp
     private Timestamp createdAt; // 생성 날짜
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Album album; // 앨범
-
     @Builder
-    public Artist(Integer id, String name, String artistType, String artistImg, Timestamp createdAt, Album album) {
+    public Artist(Integer id, String name, String artistType, String artistImg, Timestamp createdAt) {
         this.id = id;
         this.name = name;
         this.artistType = artistType;
         this.artistImg = artistImg;
         this.createdAt = createdAt;
-        this.album = album;
     }
 }
