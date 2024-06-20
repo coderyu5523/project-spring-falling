@@ -10,13 +10,18 @@ public class UserResponse {
     public static class KakaoTokenDTO {
         @JsonProperty("access_token") // 이렇게 해주면 access_token으로 파싱된 값이 accessToken에 들어간다.(jackson 라이브러리)
         private String accessToken;
+
         @JsonProperty("token_type")
         private String tokenType;
+
         @JsonProperty("refresh_token")
         private String refreshToken;
+
         @JsonProperty("expires_in")
         private Integer expiresIn;
+
         private String scope;
+
         @JsonProperty("refresh_token_expires_in")
         private Integer refreshTokenExpiresIn;
     }
@@ -24,13 +29,46 @@ public class UserResponse {
     @Data
     public static class KakaoUserDTO {
         private Long id; // 값이 커서 Long으로 받아야 한다.
+
         @JsonProperty("connected_at")
         private Timestamp connectedAt;
+
         private Properties properties;
 
         @Data
         class Properties {
             private String nickname;
+        }
+    }
+
+
+    @Data // getter, setter
+    public static class NaverTokenDTO {
+        @JsonProperty("access_token") // 이렇게 해주면 access_token으로 파싱된 값이 accessToken에 들어간다.(jackson 라이브러리)
+        private String accessToken;
+
+        @JsonProperty("refresh_token")
+        private String refreshToken;
+
+        @JsonProperty("token_type")
+        private String tokenType;
+
+        @JsonProperty("expires_in")
+        private Integer expiresIn;
+    }
+
+    @Data
+    public static class NaverUserDTO {
+        private String message;
+        private Response response;
+
+        @Data
+        static class Response {
+            private String id;
+            private String email; // 이메일 주소
+            private String birthday; // 생일
+            private String birthyear; // 출생년도
+            private String mobile; // 전화번호
         }
     }
 

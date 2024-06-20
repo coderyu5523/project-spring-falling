@@ -42,10 +42,18 @@ public class UserController {
         return "redirect:/";
     }
 
-    // OAuth Redirect URI
+    // OAuth Redirect URI(kakao)
     @GetMapping("/oauth/callback/kakao")
     public String oauthCallbackKakao(String code) {
         User sessionUser = userService.kakaoLogin(code);
+        rt.opsForValue().set("sessionUser", sessionUser);
+        return "redirect:/";
+    }
+
+    // OAuth Redirect URI(naver)
+    @GetMapping("/oauth/callback/naver")
+    public String oauthCallbackNaver(String code) {
+        User sessionUser = userService.NaverLogin(code);
         rt.opsForValue().set("sessionUser", sessionUser);
         return "redirect:/";
     }
