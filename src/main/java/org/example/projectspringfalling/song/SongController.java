@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class SongController {
     private final SongService songService;
     private final HttpSession session;
-    private final ArtistService artistService;
 
     // 곡 상세보기
     @GetMapping("/songs/{id}")
@@ -47,12 +46,6 @@ public class SongController {
         return "song/song-genre";
     }
 
-    @GetMapping("/test")
-    public String test(HttpServletRequest request) {
-        int id = 1;
-        Artist artist = artistService.getImage(id);
-        request.setAttribute("artist", artist);
-        return "test";
-    }
+
 
 }
