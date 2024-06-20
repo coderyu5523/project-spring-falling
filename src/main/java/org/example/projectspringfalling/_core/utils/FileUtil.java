@@ -1,6 +1,8 @@
 package org.example.projectspringfalling._core.utils;
 
 import org.apache.commons.io.IOUtils;
+import org.example.projectspringfalling._core.enums.FilePathEnum;
+import org.example.projectspringfalling._core.errors.exception.Exception400;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
@@ -138,6 +140,34 @@ public class FileUtil {
      * @param img 이미지 파일명
      * @return 생성된 UUID
      */
+
+    // 파일 저장 메서드
+    // 매개변수로 FilePathEnum 안에 있는걸 받아냄
+    public static String fileSave(MultipartFile file, FilePathEnum path) {
+        // 저장될 위치의 절대경로를 위한 File 객체
+        File currentDir = new File(path.getPath());
+
+        // 저장될 위치에 만약 디렉토리가 없으면 생성
+        if (!currentDir.exists()) {
+            currentDir.mkdir();
+        }
+
+        // UUID + 파일 이름
+        String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
+
+        // 저장될 경로를 가진 File 객체
+        File imgPath = new File(currentDir.getAbsolutePath() + "/" + fileName);
+
+        try {
+            // 서버에 파일 저장
+            file.transferTo(imgPath);
+            // 데이터베이스에 저장될 경로 리턴
+            return path.getPath() + fileName;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static String imgUUID(String img) {
         return UUID.randomUUID() + "_" + img;
     }
