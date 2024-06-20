@@ -8,38 +8,39 @@
         </div>
 
 
+        <div class="section-font" style="display: flex; justify-content: center">
+            다음 가입방법 중 하나를 선택하세요.
 
-<div class="section-font" style="display: flex; justify-content: center">
-    다음 가입방법 중 하나를 선택하세요.
-
-</div>
-
-<div style="display: flex; justify-content: center">
-
-
-    <div style="width: 400px; margin-top: 5%; margin-bottom: 10%">
-        <div>
-            <a href="/join-form" class="email-signup-btn" style="color: white">
-                <i class="fa fa-envelope"></i>
-                이메일로 회원가입
-            </a>
         </div>
-        <div class="kakao-login-container">
-            <a href="https://your-kakao-login-link.com" class="kakao-login-btn">
-                <img src="https://static.011st.com/assets/img/svg/member/sns-kakao.svg" alt="Kakao Login"
-                     class="kakao-login-icon">
-                <span>카카오 회원가입</span>
-            </a>
+
+        <div style="display: flex; justify-content: center">
+
+
+            <div style="width: 400px; margin-top: 5%; margin-bottom: 10%">
+                <div>
+                    <a href="/join-form" class="email-signup-btn" style="color: white">
+                        <i class="fa fa-envelope"></i>
+                        이메일로 회원가입
+                    </a>
+                </div>
+                <div class="kakao-login-container">
+                    <a href="https://kauth.kakao.com/oauth/authorize?redirect_uri=http://localhost:8080/oauth/callback/kakao&response_type=code&client_id=de886838ff478f3a5b83c56cdb2dd412"
+                       class="kakao-login-btn">
+                        <img src="https://static.011st.com/assets/img/svg/member/sns-kakao.svg" alt="Kakao Login"
+                             class="kakao-login-icon">
+                        <span>카카오 회원가입</span>
+                    </a>
+                </div>
+                <div class="naver-login-container">
+                    <a href="https://nid.naver.com/oauth2.0/authorize?client_id=B_iv0qTaEJVdKWa_FPzy&response_type=code&redirect_uri=http://localhost:8080/oauth/callback/naver&state=1234"
+                       class="naver-login-btn" style="color: white">
+                        <img src="https://static.011st.com/assets/img/svg/member/sns-naver.svg" alt="Naver Login"
+                             class="naver-login-icon">
+                        <span>네이버 회원가입</span>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="naver-login-container">
-            <a href="https://your-naver-login-link.com" class="naver-login-btn"  style="color: white">
-                <img src="https://static.011st.com/assets/img/svg/member/sns-naver.svg" alt="Naver Login"
-                     class="naver-login-icon">
-                <span>네이버 회원가입</span>
-            </a>
-        </div>
-    </div>
-</div>
     </div>
 </div>
 {{>layout/footer}}

@@ -19,14 +19,24 @@ import java.util.UUID;
 public class UserService {
     private final UserRepository userRepository;
 
+    // 회원가입
     @Transactional
-    public User login(UserRequest.LoginDTO reqDTO) {
-        User sessionUser = userRepository.findByEmailAndPassword(reqDTO.getEmail(), reqDTO.getPassword())
-                .orElseThrow(() -> new Exception404("존재 하지 않는 회원입니다"));
-        return sessionUser;
+    public UserResponse.JoinDTO join(UserRequest.JoinDTO reqDTO) {
+        User joinUser = userRepository.save(reqDTO.toEntity());
+        return new UserResponse.JoinDTO(joinUser);
     }
 
-    public User kakaoLogin(String code) {
+    // 로그인
+    @Transactional
+    public UserResponse.LoginDTO login(UserRequest.LoginDTO reqDTO) {
+        User sessionUser = userRepository.findByEmailAndPassword(reqDTO.getEmail(), reqDTO.getPassword())
+                .orElseThrow(() -> new Exception404("존재 하지 않는 회원입니다"));
+        return new UserResponse.LoginDTO(sessionUser);
+    }
+
+    // 카카오 로그인
+    @Transactional
+    public UserResponse.LoginDTO kakaoLogin(String code) {
         // 1. code로 카카오에서 토큰 받기 (위임 완료) - OAuth2.0
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
@@ -78,20 +88,22 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return userPS;
+            return new UserResponse.LoginDTO(userPS);
         } else {
             // 강제 회원가입
             User user = User.builder()
                     .email(response2.getBody().getProperties().getNickname() + "@nate.com")
                     .password(UUID.randomUUID().toString())
-                    .provider("KAKAO")
+                    .provider("Kakao")
                     .build();
             User returnUser = userRepository.save(user);
-            return returnUser;
+            return new UserResponse.LoginDTO(returnUser);
         }
     }
 
-    public User NaverLogin(String code) {
+    // 네이버 로그인
+    @Transactional
+    public UserResponse.LoginDTO naverLogin(String code) {
         // 1. code로 네이버에서 토큰 받기 (위임 완료) - OAuth2.0
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
@@ -144,17 +156,17 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return userPS;
+            return new UserResponse.LoginDTO(userPS);
         } else {
             User user = User.builder()
                     .email(email)
                     .birth(response2.getBody().getResponse().getBirthyear() + "-" + response2.getBody().getResponse().getBirthday())
                     .password(UUID.randomUUID().toString())
                     .phone(response2.getBody().getResponse().getMobile())
-                    .provider("NAVER")
+                    .provider("Naver")
                     .build();
             User returnUser = userRepository.save(user);
-            return returnUser;
+            return new UserResponse.LoginDTO(returnUser);
         }
     }
 }
