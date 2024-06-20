@@ -23,4 +23,10 @@ public class PlaylistController {
     public String playlist(@PathVariable Integer id) {
         return "playlist/playlist";
     }
+
+    // 현재 재생중인 플레이리스트
+    @GetMapping("/playlists/current")
+    public String currentPlaylist() {
+        return "playlist/current-playlist";
+    }
 }
