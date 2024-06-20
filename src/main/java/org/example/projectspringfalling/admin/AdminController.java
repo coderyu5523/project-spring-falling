@@ -46,10 +46,16 @@ public class AdminController {
         return "admin/artist-save-form";
     }
 
-    // 신고 내역 보기
+    // 신고 목록 보기
     @GetMapping("/admin/reports")
     public String reportList() {
         return "admin/report-list";
+    }
+
+    // 신고 상세보기
+    @GetMapping("/admin/reports/{id}")
+    public String reportDetail(@PathVariable Integer id) {
+        return "admin/report-detail";
     }
 
     // 곡 상세보기
