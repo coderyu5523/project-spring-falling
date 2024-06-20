@@ -26,7 +26,6 @@ public class AlbumController {
     public String test(HttpServletRequest request) {
         int id = 1;
         Album album = albumService.getImage(id);
-        System.out.println(album.getAlbumImg());
         request.setAttribute("album", album);
         return "album-test";
     }

@@ -7,4 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class SongService {
     private final SongRepository songRepository;
+
+
+    public Song getImg(int id){
+       Song song = songRepository.findById(id).get();
+       return song;
+    }
 }

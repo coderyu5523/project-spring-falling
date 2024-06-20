@@ -3,6 +3,7 @@ package org.example.projectspringfalling.song;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.album.Album;
 import org.example.projectspringfalling.artist.Artist;
 import org.example.projectspringfalling.artist.ArtistService;
 import org.springframework.stereotype.Controller;
@@ -47,5 +48,13 @@ public class SongController {
     }
 
 
-
+    // todo : 더미 테스트용
+    @GetMapping("/song-test")
+    public String test(HttpServletRequest request) {
+        int id = 1;
+        Song song = songService.getImg(id);
+        System.out.println("음악" + song.getMusicFile());
+        request.setAttribute("song", song);
+        return "song-test";
+    }
 }
