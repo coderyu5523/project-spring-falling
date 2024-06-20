@@ -20,6 +20,8 @@ public class Album {
     private String title; // 앨범 제목
     private String distributor; // 유통사
     private String agency; // 기획사
+
+    @Column(columnDefinition = "TEXT") // 255자가 넘어가면 터져서 넣음
     private String intro; // 앨범 소개
     private String nationality; // 국내외
     private String category; // 앨범 유형
