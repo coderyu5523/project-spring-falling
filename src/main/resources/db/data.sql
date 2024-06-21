@@ -2311,35 +2311,366 @@ Lovesick girls
 Lovesick girls
 But we’re still looking for love
 ');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics)
--- VALUES ('Palette', 'IU', 'IU', 'palette_mv.mp4', 'Pop', TRUE, 'palette.mp3', CURRENT_TIMESTAMP, 3,'I like it, I’m twenty-five...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('I CAN`T STOP ME', 'J.Y. Park', 'J.Y. Park', 'icantstopme_mv.mp4', 'Dance', TRUE, 'icantstopme.mp3',
---         CURRENT_TIMESTAMP, 4, 'I can’t stop me, can’t stop me...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Tempo', 'Jhun', 'Jhun', 'tempo_mv.mp4', 'Pop', TRUE, 'tempo.mp3', CURRENT_TIMESTAMP, 5, 'I can’t believe...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Psycho', 'Kenzie', 'Kenzie', 'psycho_mv.mp4', 'Pop', TRUE, 'psycho.mp3', CURRENT_TIMESTAMP, 6,
---         'You got me feeling like a psycho...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Any Song', 'Zico', 'Zico', 'anysong_mv.mp4', 'Hip Hop', TRUE, 'anysong.mp3', CURRENT_TIMESTAMP, 7,
---         'I just wanna be happier...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Siren', 'Sunmi', 'Sunmi', 'siren_mv.mp4', 'Pop', TRUE, 'siren.mp3', CURRENT_TIMESTAMP, 8,
---         'Get away out of my face...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Pop', TRUE, 'fear.mp3', CURRENT_TIMESTAMP, 9,
---         'Even though I’m anxious...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Make A Wish (Birthday Song)', 'Kenzie', 'Kenzie', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
---         CURRENT_TIMESTAMP, 10, 'I can do this all day...');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('팔레트 (Feat. G-DRAGON)', '아이유 (IU)', '아이유 (IU)', '/upload/song/Palette.mp4', 'Ballade', TRUE,
+        '/upload/song/Palette.mp3', '2017-04-21', 14, '이상하게도 요즘엔 그냥 쉬운 게 좋아
+하긴 그래도 여전히 코린 음악은 좋더라
+Hot Pink 보다 진한
+보라색을 더 좋아해
+또 뭐더라 단추 있는
+Pajamas Lipstick
+좀 짓궂은 장난들
+I like it I''m twenty five
+날 좋아하는 거 알아
+I got this I''m truly fine
+이제 조금 알 것 같아 날
+긴 머리보다 반듯이 자른
+단발이 좋아
+하긴 그래도 좋은 날 부를 땐
+참 예뻤더라
+오 왜 그럴까 조금
+촌스러운 걸 좋아해
+그림보다 빼곡히 채운 Palette 일기 잠들었던 시간들
+I like it I''m twenty five
+날 미워하는 거 알아
+I got this I''m truly fine
+이제 조금 알 것 같아 날
+어려서 모든 게 어려워
+잔소리에 매 서러워
+꾸중만 듣던 철부지 애
+겨우 스무고개 넘어 기쁨도 잠시 어머
+아프니까 웬 청춘이래
+지은아 오빠는 말이야 지금 막 서른인데
+나는 절대로 아니야 근데 막 어른이 돼
+아직도 한참 멀었는데 너보다 다섯 살 밖에 안 먹었는데
+스물 위 서른 아래
+고맘때 Right there
+애도 어른도 아닌 나이 때
+그저 나일 때
+가장 찬란하게 빛이 나
+어둠이 드리워질 때도 겁내지 마
+너무 아름다워서 꽃잎 활짝 펴서
+언제나 사랑 받는 아이 YOU
+Palette 일기 잠들었던 시간들
+I like it I''m twenty five
+날 좋아하는 거 알아
+I got this I''m truly fine
+이제 조금 알 것 같아 날
+아직 할 말이 많아
+I like it I''m twenty five
+날 미워하는 거 알아
+I got this I''ve truly found
+이제 조금 알 것 같아 날
+');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('I CAN`T STOP ME', 'Melanie Fontana, Michel ''Lindgren'' Schulz, A Wright
+', 'J.Y. Park "The Asiansoul", 심은지', '/upload/song/I CAN`T STOP ME.mp4', 'Dance', TRUE, '/upload/song/I CAN`T STOP ME.mp3',
+        '2020-10-26', 15, '알람이 울려대
+Ring ring a ling
+서로의 눈길이 닿을 때마다
+알면서 빙빙 도는데
+점점 다가가잖아
+I know it’s too late
+마음속으로는
+다 알고 있잖아
+결국에는 선을
+넘게 될 거라는 걸
+I’m warning myself
+너 그러면 안 돼
+매분, 매초
+내 맘이 내 맘을 추월해
+Out of control
+
+나를 감시하는 저
+Spot spot spotlight
+비출수록
+어둠 속으로 빨려 들어
+끝이 보이는데
+I know it’s not right
+I can’t stop me
+can’t stop me
+
+내 앞에 놓여진 이
+Red red red line
+건너편의 너와 난
+이미 눈을 맞춰
+느끼고 싶어
+짜릿한 Highlight
+I can’t stop me
+can’t stop me
+
+I can’t stop me
+can’t stop me
+
+눈감아 달라구 Ya ya
+딱 한 번만
+No rules ah ah
+모른 척해 줘
+Lights off tonight
+나 참을 수 없을 거 같아
+Losing myself
+
+이제는 Turning back
+불가능해 난 점점
+더 깊은 어둠에
+너무나 짜릿해
+나 눈을 감을래
+다시는 돌아갈 수
+없을 것만 같애
+Out of control
+
+나를 감시하는 저
+Spot spot spotlight
+비출수록
+어둠 속으로 빨려 들어
+끝이 보이는데
+I know it’s not right
+I can’t stop me
+can’t stop me
+
+내 앞에 놓여진 이
+Red red red line
+건너편의 너와 난
+이미 눈을 맞춰
+느끼고 싶어
+짜릿한 Highlight
+I can’t stop me
+can’t stop me
+
+Risky risky wiggy 위기
+This is an emergency
+Help me, help me
+somebody stop me
+Cuz I know I can’t stop me
+답은 알고 있잖아
+근데 가고 있잖아
+이러고 싶지 않아
+내 안에 내가 또 있나 봐
+
+나는 원하는데
+원하는 게 안돼
+Guilty 난 싫은데
+I can’t stop me
+can’t stop me
+can’t stop me
+
+나를 감시하는 저
+Spot spot spotlight
+비출수록
+어둠 속으로 빨려 들어
+끝이 보이는데
+I know it’s not right
+I can’t stop me
+can’t stop me
+
+내 앞에 놓여진 이
+Red red red line
+건너편의 너와 난
+이미 눈을 맞춰
+느끼고 싶어
+짜릿한 Highlight
+I can’t stop me
+can’t stop me
+
+I can’t stop me
+can’t stop me
+');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('Tempo', 'Tay Jasper, Leven Kali, MZMC, JAMIL “DIGI” CHAMMAS, Adrian McKinnon
+', 'JQ, 페노메코 (PENOMECO), 유영진', 'tempo_mv.mp4', 'Dance', TRUE, '/upload/song/Tempo.mp3', '2018-11-02', 16, 'I can''t believe
+기다렸던 이런 느낌
+나만 듣고 싶은 그녀는 나의 멜로디
+하루 종일 go on and on and oh
+떠나지 않게 그녈 내 곁에
+Don''t mess up my tempo
+들어봐 이건 충분히
+I said don''t mess up my tempo
+그녀의 맘을 훔칠 beat
+어디에도 없을 리듬에 맞춰 1, 2, 3
+Don''t mess up my tempo
+멈출 수 없는 이끌림
+매혹적인 넌 lovely
+틈 없이 좁혀진 거리
+불규칙해지는 heartbeat
+잠시 눈을 감아 trust me
+밖으로 나갈 채비 미리 해둬 Are you ready?
+오늘은 내가 캐리 도시 나 사이의 케미
+이미 나와 놓곤 뭐가 창피해 ma boo
+어정쩡 어버버 할 필요 없다고
+챙길 건 없으니 손잡아 my lady
+가는 길마다 레드 카펫 또 런웨이인걸
+발걸음이 남달라
+지금 이 속도 맞춰보자 tempo
+Baby girl 아침을 설레게 하는 모닝콜
+매일 봐도 보고 싶은 맘인걸
+지금부터 나와 Let''s get down
+모든 것이 완벽하게 좋아
+So don''t slow it up for me
+Don''t mess up my tempo
+들어봐 이건 충분히
+I said don''t mess up my tempo
+그녀의 맘을 훔칠 beat
+어디에도 없을 리듬에 맞춰 1, 2, 3
+Don''t mess up my tempo
+멈출 수 없는 이끌림
+주윌 둘러봐 lovely
+틈 없이 좁혀진 거리
+너에게 맞춰진 heartbeat
+하고 싶은 대로 teach me
+여긴 내 구역 Don''t test me
+혼자 있기 어색하다면 보내줘 message
+Now you got me flexin''
+주윌 둘러봐
+널 보는 들러리들 속 위대한 개츠비 (Hold on wow)
+I''m doing alright baby girl you don''t know
+치워 네 머리 위에 물음표
+내 사전에 없는 L.I.E
+너는 이미 자연스럽게 맞추고 있어 내 tempo
+Baby girl 내 어깨에 살짝 기댄 그대의
+아련한 향기가 다시 내 맘에
+소용돌이치며 몰아친다
+이대로 난 영원하고 싶다
+So don''t mess up my tempo baby
+Don''t slow it up for me
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+내 눈을 바라보고 말해
+나의 귓가에만 닿게
+나만 사랑한다 말해
+나밖에 없다고 말해
+더 이상 흔들리지 않게
+절대 널 뺏기지 않게
+누구도 건들 수 없게
+내 곁에 너를 지킬게
+내 마음이 느껴지니
+나를 감싸 안은 유일한 나만의 savior
+모두 그런 널 바라보게 돼
+I can''t believe
+기다렸던 이런 느낌
+나만 듣고 싶은 그녀는 나의 멜로디
+하루 종일 go on and on and oh
+떠나지 않게 그녈 내 곁에
+Don''t mess up my tempo
+따라와 이건 충분히
+I said don''t mess up my tempo
+완전히 다른 색의 beat
+어디에도 없을 이런 완벽한 1, 2, 3
+Don''t mess up my tempo
+멈출 수 없는 이끌림
+');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('Psycho', 'Andrew Scott, Cazzi Opeia, EJAE', 'Kenzie', '/upload/song/Psycho.mp4', 'Dance', TRUE, '/upload/song/Psycho.mp3', '2019-12-23', 17,
+        'Psycho
+널 어쩌면 좋을까
+이런 맘은 또 첨이라
+Up & Down이 좀 심해
+조절이 자꾸 잘 안돼
+하나 확실한 건
+I don''t play the game
+우리 진짜 별나대
+그냥 내가 너무 좋아해
+넌 그걸 너무 잘 알고
+날 쥐락펴락해
+나도 마찬가지인걸
+우린 참 별나고 이상한 사이야
+서로를 부서지게
+(부서지게)
+그리곤 또 껴안아
+(그리곤 또 껴안아)
+You got me feeling like a
+psycho psycho
+우릴 보고 말해 자꾸 자꾸
+다시 안 볼 듯 싸우다가도
+붙어 다니니 말야
+이해가 안 간대
+웃기지도 않대
+맞아 Psycho psycho
+서로 좋아 죽는 바보 바보
+너 없인 어지럽고 슬퍼져
+기운도 막 없어요
+둘이 잘 만났대
+Hey now we''ll be ok
+Hey trouble
+경고 따윈 없이 오는 너
+I''m original visual
+우린 원래 이랬어 Yeah
+두렵지는 않아
+(흥미로울 뿐)
+It''s hot! Let me just hop
+어떻게 널 다룰까? Ooh
+어쩔 줄을 몰라 너를 달래고
+매섭게 발로 차도
+가끔 내게 미소 짓는 널
+어떻게 놓겠어 Ooh
+우린 아름답고 참 슬픈 사이야
+서로를 빛나게 해
+(Tell me now)
+마치 달과 강처럼
+그리곤 또 껴안아
+You got me feeling like a
+psycho psycho
+우릴 보고 말해 자꾸 자꾸
+다시 안 볼 듯 싸우다가도
+붙어 다니니 말야
+이해가 안 간대
+웃기지도 않대
+맞아 Psycho psycho
+서로 좋아 죽는 바보 바보
+너 없인 어지럽고 슬퍼져
+기운도 막 없어요
+둘이 잘 만났대
+Hey now we''ll be ok
+Don''t look back
+그렇게 우리답게 가보자
+난 온몸으로 널 느끼고 있어
+Everything will be ok
+(You got me feeling like a psycho)
+Like a psycho psycho
+우릴 보고 말해 자꾸 자꾸
+다시 안 볼 듯 싸우다가도
+붙어 다니니 말야
+둘이 잘 만났대
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+It''s alright
+It''s alright
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+It''s alright
+It''s alright
+우린 좀 이상해
+Psycho
+');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('천둥벌거숭이 (Feat. Jvcki Wai, 염따)', '지코 (ZICO), Pop Time', '지코 (ZICO)', '/upload/song/Daredevil.mp4', 'Hip Hop', TRUE, '/upload/song/Daredevil.mp3', CURRENT_TIMESTAMP, 7,
+        'I just wanna be happier...');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('Siren', 'Sunmi', 'Sunmi', 'siren_mv.mp4', 'Pop', TRUE, 'siren.mp3', CURRENT_TIMESTAMP, 8,
+        'Get away out of my face...');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Pop', TRUE, 'fear.mp3', CURRENT_TIMESTAMP, 9,
+        'Even though I’m anxious...');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('Make A Wish (Birthday Song)', 'Kenzie', 'Kenzie', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
+        CURRENT_TIMESTAMP, 10, 'I can do this all day...');
 
 
 --  테이블 : playlist
