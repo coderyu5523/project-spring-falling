@@ -35,6 +35,7 @@ public class Album {
     private Artist artist; // 아티스트
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "song_id")
     private List<Song> song;
 
 

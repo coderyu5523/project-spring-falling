@@ -30,14 +30,14 @@ VALUES ('노을', 'Solo', 'upload/artist/노을.jpg', '2002-12-24'),
        ('이클립스 (ECLIPSE)', 'Solo', 'upload/artist/이클립스.jpg', '2023-12-01'),
        ('BTS', 'Group', 'upload/artist/bts.jpg', '2013-06-13'),
        ('Blackpink', 'Group', 'upload/artist/블랙핑크.jpg', '2016-08-08'),
-       ('아이유', 'Solo', 'upload/aritst/아이유.jpg','2008-09-18'),
-       ('Twice', 'Group', 'upload/aritst/트와이스.jpg','2015-10-20'),
-       ('EXO', 'Group', 'upload/artist/엑소.jpg','2012-04-08'),
-       ('Red Velvet', 'Group', 'upload/artist/레드벨벳.jpg','2014-08-01'),
-       ('Zico', 'Solo', 'upload/artist/지코.jpg','2011-04-15'),
-       ('선미', 'Solo', 'upload/artist/선미.jpg','2007-02-13'),
-       ('Seventeen', 'Group', 'upload/artist/세븐틴.jpg','2015-05-26'),
-       ('NCT', 'Group', 'upload/artist/nct.jpg','2016-04-09');
+       ('아이유', 'Solo', 'upload/aritst/아이유.jpg', '2008-09-18'),
+       ('Twice', 'Group', 'upload/aritst/트와이스.jpg', '2015-10-20'),
+       ('EXO', 'Group', 'upload/artist/엑소.jpg', '2012-04-08'),
+       ('Red Velvet', 'Group', 'upload/artist/레드벨벳.jpg', '2014-08-01'),
+       ('Zico', 'Solo', 'upload/artist/지코.jpg', '2011-04-15'),
+       ('선미', 'Solo', 'upload/artist/선미.jpg', '2007-02-13'),
+       ('Seventeen', 'Group', 'upload/artist/세븐틴.jpg', '2015-05-26'),
+       ('NCT', 'Group', 'upload/artist/nct.jpg', '2016-04-09');
 
 
 --  샘플용 더미
@@ -74,17 +74,216 @@ VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국
         '드라마 속 밴드 ''이클립스''가 선보이는 첫 번째 OST! tvN 월화드라마 ‘선재 업고 튀어’가 드라마의 몰입도를 높일 OST들을 선공개한다');
 
 -- album_tb에 더미 데이터 삽입
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Map of the Soul: 7', 'BigHit Entertainment', 'BigHit Entertainment', 'Korea', 'Full Album', 'upload/album/MAP OF THE SOUL 7.jpg', 1, CURRENT_TIMESTAMP, 'The seventh studio album by BTS.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('The Album', 'YG Entertainment', 'YG Entertainment', 'Korea', 'Full Album', 'thealbum.jpg', 2, CURRENT_TIMESTAMP, 'The first Korean studio album by Blackpink.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Palette', 'LOEN Entertainment', 'Fave Entertainment', 'Korea', 'Full Album', 'palette.jpg', 3, CURRENT_TIMESTAMP, 'The fourth studio album by IU.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Eyes Wide Open', 'JYP Entertainment', 'JYP Entertainment', 'Korea', 'Full Album', 'eyeswideopen.jpg', 4, CURRENT_TIMESTAMP, 'The second Korean studio album by Twice.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Don`t Mess Up My Tempo', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'dontmessupmytempo.jpg', 5, CURRENT_TIMESTAMP, 'The fifth studio album by EXO.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('The ReVe Festival: Finale', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'therevefestivalfinale.jpg', 6, CURRENT_TIMESTAMP, 'The first Korean studio album by Red Velvet.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Thinking', 'KOZ Entertainment', 'KOZ Entertainment', 'Korea', 'Full Album', 'thinking.jpg', 7, CURRENT_TIMESTAMP, 'The first studio album by Zico.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Warning', 'Makeus Entertainment', 'Makeus Entertainment', 'Korea', 'EP', 'warning.jpg', 8, CURRENT_TIMESTAMP, 'The second EP by Sunmi.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('An Ode', 'Pledis Entertainment', 'Pledis Entertainment', 'Korea', 'Full Album', 'anode.jpg', 9, CURRENT_TIMESTAMP, 'The third studio album by Seventeen.');
-INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('NCT 2020 Resonance Pt. 1', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'resonancept1.jpg', 10, CURRENT_TIMESTAMP, 'The second studio album by NCT.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Map of the Soul: 7', 'YG PLUS', 'BIGHIT MUSIC', '국내', '정규', 'upload/album/MAP OF THE SOUL 7.jpg', 12,
+        '2020-02-21', '방탄소년단, 정규 4집 ‘MAP OF THE SOUL : 7’ 발매!
+‘온전한 나’의 모습을 찾기 위한 방탄소년단의 솔직한 이야기
 
+방탄소년단이 2월 21일 네 번째 정규 앨범 ‘MAP OF THE SOUL : 7’을 발매한다.
+지난해 막을 연 MAP OF THE SOUL 시리즈는 자신의 진짜 모습을 찾기 위해 여정을 시작한 방탄소년단의 솔직한 이야기를 담고 있다. 그 첫 작품인 MAP OF THE SOUL : PERSONA에서 세상에 대한 관심과 사랑의 즐거움을 노래하며 세상에 보여지는 자신의 모습을 발견했다면, ‘MAP OF THE SOUL : 7’에서는 그동안 숨겨왔던 내면의 그림자를 마주하고 이 또한 자신의 일부로 인정하고자 한다.
+‘MAP OF THE SOUL : 7’은 7명 멤버이자 한 팀으로 모인 방탄소년단의 데뷔 후 7년을 돌아보게 한다. 지금의 자리에 오기까지 걸어온 길은 결코 순탄치 않았고, 글로벌 슈퍼스타로서 오롯이 견뎌내야 하는 부담감과 두려움이라는 특별한 시련도 있었다. 하지만 그 시련의 상처마저 자신의 진짜 모습 중 하나임을 알게 된 방탄소년단은 이제 ‘보여주고 싶은 나’와 ‘외면하고 싶은 나’를 모두 받아들이고 마침내 ‘온전한 나’를 찾은 자신들의 이야기를 전하려 한다.
+
+‘MAP OF THE SOUL : 7’으로 선보일 방탄소년단의 아티스트적 면모
+지난 1월, 선공개 곡 ‘Black Swan’ 음원과 함께 선보인 아트 필름(Art Film performed by MN Dance Company)은 슬로베니아 현대무용팀인 엠엔 댄스 컴퍼니(MN Dance Company)와의 협업으로 만들어진 작품이다. 곡의 정서를 현대무용으로 재해석해, 고난과 역경을 딛고 탄생한 흑조(Black Swan)를 연상시키는 독창적인 안무가 전 세계를 사로잡았다.
+미국 CBS ‘더 레이트 레이트 쇼 위드 제임스 코든(The Late Late Show with James Corden)’에서 처음 공개한 ‘Black Swan’ 무대는 본 아트 필름을 연상케하는, 서정적이면서도 예술적 감성을 한층 끌어올린 퍼포먼스로 화제를 모았다.
+뿐만 아니라, 방탄소년단은 영국 런던, 독일 베를린, 아르헨티나 부에노스아이레스, 미국 뉴욕, 대한민국 서울 등 전 세계 5개국 예술 작가들과 협업한 글로벌 현대미술 프로젝트 CONNECT, BTS를 통해 다양성의 긍정, 소통, 연결 등 자신들이 추구하는 철학을 현대미술로 확장시켰다. 현대미술, 현대무용 등 새로운 영역과 조우하며 순수예술과 대중예술을 이어온 방탄소년단은 이번 ‘MAP OF THE SOUL : 7’으로 한 단계 성장한 아티스트의 면모를 보여줄 예정이다.
+
+타이틀곡 ‘ON’, 글로벌 아티스트로서 드러낸 소명의식
+방탄소년단은 타이틀곡 ‘ON’을 통해 자신들이 생각해온 그 이상의, 아티스트로서 삶의 무게를 짊어진 채 정신없이 달려온 지난날을 돌이켜본다. 때로는 허공에 뜬 것 같이 무게중심을 잃고 휘청거리기도 했고, 한 발자국 떼면 한 발자국 커지는 그림자에 두려운 마음도 들었다. 하지만 이젠 어디서든 무게중심을 찾는 방법을 알고 있기에, 성공에 뒤따르는 내면의 고통을 정면으로 마주 보겠다고 말한다.
+‘ON’은 이번 앨범을 관통하는 메시지를 담은 곡으로 주어진 길을 ‘제 발로 들어온 아름다운 감옥’으로 표현하며 운명을 받아들이고 계속해서 전진하겠다는 방탄소년단의 소명의식을 담았다.
+같은 날 선보이는 ‘ON’의 키네틱 매니페스토 필름(Kinetic Manifesto Film : Come Prima performed by BTS for Lead Single)은 30여 명의 댄서와 마칭 밴드(marching band)가 함께 하는 대규모 퍼포먼스를 구현, 글로벌 아티스트로서 방탄소년단의 독보적 존재감을 다시 한번 보여준다.
+
+유기적으로 연결된 19개 트랙의 완성도 높은 앨범
+‘MAP OF THE SOUL : 7’에는 MAP OF THE SOUL : PERSONA 앨범의 수록곡 일부와 14개의 신곡을 포함해 총 19개의 트랙이 수록되어 있다.
+방탄소년단은 ‘Interlude : Shadow’, ‘Louder than bombs’ 등에서 글로벌 슈퍼스타로 성장한 이들이 느끼는 의무감과 책임감을, ‘Black Swan’을 통해 예술가로서 겪는 두려움을 고백하며 숨기고 싶었던 자신의 내면을 드러낸다. 반면 ‘Filter’, ‘시차’, ‘Inner Child’, ‘Moon’을 비롯해 ‘We are Bulletproof : the Eternal’, ‘Outro : Ego’ 등의 트랙에서는 나의 본 모습과 지금의 나를 있게 한, ‘나를 나이게 하는 것들’에 대한 이야기를 풀어낸다. 그리고 이 두 가지를 모두 녹여낸 타이틀곡 ‘ON’은 자신의 페르소나와 그림자를 모두 받아들인 온전한 내가 되기까지의 여정을 그리고 있다.
+이로써 Persona-Shadow-Ego의 서사를 담은 19개 트랙이 한 음반 안에 유기적으로 연결되어 있어 높은 앨범 완성도를 느낄 수 있다.
+이 서사는 자신의 자아를 찾아가는 일곱 멤버의 7년간의 삶을 의미하는 앨범 커버에서도 찾아볼 수 있다. 네 가지 버전의 커버는 완벽하고자 하는 열망 혹은 채워지지 않는 갈증의 Shadow, 사명감과 의지 혹은 방탄소년단 본연의 모습을 보여주는 Ego를 표현하고자 했다.
+
+한층 확장된 방탄소년단의 음악적 스펙트럼
+이번 앨범은 리부트(Reboot) 콘셉트를 적용해 방탄소년단의 데뷔 초 ‘학교 3부작’ 앨범을 차용 및 재해석함으로써 이들의 음악적 스펙트럼을 한층 확장시켰다. 지난 MAP OF THE SOUL : PERSONA의 타이틀곡 ‘작은 것들을 위한 시 (Boy With Luv) (Feat. Halsey)’가 두 번째 미니 앨범 ‘Skool Luv Affair’의 타이틀곡 ‘상남자 (Boy In Luv)’와 맞닿아 있다면, 이번 타이틀곡 ‘ON’과 첫 번째 미니 앨범 ‘O!RUL8,2?’의 타이틀곡 ‘N.O’가 대응을 이룬다. 또, 이번 앨범의 수록곡 ‘We are Bulletproof : the Eternal’은 데뷔 앨범 ‘2 COOL 4 SKOOL’의 수록곡 ‘We are Bulletproof Pt.2’를 잇는 노래이다.
+이외에도, 보컬 라인과 래퍼 라인의 유닛 곡은 물론 ‘친구’, ‘Respect’ 등 이전에 선보이지 않은 새로운 조합의 유닛 곡과 일곱 멤버의 개성을 살린 솔로곡까지 다채로운 구성을 만나볼 수 있어 듣는 재미를 배가시킨다.
+음악으로 전 세계 사람들과 경계 없는 소통을 해오며 글로벌 아티스트의 반열에 선 방탄소년단은 이번 앨범을 통해 자기 자신을 들여다보고자 했다. 데뷔 후 7년, 이 자리에 오기까지의 삶은 험난했고 성공에 가리어진 그늘 또한 버겁게 느껴질 때가 있었다. 하지만 방탄소년단은 앞으로 나아가야 할 내일에 보다 주목하고자 한다. 지금의 자신들을 있게 한 근원이자 주변부에 있던 자신들을 전 세계적인 슈퍼스타로 만들어낸 팬클럽 아미(ARMY)와 함께 주어진 길을 계속해서 걸어가고자 한다.
+');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('The Album', 'YG PLUS', 'YG Entertainment', '국내', '정규', 'upload/album/The Album.jpg', 13,
+        '2020-10-02', 'How You Like That, Ice Cream (with Selena Gomez)은 싱글로 발매된 [How You Like That]과 [Ice Cream (with Selena Gomez)]에서 감상하실 수 있습니다.
+
+2016년 ’SQUARE ONE’으로 데뷔하여 글로벌 아티스트로 성장한 블랙핑크의 첫 정규 앨범 ‘The Album’이 10월 2일 발매된다.
+
+블랙핑크의 첫 정규앨범 ‘THE ALBUM’의 타이틀곡인 ‘Lovesick Girls’는 컨트리풍의 기타 사운드 위에 세련된 멜로디로 곡의 전체적인 분위기를 이끌어가며 이어지는 레트로한 사운드 위에 블랙핑크의 파워풀한 보컬이 더해져 노래를 고조 시킨다. 인간은 왜 사랑에 상처받고 아파하면서도 또 다른 사랑을 찾아가는지에 대한 궁극적인 질문을 던지는 가사가 돋보이는 곡으로, 블랙핑크 노래 최초로 멤버 지수와 제니가 작사 작곡에 각각 참여하여 팬들의 기대감을 더욱 배가시킨다.
+
+‘Lovesick Girls’ 외에도 전 세계적 파급력을 증명한 카리스마 넘치는 힙합 사운드의 ‘How You Like That’부터 팝스타 셀레나 고메즈와 콜라보 한 톡톡 튀는 경쾌한 멜로디의 ‘Ice Cream’까지- 블랙핑크만의 개성과 매력 넘치는 다양한 사운드를 담았다. 블랙핑크의 무궁한 음악적 스펙트럼을 ‘THE ALBUM’을 통해 확인할 수 있을 것이다.
+');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Palette', '카카오엔터테인먼트', '카카오엔터테인먼트', '국내', '정규', 'upload/album/Palette.jpg', 14,
+        '2017-04-21', '작은 순간순간을 예쁜 물감으로 만들어, 아이유의 ‘이 지금’을 빼곡히 채워내다.
+‘아이유(IU)’ 정규4집 [Palette] 전격 발매!
+
+아이유(IU)의 네 번째 정규앨범 [Palette]가 드디어 공개됐다.
+
+아이유는 지난달 24일 발표한 첫 선공개곡 ‘밤편지’를 시작으로 동갑내기 뮤지션 오혁과 함께 한 두 번째 선공개곡 ‘사랑이 잘’까지, 연달아 ‘퍼펙트 올킬’ 기록을 세우며 그 이름값을 톡톡히 지켜 냈다.
+
+아이유가 1년 반 만에 꺼내 놓은 신보이자 정규앨범으로는 3년 여만인 정규 4집 앨범 [Palette]는, 미리 발표된 두 선공개곡을 통해 짐작할 수 있듯이 특정 장르나 스타일에 제한하지 않고 다채로운 음악색과 이야기를 한데 담아낸, 앨범명 의미 그대로의 ‘팔레트’와 같은 앨범이다.
+
+아이유의 정규4집 [Palette]는 아이유 본인이 직접 프로듀싱을 맡아 긴 호흡으로 공들여 작업한 만큼 가수 아이유의 또 다른 변신과 프로듀서 아이유의 음악적 성장을 새롭게 발견할 수 있게 한다. 또한, 그는 이번 앨범에서 이병우, 손성제, G-DRAGON, 선우정아, 오혁, 샘 김 등 세대와 장르를 아우르는 최고의 뮤지션들과 만나 음악적 스펙트럼을 넓히는 동시에, 특유의 섬세한 음색과 노랫말로 모든 넘버를 ‘아이유’ 만의 감성으로 색칠하며, 도무지 그 음악적 한계와 컬러를 단정지을 수 없게 한다.
+
+
+“ 내가 머릿속으로 그렸던 꿈이 현실이 되어 눈 앞에 펼쳐지는 순간
+저의 팔레트는 또 한 칸 새로운 물감으로 채워집니다…
+지금 이 순간도 언젠가 내가 정성스럽게 그렸었던 꿈이죠
+오늘 이 순간을 예쁜 물감으로 만들어 나는 또 꿈을 그릴 겁니다”
+- 2016 아이유 콘서트 ‘하나 둘 셋 넷’-
+
+
+데뷔 10년차 아티스트 혹은 스물다섯 살 ''이지은''의 작은 순간순간이 예쁜 물감이 되어 차곡히 채워진 ‘아이유’의 ‘이 지금’, 새하얀 ‘팔레트’에 그녀가 새롭게 배합해 낸 이 음악, 이 물감으로 어떤 그림을 완성할지는 오랜 시간 그녀의 새 앨범을 기다려온 청중의 몫으로 남겨두고자 한다.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Eyes Wide Open', 'Dreamus', 'JYP Entertainment', '국내', '정규', 'upload/album/eyeswideopen.jpg', 15,
+        '2020-10-26', '트와이스, 10월 26일 두 번째 정규 앨범 ''Eyes wide open'' 및 타이틀곡 ''I CAN’T STOP ME'' 발표!
+
+트와이스가 10월 26일 정규 2집 ''Eyes wide open''(아이즈 와이드 오픈)을 발매한다.
+
+2017년 10월 30일 정규 1집 ''Twicetagram''(트와이스타그램) 발표 이후 약 3년 만에 선보이는 두 번째 정규 앨범으로 한층 더 과감해진 트와이스만의 매력을 녹여냈다.
+
+''Eyes wide open''을 통해 그루브 넘치는 댄스 팝부터 시티 팝, 알앤비, 라틴 팝 등 다양한 장르의 음악에 도전했다.
+
+전작 ''MORE & MORE''(모어 앤드 모어)에서 사랑에 빠질수록 더욱더 사랑을 갈망하게 되는 마음을 노래했다면, 이번에는 여기서 더 나아가 새롭게 눈 뜨게 된 감정을 음악에 담아냈다.
+
+타이틀곡 ''I CAN’T STOP ME''(아이 캔트 스톱 미)는 선과 악의 기로에서 갈등하며 본인조차 스스로를 제어하기 어려워지는 마음을 담은 노래다. 유럽 일렉트로닉 사운드와 미국 80년대 신스 사운드를 합친 신스웨이브 장르로 중독성 있는 멜로디가 특징이다.
+
+JYP엔터테인먼트 수장 박진영은 트와이스의 히트곡 ''SIGNAL''(시그널), ''What is Love?''(왓 이즈 러브?), ''Feel Special''(필 스페셜), ''MORE & MORE''(모어 앤드 모어)에 이어 또 한 번 타이틀곡 작사를 담당했다.
+
+수많은 히트곡을 만들어낸 심은지 작사가도 합세, 가요계 흥행 보증 수표인 이들이 힘을 합쳐 ''14연속 히트''를 정조준한다.
+
+또 방탄소년단, 할시(Halsey) 등 최고의 아티스트와 함께 작업한 글로벌 히트곡 메이커 멜라니 조이 폰타나(Melanie Joy Fontana)와 유명 프로듀서 미셸 린드그렌 슐츠(Michel ‘Lindgren’ Schulz)가 작곡했다.
+
+트와이스는 신곡 ''I CAN''T STOP ME''에서 더욱 파워풀하고 화려해진 퍼포먼스를 선보인다. ''MORE & MORE''에서 협업한 키엘 투틴(Kiel Tutin)과 비욘세의 안무가 존테 모닝(Jonte Moaning) 등이 힘을 합쳐 안무를 완성했다.
+
+뮤직비디오는 전작 ‘MORE & MORE’와 이어지는 스토리로 협곡, 기차역 등 환상적인 배경들로 풍성한 볼거리를 자랑한다. 꽃 속에서 등장하는 아홉 멤버들을 비롯해 감각적이고 화려한 그래픽 효과 역시 관전 포인트다.
+
+새 앨범 ''Eyes wide open''에는 타이틀곡을 포함해 ''HELL IN HEAVEN''(헬 인 헤븐), ''UP NO MORE''(업 노 모어), ''DO WHAT WE LIKE''(두 왓 위 라이크), ''BRING IT BACK''(브링 잇 백), ''BELIEVER''(빌리버), ''QUEEN''(퀸), ''GO HARD''(고 하드), ''SHOT CLOCK''(샷 클락), ''HANDLE IT''(핸들 잇), ''DEPEND ON YOU''(디팬드 온 유), ''SAY SOMETHING''(세이 썸띵), ''BEHIND THE MASK''(비하인드 더 마스크)''까지 총 13곡이 수록됐다.
+
+박진영, 심은지, 두아 리파(Dua Lipa), 켄지 등 초호화 작가진의 참여로 큰 화제를 모으고 있다. K팝 팬들 사이에서 ''띵곡 제조기''라 불리는 켄지, 영국 출신 프로듀싱팀 런던노이즈(LDN Noise), 세계적인 팬덤을 갖춘 영국 출신 유명 아티스트 두아 리파, 전작 ''MORE & MORE''를 함께 만든 엠엔이케이(MNEK), 트와이스 ''KNOCK KNOCK''(낙 낙), DAY6(데이식스) ''예뻤어''에 참여한 이우민(collapsedone), GOT7(갓세븐), ITZY(있지) 등 유수의 K팝 아티스트와 함께 작업한 이어어택(earattack), 독보적인 감성을 자랑하는 싱어송라이터 헤이즈 등 화려한 작가진이 트와이스의 정규 앨범을 위해 총출동했다.
+
+미니 2집 ‘PAGE TWO’(페이지 투)부터 꾸준히 곡 작업을 해온 트와이스 멤버들 역시 신보 수록곡 크레디트에 이름을 올리며 더욱 성장한 작사 실력을 뽐낸다. 지효 ''UP NO MORE'', 나연 ''DEPEND ON YOU'', 사나 ''DO WHAT WE LIKE'', 다현 ''BRING IT BACK'', ''QUEEN'', 채영 ''HANDLE IT''까지 각각 수록곡 단독 작사를 맡았다.
+
+트와이스는 매 컴백마다 각양각색의 시도를 하는 등 새로운 모습을 선사하기 위한 노력을 아끼지 않고 있다. 새 앨범 ''Eyes wide open''에서도 눈을 뗄 수 없는 매력 퍼레이드를 펼칠 예정이다.
+');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Don`t Mess Up My Tempo', '카카오엔터테인먼트', 'SM Entertainment', '국내', '정규',
+        'upload/ablum/dontmessupmytempo.png', 16, '2018-11-02', '‘K-POP 킹’ 엑소의 귀환!
+정규 5집 ‘DON’T MESS UP MY TEMPO’ 공개!
+타이틀 곡 ‘Tempo’ 포함 다채로운 장르의 총 11곡 수록!
+
+‘K-POP 킹’ EXO가 정규 5집 ‘DON’T MESS UP MY TEMPO’로 컴백한다.
+
+이번 앨범은 타이틀 곡 ‘Tempo’의 한국어 및 중국어 버전을 비롯해 불, 공간이동, 힘, 빛, 빙결, 바람, 번개, 치유, 물 등 멤버 각각의 초능력을 모티브로 가사에 녹여낸 수록곡 9곡까지 다채로운 장르의 총 11곡이 수록되어 있어, 엑소만의 음악 세계를 만끽하기에 충분하다.
+
+또한 이번 앨범에는 영국 프로듀싱팀 런던노이즈 (LDN Noise), 세계적인 프로듀싱팀 더 언더독스 (The Underdogs), 미국 출신 프로덕션팀 마즈뮤직 (MARZ Music), 켄지 (Kenzie), DEEZ 등 등 히트메이커들이 참여해 완성도를 높였으며, 멤버 찬열이 작사, 작곡에 참여한 곡도 만날 수 있어 글로벌 팬들의 뜨거운 관심이 기대된다.
+
+특히, 엑소는 정규 앨범 4장 연속 음반판매량 100만장을 돌파해 ‘쿼드러플 밀리언셀러’에 등극함은 물론, 가요 시상식 5년 연속 ‘대상’ 수상, 한국 최초 세계적인 명성의 두바이 분수쇼 음악 선정, 2018 평창 동계 올림픽 폐막식 무대 장식 등 글로벌 활약을 이어가며 변함없는 파워를 입증한 만큼, 이번 앨범을 통해 보여줄 새로운 모습이 더욱 기대를 모은다.
+
+엑소의 매력적인 경고! 타이틀 곡 ‘Tempo’
+
+타이틀 곡 ‘Tempo’는 에너제틱한 베이스 라인과 리드미컬한 드럼, 엑소의 신선한 아카펠라 구성이 돋보이는 힙합 댄스 장르의 곡으로, 사랑하는 그녀를 ‘멜로디’에 비유해 그녀와의 템포를 방해하지 말라는 남자의 마음을 표현한 가사가 매력적이며, 한국어 버전과 중국어 버전이 함께 수록되어 있다.
+
+더불어 ‘Sign’은 사랑하는 그녀의 거짓말 때문에 점점 커지는 의심과 돌이킬 수 없는 마음을 번지는 불에 빗대어 표현한 가사가 인상적인 일렉트로 팝 장르의 곡이며, ‘닿은 순간 (Ooh La La La)’은 우연히 눈이 마주친 순간 시작된 상상 속 사랑이 공간이동처럼 현실이 되는 드라마틱한 이야기를 녹여낸 가사의 라틴 팝 곡이다.
+
+또한 일렉트로 팝 장르의 ‘Gravity’는 찬열이 작사에 참여, 자신의 곁을 떠나려는 그녀를 붙잡고 싶은 마음을 중력에 빗대어 표현했으며, ‘가끔 (With You)’은 상대방으로 인해 자신이 더 빛난다는 달콤한 가사가 돋보이는 팝 R&B 장르의 곡으로, 찬열이 작사, 작곡에 참여해 눈길을 끈다.
+
+게다가 사랑하는 사람에게 얼음처럼 차가운 말을 던지고 돌아온 밤에 느끼는 복잡한 감정을 표현한 미디엄 템포 곡 ‘24/7’, 헤어진 연인에 대한 생각이 폭풍처럼 밀려오는 밤에 홀로 느끼는 감정을 섬세하게 표현한 ‘후폭풍 (Bad Dream)’도 귀를 매료시킨다.
+
+이 밖에도 사랑하는 사람의 거짓말 때문에 입은 상처를 번개처럼 한순간에 되돌려주겠다는 냉소적인 다짐을 담은 ‘Damage’, 이별의 상처를 스스로 치유하고 웃으며 사랑하는 사람을 떠나보낸다는 가사가 부드러운 멜로디와 어우러진 R&B 발라드 곡 ‘여기 있을게 (Smile On My Face)’, 삶에 대한 해답을 찾아 떠나는 여정을 오아시스에 빗대어 표현한 얼반 팝 곡 ‘오아시스 (Oasis)’ 등 총 11곡이 수록되어 다양한 매력을 느낄 수 있다.
+');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('The ReVe Festival: Finale', '카카오엔터테인먼트', 'SM Entertainment', '국내', '정규',
+        'album/album/therevefestivalfinale.jpg', 17, '2019-12-23', 'Album Introduce
+레드벨벳, 2019년 음악 축제 화려한 피날레!
+리패키지 앨범 ‘‘The ReVe Festival’ Finale’ 발매!
+쿨&스윗 러브송 ‘Psycho’로 독보적인 음악 세계 ‘레벨 업’ 한다!
+
+레드벨벳이 새 앨범 ‘‘The ReVe Festival’ Finale’로 2019년 선보인 음악 축제의 대미를 장식한다.
+
+레드벨벳이 올 한 해 ‘The ReVe Festival’이라는 타이틀 아래 펼친 음악 활동을 총망라하는 리패키지 앨범 ‘‘The ReVe Festival’ Finale’를 발매했다. 이번 앨범은 지난 6월과 8월 발표한 미니앨범 ‘Day 1’, ‘Day 2’ 수록곡 12곡에 타이틀 곡 ‘Psycho’와 신곡 ‘In & Out’, ‘Remember Forever’, 스페셜 트랙 ‘La Rouge’ 등 4곡을 추가한 총 16개 트랙으로 구성되어 있다.
+
+특히, 레드벨벳은 중독성 강한 소원성취송 ‘짐살라빔 (Zimzalabim)’, 스파클링 서머송 ‘음파음파 (Umpah Umpah)’를 발표, 폭넓은 음악 스펙트럼과 다양한 변신으로 음원 및 음반 차트 1위, 음악 방송 1위 등을 섭렵한 만큼, 2019년을 화려하게 마무리할 레드벨벳의 새로운 음악에도 이목이 집중될 전망이다.
+
+‘짐살라빔 (Zimzalabim)’ - ‘음파음파 (Umpah Umpah)’ 잇는 중독성!
+타이틀 곡 ‘Psycho’로 트리플 히트 예고!
+
+타이틀 곡 ‘Psycho’는 레드벨벳의 능수능란하면서도 익살스러운 보컬이 어우러진 업 템포 어반 팝 곡으로, 변화무쌍한 멜로디 위로 중독성 있게 펼쳐지는 훅이 돋보이며, 가사에는 남들이 보기에는 ‘Psycho’처럼 별나 보여도 결국 서로뿐임을 인정하는 연인의 쿨한 메시지를 담고 있다.
+
+더불어 거부 못할 만큼 매혹적인 상대에게 빠져드는 짜릿한 심리를 재치 있게 표현한 미디엄 팝 댄스 장르의 ‘In & Out’, 꿈 같았던 지난 여름의 ‘The ReVe Festival’을 추억하는 팝 발라드 장르의 ‘Remember Forever’, 세 번째 단독 콘서트에서 선보인 스페셜 트랙 ‘La Rouge’까지 수록되어 있어 레드벨벳의 다양한 음악 색깔을 만나기에 충분하다.
+
+또한 추가된 신곡 외에 기존에 발매된 미니앨범 ‘Day 1’, ‘Day 2’ 수록곡 트랙을 역순으로 배치, 마치 ‘The ReVe Festival’을 즐기던 지난 여름으로 돌아가는 듯한 느낌을 선사하며, 앨범의 제목과 같이 페스티벌의 피날레를 화려하게 장식하길 바라는 의미를 담아 특별함을 더했다.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('THINKING Part.1', '카카오엔터테인먼트', 'KOZ Entertainment', '국내', '미니', 'upload/album/thinking.jpg', 18,
+        '2019-09-30', 'THINKING of what,
+THINKING of who,
+What is ZICO THINKING?
+
+언더그라운드 힙합 루키에서 아이돌로, 아이돌에서 아티스트로,
+아티스트에서 프로듀서, 더 나아가 엔터테인먼트 대표로,
+지코는 이제 어느 곳을 바라보고 어떤 것을 생각하고 있는 걸까.
+
+지코의 첫 정규앨범 THINKING Part.1은 자신의 생각으로 바라본 청춘의 자화상을 녹여냈다. 과거 강렬한 작품들이 걸려있는 갤러리, 또 화려한 텔레비전 속 모습과 그 뒤에 감춰진 치열함을 담은 앨범들을 발표했었다면, 지코의 첫 정규 앨범은 그동안 느끼고 경험한 것, 자신을 마주 보는 솔직한 이야기들을 엮어낸 하나의 책과 같은 앨범이다.
+
+그간 뛰어난 퍼포머, 히트 프로듀서로서의 모습으로 기억하는 사람들에게 이번 앨범을 통해서 뮤직비디오 각본에도 직접 참여하는 등 스토리텔러로서의 모습도 볼 수 있을 것이다.
+THINKING Part.2 COMING VERY SOON.
+
+');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Warning', '카카오엔터테인먼트', '㈜메이크어스엔터테인먼트', '국내', '미니', 'upload/album/warning.jpg', 19, '2018-09-04',
+        '‘가시나’, ‘주인공’ 에 이어지는 3부작 프로젝트의 완성, ‘WARNING’(워닝)
+네 환상에 아름다운 나는 없어, 사이렌 (Siren)
+
+고혹적이며 때로는 파격적으로 음악과 무대를 해석해내며 가장 주목받는 독보적인 여성 솔로 아티스트로 확고한 위치에 오른 선미가 미니앨범 ‘WARNING(워닝)’을 발표한다.
+
+선미의 미니앨범 ‘WARNING(워닝)’은 지난 해 8월 발표한 스페셜 에디션 ‘가시나(GASHINA)’와 ‘가시나’의 프리퀄(prequel)로서 올해 1월에 발표한 ‘주인공(HEROINE)’을 잇는 3부작 프로젝트의 마무리이자 그 완성인 앨범으로, 이로써 3부작 프로젝트는 ‘WARNING’, 즉 ‘경고’ 가 전체 테마였음을 알려주는 앨범이다.
+
+또한 미니 앨범 ‘WARNING(워닝)’은 선미가 모든 트랙의 크레딧에 이름을 올리게 된 첫 앨범으로도 의미가 깊다. 16세의 나이로 그룹 ‘원더걸스’로 데뷔하여 10여년간 솔로 활동을 병행해 오면서 작사는 물론 작곡, 편곡 등 음악 작업에 참여하며 자신의 음악적 재능을 꾸준히 선보여온 선미는 이번 미니앨범 ‘WARNING(워닝)’의 전곡 작사 및 주요 수록곡의 작곡, 편곡 작업을 함께 하며 그녀가 가진 음악을 펼쳐냈다.
+
+선미의 미니 앨범 ‘WARNING(워닝)’의 타이틀곡은 ‘사이렌(Siren)’으로, 선미가 작사하고, 작곡가 Frants(프란츠)와 함께 공동 작곡했다. 이 곡은 3년 전에 선미와 Frants(프란츠)가 의기투합하여 만들었던 곡으로 당시 준비 중이었던 원더걸스의 앨범의 타이틀곡 후보로도 거론되었던 비하인드 스토리가 알려지며 정식 발표 전부터 화제를 모았다. 2018년의 ‘사이렌(Siren)’은 선미의 미니 앨범 ‘WARNING(워닝)’의 타이틀곡으로 낙점된 후, 곡 컨셉을 발전시켜 새롭게 재탄생되었다.
+
+싱글 ‘가시나’와 마찬가지로 ‘사이렌(Siren)’ 또한 제목에 중의적 의미를 내포하고 있는데, 신화에 등장하는 선원을 유혹하는 아름다운 인어를 상상하게 하는 동시에 직관적으로는 비상 시 위험을 알리는 경고음을 연상시킨다. 이러한 시각적 청각적 심상들은 타이틀곡 ‘사이렌(Siren)’ 곳곳에 유려하게 포진되어 있다. 그 동안 음악, 퍼포먼스, 스타일링 등에서 자신만의 예민하고 섬세하면서 몽환적인 독특한 감수성을 선보여 온 ‘선미’다운 감각적인 표현의 집합체라고 할 수 있다.
+
+선미의 미니앨범 ‘WARNING(워닝)’에는 타이틀곡 ‘사이렌(Siren)’ 을 포함해 ‘ADDICT’, ‘Black Pearl’, ‘비밀테이프’ 등 선미와 Frants(프란츠)가 함께 작업한 곡들과 해외 프로듀서와 협업한 ‘곡선’, 그리고 싱글로 발표했던 ‘가시나’와 ‘주인공’까지 수록되면서 총 7개의 트랙이 수록되었다. 특히 이번 앨범의 음악은 각각의 곡 자체로도 완성도가 뛰어나며, 유니크한 보이스를 가진 선미의 감성이 다양하게 묻어나온다. 미니 앨범 전체가 그녀의 매력을 다양하게 표현해내면서도 하나로 어우러지게 해 저절로 선미의 보컬에 집중하게 만든다.
+
+선미의 3부작 프로젝트를 모두 담아낸 미니앨범 ‘WARNING(워닝)’과 타이틀곡 ‘사이렌(Siren)’은 여성 솔로 아이콘에서 뮤지션으로 더욱 성숙해지고 있는 독보적인 여성 솔로 아티스트 선미의 또 다른 시작점이다.
+');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('An Ode', 'YG PLUS', '플레디스엔터테인먼트', '국내', '정규', 'upload/album/anode.jpg', 20,
+        '2019-09-16', '세븐틴, 탄탄하고 성숙해진 완성형 음악 선사...정규 3집 [An Ode] 발매!
+세븐틴, 정규 3집 [An Ode] 발매…‘세븐틴이 보내는 선율’!
+세븐틴, 9월 16일 정규 3집 [An Ode] 발매! 타이틀 곡 치명적 매력의 ‘독:Fear’!
+세븐틴, 1년 10개월만의 정규 앨범 발매 [An Ode]! 세븐틴 작사•작곡 참여!
+
+그룹 세븐틴이 선공개 곡 디지털 싱글 ‘HIT’ 이후 9월 16일, 드디어 약 1년 10개월만에 정규 3집 앨범 [An Ode]를 발매한다.
+
+세븐틴의 정규 3집 [An Ode]는 새로운 세계로의 확장을 꿈꾸며 도전을 예고했던 디지털 싱글 ‘HIT’과 연장선 상에 있는 앨범이다. 이에 ‘Ode(시)’를 통해 화자가 메시지를 은유적으로 표현하듯 세븐틴 또한 그들이 전하고 싶은 메시지를 다양한 방식으로 녹여내 ‘세븐틴이 보내는 선율’이라는 특별한 의미를 담아냈다.
+
+또한 삶 속에서 누구나 한번쯤 느낄 수 있는 ‘두려움’이라는 감정을 세븐틴은 창작하는 과정을 통해 느끼는 감정 중 하나로 마주해 이에 대해 스스로 내면 깊숙이 통찰, 고뇌에 빠진 세븐틴을 한 단계 더 성장하게 했으며 [An Ode]를 통해 한층 더 성숙해진 완성형 음악을 선사한다.
+
+이처럼 더 탄탄해진 정규 3집 [An Ode]의 타이틀곡 ‘독:Fear’은 묵직한 베이스 사운드 기반의 R&B 장르로 누구나 느낄 수 있는 두려움의 감정을 ‘독’으로 표현했으며 완벽한 완급 조절의 퍼포먼스가 더해져 세븐틴만의 치명적이고 절제된 섹시함이 돋보인다.
+
+뿐만 아니라 구속과 통제로부터 해방을 외치며 저돌적으로 돌파구를 찾았던 ‘HIT’ 이후 세븐틴은 ‘독:Fear’을 통해 한없이 고독하고 깊은 함정에 빠진 모습을 보여준다. 특히 그동안 대중에게 선보이지 않았던 가장 어두운 면을 드러내 180도 달라진 분위기의 ‘세븐틴 표 짙은 어두움’을 처음으로 선사할 예정으로 더욱 대중의 이목을 집중시킨다.
+
+이외에도 정규 3집 [An Ode]에는 선공개 된 ‘HIT’과 URBAN POP 스타일의 곡 ‘거짓말을 해’, 위로가 되어준 상대에게 고마운 감정을 표현한 세레나데 ‘Let me hear you say’, 청량함 가득 담긴 세븐틴의 청춘찬가 ‘Lucky’, 행복한 감정의 순간을 담아낸 ‘Snap Shoot’, 일본 싱글 앨범 타이틀 번안곡 ‘Happy Ending’ 등 단체곡과 더불어 퍼포먼스 유닛의 ‘247’, 보컬 유닛의 ‘Second Life’, 힙합 유닛의 ‘Back it up’부터 버논, 조슈아, 준, 디에잇으로 구성된 새로운 믹스 유닛의 ‘Network Love’까지 멤버들이 전곡 작사•작곡에 전반적으로 참여해 세븐틴만의 감성으로 표현해내며 11개의 트랙을 꽉 채워냈다.
+
+이처럼 다양한 상황 속 느껴지는 감정과 보내고 싶은 메시지를 곡으로 형상화하여 써내려간 세븐틴의 선율은 하나의 [An Ode]로 완성, ‘두려움’을 마주한 이들의 성장통이 또 어떤 결과를 이뤄나갈지 세븐틴이 추구할 앞으로의 방향성에 귀추를 주목하게 만든다.
+');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Moonlight', '카카오엔터테인먼트', 'SM Entertainment', '해외', '싱글', 'upload/album/Moonlight.jpg',
+        21, '2024-06-05', 'NCT DREAM, 日 두 번째 싱글 ‘Moonlight’ 공개!
+타이틀 곡 ‘Moonlight’ & 수록곡 ‘Stupid Cupid’ 2곡 수록!
+
+NCT DREAM이 돔투어의 열기를 이어 일본 두 번째 싱글 ‘Moonlight’를 발표했다.
+
+이번 앨범에는 경쾌한 멜로디와 기타 사운드, 드럼이 어우러진 팝 댄스 곡 타이틀 곡 ‘Moonlight’, 리드미컬한 트랙과 중독성 있는 후렴구가 특징인 힙합 장르의 ‘Stupid Cupid’등 일본 오리지널 신곡 총 2곡이 수록되어 있다.
+');
 
 
 -- 테이블: song
