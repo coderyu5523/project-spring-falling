@@ -73,6 +73,19 @@ VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국
         'upload/album/소나기.jpg', 11, '2024-01-10',
         '드라마 속 밴드 ''이클립스''가 선보이는 첫 번째 OST! tvN 월화드라마 ‘선재 업고 튀어’가 드라마의 몰입도를 높일 OST들을 선공개한다');
 
+-- album_tb에 더미 데이터 삽입
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Map of the Soul: 7', 'BigHit Entertainment', 'BigHit Entertainment', 'Korea', 'Full Album', 'upload/album/MAP OF THE SOUL 7.jpg', 1, CURRENT_TIMESTAMP, 'The seventh studio album by BTS.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('The Album', 'YG Entertainment', 'YG Entertainment', 'Korea', 'Full Album', 'thealbum.jpg', 2, CURRENT_TIMESTAMP, 'The first Korean studio album by Blackpink.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Palette', 'LOEN Entertainment', 'Fave Entertainment', 'Korea', 'Full Album', 'palette.jpg', 3, CURRENT_TIMESTAMP, 'The fourth studio album by IU.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Eyes Wide Open', 'JYP Entertainment', 'JYP Entertainment', 'Korea', 'Full Album', 'eyeswideopen.jpg', 4, CURRENT_TIMESTAMP, 'The second Korean studio album by Twice.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Don`t Mess Up My Tempo', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'dontmessupmytempo.jpg', 5, CURRENT_TIMESTAMP, 'The fifth studio album by EXO.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('The ReVe Festival: Finale', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'therevefestivalfinale.jpg', 6, CURRENT_TIMESTAMP, 'The first Korean studio album by Red Velvet.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Thinking', 'KOZ Entertainment', 'KOZ Entertainment', 'Korea', 'Full Album', 'thinking.jpg', 7, CURRENT_TIMESTAMP, 'The first studio album by Zico.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Warning', 'Makeus Entertainment', 'Makeus Entertainment', 'Korea', 'EP', 'warning.jpg', 8, CURRENT_TIMESTAMP, 'The second EP by Sunmi.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('An Ode', 'Pledis Entertainment', 'Pledis Entertainment', 'Korea', 'Full Album', 'anode.jpg', 9, CURRENT_TIMESTAMP, 'The third studio album by Seventeen.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('NCT 2020 Resonance Pt. 1', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'resonancept1.jpg', 10, CURRENT_TIMESTAMP, 'The second studio album by NCT.');
+
+
 
 -- 테이블: song
 
