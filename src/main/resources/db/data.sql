@@ -2657,20 +2657,330 @@ Psycho
 ');
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics)
-VALUES ('천둥벌거숭이 (Feat. Jvcki Wai, 염따)', '지코 (ZICO), Pop Time', '지코 (ZICO)', '/upload/song/Daredevil.mp4', 'Hip Hop', TRUE, '/upload/song/Daredevil.mp3', CURRENT_TIMESTAMP, 7,
-        'I just wanna be happier...');
+VALUES ('천둥벌거숭이 (Feat. Jvcki Wai, 염따)', '지코 (ZICO), Pop Time', '지코 (ZICO)', '/upload/song/Daredevil.mp4', 'HipHop', TRUE, '/upload/song/Daredevil.mp3', '2019-09-30', 18,
+        '그래서 어떻게 됐긴 어디도 안 가고
+내가 차린 회사랑 도장 찍었지
+빠른 페이스로 개체 수 불려나가 우린
+치타보다 몇 배나 민첩한 코끼리
+헛바람 든 것처럼 보여도
+가만 내비 둬 그건 열풍을 만들겠단 소리
+거드름 피우던 힙스터의 꿈은
+아이돌 출신이 주는 합격 목걸이
+자신감에는 근거가 넘쳐
+과다 분비되고 있어 세로토닌
+계산 잘 하고 테이크 다운 걸어
+내게 손 뻗치면 결국 KOZ
+Z 세대 이제 내 시대로
+엔터 몇 군데는 셔터 내려
+유명세는 삽시간에 fade out
+스냅 댄스 테크토닉이 가까운 예야
+사실 이번 트랙 좀 가볍게
+풀어갈 생각이었는데 계획이 바뀌었네
+한 음절도 허투루 쓸 수 없지
+스윽스윽 지우고 고쳐쓰기를 반복해
+아예 아예
+Stop being a doormat
+법인 대표답게 영리해야만 해
+Saucin saucin
+Remaking history
+벌써 사무실로 성지순례 오지
+
+먹구름 깔아놔 저 무지개 위에
+가랑비로 너희들 가랑이를 적실게
+난 돈벼락 맞고 바짝 정신 차린 케이스
+우르르 쾅쾅 마른하늘이 무너져 yeah
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+겁대가리 상실한 젊은이
+절대 못 고쳐 내 버르장머리
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+잘 가라 어중이떠중이
+어떤 무리에 있든 난 우두머리
+
+Tupac 만큼 누가 리얼하든 감흥 없어
+GG 치고 이제 난 이 게임을 던져
+그러니까 제발 나를 좀 내버려 둬
+통장 잔고 보며 잠시 행복해져
+Ali처럼 날아서 나비 효과
+수퍼비처럼 맞았어 돈벼락
+이제 나는 뭣도 신경 쓸 필요가 없다는 걸
+너네 왜 아직도 몰라
+돈 낳는 말이야 돈을 낳는 말이야
+대체 그게 무슨 말이냐 하면
+(랩만 해서 잉태 내 뱃속 안에 새 지폐)
+아들은 세종대왕 딸내미는 사임당
+도대체가 그게 뭔 개소리냐고 하면
+(뱃속 안에 새 지폐 내 손안으로 직행)
+I mean…
+I mean I’m way too blessed
+I mean I’m way too blessed
+I dk why but I’m too blessed
+I dk why but I’m too blessed
+I mean I’m way too blessed
+I mean I’m way too blessed
+I dk why but I’m too blessed
+I dk why but I go ahead
+
+먹구름 깔아놔 저 무지개 위에
+가랑비로 너희들 가랑이를 적실게
+난 돈벼락 맞고 바짝 정신 차린 케이스
+우르르 쾅쾅 마른하늘이 무너져 yeah
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+겁대가리 상실한 젊은이
+절대 못 고쳐 내 버르장머리
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+잘 가라 어중이떠중이
+어떤 무리에 있든 난 우두머리
+
+염따는 토르
+성공의 망치를 얻네
+칙칙한 내 지갑에도 쾅
+노력의 번개를 내렸네
+난 이제 위대한 사랑이 빨리
+필요해 마치 재키 재키
+사주고 싶어 오천만 원짜리
+머리통만한 반지
+그치 그치 시간은 온다고
+괜찮아 아프면 더 울어
+따거는 정답을 알어
+재키는 blessed
+재키는 blessed
+안 소중한 사람 없네
+우리는 살아야 돼
+I''m way too flex
+
+먹구름 깔아놔 저 무지개 위에
+가랑비로 너희들 가랑이를 적실게
+난 돈벼락 맞고 바짝 정신 차린 케이스
+우르르 쾅쾅 마른하늘이 무너져 yeah
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+겁대가리 상실한 젊은이
+절대 못 고쳐 내 버르장머리
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+잘 가라 어중이떠중이
+어떤 무리에 있든 난 우두머리
+');
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics)
-VALUES ('Siren', 'Sunmi', 'Sunmi', 'siren_mv.mp4', 'Pop', TRUE, 'siren.mp3', CURRENT_TIMESTAMP, 8,
-        'Get away out of my face...');
+VALUES ('사이렌(Siren)', 'FRANTS, 선미', '선미', '/upload/song/siren.mp4', 'Dance', TRUE, '/upload/song/siren.mp3', '2018-09-04', 19,
+        '내가 말했잖아 속지 말라고 이 손을 잡는 순간
+너는 위험해질 거라고
+Now you''re bleeding
+근데도 끌리니 뻔히 다 알면서도
+왜 그리 빤히 쳐다보니 놔 그냥
+조금도 망설이지 말고 놔 그냥
+너를 아프게 할 거란 걸
+알잖아
+네 환상에 아름다운 나는 없어
+Can''t you see that boy
+Get away out of my face
+더 다가오지 마 boy 슬퍼해도 난 울지 않아
+Get away out of my face
+더 바라보지 마 boy 슬퍼해도 난 울지 않아
+라랄라라라 라랄라라라
+라랄라라라 라랄라라라
+차가운 나를 보는 너의 눈빛
+우릴 비추던 달빛 이제는 저물어 간다고
+보이지 않니 날 놓지 못하는 손
+조금씩 붉어져가잖아 놔 그냥
+조금도 망설이지 말고 놔 그냥
+너를 아프게 할 거란 걸
+알잖아 네 환상에 아름다운
+나는 없어
+Can''t you see that boy
+Get away out of my face
+더 다가오지 마 boy 슬퍼해도 난 울지 않아
+Get away out of my face
+더 바라보지 마 boy 슬퍼해도 난 울지 않아
+라랄라라라 라랄라라라
+라랄라라라 라랄라라라
+Can''t you see that boy
+What
+Can''t you see that boy
+I ain''t cry no more
+Get away out of my face
+더 다가오지 마 boy 슬퍼해도 난 울지 않아
+Get away out of my face
+더 바라보지 마 boy 슬퍼해도 난 울지 않아
+라랄라라라 라랄라라라
+라랄라라라 라랄라라라
+');
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics)
-VALUES ('Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Pop', TRUE, 'fear.mp3', CURRENT_TIMESTAMP, 9,
-        'Even though I’m anxious...');
+VALUES ('독 : Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Dance', TRUE, '/upload/song/Fear.mp3', '2019-09-16',20,
+        '넌 내 기억을 지워야 돼 I’m poison
+I know I can’t take it no more
+
+영원한 건 절대 없단 걸
+알면서도 끝낼 수도 없어 Yeh
+(Tell me what you want)
+
+너에게 내어주고 싶던
+마음이 날 오히려 더 상처 내고 있어
+
+나는 위험해 너무 지독해
+내 진심보단 날카로운 진실이 중요해
+
+Got to get away
+I can’t hesitate anymore
+Everything turns gray
+난 내 환상 도려내 도망
+독이 번져 가기 전에
+Got to get away
+
+겁이 나 깨지 못해 또 거짓말을 해
+내 기억마저 물들고 있어
+Please baby 넌 내게서 물러서야 해
+Someone tell me what should I do
+
+넌 내 기억을 지워야 돼 I’m poison
+I know I can’t take it no more
+이 선을 넘지 못한 나를 사랑해줘
+The way I love the way I love
+
+계속해 반복해 나쁘게
+사랑해 Oh 또 후회해
+
+이렇게 너를 위험에
+눈 뜨게 하고 싶지 않아
+
+내 독은 피어나 통증은 깊은 밤
+내 진심은 왜 진실을 외면하는 건가
+
+Get out of my mind
+못해 감당 나도 내가 겁이 나서
+진실이 나를 묶어 놨어
+진심도 물들어서 결국 너도 젖어 들어
+변할까 두려워
+
+겁이 나 깨지 못해 또 거짓말을 해
+내 기억마저 물들고 있어
+Please baby 넌 내게서 물러서야 해
+Someone tell me what should I do
+
+넌 내 기억을 지워야 돼 I’m poison
+I know I can’t take it no more
+이 선을 넘지 못한 나를 사랑해줘
+The way I love the way I love
+
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+The way I love the way I love
+
+계속해서 반복되는 말들
+너로 멈춰버린 가사도
+언젠가 언젠가
+
+This is love 온몸에 퍼진
+내 모든 Fear 내 속의 상처
+매일 내가 너로 아파도
+The way I love the way I love
+
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+The way I love the way I love
+');
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics)
-VALUES ('Make A Wish (Birthday Song)', 'Kenzie', 'Kenzie', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
-        CURRENT_TIMESTAMP, 10, 'I can do this all day...');
+VALUES ('Moonlight', '카카오엔터테인먼트', 'SM ENTERTAINMENT', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
+        '2024-06-05', 21, '過ぎる今日に Good-bye
+手を振ろう (Oh yeah Oh yeah ey)
+数えて 1, 2, 3 now
+Oh Tune in on
+何が見えるの
+
+Oh
+窓に差し込む光
+Oh
+浴び照らすよ Reflection
+徐々に重なる波長
+夢が目覚める
+All shining bright
+Yeah, Like a crystal
+
+Dancing in the moonlight
+弾ける瞬間
+(Oway Oway O Oway Oway)
+Singing to the night sky
+繋がる世界
+(Oway Oway O Oway)
+そう どこにいても
+感じる心
+全身でもっと
+叫ぶのさ Ah Ah Ah
+閃く「今」を
+輝かせよう
+Dancing into the moonlight
+Frequencies of dream
+
+さあ 一歩踏み込んで
+重力からの解放
+イマジネーションはどこまでも
+Na na na na na na
+自由に跳べ Fly
+
+Yo 今こそ
+Here we go
+「今度」なんてない
+In my dictionary
+引き寄せの法則
+To the future and not the past
+Let’s go!
+
+Oh
+濃い霧のような迷い
+Oh
+振り払うのさ Reflection
+映し出したのは
+さめない夢 未来
+Yeah, Like a crystal
+
+Dancing in the moonlight
+弾ける瞬間
+(Oway Oway O Oway Oway)
+Singing to the night sky
+繋がる世界
+(Oway Oway O Oway)
+そう どこにいても
+感じる心
+全身でもっと
+叫ぶのさ Ah Ah Ah
+閃く「今」を
+輝かせよう
+Dancing into the moonlight
+Frequencies of dream
+
+The truth (Hey)
+目の前に (Don’t worry about that)
+何があろうとも
+Travel 越えて行ける Level
+今をもっと Revel Yeah
+想いを飛ばせ Dancing in the moon
+Dancing in the moonlight
+後悔なんてしない
+
+Dancing in the moonlight
+弾ける瞬間
+(Oway Oway O Oway Oway)
+Singing to the night sky
+繋がる世界
+(Oway Oway O Oway)
+そう どこにいても
+感じる心
+全身でもっと
+叫ぶのさ Ah Ah Ah
+閃く「今」を
+輝かせよう
+Dancing into the moonlight
+Frequencies of dream
+');
 
 
 --  테이블 : playlist
