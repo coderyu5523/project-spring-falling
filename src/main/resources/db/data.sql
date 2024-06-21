@@ -1,3 +1,6 @@
+-- 테이블 : admin
+    insert into admin_tb(email,password,created_at) values ('admin1@nate.com','1234','2024-06-10');
+
 -- 테이블: user
 -- 칼럼: 이메일, 비밀번호, 전화번호, 프로바이더, 생성날짜, 생년월일
 
@@ -2988,14 +2991,26 @@ Frequencies of dream
 --  테이블 : playlist
 
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (1, null, '최애곡 모음', '2024-06-21');
+values (1, null, '최애곡 모음', '2024-06-17');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (2, null, '여름이면 생각나는 노래', '2024-06-21');
+values (2, null, '신나는 노래 모음', '2024-06-20');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (3, null, '핫한 레전드 음원', '2024-06-21');
+values (3, null, '20240621', '2024-06-21');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (4, null, '카페에서 나올 법한 노래 모음', '2024-06-21');
+values (4, null, '내맘', '2024-06-15');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (4, null, '내맘', '2024-06-15');
 
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '핫한 레전드 음원', '2024-06-01');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '지금 SNS에서 뜨는 음악', '2024-06-05');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, 'Editor''s Pick', '2024-06-07');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '운전할 때 들으면 따라 부르게 될걸요', '2024-06-15');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '언제 들어도 기분이 좋아지는 노래들', '2024-06-16');
 
 -- 노래 플레이리스트 테이블
 
@@ -3011,13 +3026,117 @@ insert into playlist_song_tb (playlist_id, song_id)
 values (1, 5);
 
 insert into playlist_song_tb (playlist_id, song_id)
+values (2, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (2, 11);
+insert into playlist_song_tb (playlist_id, song_id)
+values (2, 12);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (3, 5);
+insert into playlist_song_tb (playlist_id, song_id)
+values (3, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (3, 15);
+
+insert into playlist_song_tb (playlist_id, song_id)
 values (4, 6);
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 7);
+values (4, 21);
+
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 8);
+values (5, 1);
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 9);
+values (5, 3);
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 10);
+values (5, 5);
+insert into playlist_song_tb (playlist_id, song_id)
+values (5, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (5, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (5, 16);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 21);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 20);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 19);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 18);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 17);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 16);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 15);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 14);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 13);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 12);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 11);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 12);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 13);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 14);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 15);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 16);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 1);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 3);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 6);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 12);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 16);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 18);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 20);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 21);
+
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 2);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 4);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 6);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 8);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 14);
+
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 15);
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 16);
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 17);
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 18);
 
