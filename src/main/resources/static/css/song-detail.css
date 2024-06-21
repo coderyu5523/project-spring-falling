@@ -5,7 +5,7 @@ body {
     background-size: 100% 100%;
 }
 
-.main-contents {
+.song-detail-main-contents {
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -15,30 +15,30 @@ body {
 }
 
 
-.badge-area {
+.song-detail-badge-area {
     display: flex;
     align-items: center;
     margin: 40px 50px 10px 25px;
 }
 
-.badge-song-cover {
+.song-detail-badge-song-cover {
     margin-right: 20px;
 }
 
-.album-cover {
+.song-detail-album-cover {
     width: 100%;
     max-width: 240px;
     margin: 0 auto 30px;
     display: block;
 }
 
-.badge-song-detail {
+.song-detail-badge-song-detail {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
 }
 
-.badge-song-info {
+.song-detail-badge-song-info {
     position: relative;
     top: -60px;
     padding-left: 20px;
@@ -46,77 +46,81 @@ body {
     flex-direction: column;
 }
 
-.song-about {
+.song-detail-song-about {
     display: flex;
     flex-direction: column;
 }
 
-.badge-song-info p {
+.song-detail-badge-song-info p {
     margin-top: 2px;
     margin-bottom: 2px;
 }
 
-.badge-song-info .title {
+.song-detail-badge-song-info .song-detail-title {
     font-size: 30px;
     font-weight: bolder;
     color: #333333;
     text-decoration: none;
 }
 
-.song-info div b {
+.song-detail-song-info div b {
     margin-right: 30px;
 }
 
-.title a {
+.song-detail-title a {
     color: #333333;
     text-decoration: none;
 }
 
-.artist a {
+.song-detail-artist a {
     color: #333333;
     text-decoration: none;
 }
 
-.album a {
+.song-detail-album a {
     color: #727272;
     text-decoration: none;
 }
 
-.badge-song-info .artist,
-.album {
+.song-detail-badge-song-info .song-detail-artist,
+.song-detail-album {
     font-weight: normal;
 }
 
-.icons {
+.song-detail-icons {
     display: flex;
     margin-left: 20px;
 }
 
-.icons .btn-add-like {
+.song-detail-icons a {
+    font-size: 18px;
+}
+
+.song-detail-icons .song-detail-btn-add-like {
     color: #000000;
     margin-right: 10px;
     margin-top: 5px;
 }
 
-.icons .btn-add-playlist {
+.song-detail-icons .song-detail-btn-add-playlist {
     color: #000000;
     margin-right: 10px;
     margin-top: 5px;
 }
 
-.icons .btn-add-list {
+.song-detail-icons .song-detail-btn-add-list {
     color: #000000;
     margin-right: 10px;
     margin-top: 5px;
 }
 
-.song-info {
+.song-detail-song-info {
     overflow: hidden;
     white-space: pre-line;
     padding-left: 15px;
     width: 100%;
 }
 
-.lyrics {
+.song-detail-lyrics {
     text-align: left;
 }
