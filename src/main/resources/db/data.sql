@@ -1,33 +1,43 @@
 -- 테이블: user
 -- 칼럼: 이메일, 비밀번호, 전화번호, 프로바이더, 생성날짜, 생년월일
 
-INSERT INTO user_tb (email, password, phone, provider, created_at, birth)
-VALUES ('ssar@nate.com', '1234', '010-1234-5678', 'Email', '2023-02-15', '1990-01-15'),
-       ('john@nate.com', '1234', '010-2345-6789', 'Email', '2023-04-25', '1985-03-22'),
-       ('jane@naver.com', '1234', '010-3456-7890', 'Naver', '2023-06-20', '1992-07-30'),
-       ('sam@gmail.com', '1234', '010-4567-8901', 'Kakao', '2023-08-05', '1988-12-05'),
-       ('lisa@naver.com', '1234', '010-5678-9012', 'Naver', '2023-10-12', '1995-05-25'),
-       ('tom@nate.com', '1234', '010-6789-0123', 'Email', '2023-11-20', '1991-11-10'),
-       ('emily@naver.com', '1234', '010-7890-1234', 'Kakao', '2023-12-15', '1987-04-05'),
-       ('chris@nate.com', '1234', '010-8901-2345', 'Email', '2024-01-05', '1993-02-17'),
-       ('julia@naver.com', '1234', '010-9012-3456', 'Naver', '2024-02-12', '1994-09-09'),
-       ('mark@gmail.com', '1234', '010-0123-4567', 'Kakao', '2024-03-18', '1986-06-30');
+INSERT INTO user_tb (email, password, phone, provider, created_at, birth, status)
+VALUES ('ssar@nate.com', '1234', '010-1234-5678', 'Email', '2023-02-15', '1990-01-15', '블랙'),
+       ('john@nate.com', '1234', '010-2345-6789', 'Email', '2023-04-25', '1985-03-22', '휴면'),
+       ('jane@naver.com', '1234', '010-3456-7890', 'Naver', '2023-06-20', '1992-07-30', '활성'),
+       ('sam@gmail.com', '1234', '010-4567-8901', 'Kakao', '2023-08-05', '1988-12-05', '활성'),
+       ('lisa@naver.com', '1234', '010-5678-9012', 'Naver', '2023-10-12', '1995-05-25', '활성'),
+       ('tom@nate.com', '1234', '010-6789-0123', 'Email', '2023-11-20', '1991-11-10', '활성'),
+       ('emily@naver.com', '1234', '010-7890-1234', 'Kakao', '2023-12-15', '1987-04-05', '활성'),
+       ('chris@nate.com', '1234', '010-8901-2345', 'Email', '2024-01-05', '1993-02-17', '활성'),
+       ('julia@naver.com', '1234', '010-9012-3456', 'Naver', '2024-02-12', '1994-09-09', '활성'),
+       ('mark@gmail.com', '1234', '010-0123-4567', 'Kakao', '2024-03-18', '1986-06-30', '활성');
 
 -- 테이블: artist
 -- 칼럼: 가수이름, 아티스트타입, 아티스트사진, 생성날짜
 
 INSERT INTO artist_tb (name, artist_type, artist_img, created_at)
-VALUES ('노을', 'Solo', 'upload/노을.jpg', now()),
-       ('aespa', 'Group', 'upload/에스파.jpg', '2023-02-15'),
-       ('NewJeans', 'Group', 'upload/뉴진스.jpg', '2023-03-20'),
-       ('IVE (아이브)', 'Group', 'upload/아이브.jpg', '2023-05-05'),
-       ('TWS (투어스)', 'Group', 'upload/투어스.jpg', '2023-06-10'),
-       ('QWER', 'Group', 'upload/qwer.jpg', '2023-07-15'),
-       ('임영웅', 'Solo', 'upload/임영웅.jpg', '2023-08-20'),
-       ('지코 (ZICO)', 'Solo', 'upload/지코.jpg', '2023-09-25'),
-       ('(여자)아이들', 'Group', 'upload/여자아이들.jpg', '2023-10-30'),
-       ('아일릿(ILLIT)', 'Group', 'upload/아일릿.jpg', '2023-11-15'),
-       ('이클립스 (ECLIPSE)', 'Solo', 'upload/이클립스.jpg', '2023-12-01');
+VALUES ('노을', 'Solo', 'upload/artist/노을.jpg', '2002-12-24'),
+       ('aespa', 'Group', 'upload/artist/에스파.jpg', '2023-02-15'),
+       ('NewJeans', 'Group', 'upload/artist/뉴진스.jpg', '2023-03-20'),
+       ('IVE (아이브)', 'Group', 'upload/artist/아이브.jpg', '2023-05-05'),
+       ('TWS (투어스)', 'Group', 'upload/artist/투어스.jpg', '2023-06-10'),
+       ('QWER', 'Group', 'upload/artist/qwer.jpg', '2023-07-15'),
+       ('임영웅', 'Solo', 'upload/artist/임영웅.jpg', '2023-08-20'),
+       ('지코 (ZICO)', 'Solo', 'upload/artist/지코.jpg', '2023-09-25'),
+       ('(여자)아이들', 'Group', 'upload/artist/여자아이들.jpg', '2023-10-30'),
+       ('아일릿(ILLIT)', 'Group', 'upload/artist/아일릿.jpg', '2023-11-15'),
+       ('이클립스 (ECLIPSE)', 'Solo', 'upload/artist/이클립스.jpg', '2023-12-01'),
+       ('BTS', 'Group', 'upload/artist/bts.jpg', '2013-06-13'),
+       ('Blackpink', 'Group', 'upload/artist/블랙핑크.jpg', '2016-08-08'),
+       ('아이유', 'Solo', 'upload/aritst/아이유.jpg','2008-09-18'),
+       ('Twice', 'Group', 'upload/aritst/트와이스.jpg','2015-10-20'),
+       ('EXO', 'Group', 'upload/artist/엑소.jpg','2012-04-08'),
+       ('Red Velvet', 'Group', 'upload/artist/레드벨벳.jpg','2014-08-01'),
+       ('Zico', 'Solo', 'upload/artist/지코.jpg','2011-04-15'),
+       ('선미', 'Solo', 'upload/artist/선미.jpg','2007-02-13'),
+       ('Seventeen', 'Group', 'upload/artist/세븐틴.jpg','2015-05-26'),
+       ('NCT', 'Group', 'upload/artist/nct.jpg','2016-04-09');
 
 
 --  샘플용 더미
@@ -35,31 +45,47 @@ VALUES ('노을', 'Solo', 'upload/노을.jpg', now()),
 -- 테이블: album
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '발라드', 'upload/전부너였다.jpg', 1, NOW(),
+VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '발라드', 'upload/album/전부너였다.jpg', 1, NOW(),
         '- 섬세한 사랑의 감정을 노래한 "전부 너였다" 붙잡고도, 인연, 아파도 아파도, 청혼 등 2장의 앨범을 통해서 색깔있는 가창력을 선보였던 그룹 ''노을''이 기나긴 작업 기간을 보내고 섬세한 사랑의 감정을 담은 세번째 앨범 "전부 너였다"로 돌아왔다. 데뷔앨범인 "붙잡고도"와 2집 앨범 "아파도 아파도"를 통해 뛰어난 가창력과 멤버 각각의 독특한 보이스 칼라로 최고의 R&B그룹으로 평가 받아왔던 노을이 또 한번의 음악적 변신을 시도한다. 기나긴 작업기간 동안 4명의 멤버가 가장 신경쓴 부분은 각각의 보이스 컬러의 조화와 모든 이들이 공감할 수 있는 편안한 모습으로 팬들에게 다가가는 것이었다. 이번 앨범에서는 그 동안 노을이 보여주었던 슬픔의 극대화가 아닌 슬픈 감정의 절제를 노래하는 노을을 만나볼 수 있을 것이다. 타이틀 곡인 ''전부 너였다''는 제목이 주는 이미지 그대로 누구나 공감할 수 있는 가사가 돋보이는 곡으로 노을의 ''청혼''과 god의 ''보통날''을 작곡했던 권태은의 서정적인 멜로디에 양재선의 감성적인 노랫말과 노을의 Voice가 잘 조화된 곡으로 이별의 슬픈 감정을 절제하면서 덤덤하게 노래하여 이번 앨범의 컨셉을 가장 잘 표현하였다. - "노을스럽다"를 보여주는 곡 "나무" 사랑의 감정을 한 곳에 뿌리박은 나무에 비유한 "나무"는 노을 Voice와 웅장한 오케스트레이션의 조화가 돋보이며 최고의 프로듀서 방시혁의 노랫말이 귀에 쏙쏙 들어오며 가장 ''노을스럽다''라는 말이 어울리는 곡이다. 또한 이외에도 일본의 여가수 아무로 나미에의 최근작인 히트 발라드 "All for you"를 노을 만의 감성으로 새롭게 재해석한 "All for you"와 드라마 궁의 OST "perhaps love"를 작곡한 박근철의 "A better tomorrow", MC몽의 ''180도'', M(이민우)의 "Last first kiss"등을 작곡한 장준호의 멜로디와 "10 Minetes"의 작사가 Maybee의 가사의 조화가 돋보이는 댄스넘버 "남자라서", 조성모, BMK 및 여러 가수들의 앨범을 프로듀서한 mAd sOuL cHiLd가 선사하는 트랜디한 사운드와 감성의 조화가 돋보이는 ''A nice day'', 천상의 목소리 이소은과 노을의 리더 이상곤이 듀엣으로 노래한 러브 발라드 "여행" 등을 통해 또 한번 새로운 노을만의 색깔을 선보일 예정이다. 이번 노을의 세번째 앨범 ''전부 너였다''는 노을의 음악세계에 새로운 변화를 제시하며 동시에 가장 ''노을스럽다''라는 말이 어울리는 듣는이로 하여금 편안한 감동을 선사할 수 있는 최고의 앨범이 될 것이다.'),
        ('Armageddon - The 1st Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', 'Dance', 'upload/album/슈퍼노바.jpg', 2,
         '2024-05-27',
         'aespa, 첫 정규 앨범 ‘Armageddon’ 발매! 힙한 무드 ‘Supernova’→힙합 댄스곡 ‘Armageddon’으로 강렬한 질주! 세계관 시즌 2 서사 담은 역대급 스케일 음악+비주얼! ‘글로벌 히트메이커’ aespa가 첫 정규 앨범 ‘Armageddon’을 발매했다. aespa의 첫 정규 앨범 ‘Armageddon’은 미니멀한 트랙사운드와 캐치한 탑라인이 매력적인 선공개곡 ‘Supernova’와 트렌디한 트랙과 거칠고 절제된 음색이 돋보이는 타이틀 곡 ‘Armageddon’을 포함하여 에너제틱한 힙합부터 밝고 경쾌한 댄스곡, 리드미컬한 모던 팝, 발라드까지 다채로운 장르로 구성되어 aespa만의 독보적인 음악 색깔을 만끽하기에 충분하다. 특히 이번 앨범은 리얼 월드와 디지털 세계를 넘어 다중 우주로 확장되는 aespa 세계관 시즌 2의 서사를 담아, aespa가 평행 세계에 존재하는 각기 다른 ‘나’를 만나 무한한 가능성을 마주하고 완전한 ‘나’로 거듭나는 과정들을 파워풀하고 유니크한 음악과 비주얼을 통해 보여줄 예정이어서 기대가 모인다.'),
-       ('How Sweet', 'YG PLUS', 'ADOR', '국내', 'Dance', 'upload/sweet.jpg', 3, '2024-05-24',
+       ('How Sweet', 'YG PLUS', 'ADOR', '국내', 'Dance', 'upload/album/sweet.jpg', 3, '2024-05-24',
         '뉴진스가 2024년 또다시 새로운 모습으로 돌아왔다. 타이틀 곡 ‘How Sweet’은 신선한 느낌을 선사하는 장르적 접근이 돋보이는 새롭고 독특한 매력의 Dance Pop 곡으로 Sparkle한 일렉트로닉 사운드가 중독성있는 곡이다. 또 함께 수록된 ‘Bubble Gum’은 트랙의 진행에 따른 다양한 무드 체인지를 통해 다채로운 매력을 느낄 수 있는 곡이다. 과장되지 않은 자연스러움으로 오히려 신선한 느낌을 선사하는 뉴진스 멤버들의 보컬과 개성있고 매력 넘치는 트랙들로 구성된 싱글 앨범 ‘How Sweet’은 한 번만 들어도 모든 이의 귀를 사로잡을 만큼 뉴진스의 매력을 잘 담아내고 있다. 그간 뉴진스를 기다려 온 전세계 팬들에게 화답이 되는 앨범이 되길 바란다.'),
-       ('IVE SWITCH', '카카오엔터테인먼트', '스타쉽 엔터테인먼트', '국내', 'Dance', 'upload/해야.jpg', 4, '2024-04-29',
+       ('IVE SWITCH', '카카오엔터테인먼트', '스타쉽 엔터테인먼트', '국내', 'Dance', 'upload/album/해야.jpg', 4, '2024-04-29',
         '뚜렷한 컬러로 K팝 최고의 순간을 물들인 아이브가 극적인 반전을 선사한다. 아이브의 정체성은 주체적인 자신감과 당당함. 여기에 색다른 매력을 더해 또 다른 변주를 시도했다. 최적의 타이밍에서 맞이한 확신의 변화다. 언제나 자신감 넘치는 애티튜드로 자아 성취를 보여준 아이브가 세련되면서도 감각적인 시도로 새로운 시작을 알린다.'),
-       ('TWS 1st Mini Album ‘Sparkling Blue’', 'YG PLUS', '플레디스엔터테인먼트', '국내', 'Dance', 'upload/첫만남.jpg', 5,
+       ('TWS 1st Mini Album ‘Sparkling Blue’', 'YG PLUS', '플레디스엔터테인먼트', '국내', 'Dance', 'upload/album/첫만남.jpg', 5,
         '2024-01-22',
         '‘2024년 최고 기대주’ TWS, 데뷔 앨범 ‘Sparkling Blue’ 공개 "언제나 TWS와 함께"…반짝이는 음률의 향연 ‘Sparkling Blue’ 설렘 가득한 데뷔 타이틀곡 ‘첫 만남은 계획대로 되지 않아’'),
-       ('1st Mini Album ''MANITO''', '카카오엔터테인먼트', '타마고 프로덕션', '국내', 'Rock/Metal', 'upload/고민중독.jpg', 6, '2023-08-15',
+       ('1st Mini Album ''MANITO''', '카카오엔터테인먼트', '타마고 프로덕션', '국내', 'Rock/Metal', 'upload/album/고민중독.jpg', 6,
+        '2023-08-15',
         '1st Mini Album ''MANITO'' ‘불협화음에서 만들어낸 하모니’라는 그들만의 독특한 스토리를 써 내려갔던 밴드 QWER이 미니 앨범 ''MANITO''로 돌아왔다. 첫 싱글에서는 각기 다른 출신의 배경을 가진 멤버 쵸단, 마젠타, 히나, 시연 넷의 결성까지의 과정과 팀의 아이덴티티를 이야기했다면, ''MANITO''에서는 운명과도 같은 만남을 경험한 QWER의 속마음을 한 편의 드라마로 풀어나갈 예정이다.'),
-       ('신사와 아가씨 OST Part.2', 'NHN벅스', '모스트콘텐츠', '국내', 'Ballad', 'upload/도망가.jpg', 7, '2021-10-11',
+       ('신사와 아가씨 OST Part.2', 'NHN벅스', '모스트콘텐츠', '국내', 'Ballad', 'upload/album/도망가.jpg', 7, '2021-10-11',
         '''임영웅 - 사랑은 늘 도망가'' KBS 2TV 주말드라마 ''신사와 아가씨''는 우연인 듯 인연인 듯 계속된 만남을 가지게 된 박단단(이세희 분)과 이영국(지현우 분)이 한집살이를 시작하며 흥미진진한 서사와 디테일한 연출로 시청자들을 사로잡고 있다.'),
-       ('SPOT!', '	YG PLUS', 'KOZ 엔터테인먼트', '국내', 'HipHop', 'upload/스팟.jpg', 8, '2024-04-26',
+       ('SPOT!', '	YG PLUS', 'KOZ 엔터테인먼트', '국내', 'HipHop', 'upload/album/스팟.jpg', 8, '2024-04-26',
         '지코의 첫 번째 정규앨범 "SPOT!"는 독창적인 음악성과 심오한 가사를 담은 작품입니다. 타이틀 곡 "Thinking"은 지코 특유의 스타일과 제니의 감각적인 보컬이 어우러진 곡입니다.'),
-       ('2', '카카오엔터테인먼트', '큐브 엔터테인먼트', '국내', 'K-POP', 'upload/질색.jpg', 9, '2024-01-29',
+       ('2', '카카오엔터테인먼트', '큐브 엔터테인먼트', '국내', 'K-POP', 'upload/album/질색.jpg', 9, '2024-01-29',
         '''Super Lady''의 아름다움과 그 힘에 대한 찬가 콘셉트 장인 (여자)아이들의 화려한 귀환'),
-       ('SUPER REAL ME', '지니뮤직, Stone Music Entertainment', '빌리프랩', '국내', 'Dance', 'upload/마그넷.jpg', 10, '2024-03-25',
+       ('SUPER REAL ME', '지니뮤직, Stone Music Entertainment', '빌리프랩', '국내', 'Dance', 'upload/album/마그넷.jpg', 10,
+        '2024-03-25',
         '‘하이브 막내딸’ 아일릿, 3월 25일 첫 번째 미니 앨범 ‘SUPER REAL ME’로 데뷔! 엉뚱•발랄•자유로움 아일릿…무엇이든 될 수 있는 무한 가능성의 소녀들 ‘눈 앞에 최선을, 나머지는 되는 대로’, 진짜 ‘나’의 이야기로 전속력으로 달려가는 아일릿 ‘리얼 10대 감성’ 아일릿 시작부터 다르다! 방시혁 프로듀서x10대 프로듀서 만남'),
        ('선재 업고 튀어 OST Part 1', 'Stone Music Entertainment', 'BON FACTORY, Stone Music Entertainment', '국내', 'OST',
-        'upload/소나기.jpg', 11, '2024-01-10',
+        'upload/album/소나기.jpg', 11, '2024-01-10',
         '드라마 속 밴드 ''이클립스''가 선보이는 첫 번째 OST! tvN 월화드라마 ‘선재 업고 튀어’가 드라마의 몰입도를 높일 OST들을 선공개한다');
+
+-- album_tb에 더미 데이터 삽입
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Map of the Soul: 7', 'BigHit Entertainment', 'BigHit Entertainment', 'Korea', 'Full Album', 'upload/album/MAP OF THE SOUL 7.jpg', 1, CURRENT_TIMESTAMP, 'The seventh studio album by BTS.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('The Album', 'YG Entertainment', 'YG Entertainment', 'Korea', 'Full Album', 'thealbum.jpg', 2, CURRENT_TIMESTAMP, 'The first Korean studio album by Blackpink.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Palette', 'LOEN Entertainment', 'Fave Entertainment', 'Korea', 'Full Album', 'palette.jpg', 3, CURRENT_TIMESTAMP, 'The fourth studio album by IU.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Eyes Wide Open', 'JYP Entertainment', 'JYP Entertainment', 'Korea', 'Full Album', 'eyeswideopen.jpg', 4, CURRENT_TIMESTAMP, 'The second Korean studio album by Twice.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Don`t Mess Up My Tempo', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'dontmessupmytempo.jpg', 5, CURRENT_TIMESTAMP, 'The fifth studio album by EXO.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('The ReVe Festival: Finale', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'therevefestivalfinale.jpg', 6, CURRENT_TIMESTAMP, 'The first Korean studio album by Red Velvet.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Thinking', 'KOZ Entertainment', 'KOZ Entertainment', 'Korea', 'Full Album', 'thinking.jpg', 7, CURRENT_TIMESTAMP, 'The first studio album by Zico.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('Warning', 'Makeus Entertainment', 'Makeus Entertainment', 'Korea', 'EP', 'warning.jpg', 8, CURRENT_TIMESTAMP, 'The second EP by Sunmi.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('An Ode', 'Pledis Entertainment', 'Pledis Entertainment', 'Korea', 'Full Album', 'anode.jpg', 9, CURRENT_TIMESTAMP, 'The third studio album by Seventeen.');
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro) VALUES ('NCT 2020 Resonance Pt. 1', 'SM Entertainment', 'SM Entertainment', 'Korea', 'Full Album', 'resonancept1.jpg', 10, CURRENT_TIMESTAMP, 'The second studio album by NCT.');
+
+
 
 -- 테이블: song
 
@@ -1877,3 +1903,41 @@ Baby don’t say no'),
     작은 기억 하나도
     오늘도 새겨봅니다
     내겐 선물인 그댈');
+
+
+--  테이블 : playlist
+
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (1, null, '최애곡 모음', '2024-06-21');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (2, null, '여름이면 생각나는 노래', '2024-06-21');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (3, null, '핫한 레전드 음원', '2024-06-21');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (4, null, '카페에서 나올 법한 노래 모음', '2024-06-21');
+
+
+-- 노래 플레이리스트 테이블
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (1, 1);
+insert into playlist_song_tb (playlist_id, song_id)
+values (1, 2);
+insert into playlist_song_tb (playlist_id, song_id)
+values (1, 3);
+insert into playlist_song_tb (playlist_id, song_id)
+values (1, 4);
+insert into playlist_song_tb (playlist_id, song_id)
+values (1, 5);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (4, 6);
+insert into playlist_song_tb (playlist_id, song_id)
+values (4, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (4, 8);
+insert into playlist_song_tb (playlist_id, song_id)
+values (4, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (4, 10);
+

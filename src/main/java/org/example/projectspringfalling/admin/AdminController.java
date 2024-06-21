@@ -1,5 +1,6 @@
 package org.example.projectspringfalling.admin;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,7 @@ public class AdminController {
     public String albumSaveForm() {
         return "admin/album-save-form";
     }
+
     // 가수 상세보기
     @GetMapping("/admin/artists/{id}")
     public String artistDetail(@PathVariable Integer id) {
@@ -40,6 +42,7 @@ public class AdminController {
     public String artistList() {
         return "admin/artist-list";
     }
+
     // 가수 등록하기 폼
     @GetMapping("/admin/artists/save-form")
     public String artistSaveForm() {
@@ -63,22 +66,27 @@ public class AdminController {
     public String songDetail(@PathVariable Integer id) {
         return "admin/song-detail";
     }
+
     // 곡 목록보기
     @GetMapping("/admin/songs")
     public String songList() {
         return "admin/song-list";
     }
+
     // 회원 상세보기
     @GetMapping("/admin/users/{id}")
     public String userDetail(@PathVariable Integer id) {
         return "admin/user-detail";
     }
+
     // 회원 목록보기
     @GetMapping("/admin/users")
-    public String userList() {
+    public String userList(HttpServletRequest request) {
+
+        request.setAttribute("userList", adminService.getUserList());
+
         return "admin/user-list";
     }
-
 
 
 }

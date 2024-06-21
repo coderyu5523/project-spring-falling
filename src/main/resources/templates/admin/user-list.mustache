@@ -1,61 +1,75 @@
 {{>layout/sidebar}}
 
 <!-- Main content -->
-        <main role="main">
-            <section id="section n1">
-                <div class="content-page">
-                    <div class="content-tab-bar">
-                        <div class="tab-content current">
-                            <div class="tab-head">
-                                <p>가입현황</p>
-                            </div>
-                            <div class="tab-item">
-                                <ul class="search-box">
-                                    <li class="search-left">
-                                        <span>총 회원<em> 1</em>명</span>
-                                    </li>
-                                </ul>
-                                <table>
-                                    <colgroup>
-                                        <col width="25%">
-                                        <col width="20%">
-                                        <col width="20%">
-                                        <col width="15%">
-                                    </colgroup>
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">이메일</th>
-                                        <th scope="col">가입경로</th>
-                                        <th scope="col">상태</th>
-                                        <th scope="col">상세보기</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>gildong@nate.com</td>
-                                        <td>KAKAO</td>
-                                        <td><span class="state black">블랙</span>
-                                        </td>
-                                        <td><span class="detail" onclick="location.href='#'">상세보기</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>metacoding@nate.com</td>
-                                        <td>NAVER</td>
-                                        <td><span class="state active">활성</span>
-                                        </td>
-                                        <td><span class="detail" onclick="location.href='#'">상세보기</span>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+<main role="main">
+    <section id="section n1">
+        <div class="content-page">
+            <div class="content-tab-bar">
+                <div class="tab-content current">
+                    <div class="tab-head">
+                        <p>가입현황</p>
+                    </div>
+                    <div class="tab-item">
+                        <ul class="search-box">
+                            <li class="search-left">
+                                <span>총 회원<em> {{userList.userCount}}</em>명</span>
+                            </li>
+                        </ul>
+                        <table>
+                            <colgroup>
+                                <col width="25%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="15%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">이메일</th>
+                                <th scope="col">가입경로</th>
+                                <th scope="col">상태</th>
+                                <th scope="col">상세보기</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#userList.users}}
+                                <tr>
+                                    <td>{{email}}</td>
+                                    <td>{{provider}}</td>
+                                    <td><span class="status-button state black">{{status}}</span>
+                                    </td>
+                                    <td><span class="detail"
+                                              onclick="location.href='/admin/users/{{userId}}'">상세보기</span>
+                                    </td>
+                                </tr>
+                            {{/userList.users}}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </section>
-        </main>
-
+            </div>
+        </div>
+    </section>
+</main>
+<script>
+    window.onload = function () {
+        $('.status-button').each(function () {
+            $(this).removeClass('black active inactive');
+            switch ($(this).text()) {
+                case '블랙' :
+                    $(this).addClass('black');
+                    break;
+                case '활성' :
+                    $(this).addClass('active');
+                    break;
+                case '휴면' :
+                    $(this).addClass('inactive');
+                    break;
+                default :
+                    break;
+            }
+        });
+    }
+</script>
 </body>
 
 </html>

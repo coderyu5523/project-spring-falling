@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.projectspringfalling.admin.Admin;
 import org.example.projectspringfalling.user.User;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -23,14 +24,16 @@ public class Playlist {
     @ManyToOne(fetch = FetchType.LAZY)
     private User user; // 회원
 
-    private Integer song_id; // 노래 아이디
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Admin admin;
+
 
     @Builder
-    public Playlist(Integer id, String name, Timestamp createdAt, User user, Integer song_id) {
+    public Playlist(Integer id, String name, Timestamp createdAt, User user,Admin admin) {
         this.id = id;
         this.name = name;
         this.createdAt = createdAt;
         this.user = user;
-        this.song_id = song_id;
+        this.admin = admin;
     }
 }
