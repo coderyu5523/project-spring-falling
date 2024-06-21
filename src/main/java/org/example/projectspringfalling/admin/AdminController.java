@@ -75,7 +75,9 @@ public class AdminController {
 
     // 회원 상세보기
     @GetMapping("/admin/users/{id}")
-    public String userDetail(@PathVariable Integer id) {
+    public String userDetail(@PathVariable Integer id, HttpServletRequest request) {
+        request.setAttribute("user", adminService.getUser(id));
+
         return "admin/user-detail";
     }
 
