@@ -32,7 +32,7 @@ public class AlbumController {
     // 앨범 더미 테스트
     @GetMapping("/album-test")
     public String test(HttpServletRequest request) {
-        int id = 1;
+        int id = 4;
         Album album = albumService.getImage(id);
         request.setAttribute("album", album);
         return "album-test";

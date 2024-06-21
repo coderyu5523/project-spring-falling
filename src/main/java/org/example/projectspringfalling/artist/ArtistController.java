@@ -33,7 +33,7 @@ public class ArtistController {
     // todo : 더미 테스트용 , 삭제 예정
     @GetMapping("/artist-test")
     public String test(HttpServletRequest request) {
-        int id = 1;
+        int id = 5;
         Artist artist = artistService.getImage(id);
         request.setAttribute("artist", artist);
         return "artst-test";
