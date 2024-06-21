@@ -75,7 +75,7 @@ main {
     align-items: center;
 }
 
-.search-box>li {
+.search-box > li {
     display: flex;
     padding: 20px 20px 20px 0;
     align-items: center;
@@ -161,6 +161,10 @@ main {
 
 .active {
     background: #03cf5d;
+}
+
+.inactive {
+    background: grey;
 }
 
 .refuse {
