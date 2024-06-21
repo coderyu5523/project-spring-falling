@@ -417,7 +417,7 @@ Supernova
 질문은 계속돼 Ah Oh Ay
 (Nova)
 Bring the light of a dying star
-Supernova'),
+Supernova',2),
 
        ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)',
         '/upload/Armageddon.mp4', 'Dance', true, '/upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
@@ -540,7 +540,7 @@ Warning all night long)
 Armageddon
 (Aw wayo wayo)
 끝과 시작의
-Armageddon'),
+Armageddon',2),
 
        ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/tone.mp3',
         '2024-05-27', 2, 'We Set The Tone
@@ -676,7 +676,7 @@ We Set The Tone
 
 We Set The Tone
 We take it home
-We Set The Tone'),
+We Set The Tone',2),
 
        ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',
         false, '/upload/Mine.mp3', '2024-05-27', 2, '예고 없이
@@ -818,7 +818,7 @@ Mine
 It’s all Mine
 know you want it like
 It’s all Mine
-Mine'),
+Mine',2),
 
        ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
         '/upload/Licorice.mp4', 'Dance', false, '/upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
@@ -943,7 +943,7 @@ Licorice
 Licorice
 Licorice
 자꾸 손이 가
-Like Licorice'),
+Like Licorice',2),
 
        ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,
         'Dance', false, '/upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
@@ -1081,7 +1081,7 @@ Bahama, hama
 We should go
 To the beach
 Take it slow
-Bahama'),
+Bahama',2),
 
        ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
         '/upload/Long Chat.mp4', 'Dance', false, '/upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
@@ -1229,7 +1229,7 @@ Hashtag
 너의 속마음을 듣고파
 
 I’ll be the girl who likes a
-Long Chat'),
+Long Chat',2),
 
        ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/Prologue.mp3',
         '2024-05-27', 2, 'Woo Woo Woo
@@ -1330,7 +1330,7 @@ Woo Woo Woo
 La-la
 Woo Woo Woo
 La-la
-'),
+',2),
 
        ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4',
         'Rock/Metal', false, '/upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
@@ -1435,7 +1435,7 @@ Live My Life
 외쳐봐
 Live My Life
 
-Life'),
+Life',2),
 
        ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/목소리 (Melody).mp3',
         '2024-05-27', 2, 'Every night
@@ -1517,7 +1517,7 @@ Oh You’re the one
 나를 부르는
 목소리
 우릴 이어준
-목소리'),
+목소리',2),
 
        ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman',
         'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)',
@@ -1608,7 +1608,7 @@ Don’t knock on my door 너 얼른 나가버려
 Toxic lover
 You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
-Don’t knock on my door, I’ll see you out'),
+Don’t knock on my door, I’ll see you out',3),
 
        ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman',
         '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/해야 (HEYA).mp4', 'Dance', true, '/upload/해야 (HEYA).mp3', '2024-04-29', 4,
@@ -1706,7 +1706,7 @@ Don’t knock on my door, I’ll see you out'),
     해야 해야 해야
     뜨겁게 떠오르는 해야
     별안간 홀린 그 순간 Bite
-    Da da da dun dun dun'),
+    Da da da dun dun dun',4),
 
        ('첫 만남은 계획대로 되지 않아',
         'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK',
@@ -1763,7 +1763,7 @@ Na na na-
 
 이렇게 만나서 반가워
 내일 또 봐 안녕
-'),
+',5),
 
        ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영',
         '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/고민중독.mp4', 'Rock/Metal', true, '/upload/고민중독.mp3',
@@ -1805,7 +1805,7 @@ Na na na-
 벅차오르다 못해 내 맘이 쿡쿡 아려와
 두 번은 말 못 해 너 지금 잘 들어봐
 매일 고민하고 연습했던 말
-좋아해'),
+좋아해',6),
 
        ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
@@ -1840,7 +1840,7 @@ Na na na-
 꼭 움켜쥐지만
 그리움이 쫓아 사랑은 늘 도망가
 잠시 쉬어가면 좋을 텐데
-잠시 쉬어가면 좋을 텐데'),
+잠시 쉬어가면 좋을 텐데',7),
 
        ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', '/upload/SPOT! (feat. JENNIE).mp4',
         'HipHop', true, '/upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
@@ -1914,7 +1914,7 @@ Everybody Stop
 Wait a minute ahhh
 
 Come vibe with us
-Ride with us'),
+Ride with us',8),
 
        ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,
         '/upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
@@ -1963,7 +1963,7 @@ Ride with us'),
 나는 생각은 딱 질색이니까
 
 아냐 지나치는 게 나을 것 같아
-나는 아픈 건 딱 질색이니까'),
+나는 아픈 건 딱 질색이니까',9),
 
        ('Magnetic',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
@@ -2044,7 +2044,7 @@ Dash-da-da Dash-da-da Dash-da
 Like it’s magnetic
 BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
-Baby don’t say no'),
+Baby don’t say no',10),
 
        ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/소나기.mp3',
         '2024-04-08', 11, '그치지 않기를 바랬죠
@@ -2100,12 +2100,11 @@ Baby don’t say no'),
     내게 주었던
     작은 기억 하나도
     오늘도 새겨봅니다
-    내겐 선물인 그댈');
-
+    내겐 선물인 그댈',12);
 
 -- song_tb에 더미 데이터 삽입
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('ON', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
 ', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
 ', '/upload/song/ON.mp4', 'Dance', TRUE, '/upload/song/ON.mp3', '2020-02-21', 12, 'I can''t understand what people are sayin''
@@ -2215,9 +2214,9 @@ All that I know
 is just goin’ on & on & on & on
 (Eh-oh)
 가져와 bring the pain oh yeah
-');
+',12);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('Lovesick Girls', 'TEDDY, 24, 제니 (JENNIE), Brian Lee, Leah Haywood, R.Tee, David Guetta', 'TEDDY, LØREN, 지수 (JISOO), 제니 (JENNIE), DANNY CHUNG
 ', '/upload/song/Lovesick Girls.mp4', 'Pop', TRUE, '/upload/song/Lovesick Girls.mp3', '2020-10-02', 13, '영원한 밤
 창문 없는 방에
@@ -2309,9 +2308,9 @@ Lovesick girls
 아프고 또 아파도
 Lovesick girls
 But we’re still looking for love
-');
+',13);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('팔레트 (Feat. G-DRAGON)', '아이유 (IU)', '아이유 (IU)', '/upload/song/Palette.mp4', 'Ballade', TRUE,
         '/upload/song/Palette.mp3', '2017-04-21', 14, '이상하게도 요즘엔 그냥 쉬운 게 좋아
 하긴 그래도 여전히 코린 음악은 좋더라
@@ -2361,9 +2360,9 @@ I like it I''m twenty five
 날 미워하는 거 알아
 I got this I''ve truly found
 이제 조금 알 것 같아 날
-');
+',14);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('I CAN`T STOP ME', 'Melanie Fontana, Michel ''Lindgren'' Schulz, A Wright
 ', 'J.Y. Park "The Asiansoul", 심은지', '/upload/song/I CAN`T STOP ME.mp4', 'Dance', TRUE,
         '/upload/song/I CAN`T STOP ME.mp3',
@@ -2476,9 +2475,9 @@ can’t stop me
 
 I can’t stop me
 can’t stop me
-');
+',15);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('Tempo', 'Tay Jasper, Leven Kali, MZMC, JAMIL “DIGI” CHAMMAS, Adrian McKinnon
 ', 'JQ, 페노메코 (PENOMECO), 유영진', 'tempo_mv.mp4', 'Dance', TRUE, '/upload/song/Tempo.mp3', '2018-11-02', 16, 'I can''t believe
 기다렸던 이런 느낌
@@ -2565,9 +2564,9 @@ I said don''t mess up my tempo
 어디에도 없을 이런 완벽한 1, 2, 3
 Don''t mess up my tempo
 멈출 수 없는 이끌림
-');
+',16);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('Psycho', 'Andrew Scott, Cazzi Opeia, EJAE', 'Kenzie', '/upload/song/Psycho.mp4', 'Dance', TRUE,
         '/upload/song/Psycho.mp3', '2019-12-23', 17,
         'Psycho
@@ -2655,9 +2654,9 @@ It''s alright
 It''s alright
 우린 좀 이상해
 Psycho
-');
+',17);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('천둥벌거숭이 (Feat. Jvcki Wai, 염따)', '지코 (ZICO), Pop Time', '지코 (ZICO)', '/upload/song/Daredevil.mp4', 'HipHop',
         TRUE, '/upload/song/Daredevil.mp3', '2019-09-30', 18,
         '그래서 어떻게 됐긴 어디도 안 가고
@@ -2766,9 +2765,9 @@ They call me 천둥벌거숭이
 They call me 천둥벌거숭이
 잘 가라 어중이떠중이
 어떤 무리에 있든 난 우두머리
-');
+',18);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('사이렌(Siren)', 'FRANTS, 선미', '선미', '/upload/song/siren.mp4', 'Dance', TRUE, '/upload/song/siren.mp3',
         '2018-09-04', 19,
         '내가 말했잖아 속지 말라고 이 손을 잡는 순간
@@ -2812,9 +2811,9 @@ Get away out of my face
 더 바라보지 마 boy 슬퍼해도 난 울지 않아
 라랄라라라 라랄라라라
 라랄라라라 라랄라라라
-');
+',19);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('독 : Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Dance', TRUE, '/upload/song/Fear.mp3', '2019-09-16', 20,
         '넌 내 기억을 지워야 돼 I’m poison
 I know I can’t take it no more
@@ -2889,9 +2888,9 @@ Uh uh wuh ya ya uh uh uh
 Uh uh wuh ya ya uh uh uh
 Uh uh wuh ya ya uh uh uh
 The way I love the way I love
-');
+',20);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('Moonlight', '카카오엔터테인먼트', 'SM ENTERTAINMENT', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
         '2024-06-05', 21, '過ぎる今日に Good-bye
 手を振ろう (Oh yeah Oh yeah ey)
@@ -2983,7 +2982,7 @@ Singing to the night sky
 輝かせよう
 Dancing into the moonlight
 Frequencies of dream
-');
+',21);
 
 
 --  테이블 : playlist
