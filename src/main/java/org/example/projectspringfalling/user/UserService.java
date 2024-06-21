@@ -14,6 +14,9 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.UUID;
 
+import static org.example.projectspringfalling._core.utils.DateUtil.formatDate;
+import static org.example.projectspringfalling._core.utils.DateUtil.formatYear;
+
 @RequiredArgsConstructor
 @Service
 public class UserService {
@@ -160,7 +163,7 @@ public class UserService {
         } else {
             User user = User.builder()
                     .email(email)
-                    .birth(response2.getBody().getResponse().getBirthyear() + "-" + response2.getBody().getResponse().getBirthday())
+                    .birth(formatYear(response2.getBody().getResponse().getBirthyear()) + formatDate(response2.getBody().getResponse().getBirthday()))
                     .password(UUID.randomUUID().toString())
                     .phone(response2.getBody().getResponse().getMobile())
                     .provider("Naver")
