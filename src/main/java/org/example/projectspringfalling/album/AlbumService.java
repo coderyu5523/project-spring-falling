@@ -27,6 +27,13 @@ public class AlbumService {
         return new AlbumResponse.ListDTO(album, songList);
     }
 
+    // 앨범 상세보기
+    public AlbumResponse.DetailDTO albumDetail(Integer albumId) {
+        Album album = albumRepository.findAlbumAndArtistById(albumId)
+                .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
+        return new AlbumResponse.DetailDTO(album);
+    }
+
     public Album getImage(int id) {
         Album album = albumRepository.findById(id).get();
         return album;

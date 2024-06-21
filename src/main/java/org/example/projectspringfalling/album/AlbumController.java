@@ -23,9 +23,10 @@ public class AlbumController {
     }
 
     // 앨범 상세보기
-    @GetMapping("/albums/{id}/detail")
-    public String albumDetail(@PathVariable Integer id) {
-
+    @GetMapping("/albums/{albumId}/detail")
+    public String albumDetail(@PathVariable Integer albumId) {
+        AlbumResponse.DetailDTO resp = albumService.albumDetail(albumId);
+        session.setAttribute("album", resp);
         return "album/album-detail";
     }
 

@@ -1,20 +1,20 @@
-.main-container {
+.album-detail-main-container {
     display: flex;
     justify-content: center;
 }
 
-.contents {
+.album-detail-contents {
     width: 1100px;
 }
 
-.result-item {
+.album-detail-result-item {
     display: flex;
     gap: 20px;
     margin-left: 36px;
     align-items: center;
 }
 
-.result-item .album-cover .play-btn {
+.album-detail-result-item .album-detail-album-cover .album-detail-play-btn {
     color: #FFFFFF;
     font-size: 32px;
     align-items: center;
@@ -23,7 +23,7 @@
     left: 200px;
 }
 
-.album-info {
+.album-detail-album-info {
     margin-bottom: 10px;
     margin-top: 20px;
     display: flex;
@@ -31,53 +31,53 @@
     justify-content: center;
 }
 
-.album-info .album-release-date {
+.album-detail-album-info .album-detail-album-release-date {
     color: #6c757d;
 }
 
-.result-item img {
+.album-detail-result-item img {
     width: 240px;
     height: 240px;
     border-radius: 6px;
 }
 
-.result-info h3 {
+.album-detail-result-info h3 {
     font-size: 25px;
     margin-bottom: 5px;
 }
 
-.result-info p {
+.album-detail-result-info p {
     font-size: 15px;
     margin-top: 7px;
 }
 
-.album-info p {
+.album-detail-album-info p {
     margin: 5px 0 0;
     font-size: 14px;
 }
 
-.album-info .result-i .result-info .icons {
+.album-detail-album-info .album-detail-result-i .album-detail-result-info .album-detail-icons {
     display: flex;
     flex-direction: row;
     margin-top: 15px;
 }
 
-.icons a {
+.album-detail-icons a {
     margin-right: 15px;
     font-size: 18px;
 }
 
-.result-item .icons {
+.album-detail-result-item .album-detail-icons {
     display: flex;
     flex-direction: row;
     margin-top: 15px;
 }
 
-.tab-button {
+.album-detail-tab-button {
     margin-bottom: 30px;
 }
 
-.tab-button .album-detail {
+.album-detail-tab-button .album-detail-album-detail {
     font-size: 14px;
     color: #464646;
     font-weight: 00;
@@ -87,7 +87,7 @@
     border: none;
 }
 
-.tab-button .album-songs {
+.album-detail-tab-button .album-detail-album-songs {
     font-size: 14px;
     color: #F9FCFF;
     font-weight: 00;
@@ -97,65 +97,65 @@
     border: none;
 }
 
-.song-list .all-play {
+.album-detail-song-list .album-detail-all-play {
     font-size: 12px;
     margin-left: 8px;
 }
 
-.song-list-table {
+.album-detail-song-list-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.song-list-table thead td {
+.album-detail-song-list-table thead td {
     color: #959ba1;
     font-size: 12px;
 }
 
-.song-list-table th,
-.song-list-table td {
+.album-detail-song-list-table th,
+.album-detail-song-list-table td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     text-align: left;
 }
 
-.song-list-table th {
+.album-detail-song-list-table th {
     background-color: #f8f9fa;
 }
 
-.song-list-table img {
+.album-detail-song-list-table img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
 }
 
-.song-list-table .play-button {
+.album-detail-song-list-table .album-detail-play-button {
     font-size: 16px;
     color: #007bff;
     cursor: pointer;
 }
 
-.song-list-table .play-button:hover {
+.album-detail-song-list-table .album-detail-play-button:hover {
     text-decoration: underline;
 }
 
-.song-list-table .icon {
+.album-detail-song-list-table .album-detail-icon {
     font-size: 20px;
     color: #6c757d;
     cursor: pointer;
 }
 
-.song-list-table .icon:hover {
+.album-detail-song-list-table .album-detail-icon:hover {
     color: #000000;
 }
 
-.album-grid {
+.album-detail-album-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.album-item {
+.album-detail-album-item {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -166,11 +166,11 @@
     transition: transform 0.2s;
 }
 
-.album-item:hover {
+.album-detail-album-item:hover {
     transform: translateY(-5px);
 }
 
-.album-item img {
+.album-detail-album-item img {
     width: 150px;
     /* 이미지 크기 조정 */
     height: 150px;
@@ -178,16 +178,16 @@
     border-radius: 10px;
 }
 
-.album-info p {
+.album-detail-album-info p {
     margin: 5px 0 0;
     font-size: 14px;
 }
 
-.album-info .album-release-date {
+.album-detail-album-info .album-detail-album-release-date {
     color: #6c757d;
 }
 
-.table-album-container {
+.album-detail-table-album-container {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -195,12 +195,12 @@
     width: 100%;
 }
 
-.title-group {
+.album-detail-title-group {
     display: flex;
     flex-direction: row;
 }
 
-.title-group .title-mark {
+.album-detail-title-group .album-detail-title-mark {
     position: relative;
     top: 2px;
     font-size: 11px;
@@ -213,42 +213,42 @@
     padding-top: 0px;
 }
 
-.text-container .album-title {
+.album-detail-text-container .album-detail-album-title {
     color: #767b80;
 }
 
-.title-group .song-title {
+.album-detail-title-group .album-detail-song-title {
     font-size: 14px;
 }
 
-.text-container {
+.album-detail-text-container {
     margin-top: 16px;
     width: 500px;
     display: flex;
     flex-direction: column;
 }
 
-.table-artist {
+.album-detail-table-artist {
     width: 200px;
     font-size: 14px;
 }
 
-tr .no {
+tr .album-detail-no {
     padding-left: 6px;
 }
 
-tr .play-btn {
+tr .album-detail-play-btn {
     padding-left: 5px;
 }
 
-tr .more-btn {
+tr .album-detail-more-btn {
     padding-left: 9px;
 }
 
-tr .add-playlist-btn {
+tr .album-detail-add-playlist-btn {
     padding-left: 12px;
 }
 
-tr .add-list-btn {
+tr .album-detail-add-list-btn {
     padding-left: 18px;
 }
