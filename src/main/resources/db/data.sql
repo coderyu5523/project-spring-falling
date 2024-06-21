@@ -1,17 +1,17 @@
 -- 테이블: user
 -- 칼럼: 이메일, 비밀번호, 전화번호, 프로바이더, 생성날짜, 생년월일
 
-INSERT INTO user_tb (email, password, phone, provider, created_at, birth)
-VALUES ('ssar@nate.com', '1234', '010-1234-5678', 'Email', '2023-02-15', '1990-01-15'),
-       ('john@nate.com', '1234', '010-2345-6789', 'Email', '2023-04-25', '1985-03-22'),
-       ('jane@naver.com', '1234', '010-3456-7890', 'Naver', '2023-06-20', '1992-07-30'),
-       ('sam@gmail.com', '1234', '010-4567-8901', 'Kakao', '2023-08-05', '1988-12-05'),
-       ('lisa@naver.com', '1234', '010-5678-9012', 'Naver', '2023-10-12', '1995-05-25'),
-       ('tom@nate.com', '1234', '010-6789-0123', 'Email', '2023-11-20', '1991-11-10'),
-       ('emily@naver.com', '1234', '010-7890-1234', 'Kakao', '2023-12-15', '1987-04-05'),
-       ('chris@nate.com', '1234', '010-8901-2345', 'Email', '2024-01-05', '1993-02-17'),
-       ('julia@naver.com', '1234', '010-9012-3456', 'Naver', '2024-02-12', '1994-09-09'),
-       ('mark@gmail.com', '1234', '010-0123-4567', 'Kakao', '2024-03-18', '1986-06-30');
+INSERT INTO user_tb (email, password, phone, provider, created_at, birth, status)
+VALUES ('ssar@nate.com', '1234', '010-1234-5678', 'Email', '2023-02-15', '1990-01-15', '블랙'),
+       ('john@nate.com', '1234', '010-2345-6789', 'Email', '2023-04-25', '1985-03-22', '휴면'),
+       ('jane@naver.com', '1234', '010-3456-7890', 'Naver', '2023-06-20', '1992-07-30', '활성'),
+       ('sam@gmail.com', '1234', '010-4567-8901', 'Kakao', '2023-08-05', '1988-12-05', '활성'),
+       ('lisa@naver.com', '1234', '010-5678-9012', 'Naver', '2023-10-12', '1995-05-25', '활성'),
+       ('tom@nate.com', '1234', '010-6789-0123', 'Email', '2023-11-20', '1991-11-10', '활성'),
+       ('emily@naver.com', '1234', '010-7890-1234', 'Kakao', '2023-12-15', '1987-04-05', '활성'),
+       ('chris@nate.com', '1234', '010-8901-2345', 'Email', '2024-01-05', '1993-02-17', '활성'),
+       ('julia@naver.com', '1234', '010-9012-3456', 'Naver', '2024-02-12', '1994-09-09', '활성'),
+       ('mark@gmail.com', '1234', '010-0123-4567', 'Kakao', '2024-03-18', '1986-06-30', '활성');
 
 -- 테이블: artist
 -- 칼럼: 가수이름, 아티스트타입, 아티스트사진, 생성날짜
@@ -105,7 +105,8 @@ VALUES ('전부 너였다', '런치송 프로젝트', '양재선', 'upload/song/
 나는 또 그대겠죠
 '),
 
-('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', 'upload/슈퍼노바.mp4', 'Dance',true, 'upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
+       ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', 'upload/슈퍼노바.mp4', 'Dance',
+        true, 'upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
 Watch out
 Look at me go
 재미 좀 볼
@@ -194,7 +195,8 @@ Supernova
 Bring the light of a dying star
 Supernova'),
 
-('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)','upload/Armageddon.mp4', 'Dance', true, 'upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
+       ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)',
+        'upload/Armageddon.mp4', 'Dance', true, 'upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
 Shoot
 Imma get ’em
 Shoot
@@ -452,7 +454,8 @@ We Set The Tone
 We take it home
 We Set The Tone'),
 
-('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',false, 'upload/Mine.mp3', '2024-05-27', 2, '예고 없이
+       ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',
+        false, 'upload/Mine.mp3', '2024-05-27', 2, '예고 없이
 지는 그림자
 Mine
 두려움을
@@ -593,7 +596,8 @@ know you want it like
 It’s all Mine
 Mine'),
 
-('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정','upload/Licorice.mp4', 'Dance', false, 'upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
+       ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
+        'upload/Licorice.mp4', 'Dance', false, 'upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
 Licorice
 Licorice
@@ -717,7 +721,8 @@ Licorice
 자꾸 손이 가
 Like Licorice'),
 
-('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,'Dance', false, 'upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
+       ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,
+        'Dance', false, 'upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
 ba ba
 Bahama, hama
 (Bahama)
@@ -854,7 +859,8 @@ To the beach
 Take it slow
 Bahama'),
 
-('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리','upload/Long Chat.mp4', 'Dance', false, 'upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
+       ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
+        'upload/Long Chat.mp4', 'Dance', false, 'upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
 Woo Ah
 
@@ -1001,7 +1007,8 @@ Hashtag
 I’ll be the girl who likes a
 Long Chat'),
 
-('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, 'upload/Prologue.mp3','2024-05-27', 2, 'Woo Woo Woo
+       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, 'upload/Prologue.mp3',
+        '2024-05-27', 2, 'Woo Woo Woo
 La-la
 Woo Woo Woo
 La-la
@@ -1206,7 +1213,8 @@ Live My Life
 
 Life'),
 
-('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, 'upload/목소리 (Melody).mp3','2024-05-27', 2, 'Every night
+       ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, 'upload/목소리 (Melody).mp3',
+        '2024-05-27', 2, 'Every night
 지친 하루 끝에
 커져가는 빈자리
 그럴 땐
@@ -1287,7 +1295,9 @@ Oh You’re the one
 우릴 이어준
 목소리'),
 
-('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman','Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)','upload/How Sweet.mp4', 'Dance', true, 'upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
+       ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman',
+        'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)',
+        'upload/How Sweet.mp4', 'Dance', true, 'upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
 알게 됐어 나 (I know)
 그동안 맨날
 Always up and down (No more)
@@ -1376,7 +1386,8 @@ You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
 Don’t knock on my door, I’ll see you out'),
 
-('해야 (HEYA)','Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman','이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)','upload/해야 (HEYA).mp4','Dance',true,'upload/해야 (HEYA).mp3','2024-04-29',4,
+       ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman',
+        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', 'upload/해야 (HEYA).mp4', 'Dance', true, 'upload/해야 (HEYA).mp3', '2024-04-29', 4,
         'Let’s get it
     Look at it
     Pay attention
@@ -1473,7 +1484,10 @@ Don’t knock on my door, I’ll see you out'),
     별안간 홀린 그 순간 Bite
     Da da da dun dun dun'),
 
-('첫 만남은 계획대로 되지 않아','WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK','WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', 'upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,'upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
+       ('첫 만남은 계획대로 되지 않아',
+        'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK',
+        'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', 'upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
+        'upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
 거울 속에 내 표정 봐 봐
 느낌 So good 기다려온 D-day
 연습했던 손든 인사도 그대로 하면 돼
@@ -1527,7 +1541,9 @@ Na na na-
 내일 또 봐 안녕
 '),
 
-('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영','이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', 'upload/고민중독.mp4', 'Rock/Metal', true, 'upload/고민중독.mp3','2024-04-01', 6, 'One! Two! Q! W! E! R!
+       ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영',
+        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', 'upload/고민중독.mp4', 'Rock/Metal', true, 'upload/고민중독.mp3',
+        '2024-04-01', 6, 'One! Two! Q! W! E! R!
 어떤 인사가 괜찮을까 천 번쯤 상상해 봤어
 근데 오늘도 천 번 하고 한 번 더 고민 중
 
@@ -1567,7 +1583,7 @@ Na na na-
 매일 고민하고 연습했던 말
 좋아해'),
 
-('사랑은 늘 도망가', '홍진영', '강태규', 'upload/사랑은 늘 도망가.mp4', 'Ballad', true, 'upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
+       ('사랑은 늘 도망가', '홍진영', '강태규', 'upload/사랑은 늘 도망가.mp4', 'Ballad', true, 'upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
 붙잡지 못하고 가슴만 떨었지
 내 아름답던 사람아
@@ -1602,7 +1618,8 @@ Na na na-
 잠시 쉬어가면 좋을 텐데
 잠시 쉬어가면 좋을 텐데'),
 
-('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', 'upload/SPOT! (feat. JENNIE).mp4','HipHop', true, 'upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
+       ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', 'upload/SPOT! (feat. JENNIE).mp4',
+        'HipHop', true, 'upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
 Turn the music up
 
 Uhm we’re not going home tonight, alright
@@ -1675,7 +1692,8 @@ Wait a minute ahhh
 Come vibe with us
 Ride with us'),
 
-('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,'upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
+       ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,
+        'upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
 똑같이 하루를 시작하고
 온종일 한 손엔 아이스 아메리카노
 피곤해 죽겠네
@@ -1723,7 +1741,10 @@ Ride with us'),
 아냐 지나치는 게 나을 것 같아
 나는 아픈 건 딱 질색이니까'),
 
-('Magnetic','Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES','Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES','upload/Magnetic.mp4', 'Dance', true, 'upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
+       ('Magnetic',
+        'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
+        'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
+        'upload/Magnetic.mp4', 'Dance', true, 'upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
 I’m just trying to play it cool
 But I just can’t hide that
 I want you
@@ -1801,7 +1822,8 @@ BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
 Baby don’t say no'),
 
-('소나기','한성호, 박수석, Moon Kim (Room 01)','한성호, 수윤 (Sooyoon)',null,'Ballad',true,'upload/소나기.mp3','2024-04-08',11,'그치지 않기를 바랬죠
+       ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, 'upload/소나기.mp3',
+        '2024-04-08', 11, '그치지 않기를 바랬죠
     처음 그대 내게로 오던 그날에
     잠시 동안 적시는
     그런 비가 아니길
