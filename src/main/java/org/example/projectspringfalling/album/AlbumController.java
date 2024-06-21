@@ -15,8 +15,11 @@ public class AlbumController {
     private final HttpSession session;
 
     // 앨범 수록곡 보기
-    @GetMapping("/albums/{id}/list")
-    public String songList(@PathVariable Integer id) {
+    @GetMapping("/albums/{albumId}/list")
+    public String songList(@PathVariable Integer albumId) {
+        AlbumResponse.ListDTO resp = albumService.songList(albumId);
+        System.out.println("^" + resp);
+        session.setAttribute("album", resp);
         return "album/album-list";
     }
 

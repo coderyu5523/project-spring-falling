@@ -8,7 +8,7 @@
             <div class="album-list-result-item">
                 <div class="album-list-album-cover">
                     <a href="#">
-                        <img src="/images/song/RIIZE_1stmini.jpg" alt="Album Cover">
+                        <img src="{{album.albumImage}}" alt="Album Cover">
                     </a>
                     <div>
                         <a href="#"><i class="album-list-play-btn fas fa-play play-button"></i></a>
@@ -16,14 +16,14 @@
                 </div>
                 <div class="album-list-result-info">
                     <a href="#">
-                        <h3 style="font-weight: 600;">RIIZING - The 1st Mini Album</h3>
+                        <h3 style="font-weight: 600;">{{album.albumTitle}}</h3>
                     </a>
                     <a href="#">
-                        <p>RIIZE</p>
+                        <p>{{album.albumArtist}}</p>
                     </a>
                     <div class="album-list-album-info">
-                        <p class="album-list-album-category">미니 | 댄스</p>
-                        <p class="album-list-album-release-date">2024.06.17</p>
+                        <p class="album-list-album-category">{{album.category}}</p>
+                        <p class="album-list-album-release-date">{{album.createdAt}}</p>
                     </div>
 
                     <div class="album-list-icons">
@@ -59,90 +59,51 @@
                 <tbody>
                 <!--타이틀 곡
                 -->
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <div class="album-list-no">
-                            1
-                        </div>
-                    </td>
-                    <td class="album-list-table-album-container">
-                        <a href="#">
-                            <img src="/images/song/RIIZE_1stmini.jpg" alt="Album Cover">
-                        </a>
-                        <div class="album-list-text-container">
-                            <div class="album-list-title-group">
-                                <div class="album-list-title-mark">TITLE</div>
-                                <div class="album-list-song-title">
-                                    <a href="#"></a>
-                                    Boom Boom Bass
-                                    </a>
-                                </div>
+                {{#song.songList}}
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <div class="album-list-no">
+                                {{songId}}
                             </div>
+                        </td>
+                        <td class="album-list-table-album-container">
                             <a href="#">
-                                <p class="album-list-album-title" style="font-size: 12px;">RIIZING - The 1st Mini
-                                    Album</p>
+                                <img src="{{album.albumImage}}" alt="Album Cover">
                             </a>
-                        </div>
-                    </td>
-                    <td class="album-list-table-artist">
-                        <a href="#">RIIZE</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-play-btn fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-add-playlist-btn fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-add-list-btn fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-more-btn fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                <!--타이틀 아닌 곡-->
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <div class="album-list-no">
-                            2
-                        </div>
-                    </td>
-                    <td class="album-list-table-album-container">
-                        <a href="#">
-                            <img src="/images/song/RIIZE_1stmini.jpg" alt="Album Cover">
-                        </a>
-                        <div class="album-list-text-container">
-                            <div class="album-list-title-group">
-                                <div class="album-list-song-title">
-                                    <a href="#"></a>
-                                    Siren
-                                    </a>
+                            <div class="album-list-text-container">
+                                <div class="album-list-title-group">
+                                    {{#isTitle}}
+                                        <div class="album-list-title-mark">TITLE</div>
+                                    {{/isTitle}}
+                                    <div class="album-list-song-title">
+                                        <a href="#"></a>
+                                        {{title}}
+                                        </a>
+                                    </div>
                                 </div>
+                                <a href="#">
+                                    <p class="album-list-album-title" style="font-size: 12px;">{{album.albumTitle}}</p>
+                                </a>
                             </div>
-                            <a href="#">
-                                <p class="album-list-album-title" style="font-size: 12px;">RIIZING - The 1st Mini
-                                    Album</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="album-list-table-artist">
-                        <a href="#">RIIZE</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-play-btn fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-add-playlist-btn fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-add-list-btn fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="album-list-more-btn fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
+                        </td>
+                        <td class="album-list-table-artist">
+                            <a href="#">{{album.albumArtist}}</a>
+                        </td>
+                        <td>
+                            <a href="#"><i class="album-list-play-btn fas fa-play play-button"></i></a>
+                        </td>
+                        <td>
+                            <a href="#"><i class="album-list-add-playlist-btn fas fa-list icon"></i></a>
+                        </td>
+                        <td>
+                            <a href="#"><i class="album-list-add-list-btn fas fa-folder-plus custom-icon"></i></a>
+                        </td>
+                        <td>
+                            <a href="#"><i class="album-list-more-btn fas fa-ellipsis-h icon"></i></a>
+                        </td>
+                    </tr>
+                {{/song.songList}}
                 </tbody>
             </table>
         </div>

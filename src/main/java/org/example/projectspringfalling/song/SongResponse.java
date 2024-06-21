@@ -3,6 +3,10 @@ package org.example.projectspringfalling.song;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
+import org.example.projectspringfalling.artist.Artist;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class SongResponse {
     // 노래 상세보기 DTO
@@ -43,7 +47,7 @@ public class SongResponse {
         private String musicVideo; // 뮤직비디오
         private Boolean isTitle; // 타이틀 여부
         private String musicFile; // 음악 파일
-
+        private List<Artist> artistList; // 가수 리스트
 
         public AlbumListDTO(Song song) {
             this.songId = song.getId();
@@ -51,7 +55,7 @@ public class SongResponse {
             this.musicVideo = song.getMusicVideo();
             this.isTitle = song.getIsTitle();
             this.musicFile = song.getMusicFile();
-
+            this.artistList =
         }
     }
 }

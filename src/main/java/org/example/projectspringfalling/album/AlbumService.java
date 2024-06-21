@@ -2,12 +2,17 @@ package org.example.projectspringfalling.album;
 
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.enums.FilePathEnum;
+import org.example.projectspringfalling._core.errors.exception.Exception404;
+import org.example.projectspringfalling.artist.ArtistRepository;
 import org.example.projectspringfalling.song.Song;
+import org.example.projectspringfalling.song.SongRepository;
+import org.example.projectspringfalling.song.SongResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.example.projectspringfalling._core.utils.FileUtil.fileSave;
 
@@ -15,6 +20,23 @@ import static org.example.projectspringfalling._core.utils.FileUtil.fileSave;
 @Service
 public class AlbumService {
     private final AlbumRepository albumRepository;
+    private final SongRepository songRepository;
+    private final ArtistRepository artistRepository;
+
+    // 앨범 수록곡 보기
+    @Transactional
+    public AlbumResponse.ListDTO songList(Integer albumId) {
+        Album album = albumRepository.findById(albumId)
+                .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
+        List<SongResponse.AlbumListDTO> songList = songRepository.findByAlbumId(albumId).stream().map(song -> {
+            List<Integer> artistIdList = song.getArtistList().stream().map(artist -> {
+                artistRepository.
+            }).collect(Collectors.toList());
+
+        }).collect(Collectors.toList());
+
+        return new AlbumResponse.ListDTO(album, songList);
+    }
 
     public Album getImage(int id) {
         Album album = albumRepository.findById(id).get();
