@@ -4,9 +4,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
+import org.example.projectspringfalling.song.Song;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -21,6 +23,10 @@ public class Artist {
     private String artistImg; // 가수 사진
     @CreationTimestamp
     private Timestamp createdAt; // 생성 날짜
+
+    @OneToMany(mappedBy = "artist", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Song> songs; // 가수가 가진 노래들
+
 
     @Builder
     public Artist(Integer id, String name, String artistType, String artistImg, Timestamp createdAt) {
