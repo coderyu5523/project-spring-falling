@@ -13,7 +13,7 @@ import org.example.projectspringfalling.song.Song;
 @Table(name = "playlist_song_tb")
 public class PlaylistSong {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
