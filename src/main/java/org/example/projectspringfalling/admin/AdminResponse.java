@@ -3,7 +3,10 @@ package org.example.projectspringfalling.admin;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.sql.Timestamp;
 import java.util.List;
+
+import static org.example.projectspringfalling._core.utils.DateUtil.timestampToString;
 
 public class AdminResponse {
 
@@ -25,6 +28,22 @@ public class AdminResponse {
             private String email;
             private String provider;
             private String status;
+        }
+    }
+
+    @AllArgsConstructor
+    @Data
+    public static class UserDetailDTO {
+        private Integer userId;
+        private String email;
+        private String phone;
+        private String birth;
+        private String provider;
+        private Timestamp createdAt;
+        private String status;
+
+        public String getCreatedAt() {
+            return timestampToString(this.createdAt);
         }
     }
 }

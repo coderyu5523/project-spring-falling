@@ -15,4 +15,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$UserListDTO$UserDTO(u.id, u.email, u.provider, u.status) FROM User u")
     List<AdminResponse.UserListDTO.UserDTO> findUserList();
+
+    @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$UserDetailDTO(u.id ,u.email,u.phone,u.birth,u.provider,u.createdAt,u.status) FROM User u WHERE u.id = :userId")
+    AdminResponse.UserDetailDTO findOneUserById(Integer userId);
 }
