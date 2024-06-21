@@ -18,7 +18,6 @@ public class AlbumController {
     @GetMapping("/albums/{albumId}/list")
     public String songList(@PathVariable Integer albumId) {
         AlbumResponse.ListDTO resp = albumService.songList(albumId);
-        System.out.println("^" + resp);
         session.setAttribute("album", resp);
         return "album/album-list";
     }

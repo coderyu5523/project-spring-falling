@@ -6,10 +6,13 @@ import org.example.projectspringfalling.song.Song;
 import org.example.projectspringfalling.song.SongResponse;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class AlbumResponse {
+
     // 앨범 수록곡 리스트 DTO
     @NoArgsConstructor
     @Data
@@ -20,7 +23,7 @@ public class AlbumResponse {
         private String category; // 앨범 유형
         private Timestamp createdAt; // 앨범 발매 날짜
         private String albumArtist; // 앨범 아티스트 이름
-        private List<SongResponse.AlbumListDTO> songList; // 앨범 수록곡
+        private List<SongResponse.AlbumListDTO> songList = new ArrayList<>(); // 앨범 수록곡
 
         public ListDTO(Album album, List<Song> songList) {
             this.albumId = album.getId();
@@ -29,7 +32,9 @@ public class AlbumResponse {
             this.category = album.getCategory();
             this.createdAt = album.getCreatedAt();
             this.albumArtist = album.getArtist().getName();
-            this.songList = songList.stream().map(SongResponse.AlbumListDTO::new).collect(Collectors.toList());
+            this.songList = IntStream.range(0, songList.size())
+                    .mapToObj(i -> new SongResponse.AlbumListDTO(songList.get(i), i + 1))
+                    .collect(Collectors.toList());
         }
     }
 }

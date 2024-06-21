@@ -59,12 +59,12 @@
                 <tbody>
                 <!--타이틀 곡
                 -->
-                {{#song.songList}}
+                {{#album.songList}}
                     <tr>
                         <td><input type="checkbox"></td>
                         <td>
                             <div class="album-list-no">
-                                {{songId}}
+                                {{index}}
                             </div>
                         </td>
                         <td class="album-list-table-album-container">
@@ -88,7 +88,7 @@
                             </div>
                         </td>
                         <td class="album-list-table-artist">
-                            <a href="#">{{album.albumArtist}}</a>
+                            <a href="#">{{artistName}}</a>
                         </td>
                         <td>
                             <a href="#"><i class="album-list-play-btn fas fa-play play-button"></i></a>
@@ -103,7 +103,7 @@
                             <a href="#"><i class="album-list-more-btn fas fa-ellipsis-h icon"></i></a>
                         </td>
                     </tr>
-                {{/song.songList}}
+                {{/album.songList}}
                 </tbody>
             </table>
         </div>

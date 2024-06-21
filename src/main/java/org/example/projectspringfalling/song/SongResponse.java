@@ -5,9 +5,6 @@ import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
 import org.example.projectspringfalling.artist.Artist;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class SongResponse {
     // 노래 상세보기 DTO
     @NoArgsConstructor
@@ -43,19 +40,33 @@ public class SongResponse {
     @Data
     public static class AlbumListDTO {
         private Integer songId; // 노래 pk
+        private Integer index; // 리스트 index 번호
         private String title; // 노래 제목
         private String musicVideo; // 뮤직비디오
         private Boolean isTitle; // 타이틀 여부
         private String musicFile; // 음악 파일
-        private List<Artist> artistList; // 가수 리스트
+        private Integer artistId; // 가수
+        private String artistName; // 가수 이름
 
-        public AlbumListDTO(Song song) {
+        public AlbumListDTO(Song song, Integer index) {
             this.songId = song.getId();
+            this.index = index;
             this.title = song.getTitle();
             this.musicVideo = song.getMusicVideo();
             this.isTitle = song.getIsTitle();
             this.musicFile = song.getMusicFile();
-            this.artistList =
+            this.artistId = new ArtistDTO(song.getArtist()).artistId;
+            this.artistName = new ArtistDTO(song.getArtist()).artistName;
+        }
+
+        public static class ArtistDTO {
+            private Integer artistId; // 가수 pk
+            private String artistName; // 가수 이름
+
+            public ArtistDTO(Artist artist) {
+                this.artistId = artist.getId();
+                this.artistName = artist.getName();
+            }
         }
     }
 }
