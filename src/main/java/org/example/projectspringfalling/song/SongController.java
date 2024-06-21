@@ -3,9 +3,6 @@ package org.example.projectspringfalling.song;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.example.projectspringfalling.album.Album;
-import org.example.projectspringfalling.artist.Artist;
-import org.example.projectspringfalling.artist.ArtistService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,8 +14,10 @@ public class SongController {
     private final HttpSession session;
 
     // 곡 상세보기
-    @GetMapping("/songs/{id}")
-    public String songDetail(@PathVariable Integer id) {
+    @GetMapping("/songs/{songId}")
+    public String songDetail(@PathVariable Integer songId) {
+        SongResponse.DetailDTO resp = songService.songDetail(songId);
+        session.setAttribute("song", resp);
         return "song/song-detail";
     }
 
@@ -27,7 +26,6 @@ public class SongController {
     public String index() {
         return "index";
     }
-
 
     // 검색 페이지
     @GetMapping("/search")
