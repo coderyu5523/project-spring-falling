@@ -5,9 +5,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
+import org.example.projectspringfalling.artist.Artist;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -33,6 +35,10 @@ public class Song {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Album album; // 앨범 아이디
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "artist_id")
+    private List<Artist> artistList;
 
     @Builder
     public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt, Album album, String musicFile) {
@@ -60,5 +66,6 @@ public class Song {
         this.genre = requestDTO.getGenre();
         this.isTitle = requestDTO.getIsTitle();
         this.musicFile = musicFile;
+
     }
 }
