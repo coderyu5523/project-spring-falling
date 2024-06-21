@@ -4,6 +4,8 @@ import lombok.Data;
 
 import java.sql.Timestamp;
 
+import static org.example.projectspringfalling._core.utils.PhoneUtil.formatPhoneNumber;
+
 public class UserRequest {
 
     // 회원가입 DTO
@@ -22,7 +24,7 @@ public class UserRequest {
                     .id(id)
                     .email(email)
                     .password(password)
-                    .phone(phone)
+                    .phone(formatPhoneNumber(phone))
                     .birth(birth)
                     .provider("Email") // 일반 회원가입을 한 회원은 "Email"로 값 지정
                     .createdAt(createdAt)

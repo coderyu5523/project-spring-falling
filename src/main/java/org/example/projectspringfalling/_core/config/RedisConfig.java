@@ -1,4 +1,4 @@
-package org.example.projectspringfalling.config;
+package org.example.projectspringfalling._core.config;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
