@@ -2104,6 +2104,244 @@ Baby don’t say no'),
     내겐 선물인 그댈');
 
 
+-- song_tb에 더미 데이터 삽입
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('ON', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
+', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
+', '/upload/song/ON.mp4', 'Dance', TRUE, '/upload/song/ON.mp3', '2020-02-21', 12, 'I can''t understand what people are sayin''
+어느 장단에 맞춰야 될지
+한 발자국 떼면 한 발자국 커지는 shadow
+잠에서 눈을 뜬 여긴 또 어디
+어쩜 서울 또 New York or Paris
+일어나니 휘청이는 몸
+
+Look at my feet, look down
+날 닮은 그림자
+흔들리는 건 이놈인가
+아니면 내 작은 발끝인가
+두렵잖을 리 없잖아
+다 괜찮을 리 없잖아
+그래도 I know
+서툴게 I flow
+저 까만 바람과 함께 날아
+
+Hey na na na
+미치지 않으려면 미쳐야 해
+Hey na na na
+나를 다 던져 이 두 쪽 세상에
+Hey na na na
+Can’t hold me down cuz you know I’m a fighter
+제 발로 들어온 아름다운 감옥
+Find me and I''m gonna live with ya
+
+(Eh-oh)
+가져와 bring the pain oh yeah
+(Eh-oh)
+올라타봐 bring the pain oh yeah
+Rain be pourin''
+Sky keep fallin''
+Everyday oh na na na
+(Eh-oh)
+가져와 bring the pain oh yeah
+
+Bring the pain
+모두 내 피와 살이 되겠지
+Bring the pain
+No fear, 방법을 알겠으니
+작은 것에 breathe
+그건 어둠 속 내 산소와 빛
+내가 나이게 하는 것들의 힘
+넘어져도 다시 일어나 scream
+
+넘어져도 다시 일어나 scream
+언제나 우린 그랬으니
+설령 내 무릎이 땅에 닿을지언정
+파묻히지 않는 이상
+그저 그런 해프닝쯤 될 거란 걸
+Win no matter what
+Win no matter what
+Win no matter what
+네가 뭐라던 누가 뭐라던
+I don''t give a uhh
+I don''t give a uhh
+I don''t give a uhh
+
+Hey na na na
+미치지 않으려면 미쳐야 해
+Hey na na na
+나를 다 던져 이 두 쪽 세상에
+Hey na na na
+Can’t hold me down cuz you know I’m a fighter
+제 발로 들어온 아름다운 감옥
+Find me and I''m gonna live with ya
+
+(Eh-oh)
+가져와 bring the pain oh yeah
+(Eh-oh)
+올라타봐 bring the pain oh yeah
+Rain be pourin''
+Sky keep fallin''
+Everyday oh na na na
+(Eh-oh)
+가져와 bring the pain oh yeah
+
+나의 고통이 있는 곳에
+내가 숨 쉬게 하소서
+My everythin’
+My blood and tears
+Got no fears
+I''m singin’ ohhhhh
+Oh I’m takin’ over
+You should know yeah
+Can’t hold me down cuz you know I’m a fighter
+깜깜한 심연 속 기꺼이 잠겨
+Find me and I’m gonna bleed with ya
+
+(Eh-oh)
+가져와 bring the pain oh yeah
+(Eh-oh)
+올라타봐 bring the pain oh yeah
+Rain be pourin''
+Sky keep fallin''
+Everyday oh na na na
+(Eh-oh)
+Find me and I’m gonna bleed with ya
+
+(Eh-oh)
+가져와 bring the pain oh yeah
+(Eh-oh)
+올라타봐 bring the pain oh yeah
+All that I know
+is just goin’ on & on & on & on
+(Eh-oh)
+가져와 bring the pain oh yeah
+');
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics)
+VALUES ('Lovesick Girls', 'TEDDY, 24, 제니 (JENNIE), Brian Lee, Leah Haywood, R.Tee, David Guetta', 'TEDDY, LØREN, 지수 (JISOO), 제니 (JENNIE), DANNY CHUNG
+', '/upload/song/Lovesick Girls.mp4', 'Pop', TRUE, '/upload/song/Lovesick Girls.mp3', '2020-10-02', 13, '영원한 밤
+창문 없는 방에
+우릴 가둔 love
+What can we say
+매번 아파도 외치는 love
+
+다치고 망가져도 나
+뭘 믿고 버티는 거야
+어차피 떠나면
+상처투성인 채로
+미워하게 될걸
+끝장을 보기 전
+끝낼 순 없어
+이 아픔을 기다린 것처럼
+
+아마 다 잠깐 일지도 몰라
+우린 무얼 찾아서 헤매는 걸까
+
+But I don’t care
+I’ll do it over and over
+내 세상 속엔 너만 있으면 돼
+
+We are the lovesick girls
+네 멋대로
+내 사랑을 끝낼순 없어
+We are the lovesick girls
+이 아픔 없인
+난 아무 의미가 없어
+
+But we were born to be alone
+Yeah we were born to be alone
+Yeah we were born to be alone
+But why we still looking for love
+
+No love letters, no x and o’s
+No love never, my exes know
+No diamond rings
+that set in stone
+To the left, better left alone
+
+Didn’t wanna be
+a princess, I’m priceless
+A prince not even on my list
+Love is a drug that I quit
+No doctor could help
+when I’m lovesick
+
+아마 다 잠깐 일지도 몰라
+우린 무얼 찾아서 헤매는 걸까
+
+불안한 내 눈빛 속에 널 담아
+아프더라도 너만 있으면 돼
+
+We are the lovesick girls
+네 멋대로
+내 사랑을 끝낼 순 없어
+We are the lovesick girls
+이 아픔 없인
+난 아무 의미가 없어
+
+But we were born to be alone
+Yeah we were born to be alone
+Yeah we were born to be alone
+But why we still looking for love
+
+사랑은 slippin’ and fallin’
+사랑은 killin’ your darlin’
+아프다 아물면
+또 찾아오는 이 겁 없는 떨림
+
+들리지 않아 what you say
+이 아픔이 난 행복해
+나를 불쌍해 하는
+네가 내 눈엔 더 불쌍해
+
+We are the lovesick girls
+네 멋대로
+내 사랑을 끝낼 순 없어
+We are the lovesick girls
+이 아픔없인
+난 아무 의미가 없어
+
+Lovesick girls
+모두 결국 떠나가고
+Lovesick girls
+내 눈물이 무뎌져도
+Lovesick girls
+아프고 또 아파도
+Lovesick girls
+But we’re still looking for love
+');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics)
+-- VALUES ('Palette', 'IU', 'IU', 'palette_mv.mp4', 'Pop', TRUE, 'palette.mp3', CURRENT_TIMESTAMP, 3,'I like it, I’m twenty-five...');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics)
+-- VALUES ('I CAN`T STOP ME', 'J.Y. Park', 'J.Y. Park', 'icantstopme_mv.mp4', 'Dance', TRUE, 'icantstopme.mp3',
+--         CURRENT_TIMESTAMP, 4, 'I can’t stop me, can’t stop me...');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics)
+-- VALUES ('Tempo', 'Jhun', 'Jhun', 'tempo_mv.mp4', 'Pop', TRUE, 'tempo.mp3', CURRENT_TIMESTAMP, 5, 'I can’t believe...');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics)
+-- VALUES ('Psycho', 'Kenzie', 'Kenzie', 'psycho_mv.mp4', 'Pop', TRUE, 'psycho.mp3', CURRENT_TIMESTAMP, 6,
+--         'You got me feeling like a psycho...');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics)
+-- VALUES ('Any Song', 'Zico', 'Zico', 'anysong_mv.mp4', 'Hip Hop', TRUE, 'anysong.mp3', CURRENT_TIMESTAMP, 7,
+--         'I just wanna be happier...');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics)
+-- VALUES ('Siren', 'Sunmi', 'Sunmi', 'siren_mv.mp4', 'Pop', TRUE, 'siren.mp3', CURRENT_TIMESTAMP, 8,
+--         'Get away out of my face...');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics)
+-- VALUES ('Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Pop', TRUE, 'fear.mp3', CURRENT_TIMESTAMP, 9,
+--         'Even though I’m anxious...');
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics)
+-- VALUES ('Make A Wish (Birthday Song)', 'Kenzie', 'Kenzie', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
+--         CURRENT_TIMESTAMP, 10, 'I can do this all day...');
+
+
 --  테이블 : playlist
 
 insert into playlist_tb(user_id, admin_id, name, created_at)
