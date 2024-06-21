@@ -1,14 +1,24 @@
 package org.example.projectspringfalling.admin;
 
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.song.SongRepository;
 import org.example.projectspringfalling.user.UserRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
 public class AdminService {
     private final AdminRepository adminRepository;
     private final UserRepository userRepository;
+    private final SongRepository songRepository;
+
+    // 곡 리스트
+    public List<AdminResponse.SongListDTO> getSongList() {
+
+        return null;
+    }
 
     // 유저 상세보기
     public AdminResponse.UserDetailDTO getUser(int userId) {

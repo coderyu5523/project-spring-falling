@@ -9,4 +9,12 @@ public interface SongRepository extends JpaRepository<Song, Integer> {
     // Song id로 song, album, artist 찾기
     @Query("SELECT s, al, ar FROM Song s JOIN FETCH Album al ON al.id=s.album.id JOIN FETCH Artist ar on ar.id=al.artist.id WHERE al.artist.id=ar.id AND s.id=:id")
     Song findSongAndAlbumAndArtistById(@Param("id") Integer id);
+
+//    List<AdminResponse.SongListDTO> findSongList();
+
+//    private Integer songId;
+//    private String songImg;
+//    private String title;
+//    private String artist;
+//    private String albumTitle;
 }

@@ -10,6 +10,7 @@ import static org.example.projectspringfalling._core.utils.DateUtil.timestampToS
 
 public class AdminResponse {
 
+    // 유저 목록
     @AllArgsConstructor
     @Data
     public static class UserListDTO {
@@ -31,6 +32,7 @@ public class AdminResponse {
         }
     }
 
+    // 유저 상세보기
     @AllArgsConstructor
     @Data
     public static class UserDetailDTO {
@@ -45,5 +47,16 @@ public class AdminResponse {
         public String getCreatedAt() {
             return timestampToString(this.createdAt);
         }
+    }
+
+    // 곡 리스트
+    @AllArgsConstructor
+    @Data
+    public static class SongListDTO {
+        private Integer songId;
+        private String songImg;
+        private String title;
+        private String artist;
+        private String albumTitle;
     }
 }
