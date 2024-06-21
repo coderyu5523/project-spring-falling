@@ -14,10 +14,16 @@ public class AlbumController {
     private final AlbumService albumService;
     private final HttpSession session;
 
-    // 앨범 상세보기
-    @GetMapping("/albums/{id}")
+    // 앨범 수록곡 보기
+    @GetMapping("/albums/{id}/list")
     public String songList(@PathVariable Integer id) {
-//        return "album/album-list";
+        return "album/album-list";
+    }
+
+    // 앨범 상세보기
+    @GetMapping("/albums/{id}/detail")
+    public String albumDetail(@PathVariable Integer id) {
+
         return "album/album-detail";
     }
 

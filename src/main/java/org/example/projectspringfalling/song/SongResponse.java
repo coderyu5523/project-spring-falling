@@ -33,4 +33,25 @@ public class SongResponse {
             this.lyrics = song.getLyrics();
         }
     }
+
+    // 앨범 수록곡 리스트 DTO
+    @NoArgsConstructor
+    @Data
+    public static class AlbumListDTO {
+        private Integer songId; // 노래 pk
+        private String title; // 노래 제목
+        private String musicVideo; // 뮤직비디오
+        private Boolean isTitle; // 타이틀 여부
+        private String musicFile; // 음악 파일
+
+
+        public AlbumListDTO(Song song) {
+            this.songId = song.getId();
+            this.title = song.getTitle();
+            this.musicVideo = song.getMusicVideo();
+            this.isTitle = song.getIsTitle();
+            this.musicFile = song.getMusicFile();
+
+        }
+    }
 }
