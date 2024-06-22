@@ -40,7 +40,19 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('Zico', 'Solo', '/upload/artist/지코.jpg', '2011-04-15'),
        ('선미', 'Solo', '/upload/artist/선미.jpg', '2007-02-13'),
        ('Seventeen', 'Group', '/upload/artist/세븐틴.jpg', '2015-05-26'),
-       ('NCT', 'Group', '/upload/artist/nct.jpg', '2016-04-09');
+       ('NCT', 'Group', '/upload/artist/nct.jpg', '2016-04-09'),
+
+       ('빅뱅', 'Group', 'bigbang_img_url', '2010-07-01'),
+       ('소녀시대', 'Group', 'snsd_img_url', '2010-08-01'),
+       ('에픽하이', 'Group', 'epikhigh_img_url', '2010-09-01'),
+       ('씨스타', 'Group', 'sistar_img_url', '2011-01-01'),
+       ('엑소', 'Group', 'exo_img_url', '2012-01-01'),
+       ('샤이니', 'Group', 'shinee_img_url', '2010-05-01'),
+       ('투애니원', 'Group', '2ne1_img_url', '2010-11-01'),
+       ('인피니트', 'Group', 'infinite_img_url', '2010-06-01'),
+       ('Adele', 'Solo', 'adele_img_url', '2010-01-01'),
+       ('Bruno Mars', 'Solo', 'bruno_mars_img_url', '2010-03-01');
+
 
 
 --  샘플용 더미

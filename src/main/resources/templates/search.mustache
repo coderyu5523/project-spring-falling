@@ -2,25 +2,25 @@
 {{#reponseDTO}}
     <br>
     <div class="main-container">
-        <div class="main-search">
-            <div class="search-results">
-                <div class="d-flex justify-content-start">
-                    <h2 class="search-title">'{{keyword}}'</h2>
-                    <h2>검색결과</h2>
-                </div>
-                <div class="filter-tabs">
-                    <button class="active">전체</button>
-                    <button>곡</button>
-                    <button>앨범</button>
-                    <button>아티스트</button>
-                    <button>가사</button>
-                </div>
-                <br>
-                {{#artistDTO}}
-                <div class="result-item">
-                    <a href="/albums/{{albumId}}">
-                        <img src="{{albumImg}}" alt="Album Cover">
-                    </a>
+    <div class="main-search">
+    <div class="search-results">
+        <div class="d-flex justify-content-start">
+            <h2 class="search-title">'{{keyword}}'</h2>
+            <h2>검색결과</h2>
+        </div>
+        <div class="filter-tabs">
+            <button class="active">전체</button>
+            <button>곡</button>
+            <button>앨범</button>
+            <button>아티스트</button>
+            <button>가사</button>
+        </div>
+        <br>
+    {{#artistDTO}}
+            <div class="result-item">
+                <a href="/albums/{{albumId}}">
+                    <img src="{{albumImg}}" alt="Album Cover">
+                </a>
                 <div class="result-info">
                     <a href="/albums/{{albumId}}">
                         <h3 style="font-weight: 600;">{{albumTitle}}</h3>
@@ -36,13 +36,9 @@
                         <a href="#"><i class="album-icon fas fa-list icon"></i></a>
                         <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
                     </div>
-                {{/artistDTO}}
-                {{^artistDTO}}
-                    <div>조회된 결과가 없습니다.</div>
-                {{/artistDTO}}
+                </div>
             </div>
-            </div>
-            </div>
+        </div>
 
             <br>
 
@@ -120,7 +116,7 @@
                                     <p>{{artistType}} · {{nationality}} {{category}}</p>
                                 </a>
                                 <a href="/albums/{{albumId}}">
-                                <p>{{albumCreatedAt}}</p>
+                                    <p>{{albumCreatedAt}}</p>
                                 </a>
                                 <div class="d-flex">
                                     <a href="#"><i class="album-icon fas fa-list icon"></i></a>
@@ -148,7 +144,7 @@
                             <a href="/artists/{{artistId}}">
                                 <div class="artist-name">{{artistName}}</div>
                             </a>
-                                <div class="artist-role">{{artistType}}</div>
+                            <div class="artist-role">{{artistType}}</div>
                         </div>
                     {{/songs}}
                 </div>
@@ -195,7 +191,13 @@
                 </table>
             </div>
         </div>
-    </div>
+        </div>
+    {{/artistDTO}}
+    {{^artistDTO}}
+        <div style="display: flex; justify-content: center; font-size: 30px; font-weight: bold">조회된 결과가 없습니다.</div>
+        <br>
+        <br>
+    {{/artistDTO}}
 
 
 {{/reponseDTO}}
