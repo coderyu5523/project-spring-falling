@@ -2,6 +2,7 @@ package org.example.projectspringfalling.admin;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.example.projectspringfalling.artist.Artist;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -10,6 +11,7 @@ import static org.example.projectspringfalling._core.utils.DateUtil.timestampToS
 
 public class AdminResponse {
 
+    // 유저 목록
     @AllArgsConstructor
     @Data
     public static class UserListDTO {
@@ -31,6 +33,7 @@ public class AdminResponse {
         }
     }
 
+    // 유저 상세보기
     @AllArgsConstructor
     @Data
     public static class UserDetailDTO {
@@ -45,5 +48,40 @@ public class AdminResponse {
         public String getCreatedAt() {
             return timestampToString(this.createdAt);
         }
+    }
+
+    // 곡 리스트
+    @AllArgsConstructor
+    @Data
+    public static class SongListDTO {
+        private Integer songId;
+        private String albumImg;
+        private String songTitle;
+        private Artist artist;
+        private String albumTitle;
+    }
+
+    // 곡 상세보기
+    @AllArgsConstructor
+    @Data
+    public static class SongDetailDTO {
+        private Integer songId;
+        private String albumImg;
+        private String songTitle;
+        private Artist artist;
+        private String albumTitle;
+        private String songWriter;
+        private String lyricist;
+        private String lyrics;
+    }
+
+    // 앨범 목록보기
+    @AllArgsConstructor
+    @Data
+    public static class AlbumListDTO {
+        private Integer albumId;
+        private String albumImg;
+        private String albumTitle;
+        private Artist artist;
     }
 }
