@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+import static org.example.projectspringfalling._core.utils.ArrayUtil.removeDuplicates;
+
 @RequiredArgsConstructor
 @Service
 public class AdminService {
@@ -15,6 +17,15 @@ public class AdminService {
     private final UserRepository userRepository;
     private final SongRepository songRepository;
     private final AlbumRepository albumRepository;
+
+    // 앨범 상세보기
+    public AdminResponse.AlbumDetailDTO getAlbum(Integer albumId) {
+        AdminResponse.AlbumDetailDTO albumDetailDTO = albumRepository.findOneAlbum(albumId);
+
+        albumDetailDTO.setGenres(removeDuplicates(songRepository.findAlbumGenre(albumId)));
+
+        return albumDetailDTO;
+    }
 
     // 앨범 목록보기
     public List<AdminResponse.AlbumListDTO> getAlbumList() {
