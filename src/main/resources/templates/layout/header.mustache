@@ -17,7 +17,20 @@
     <nav class="nav-header">
         <div class="logo">
             <a href="/">
-                <!-- 로고 SVG -->
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="110.000000pt" height="20.800000pt" viewBox="0 0 275.000000 52.000000"
+                     preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,52.000000) scale(0.100000,-0.100000)"
+                       fill="#004AAD" stroke="none">
+                        <path d="M52 418 c-8 -8 -12 -59 -12 -164 0 -165 5 -182 55 -170 23 6 25 11 25 66 l0 60 60 0 c49 0 61 3 70 20 25 46 -17 74 -100 67 -21 -2 -25 2 -25 23 0 24 2 25 90 30 85 5 90 6 93 28 7 45 -12 52 -132 52 -74 0 -116 -4 -124 -12z"/>
+                        <path d="M598 418 c-9 -7 -47 -78 -84 -156 -72 -153 -75 -174 -22 -180 20 -2 28 4 43 38 l18 41 66 -3 c65 -3 66 -4 86 -41 16 -30 25 -37 44 -35 52 6 49 28 -22 175 -85 175 -95 187 -129 161z m40 -163 c16 -35 16 -35 -18 -35 -16 0 -30 2 -30 5 0 11 24 55 30 55 4 0 12 -11 18 -25z"/>
+                        <path d="M953 423 c-10 -3 -13 -47 -13 -169 0 -192 -12 -177 140 -172 l95 3 0 30 0 30 -77 3 -78 3 0 127 c0 147 -10 169 -67 145z"/>
+                        <path d="M1342 418 c-8 -8 -12 -59 -12 -163 0 -104 4 -155 12 -163 8 -8 48 -12 115 -12 93 0 103 2 113 21 20 36 -3 49 -86 49 l-74 0 0 134 c0 113 -2 135 -16 140 -24 9 -39 7 -52 -6z"/>
+                        <path d="M1743 423 c-10 -3 -13 -47 -13 -169 l0 -164 25 -6 c50 -12 55 4 55 172 0 141 -2 154 -19 164 -21 11 -29 11 -48 3z"/>
+                        <path d="M1976 414 c-13 -13 -16 -42 -16 -163 0 -160 5 -176 52 -169 22 3 23 7 26 96 1 51 7 92 12 90 4 -2 39 -43 77 -93 66 -87 92 -106 120 -87 19 12 20 322 1 333 -46 30 -68 -5 -68 -109 l0 -86 -65 90 c-88 118 -106 132 -139 98z"/>
+                        <path d="M2515 416 c-66 -29 -111 -111 -99 -180 9 -60 29 -92 76 -126 54 -39 137 -42 189 -7 32 22 34 26 37 91 4 89 -4 98 -82 94 -60 -3 -61 -3 -61 -33 0 -27 4 -30 33 -33 29 -3 33 -6 30 -30 -3 -23 -8 -27 -40 -30 -29 -2 -43 3 -67 25 -66 62 -31 163 58 163 22 0 43 -4 46 -10 17 -28 84 12 72 43 -15 40 -131 60 -192 33z"/>
+                    </g>
+                </svg>
             </a>
         </div>
         <div class="nav-links" style="font-size: 14px">
@@ -29,7 +42,7 @@
         <div class="search-bar">
             <form action="/search" method="get" class="form-inline">
                 <i class="fa fa-search"></i>
-                <input type="text" placeholder="검색어를 입력하세요." name="keyword" id="inputBox">
+                <input type="text" placeholder="검색어를 입력하세요." name="keyword" id="search-keyword">
             </form>
         </div>
         <div class="auth-links">
@@ -42,8 +55,8 @@
 </header>
 <!-- header end -->
 <script>
-    $(document).ready(function () {
-        $('#inputBox').autocomplete({
+        $(document).ready(function () {
+        $('#search-keyword').autocomplete({
             source: function (request, response) {
                 $.ajax({
                     url: '/search/auto',
@@ -51,12 +64,14 @@
                     data: { keyword: request.term },
                     dataType: 'json',
                     success: function (data) {
-                        console.log('Received data:', data); // 데이터를 로그로 출력
+                        console.log('통신 확인:', data);
                         response($.map(data.body, function (item) {
                             return {
-                                label: item.title,
-                                value: item.title,
-                                id: item.id
+                                label: item.songTitle,
+                                value: item.songTitle,
+                                songTitle: item.songTitle,
+                                albumTitle: item.albumTitle,
+                                artistName: item.artistName,
                             };
                         }));
                     },

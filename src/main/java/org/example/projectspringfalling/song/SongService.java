@@ -1,11 +1,14 @@
 package org.example.projectspringfalling.song;
 
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.AlbumRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 @RequiredArgsConstructor
 @Service
@@ -28,8 +31,9 @@ public class SongService {
         return new SongResponse.SearchDTO(songList, keyword);
     }
 
-    public List<Song> searchKeywordAuto(String keyword) {
-        return songRepository.findByAutoComplete(keyword).orElseThrow(() -> new RuntimeException("조회된 데이터가 없습니다."));
+    public List<RestResponse.SearchAutoCompleteDTO> searchKeywordAuto(String keyword) {
+        List<Song> songList = songRepository.findByAutoComplete(keyword).orElseThrow(() -> new RuntimeException("조회된 데이터가 없습니다."));
+        return songList.stream().map(song -> new RestResponse.SearchAutoCompleteDTO(song)).toList();
     }
 
 }
