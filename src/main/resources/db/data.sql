@@ -42,16 +42,16 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('Seventeen', 'Group', '/upload/artist/세븐틴.jpg', '2015-05-26'),
        ('NCT', 'Group', '/upload/artist/nct.jpg', '2016-04-09'),
 
-       ('빅뱅', 'Group', 'bigbang_img_url', '2010-07-01'),
-       ('소녀시대', 'Group', 'snsd_img_url', '2010-08-01'),
-       ('에픽하이', 'Group', 'epikhigh_img_url', '2010-09-01'),
-       ('씨스타', 'Group', 'sistar_img_url', '2011-01-01'),
-       ('엑소', 'Group', 'exo_img_url', '2012-01-01'),
-       ('샤이니', 'Group', 'shinee_img_url', '2010-05-01'),
-       ('투애니원', 'Group', '2ne1_img_url', '2010-11-01'),
-       ('인피니트', 'Group', 'infinite_img_url', '2010-06-01'),
-       ('Adele', 'Solo', 'adele_img_url', '2010-01-01'),
-       ('Bruno Mars', 'Solo', 'bruno_mars_img_url', '2010-03-01');
+       ('빅뱅', 'Group', '/upload/artist/빅뱅.jpg', '2006-09-23'),
+       ('소녀시대', 'Group', '/upload/artist/소녀시대.jpg', '2007-08-05'),
+       ('에픽하이', 'Group', '/upload/artist/에픽하이.jpg', '2003-10-23'),
+       ('시스타', 'Group', '/upload/artist/시스타.jpg', '2010-06-03'),
+       ('샤이니', 'Group', '/upload/artist/샤이니.jpg', '2008-05-25'),
+       ('투애니원', 'Group', '/upload/artist/투애니원.jpg', '2009-05-17'),
+       ('인피니트', 'Group', '/upload/artist/인피니트.png', '2010-06-09'),
+       ('Adele', 'Solo', '/upload/artist/아델.jpg', '2012-06-29'),
+       ('Bruno Mars', 'Solo', '/upload/artist/브루스마노.jpg', '2009-12-15'),
+       ('Rihanna', 'Solo', '/upload/artist/리한나/jpg', '2005-08-21');
 
 
 
