@@ -18,17 +18,17 @@
                 <br>
                 {{#artistDTO}}
                 <div class="result-item">
-                    <a href="#">
+                    <a href="/albums/{{albumId}}">
                         <img src="{{albumImg}}" alt="Album Cover">
                     </a>
                 <div class="result-info">
-                    <a href="#">
+                    <a href="/albums/{{albumId}}">
                         <h3 style="font-weight: 600;">{{albumTitle}}</h3>
                     </a>
-                    <a href="#">
+                    <a href="/artists/{{artistId}}">
                         <p>{{artistName}} ></p>
                     </a>
-                    <a href="#">
+                    <a href="/songs/{{songId}}">
                         <p>{{songTitle}} ></p>
                     </a>
                     <br>
@@ -36,6 +36,9 @@
                         <a href="#"><i class="album-icon fas fa-list icon"></i></a>
                         <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
                     </div>
+                {{/artistDTO}}
+                {{^artistDTO}}
+                    <div>조회된 결과가 없습니다.</div>
                 {{/artistDTO}}
             </div>
             </div>
@@ -62,20 +65,20 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td class="table-album-container">
-                                <a href="#">
+                                <a href="/albums/{{albumId}}">
                                     <img src="{{albumImg}}" alt="Album Cover">
                                 </a>
                                 <div class="text-container">
-                                    <a href="#">
+                                    <a href="/songs/{{songId}}">
                                         <strong>{{songTitle}}</strong>
                                     </a>
-                                    <a href="#">
+                                    <a href="/albums/{{albumId}}">
                                         <p style="font-size: 12px;">{{albumTitle}}</p>
                                     </a>
                                 </div>
                             </td>
                             <td class="table-artist">
-                                <a href="#">{{artistName}}</a>
+                                <a href="/artists/{{artistId}}">{{artistName}}</a>
                             </td>
                             <td>
                                 <a href="#"><i class="fas fa-play play-button"></i></a>
@@ -103,21 +106,21 @@
                 <div class="album-grid">
                     {{#songs}}
                         <div class="album-item">
-                            <a href="#">
+                            <a href="/albums/{{albumId}}">
                                 <img class="album-image" src="{{albumImg}}">
                             </a>
                             <div class="album-info">
-                                <a href="#">
+                                <a href="/albums/{{albumId}}">
                                     <h3 style="font-weight: 600;">{{albumTitle}}</h3>
                                 </a>
-                                <a href="#">
+                                <a href="/artists/{{artistId}}">
                                     <p>{{artistName}}</p>
                                 </a>
                                 <a href="#">
                                     <p>{{artistType}} · {{nationality}} {{category}}</p>
                                 </a>
-                                <a href="#">
-                                    <p>{{albumCreatedAt}}</p>
+                                <a href="/albums/{{albumId}}">
+                                <p>{{albumCreatedAt}}</p>
                                 </a>
                                 <div class="d-flex">
                                     <a href="#"><i class="album-icon fas fa-list icon"></i></a>
@@ -137,17 +140,15 @@
                     {{#songs}}
                         <div class="artist-box">
                             <div class="artist-img-container">
-                                <a href="#">
+                                <a href="/artists/{{artistId}}">
                                     <img src="{{artistImg}}">
                                     <button class="artist-play-button">▶</button>
                                 </a>
                             </div>
-                            <a href="#">
+                            <a href="/artists/{{artistId}}">
                                 <div class="artist-name">{{artistName}}</div>
                             </a>
-                            <a href="#">
                                 <div class="artist-role">{{artistType}}</div>
-                            </a>
                         </div>
                     {{/songs}}
                 </div>
@@ -170,12 +171,12 @@
                         <tr>
                             <td><input type="checkbox"></td>
                             <td>
-                                <a href="#">
+                                <a href="/albums/{{albumId}}">
                                     <img src="{{albumImg}}" alt="Album Cover">
                                 </a>
                             </td>
                             <td>
-                                <a href="#">
+                                <a href="/songs/{{songId}}">
                                     <div>
                                         <strong>{{songTitle}}</strong>
                                         <p class="lyrics-text">{{lyrics}}</p>
@@ -183,10 +184,10 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="#" style="white-space: nowrap">{{artistName}}</a>
+                                <a href="/artists/{{artistId}}" style="white-space: nowrap">{{artistName}}</a>
                             </td>
                             <td>
-                                <a href="#" style="white-space: nowrap">{{albumTitle}}</a>
+                                <a href="/albums/{{albumId}}" style="white-space: nowrap">{{albumTitle}}</a>
                             </td>
                         </tr>
                     {{/songs}}

@@ -46,7 +46,11 @@ public class SongResponse {
         private List<SongDTO> songs;
         public SearchDTO(List<Song> songList, String keyword) {
             this.keyword = keyword;
-            this.artistDTO = new ArtistDTO(songList.get(songList.size() - 1));
+            if (!songList.isEmpty()) {
+                this.artistDTO = new ArtistDTO(songList.get(songList.size() - 1));
+            } else {
+                this.artistDTO = null; // 또는 적절한 기본값 설정
+            }
             this.songs = songList.stream().map(song -> new SongDTO(song)).toList();
         }
 
