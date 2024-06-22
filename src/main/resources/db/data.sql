@@ -2271,7 +2271,7 @@ Baby don’t say no', 10),
     내게 주었던
     작은 기억 하나도
     오늘도 새겨봅니다
-    내겐 선물인 그댈', 12);
+    내겐 선물인 그댈', 11);
 
 -- song_tb에 더미 데이터 삽입
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
