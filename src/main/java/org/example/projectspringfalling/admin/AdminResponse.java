@@ -74,4 +74,14 @@ public class AdminResponse {
         private String lyricist;
         private String lyrics;
     }
+
+    // 앨범 목록보기
+    @AllArgsConstructor
+    @Data
+    public static class AlbumListDTO {
+        private Integer albumId;
+        private String albumImg;
+        private String albumTitle;
+        private Artist artist;
+    }
 }

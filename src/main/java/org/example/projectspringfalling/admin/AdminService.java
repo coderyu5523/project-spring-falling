@@ -1,6 +1,7 @@
 package org.example.projectspringfalling.admin;
 
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.album.AlbumRepository;
 import org.example.projectspringfalling.song.SongRepository;
 import org.example.projectspringfalling.user.UserRepository;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,12 @@ public class AdminService {
     private final AdminRepository adminRepository;
     private final UserRepository userRepository;
     private final SongRepository songRepository;
+    private final AlbumRepository albumRepository;
+
+    // 앨범 목록보기
+    public List<AdminResponse.AlbumListDTO> getAlbumList() {
+        return albumRepository.findAlbumList();
+    }
 
     // 곡 상세보기
     public AdminResponse.SongDetailDTO getSong(Integer songId) {
@@ -33,5 +40,4 @@ public class AdminService {
     public AdminResponse.UserListDTO getUserList() {
         return new AdminResponse.UserListDTO(userRepository.findUserList());
     }
-
 }

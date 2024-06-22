@@ -21,7 +21,8 @@ public class AdminController {
 
     // 앨범 목록보기
     @GetMapping("/admin/albums")
-    public String albumList() {
+    public String albumList(HttpServletRequest request) {
+        request.setAttribute("albumList", adminService.getAlbumList());
         return "admin/album-list";
     }
 
