@@ -2,6 +2,7 @@ package org.example.projectspringfalling.admin;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.example.projectspringfalling.artist.Artist;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -56,7 +57,7 @@ public class AdminResponse {
         private Integer songId;
         private String songImg;
         private String title;
-        private String artist;
+        private Artist artist;
         private String albumTitle;
     }
 }

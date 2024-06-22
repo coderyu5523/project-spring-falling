@@ -16,8 +16,7 @@ public class AdminService {
 
     // 곡 리스트
     public List<AdminResponse.SongListDTO> getSongList() {
-
-        return null;
+        return songRepository.findSongList();
     }
 
     // 유저 상세보기

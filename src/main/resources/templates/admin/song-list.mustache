@@ -1,115 +1,67 @@
 {{>layout/sidebar}}
 
 <!-- Main content -->
-        <main role="main" class="main-body col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div class="main-container">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">곡 관리</h1>
-                </div>
+<main role="main" class="main-body col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="main-container">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">곡 관리</h1>
+        </div>
 
-                <div class="button-row">
-                    <button type="button" class="btn btn-primary">곡 등록</button>
-                    <button type="button" class="btn btn-success">곡 목록</button>
-                    <button type="button" class="btn btn-info">곡 검색</button>
-                </div>
+        <div class="button-row">
+            <button type="button" class="btn btn-primary">곡 등록</button>
+            <button type="button" class="btn btn-success">곡 목록</button>
+            <button type="button" class="btn btn-info">곡 검색</button>
+        </div>
 
-                <div class="playlist-body">
-                    <table class="playlist-table">
+        <div class="playlist-body">
+            <table class="playlist-table">
 
-                        <thead>
-                        <tr>
-                            <th><input type="checkbox"></th>
-                            <th style="font-size: 12px;">앨범 커버</th>
-                            <th style="font-size: 12px;">노래 제목</th>
-                            <th style="font-size: 12px;">아티스트</th>
-                            <th style="font-size: 12px;">앨범 제목</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/playlist/여행 Again (Feat. Cautious Clay).jpg" alt="Album Cover">
-                                </a>
+                <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th style="font-size: 12px;">앨범 커버</th>
+                    <th style="font-size: 12px;">노래 제목</th>
+                    <th style="font-size: 12px;">아티스트</th>
+                    <th style="font-size: 12px;">앨범 제목</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#songList}}
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <a href="#">
+                                <img src="..{{songImg}}" alt="Album Cover">
+                            </a>
 
-                            </td>
-                            <td>
-                                <a href="#">여행 Again (Feat. Cautious Clay)</a>
-                            </td>
+                        </td>
+                        <td>
+                            <a href="#">{{title}}</a>
+                        </td>
 
-                            <td class="table-artist">
-                                <a href="#">빈지노 (Beenzino)</a>
-                            </td>
-                            <td class="table-artist">
-                                <a href="#">NOWITZKI</a>
-                            </td>
-                            <td>
-                                <div class="d-flex button-row">
-                                    <button type="button" class="btn btn-primary">곡 수정</button>
-                                    <button type="button" class="btn btn-danger">곡 삭제</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/playlist/여행 Again (Feat. Cautious Clay).jpg" alt="Album Cover">
-                                </a>
+                        <td class="table-artist">
+                            <a href="#">{{artist.name}})</a>
+                        </td>
+                        <td class="table-artist">
+                            <a href="#">{{albumTitle}}</a>
+                        </td>
+                        <td>
+                            <div class="d-flex button-row">
+                                <button type="button" class="btn btn-primary">곡 수정</button>
+                                <button type="button" class="btn btn-danger">곡 삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                {{/songList}}
+                </tbody>
+            </table>
+        </div>
+        <!-- Song registration form -->
 
-                            </td>
-                            <td>
-                                <a href="#">여행 Again (Feat. Cautious Clay)</a>
-                            </td>
-
-                            <td class="table-artist">
-                                <a href="#">빈지노 (Beenzino)</a>
-                            </td>
-                            <td class="table-artist">
-                                <a href="#">NOWITZKI</a>
-                            </td>
-                            <td>
-                                <div class="d-flex button-row">
-                                    <button type="button" class="btn btn-primary">곡 수정</button>
-                                    <button type="button" class="btn btn-danger">곡 삭제</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/playlist/여행 Again (Feat. Cautious Clay).jpg" alt="Album Cover">
-                                </a>
-
-                            </td>
-                            <td>
-                                <a href="#">여행 Again (Feat. Cautious Clay)</a>
-                            </td>
-
-                            <td class="table-artist">
-                                <a href="#">빈지노 (Beenzino)</a>
-                            </td>
-                            <td class="table-artist">
-                                <a href="#">NOWITZKI</a>
-                            </td>
-                            <td>
-                                <div class="d-flex button-row">
-                                    <button type="button" class="btn btn-primary">곡 수정</button>
-                                    <button type="button" class="btn btn-danger">곡 삭제</button>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- Song registration form -->
-
-            </div>
-        </main>
     </div>
+</main>
+</div>
 </div>
 </body>
 </html>

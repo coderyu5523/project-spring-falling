@@ -69,7 +69,8 @@ public class AdminController {
 
     // 곡 목록보기
     @GetMapping("/admin/songs")
-    public String songList() {
+    public String songList(HttpServletRequest request) {
+        request.setAttribute("songList", adminService.getSongList());
         return "admin/song-list";
     }
 
