@@ -446,13 +446,12 @@ Adele 은 이미 엄청난 아티스트가 되어버렸다. 19살 나이에 BRIT
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Uptown Funk', 'Sony Music', 'WME', '해외', '싱글', '/upload/album/uptownfunk.jpg', 30, '2014-11-10', '(P) 2014 Mark Ronson under exclusive licence to Sony Music Entertainment UK Limited');
+VALUES ('Uptown Funk', 'Sony Music', 'WME', '해외', '싱글', '/upload/album/uptownfunk.jpg', 30, '2014-11-10',
+        '(P) 2014 Mark Ronson under exclusive licence to Sony Music Entertainment UK Limited');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('ANTI', '유니버설뮤직코리아', 'Roc Nation', '해외', '정규', '/upload/album/ANTI.jpg', 31, '2016-01-28', '© 2016 Westbury Road Entertainment. Distributed by Roc Nation Records');
-
-
-
+VALUES ('ANTI', '유니버설뮤직코리아', 'Roc Nation', '해외', '정규', '/upload/album/ANTI.jpg', 31, '2016-01-28',
+        '© 2016 Westbury Road Entertainment. Distributed by Roc Nation Records');
 
 
 -- 테이블: song
@@ -3155,6 +3154,457 @@ Singing to the night sky
 Dancing into the moonlight
 Frequencies of dream
 ', 21);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('봄여름가을겨울 (Still Life)', 'KUSH, VVN, Vince, G-DRAGON, T.O.P', 'G-DRAGON, T.O.P, KUSH',
+        '/upload/song/봄여름가을겨울.mp4', 'Ballad', true,
+        '/upload/song/봄여름가을겨울.mp3', '2022-04-05', 22, '이듬해 질 녘 꽃 피는 봄
+한여름 밤의 꿈
+가을 타 겨울 내릴 눈
+1년 네 번 또다시 봄
+
+정들었던 내 젊은 날
+이제는 안녕
+아름답던 우리의
+봄 여름 가을 겨울
+
+“Four seasons with no reason.”
+비 갠 뒤에 비애(悲哀) 대신
+a happy end
+비스듬히 씩 비웃듯
+칠색 무늬의 무지개
+철없이 철 지나 철들지 못해(still)
+철부지에 철 그른지 오래,
+Marchin’ 비발디
+차이코프스키,
+오늘의 사계를 맞이해
+마침내, 마치 넷이 못내
+
+Boy 저 하늘만 바라보고서
+사계절 잘 지내고 있어 Good-bye
+떠난 사람 또 나타난 사람
+머리 위 저세상
+난 떠나 영감의 amazon
+지난 밤의 트라우마 다 묻고
+목숨 바쳐 달려올
+새 출발 하는 왕복선
+변할래 전보다는 더욱더
+좋은 사람 더욱더
+더 나은 사람 더욱더
+아침 이슬을 맞고
+내 안에 분노 과거에 묻고
+For Life
+
+울었던 웃었던
+소년과 소녀가 그리워 나
+찬란했던 사랑했던
+그 시절만 자꾸 기억나
+
+계절은 날이 갈수록
+속절없이 흘러
+붉게 물들이고 파랗게 멍들어
+가슴을 훑고
+
+언젠가 다시 올
+그날 그때를 위하여
+(그대를 위하여)
+아름다울 우리의
+봄 여름 가을 겨울
+
+La la la la la la la la la la la
+La la la la la la la la la la la
+La la la la la la la la la la la
+La la la la la la la la la la la
+
+이듬해 질 녘 꽃 피는 봄
+한여름 밤의 꿈
+가을 타 겨울 내린 눈
+봄 여름 가을 겨울
+', 22);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('FOREVER 1', 'Kenzie, Ylva Dimberg', 'KENZIE', '/upload/song/forever1.mp4', 'Dance', true,
+        '/upload/song/forever1.mp3', '2022-08-05', 23, 'FOREVER 1
+It’s love It’s love
+We’re not stopping
+
+네가 머문 이 세상이 더
+아름다운 건
+겁 없이 외치던 말 ''사랑해 너를''
+영원하기에
+You and I
+
+터지는 눈물이
+말하잖아
+난 그냥 전부 던진 거야
+
+아무런 망설임 따위도
+멋대로 끌렸던 그대로
+Oh my baby 달려가 안을게
+
+I love 너의 모든 것, 내 전부인 너
+우리는 영원
+We are one
+
+전율 속에 뜨거운 그 맘을 던져
+Just like a love bomb
+We are one
+
+Girls, We are forever
+(Yeah we are,
+We’re still FOREVER 1)
+
+It’s now or never
+(We keep on,
+We’re still FOREVER 1)
+
+Yeah we’re forever
+(Yeah we are,
+We’re still FOREVER 1)
+
+날 꼭 안아 절대 놓치지 마
+가슴이 뛰잖아
+
+다시는 아파하지 마
+너의 마음을
+우린 다 알아
+다 알아
+
+내 곁에 있어 줘
+이 순간도 마지막처럼
+You know your love is crazy
+항상 그랬지
+Oh my baby 사랑해 기억해
+
+I love 너의 모든 것, 내 전부인 너
+우리는 영원
+We are one
+
+전율 속에 뜨거운 그 맘을 던져
+Just like a love bomb
+We are one
+
+Girls, We are forever
+(Yeah we are,
+We’re still FOREVER 1)
+
+It’s now or never
+(We keep on,
+We’re still FOREVER 1)
+
+Yeah we’re forever
+(Yeah we are,
+We’re still FOREVER 1)
+
+언제나 너의 곁에 있고 싶은데
+널 생각하면 강해져
+There’s no one like you,
+no one like you
+우리 꼭 영원하자
+
+우리 머문 이 세상에서
+네게 말했어
+다시 태어나도 널 사랑할게
+Cause we are the one
+
+I love 너의 (Ooh I Love 나의)
+모든 것 내 전부인 너 (전부인 너)
+우리는 영원 (Ooh)
+We are one
+
+전율 속에 (그 전율 속에)
+뜨거운 그 맘을 던져
+Just like a love bomb
+(Just like a love bomb)
+We are one
+
+Girls, We are forever
+(Yeah we are,
+We’re still FOREVER 1)
+
+It’s now or never
+(We keep on,
+We’re still FOREVER 1)
+
+Yeah we’re forever
+(Yeah we are,
+We’re still FOREVER 1)
+', 23);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('ANTIHERO', '타블로, DJ 투컷', '타블로, Mithra Jin (미쓰라 진)', '/upload/song/ANTIHERO.mp4', 'HipHop', true,
+        '/upload/song/ANTIHERO.mp3', '2024-06-20', 24, 'When I be on the microphone
+기립박수 짤 박아
+지휘봉 대신 박규봉
+그게 우리다워
+Y’all get lost in the sauce
+Fame is sweet and sour
+세상의 입맛?
+내게 맞춰
+That’s my superpower
+The label OURS
+네 글자에 새긴 나의 마음
+높게 올라서자마자 뺏긴
+high ground
+이 세상은 시간 내주면 손목을 탐내
+맘을 열어주면 곧 내 심장이 타겟
+F**k it
+What’s a hero in a world
+full of villains, mama?
+If karma doesn’t do its job,
+I’ma kill em
+선과 악은 쉽게 뒤집히잖아 원래
+왕좌에서 잠들어도 전기의자에서 깨
+
+I’m the hero you deserve
+I’m the hero you need
+미쳐 돌아가는 지굴 짊어지고 있지
+I’m an ANTI (HERO)
+
+All the heroes that you serve
+Look like villains to me
+지구본을 손가락 위에 돌리고 있지
+I’m their ANTI (HERO)
+
+기적을 반복하지 매년
+세월의 야속함을 베며
+우린 각자 인당 100 해내
+소규모지만 대기업
+집 앞 마트 가듯 산책하는
+요단강 건너편
+돗자리 깔고 관람 중이야
+물먹은 래퍼들의 애원
+딱히 내 편도 없던데?
+세상이 나를 처바를 땐
+달라진 것도 없는데
+20년 되니 떠받드네
+어이없는 상황에 그저 웃지
+내 팬들 나 대신 답해 올려 중지
+난 누군가의 히어로
+다른 누군가의 빌런
+여전히 품위 지켜
+네 밥그릇 먹어치워
+세기말 같은 세상이지만
+니 자리 지켜
+어차피 주인공 아니면 모두가 B 컷
+
+Dressed like a sociopath
+Dancin’ like a psychopath
+
+I’m the hero you deserve
+I’m the hero you need
+미쳐 돌아가는 지굴 짊어지고 있지
+I’m an ANTI (HERO)
+
+All the heroes that you serve
+Look like villains to me
+지구본을 손가락 위에 돌리고 있지
+I’m their ANTI (HERO)
+
+날 네임드롭 안 하면 관심밖인 놈들
+Wanna take shots
+여긴 술자리가 아냐 새꺄
+갱값 벌고 싶어 쎈척하냐
+You ain’t Biggie, u ain’t Pac
+Keep your mfkn music out
+my airpods
+여전히 힙합이나 하고 다녀
+Raindrops fallin’ on my head
+They want me dead
+but I can’t stop
+세대가 뒤집혀도 대세
+Legend till I’m 백세
+Look at us
+dancin’ on your grave tops
+
+위기는 곧 기회니
+땅을 짚고서 기립
+타인이 정한 한계는 거부해
+가능성은 No Limit
+생사의 갈림길
+죽지 않음 꽃길 위
+너에겐 필요하겠지
+내가 거부한 신의 손길이
+영광을 쫓네
+다 불발탄 쏠 때
+내 과녁은 네 자만심 조준 중
+방아쇠 손 떼
+두 손 들어 환영해 주길
+그래 이건 독재
+21년째 침묵한 놈들에 의한
+불가피한 독백
+
+Uh, I’m an A-N-T-I
+Stay on top, 내 심장은 여기 지하
+I’m dancin’ on your grave
+Dancin’ on your grave
+Hold my phone
+This is me
+dancin’ on your grave, hater
+
+What? I’m an A-N-T-I
+Stay on top, 내 심장은 여기 지하
+I’m dancin’ on your grave
+Dancin’ on your grave
+For all the times all of you were
+dancin’ on my grave
+BREAK!
+', 24);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('Give It to Me', '이단옆차기, 박장근, 챈슬러', '이단옆차기, 박장근, 챈슬러', '/upload/song/give_it_to_me.mp4', 'Dance', true, '/upload/song/give_it_to_me.mp3', '2013-06-10', 25, 'You see I don''t usually do this but
+I really need you tonight
+Give it to me give it to me
+Give it to me give it to me
+서른이 넘기 전에 결혼은 할는지
+사랑만 주다 다친 내 가슴 어떡해 oh
+애꿎은 빗소리에도 가슴이 아파서
+아직도 어리고 여려 순진하고 여려
+눈물은 많은지
+Give it to me oh babe
+Give it to me Give it to me
+Give it to me oh babe
+Give it to me
+Oh baby give it to me
+Oh oh oh oh oh oh
+Oh oh oh oh oh oh
+아무리 원하고 애원해도 눈물로 채워진 빈자리만
+사랑을 달란 말이야 그거면 된다는 말이야
+Oh oh oh
+Oh babe give it to me
+아침이 오기 전에 그대가 올는지
+바보같이 너 하나뿐인 나 Oh
+운다 하루 종일 울다 동이 튼다
+저 해가 달인지 밤이 낮인지도 몰라
+Oh babe give it to me
+I''m sorry that''s all I need
+Oh babe give it to me
+Oh babe give it to me
+Give it to me oh babe
+Give it to me Give it to me
+Give it to me oh babe
+Give it to me
+Oh baby give it to me
+Oh oh oh oh oh oh
+Oh oh oh oh oh oh
+아무리 원하고 애원해도 눈물로 채워진 빈자리만
+사랑을 달란 말이야 그거면 된다는 말이야
+Oh oh oh
+Oh babe give it to me
+수십 번 수백 번을 쓰다가
+또 찢어버린 편지
+사랑은 왜 이렇게 내게만 무겁지
+운다 하루 종일 울다 동이 튼다
+저 해가 달인지 밤이 낮인지도 몰라 나 난
+나 하루 종일 울다 동이 튼다
+동이 튼다 동이튼다
+나 하루 종일 울다 동이 튼다
+동이 튼다
+Give it to me oh babe
+Give it to me Give it to me
+Give it to me oh babe
+Give it to me
+Oh baby give it to me
+Oh oh oh oh oh oh
+Oh oh oh oh oh oh
+아무리 원하고 애원해도 눈물로 채워진 빈자리만
+사랑을 달란 말이야 그거면 된다는 말이야
+Oh oh oh
+Oh babe give it to me
+', 25);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('Lucifer', 'Ryan Jhun, 유영진, Adam Kapit, Bebe Rexha', '유영진', '/upload/song/lucifer.mp4', 'Dance', true,'/upload/song/lucifer.mp3', '2010-07-19', 26, '숨을 곳도 찾지 못해 나는 피하려고 애써봐도
+거부조차 할 수 없는 네게 갇혀버린 나
+사랑이었다면 정말 사랑했던 거라면
+내게 이러지는 말아
+Her whisper is the LUCIFER
+LUCIFER
+나를 묶고 가둔다면 사랑도 묶인 채
+미래도 묶인 채 커질 수 없는데
+자유롭게 비워놓고 바라봐
+오직 너만 채울게 너만 가득 채울게
+거부 할 수 없는 너의 마력은 LUCIFER
+거부 할 수 없는 너의 마법은 LUCIFER
+다가서면 너는 마치 천사 같은 얼굴로
+나를 사는 이유라 말하고
+너를 처음 봤을 때 짧은 순간 멈춰버렸지
+누가 마치 내 심장을 꽉 쥔 채
+놓지 않는 것처럼 (아직까지도)
+너는 그렇게
+내 맘을 다
+니가 없으면 내 맘이 다 타버리게 만든다
+나를 묶고 가둔다면 사랑도 묶인 채
+미래도 묶인 채 커질 수 없는데
+자유롭게 비워놓고 바라봐
+오직 너만 채울게 너만 가득 채울게
+Loverhollic
+Loverhollic
+너와 같이 나눈 사랑얘기들
+나랑 같은 곳을 바라보는 너
+우리 더 이상은 완벽해질 수 없다고 느꼈을 때
+나만 쳐다봐.
+너는 더
+나만 바라봐.
+모든 게
+언제부턴가 조금씩 잘못된 것 같아 이상한 너
+날 알던 사람들 모두 하나 둘씩 곁을 떠나
+난 가진 게 너뿐이고
+나를 묶고 가둔다면 사랑도 묶인 채
+미래도 묶인 채 커질 수 없는데
+자유롭게 비워놓고 바라봐
+오직 너만 채울게 너만 가득 채울게
+마치 유리성에 갇혀버린 삐에로만 된 것 같아
+절대 만족 없는 너를 위해 춤을 추는 나
+훤히 들여다보고 뇌를 만져 바보 된 것 같아
+난 점점 네게 끌려가는 것만 같은데
+Loverhollic
+Loverhollic
+니가 미운 건 아냐 싫단 것도 아냐
+단지 그런 눈빛이 부담일 뿐
+어디 안가 이렇게
+난 너만 바라보고 기다려 왔잖아
+너의 눈빛이 날 사로잡다
+날이 지날수록 날카로워졌다
+너의 집착에 지쳤다
+많이 베었다 맘에 피가 난다
+나 쓰러질 쯤 되면 다가와서
+천사같이 “사랑해”란 말
+누가 진짜 너였는지
+알다가도 헷갈리게 만든다.
+나를 묶고 가둔다면 사랑도 묶인 채
+미래도 묶인 채 커질 수 없는데
+자유롭게 비워놓고 바라봐
+오직 너만 채울게 너만 가득 채울게
+마치 유리성에 갇혀버린 삐에로만 된 것 같아
+나를 냅둬 자유로워 질 때
+너를 진짜 사랑할 수 있고
+훤히 들여다보고 뇌를 만져 바보 된 것 같아
+나를 냅둬 질리게도 말고
+너를 진짜 바라볼 수 있게
+나를 묶고 가둔다면 사랑도 묶인 채
+미래도 묶인 채 커질 수 없는데
+Loverhollic
+Loverhollic
+거부할 수 없는 너의 마력은 LUCIFER
+
+', 26);
+
+
+
+--        ('Go Away', 'Teddy', 'Teddy', '/upload/music_video/go_away.mp4', 'Pop', 1, '/upload/music/go_away.mp3',
+--         '2010-09-09', 27, 'Lyrics for Go Away', 27),
+--        ('Bad', '알파벳', '알파벳', '/upload/music_video/bad.mp4', 'EDM', 1, '/upload/music/bad.mp3', '2015-07-13', 28,
+--         'Lyrics for Bad', 28),
+--        ('Rolling in the Deep', 'Paul Epworth', 'Adele', '/upload/music_video/rolling_in_the_deep.mp4', 'Soul', 1,
+--         '/upload/music/rolling_in_the_deep.mp3', '2011-01-24', 29, 'Lyrics for Rolling in the Deep', 29),
+--        ('Uptown Funk', 'Mark Ronson', 'Bruno Mars', '/upload/music_video/uptown_funk.mp4', 'Funk', 1,
+--         '/upload/music/uptown_funk.mp3', '2014-11-10', 30, 'Lyrics for Uptown Funk', 30),
+--        ('Work', 'Rihanna', 'Rihanna', '/upload/music_video/work.mp4', 'Dancehall', 1, '/upload/music/work.mp3',
+--         '2016-01-28', 31, 'Lyrics for Work', 31);
 
 
 --  테이블 : playlist
