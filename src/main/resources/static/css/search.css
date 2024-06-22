@@ -218,3 +218,13 @@
     width: 85%; /* 또는 적절한 너비 설정 */
     margin: 0 auto; /* 좌우 자동 마진으로 중앙 정렬 */
 }
+
+.lyrics-text{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 두 줄까지만 표시 */
+    overflow: hidden;
+    width: 500px;
+    font-size: 10px;
+
+}
