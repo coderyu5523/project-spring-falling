@@ -3593,18 +3593,414 @@ Loverhollic
 
 ', 26);
 
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('Go Away', 'Teddy', 'Teddy', '/upload/song/go_away.mp4', 'Dance', true, '/upload/song/go_away.mp3','2010-09-09', 27, '너무 치사하잖아 너답지 못하잖아
+지금 적응이 안돼 어 어 어지러워 왜
+누가 누구랑 헤어져 네가 나랑 헤어져
+잘 생각하고 말해 Yeah 날 따라다니던 남자
+참 괜찮았던 남자
+난 너 하나 때문에 다다다 보냈는데
+누가 누구랑 헤어져 네가 나랑 헤어져
+나 없이 잘 살아봐 yeah
+Tonight 하필 또 비는 내려 왜
+내 모습 초라해지게 날 위로 하지는 마
+이 손 치워 이제 남이니까
+내 걱정 말고 Go Away
+집착 없이 사라져 줄게 매달릴 줄 알았겠지
+역겨워 착각하지마 더 멋진 사람 만날게
+널 후회하게 만들어 줄게 슬픔은 지금 뿐야 boy
+Cause love is over
+Love love is over tonight
+Just say what you gotta say
+어쩜 끝까지 멋없니 Fiance Beyonce
+I''m walkin'' out of destiny
+초라한 홀로가 아닌 화려한 솔로
+That''s my way 모든걸 다 줬으니
+오히려 난 후회 안 해
+지가 더 슬픈 척 끝까지 멋있는 척
+All you do is act a fool
+You ain''t shit without your crew
+시간 없어 I gotta go
+안녕 good bye adios
+네 못난 얼굴 다신 보고 싶진 않아
+no more
+Tonight 하필 또 비는 내려 왜
+내 모습 초라해지게 날 위로 하지는 마
+이 손 치워 이제 남이니까
+내 걱정 말고 Go Away
+집착 없이 사라져 줄게 매달릴 줄 알았겠지
+역겨워 착각하지마 더 멋진 사람 만날게
+널 후회하게 만들어 줄게 슬픔은 지금 뿐야 boy
+Cause love is over
+Love love is over tonight
+내 걱정 말고 Go Away
+집착 없이 사라져 줄게 매달릴 줄 알았겠지
+역겨워 착각하지마 더 멋진 사람 만날게
+널 후회하게 만들어 줄게 슬픔은 지금 뿐야 boy
+Cause love is over
+Love love is over tonight
+', 27);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('Bad', 'Rphabet', 'Rphabet', '/upload/song/bad.mp4', 'Dance', true, '/upload/song/bad.mp3', '2015-07-13', 28,'Betting on you
+Betting on you
+다시 차가워진 눈빛 날카로운 네 혀끝이
+날 파고들어 제발 멈춰줘
+더는 견딜 수 없어
+날 가진 것처럼 다가와 날 감싸 안는 너
+넌 마치 꿈인 듯이 그대로 사라져
+닿을 새도 없이 네게 사로잡혀
+난 두려워 망가질 내가
+날 흔들고 돌아서겠지만
+Betting on you
+Betting on you
+Betting on you
+절대 그대론 못 보내 너
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+언제 봐도 참 낯선 여자야
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+날 한없이 긴장시켜 넌
+이리로 저리로 너 Like rollacoasta
+이리로 저리로 너 So bad
+거짓마저 달콤해 입술은 경고 Like a red
+속삭여 귓가에
+Lose ma focus 네 주문에
+하나 둘 지워져 주위가 너 밖에 안보여
+두렵지 않아 난 내가 마주할 내일
+어서 날 데려가 거친 떨림 속에
+난 두려워 망가질 내가
+날 흔들고 돌아설 테지만
+Betting on you
+Im Betting on you
+Betting on you
+절대 그대론 못 보내 너
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+언제 봐도 참 낯선 여자야
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+날 한없이 긴장시켜 넌
+자꾸 엇나가 손끝을 스쳐가듯
+또 보일 듯 말 듯 해
+너란 대답이
+이젠 돌아설 수 없어
+나도 날 못 멈춰
+네게 걸게
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+언제 봐도 참 낯선 여자야
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+날 한없이 긴장시켜 넌
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad Bet a bad bad girl
+Bad Bad Bad bet a bad bad girl
+Bad Bad Bad bet a bad bad girl
+Bad Bad Bad bet a bad bad girl
+절대 그냥은 못 보내 너
+', 28);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('Rolling in the Deep', 'Adele Adkins, Paul Epworth', 'Adele Adkins, Paul Epworth', '/upload/song/rolling_in_the_deep.mp4', 'POP', true, '/upload/song/rolling_in_the_deep.mp3', '2011-01-24', 29, 'There''s a fire starting in my heart
+Reaching a fever pitch
+and it''s bring me out the dark
+Finally I can see you
+crystal clear
+Go ahead and sell me out
+and I''ll lay your sheet bare
+See how I''ll leave with
+every piece of you
+Don''t underestimate the things that I will do
+There''s a fire starting in my heart
+Reaching a fever pitch
+and it''s bring me out the dark
+The scars of your love
+remind me of us
+They keep me thinking that we almost had it all
+The scars of your love
+they leave me breathless
+I can''t help feeling
+We could have had it all
+Rolling in the deep
+You had my heart
+inside of your hands
+And you played it to the beat
+Baby I have no story to be told
+But I''ve heard one on you
+and I''m gonna make your head burn
+Think of me in the
+depths of your despair
+Make a home down there as
+mine sure won''t be shared
+The scars of your love
+remind me of us
+They keep me thinking that we almost had it all
+The scars of your love
+they leave me breathless
+I can''t help feeling
+We could have had it all
+Rolling in the deep
+You had my heart
+inside of your hands
+And you played it to the beat
+Could have had it all
+Rolling in the deep
+You had my heart
+inside of your hands
+But you played it with a beating
+Throw your soul through every open door
+Count your blessings to find
+what you look for
+Turn my sorrow into treasured gold
+You''ll pay me back in kind
+and reap just what you''ve sown
+We could have had it all
+We could have had it all
+It all it all it all
+We could have had it all
+Rolling in the deep
+You had my heart
+inside of your hands
+And you played it to the beat
+Could have had it all
+Rolling in the deep
+You had my heart
+inside of your hands
+But you played it
+You played it
+You played it
+You played it to the beat
+', 29);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('Uptown Funk', 'Mark Ronson', 'Bruno Mars', '/upload/song/uptown_funk.mp4', 'POP', true, '/upload/song/uptown_funk.mp3', '2014-11-10', 30, 'This hit That ice cold
+Michelle Pfeiffer That white gold
+This one for them hood girls
+Them good girls Straight masterpieces
+Stylin'' while in Livin'' it up in the city
+Got Chucks on with Saint Laurent
+Gotta kiss myself I''m so pretty
+I''m too hot hot damn
+Called a police and a fireman
+I''m too hot hot damn
+Make a dragon wanna retire man
+I''m too hot hot damn
+Say my name you know who I am
+I''m too hot hot damn
+Am I bad ''bout that money
+Break it down
+Girls sent you hallelujah whuoo
+Girls sent you hallelujah whuoo
+Girls sent you hallelujah whuoo
+''Cause Uptown Funk gon'' give it to you
+''Cause Uptown Funk gon'' give it to you
+''Cause Uptown Funk gon'' give it to you
+Saturday night and we in the spot
+Don''t believe me just watch come on
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Hey hey hey oh
+Stop Wait a minute
+Fill my cup put some liquor in it
+Take a sip sign a check
+Julio Get the stretch
+Ride to Harlem Hollywood Jackson Mississippi
+If we show up we gon'' show out
+Smoother than a fresh dry skippy
+I''m too hot hot damn
+Called a police and a fireman
+I''m too hot hot damn
+Make a dragon wanna retire man
+I''m too hot hot damn hot damn
+Bitch say my name you know who I am
+I''m too hot hot damn
+Am I bad ''bout that money
+Break it down
+Girls sent you hallelujah whuoo
+Girls sent you hallelujah whuoo
+Girls sent you hallelujah whuoo
+''Cause Uptown Funk gon'' give it to you
+''Cause Uptown Funk gon'' give it to you
+''Cause Uptown Funk gon'' give it to you
+Saturday night and we in the spot
+Don''t believe me just watch come on
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Hey hey hey oh
+Before we leave
+I''m a tell y''all a lil'' something
+Uptown Funk you up Uptown Funk you up
+Uptown Funk you up Uptown Funk you up
+I said Uptown Funk you up
+Uptown Funk you up
+Uptown Funk you up Uptown Funk you up
+Come on dance
+Jump on it
+If you sexy than flaunt it
+If you freaky than own it
+Don''t brag about it come show me
+Come on dance
+Jump on it
+If you sexy than flaunt it
+Well it''s Saturday night and we in the spot
+Don''t believe me just watch
+Come on
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Don''t believe me just watch
+Hey hey hey oh
+Uptown Funk you up Uptown Funk you up
+say whaa
+Uptown Funk you up Uptown Funk you up
+Uptown Funk you up Uptown Funk you up
+say whaa
+Uptown Funk you up Uptown Funk you up
+Uptown Funk you up Uptown Funk you up
+say whaa
+Uptown Funk you up Uptown Funk you up
+Uptown Funk you up Uptown Funk you up
+say whaa
+Uptown Funk you up
+', 30);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('Work', 'Rihanna', 'Rihanna', '/upload/song/Rihanna_work.mp4', 'POP', true, '/upload/song/Rihanna_work.mp3',
+    '2016-01-28', 31, '상세정보유사곡
+곡명
+Work
+작곡
+J. Braithwaite, M. Samuels, Allen Ritter, R.Thomas, Aubrey Graham, R Fenty, M. Moir, Jahron Anthony Brathwaite, Monte Moir, Robyn Fenty
+작사
+J. Braithwaite, M. Samuels, Allen Ritter, R.Thomas, Aubrey Graham, R Fenty, M. Moir, Jahron Anthony Brathwaite, Monte Moir, Robyn Fenty
+Work, work, work, work, work, work
+He said me haffi work
+work, work, work, work, work
+He see me do mi dirt
+dirt, dirt, dirt, dirt, dirt
+So me put in work
+work, work, work, work, work
+When you ah gon'' learn
+learn, learn, learn, learn?
+Me nuh care if him hurt
+hurt, hurt, hurt, hurting
+Dry, me ah desert him
+No time to have you lurking
+Him ah go act like he nuh like it
+You know I dealt with you the nicest
+Nuh body touch me you nuh righteous
+Nuh badda, text me in a crisis
+I believed all of your
+dreams, adoration
+You took my heart and
+my keys and my patience
+You took my heart on
+my sleeve for decoration
+You mistaken my love
+I brought for you for foundation
+All that I wanted from
+you was to give me
+Something that I never had
+Something that you''ve never seen
+Something that you''ve never been, mmh
+But I wake up and act
+like nothing''s wrong
+Just get ready fi work
+work, work, work, work, work
+He said me haffi work
+work, work, work, work, work
+He see me do mi dirt
+dirt, dirt, dirt, dirt, dirt
+So me put in work
+work, work, work, work, work
+Na, na, na, na, na, na
+When you ah gon'' learn
+learn, learn, learn, learn, learn?
+Before the tables turn
+turn, turn, turn, turn, turn
+Beg you something, please
+Baby don''t you leave
+Don''t leave me stuck
+here in the streets, uh huh
+If I get another chance to
+I will never, no never neglect you
+I mean who am
+I to hold your past against you?
+I just hope that it gets to you
+I hope that you see this through
+I hope that you see this true
+What can I say?
+Please recognize I''m tryin'', babe
+I haffi work, work
+work, work, work, work
+He said me haffi work
+work, work, work, work, work
+He see me do mi dirt
+dirt, dirt, dirt, dirt, dirt
+So me put in work
+work, work, work, work, work
+When you ah gon'' learn
+learn, learn, learn, learn
+Me nuh care if him hurt
+hurt, hurt, hurt, hurting
+Yeah, okay
+You need to get done
+done, done, done at work, come over
+We just need to slow the motion
+Don''t give that away to no one
+Long distance, I need you
+When I see potential
+I just gotta see it through
+If you had a twin
+I would still choose you
+I don''t wanna rush
+into it, if it''s too soon
+But I know you need to
+get done, done, done, done
+If you come over
+Sorry if I''m way less friendly
+I got niggas tryna end me, oh, yeah
+I spilled all my emotions tonight, I''m sorry
+Rollin'', rollin'', rollin'', rollin'', rollin''
+How many more shots until you''re rollin''?
+We just need a face to face
+You could pick the time and the place
+You spent some time away
+Now you need to forward
+And give me all the work
+work, work, work, work, work
+He said me haffi work
+work, work, work, work, work
+He see me do mi dirt
+dirt, dirt, dirt, dirt, dirt
+So me put in work
+work, work, work, work, work
+When you ah gon'' learn
+learn, learn, learn, learn
+Me nuh care if him hurt
+hurt, hurt, hurt, hurting
+Mmmh
+Mmmh
+Work, work, work, work, work, work
+Mmmh', 31);
 
 
---        ('Go Away', 'Teddy', 'Teddy', '/upload/music_video/go_away.mp4', 'Pop', 1, '/upload/music/go_away.mp3',
---         '2010-09-09', 27, 'Lyrics for Go Away', 27),
---        ('Bad', '알파벳', '알파벳', '/upload/music_video/bad.mp4', 'EDM', 1, '/upload/music/bad.mp3', '2015-07-13', 28,
---         'Lyrics for Bad', 28),
---        ('Rolling in the Deep', 'Paul Epworth', 'Adele', '/upload/music_video/rolling_in_the_deep.mp4', 'Soul', 1,
---         '/upload/music/rolling_in_the_deep.mp3', '2011-01-24', 29, 'Lyrics for Rolling in the Deep', 29),
---        ('Uptown Funk', 'Mark Ronson', 'Bruno Mars', '/upload/music_video/uptown_funk.mp4', 'Funk', 1,
---         '/upload/music/uptown_funk.mp3', '2014-11-10', 30, 'Lyrics for Uptown Funk', 30),
---        ('Work', 'Rihanna', 'Rihanna', '/upload/music_video/work.mp4', 'Dancehall', 1, '/upload/music/work.mp3',
---         '2016-01-28', 31, 'Lyrics for Work', 31);
 
 
 --  테이블 : playlist
@@ -3616,9 +4012,9 @@ values (2, null, '신나는 노래 모음', '2024-06-20');
 insert into playlist_tb(user_id, admin_id, name, created_at)
 values (3, null, '20240621', '2024-06-21');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (4, null, '내맘', '2024-06-15');
+values (4, null, '내맘1', '2024-06-15');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (4, null, '내맘', '2024-06-15');
+values (4, null, '내맘2', '2024-06-17');
 
 insert into playlist_tb(user_id, admin_id, name, created_at)
 values (null, 1, '핫한 레전드 음원', '2024-06-01');
@@ -3630,6 +4026,15 @@ insert into playlist_tb(user_id, admin_id, name, created_at)
 values (null, 1, '운전할 때 들으면 따라 부르게 될걸요', '2024-06-15');
 insert into playlist_tb(user_id, admin_id, name, created_at)
 values (null, 1, '언제 들어도 기분이 좋아지는 노래들', '2024-06-16');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '레전드 팝송', '2024-06-20');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '2010년대 추억의 노래', '2024-06-20');
+
+
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (1, null, '에스파', '2024-06-20');
+
 
 -- 노래 플레이리스트 테이블
 
@@ -3759,3 +4164,43 @@ values (10, 17);
 insert into playlist_song_tb (playlist_id, song_id)
 values (10, 18);
 
+insert into playlist_song_tb (playlist_id, song_id)
+values (11, 38);
+insert into playlist_song_tb (playlist_id, song_id)
+values (11, 39);
+insert into playlist_song_tb (playlist_id, song_id)
+values (11, 40);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 32);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 33);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 34);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 35);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 36);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 37);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 2);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 3);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 4);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 5);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 6);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 8);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 11);
