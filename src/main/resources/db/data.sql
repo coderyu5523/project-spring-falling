@@ -4012,9 +4012,9 @@ values (2, null, '신나는 노래 모음', '2024-06-20');
 insert into playlist_tb(user_id, admin_id, name, created_at)
 values (3, null, '20240621', '2024-06-21');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (4, null, '내맘', '2024-06-15');
+values (4, null, '내맘1', '2024-06-15');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (4, null, '내맘', '2024-06-15');
+values (4, null, '내맘2', '2024-06-17');
 
 insert into playlist_tb(user_id, admin_id, name, created_at)
 values (null, 1, '핫한 레전드 음원', '2024-06-01');
@@ -4026,6 +4026,15 @@ insert into playlist_tb(user_id, admin_id, name, created_at)
 values (null, 1, '운전할 때 들으면 따라 부르게 될걸요', '2024-06-15');
 insert into playlist_tb(user_id, admin_id, name, created_at)
 values (null, 1, '언제 들어도 기분이 좋아지는 노래들', '2024-06-16');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '레전드 팝송', '2024-06-20');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '2010년대 추억의 노래', '2024-06-20');
+
+
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (1, null, '에스파', '2024-06-20');
+
 
 -- 노래 플레이리스트 테이블
 
@@ -4155,3 +4164,43 @@ values (10, 17);
 insert into playlist_song_tb (playlist_id, song_id)
 values (10, 18);
 
+insert into playlist_song_tb (playlist_id, song_id)
+values (11, 38);
+insert into playlist_song_tb (playlist_id, song_id)
+values (11, 39);
+insert into playlist_song_tb (playlist_id, song_id)
+values (11, 40);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 32);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 33);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 34);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 35);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 36);
+insert into playlist_song_tb (playlist_id, song_id)
+values (12, 37);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 2);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 3);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 4);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 5);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 6);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 8);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (13, 11);
