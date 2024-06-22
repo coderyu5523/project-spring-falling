@@ -84,4 +84,36 @@ public class AdminResponse {
         private String albumTitle;
         private Artist artist;
     }
+
+    // 앨범 상세보기
+    @AllArgsConstructor
+    @Data
+    public static class AlbumDetailDTO {
+        private Integer albumId;
+        private String albumTitle;
+        private String albumImg;
+        private Artist artist;
+        private String category;
+        private String genres;
+        private String intro;
+        private Timestamp createdAt;
+        private String distributor;
+        private String agency;
+
+        public String getCreatedAt() {
+            return timestampToString(this.createdAt);
+        }
+
+        public AlbumDetailDTO(Integer albumId, String albumTitle, String albumImg, Artist artist, String category, String intro, Timestamp createdAt, String distributor, String agency) {
+            this.albumId = albumId;
+            this.albumTitle = albumTitle;
+            this.albumImg = albumImg;
+            this.artist = artist;
+            this.category = category;
+            this.intro = intro;
+            this.createdAt = createdAt;
+            this.distributor = distributor;
+            this.agency = agency;
+        }
+    }
 }

@@ -15,7 +15,8 @@ public class AdminController {
 
     // 관리자 앨범 상세보기
     @GetMapping("/admin/albums/{id}")
-    public String albumDetail(@PathVariable Integer id) {
+    public String albumDetail(@PathVariable Integer id, HttpServletRequest request) {
+        request.setAttribute("album", adminService.getAlbum(id));
         return "admin/album-detail";
     }
 
