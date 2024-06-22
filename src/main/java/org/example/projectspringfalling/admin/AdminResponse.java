@@ -55,9 +55,23 @@ public class AdminResponse {
     @Data
     public static class SongListDTO {
         private Integer songId;
-        private String songImg;
-        private String title;
+        private String albumImg;
+        private String songTitle;
         private Artist artist;
         private String albumTitle;
+    }
+
+    // 곡 상세보기
+    @AllArgsConstructor
+    @Data
+    public static class SongDetailDTO {
+        private Integer songId;
+        private String albumImg;
+        private String songTitle;
+        private Artist artist;
+        private String albumTitle;
+        private String songWriter;
+        private String lyricist;
+        private String lyrics;
     }
 }

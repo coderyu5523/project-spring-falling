@@ -14,6 +14,11 @@ public class AdminService {
     private final UserRepository userRepository;
     private final SongRepository songRepository;
 
+    // 곡 상세보기
+    public AdminResponse.SongDetailDTO getSong(Integer songId) {
+        return songRepository.findOneSongById(songId);
+    }
+
     // 곡 리스트
     public List<AdminResponse.SongListDTO> getSongList() {
         return songRepository.findSongList();

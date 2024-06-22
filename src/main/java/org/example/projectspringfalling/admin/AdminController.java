@@ -63,7 +63,8 @@ public class AdminController {
 
     // 곡 상세보기
     @GetMapping("/admin/songs/{id}")
-    public String songDetail(@PathVariable Integer id) {
+    public String songDetail(@PathVariable Integer id, HttpServletRequest request) {
+        request.setAttribute("song", adminService.getSong(id));
         return "admin/song-detail";
     }
 

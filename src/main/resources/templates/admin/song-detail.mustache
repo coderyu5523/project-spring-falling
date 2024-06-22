@@ -1,131 +1,43 @@
 {{>layout/sidebar}}
 
 <main role="main" class="main-body col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div class="main-container">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">곡 관리</h1>
+    <div class="main-container">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">곡 관리</h1>
+        </div>
+
+        <div class="button-row">
+            <button type="button" class="btn btn-success">곡 목록</button>
+            <button type="button" class="btn btn-info">곡 검색</button>
+        </div>
+
+        <div class="container album-details">
+            <div class="row">
+                <div class="col-md-3 album-art">
+                    <img src="../..{{song.albumImg}}" alt="Album Cover">
                 </div>
-
-                <div class="button-row">
-                    <button type="button" class="btn btn-success">곡 목록</button>
-                    <button type="button" class="btn btn-info">곡 검색</button>
+                <div class="col-md-9 album-info">
+                    <h2>{{song.songTitle}}</h2>
+                    <p>{{song.artist.name}}</p>
+                    <p>{{song.albumTitle}}</p>
                 </div>
+            </div>
+            <div class="lyrics-section">
+                <h3>상세정보</h3>
+                <ul>
+                    <li>곡명: {{song.songTitle}}</li>
+                    <li>작곡: {{song.songWriter}}</li>
+                    <li>작사: {{song.lyricist}}</li>
+                </ul>
+            </div>
+            <div class="lyrics-section">
+                <h3>가사</h3>
+                {{song.lyrics}}
+            </div>
+        </div>
+</main>
 
-                <div class="container album-details">
-                    <div class="row">
-                        <div class="col-md-3 album-art">
-                            <img src="../images/admin/슈퍼노바.jpg" alt="Album Cover">
-                        </div>
-                        <div class="col-md-9 album-info">
-                            <h2>Supernova</h2>
-                            <p>aespa</p>
-                            <p>Armageddon - The 1st Album</p>
-                        </div>
-                    </div>
-                    <div class="lyrics-section">
-                        <h3>상세정보</h3>
-                        <ul>
-                            <li>곡명: Supernova</li>
-                            <li>작곡: Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.</li>
-                            <li>작사: Kenzie</li>
-                        </ul>
-                    </div>
-                    <div class="lyrics-section">
-                        <h3>가사</h3>
-                        I’m like some kind of Supernova
-                        Watch out
-
-                        Look at me go
-                        재미 좀 볼
-                        빛의 Core
-                        So hot hot
-                        문이 열려
-                        서로의 존재를 느껴
-                        마치 Discord
-                        날 닮은 너 너 누구야
-                        (Drop)
-
-                        사건은 다가와 Ah Oh Ay
-                        거세게 커져가 Ah Oh Ay
-                        That tick that tick tick bomb
-                        That tick that tick tick bomb
-                        감히 건드리지 못할 걸
-                        (누구도 말이야)
-                        지금 내 안에선
-                        Su su su Supernova
-
-                        Nova
-                        Can’t stop hyperstellar
-                        원초 그걸 찾아
-                        Bring the light of a dying star
-                        불러낸 내 우주를 봐 봐
-                        Supernova
-
-                        Ah Body bang
-                        Make it feel too right
-
-                        휩쓸린 에너지 It’s so special
-                        잔인한 Queen 이며 Scene 이자 종결
-                        이토록 거대한 내 안의 Explosion
-                        내 모든 세포 별로부터 만들어져
-                        (Under my control Ah)
-
-                        질문은 계속돼 Ah Oh Ay
-                        우린 어디서 왔나 Oh Ay
-                        느껴 내 안에선
-                        Su su su Supernova
-
-                        Nova
-                        Can’t stop hyperstellar
-                        원초 그걸 찾아
-                        Bring the light of a dying star
-                        불러낸 내 우주를 봐 봐
-                        Supernova
-
-                        보이지 않는 힘으로
-                        네게 손 내밀어 볼까
-                        가능한 모든 가능성
-                        무한 속의 너를 만나
-                        It’s about to bang bang
-                        Don’t forget my name
-                        Su su su Supernova
-
-                        사건은 다가와 Ah Oh Ay
-                        거세게 커져가 Ah Oh Ay
-                        질문은 계속돼 Ah Oh Ay
-                        우린 어디서 왔나 Oh Ay
-
-                        사건은 다가와 Ah Oh Ay
-                        거세게 커져가 Ah Oh Ay
-                        Tell me, tell me, tell me Oh Ay
-                        우린 어디서 왔나 Oh Ay
-                        우린 어디서 왔나 Oh Ay
-
-                        Nova
-                        Can’t stop hyperstellar
-                        원초 그걸 찾아
-                        Bring the light of a dying star
-                        불러낸 내 우주를 봐 봐
-                        Supernova
-
-                        사건은 다가와 Ah Oh Ay
-                        (Nu star)
-                        거세게 커져가 Ah Oh Ay
-                        질문은 계속돼 Ah Oh Ay
-                        (Nova)
-                        우린 어디서 왔나 Oh Ay
-
-                        사건은 다가와 Ah Oh Ay
-                        거세게 커져가 Ah Oh Ay
-                        질문은 계속돼 Ah Oh Ay
-                        (Nova)
-                        Bring the light of a dying star
-                        Supernova
-                    </div>
-                </div>
-        </main>
-
-    </div>
+</div>
 </div>
 </body>
 </html>
