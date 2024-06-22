@@ -3,10 +3,9 @@
     justify-content: center;
 }
 
-.main-ticket{
+.main-subscription{
     width: 1100px;
 }
-
 
 /* 탭 스타일: 탭 영역의 스타일 */
 .tabs {
@@ -14,6 +13,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
@@ -37,26 +37,42 @@
 
 /* 컨테이너 이미지 스타일: 이미지 크기를 부모 요소에 맞추고 비율 유지 */
 .ticket-container img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 /* 첫 번째 컨테이너 스타일: 배경 색상과 텍스트 정렬 */
 .ticket-container.first {
     background-color: #3f3fff;
-    margin: 50px auto;
-    max-width: 80%;
-    text-align: center;
+    margin: 10px auto;
+    max-width: 70%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* 콘텐츠 섹션 설정 */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    flex-wrap: nowrap; /* 줄 바꿈을 방지 */
+}
+
+.title-img {
+    max-width: 70%;
+    background-color: #3f3fff;
+    /*text-align: left; !* 가운데 정렬을 왼쪽 정렬로 변경 *!*/
+    font-weight: bold; /* 글자 굵기 추가 */
 }
 
 /* 컨테이너 공통 스타일 */
 .ticket-container {
-    /* max-width: 100%; */
     margin: 50px auto;
     background-color: #f9f9f9;
     border-radius: 15px;
@@ -71,9 +87,11 @@
     background-color: white;
     color: black;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
     cursor: pointer;
     border-radius: 20px;
+    display: block;
+    margin-left: 10px; /* 버튼과 텍스트 사이의 간격 설정 */
 }
 
 /* 플랜 버튼 스타일: 파란색 배경과 흰색 텍스트의 둥근 버튼 */
@@ -81,7 +99,7 @@
     background-color: #3f3fff;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 20px;
     cursor: pointer;
     border-radius: 20px;
     display: block;
@@ -90,17 +108,18 @@
 
 /* 첫 번째 콘텐츠 스타일: 중앙 정렬과 패딩 */
 .content.first {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     padding: 20px;
     column-gap: 10px;
+    flex-wrap: wrap
 }
 
 /* 분할 컨테이너 스타일: 좌우 박스와 간격 설정 */
 .ticket-container.split {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: flex-start;
     padding: 30px;
 }
@@ -120,8 +139,8 @@
 /* 분리선 스타일: 박스 사이의 세로 분리선 */
 .separator {
     width: 1px;
-    background-color: #ccc;
-    height: 80%;
+    background-color: #DADBDF;
+    height: 190px;
     margin: 0 20px;
     align-self: center;
 }
@@ -131,7 +150,7 @@
     background-color: #F4F5F8;
     border-radius: 15px;
     margin: 20px auto;
-    max-width: 80%;
+    max-width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -147,30 +166,38 @@
 
 /* 제목 스타일: 제목 크기와 마진 */
 .plan-title {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 10px;
     flex-wrap: wrap;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /* 헤더 스타일: 큰 제목 크기와 굵기 */
 .header {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 /* 서브헤더 스타일: 작은 제목 크기와 색상 */
 .subheader {
-    font-size: 16px;
+    font-size: 12px;
     color: #666;
     margin-bottom: 20px;
+}
+
+.price-info {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 5px;
 }
 
 /* 정가 스타일: 줄이 그어진 텍스트 */
 .price {
     font-size: small;
     text-decoration: line-through;
+    color: white;
 }
 
 /* 할인된 가격 스타일: 큰 폰트 크기 */
