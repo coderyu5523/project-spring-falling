@@ -27,4 +27,9 @@ public class SongService {
         List<Song> songList = songRepository.findByKeyword(keyword).orElseThrow(() -> new Exception404("조회된 데이터가 없습니다."));
         return new SongResponse.SearchDTO(songList, keyword);
     }
+
+    public List<Song> searchKeywordAuto(String keyword) {
+        return songRepository.findByAutoComplete(keyword).orElseThrow(() -> new RuntimeException("조회된 데이터가 없습니다."));
+    }
+
 }
