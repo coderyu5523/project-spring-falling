@@ -28,4 +28,8 @@ public interface SongRepository extends JpaRepository<Song, Integer> {
     // 관리자 곡 상세보기
     @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$SongDetailDTO(s.id, a.albumImg, s.title, s.artist, a.title, s.songWriter,s.lyricist,s.lyrics) FROM Song s, Album a WHERE s.id = :songId AND s.album.id = a.id")
     AdminResponse.SongDetailDTO findOneSongById(Integer songId);
+
+    // 관리자 앨범 상세보기의 장르들
+    @Query("SELECT s.genre FROM Song s, Album a WHERE s.album.id = a.id AND a.id = :albumId")
+    List<String> findAlbumGenre(Integer albumId);
 }
