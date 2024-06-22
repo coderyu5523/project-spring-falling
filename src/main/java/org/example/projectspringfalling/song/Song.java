@@ -5,9 +5,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
+import org.example.projectspringfalling.artist.Artist;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -34,8 +36,12 @@ public class Song {
     @ManyToOne(fetch = FetchType.LAZY)
     private Album album; // 앨범 아이디
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "artist_id")
+    private Artist artist; // 아티스트
+
     @Builder
-    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt, Album album, String musicFile) {
+    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt, Album album, String musicFile,Artist artist) {
         this.id = id;
         this.title = title;
         this.lyrics = lyrics;
@@ -47,6 +53,7 @@ public class Song {
         this.createdAt = createdAt;
         this.album = album;
         this.musicFile = musicFile;
+        this.artist = artist;
     }
 
     // 인서트용 생성자
@@ -60,5 +67,6 @@ public class Song {
         this.genre = requestDTO.getGenre();
         this.isTitle = requestDTO.getIsTitle();
         this.musicFile = musicFile;
+
     }
 }

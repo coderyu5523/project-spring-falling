@@ -1,3 +1,6 @@
+-- 테이블 : admin
+    insert into admin_tb(email,password,created_at) values ('admin1@nate.com','1234','2024-06-10');
+
 -- 테이블: user
 -- 칼럼: 이메일, 비밀번호, 전화번호, 프로바이더, 생성날짜, 생년월일
 
@@ -17,27 +20,27 @@ VALUES ('ssar@nate.com', '1234', '010-1234-5678', 'Email', '2023-02-15', '1990-0
 -- 칼럼: 가수이름, 아티스트타입, 아티스트사진, 생성날짜
 
 INSERT INTO artist_tb (name, artist_type, artist_img, created_at)
-VALUES ('노을', 'Solo', 'upload/artist/노을.jpg', '2002-12-24'),
-       ('aespa', 'Group', 'upload/artist/에스파.jpg', '2023-02-15'),
-       ('NewJeans', 'Group', 'upload/artist/뉴진스.jpg', '2023-03-20'),
-       ('IVE (아이브)', 'Group', 'upload/artist/아이브.jpg', '2023-05-05'),
-       ('TWS (투어스)', 'Group', 'upload/artist/투어스.jpg', '2023-06-10'),
-       ('QWER', 'Group', 'upload/artist/qwer.jpg', '2023-07-15'),
-       ('임영웅', 'Solo', 'upload/artist/임영웅.jpg', '2023-08-20'),
-       ('지코 (ZICO)', 'Solo', 'upload/artist/지코.jpg', '2023-09-25'),
-       ('(여자)아이들', 'Group', 'upload/artist/여자아이들.jpg', '2023-10-30'),
-       ('아일릿(ILLIT)', 'Group', 'upload/artist/아일릿.jpg', '2023-11-15'),
-       ('이클립스 (ECLIPSE)', 'Solo', 'upload/artist/이클립스.jpg', '2023-12-01'),
-       ('BTS', 'Group', 'upload/artist/bts.jpg', '2013-06-13'),
-       ('Blackpink', 'Group', 'upload/artist/블랙핑크.jpg', '2016-08-08'),
-       ('아이유', 'Solo', 'upload/aritst/아이유.jpg', '2008-09-18'),
-       ('Twice', 'Group', 'upload/aritst/트와이스.jpg', '2015-10-20'),
-       ('EXO', 'Group', 'upload/artist/엑소.jpg', '2012-04-08'),
-       ('Red Velvet', 'Group', 'upload/artist/레드벨벳.jpg', '2014-08-01'),
-       ('Zico', 'Solo', 'upload/artist/지코.jpg', '2011-04-15'),
-       ('선미', 'Solo', 'upload/artist/선미.jpg', '2007-02-13'),
-       ('Seventeen', 'Group', 'upload/artist/세븐틴.jpg', '2015-05-26'),
-       ('NCT', 'Group', 'upload/artist/nct.jpg', '2016-04-09');
+VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
+       ('aespa', 'Group', '/upload/artist/에스파.jpg', '2023-02-15'),
+       ('NewJeans', 'Group', '/upload/artist/뉴진스.jpg', '2023-03-20'),
+       ('IVE (아이브)', 'Group', '/upload/artist/아이브.jpg', '2023-05-05'),
+       ('TWS (투어스)', 'Group', '/upload/artist/투어스.jpg', '2023-06-10'),
+       ('QWER', 'Group', '/upload/artist/qwer.jpg', '2023-07-15'),
+       ('임영웅', 'Solo', '/upload/artist/임영웅.jpg', '2023-08-20'),
+       ('지코 (ZICO)', 'Solo', '/upload/artist/지코.jpg', '2023-09-25'),
+       ('(여자)아이들', 'Group', '/upload/artist/여자아이들.jpg', '2023-10-30'),
+       ('아일릿(ILLIT)', 'Group', '/upload/artist/아일릿.jpg', '2023-11-15'),
+       ('이클립스 (ECLIPSE)', 'Solo', '/upload/artist/이클립스.jpg', '2023-12-01'),
+       ('BTS', 'Group', '/upload/artist/bts.jpg', '2013-06-13'),
+       ('Blackpink', 'Group', '/upload/artist/블랙핑크.jpg', '2016-08-08'),
+       ('아이유', 'Solo', '/upload/aritst/아이유.jpg', '2008-09-18'),
+       ('Twice', 'Group', '/upload/aritst/트와이스.jpg', '2015-10-20'),
+       ('EXO', 'Group', '/upload/artist/엑소.jpg', '2012-04-08'),
+       ('Red Velvet', 'Group', '/upload/artist/레드벨벳.jpg', '2014-08-01'),
+       ('Zico', 'Solo', '/upload/artist/지코.jpg', '2011-04-15'),
+       ('선미', 'Solo', '/upload/artist/선미.jpg', '2007-02-13'),
+       ('Seventeen', 'Group', '/upload/artist/세븐틴.jpg', '2015-05-26'),
+       ('NCT', 'Group', '/upload/artist/nct.jpg', '2016-04-09');
 
 
 --  샘플용 더미
@@ -45,37 +48,37 @@ VALUES ('노을', 'Solo', 'upload/artist/노을.jpg', '2002-12-24'),
 -- 테이블: album
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '발라드', 'upload/album/전부너였다.jpg', 1, NOW(),
+VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '발라드', '/upload/album/전부너였다.jpg', 1, NOW(),
         '- 섬세한 사랑의 감정을 노래한 "전부 너였다" 붙잡고도, 인연, 아파도 아파도, 청혼 등 2장의 앨범을 통해서 색깔있는 가창력을 선보였던 그룹 ''노을''이 기나긴 작업 기간을 보내고 섬세한 사랑의 감정을 담은 세번째 앨범 "전부 너였다"로 돌아왔다. 데뷔앨범인 "붙잡고도"와 2집 앨범 "아파도 아파도"를 통해 뛰어난 가창력과 멤버 각각의 독특한 보이스 칼라로 최고의 R&B그룹으로 평가 받아왔던 노을이 또 한번의 음악적 변신을 시도한다. 기나긴 작업기간 동안 4명의 멤버가 가장 신경쓴 부분은 각각의 보이스 컬러의 조화와 모든 이들이 공감할 수 있는 편안한 모습으로 팬들에게 다가가는 것이었다. 이번 앨범에서는 그 동안 노을이 보여주었던 슬픔의 극대화가 아닌 슬픈 감정의 절제를 노래하는 노을을 만나볼 수 있을 것이다. 타이틀 곡인 ''전부 너였다''는 제목이 주는 이미지 그대로 누구나 공감할 수 있는 가사가 돋보이는 곡으로 노을의 ''청혼''과 god의 ''보통날''을 작곡했던 권태은의 서정적인 멜로디에 양재선의 감성적인 노랫말과 노을의 Voice가 잘 조화된 곡으로 이별의 슬픈 감정을 절제하면서 덤덤하게 노래하여 이번 앨범의 컨셉을 가장 잘 표현하였다. - "노을스럽다"를 보여주는 곡 "나무" 사랑의 감정을 한 곳에 뿌리박은 나무에 비유한 "나무"는 노을 Voice와 웅장한 오케스트레이션의 조화가 돋보이며 최고의 프로듀서 방시혁의 노랫말이 귀에 쏙쏙 들어오며 가장 ''노을스럽다''라는 말이 어울리는 곡이다. 또한 이외에도 일본의 여가수 아무로 나미에의 최근작인 히트 발라드 "All for you"를 노을 만의 감성으로 새롭게 재해석한 "All for you"와 드라마 궁의 OST "perhaps love"를 작곡한 박근철의 "A better tomorrow", MC몽의 ''180도'', M(이민우)의 "Last first kiss"등을 작곡한 장준호의 멜로디와 "10 Minetes"의 작사가 Maybee의 가사의 조화가 돋보이는 댄스넘버 "남자라서", 조성모, BMK 및 여러 가수들의 앨범을 프로듀서한 mAd sOuL cHiLd가 선사하는 트랜디한 사운드와 감성의 조화가 돋보이는 ''A nice day'', 천상의 목소리 이소은과 노을의 리더 이상곤이 듀엣으로 노래한 러브 발라드 "여행" 등을 통해 또 한번 새로운 노을만의 색깔을 선보일 예정이다. 이번 노을의 세번째 앨범 ''전부 너였다''는 노을의 음악세계에 새로운 변화를 제시하며 동시에 가장 ''노을스럽다''라는 말이 어울리는 듣는이로 하여금 편안한 감동을 선사할 수 있는 최고의 앨범이 될 것이다.'),
-       ('Armageddon - The 1st Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', 'Dance', 'upload/album/슈퍼노바.jpg', 2,
+       ('Armageddon - The 1st Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', 'Dance', '/upload/album/슈퍼노바.jpg', 2,
         '2024-05-27',
         'aespa, 첫 정규 앨범 ‘Armageddon’ 발매! 힙한 무드 ‘Supernova’→힙합 댄스곡 ‘Armageddon’으로 강렬한 질주! 세계관 시즌 2 서사 담은 역대급 스케일 음악+비주얼! ‘글로벌 히트메이커’ aespa가 첫 정규 앨범 ‘Armageddon’을 발매했다. aespa의 첫 정규 앨범 ‘Armageddon’은 미니멀한 트랙사운드와 캐치한 탑라인이 매력적인 선공개곡 ‘Supernova’와 트렌디한 트랙과 거칠고 절제된 음색이 돋보이는 타이틀 곡 ‘Armageddon’을 포함하여 에너제틱한 힙합부터 밝고 경쾌한 댄스곡, 리드미컬한 모던 팝, 발라드까지 다채로운 장르로 구성되어 aespa만의 독보적인 음악 색깔을 만끽하기에 충분하다. 특히 이번 앨범은 리얼 월드와 디지털 세계를 넘어 다중 우주로 확장되는 aespa 세계관 시즌 2의 서사를 담아, aespa가 평행 세계에 존재하는 각기 다른 ‘나’를 만나 무한한 가능성을 마주하고 완전한 ‘나’로 거듭나는 과정들을 파워풀하고 유니크한 음악과 비주얼을 통해 보여줄 예정이어서 기대가 모인다.'),
-       ('How Sweet', 'YG PLUS', 'ADOR', '국내', 'Dance', 'upload/album/sweet.jpg', 3, '2024-05-24',
+       ('How Sweet', 'YG PLUS', 'ADOR', '국내', 'Dance', '/upload/album/sweet.jpg', 3, '2024-05-24',
         '뉴진스가 2024년 또다시 새로운 모습으로 돌아왔다. 타이틀 곡 ‘How Sweet’은 신선한 느낌을 선사하는 장르적 접근이 돋보이는 새롭고 독특한 매력의 Dance Pop 곡으로 Sparkle한 일렉트로닉 사운드가 중독성있는 곡이다. 또 함께 수록된 ‘Bubble Gum’은 트랙의 진행에 따른 다양한 무드 체인지를 통해 다채로운 매력을 느낄 수 있는 곡이다. 과장되지 않은 자연스러움으로 오히려 신선한 느낌을 선사하는 뉴진스 멤버들의 보컬과 개성있고 매력 넘치는 트랙들로 구성된 싱글 앨범 ‘How Sweet’은 한 번만 들어도 모든 이의 귀를 사로잡을 만큼 뉴진스의 매력을 잘 담아내고 있다. 그간 뉴진스를 기다려 온 전세계 팬들에게 화답이 되는 앨범이 되길 바란다.'),
-       ('IVE SWITCH', '카카오엔터테인먼트', '스타쉽 엔터테인먼트', '국내', 'Dance', 'upload/album/해야.jpg', 4, '2024-04-29',
+       ('IVE SWITCH', '카카오엔터테인먼트', '스타쉽 엔터테인먼트', '국내', 'Dance', '/upload/album/해야.jpg', 4, '2024-04-29',
         '뚜렷한 컬러로 K팝 최고의 순간을 물들인 아이브가 극적인 반전을 선사한다. 아이브의 정체성은 주체적인 자신감과 당당함. 여기에 색다른 매력을 더해 또 다른 변주를 시도했다. 최적의 타이밍에서 맞이한 확신의 변화다. 언제나 자신감 넘치는 애티튜드로 자아 성취를 보여준 아이브가 세련되면서도 감각적인 시도로 새로운 시작을 알린다.'),
-       ('TWS 1st Mini Album ‘Sparkling Blue’', 'YG PLUS', '플레디스엔터테인먼트', '국내', 'Dance', 'upload/album/첫만남.jpg', 5,
+       ('TWS 1st Mini Album ‘Sparkling Blue’', 'YG PLUS', '플레디스엔터테인먼트', '국내', 'Dance', '/upload/album/첫만남.jpg', 5,
         '2024-01-22',
         '‘2024년 최고 기대주’ TWS, 데뷔 앨범 ‘Sparkling Blue’ 공개 "언제나 TWS와 함께"…반짝이는 음률의 향연 ‘Sparkling Blue’ 설렘 가득한 데뷔 타이틀곡 ‘첫 만남은 계획대로 되지 않아’'),
-       ('1st Mini Album ''MANITO''', '카카오엔터테인먼트', '타마고 프로덕션', '국내', 'Rock/Metal', 'upload/album/고민중독.jpg', 6,
+       ('1st Mini Album ''MANITO''', '카카오엔터테인먼트', '타마고 프로덕션', '국내', 'Rock/Metal', '/upload/album/고민중독.jpg', 6,
         '2023-08-15',
         '1st Mini Album ''MANITO'' ‘불협화음에서 만들어낸 하모니’라는 그들만의 독특한 스토리를 써 내려갔던 밴드 QWER이 미니 앨범 ''MANITO''로 돌아왔다. 첫 싱글에서는 각기 다른 출신의 배경을 가진 멤버 쵸단, 마젠타, 히나, 시연 넷의 결성까지의 과정과 팀의 아이덴티티를 이야기했다면, ''MANITO''에서는 운명과도 같은 만남을 경험한 QWER의 속마음을 한 편의 드라마로 풀어나갈 예정이다.'),
-       ('신사와 아가씨 OST Part.2', 'NHN벅스', '모스트콘텐츠', '국내', 'Ballad', 'upload/album/도망가.jpg', 7, '2021-10-11',
+       ('신사와 아가씨 OST Part.2', 'NHN벅스', '모스트콘텐츠', '국내', 'Ballad', '/upload/album/도망가.jpg', 7, '2021-10-11',
         '''임영웅 - 사랑은 늘 도망가'' KBS 2TV 주말드라마 ''신사와 아가씨''는 우연인 듯 인연인 듯 계속된 만남을 가지게 된 박단단(이세희 분)과 이영국(지현우 분)이 한집살이를 시작하며 흥미진진한 서사와 디테일한 연출로 시청자들을 사로잡고 있다.'),
-       ('SPOT!', '	YG PLUS', 'KOZ 엔터테인먼트', '국내', 'HipHop', 'upload/album/스팟.jpg', 8, '2024-04-26',
+       ('SPOT!', '	YG PLUS', 'KOZ 엔터테인먼트', '국내', 'HipHop', '/upload/album/스팟.jpg', 8, '2024-04-26',
         '지코의 첫 번째 정규앨범 "SPOT!"는 독창적인 음악성과 심오한 가사를 담은 작품입니다. 타이틀 곡 "Thinking"은 지코 특유의 스타일과 제니의 감각적인 보컬이 어우러진 곡입니다.'),
-       ('2', '카카오엔터테인먼트', '큐브 엔터테인먼트', '국내', 'K-POP', 'upload/album/질색.jpg', 9, '2024-01-29',
+       ('2', '카카오엔터테인먼트', '큐브 엔터테인먼트', '국내', 'K-POP', '/upload/album/질색.jpg', 9, '2024-01-29',
         '''Super Lady''의 아름다움과 그 힘에 대한 찬가 콘셉트 장인 (여자)아이들의 화려한 귀환'),
-       ('SUPER REAL ME', '지니뮤직, Stone Music Entertainment', '빌리프랩', '국내', 'Dance', 'upload/album/마그넷.jpg', 10,
+       ('SUPER REAL ME', '지니뮤직, Stone Music Entertainment', '빌리프랩', '국내', 'Dance', '/upload/album/마그넷.jpg', 10,
         '2024-03-25',
         '‘하이브 막내딸’ 아일릿, 3월 25일 첫 번째 미니 앨범 ‘SUPER REAL ME’로 데뷔! 엉뚱•발랄•자유로움 아일릿…무엇이든 될 수 있는 무한 가능성의 소녀들 ‘눈 앞에 최선을, 나머지는 되는 대로’, 진짜 ‘나’의 이야기로 전속력으로 달려가는 아일릿 ‘리얼 10대 감성’ 아일릿 시작부터 다르다! 방시혁 프로듀서x10대 프로듀서 만남'),
        ('선재 업고 튀어 OST Part 1', 'Stone Music Entertainment', 'BON FACTORY, Stone Music Entertainment', '국내', 'OST',
-        'upload/album/소나기.jpg', 11, '2024-01-10',
+        '/upload/album/소나기.jpg', 11, '2024-01-10',
         '드라마 속 밴드 ''이클립스''가 선보이는 첫 번째 OST! tvN 월화드라마 ‘선재 업고 튀어’가 드라마의 몰입도를 높일 OST들을 선공개한다');
 
 -- album_tb에 더미 데이터 삽입
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Map of the Soul: 7', 'YG PLUS', 'BIGHIT MUSIC', '국내', '정규', 'upload/album/MAP OF THE SOUL 7.jpg', 12,
+VALUES ('Map of the Soul: 7', 'YG PLUS', 'BIGHIT MUSIC', '국내', '정규', '/upload/album/MAP OF THE SOUL 7.jpg', 12,
         '2020-02-21', '방탄소년단, 정규 4집 ‘MAP OF THE SOUL : 7’ 발매!
 ‘온전한 나’의 모습을 찾기 위한 방탄소년단의 솔직한 이야기
 
@@ -115,7 +118,7 @@ VALUES ('The Album', 'YG PLUS', 'YG Entertainment', '국내', '정규', 'upload/
 ‘Lovesick Girls’ 외에도 전 세계적 파급력을 증명한 카리스마 넘치는 힙합 사운드의 ‘How You Like That’부터 팝스타 셀레나 고메즈와 콜라보 한 톡톡 튀는 경쾌한 멜로디의 ‘Ice Cream’까지- 블랙핑크만의 개성과 매력 넘치는 다양한 사운드를 담았다. 블랙핑크의 무궁한 음악적 스펙트럼을 ‘THE ALBUM’을 통해 확인할 수 있을 것이다.
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Palette', '카카오엔터테인먼트', '카카오엔터테인먼트', '국내', '정규', 'upload/album/Palette.jpg', 14,
+VALUES ('Palette', '카카오엔터테인먼트', '카카오엔터테인먼트', '국내', '정규', '/upload/album/Palette.jpg', 14,
         '2017-04-21', '작은 순간순간을 예쁜 물감으로 만들어, 아이유의 ‘이 지금’을 빼곡히 채워내다.
 ‘아이유(IU)’ 정규4집 [Palette] 전격 발매!
 
@@ -139,7 +142,7 @@ VALUES ('Palette', '카카오엔터테인먼트', '카카오엔터테인먼트',
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Eyes Wide Open', 'Dreamus', 'JYP Entertainment', '국내', '정규', 'upload/album/eyeswideopen.jpg', 15,
+VALUES ('Eyes Wide Open', 'Dreamus', 'JYP Entertainment', '국내', '정규', '/upload/album/eyeswideopen.jpg', 15,
         '2020-10-26', '트와이스, 10월 26일 두 번째 정규 앨범 ''Eyes wide open'' 및 타이틀곡 ''I CAN’T STOP ME'' 발표!
 
 트와이스가 10월 26일 정규 2집 ''Eyes wide open''(아이즈 와이드 오픈)을 발매한다.
@@ -172,7 +175,7 @@ JYP엔터테인먼트 수장 박진영은 트와이스의 히트곡 ''SIGNAL''(�
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('Don`t Mess Up My Tempo', '카카오엔터테인먼트', 'SM Entertainment', '국내', '정규',
-        'upload/ablum/dontmessupmytempo.png', 16, '2018-11-02', '‘K-POP 킹’ 엑소의 귀환!
+        '/upload/ablum/dontmessupmytempo.png', 16, '2018-11-02', '‘K-POP 킹’ 엑소의 귀환!
 정규 5집 ‘DON’T MESS UP MY TEMPO’ 공개!
 타이틀 곡 ‘Tempo’ 포함 다채로운 장르의 총 11곡 수록!
 
@@ -198,7 +201,7 @@ VALUES ('Don`t Mess Up My Tempo', '카카오엔터테인먼트', 'SM Entertainme
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('The ReVe Festival: Finale', '카카오엔터테인먼트', 'SM Entertainment', '국내', '정규',
-        'album/album/therevefestivalfinale.jpg', 17, '2019-12-23', 'Album Introduce
+        '/album/album/therevefestivalfinale.jpg', 17, '2019-12-23', 'Album Introduce
 레드벨벳, 2019년 음악 축제 화려한 피날레!
 리패키지 앨범 ‘‘The ReVe Festival’ Finale’ 발매!
 쿨&스윗 러브송 ‘Psycho’로 독보적인 음악 세계 ‘레벨 업’ 한다!
@@ -220,7 +223,7 @@ VALUES ('The ReVe Festival: Finale', '카카오엔터테인먼트', 'SM Entertai
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('THINKING Part.1', '카카오엔터테인먼트', 'KOZ Entertainment', '국내', '미니', 'upload/album/thinking.jpg', 18,
+VALUES ('THINKING Part.1', '카카오엔터테인먼트', 'KOZ Entertainment', '국내', '미니', '/upload/album/thinking.jpg', 18,
         '2019-09-30', 'THINKING of what,
 THINKING of who,
 What is ZICO THINKING?
@@ -236,7 +239,7 @@ THINKING Part.2 COMING VERY SOON.
 
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Warning', '카카오엔터테인먼트', '㈜메이크어스엔터테인먼트', '국내', '미니', 'upload/album/warning.jpg', 19, '2018-09-04',
+VALUES ('Warning', '카카오엔터테인먼트', '㈜메이크어스엔터테인먼트', '국내', '미니', '/upload/album/warning.jpg', 19, '2018-09-04',
         '‘가시나’, ‘주인공’ 에 이어지는 3부작 프로젝트의 완성, ‘WARNING’(워닝)
 네 환상에 아름다운 나는 없어, 사이렌 (Siren)
 
@@ -255,7 +258,7 @@ VALUES ('Warning', '카카오엔터테인먼트', '㈜메이크어스엔터테�
 선미의 3부작 프로젝트를 모두 담아낸 미니앨범 ‘WARNING(워닝)’과 타이틀곡 ‘사이렌(Siren)’은 여성 솔로 아이콘에서 뮤지션으로 더욱 성숙해지고 있는 독보적인 여성 솔로 아티스트 선미의 또 다른 시작점이다.
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('An Ode', 'YG PLUS', '플레디스엔터테인먼트', '국내', '정규', 'upload/album/anode.jpg', 20,
+VALUES ('An Ode', 'YG PLUS', '플레디스엔터테인먼트', '국내', '정규', '/upload/album/anode.jpg', 20,
         '2019-09-16', '세븐틴, 탄탄하고 성숙해진 완성형 음악 선사...정규 3집 [An Ode] 발매!
 세븐틴, 정규 3집 [An Ode] 발매…‘세븐틴이 보내는 선율’!
 세븐틴, 9월 16일 정규 3집 [An Ode] 발매! 타이틀 곡 치명적 매력의 ‘독:Fear’!
@@ -276,7 +279,7 @@ VALUES ('An Ode', 'YG PLUS', '플레디스엔터테인먼트', '국내', '정규
 이처럼 다양한 상황 속 느껴지는 감정과 보내고 싶은 메시지를 곡으로 형상화하여 써내려간 세븐틴의 선율은 하나의 [An Ode]로 완성, ‘두려움’을 마주한 이들의 성장통이 또 어떤 결과를 이뤄나갈지 세븐틴이 추구할 앞으로의 방향성에 귀추를 주목하게 만든다.
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Moonlight', '카카오엔터테인먼트', 'SM Entertainment', '해외', '싱글', 'upload/album/Moonlight.jpg',
+VALUES ('Moonlight', '카카오엔터테인먼트', 'SM Entertainment', '해외', '싱글', '/upload/album/Moonlight.jpg',
         21, '2024-06-05', 'NCT DREAM, 日 두 번째 싱글 ‘Moonlight’ 공개!
 타이틀 곡 ‘Moonlight’ & 수록곡 ‘Stupid Cupid’ 2곡 수록!
 
@@ -289,8 +292,8 @@ NCT DREAM이 돔투어의 열기를 이어 일본 두 번째 싱글 ‘Moonlight
 -- 테이블: song
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
-VALUES ('전부 너였다', '런치송 프로젝트', '양재선', 'upload/song/전부너였다.mp4', 'Ballad', true, 'upload/song/전부너였다.mp3', now(), 1, '가슴을 떼어 놓은
+                     lyrics, artist_id)
+VALUES ('전부 너였다', '런치송 프로젝트', '양재선', '/upload/song/전부너였다.mp4', 'Ballad', true, '/upload/song/전부너였다.mp3', now(), 1, '가슴을 떼어 놓은
 채 살 순 없나요
 아무런 느낌도 없는 채로
 눈물을 닦을 힘도
@@ -328,10 +331,9 @@ VALUES ('전부 너였다', '런치송 프로젝트', '양재선', 'upload/song/
 보내고 보내도 헤어지고
 다시 헤어져도
 나는 또 그대겠죠
-'),
+', 1),
 
-       ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', 'upload/슈퍼노바.mp4', 'Dance',
-        true, 'upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
+('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/슈퍼노바.mp4', 'Dance',true, '/upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
 Watch out
 Look at me go
 재미 좀 볼
@@ -418,10 +420,10 @@ Supernova
 질문은 계속돼 Ah Oh Ay
 (Nova)
 Bring the light of a dying star
-Supernova'),
+Supernova',2),
 
        ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)',
-        'upload/Armageddon.mp4', 'Dance', true, 'upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
+        '/upload/Armageddon.mp4', 'Dance', true, '/upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
 Shoot
 Imma get ’em
 Shoot
@@ -541,9 +543,9 @@ Warning all night long)
 Armageddon
 (Aw wayo wayo)
 끝과 시작의
-Armageddon'),
+Armageddon',2),
 
-       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, 'upload/tone.mp3',
+       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/tone.mp3',
         '2024-05-27', 2, 'We Set The Tone
 Music on where we go
 미친 Beat drum
@@ -677,10 +679,10 @@ We Set The Tone
 
 We Set The Tone
 We take it home
-We Set The Tone'),
+We Set The Tone',2),
 
        ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',
-        false, 'upload/Mine.mp3', '2024-05-27', 2, '예고 없이
+        false, '/upload/Mine.mp3', '2024-05-27', 2, '예고 없이
 지는 그림자
 Mine
 두려움을
@@ -819,10 +821,10 @@ Mine
 It’s all Mine
 know you want it like
 It’s all Mine
-Mine'),
+Mine',2),
 
        ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
-        'upload/Licorice.mp4', 'Dance', false, 'upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
+        '/upload/Licorice.mp4', 'Dance', false, '/upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
 Licorice
 Licorice
@@ -944,10 +946,10 @@ Licorice
 Licorice
 Licorice
 자꾸 손이 가
-Like Licorice'),
+Like Licorice',2),
 
        ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,
-        'Dance', false, 'upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
+        'Dance', false, '/upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
 ba ba
 Bahama, hama
 (Bahama)
@@ -1082,10 +1084,10 @@ Bahama, hama
 We should go
 To the beach
 Take it slow
-Bahama'),
+Bahama',2),
 
        ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
-        'upload/Long Chat.mp4', 'Dance', false, 'upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
+        '/upload/Long Chat.mp4', 'Dance', false, '/upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
 Woo Ah
 
@@ -1230,9 +1232,9 @@ Hashtag
 너의 속마음을 듣고파
 
 I’ll be the girl who likes a
-Long Chat'),
+Long Chat',2),
 
-       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, 'upload/Prologue.mp3',
+       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/Prologue.mp3',
         '2024-05-27', 2, 'Woo Woo Woo
 La-la
 Woo Woo Woo
@@ -1331,10 +1333,10 @@ Woo Woo Woo
 La-la
 Woo Woo Woo
 La-la
-'),
+',2),
 
-       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', 'upload/Live My Life.mp4',
-        'Rock/Metal', false, 'upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
+       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4',
+        'Rock/Metal', false, '/upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
 고지식한
 그런 사고방식
 Say 솔직한 마음만
@@ -1436,9 +1438,9 @@ Live My Life
 외쳐봐
 Live My Life
 
-Life'),
+Life',2),
 
-       ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, 'upload/목소리 (Melody).mp3',
+       ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/목소리 (Melody).mp3',
         '2024-05-27', 2, 'Every night
 지친 하루 끝에
 커져가는 빈자리
@@ -1518,11 +1520,11 @@ Oh You’re the one
 나를 부르는
 목소리
 우릴 이어준
-목소리'),
+목소리',2),
 
        ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman',
         'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)',
-        'upload/How Sweet.mp4', 'Dance', true, 'upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
+        '/upload/How Sweet.mp4', 'Dance', true, '/upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
 알게 됐어 나 (I know)
 그동안 맨날
 Always up and down (No more)
@@ -1609,10 +1611,10 @@ Don’t knock on my door 너 얼른 나가버려
 Toxic lover
 You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
-Don’t knock on my door, I’ll see you out'),
+Don’t knock on my door, I’ll see you out',3),
 
        ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman',
-        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', 'upload/해야 (HEYA).mp4', 'Dance', true, 'upload/해야 (HEYA).mp3', '2024-04-29', 4,
+        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/해야 (HEYA).mp4', 'Dance', true, '/upload/해야 (HEYA).mp3', '2024-04-29', 4,
         'Let’s get it
     Look at it
     Pay attention
@@ -1707,12 +1709,12 @@ Don’t knock on my door, I’ll see you out'),
     해야 해야 해야
     뜨겁게 떠오르는 해야
     별안간 홀린 그 순간 Bite
-    Da da da dun dun dun'),
+    Da da da dun dun dun',4),
 
        ('첫 만남은 계획대로 되지 않아',
         'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK',
-        'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', 'upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
-        'upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
+        'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', '/upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
+        '/upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
 거울 속에 내 표정 봐 봐
 느낌 So good 기다려온 D-day
 연습했던 손든 인사도 그대로 하면 돼
@@ -1764,10 +1766,10 @@ Na na na-
 
 이렇게 만나서 반가워
 내일 또 봐 안녕
-'),
+',5),
 
        ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영',
-        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', 'upload/고민중독.mp4', 'Rock/Metal', true, 'upload/고민중독.mp3',
+        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/고민중독.mp4', 'Rock/Metal', true, '/upload/고민중독.mp3',
         '2024-04-01', 6, 'One! Two! Q! W! E! R!
 어떤 인사가 괜찮을까 천 번쯤 상상해 봤어
 근데 오늘도 천 번 하고 한 번 더 고민 중
@@ -1806,9 +1808,9 @@ Na na na-
 벅차오르다 못해 내 맘이 쿡쿡 아려와
 두 번은 말 못 해 너 지금 잘 들어봐
 매일 고민하고 연습했던 말
-좋아해'),
+좋아해',6),
 
-       ('사랑은 늘 도망가', '홍진영', '강태규', 'upload/사랑은 늘 도망가.mp4', 'Ballad', true, 'upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
+       ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
 붙잡지 못하고 가슴만 떨었지
 내 아름답던 사람아
@@ -1841,10 +1843,10 @@ Na na na-
 꼭 움켜쥐지만
 그리움이 쫓아 사랑은 늘 도망가
 잠시 쉬어가면 좋을 텐데
-잠시 쉬어가면 좋을 텐데'),
+잠시 쉬어가면 좋을 텐데',7),
 
-       ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', 'upload/SPOT! (feat. JENNIE).mp4',
-        'HipHop', true, 'upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
+       ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', '/upload/SPOT! (feat. JENNIE).mp4',
+        'HipHop', true, '/upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
 Turn the music up
 
 Uhm we’re not going home tonight, alright
@@ -1915,10 +1917,10 @@ Everybody Stop
 Wait a minute ahhh
 
 Come vibe with us
-Ride with us'),
+Ride with us',8),
 
        ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,
-        'upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
+        '/upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
 똑같이 하루를 시작하고
 온종일 한 손엔 아이스 아메리카노
 피곤해 죽겠네
@@ -1964,12 +1966,12 @@ Ride with us'),
 나는 생각은 딱 질색이니까
 
 아냐 지나치는 게 나을 것 같아
-나는 아픈 건 딱 질색이니까'),
+나는 아픈 건 딱 질색이니까',9),
 
        ('Magnetic',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
-        'upload/Magnetic.mp4', 'Dance', true, 'upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
+        '/upload/Magnetic.mp4', 'Dance', true, '/upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
 I’m just trying to play it cool
 But I just can’t hide that
 I want you
@@ -2045,9 +2047,9 @@ Dash-da-da Dash-da-da Dash-da
 Like it’s magnetic
 BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
-Baby don’t say no'),
+Baby don’t say no',10),
 
-       ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, 'upload/소나기.mp3',
+       ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/소나기.mp3',
         '2024-04-08', 11, '그치지 않기를 바랬죠
     처음 그대 내게로 오던 그날에
     잠시 동안 적시는
@@ -2101,12 +2103,11 @@ Baby don’t say no'),
     내게 주었던
     작은 기억 하나도
     오늘도 새겨봅니다
-    내겐 선물인 그댈');
-
+    내겐 선물인 그댈',12);
 
 -- song_tb에 더미 데이터 삽입
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('ON', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
 ', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
 ', '/upload/song/ON.mp4', 'Dance', TRUE, '/upload/song/ON.mp3', '2020-02-21', 12, 'I can''t understand what people are sayin''
@@ -2216,9 +2217,9 @@ All that I know
 is just goin’ on & on & on & on
 (Eh-oh)
 가져와 bring the pain oh yeah
-');
+',12);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics)
+                     lyrics,artist_id)
 VALUES ('Lovesick Girls', 'TEDDY, 24, 제니 (JENNIE), Brian Lee, Leah Haywood, R.Tee, David Guetta', 'TEDDY, LØREN, 지수 (JISOO), 제니 (JENNIE), DANNY CHUNG
 ', '/upload/song/Lovesick Girls.mp4', 'Pop', TRUE, '/upload/song/Lovesick Girls.mp3', '2020-10-02', 13, '영원한 밤
 창문 없는 방에
@@ -2310,49 +2311,706 @@ Lovesick girls
 아프고 또 아파도
 Lovesick girls
 But we’re still looking for love
-');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics)
--- VALUES ('Palette', 'IU', 'IU', 'palette_mv.mp4', 'Pop', TRUE, 'palette.mp3', CURRENT_TIMESTAMP, 3,'I like it, I’m twenty-five...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('I CAN`T STOP ME', 'J.Y. Park', 'J.Y. Park', 'icantstopme_mv.mp4', 'Dance', TRUE, 'icantstopme.mp3',
---         CURRENT_TIMESTAMP, 4, 'I can’t stop me, can’t stop me...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Tempo', 'Jhun', 'Jhun', 'tempo_mv.mp4', 'Pop', TRUE, 'tempo.mp3', CURRENT_TIMESTAMP, 5, 'I can’t believe...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Psycho', 'Kenzie', 'Kenzie', 'psycho_mv.mp4', 'Pop', TRUE, 'psycho.mp3', CURRENT_TIMESTAMP, 6,
---         'You got me feeling like a psycho...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Any Song', 'Zico', 'Zico', 'anysong_mv.mp4', 'Hip Hop', TRUE, 'anysong.mp3', CURRENT_TIMESTAMP, 7,
---         'I just wanna be happier...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Siren', 'Sunmi', 'Sunmi', 'siren_mv.mp4', 'Pop', TRUE, 'siren.mp3', CURRENT_TIMESTAMP, 8,
---         'Get away out of my face...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Pop', TRUE, 'fear.mp3', CURRENT_TIMESTAMP, 9,
---         'Even though I’m anxious...');
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics)
--- VALUES ('Make A Wish (Birthday Song)', 'Kenzie', 'Kenzie', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
---         CURRENT_TIMESTAMP, 10, 'I can do this all day...');
+',13);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('팔레트 (Feat. G-DRAGON)', '아이유 (IU)', '아이유 (IU)', '/upload/song/Palette.mp4', 'Ballade', TRUE,
+        '/upload/song/Palette.mp3', '2017-04-21', 14, '이상하게도 요즘엔 그냥 쉬운 게 좋아
+하긴 그래도 여전히 코린 음악은 좋더라
+Hot Pink 보다 진한
+보라색을 더 좋아해
+또 뭐더라 단추 있는
+Pajamas Lipstick
+좀 짓궂은 장난들
+I like it I''m twenty five
+날 좋아하는 거 알아
+I got this I''m truly fine
+이제 조금 알 것 같아 날
+긴 머리보다 반듯이 자른
+단발이 좋아
+하긴 그래도 좋은 날 부를 땐
+참 예뻤더라
+오 왜 그럴까 조금
+촌스러운 걸 좋아해
+그림보다 빼곡히 채운 Palette 일기 잠들었던 시간들
+I like it I''m twenty five
+날 미워하는 거 알아
+I got this I''m truly fine
+이제 조금 알 것 같아 날
+어려서 모든 게 어려워
+잔소리에 매 서러워
+꾸중만 듣던 철부지 애
+겨우 스무고개 넘어 기쁨도 잠시 어머
+아프니까 웬 청춘이래
+지은아 오빠는 말이야 지금 막 서른인데
+나는 절대로 아니야 근데 막 어른이 돼
+아직도 한참 멀었는데 너보다 다섯 살 밖에 안 먹었는데
+스물 위 서른 아래
+고맘때 Right there
+애도 어른도 아닌 나이 때
+그저 나일 때
+가장 찬란하게 빛이 나
+어둠이 드리워질 때도 겁내지 마
+너무 아름다워서 꽃잎 활짝 펴서
+언제나 사랑 받는 아이 YOU
+Palette 일기 잠들었던 시간들
+I like it I''m twenty five
+날 좋아하는 거 알아
+I got this I''m truly fine
+이제 조금 알 것 같아 날
+아직 할 말이 많아
+I like it I''m twenty five
+날 미워하는 거 알아
+I got this I''ve truly found
+이제 조금 알 것 같아 날
+',14);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('I CAN`T STOP ME', 'Melanie Fontana, Michel ''Lindgren'' Schulz, A Wright
+', 'J.Y. Park "The Asiansoul", 심은지', '/upload/song/I CAN`T STOP ME.mp4', 'Dance', TRUE,
+        '/upload/song/I CAN`T STOP ME.mp3',
+        '2020-10-26', 15, '알람이 울려대
+Ring ring a ling
+서로의 눈길이 닿을 때마다
+알면서 빙빙 도는데
+점점 다가가잖아
+I know it’s too late
+마음속으로는
+다 알고 있잖아
+결국에는 선을
+넘게 될 거라는 걸
+I’m warning myself
+너 그러면 안 돼
+매분, 매초
+내 맘이 내 맘을 추월해
+Out of control
+
+나를 감시하는 저
+Spot spot spotlight
+비출수록
+어둠 속으로 빨려 들어
+끝이 보이는데
+I know it’s not right
+I can’t stop me
+can’t stop me
+
+내 앞에 놓여진 이
+Red red red line
+건너편의 너와 난
+이미 눈을 맞춰
+느끼고 싶어
+짜릿한 Highlight
+I can’t stop me
+can’t stop me
+
+I can’t stop me
+can’t stop me
+
+눈감아 달라구 Ya ya
+딱 한 번만
+No rules ah ah
+모른 척해 줘
+Lights off tonight
+나 참을 수 없을 거 같아
+Losing myself
+
+이제는 Turning back
+불가능해 난 점점
+더 깊은 어둠에
+너무나 짜릿해
+나 눈을 감을래
+다시는 돌아갈 수
+없을 것만 같애
+Out of control
+
+나를 감시하는 저
+Spot spot spotlight
+비출수록
+어둠 속으로 빨려 들어
+끝이 보이는데
+I know it’s not right
+I can’t stop me
+can’t stop me
+
+내 앞에 놓여진 이
+Red red red line
+건너편의 너와 난
+이미 눈을 맞춰
+느끼고 싶어
+짜릿한 Highlight
+I can’t stop me
+can’t stop me
+
+Risky risky wiggy 위기
+This is an emergency
+Help me, help me
+somebody stop me
+Cuz I know I can’t stop me
+답은 알고 있잖아
+근데 가고 있잖아
+이러고 싶지 않아
+내 안에 내가 또 있나 봐
+
+나는 원하는데
+원하는 게 안돼
+Guilty 난 싫은데
+I can’t stop me
+can’t stop me
+can’t stop me
+
+나를 감시하는 저
+Spot spot spotlight
+비출수록
+어둠 속으로 빨려 들어
+끝이 보이는데
+I know it’s not right
+I can’t stop me
+can’t stop me
+
+내 앞에 놓여진 이
+Red red red line
+건너편의 너와 난
+이미 눈을 맞춰
+느끼고 싶어
+짜릿한 Highlight
+I can’t stop me
+can’t stop me
+
+I can’t stop me
+can’t stop me
+',15);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('Tempo', 'Tay Jasper, Leven Kali, MZMC, JAMIL “DIGI” CHAMMAS, Adrian McKinnon
+', 'JQ, 페노메코 (PENOMECO), 유영진', 'tempo_mv.mp4', 'Dance', TRUE, '/upload/song/Tempo.mp3', '2018-11-02', 16, 'I can''t believe
+기다렸던 이런 느낌
+나만 듣고 싶은 그녀는 나의 멜로디
+하루 종일 go on and on and oh
+떠나지 않게 그녈 내 곁에
+Don''t mess up my tempo
+들어봐 이건 충분히
+I said don''t mess up my tempo
+그녀의 맘을 훔칠 beat
+어디에도 없을 리듬에 맞춰 1, 2, 3
+Don''t mess up my tempo
+멈출 수 없는 이끌림
+매혹적인 넌 lovely
+틈 없이 좁혀진 거리
+불규칙해지는 heartbeat
+잠시 눈을 감아 trust me
+밖으로 나갈 채비 미리 해둬 Are you ready?
+오늘은 내가 캐리 도시 나 사이의 케미
+이미 나와 놓곤 뭐가 창피해 ma boo
+어정쩡 어버버 할 필요 없다고
+챙길 건 없으니 손잡아 my lady
+가는 길마다 레드 카펫 또 런웨이인걸
+발걸음이 남달라
+지금 이 속도 맞춰보자 tempo
+Baby girl 아침을 설레게 하는 모닝콜
+매일 봐도 보고 싶은 맘인걸
+지금부터 나와 Let''s get down
+모든 것이 완벽하게 좋아
+So don''t slow it up for me
+Don''t mess up my tempo
+들어봐 이건 충분히
+I said don''t mess up my tempo
+그녀의 맘을 훔칠 beat
+어디에도 없을 리듬에 맞춰 1, 2, 3
+Don''t mess up my tempo
+멈출 수 없는 이끌림
+주윌 둘러봐 lovely
+틈 없이 좁혀진 거리
+너에게 맞춰진 heartbeat
+하고 싶은 대로 teach me
+여긴 내 구역 Don''t test me
+혼자 있기 어색하다면 보내줘 message
+Now you got me flexin''
+주윌 둘러봐
+널 보는 들러리들 속 위대한 개츠비 (Hold on wow)
+I''m doing alright baby girl you don''t know
+치워 네 머리 위에 물음표
+내 사전에 없는 L.I.E
+너는 이미 자연스럽게 맞추고 있어 내 tempo
+Baby girl 내 어깨에 살짝 기댄 그대의
+아련한 향기가 다시 내 맘에
+소용돌이치며 몰아친다
+이대로 난 영원하고 싶다
+So don''t mess up my tempo baby
+Don''t slow it up for me
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+Don''t mess up my tempo
+내 눈을 바라보고 말해
+나의 귓가에만 닿게
+나만 사랑한다 말해
+나밖에 없다고 말해
+더 이상 흔들리지 않게
+절대 널 뺏기지 않게
+누구도 건들 수 없게
+내 곁에 너를 지킬게
+내 마음이 느껴지니
+나를 감싸 안은 유일한 나만의 savior
+모두 그런 널 바라보게 돼
+I can''t believe
+기다렸던 이런 느낌
+나만 듣고 싶은 그녀는 나의 멜로디
+하루 종일 go on and on and oh
+떠나지 않게 그녈 내 곁에
+Don''t mess up my tempo
+따라와 이건 충분히
+I said don''t mess up my tempo
+완전히 다른 색의 beat
+어디에도 없을 이런 완벽한 1, 2, 3
+Don''t mess up my tempo
+멈출 수 없는 이끌림
+',16);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('Psycho', 'Andrew Scott, Cazzi Opeia, EJAE', 'Kenzie', '/upload/song/Psycho.mp4', 'Dance', TRUE,
+        '/upload/song/Psycho.mp3', '2019-12-23', 17,
+        'Psycho
+널 어쩌면 좋을까
+이런 맘은 또 첨이라
+Up & Down이 좀 심해
+조절이 자꾸 잘 안돼
+하나 확실한 건
+I don''t play the game
+우리 진짜 별나대
+그냥 내가 너무 좋아해
+넌 그걸 너무 잘 알고
+날 쥐락펴락해
+나도 마찬가지인걸
+우린 참 별나고 이상한 사이야
+서로를 부서지게
+(부서지게)
+그리곤 또 껴안아
+(그리곤 또 껴안아)
+You got me feeling like a
+psycho psycho
+우릴 보고 말해 자꾸 자꾸
+다시 안 볼 듯 싸우다가도
+붙어 다니니 말야
+이해가 안 간대
+웃기지도 않대
+맞아 Psycho psycho
+서로 좋아 죽는 바보 바보
+너 없인 어지럽고 슬퍼져
+기운도 막 없어요
+둘이 잘 만났대
+Hey now we''ll be ok
+Hey trouble
+경고 따윈 없이 오는 너
+I''m original visual
+우린 원래 이랬어 Yeah
+두렵지는 않아
+(흥미로울 뿐)
+It''s hot! Let me just hop
+어떻게 널 다룰까? Ooh
+어쩔 줄을 몰라 너를 달래고
+매섭게 발로 차도
+가끔 내게 미소 짓는 널
+어떻게 놓겠어 Ooh
+우린 아름답고 참 슬픈 사이야
+서로를 빛나게 해
+(Tell me now)
+마치 달과 강처럼
+그리곤 또 껴안아
+You got me feeling like a
+psycho psycho
+우릴 보고 말해 자꾸 자꾸
+다시 안 볼 듯 싸우다가도
+붙어 다니니 말야
+이해가 안 간대
+웃기지도 않대
+맞아 Psycho psycho
+서로 좋아 죽는 바보 바보
+너 없인 어지럽고 슬퍼져
+기운도 막 없어요
+둘이 잘 만났대
+Hey now we''ll be ok
+Don''t look back
+그렇게 우리답게 가보자
+난 온몸으로 널 느끼고 있어
+Everything will be ok
+(You got me feeling like a psycho)
+Like a psycho psycho
+우릴 보고 말해 자꾸 자꾸
+다시 안 볼 듯 싸우다가도
+붙어 다니니 말야
+둘이 잘 만났대
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+It''s alright
+It''s alright
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+Hey now we''ll be ok
+It''s alright
+It''s alright
+우린 좀 이상해
+Psycho
+',17);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('천둥벌거숭이 (Feat. Jvcki Wai, 염따)', '지코 (ZICO), Pop Time', '지코 (ZICO)', '/upload/song/Daredevil.mp4', 'HipHop',
+        TRUE, '/upload/song/Daredevil.mp3', '2019-09-30', 18,
+        '그래서 어떻게 됐긴 어디도 안 가고
+내가 차린 회사랑 도장 찍었지
+빠른 페이스로 개체 수 불려나가 우린
+치타보다 몇 배나 민첩한 코끼리
+헛바람 든 것처럼 보여도
+가만 내비 둬 그건 열풍을 만들겠단 소리
+거드름 피우던 힙스터의 꿈은
+아이돌 출신이 주는 합격 목걸이
+자신감에는 근거가 넘쳐
+과다 분비되고 있어 세로토닌
+계산 잘 하고 테이크 다운 걸어
+내게 손 뻗치면 결국 KOZ
+Z 세대 이제 내 시대로
+엔터 몇 군데는 셔터 내려
+유명세는 삽시간에 fade out
+스냅 댄스 테크토닉이 가까운 예야
+사실 이번 트랙 좀 가볍게
+풀어갈 생각이었는데 계획이 바뀌었네
+한 음절도 허투루 쓸 수 없지
+스윽스윽 지우고 고쳐쓰기를 반복해
+아예 아예
+Stop being a doormat
+법인 대표답게 영리해야만 해
+Saucin saucin
+Remaking history
+벌써 사무실로 성지순례 오지
+
+먹구름 깔아놔 저 무지개 위에
+가랑비로 너희들 가랑이를 적실게
+난 돈벼락 맞고 바짝 정신 차린 케이스
+우르르 쾅쾅 마른하늘이 무너져 yeah
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+겁대가리 상실한 젊은이
+절대 못 고쳐 내 버르장머리
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+잘 가라 어중이떠중이
+어떤 무리에 있든 난 우두머리
+
+Tupac 만큼 누가 리얼하든 감흥 없어
+GG 치고 이제 난 이 게임을 던져
+그러니까 제발 나를 좀 내버려 둬
+통장 잔고 보며 잠시 행복해져
+Ali처럼 날아서 나비 효과
+수퍼비처럼 맞았어 돈벼락
+이제 나는 뭣도 신경 쓸 필요가 없다는 걸
+너네 왜 아직도 몰라
+돈 낳는 말이야 돈을 낳는 말이야
+대체 그게 무슨 말이냐 하면
+(랩만 해서 잉태 내 뱃속 안에 새 지폐)
+아들은 세종대왕 딸내미는 사임당
+도대체가 그게 뭔 개소리냐고 하면
+(뱃속 안에 새 지폐 내 손안으로 직행)
+I mean…
+I mean I’m way too blessed
+I mean I’m way too blessed
+I dk why but I’m too blessed
+I dk why but I’m too blessed
+I mean I’m way too blessed
+I mean I’m way too blessed
+I dk why but I’m too blessed
+I dk why but I go ahead
+
+먹구름 깔아놔 저 무지개 위에
+가랑비로 너희들 가랑이를 적실게
+난 돈벼락 맞고 바짝 정신 차린 케이스
+우르르 쾅쾅 마른하늘이 무너져 yeah
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+겁대가리 상실한 젊은이
+절대 못 고쳐 내 버르장머리
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+잘 가라 어중이떠중이
+어떤 무리에 있든 난 우두머리
+
+염따는 토르
+성공의 망치를 얻네
+칙칙한 내 지갑에도 쾅
+노력의 번개를 내렸네
+난 이제 위대한 사랑이 빨리
+필요해 마치 재키 재키
+사주고 싶어 오천만 원짜리
+머리통만한 반지
+그치 그치 시간은 온다고
+괜찮아 아프면 더 울어
+따거는 정답을 알어
+재키는 blessed
+재키는 blessed
+안 소중한 사람 없네
+우리는 살아야 돼
+I''m way too flex
+
+먹구름 깔아놔 저 무지개 위에
+가랑비로 너희들 가랑이를 적실게
+난 돈벼락 맞고 바짝 정신 차린 케이스
+우르르 쾅쾅 마른하늘이 무너져 yeah
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+겁대가리 상실한 젊은이
+절대 못 고쳐 내 버르장머리
+They call me 천둥벌거숭이
+They call me 천둥벌거숭이
+잘 가라 어중이떠중이
+어떤 무리에 있든 난 우두머리
+',18);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('사이렌(Siren)', 'FRANTS, 선미', '선미', '/upload/song/siren.mp4', 'Dance', TRUE, '/upload/song/siren.mp3',
+        '2018-09-04', 19,
+        '내가 말했잖아 속지 말라고 이 손을 잡는 순간
+너는 위험해질 거라고
+Now you''re bleeding
+근데도 끌리니 뻔히 다 알면서도
+왜 그리 빤히 쳐다보니 놔 그냥
+조금도 망설이지 말고 놔 그냥
+너를 아프게 할 거란 걸
+알잖아
+네 환상에 아름다운 나는 없어
+Can''t you see that boy
+Get away out of my face
+더 다가오지 마 boy 슬퍼해도 난 울지 않아
+Get away out of my face
+더 바라보지 마 boy 슬퍼해도 난 울지 않아
+라랄라라라 라랄라라라
+라랄라라라 라랄라라라
+차가운 나를 보는 너의 눈빛
+우릴 비추던 달빛 이제는 저물어 간다고
+보이지 않니 날 놓지 못하는 손
+조금씩 붉어져가잖아 놔 그냥
+조금도 망설이지 말고 놔 그냥
+너를 아프게 할 거란 걸
+알잖아 네 환상에 아름다운
+나는 없어
+Can''t you see that boy
+Get away out of my face
+더 다가오지 마 boy 슬퍼해도 난 울지 않아
+Get away out of my face
+더 바라보지 마 boy 슬퍼해도 난 울지 않아
+라랄라라라 라랄라라라
+라랄라라라 라랄라라라
+Can''t you see that boy
+What
+Can''t you see that boy
+I ain''t cry no more
+Get away out of my face
+더 다가오지 마 boy 슬퍼해도 난 울지 않아
+Get away out of my face
+더 바라보지 마 boy 슬퍼해도 난 울지 않아
+라랄라라라 라랄라라라
+라랄라라라 라랄라라라
+',19);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('독 : Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Dance', TRUE, '/upload/song/Fear.mp3', '2019-09-16', 20,
+        '넌 내 기억을 지워야 돼 I’m poison
+I know I can’t take it no more
+
+영원한 건 절대 없단 걸
+알면서도 끝낼 수도 없어 Yeh
+(Tell me what you want)
+
+너에게 내어주고 싶던
+마음이 날 오히려 더 상처 내고 있어
+
+나는 위험해 너무 지독해
+내 진심보단 날카로운 진실이 중요해
+
+Got to get away
+I can’t hesitate anymore
+Everything turns gray
+난 내 환상 도려내 도망
+독이 번져 가기 전에
+Got to get away
+
+겁이 나 깨지 못해 또 거짓말을 해
+내 기억마저 물들고 있어
+Please baby 넌 내게서 물러서야 해
+Someone tell me what should I do
+
+넌 내 기억을 지워야 돼 I’m poison
+I know I can’t take it no more
+이 선을 넘지 못한 나를 사랑해줘
+The way I love the way I love
+
+계속해 반복해 나쁘게
+사랑해 Oh 또 후회해
+
+이렇게 너를 위험에
+눈 뜨게 하고 싶지 않아
+
+내 독은 피어나 통증은 깊은 밤
+내 진심은 왜 진실을 외면하는 건가
+
+Get out of my mind
+못해 감당 나도 내가 겁이 나서
+진실이 나를 묶어 놨어
+진심도 물들어서 결국 너도 젖어 들어
+변할까 두려워
+
+겁이 나 깨지 못해 또 거짓말을 해
+내 기억마저 물들고 있어
+Please baby 넌 내게서 물러서야 해
+Someone tell me what should I do
+
+넌 내 기억을 지워야 돼 I’m poison
+I know I can’t take it no more
+이 선을 넘지 못한 나를 사랑해줘
+The way I love the way I love
+
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+The way I love the way I love
+
+계속해서 반복되는 말들
+너로 멈춰버린 가사도
+언젠가 언젠가
+
+This is love 온몸에 퍼진
+내 모든 Fear 내 속의 상처
+매일 내가 너로 아파도
+The way I love the way I love
+
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+Uh uh wuh ya ya uh uh uh
+The way I love the way I love
+',20);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id)
+VALUES ('Moonlight', '카카오엔터테인먼트', 'SM ENTERTAINMENT', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
+        '2024-06-05', 21, '過ぎる今日に Good-bye
+手を振ろう (Oh yeah Oh yeah ey)
+数えて 1, 2, 3 now
+Oh Tune in on
+何が見えるの
+
+Oh
+窓に差し込む光
+Oh
+浴び照らすよ Reflection
+徐々に重なる波長
+夢が目覚める
+All shining bright
+Yeah, Like a crystal
+
+Dancing in the moonlight
+弾ける瞬間
+(Oway Oway O Oway Oway)
+Singing to the night sky
+繋がる世界
+(Oway Oway O Oway)
+そう どこにいても
+感じる心
+全身でもっと
+叫ぶのさ Ah Ah Ah
+閃く「今」を
+輝かせよう
+Dancing into the moonlight
+Frequencies of dream
+
+さあ 一歩踏み込んで
+重力からの解放
+イマジネーションはどこまでも
+Na na na na na na
+自由に跳べ Fly
+
+Yo 今こそ
+Here we go
+「今度」なんてない
+In my dictionary
+引き寄せの法則
+To the future and not the past
+Let’s go!
+
+Oh
+濃い霧のような迷い
+Oh
+振り払うのさ Reflection
+映し出したのは
+さめない夢 未来
+Yeah, Like a crystal
+
+Dancing in the moonlight
+弾ける瞬間
+(Oway Oway O Oway Oway)
+Singing to the night sky
+繋がる世界
+(Oway Oway O Oway)
+そう どこにいても
+感じる心
+全身でもっと
+叫ぶのさ Ah Ah Ah
+閃く「今」を
+輝かせよう
+Dancing into the moonlight
+Frequencies of dream
+
+The truth (Hey)
+目の前に (Don’t worry about that)
+何があろうとも
+Travel 越えて行ける Level
+今をもっと Revel Yeah
+想いを飛ばせ Dancing in the moon
+Dancing in the moonlight
+後悔なんてしない
+
+Dancing in the moonlight
+弾ける瞬間
+(Oway Oway O Oway Oway)
+Singing to the night sky
+繋がる世界
+(Oway Oway O Oway)
+そう どこにいても
+感じる心
+全身でもっと
+叫ぶのさ Ah Ah Ah
+閃く「今」を
+輝かせよう
+Dancing into the moonlight
+Frequencies of dream
+',21);
 
 
 --  테이블 : playlist
 
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (1, null, '최애곡 모음', '2024-06-21');
+values (1, null, '최애곡 모음', '2024-06-17');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (2, null, '여름이면 생각나는 노래', '2024-06-21');
+values (2, null, '신나는 노래 모음', '2024-06-20');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (3, null, '핫한 레전드 음원', '2024-06-21');
+values (3, null, '20240621', '2024-06-21');
 insert into playlist_tb(user_id, admin_id, name, created_at)
-values (4, null, '카페에서 나올 법한 노래 모음', '2024-06-21');
+values (4, null, '내맘', '2024-06-15');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (4, null, '내맘', '2024-06-15');
 
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '핫한 레전드 음원', '2024-06-01');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '지금 SNS에서 뜨는 음악', '2024-06-05');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, 'Editor''s Pick', '2024-06-07');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '운전할 때 들으면 따라 부르게 될걸요', '2024-06-15');
+insert into playlist_tb(user_id, admin_id, name, created_at)
+values (null, 1, '언제 들어도 기분이 좋아지는 노래들', '2024-06-16');
 
 -- 노래 플레이리스트 테이블
 
@@ -2368,13 +3026,117 @@ insert into playlist_song_tb (playlist_id, song_id)
 values (1, 5);
 
 insert into playlist_song_tb (playlist_id, song_id)
+values (2, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (2, 11);
+insert into playlist_song_tb (playlist_id, song_id)
+values (2, 12);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (3, 5);
+insert into playlist_song_tb (playlist_id, song_id)
+values (3, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (3, 15);
+
+insert into playlist_song_tb (playlist_id, song_id)
 values (4, 6);
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 7);
+values (4, 21);
+
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 8);
+values (5, 1);
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 9);
+values (5, 3);
 insert into playlist_song_tb (playlist_id, song_id)
-values (4, 10);
+values (5, 5);
+insert into playlist_song_tb (playlist_id, song_id)
+values (5, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (5, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (5, 16);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 21);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 20);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 19);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 18);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 17);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 16);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 15);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 14);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 13);
+insert into playlist_song_tb (playlist_id, song_id)
+values (6, 12);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 11);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 12);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 13);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 14);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 15);
+insert into playlist_song_tb (playlist_id, song_id)
+values (7, 16);
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 1);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 3);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 6);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 7);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 9);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 12);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 16);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 18);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 20);
+insert into playlist_song_tb (playlist_id, song_id)
+values (8, 21);
+
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 2);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 4);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 6);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 8);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 10);
+insert into playlist_song_tb (playlist_id, song_id)
+values (9, 14);
+
+
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 15);
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 16);
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 17);
+insert into playlist_song_tb (playlist_id, song_id)
+values (10, 18);
 
