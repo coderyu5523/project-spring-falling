@@ -26,72 +26,30 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/playlist/여행 Again (Feat. Cautious Clay).jpg" alt="Album Cover">
-                        </a>
+                {{#albumList}}
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <a href="#">
+                                <img src="..{{albumImg}}" alt="Album Cover">
+                            </a>
 
-                    </td>
-                    <td>
-                        <a href="#">NOWITZKI</a>
-                    </td>
+                        </td>
+                        <td>
+                            <a href="#">{{albumTitle}}</a>
+                        </td>
 
-                    <td class="table-artist">
-                        <a href="#">빈지노 (Beenzino)</a>
-                    </td>
-                    <td>
-                        <div class="d-flex button-row">
-                            <button type="button" class="btn btn-primary">앨범 수정</button>
-                            <button type="button" class="btn btn-danger">앨범 삭제</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/playlist/여행 Again (Feat. Cautious Clay).jpg" alt="Album Cover">
-                        </a>
-
-                    </td>
-                    <td>
-                        <a href="#">NOWITZKI</a>
-                    </td>
-
-                    <td class="table-artist">
-                        <a href="#">빈지노 (Beenzino)</a>
-                    </td>
-                    <td>
-                        <div class="d-flex button-row">
-                            <button type="button" class="btn btn-primary">앨범 수정</button>
-                            <button type="button" class="btn btn-danger">앨범 삭제</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/playlist/여행 Again (Feat. Cautious Clay).jpg" alt="Album Cover">
-                        </a>
-
-                    </td>
-                    <td>
-                        <a href="#">NOWITZKI</a>
-                    </td>
-
-                    <td class="table-artist">
-                        <a href="#">빈지노 (Beenzino)</a>
-                    </td>
-                    <td>
-                        <div class="d-flex button-row">
-                            <button type="button" class="btn btn-primary">앨범 수정</button>
-                            <button type="button" class="btn btn-danger">앨범 삭제</button>
-                        </div>
-                    </td>
-                </tr>
+                        <td class="table-artist">
+                            <a href="#">{{artist.name}}</a>
+                        </td>
+                        <td>
+                            <div class="d-flex button-row">
+                                <button type="button" class="btn btn-primary">앨범 수정</button>
+                                <button type="button" class="btn btn-danger">앨범 삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                {{/albumList}}
                 </tbody>
             </table>
         </div>
