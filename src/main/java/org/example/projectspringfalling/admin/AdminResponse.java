@@ -116,4 +116,14 @@ public class AdminResponse {
             this.agency = agency;
         }
     }
+
+    // 아티스트 목록보기
+    @AllArgsConstructor
+    @Data
+    public static class ArtistListDTO {
+        private Integer artistId;
+        private String artistImg;
+        private String artistName;
+        private String artistType;
+    }
 }

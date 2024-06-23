@@ -1,105 +1,63 @@
 {{>layout/sidebar}}
 
 <!-- Main content -->
-        <main role="main" class="main-body col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div class="main-container">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">가수 관리</h1>
-                </div>
+<main role="main" class="main-body col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="main-container">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">가수 관리</h1>
+        </div>
 
-                <div class="button-row">
-                    <button type="button" class="btn btn-primary">가수 등록</button>
-                    <button type="button" class="btn btn-success">가수 목록</button>
-                    <button type="button" class="btn btn-info">가수 검색</button>
-                </div>
+        <div class="button-row">
+            <button type="button" class="btn btn-primary">가수 등록</button>
+            <button type="button" class="btn btn-success">가수 목록</button>
+            <button type="button" class="btn btn-info">가수 검색</button>
+        </div>
 
-                <div class="playlist-body">
-                    <table class="playlist-table">
+        <div class="playlist-body">
+            <table class="playlist-table">
 
-                        <thead>
-                        <tr>
-                            <th><input type="checkbox"></th>
-                            <th style="font-size: 12px;">가수 사진</th>
-                            <th style="font-size: 12px;">가수 이름</th>
-                            <th style="font-size: 12px;">타입</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/admin/빈지노.jpg" alt="Album Cover">
-                                </a>
+                <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th style="font-size: 12px;">가수 사진</th>
+                    <th style="font-size: 12px;">가수 이름</th>
+                    <th style="font-size: 12px;">타입</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#artistList}}
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <a href="#">
+                                <img src="..{{artistImg}}" alt="Album Cover">
+                            </a>
 
-                            </td>
-                            <td>
-                                <a href="#">빈지노 (Beenzino)</a>
-                            </td>
+                        </td>
+                        <td>
+                            <a href="#">{{artistName}}</a>
+                        </td>
 
-                            <td class="table-artist">
-                                <a href="#">솔로</a>
-                            </td>
-                            <td>
-                                <div class="d-flex button-row">
-                                    <button type="button" class="btn btn-primary">가수 수정</button>
-                                    <button type="button" class="btn btn-danger">가수 삭제</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/admin/에스파.jpg" alt="Album Cover">
-                                </a>
+                        <td class="table-artist">
+                            <a href="#">{{artistType}}</a>
+                        </td>
+                        <td>
+                            <div class="d-flex button-row">
+                                <button type="button" class="btn btn-primary">가수 수정</button>
+                                <button type="button" class="btn btn-danger">가수 삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                {{/artistList}}
+                </tbody>
+            </table>
+        </div>
+        <!-- Song registration form -->
 
-                            </td>
-                            <td>
-                                <a href="#">에스파</a>
-                            </td>
-
-                            <td>
-                                <a href="#">그룹</a>
-                            </td>
-                            <td>
-                                <div class="d-flex button-row">
-                                    <button type="button" class="btn btn-primary">가수 수정</button>
-                                    <button type="button" class="btn btn-danger">가수 삭제</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/admin/이창섭.jpg" alt="Album Cover">
-                                </a>
-
-                            </td>
-                            <td>
-                                <a href="#">이창섭</a>
-                            </td>
-
-                            <td class="table-artist">
-                                <a href="#">솔로</a>
-                            </td>
-                            <td>
-                                <div class="d-flex button-row">
-                                    <button type="button" class="btn btn-primary">가수 수정</button>
-                                    <button type="button" class="btn btn-danger">가수 삭제</button>
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- Song registration form -->
-
-            </div>
-        </main>
     </div>
+</main>
+</div>
 </div>
 </body>
 </html>

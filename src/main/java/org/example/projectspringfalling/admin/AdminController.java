@@ -41,7 +41,9 @@ public class AdminController {
 
     // 가수 목록보기
     @GetMapping("/admin/artists")
-    public String artistList() {
+    public String artistList(HttpServletRequest request) {
+        request.setAttribute("artistList", adminService.getArtistList());
+
         return "admin/artist-list";
     }
 
