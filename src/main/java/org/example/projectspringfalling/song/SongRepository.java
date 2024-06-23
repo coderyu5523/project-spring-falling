@@ -26,7 +26,7 @@ public interface SongRepository extends JpaRepository<Song, Integer> {
     Optional<List<Song>> findByAutoComplete(@Param("keyword") String keyword);
 
     // 관리자 곡 목록보기
-    @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$SongListDTO(s.id, a.albumImg, s.title, s.artist, a.title) FROM Song s, Album a WHERE s.album.id = a.id")
+    @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$SongListDTO(s.id, a.id,a.albumImg, s.title, s.artist, a.title) FROM Song s, Album a WHERE s.album.id = a.id")
     List<AdminResponse.SongListDTO> findSongList();
 
     // 관리자 곡 상세보기
@@ -34,6 +34,6 @@ public interface SongRepository extends JpaRepository<Song, Integer> {
     AdminResponse.SongDetailDTO findOneSongById(Integer songId);
 
     // 관리자 앨범 상세보기의 장르들
-    @Query("SELECT s.genre FROM Song s, Album a WHERE s.album.id = a.id AND a.id = :albumId")
+    @Query("SELECT DISTINCT s.genre FROM Song s, Album a WHERE s.album.id = a.id AND a.id = :albumId")
     List<String> findAlbumGenre(Integer albumId);
 }

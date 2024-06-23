@@ -13,7 +13,7 @@ public class AdminController {
     private final AdminService adminService;
     private final HttpSession session;
 
-    // 관리자 앨범 상세보기
+    // 앨범 상세보기
     @GetMapping("/admin/albums/{id}")
     public String albumDetail(@PathVariable Integer id, HttpServletRequest request) {
         request.setAttribute("album", adminService.getAlbum(id));
@@ -35,13 +35,16 @@ public class AdminController {
 
     // 가수 상세보기
     @GetMapping("/admin/artists/{id}")
-    public String artistDetail(@PathVariable Integer id) {
+    public String artistDetail(@PathVariable Integer id, HttpServletRequest request) {
+        request.setAttribute("artist", adminService.getArtist(id));
         return "admin/artist-detail";
     }
 
     // 가수 목록보기
     @GetMapping("/admin/artists")
-    public String artistList() {
+    public String artistList(HttpServletRequest request) {
+        request.setAttribute("artistList", adminService.getArtistList());
+
         return "admin/artist-list";
     }
 

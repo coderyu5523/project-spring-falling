@@ -14,11 +14,11 @@
         <div class="container album-details">
             <div class="row">
                 <div class="col-md-3 album-art">
-                    <img src="../images/admin/에스파.jpg" alt="Album Cover">
+                    <img src="../..{{artist.artistImg}}" alt="Album Cover">
                 </div>
                 <div class="col-md-9 album-info">
-                    <h2>Supernova</h2>
-                    <p>그룹 | 댄스팝</p>
+                    <h2>{{artist.artistName}}</h2>
+                    <p>{{artist.artistType}} | {{artist.artistGenre}}</p>
                 </div>
             </div>
             <br>
@@ -34,64 +34,27 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>
-                            <a href="#">
-                                <img src="../images/admin/Armageddon - The 1st Album.jpg" alt="Album Cover">
-                            </a>
+                    {{#artist.artistAlbums}}
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <a href="/admin/albums/{{albumId}}">
+                                    <img src="../..{{albumImg}}" alt="Album Cover">
+                                </a>
 
-                        </td>
-                        <td>
-                            <a href="#">Armageddon - The 1st Album</a>
-                        </td>
+                            </td>
+                            <td>
+                                <a href="/admin/albums/{{albumId}}">{{albumTitle}}</a>
+                            </td>
 
-                        <td>
-                            <div class="d-flex button-row">
-                                <button type="button" class="btn btn-primary">앨범 수정</button>
-                                <button type="button" class="btn btn-danger">앨범 삭제</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>
-                            <a href="#">
-                                <img src="../images/admin/Armageddon - The 1st Album.jpg" alt="Album Cover">
-                            </a>
-
-                        </td>
-                        <td>
-                            <a href="#">Armageddon - The 1st Album</a>
-                        </td>
-
-
-                        <td>
-                            <div class="d-flex button-row">
-                                <button type="button" class="btn btn-primary">앨범 수정</button>
-                                <button type="button" class="btn btn-danger">앨범 삭제</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td>
-                            <a href="#">
-                                <img src="../images/admin/Armageddon - The 1st Album.jpg" alt="Album Cover">
-                            </a>
-
-                        </td>
-                        <td>
-                            <a href="#">Armageddon - The 1st Album</a>
-                        </td>
-
-                        <td>
-                            <div class="d-flex button-row">
-                                <button type="button" class="btn btn-primary">앨범 수정</button>
-                                <button type="button" class="btn btn-danger">앨범 삭제</button>
-                            </div>
-                        </td>
-                    </tr>
+                            <td>
+                                <div class="d-flex button-row">
+                                    <button type="button" class="btn btn-primary">앨범 수정</button>
+                                    <button type="button" class="btn btn-danger">앨범 삭제</button>
+                                </div>
+                            </td>
+                        </tr>
+                    {{/artist.artistAlbums}}
                     </tbody>
                 </table>
             </div>
