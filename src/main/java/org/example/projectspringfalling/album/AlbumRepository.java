@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AlbumRepository extends JpaRepository<Album, Integer> {
+    // 앨범 상세보기
+    @Query("SELECT DISTINCT s.genre FROM Album a, Song s WHERE s.album.id = :albumId")
+    List<String> findAlbumGenres(@Param("albumId") Integer albumId);
 
     // 가수 상세보기 (곡)
     @Query("SELECT al FROM Album al WHERE al.artist.id=:artistId")

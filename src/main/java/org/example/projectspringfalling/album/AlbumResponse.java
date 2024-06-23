@@ -21,16 +21,18 @@ public class AlbumResponse {
         private String albumImage; // 앨범 이미지
         private String albumTitle; // 앨범 이름
         private String category; // 앨범 유형
+        private String albumGenre; // 앨범 장르
         // TODO: Util써서 Timestamp가 아닌 String으로 받기
         private Timestamp createdAt; // 앨범 발매 날짜
         private String albumArtist; // 앨범 아티스트 이름
         private List<SongResponse.AlbumListDTO> songList = new ArrayList<>(); // 앨범 수록곡
 
-        public ListDTO(Album album, List<Song> songList) {
+        public ListDTO(Album album, List<Song> songList, String albumGenre) {
             this.albumId = album.getId();
             this.albumImage = album.getAlbumImg();
             this.albumTitle = album.getTitle();
             this.category = album.getCategory();
+            this.albumGenre = albumGenre;
             this.createdAt = album.getCreatedAt();
             this.albumArtist = album.getArtist().getName();
             this.songList = IntStream.range(0, songList.size())
@@ -48,6 +50,7 @@ public class AlbumResponse {
         private String albumImage; // 앨범 이미지
         private String albumTitle; // 앨범 이름
         private String category; // 앨범 유형
+        private String albumGenre; // 앨범 장르
         // TODO: Util써서 Timestamp가 아닌 String으로 받기
         private Timestamp createdAt; // 앨범 발매 날짜
         private String albumArtist; // 앨범 아티스트 이름
@@ -55,11 +58,12 @@ public class AlbumResponse {
         private String agency; // 기획사
         private String albumIntro; // 앨범 소개글
 
-        public DetailDTO(Album album) {
+        public DetailDTO(Album album, String albumGenre) {
             this.albumId = album.getId();
             this.albumImage = album.getAlbumImg();
             this.albumTitle = album.getTitle();
             this.category = album.getCategory();
+            this.albumGenre = albumGenre;
             this.createdAt = album.getCreatedAt();
             this.albumArtist = album.getArtist().getName();
             this.distributor = album.getDistributor();
