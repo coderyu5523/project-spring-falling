@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.example.projectspringfalling._core.utils.ArrayUtil.removeDuplicates;
 import static org.example.projectspringfalling._core.utils.FileUtil.fileSave;
 
 @RequiredArgsConstructor
@@ -24,14 +25,16 @@ public class AlbumService {
         Album album = albumRepository.findAlbumAndArtistById(albumId)
                 .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
         List<Song> songList = songRepository.findByAlbumId(albumId);
-        return new AlbumResponse.ListDTO(album, songList);
+        String albumGenre = removeDuplicates(albumRepository.findAlbumGenres(albumId));
+        return new AlbumResponse.ListDTO(album, songList, albumGenre);
     }
 
     // 앨범 상세보기
     public AlbumResponse.DetailDTO albumDetail(Integer albumId) {
         Album album = albumRepository.findAlbumAndArtistById(albumId)
                 .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
-        return new AlbumResponse.DetailDTO(album);
+        String albumGenre = removeDuplicates(albumRepository.findAlbumGenres(albumId));
+        return new AlbumResponse.DetailDTO(album, albumGenre);
     }
 
     public Album getImage(int id) {
