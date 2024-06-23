@@ -5,6 +5,7 @@ import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.AlbumRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public class SongService {
     private final SongRepository songRepository;
     private final AlbumRepository albumRepository;
 
+    @Transactional
     public SongResponse.DetailDTO songDetail(Integer songId) {
         Song song = songRepository.findSongAndAlbumAndArtistById(songId);
         return new SongResponse.DetailDTO(song, song.getAlbum());

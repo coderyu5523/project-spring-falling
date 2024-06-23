@@ -2,7 +2,9 @@ package org.example.projectspringfalling.album;
 
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.enums.FilePathEnum;
+import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.song.Song;
+import org.example.projectspringfalling.song.SongRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +17,22 @@ import static org.example.projectspringfalling._core.utils.FileUtil.fileSave;
 @Service
 public class AlbumService {
     private final AlbumRepository albumRepository;
+    private final SongRepository songRepository;
+
+    // 앨범 수록곡 보기
+    public AlbumResponse.ListDTO songList(Integer albumId) {
+        Album album = albumRepository.findAlbumAndArtistById(albumId)
+                .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
+        List<Song> songList = songRepository.findByAlbumId(albumId);
+        return new AlbumResponse.ListDTO(album, songList);
+    }
+
+    // 앨범 상세보기
+    public AlbumResponse.DetailDTO albumDetail(Integer albumId) {
+        Album album = albumRepository.findAlbumAndArtistById(albumId)
+                .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
+        return new AlbumResponse.DetailDTO(album);
+    }
 
     public Album getImage(int id) {
         Album album = albumRepository.findById(id).get();
