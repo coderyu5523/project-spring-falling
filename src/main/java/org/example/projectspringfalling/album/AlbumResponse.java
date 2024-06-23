@@ -39,7 +39,7 @@ public class AlbumResponse {
     }
 
 
-    // 앨범 수록곡 리스트 DTO
+    // 앨범 상세보기 DTO
     @NoArgsConstructor
     @Data
     public static class DetailDTO {

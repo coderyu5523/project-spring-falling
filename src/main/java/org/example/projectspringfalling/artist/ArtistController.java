@@ -26,6 +26,8 @@ public class ArtistController {
     // 가수 상세보기 (곡)
     @GetMapping("/artists/{artistId}/songs")
     public String artistDetailSongList(@PathVariable Integer artistId) {
+        ArtistResponse.ArtistSongListDTO resp = artistService.artistDetailSongList(artistId);
+        session.setAttribute("song", resp);
         return "artist/artist-album-list";
     }
 
