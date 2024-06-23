@@ -22,8 +22,10 @@ public class PlaylistController {
     }
 
     // 플레이리스트 보기
-    @GetMapping("/playlists/{id}")
-    public String playlist(@PathVariable Integer id) {
+    @GetMapping("/playlists/{playlistId}")
+    public String playlist(@PathVariable Integer playlistId) {
+        PlaylistResponse.PlaylistDetailDTO resp = playlistService.playlistDetail(playlistId);
+        session.setAttribute("playlist", resp);
         return "playlist/playlist";
     }
 
