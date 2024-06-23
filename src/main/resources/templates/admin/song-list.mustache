@@ -31,7 +31,7 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td>
-                            <a href="#">
+                            <a href="/admin/albums/{{albumId}}">
                                 <img src="..{{albumImg}}" alt="Album Cover">
                             </a>
 
@@ -41,10 +41,10 @@
                         </td>
 
                         <td class="table-artist">
-                            <a href="#">{{artist.name}})</a>
+                            <a href="/admin/artists/{{artist.id}}">{{artist.name}}</a>
                         </td>
                         <td class="table-artist">
-                            <a href="#">{{albumTitle}}</a>
+                            <a href="/admin/albums/{{albumId}}">{{albumTitle}}</a>
                         </td>
                         <td>
                             <div class="d-flex button-row">
