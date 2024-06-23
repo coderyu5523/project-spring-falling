@@ -1,21 +1,21 @@
 /* 아티스트의 앨범 페이지  */
-.main-container {
+.artist-song-list-main-container {
     display: flex;
     justify-content: center;
 }
 
-.contents {
+.artist-song-list-contents {
     width: 1100px;
 }
 
-.result-item {
+.artist-song-list-result-item {
     display: flex;
     gap: 20px;
     margin-left: 36px;
     align-items: center;
 }
 
-.result-item .album-cover .play-btn {
+.artist-song-list-result-item .artist-song-list-album-cover .artist-song-list-play-btn {
     color: #403FFF;
     font-size: 32px;
     align-items: center;
@@ -24,7 +24,7 @@
     left: 200px;
 }
 
-.album-info {
+.artist-song-list-album-info {
     margin-bottom: 10px;
     margin-top: 20px;
     display: flex;
@@ -32,65 +32,65 @@
     justify-content: center;
 }
 
-.album-info .album-release-date {
+.artist-song-list-album-info .artist-song-list-album-release-date {
     color: #6c757d;
 }
 
-.result-item .album-cover a img {
+.artist-song-list-result-item .artist-song-list-album-cover a img {
     width: 240px;
     height: 240px;
     border-radius: 100%;
 }
 
-.result-info h3 {
+.artist-song-list-result-info h3 {
     font-size: 25px;
     margin-bottom: 5px;
 }
 
-.result-info p {
+.artist-song-list-result-info p {
     font-size: 15px;
     margin-top: 7px;
 }
 
-.album-info p {
+.artist-song-list-album-info p {
     margin: 5px 0 0;
     font-size: 14px;
 }
 
-.info-icons a {
+.artist-song-list-info-icons a {
     margin-right: 15px;
     font-size: 18px;
 }
 
-.result-item .info-icons {
+.artist-song-list-result-item .artist-song-list-info-icons {
     display: flex;
     flex-direction: row;
     margin-top: 15px;
 }
 
-.result-item .title-play {
+.artist-song-list-result-item .artist-song-list-title-play {
     top: 6px;
     position: relative;
     font-size: 11px;
     display: flex;
 }
 
-.result-item .title-play i {
+.artist-song-list-result-item .artist-song-list-title-play i {
     font-size: 18px;
 }
 
-.result-item .title-play .title-play-text {
+.artist-song-list-result-item .artist-song-list-title-play .artist-song-list-title-play-text {
     top: 2px;
     position: relative;
     margin-left: 5px;
     font-size: 11px;
 }
 
-.tab-button {
+.artist-song-list-tab-button {
     margin-bottom: 30px;
 }
 
-.tab-button .song-list {
+.artist-song-list-tab-button .artist-song-list-song-list {
     font-size: 14px;
     color: #464646;
     font-weight: 00;
@@ -100,7 +100,7 @@
     border: none;
 }
 
-.tab-button .album-list {
+.artist-song-list-tab-button .artist-song-list-album-list {
     font-size: 14px;
     color: #F9FCFF;
     font-weight: 00;
@@ -110,40 +110,40 @@
     border: none;
 }
 
-.table-order {
+.artist-song-list-table-order {
     display: flex;
     flex-direction: row;
 }
 
-.album-list {
+.artist-song-list-album-list {
     list-style-type: none;
 }
 
-.badge-area {
+.artist-song-list-badge-area {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.filter {
+.artist-song-list-filter {
     display: flex;
     justify-content: flex-end;
 }
 
-.filter p {
+.artist-song-list-filter p {
     margin-right: 10px;
     font-size: 12px;
 }
 
-.filter-album-category {
+.artist-song-list-filter-album-category {
     display: flex;
 }
 
-.filter-order-by {
+.artist-song-list-filter-order-by {
     display: flex;
 }
 
-.album-list li {
+.artist-song-list-album-list li {
     display: inline-block;
     width: 500px;
     padding-right: 10px;
@@ -151,13 +151,13 @@
     vertical-align: top;
 }
 
-.album-cover img {
+.artist-song-list-album-cover img {
     width: 175px;
     height: 175px;
     border-radius: 5px;
 }
 
-.play-btn {
+.artist-song-list-play-btn {
     color: #ffffff;
     position: relative;
     top: -32px;
@@ -165,41 +165,41 @@
     font-size: 25px;
 }
 
-.badge-area .album-info {
+.artist-song-list-badge-area .artist-song-list-album-info {
     margin-left: 20px;
     position: relative;
     top: -22px;
 }
 
-.info-area {
+.artist-song-list-info-area {
     margin-bottom: 10px;
 }
 
-.album-title {
+.artist-song-list-album-title {
     font-size: 15px;
     font-weight: 900;
 }
 
-.explain_area {
+.artist-song-list-explain_area {
     margin-bottom: 11px;
 }
 
-.album-category p {
+.artist-song-list-album-category p {
     font-size: 12px;
 }
 
-.album-date p {
+.artist-song-list-album-date p {
     font-size: 12px;
     color: #6c757d;
 }
 
-.icons {
+.artist-song-list-icons {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.icons a {
+.artist-song-list-icons a {
     margin-right: 15px;
     font-size: 18px;
 }

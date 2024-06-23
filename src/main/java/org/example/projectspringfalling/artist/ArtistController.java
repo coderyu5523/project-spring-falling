@@ -14,12 +14,19 @@ public class ArtistController {
     private final ArtistService artistService;
     private final HttpSession session;
 
-    // 가수 상세보기
-    @GetMapping("/artists/{id}")
-    public String artistDetail(@PathVariable Integer id) {
-//        return "artist/artist-album-list";
+    // 가수 상세보기 (앨범)
+    @GetMapping("/artists/{artistId}/albums")
+    public String artistDetailAlbumList(@PathVariable Integer artistId) {
+        ArtistResponse.AlbumListDTO resp = artistService.artistDetailAlbumList(artistId);
+        session.setAttribute("album", resp);
         return "artist/artist-song-list";
 
+    }
+
+    // 가수 상세보기 (곡)
+    @GetMapping("/artists/{artistId}/songs")
+    public String artistDetailSongList(@PathVariable Integer artistId) {
+        return "artist/artist-album-list";
     }
 
     // 가수 등록하기
