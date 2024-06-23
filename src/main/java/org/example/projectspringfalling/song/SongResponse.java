@@ -30,7 +30,7 @@ public class SongResponse {
             this.title = song.getTitle();
             this.albumId = album.getId();
             this.albumImage = album.getAlbumImg();
-            this.artist = album.getArtist().getName();
+            this.artist = song.getArtist().getName();
             this.albumTitle = album.getTitle();
             this.songWriter = song.getSongWriter();
             this.lyricist = song.getLyricist();

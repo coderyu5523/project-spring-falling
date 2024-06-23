@@ -10,6 +10,10 @@ import java.util.Optional;
 
 public interface AlbumRepository extends JpaRepository<Album, Integer> {
 
+    // 가수 상세보기 (앨범)
+    @Query("SELECT al FROM Album al WHERE al.artist.id=:artistId")
+    List<Album> findByArtistId(@Param("artistId") Integer artistId);
+
     // 앨범 곡 목록보기
     @Query("SELECT al, ar FROM Album al JOIN FETCH Artist ar ON ar.id=al.artist.id WHERE al.id=:albumId")
     Optional<Album> findAlbumAndArtistById(@Param("albumId") Integer albumId);
