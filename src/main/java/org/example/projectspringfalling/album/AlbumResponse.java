@@ -21,6 +21,7 @@ public class AlbumResponse {
         private String albumImage; // 앨범 이미지
         private String albumTitle; // 앨범 이름
         private String category; // 앨범 유형
+        // TODO: Util써서 Timestamp가 아닌 String으로 받기
         private Timestamp createdAt; // 앨범 발매 날짜
         private String albumArtist; // 앨범 아티스트 이름
         private List<SongResponse.AlbumListDTO> songList = new ArrayList<>(); // 앨범 수록곡
@@ -47,6 +48,7 @@ public class AlbumResponse {
         private String albumImage; // 앨범 이미지
         private String albumTitle; // 앨범 이름
         private String category; // 앨범 유형
+        // TODO: Util써서 Timestamp가 아닌 String으로 받기
         private Timestamp createdAt; // 앨범 발매 날짜
         private String albumArtist; // 앨범 아티스트 이름
         private String distributor; // 유통사

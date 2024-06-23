@@ -38,6 +38,7 @@ public class ArtistResponse {
             private String albumImage; // 앨범 이미지
             private String albumTitle; // 앨범 이름
             private String albumCategory; // 앨범 유형
+            // TODO: Util써서 Timestamp가 아닌 String으로 받기
             private Timestamp createdAt; // 앨범 발매 날짜
 
             public AlbumDTO(Album album) {
