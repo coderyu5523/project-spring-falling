@@ -1,32 +1,35 @@
 {{>layout/header}}
-<br>
-<div class="main-container">
+{{#reponseDTO}}
+    <br>
+    <div class="main-container">
     <div class="main-search">
-        <div class="search-results">
-            <div class="d-flex justify-content-start">
-                <h2 class="search-title">'뉴진스'</h2> <h2>검색결과</h2>
-            </div>
-            <div class="filter-tabs">
-                <button class="active">전체</button>
-                <button>곡</button>
-                <button>앨범</button>
-                <button>아티스트</button>
-                <button>가사</button>
-            </div>
-            <br>
+    <div class="search-results">
+        <div class="d-flex justify-content-start">
+            <h2 class="search-title">'{{keyword}}'</h2>
+            <h2>검색결과</h2>
+        </div>
+        <div class="filter-tabs">
+            <button class="active">전체</button>
+            <button>곡</button>
+            <button>앨범</button>
+            <button>아티스트</button>
+            <button>가사</button>
+        </div>
+        <br>
+    {{#artistDTO}}
             <div class="result-item">
-                <a href="#">
-                    <img src="../images/search/검색 뉴진스.jpg" alt="Album Cover">
+                <a href="/albums/{{albumId}}">
+                    <img src="{{albumImg}}" alt="Album Cover">
                 </a>
                 <div class="result-info">
-                    <a href="#">
-                        <h3 style="font-weight: 600;">How Sweet</h3>
+                    <a href="/albums/{{albumId}}">
+                        <h3 style="font-weight: 600;">{{albumTitle}}</h3>
                     </a>
-                    <a href="#">
-                        <p>NewJeans ></p>
+                    <a href="/artists/{{artistId}}">
+                        <p>{{artistName}} ></p>
                     </a>
-                    <a href="#">
-                        <p>How Sweet ></p>
+                    <a href="/songs/{{songId}}">
+                        <p>{{songTitle}} ></p>
                     </a>
                     <br>
                     <div class="d-flex">
@@ -37,512 +40,165 @@
             </div>
         </div>
 
-        <br>
+            <br>
 
-        <div class="search-results">
-            <table class="result-table">
-                <h2 class="search-title">곡 ></h2>
-                <thead>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th style="font-size: 12px;">곡/앨범</th>
-                    <th class="table-artist" style="font-size: 12px;">아티스트</th>
-                    <th style="font-size: 12px;">듣기</th>
-                    <th style="font-size: 12px;">재생목록</th>
-                    <th style="font-size: 12px;">내 리스트</th>
-                    <th style="font-size: 12px;">더보기</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="../images/search/검색 뉴진스.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <a href="#">
-                                <strong>Bubble Gum</strong>
-                            </a>
-                            <a href="#">
-                                <p style="font-size: 12px;">How Sweet</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="../images/search/검색 뉴진스2.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <a href="#">
-                                <strong>ETA</strong>
-                            </a>
-                            <a href="#">
-                                <p style="font-size: 12px;">NewJeans 2nd EP 'Get Up'</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="../images/search/검색 뉴진스2.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <a href="#">
-                                <strong>Super Shy</strong>
-                            </a>
-                            <a href="#">
-                                <p style="font-size: 12px;">NewJeans 2nd EP 'Get Up'</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="../images/search/검색 뉴진스2.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <a href="#">
-                                <strong>New Jeans</strong>
-                            </a>
-                            <a href="#">
-                                <p style="font-size: 12px;">NewJeans 2nd EP 'Get Up'</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="../images/search/검색 뉴진스2.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <a href="#">
-                                <strong>ASAP</strong>
-                            </a>
-                            <a href="#">
-                                <p style="font-size: 12px;">NewJeans 2nd EP 'Get Up'</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="search-results">
+                <table class="result-table">
+                    <h2 class="search-title">곡 ></h2>
+                    <thead>
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <th style="font-size: 12px;">곡/앨범</th>
+                        <th class="table-artist" style="font-size: 12px;">아티스트</th>
+                        <th style="font-size: 12px;">듣기</th>
+                        <th style="font-size: 12px;">재생목록</th>
+                        <th style="font-size: 12px;">내 리스트</th>
+                        <th style="font-size: 12px;">더보기</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#songs}}
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td class="table-album-container">
+                                <a href="/albums/{{albumId}}">
+                                    <img src="{{albumImg}}" alt="Album Cover">
+                                </a>
+                                <div class="text-container">
+                                    <a href="/songs/{{songId}}">
+                                        <strong>{{songTitle}}</strong>
+                                    </a>
+                                    <a href="/albums/{{albumId}}">
+                                        <p style="font-size: 12px;">{{albumTitle}}</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="table-artist">
+                                <a href="/artists/{{artistId}}">{{artistName}}</a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fas fa-play play-button"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fas fa-list icon"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fas fa-folder-plus custom-icon"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fas fa-ellipsis-h icon"></i></a>
+                            </td>
+                        </tr>
+                    {{/songs}}
 
-        <br>
+                    </tbody>
+                </table>
+            </div>
 
-        <div class="search-results">
-            <h2 class="search-title">앨범</h2>
-            <div class="album-grid">
-                <div class="album-item">
-                    <a href="#">
-                        <img class="album-image" src="../images/search/더미 앨범1.jpg">
-                    </a>
-                    <div class="album-info">
-                        <a href="#">
-                            <h3 style="font-weight: 600;">NewJeans 'OMG'</h3>
-                        </a>
-                        <a href="#">
-                            <p>NewJeans</p>
-                        </a>
-                        <a href="#">
-                            <p>싱글 · 국내 댄스/일렉</p>
-                        </a>
-                        <a href="#">
-                            <p>2023.01.02</p>
-                        </a>
-                        <div class="d-flex">
-                            <a href="#"><i class="album-icon fas fa-list icon"></i></a>
-                            <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+            <br>
+
+            <div class="search-results">
+                <h2 class="search-title">앨범</h2>
+                <div class="album-grid">
+                    {{#songs}}
+                        <div class="album-item">
+                            <a href="/albums/{{albumId}}">
+                                <img class="album-image" src="{{albumImg}}">
+                            </a>
+                            <div class="album-info">
+                                <a href="/albums/{{albumId}}">
+                                    <h3 style="font-weight: 600;">{{albumTitle}}</h3>
+                                </a>
+                                <a href="/artists/{{artistId}}">
+                                    <p>{{artistName}}</p>
+                                </a>
+                                <a href="#">
+                                    <p>{{artistType}} · {{nationality}} {{category}}</p>
+                                </a>
+                                <a href="/albums/{{albumId}}">
+                                    <p>{{albumCreatedAt}}</p>
+                                </a>
+                                <div class="d-flex">
+                                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="album-item">
-                    <a href="#">
-                        <img class="album-image" src="../images/search/더미 앨범2.jpg">
-                    </a>
-                    <div class="album-info">
-                        <a href="#">
-                            <h3 style="font-weight: 600;">NewJeans 1st EP 'New Jeans'</h3>
-                        </a>
-                        <a href="#">
-                            <p>NewJeans</p>
-                        </a>
-                        <a href="#">
-                            <p>미니 · 국내 댄스/일렉</p>
-                        </a>
-                        <a href="#">
-                            <p>2022.08.01</p>
-                        </a>
-                        <div class="d-flex">
-                            <a href="#"><i class="album-icon fas fa-list icon"></i></a>
-                            <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="album-item">
-                    <a href="#">
-                        <img class="album-image" src="../images/search/더미 앨범3.jpg">
-                    </a>
-                    <div class="album-info">
-                        <a href="#">
-                            <h3 style="font-weight: 600;">NJWMX</h3>
-                        </a>
-                        <a href="#">
-                            <p>NewJeans</p>
-                        </a>
-                        <a href="#">
-                            <p>미니 · 국내 댄스/일렉</p>
-                        </a>
-                        <a href="#">
-                            <p>2023.12.19</p>
-                        </a>
-                        <div class="d-flex">
-                            <a href="#"><i class="album-icon fas fa-list icon"></i></a>
-                            <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="album-item">
-                    <a href="#">
-                        <img class="album-image" src="../images/search/더미 앨범4.jpg">
-                    </a>
-                    <div class="album-info">
-                        <a href="#">
-                            <h3 style="font-weight: 600;">NewJeans 2nd EP 'Get Up'</h3>
-                        </a>
-                        <a href="#">
-                            <p>NewJeans</p>
-                        </a>
-                        <a href="#">
-                            <p>싱글 · 국내 댄스/일렉</p>
-                        </a>
-                        <a href="#">
-                            <p>2024.05.24</p>
-                        </a>
-                        <div class="d-flex">
-                            <a href="#"><i class="album-icon fas fa-list icon"></i></a>
-                            <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="album-item">
-                    <a href="#">
-                        <img class="album-image" src="../images/search/더미 앨범5.jpg">
-                    </a>
-                    <div class="album-info">
-                        <a href="#">
-                            <h3 style="font-weight: 600;">How Sweet</h3>
-                        </a>
-                        <a href="#">
-                            <p>NewJeans</p>
-                        </a>
-                        <a href="#">
-                            <p>미니 · 국내 댄스/일렉</p>
-                        </a>
-                        <a href="#">
-                            <p>2024.05.24</p>
-                        </a>
-                        <div class="d-flex">
-                            <a href="#"><i class="album-icon fas fa-list icon"></i></a>
-                            <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
-                        </div>
-                    </div>
+                    {{/songs}}
                 </div>
             </div>
-        </div>
 
-        <br>
+            <br>
 
-        <div class="search-results">
-            <h2 class="search-title">아티스트 ></h2>
-            <div class="artist-list">
-                <div class="artist-box">
-                    <div class="artist-img-container">
-                        <a href="#">
-                            <img src="../images/search/뉴진스.jpg">
-                            <button class="artist-play-button">▶</button>
-                        </a>
-                    </div>
-                    <a href="#">
-                        <div class="artist-name">NewJeans</div>
-                    </a>
-                    <a href="#">
-                        <div class="artist-role">그룹 | 여성</div>
-                    </a>
-                </div>
-                <div class="artist-box">
-                    <div class="artist-img-container">
-                        <a href="#">
-                            <img src="../images/search/다니엘.jpg">
-                            <button class="artist-play-button">▶</button>
-                        </a>
-                    </div>
-                    <a href="#">
-                        <div class="artist-name">다니엘(DANIELLE)</div>
-                    </a>
-                    <a href="#">
-                        <div class="artist-role">솔로 | 여성</div>
-                    </a>
-                </div>
-                <div class="artist-box">
-                    <div class="artist-img-container">
-                        <a href="#">
-                            <img src="../images/search/혜인.jpg">
-                            <button class="artist-play-button">▶</button>
-                        </a>
-                    </div>
-                    <a href="#">
-                        <div class="artist-name">혜인(HYEIN)</div>
-                    </a>
-                    <a href="#">
-                        <div class="artist-role">솔로 | 여성</div>
-                    </a>
-                </div>
-                <div class="artist-box">
-                    <div class="artist-img-container">
-                        <a href="#">
-                            <img src="../images/search/민지.jpg">
-                            <button class="artist-play-button">▶</button>
-                        </a>
-                    </div>
-                    <a href="#">
-                        <div class="artist-name">민지(MINJI)</div>
-                    </a>
-                    <a href="#">
-                        <div class="artist-role">솔로 | 여성</div>
-                    </a>
-                </div>
-                <div class="artist-box">
-                    <div class="artist-img-container">
-                        <a href="#">
-                            <img src="../images/search/하니.jpg">
-                            <button class="artist-play-button">▶</button>
-                        </a>
-                    </div>
-                    <a href="#">
-                        <div class="artist-name">하니(HANNI)</div>
-                    </a>
-                    <a href="#">
-                        <div class="artist-role">솔로 | 여성</div>
-                    </a>
+            <div class="search-results">
+                <h2 class="search-title">아티스트 ></h2>
+                <div class="artist-list">
+                    {{#songs}}
+                        <div class="artist-box">
+                            <div class="artist-img-container">
+                                <a href="/artists/{{artistId}}">
+                                    <img src="{{artistImg}}">
+                                    <button class="artist-play-button">▶</button>
+                                </a>
+                            </div>
+                            <a href="/artists/{{artistId}}">
+                                <div class="artist-name">{{artistName}}</div>
+                            </a>
+                            <div class="artist-role">{{artistType}}</div>
+                        </div>
+                    {{/songs}}
                 </div>
             </div>
+
+            <div class="search-results">
+                <h2 class="search-title">가사 ></h2>
+                <table class="result-table">
+                    <thead>
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <th style="font-size: 12px;">곡/가사</th>
+                        <th style="width: 700px;"></th>
+                        <th style="font-size: 12px;">아티스트</th>
+                        <th style="font-size: 12px;">앨범</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#songs}}
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <a href="/albums/{{albumId}}">
+                                    <img src="{{albumImg}}" alt="Album Cover">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/songs/{{songId}}">
+                                    <div>
+                                        <strong>{{songTitle}}</strong>
+                                        <p class="lyrics-text">{{lyrics}}</p>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/artists/{{artistId}}" style="white-space: nowrap">{{artistName}}</a>
+                            </td>
+                            <td>
+                                <a href="/albums/{{albumId}}" style="white-space: nowrap">{{albumTitle}}</a>
+                            </td>
+                        </tr>
+                    {{/songs}}
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <div class="search-results">
-            <h2 class="search-title">가사 ></h2>
-            <table class="result-table">
-                <thead>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th style="font-size: 12px;">곡/가사</th>
-                    <th style="width: 700px;"></th>
-                    <th style="font-size: 12px;">아티스트</th>
-                    <th style="font-size: 12px;">앨범</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/search/검색 뉴진스.jpg" alt="Album Cover">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">
-                            <div>
-                                <strong>How Sweet</strong>
-                                <p style="font-size: 10px;">All I know is now 알게 됐어 나 (I know) 그동안 맨날 Always up and down (No more) 생각 또 생각 Spinnin’ ‘round and ‘round Changing my mind 수상해서 그랬지 이런 헛소리 (No more) How it’s supposed to be ...</p>
-                            </div>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#">How Sweet</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/search/검색 뉴진스.jpg" alt="Album Cover">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">
-                            <div>
-                                <strong>Bubble Gum</strong>
-                                <p style="font-size: 10px;">You just got my heart pump pumpin’ Every time that you’re here around me 노랫 소리가 또 흘러나와 yeah 오늘 오래 걸린 이유 I’m always so excited to meet you 내 향기가 널 먼저 찾아가 눈 감아도 기억나게 어디라...</p>
-                            </div>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#">How Sweet</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/search/더미 앨범2.jpg" alt="Album Cover">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">
-                            <div>
-                                <strong>Hype Boy</strong>
-                                <p style="font-size: 10px;">(1,2,3,4) Baby, got me looking so crazy 빠져버리는 daydream Got me feeling you 너도 말해줄래 누가 내게 뭐래도 남들과는 달라 넌 Maybe you could be the one 날 믿어봐 한번 I’m not looking for just fun Mayb...</p>
-                            </div>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans 1st EP 'New Jeans'</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/search/더미 앨범4.jpg" alt="Album Cover">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">
-                            <div>
-                                <strong>ETA</strong>
-                                <p style="font-size: 10px;">냥비하지 마 네 시간은 은행 서둘러서 정리해 개는 real bad 받아주면 안돼 No you better trust me 답답해서 그래 저번에도 봤지만 너 없을 때 쟨 여기저기에 눈빛을 뿌리네 아주 눈부셔 Honestly 우리 사이에 He’s been t...</p>
-                            </div>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans 2nd EP 'Get Up'</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>
-                        <a href="#">
-                            <img src="../images/search/더미 앨범4.jpg" alt="Album Cover">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">
-                            <div>
-                                <strong>Super Shy</strong>
-                                <p style="font-size: 10px;">I’m super shy, super shy But wait a minute while I Make you mine, make you mine 떨리는 지금도 You’re on my mind All the time I wanna tell you but I’m Super shy, super shy I’m super shy, super shy But ...</p>
-                            </div>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans</a>
-                    </td>
-                    <td>
-                        <a href="#">NewJeans 2nd EP 'Get Up'</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
         </div>
-    </div>
-</div>
+    {{/artistDTO}}
+    {{^artistDTO}}
+        <div style="display: flex; justify-content: center; font-size: 30px; font-weight: bold">조회된 결과가 없습니다.</div>
+        <br>
+        <br>
+    {{/artistDTO}}
 
 
-
+{{/reponseDTO}}
 {{>layout/footer}}

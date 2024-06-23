@@ -15,13 +15,15 @@ public class AdminController {
 
     // 관리자 앨범 상세보기
     @GetMapping("/admin/albums/{id}")
-    public String albumDetail(@PathVariable Integer id) {
+    public String albumDetail(@PathVariable Integer id, HttpServletRequest request) {
+        request.setAttribute("album", adminService.getAlbum(id));
         return "admin/album-detail";
     }
 
     // 앨범 목록보기
     @GetMapping("/admin/albums")
-    public String albumList() {
+    public String albumList(HttpServletRequest request) {
+        request.setAttribute("albumList", adminService.getAlbumList());
         return "admin/album-list";
     }
 
@@ -63,13 +65,15 @@ public class AdminController {
 
     // 곡 상세보기
     @GetMapping("/admin/songs/{id}")
-    public String songDetail(@PathVariable Integer id) {
+    public String songDetail(@PathVariable Integer id, HttpServletRequest request) {
+        request.setAttribute("song", adminService.getSong(id));
         return "admin/song-detail";
     }
 
     // 곡 목록보기
     @GetMapping("/admin/songs")
-    public String songList() {
+    public String songList(HttpServletRequest request) {
+        request.setAttribute("songList", adminService.getSongList());
         return "admin/song-list";
     }
 

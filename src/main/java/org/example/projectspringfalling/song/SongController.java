@@ -6,6 +6,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Controller
@@ -29,7 +33,9 @@ public class SongController {
 
     // 검색 페이지
     @GetMapping("/search")
-    public String search() {
+    public String search(@RequestParam(value = "keyword", required = false) String keyword, HttpServletRequest request) {
+        SongResponse.SearchDTO reponseDTO = songService.searchKeyword(keyword);
+        request.setAttribute("reponseDTO", reponseDTO);
         return "search";
     }
 
@@ -49,10 +55,13 @@ public class SongController {
     // todo : 더미 테스트용
     @GetMapping("/song-test")
     public String test(HttpServletRequest request) {
-        int id = 21;
+        int id = 31;
         Song song = songService.getImg(id);
         System.out.println("음악" + song.getMusicFile());
         request.setAttribute("song", song);
         return "song-test";
     }
+
+
+
 }
