@@ -55,6 +55,7 @@ public class AdminResponse {
     @Data
     public static class SongListDTO {
         private Integer songId;
+        private Integer albumId;
         private String albumImg;
         private String songTitle;
         private Artist artist;
@@ -114,6 +115,43 @@ public class AdminResponse {
             this.createdAt = createdAt;
             this.distributor = distributor;
             this.agency = agency;
+        }
+    }
+
+    // 아티스트 목록보기
+    @AllArgsConstructor
+    @Data
+    public static class ArtistListDTO {
+        private Integer artistId;
+        private String artistImg;
+        private String artistName;
+        private String artistType;
+    }
+
+    // 아티스트 상세보기
+    @AllArgsConstructor
+    @Data
+    public static class ArtistDetailDTO {
+        private Integer artistId;
+        private String artistName;
+        private String artistImg;
+        private String artistType;
+        private String artistGenre;
+        private List<ArtistAlbumsDTO> artistAlbums;
+
+        public ArtistDetailDTO(Integer artistId, String artistName, String artistImg, String artistType) {
+            this.artistId = artistId;
+            this.artistName = artistName;
+            this.artistImg = artistImg;
+            this.artistType = artistType;
+        }
+
+        @AllArgsConstructor
+        @Data
+        public static class ArtistAlbumsDTO {
+            private Integer albumId;
+            private String albumImg;
+            private String albumTitle;
         }
     }
 }

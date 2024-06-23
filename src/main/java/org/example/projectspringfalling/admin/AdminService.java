@@ -2,6 +2,7 @@ package org.example.projectspringfalling.admin;
 
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling.album.AlbumRepository;
+import org.example.projectspringfalling.artist.ArtistRepository;
 import org.example.projectspringfalling.song.SongRepository;
 import org.example.projectspringfalling.user.UserRepository;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,21 @@ public class AdminService {
     private final UserRepository userRepository;
     private final SongRepository songRepository;
     private final AlbumRepository albumRepository;
+    private final ArtistRepository artistRepository;
+
+    // 아티스트 상세보기
+    public AdminResponse.ArtistDetailDTO getArtist(Integer artistId) {
+        AdminResponse.ArtistDetailDTO artistDetailDTO = artistRepository.findOneArtist(artistId);
+        artistDetailDTO.setArtistGenre(removeDuplicates(artistRepository.findArtistGenres(artistId)));
+        artistDetailDTO.setArtistAlbums(artistRepository.findAllArtistAlbum(artistId));
+
+        return artistDetailDTO;
+    }
+
+    // 아티스트 목록보기
+    public List<AdminResponse.ArtistListDTO> getArtistList() {
+        return artistRepository.findAllArtist();
+    }
 
     // 앨범 상세보기
     public AdminResponse.AlbumDetailDTO getAlbum(Integer albumId) {
