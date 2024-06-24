@@ -41,13 +41,18 @@
     padding: 0;
 }
 
-.modal-list-item {
+.modal-list li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.modal-list-item img,
-.modal-list-item div {
+.modal-list li:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    cursor: pointer;
+}
+
+.modal-list > li > img,
+.modal-list > li > div {
     margin-right: 10px;
 }

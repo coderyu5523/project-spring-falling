@@ -1,4 +1,3 @@
-// 모달 켜는 버튼
 $(document).ready(function () {
     let btn = $("#myBtn");
     let modal = $("#myModal");
@@ -14,8 +13,6 @@ $(document).ready(function () {
             method: 'GET',
             dataType: 'json',
             success: function (data) {
-                console.log("AJAX 응답 데이터:", data);
-
                 // 받은 데이터를 기반으로 리스트 아이템 추가
                 modalList.find('.default-item').siblings().remove();
                 data.body.forEach(function (item) {
@@ -25,6 +22,8 @@ $(document).ready(function () {
                                 <div>
                                     <div>${item.playlistName}</div>
                                     <div>${item.playlistSongCount}곡</div>
+                                    <input type="hidden" class="playlist-id" value="${item.playlistId}">
+                                    <!-- songId를 전역적으로 가진 input -->
                                 </div>
                             </li>`;
                     modalList.append(listItem);
@@ -49,4 +48,39 @@ $(document).ready(function () {
             modal.css("display", "none");
         }
     });
+
+    // modal-list-item 클릭 이벤트
+    modalList.on('click', '.modal-list-item', function () {
+        let playlistId = $(this).find('.playlist-id').val();
+        let songId = $("#songIdInput").val(); // 전역적으로 존재하는 songId 값을 가져옴
+
+        addSongToPlaylist(playlistId, songId);
+    });
+
+    function addSongToPlaylist(playlistId, songId) {
+        let formData = new FormData();
+        formData.append('playlistId', playlistId);
+        formData.append('songId', songId);
+
+        $.ajax({
+            url: "/add-song",
+            method: "POST",
+            processData: false,
+            contentType: false,
+            data: formData,
+            cache: false,
+            success: function (data) {
+                console.log("status : " + data.status)
+                if (data.status === 200) {
+                    modal.css("display", "none");
+                    alert("플레이리스트에 곡이 추가 되었습니다.");
+                } else if (data.status === 400) {
+                    alert(data.msg);
+                }
+            },
+            error: function () {
+                alert("서버 요청 중 오류가 발생했습니다.");
+            }
+        });
+    }
 });

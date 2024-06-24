@@ -5,7 +5,7 @@
         <span class="close">&times;</span>
         <ul id="modal-list" class="modal-list">
             <!-- 기본 항목 -->
-            <li class="modal-list-item">
+            <li class="default-item">
                 <div>+</div>
                 <div>새로운 리스트 추가하기</div>
             </li>
@@ -13,7 +13,8 @@
     </div>
 </div>
 <!-- 모달 끝 -->
-
+<!-- Request 요청에 쓰일 SongId -->
+<input type="hidden" id="songIdInput" name="songId" value="{{song.songId}}">
 <div class="song-detail-main-contents">
     <div class="song-detail-badge-area">
         <div class="song-detail-badge-song-cover">
