@@ -62,7 +62,23 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
         ('Crush', 'Solo', '/upload/artist/Crush.jpg', '2012-12-07'),
         ('임재현', 'Solo', '/upload/artist/임재현.jpg', '2018-09-25'),
         ('박재정', 'Solo', '/upload/artist/박재정.jpg', '2013-11-20'),
-        ('RIIZE', 'Group', '/upload/artist/라이즈.jpg', '2023-09-04');
+        ('RIIZE', 'Group', '/upload/artist/라이즈.jpg', '2023-09-04'),
+
+       ('잔나비', 'Group', '/upload/artist/잔나비.jpg','2014-04-28'),
+       ('십센치', 'Solo', '/upload/artist/십센치.jpg', '2010-03-28'),
+       ('소란', 'Group', '/upload/artist/소란.jpg', '2010-08-19'),
+       ('검정치마', 'Solo', '/upload/artist/검정치마''.jpg', '2008-11-13'),
+       ('데이브레이크', 'Group', '/upload/artist/데이브레이크.jpg', '2007-09-18'),
+       ('선우정아', 'Solo', '/upload/artist/선우정아.jpg', '2006-05-10'),
+       ('크러쉬', 'Solo', '/upload/artist/크러쉬.jpg', ' 2012-12-07'),
+       ('새소년', 'Group', '/upload/artist/새소년.jpg', '2017-06-20'),
+       ('카더가든', 'Solo', '/upload/artist/카더가든.jpg', '2013-09-24'),
+       ('혁오밴드', 'Group', '/upload/artist/혁오밴드.jpg', '2014-09-18');
+
+
+
+
+
 
 -- 테이블: album
 
