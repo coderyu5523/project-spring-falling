@@ -70,8 +70,8 @@ public class UserController {
     @GetMapping("/oauth/callback/naver")
     public String oauthCallbackNaver(String code, HttpServletRequest request) {
         SessionUser sessionUser = userService.naverLogin(code);
-        HttpSession session = request.getSession();  // 세션 생성
-        String sessionId = session.getId();  // 세션 ID 가져오기
+        HttpSession session = request.getSession();  // 현재 request에 대한 세션 생성
+        String sessionId = session.getId();  // 생성된 세션 ID 가져오기
         rt.opsForValue().set("sessionUser:" + sessionId, sessionUser, 30, TimeUnit.MINUTES); // Redis에 세션 ID를 키로 사용하여 저장
         return "redirect:/";
     }
