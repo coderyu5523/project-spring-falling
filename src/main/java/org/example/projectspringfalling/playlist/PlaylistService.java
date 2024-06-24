@@ -1,10 +1,10 @@
 package org.example.projectspringfalling.playlist;
 
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.playlistSong.PlaylistSongRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +12,11 @@ import java.util.List;
 @Service
 public class PlaylistService {
     private final PlaylistRepository playlistRepository;
-    private final PlaylistSongRepository playlistSongRepository;
+
+
+    // 보관함 플레이리스트 - Rest
+    public List<RestResponse.StoragePlaylist> getMyList(Integer userId) {
+        return playlistRepository.findAllPlaylistById(userId);
 
     // 플레이리스트 상세보기
     public PlaylistResponse.PlaylistDetailDTO playlistDetail(Integer playlistId) {
@@ -30,6 +34,7 @@ public class PlaylistService {
         songs.add(new PlaylistResponse.PlaylistDTO("봄여름가을겨울", "빅뱅", "/upload/song/봄여름가을겨울.mp3", "/upload/album/봄여름가을겨울.jpg"));
         songs.add(new PlaylistResponse.PlaylistDTO("슈퍼노바", "에스파", "/upload/song/슈퍼노바.mp3", "/upload/album/슈퍼노바.jpg"));
         return songs;
+
 
     }
 }
