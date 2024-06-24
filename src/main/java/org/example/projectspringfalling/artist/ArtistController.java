@@ -16,18 +16,18 @@ public class ArtistController {
 
     // 가수 상세보기 (앨범)
     @GetMapping("/artists/{artistId}/albums")
-    public String artistDetailAlbumList(@PathVariable Integer artistId) {
+    public String artistDetailAlbumList(HttpServletRequest request, @PathVariable Integer artistId) {
         ArtistResponse.AlbumListDTO resp = artistService.artistDetailAlbumList(artistId);
-        session.setAttribute("album", resp);
+        request.setAttribute("album", resp);
         return "artist/artist-song-list";
 
     }
 
     // 가수 상세보기 (곡)
     @GetMapping("/artists/{artistId}/songs")
-    public String artistDetailSongList(@PathVariable Integer artistId) {
+    public String artistDetailSongList(HttpServletRequest request, @PathVariable Integer artistId) {
         ArtistResponse.ArtistSongListDTO resp = artistService.artistDetailSongList(artistId);
-        session.setAttribute("song", resp);
+        request.setAttribute("song", resp);
         return "artist/artist-album-list";
     }
 
