@@ -5055,7 +5055,8 @@ VALUES ('들었다 놨다', '데이브레이크', '데이브레이크', null, 'I
 ', 45);
 
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
 VALUES ('도망가자', '선우정아', '선우정아, 곽은정', '/upload/song/도망가자.mp4', 'Indie', true, '/upload/song/도망가자.mp3', '2019-12-12', 46, '도망가자
 어디든 가야 할 것만 같아
 넌 금방이라도 울 것 같아
@@ -5108,22 +5109,134 @@ VALUES ('도망가자', '선우정아', '선우정아, 곽은정', '/upload/song
 도망가자
 ', 46);
 
--- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
---                      lyrics, artist_id)
--- VALUES (47, , 47);
--- --
--- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
--- --                      lyrics, artist_id)
--- -- VALUES (48, , 48);
--- --
--- --
--- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
--- --                      lyrics, artist_id)
--- -- VALUES (49, , 49);
--- --
--- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
--- --                      lyrics, artist_id)
--- -- VALUES (50, , 50);
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('여름깃', 'So!YoON! (황소윤)', 'So!YoON! (황소윤)', null, 'Indie', false, '/upload/song/여름깃.mp3', '2017-10-26', 47, '곧 지나갈 여름밤의 소리
+여기 어리고 새 푸른 두 눈
+들이쉬고 내뱉는 나의 코와
+시간을 쪼갠 입술이
+먼지만 내뿜고 있네
+지나간 사람 지나갈 사랑들
+내 몸에 새겨질 삶의 타투
+나의 젊음에 네 미래를 줘
+내 망친 작품을 비웃어줘
+음 곤란해진 건 닦이지 않는 얼룩이었고
+음 익숙해진 건 멍청한 나의 알람시계
+음 곤란해진 건 닦이지 않는 얼룩이었고
+음 익숙해진 건 멍청한 나의 알람시계
+', 47);
+
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('섬으로 가요(Feat. 오혁)','오혁, 카더가든, U-Turn','오혁',null,'Indie',true,'/upload/song/섬으로가요.mp4','2017-12-12',48, '그래서 하루를 가만히 있었지
+이제야 당신의 마음을 알아요
+그래도 술집은 섬으로만 가는
+내 마음 당신은 알아줘요
+Hey dear
+Answer me lady
+Can you hear me?
+Answer me lady
+Just let me cut and sew
+기워 붙여 놓을게 우리의 다름
+Let me cut and sew
+기워 붙여 놓을게 우리의 마음
+A little bit change your mind
+A little bit change your mind
+A little bit change your mind
+그래서 한참을 가만히 있었지
+물안개 짙은 날 비가 많이 온 날
+아마 이른 여름 시작하던 그 즈음
+마음 속 당신은 빛이 나요
+Hey dear
+Answer me lady
+Can you hear me?
+Answer me lady
+Just let me cut and sew
+기워 붙여 놓을게 우리의 다름
+Let me cut and sew
+기워 붙여 놓을게 우리의 마음
+이제 조급했던 맘을 나눠주지 않아
+금세 감싸준 당신의 여유
+Just let me cut and sew
+기워 붙여 놓을게 우리의 다름
+Let me cut and sew
+기워 붙여 놓을게 우리의 마음
+A little bit change your mind
+A little bit change your mind
+A little bit change your mind
+', 48);
+
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Help','오혁','오혁',null,'Indie',true,'/upload/song/help.mp3','2020-01-30',49, 'suddenly they’re all disappeared
+take a look and no one is there
+finally i am free
+sun is out but my mind is blind
+hey Jesus there?
+can you hear me?
+i am lost
+he is never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+
+suddenly they’re all disappeared
+take a look and no one is there
+finally i am free
+sun is out but my mind is blind
+hey Jesus there?
+can you hear me?
+i am lost
+he is never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+never gonna let us down
+', 49);
+
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('봉숙이','강준우, 육중완','강준우, 육중완',null,'Indie',true,'/upload/song/봉숙이.mp3','2011-11-01',50,'야 봉숙아 말라고 집에 드갈라고
+꿀발라스 났드나
+나도 함 묵어보자
+아까는 집에 안 간다고
+데낄라 시키돌라케서
+시키났드만 집에 간다 말이고
+못 드간다 못 간단 말이다
+이 술 우짜고 집에 간단 말이고
+못 드간다 못 간단 말이다
+묵고 가든지 니가 내고 가든지
+야 봉숙아 택시는 말라 잡을라고
+오빠 술 다 깨면
+집에다 태아줄게 태아줄게
+저기서 술만 깨고 가자
+딱 30분만 셔따 가자
+아줌마 저희 술만 깨고 갈게요
+못 드간다 못 간단 말이다
+이 술 우짜고 집에 간단 말이고
+못 드간다 못 간단 말이다
+묵고 가든지 니가 내고 가든지
+못 드간다 못 간단 말이다
+이 술 우짜고 집에 간단 말이고
+못 간단 말이다
+묵고 가든지 니가 내고 가든지
+사랑을 찾아서 사람을 찾아서
+오늘도 헤매고 있잖아
+사랑을 찾아서 사람을 찾아서
+오늘도 헤매고 있잖아
+' ,50);
 
 --  테이블 : playlist
 
