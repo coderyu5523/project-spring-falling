@@ -244,10 +244,13 @@
 }
 
 .notice_container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto; /* 상하 마진은 0, 좌우 마진은 자동으로 설정 */
 }
 .notice_content{
     color: gray;
     font-size: 13px;
+}
+.notice_content p {
+    margin-bottom: 50px; /* 문단 사이에 간격 추가 */
 }
