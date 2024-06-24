@@ -29,6 +29,7 @@ public class RestResponse {
     public static class StoragePlaylist {
         private Integer playlistId;
         private String playlistName;
+        private String albumImg;
         private Long playlistSongCount;
         private Timestamp createdAt;
 

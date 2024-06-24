@@ -28,6 +28,7 @@ public class RestController {
     }
 
     // 보관함 - 내 리스트
+    // 플레이리스트 모달
     @GetMapping("/storage/my-list")
     public ApiUtil<List<RestResponse.StoragePlaylist>> storageMyList() {
         UserResponse.LoginDTO sessionUser = (UserResponse.LoginDTO) rt.opsForValue().get("sessionUser");
