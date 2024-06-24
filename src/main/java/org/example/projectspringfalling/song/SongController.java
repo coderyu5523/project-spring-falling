@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @RequiredArgsConstructor
 @Controller
 public class SongController {
@@ -19,15 +16,17 @@ public class SongController {
 
     // 곡 상세보기
     @GetMapping("/songs/{songId}")
-    public String songDetail(@PathVariable Integer songId) {
+    public String songDetail(HttpServletRequest request, @PathVariable Integer songId) {
         SongResponse.DetailDTO resp = songService.songDetail(songId);
-        session.setAttribute("song", resp);
+        request.setAttribute("song", resp);
         return "song/song-detail";
     }
 
     // 메인 페이지
     @GetMapping("/")
-    public String index() {
+    public String index(HttpServletRequest request) {
+        SongResponse.MainDTO resp = songService.main();
+        request.setAttribute("main", resp);
         return "index";
     }
 
@@ -61,7 +60,6 @@ public class SongController {
         request.setAttribute("song", song);
         return "song-test";
     }
-
 
 
 }

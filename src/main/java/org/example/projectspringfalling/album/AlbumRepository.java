@@ -1,6 +1,7 @@
 package org.example.projectspringfalling.album;
 
 import org.example.projectspringfalling.admin.AdminResponse;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -9,6 +10,10 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AlbumRepository extends JpaRepository<Album, Integer> {
+    // 최신 앨범 찾기
+    @Query("SELECT a, ar FROM Album a JOIN FETCH Artist ar ON ar.id=a.artist.id ORDER BY a.createdAt DESC")
+    List<Album> findLatestAlbums(Pageable pageable);
+
     // 앨범 상세보기
     @Query("SELECT DISTINCT s.genre FROM Album a, Song s WHERE s.album.id = :albumId")
     List<String> findAlbumGenres(@Param("albumId") Integer albumId);
