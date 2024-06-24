@@ -62,7 +62,7 @@
             <button id="prev-btn">&#9664;&#9664;</button>
             <button id="play-btn">&#9654;</button>
             <button id="next-btn">&#9654;&#9654;</button>
-            <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
+            <button id="mode-btn"><i class="fa-solid fa-repeat"></i></button>
         </div>
         <div><a class="add-page" style="cursor: pointer"><i class="fa-solid fa-sliders"></i></a></div>
     </div>
@@ -86,7 +86,12 @@
         const currentTimeSpan = $('#currentTime');
         const progressBar = $('#progressBar');
         const durationSpan = $('#duration');
-        const PLAY_MODES = ['normal', 'repeat-one', 'repeat-all'];
+
+        const PLAY_MODES = [
+            { icon: '<i class="fa-solid fa-repeat" style="color: #3f3fff"></i>', name: 'repeat-all' },
+            { icon: '<i class="fas fa-repeat" style="color: #3f3fff"></i> <span>1</span>', name: 'repeat-one' },
+            { icon: '<i class="fa-solid fa-repeat"></i>', name: 'normal' }
+        ];
 
         let currentIndex = 0;
         let previousIndex = null;
@@ -265,16 +270,16 @@
                     audioPlayer.loop = false;
                     break;
             }
-            modeBtn.text(`모드: ${playMode}`);
+            modeBtn.text(`${playMode}`);
         }
 
         // 재생/일시정지 상태에 따라 버튼 텍스트 변경
         $(audioPlayer).on('play', function() {
-            playBtn.text('일시정지');
+            playBtn.html('<i class="fas fa-pause"></i>');
         });
 
         $(audioPlayer).on('pause', function() {
-            playBtn.text('재생');
+            playBtn.html('<i class="fas fa-play"></i>');
         });
 
         // playPrevious, playNext 함수 추가
