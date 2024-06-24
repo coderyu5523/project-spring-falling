@@ -25,6 +25,7 @@ public interface ArtistRepository extends JpaRepository<Artist, Integer> {
     @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$ArtistDetailDTO$ArtistAlbumsDTO(al.id, al.albumImg, al.title) FROM Album al WHERE al.artist.id = :artistId")
     List<AdminResponse.ArtistDetailDTO.ArtistAlbumsDTO> findAllArtistAlbum(Integer artistId);
 
+    // 아티스트 상세보기 페이지
     // 관리자 아티스트 장르
     @Query("SELECT DISTINCT s.genre FROM Album a, Song s WHERE a.artist.id = :artistId AND a.id = s.album.id")
     List<String> findArtistGenres(Integer artistId);

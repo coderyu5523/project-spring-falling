@@ -19,15 +19,16 @@ public class ArtistResponse {
         private String artistImage; // 아티스트 이미지
         private String artistName; // 아티스트 이름
         private String artistType; // 그룹솔로 구분
-        // 장르
+        private String artistGenre; // 장르
         private List<AlbumDTO> albumList; // 앨범 리스트
 
 
-        public AlbumListDTO(Artist artist, List<Album> albumList) {
+        public AlbumListDTO(Artist artist, List<Album> albumList, String artistGenre) {
             this.artistId = artist.getId();
             this.artistImage = artist.getArtistImg();
             this.artistName = artist.getName();
             this.artistType = artist.getArtistType();
+            this.artistGenre = artistGenre;
             this.albumList = albumList.stream().map(AlbumDTO::new).collect(Collectors.toList());
         }
 
@@ -59,15 +60,16 @@ public class ArtistResponse {
         private String artistImage; // 아티스트 이미지
         private String artistName; // 아티스트 이름
         private String artistType; // 그룹솔로 구분
-        // 장르
+        private String artistGenre; // 장르
         private List<SongListDTO> songList; // 곡 리스트
 
 
-        public ArtistSongListDTO(Artist artist, List<SongListDTO> songList) {
+        public ArtistSongListDTO(Artist artist, List<SongListDTO> songList, String artistGenre) {
             this.artistId = artist.getId();
             this.artistImage = artist.getArtistImg();
             this.artistName = artist.getName();
             this.artistType = artist.getArtistType();
+            this.artistGenre = artistGenre;
             this.songList = songList;
         }
 
