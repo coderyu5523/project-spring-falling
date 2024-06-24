@@ -1,41 +1,41 @@
-.main-container{
+.playlist-main-container {
     display: flex;
     justify-content: center;
 }
 
-.main-playlist{
+.playlist-main-playlist {
     width: 1100px;
 }
 
-.playlist-container {
+.playlist-playlist-container {
     display: flex;
     gap: 20px;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.playlist-container img {
+.playlist-playlist-container img {
     width: 230px;
     height: 230px;
     border-radius: 10px;
 }
 
-.playlist-info h3 {
+.playlist-playlist-info h3 {
     font-size: 18px;
     margin-bottom: 5px;
 }
 
-.playlist-info p {
+.playlist-playlist-info p {
     margin: 0;
     color: #6c757d;
 }
 
-.playlist-img-container {
+.playlist-playlist-img-container {
     position: relative;
     display: inline-block;
 }
 
-.playlist-play-button {
+.playlist-playlist-play-button {
     position: absolute;
     bottom: 20px;
     right: 10px;
@@ -49,77 +49,86 @@
 }
 
 
-.playlist-icon {
+.playlist-playlist-icon {
     margin-right: 10px;
     margin-top: 5px;
 }
-.playlist-body {
+
+.playlist-playlist-body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
 }
 
-.playlist-body h2 {
+.playlist-playlist-body h2 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.playlist-table {
+.playlist-playlist-table {
     width: 100%;
     border-collapse: collapse;
 }
-.playlist-table th, .playlist-table td {
+
+.playlist-playlist-table th, .playlist-playlist-table td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     text-align: left;
 }
-.playlist-table th {
+
+.playlist-playlist-table th {
     background-color: #f8f9fa;
 }
-.playlist-table img {
+
+.playlist-playlist-table img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
 }
-.playlist-table .play-button {
+
+.playlist-playlist-table .playlist-play-button {
     font-size: 16px;
     color: black;
     cursor: pointer;
 }
-.playlist-table .play-button:hover {
+
+.playlist-playlist-table .playlist-play-button:hover {
     text-decoration: underline;
 }
-.playlist-table .icon {
+
+.playlist-playlist-table .icon {
     font-size: 20px;
     color: #6c757d;
     cursor: pointer;
 }
+
 /* .result-table .icon:hover {
     color: #3F3FFF;
 } */
-.playlist-title{
+.playlist-playlist-title {
     font-size: 13px;
     font-weight: 600;
 }
 
-.table-artist{
+.playlist-table-artist {
     width: 200px;
     font-size: 14px;
 }
 
-.table-album-container {
+.playlist-table-album-container {
     display: flex;
     align-items: center;
     gap: 10px; /* 이미지와 텍스트 사이의 간격 */
     width: 100%;
 }
-.text-container {
-    width:500px;
+
+.playlist-text-container {
+    width: 500px;
     display: flex;
     flex-direction: column;
 }
 
-.total-listen {
+.playlist-total-listen {
     display: inline-flex;
     align-items: center;
     text-decoration: none;

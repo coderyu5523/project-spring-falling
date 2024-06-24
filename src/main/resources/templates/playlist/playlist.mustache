@@ -1,17 +1,17 @@
 {{>layout/header}}
 <br>
-<div class="main-container">
-    <div class="main-playlist">
-        <div class="playlist-body">
+<div class="playlist-main-container">
+    <div class="playlist-main-playlist">
+        <div class="playlist-playlist-body">
             <div class="d-flex justify-content-start">
             </div>
             <br>
-            <div class="playlist-container">
-                <div class="playlist-img-container">
+            <div class="playlist-playlist-container">
+                <div class="playlist-playlist-img-container">
                     <img src="{{playlist.playlistCover}}">
-                    <button class="playlist-play-button">▶</button>
+                    <button class="playlist-playlist-play-button">▶</button>
                 </div>
-                <div class="playlist-info">
+                <div class="playlist-playlist-info">
                     <a href="#">
                         <h3 style="font-size: 25px; font-weight: 600;">{{playlist.playListTitle}}</h3>
                     </a>
@@ -24,9 +24,9 @@
                     </a>
                     <br>
                     <div class="d-flex">
-                        <a href="#"><i class="playlist-icon fas fa-list icon"></i></a>
-                        <a href="#"><i class="playlist-icon fas fa-folder-plus custom-icon"></i></a>
-                        <a href="#"><i class="playlist-icon fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="playlist-playlist-icon fas fa-list icon"></i></a>
+                        <a href="#"><i class="playlist-playlist-icon fas fa-folder-plus custom-icon"></i></a>
+                        <a href="#"><i class="playlist-playlist-icon fa-regular fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -34,18 +34,18 @@
 
         <br>
 
-        <div class="playlist-body">
-            <table class="playlist-table">
+        <div class="playlist-playlist-body">
+            <table class="playlist-playlist-table">
                 <div class="d-flex">
                     <a href="#"><i class="fa-solid fa-play total-listen" style="margin-right: 7px;"></i></a>
-                    <a href="#"><h2 class="total-listen" style="font-size: 13px;">전체듣기</h2></a>
+                    <a href="#"><h2 class="playlist-total-listen" style="font-size: 13px;">전체듣기</h2></a>
                 </div>
 
                 <thead>
                 <tr>
                     <th><input type="checkbox"></th>
                     <th style="font-size: 12px;">곡/앨범</th>
-                    <th class="table-artist" style="font-size: 12px;">아티스트</th>
+                    <th class="playlist-table-artist" style="font-size: 12px;">아티스트</th>
                     <th style="font-size: 12px;">듣기</th>
                     <th style="font-size: 12px;">재생목록</th>
                     <th style="font-size: 12px;">내 리스트</th>
@@ -56,11 +56,11 @@
                 {{#playlist.songList}}
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td class="table-album-container">
+                        <td class="playlist-table-album-container">
                             <a href="#">
                                 <img src="{{albumImg}}" alt="Album Cover">
                             </a>
-                            <div class="text-container">
+                            <div class="playlist-text-container">
                                 <a href="#">
                                     <strong>{{songTitle}}</strong>
                                 </a>
@@ -69,7 +69,7 @@
                                 </a>
                             </div>
                         </td>
-                        <td class="table-artist">
+                        <td class="playlist-table-artist">
                             <a href="#">{{artistName}}</a>
                         </td>
                         <td>
