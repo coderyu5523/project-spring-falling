@@ -58,9 +58,11 @@
     <div class="controls">
         <div></div>
         <div>
+            <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
             <button id="prev-btn">&#9664;&#9664;</button>
             <button id="play-btn">&#9654;</button>
             <button id="next-btn">&#9654;&#9654;</button>
+            <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
         </div>
         <div><a class="add-page" style="cursor: pointer"><i class="fa-solid fa-sliders"></i></a></div>
     </div>
@@ -212,7 +214,24 @@
         function renderPlaylist() {
             songList.empty();
             songs.forEach((song, index) => {
-                const li = $('<li>').text(song.songTitle).attr('data-src', song.musicFile);
+                const li = $('<li>').addClass('d-flex'); // 'd-flex' 클래스를 추가하여 Flexbox 사용
+                const img = $('<img>').attr('src', song.albumImg).addClass('playlist-img').css('width', '50px');
+                const infoDiv = $('<div>').addClass('info');
+                const a = $('<a>').attr('href', '#');
+                const titleDiv = $('<div>').text(song.songTitle).css({'font-size': '15px', 'font-weight': '600'});
+                const artistDiv = $('<div>').text(song.artistName).css({'font-size': '12px', 'color': 'gray'});
+
+                a.append(titleDiv).append(artistDiv);
+                infoDiv.append(a);
+
+                const iconContainer = $('<div>').addClass('icon-container');
+                const listIcon = $('<a>').attr('href', '#').append($('<i>').addClass('album-icon fas fa-list icon').css('margin-right', '10px'));
+                const moreIcon = $('<a>').attr('href', '#').append($('<i>').addClass('fas fa-ellipsis-v icon').css('color', 'white'));
+
+                iconContainer.append(listIcon).append(moreIcon);
+
+                li.append(img).append(infoDiv).append(iconContainer);
+
                 songList.append(li);
             });
         }
