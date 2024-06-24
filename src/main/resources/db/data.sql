@@ -583,13 +583,13 @@ VALUES ('RIIZING - The 1st Mini Album', '카카오엔터테인먼트', 'SM ENTER
         여기에 낯선 상대를 향한 RIIZE만의 솔직한 관심 표현법을 드러낸 ‘Talk Saxy’와 문득 찾아온 첫사랑의 감정을 응급 상황에 빗대어 풀어낸 ‘Love 119’까지 이미 음원 공개되어 많은 사랑을 받고 있는 곡들도 같이 만날 수 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('전설', '카카오엔터테인먼트', '(주)페포니뮤직', '국내', 'Indie', '/upload/album/전설.jpg', 41, '2019-03-13', '잔나비 정규 2집 [전설]
+VALUES ('전설', '카카오엔터테인먼트', '(주)페포니뮤직', '국내', '정규', '/upload/album/전설.jpg', 41, '2019-03-13', '잔나비 정규 2집 [전설]
 3년 만에 돌아온 잔나비의 2집이네요. 머나먼 시간이었죠.
 그 사이 많은 것들이 변했어요. 세상은 더 이상 갈망하지 않고, 치열하게 부딪히며 사랑하던 모든 관계 역시 시대답게 편리해진 듯해요. 그것도 모르고 언제나 더 뜨겁고자 했던 나와 내 친구들은 어디에 몸을 부벼야 할지 몰라 한낱 음악 속에 우리 이야기를 눈치 없이 다 담아버렸네요. ‘전설’이라는 쓸데없이 장엄하고 촌스럽기 그지없는 이름과 함께요. 투 머치 인포메이션. 그래서 빙빙 돌며 같은 말을 반복하기도 할테니 남 이야기 듣듯 무심히 들어주세요. 언젠가는 다 사라져 전설로 남을 청춘의 처절했던 시간들에 대한 이야기라며.  많은 시간 함께 기다려준 우리 팬분들께 감사 드립니다. 우리도 얼마나 많이 기다려왔는지 몰라요.
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('1.0', '마운드미디어', '10cm', '국내', 'Indie', '/upload/album/1_0.jpg', 42, '2011-02-10', '뉴욕맨하탄 스타일의 밴드 10cm의 첫번째 정규앨범 ''1.0''
+VALUES ('1.0', '마운드미디어', '10cm', '국내', '정규', '/upload/album/1_0.jpg', 42, '2011-02-10', '뉴욕맨하탄 스타일의 밴드 10cm의 첫번째 정규앨범 ''1.0''
 
 2009년 홍대의 몇몇 클럽에서 처음으로 모습을 보인 10cm는 어느덧 2년차의 경력을 자랑하는 밴드가 되었다. 2010년 4월 발매된 첫번째 가내수공업 EP앨범과 컴필레이션 앨범 ''Life''의 ''오늘밤은 어둠이 무서워요''를 통하여 어쿠스틱 음악신의 새로운 아이콘으로 떠오른 10cm는 그해 8월 ''아메리카노''라는 말도 안되는 디지탈 싱글의 발매로 말도 안되는 인기를 누리는 밴드가 되었고, 피시방비와 담뱃값을 충당하기 위해 길거리 공연을 서슴치 않던 10cm는 어느덧 수천명 규모의 페스티발에서도 환영받는 존재가 되었으며 용돈 걱정을 하지 않아도 되는 먹고 살만한 생활을 누리게 되었다. (태어나서 처음으로!) 그러나 정작 10cm는 누가봐도 대견해할만한 이 분위기를 그리 탐탁치 않게 생각하고 있었다.
 
@@ -603,7 +603,7 @@ VALUES ('1.0', '마운드미디어', '10cm', '국내', 'Indie', '/upload/album/1
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Polar', 'RIAK', '해피로봇레코드', '국내', 'Indie', '/upload/album/Polar.jpg', 43, '2017-11-22', '당신의 오늘에 전하는 뜻밖의 순간들
+VALUES ('Polar', 'RIAK', '해피로봇레코드', '국내', '미니', '/upload/album/Polar.jpg', 43, '2017-11-22', '당신의 오늘에 전하는 뜻밖의 순간들
 소란(SORAN) 미니 앨범 [Polar]
 
 지금은 잠깐 후회 중입니다, 그러니까 아주 잠깐.
@@ -615,7 +615,7 @@ VALUES ('Polar', 'RIAK', '해피로봇레코드', '국내', 'Indie', '/upload/al
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Team Baby', 'YG PLUS', '도기리치', '국내', 'Indie', '/upload/album/Team Baby.jpg', 44,'2017-05-30', 'Love is all, all is love
+VALUES ('Team Baby', 'YG PLUS', '도기리치', '국내', '정규', '/upload/album/Team Baby.jpg', 44, '2017-05-30', 'Love is all, all is love
 검정치마 [Team Baby]
 
 인류가 이야기를 멜로디에 실어 부르기 시작한 이래, 대부분의 노래는 사랑에 관한 것이었다.
@@ -627,7 +627,7 @@ VALUES ('Team Baby', 'YG PLUS', '도기리치', '국내', 'Indie', '/upload/albu
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Aurora', 'RIAK', '해피로봇레코드', '국내', 'Indie', '/upload/album/Aurora.jpg', 45, '2010-08-05', '짜릿한 에너지, 과감한 무대매너
+VALUES ('Aurora', 'RIAK', '해피로봇레코드', '국내', '정규', '/upload/album/Aurora.jpg', 45, '2010-08-05', '짜릿한 에너지, 과감한 무대매너
 객석을 들었다 놨다 하는 라이브계 절대강자 ‘데이브레이크’ 그들의 유쾌한 기운을 응집해 놓은 2집
 
 2010년 1월 발표한 미니앨범 “New Day”로 상반기 치열한 활동을 보여준 ‘데이브레이크’. 그들은 남녀노소를 모두 아울러 긍정의 기운을 품게 해준 곡 ‘좋다’와 무대에서 발산해 내는 짜릿한 에너지로 단기간에 다양한 팬 층을 흡수했다. 이는 그들의 매력인 심플하고 소소한 위트를 간직한 음악과, 라이브 무대에서 과감하게 뿜어져 나오는 유쾌함이 십분 발휘된 결과라 할 수 있다.
@@ -638,16 +638,15 @@ VALUES ('Aurora', 'RIAK', '해피로봇레코드', '국내', 'Indie', '/upload/a
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Serenade', '마운드미디어', '매직스트로베리사운드', '국내', 'Indie', '/upload/album/Serenade.jpg', 46, '2019-12-12', 'Serenade : ''저녁음악''의 뜻.
+VALUES ('Serenade', '마운드미디어', '매직스트로베리사운드', '국내', '정규', '/upload/album/Serenade.jpg', 46, '2019-12-12', 'Serenade : ''저녁음악''의 뜻.
 Serenade 는 본래 저녁의 음악을 뜻한다. 많이 알려진 의미는 사랑 노래인데, Serenade 가 뜻하는 몇 가지 의미 중 하나이다.
-
 
 대부분의 제 노래들이 낮보다 밤에 더 어울린다고 생각해왔고, 모양은 다르지만 모두 사랑을 뿌리로 두고 자란 노래들이라 ‘Serenade’라는 제목을 지었습니다. 저녁에 여러분들의 귓가에 이 16개의 사랑 노래들을 들려드리는 마음으로 정규 3집을 발매합니다.
 
 - swja');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('여름깃', '마운드미디어', '매직스트로베리사운드', '국내', 'Indie', '/upload/album/여름깃.jpg', 47, '2017-10-26', '새소년 - [여름깃]
+VALUES ('여름깃', '마운드미디어', '매직스트로베리사운드', '국내', '미니', '/upload/album/여름깃.jpg', 47, '2017-10-26', '새소년 - [여름깃]
 
 SSN#004. Track. 1. 음반을 여는 첫 번째 트랙은 타이틀곡인 ‘나는 새롭게 떠오른 외로움을 봐요’. 정처 없이 공허한 외로움을 반복적인 노랫말과 섬세한 연주로 ‘새소년 만의 사이키델릭’으로 담아낸 곡으로 황소윤의 깊숙한 목소리가 특별하게 느껴지는 노래다. 더불어 영상 스튜디오 GABWORKS가 연출한 뮤직비디오도 ‘긴 꿈’ 못지 않게 아름다운 느낌을 선사한다.
 
@@ -657,7 +656,7 @@ SSN#004. Track. 5-6. 이제 음반의 종반부, 이미 싱글로 선보여 그 
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Apartment', 'MO records', '두루두루 아티스트 컴퍼니', '국내', 'Indie', '/upload/album/APARTMENT.jpg', 48, '2017-12-12', '[장기하가 말하는 APARTMENT]
+VALUES ('Apartment', 'MO records', '두루두루 아티스트 컴퍼니', '국내', '정규', '/upload/album/APARTMENT.jpg', 48, '2017-12-12', '[장기하가 말하는 APARTMENT]
 “매일 토해내는 젊음을 누군가 알아주길” [Beyond] 가사의 일부다. 나는 아마 올 한 해 카더가든이 젊음을 토해내는 모습을 가장 많이 지켜본 사람 중 하나일 것이다. 하루가 멀다 하고 같이 술을 마셨거든. 카더가든은 젊다. 호기로울 때는 아주 기세등등하지만 위축될 때는 그렇게 소심할 수가 없다. 주변 사람들과 두루두루 잘 지내지만 알고 보면 대단히 외로운 인간이다. 그런 젊음이 이 앨범에 가득 담겼다.
 
 젊은 사랑은 벅찬 것이라서 그걸 경험하는 이들은 “모든 게 어제와만 같기를([젊은 꿈])” 바라지만 결국은 서툴러서 “모든 것을 주고도 미안([Lost 2])”해 하고 만다. 젊은 삶은 “깨고 싶지 않은 구슬 같은 것([Blue Blue])”처럼 보이지만 역시나 “왠지 열어보기 두려워만([Mother])”지는 것이다.
@@ -666,12 +665,12 @@ VALUES ('Apartment', 'MO records', '두루두루 아티스트 컴퍼니', '국�
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('사랑으로','MO records','두루두루아티스트컴퍼니','국내','Indie','/upload/album/사랑으로.jpg',49,'2020-01-30','[혁오의 다섯 번째 앨범: 사랑으로]
+VALUES ('사랑으로', 'MO records', '두루두루아티스트컴퍼니', '국내', '정규', '/upload/album/사랑으로.jpg', 49, '2020-01-30', '[혁오의 다섯 번째 앨범: 사랑으로]
 혁오가 <24: How to find true love and happiness>이후 1년 만에 새 앨범 <사랑으로>로 돌아왔다. 그간 혁오가 진행했던 작업 방식이 미리 정해둔 음악적 지향점을 향해 나아가는 것이었다면, 이번 앨범 작업은 다분히 과정지향적인 방식으로 이루어졌다. 폴 사이먼, 에이미 와인하우스, 뷔욕, 칸예 웨스트 등이 작업한 바 있는 영국의 유서깊은 리얼월드 스튜디오 Real World Studios에서 악기 녹음을, 베를린에서 혁오의 오랜 협업자인 놀먼 니체와 함께 보컬 녹음 및 믹싱을 진행한 이번 앨범은 혁오가 [23] 때부터 적극적으로 추구했던 아날로그 사운드에 보다 가까이 다가갔으며, 형식 면에서는 앨범을 만드는 데 가장 필요한 요소 외의 모든 것을 덜어내고자 했다. 멤버 모두가 사운드적으로 가장 만족스러운 결과물이라 자부하는 이번 앨범은 데뷔 6년차 밴드 혁오가 보여주는 음악적 대화와 그 과정의 기록이라고 할 수 있다.
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('너 그러다 장가 못간다','미러볼뮤직','doob sound','국내','Indie','/upload/album/너_그러다_장가_못간다.jpg',50,'2011-11-01','한 번 들으면 입가에 맴돌 만큼 중독성이 강한 ‘장미여관’의 음악. 그 흡입력의 원천은 감성과 본능에 충실한 솔직함이다. ‘장미여관’의 음악에서 가장 두드러지는 점은 남의 시선 때문에 하지 못했던 말 혹은 누군가 대신 이야기 해 줬으면 하는 타인의 마음을 음악으로 솔직하게 전달한다는 점이다.
+VALUES ('너 그러다 장가 못간다', '미러볼뮤직', 'doob sound', '국내', '싱글', '/upload/album/너_그러다_장가_못간다.jpg', 50, '2011-11-01', '한 번 들으면 입가에 맴돌 만큼 중독성이 강한 ‘장미여관’의 음악. 그 흡입력의 원천은 감성과 본능에 충실한 솔직함이다. ‘장미여관’의 음악에서 가장 두드러지는 점은 남의 시선 때문에 하지 못했던 말 혹은 누군가 대신 이야기 해 줬으면 하는 타인의 마음을 음악으로 솔직하게 전달한다는 점이다.
 
 첫번째 트랙 봉숙이는 부산사투리로 작사한 곡으로 부산사투리 고유의 발음을 음악 속에 잘 풀어서 새로운 느낌을 선사한다. 그리고 전곡의 작사, 작곡, 편곡, 믹싱, 녹음을 팀원들 스스로 해냈다는 점에서 그들만의 독특한 색깔을 느낄 수 있다.
 
@@ -720,7 +719,9 @@ VALUES ('전부 너였다', '런치송 프로젝트', '양재선', '/upload/song
 보내고 보내도 헤어지고
 다시 헤어져도
 나는 또 그대겠죠
-', 1), ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/슈퍼노바.mp4', 'Dance', true, '/upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
+', 1),
+       ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/슈퍼노바.mp4', 'Dance',
+        true, '/upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
 Watch out
 Look at me go
 재미 좀 볼
@@ -807,7 +808,9 @@ Supernova
 질문은 계속돼 Ah Oh Ay
 (Nova)
 Bring the light of a dying star
-Supernova', 2), ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)', '/upload/Armageddon.mp4', 'Dance', true, '/upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
+Supernova', 2),
+       ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)',
+        '/upload/Armageddon.mp4', 'Dance', true, '/upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
 Shoot
 Imma get ’em
 Shoot
@@ -927,7 +930,9 @@ Warning all night long)
 Armageddon
 (Aw wayo wayo)
 끝과 시작의
-Armageddon', 2), ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/tone.mp3', '2024-05-27', 2, 'We Set The Tone
+Armageddon', 2),
+       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/tone.mp3',
+        '2024-05-27', 2, 'We Set The Tone
 Music on where we go
 미친 Beat drum
 같은 소리로
@@ -1060,7 +1065,9 @@ We Set The Tone
 
 We Set The Tone
 We take it home
-We Set The Tone', 2), ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance', false, '/upload/Mine.mp3', '2024-05-27', 2, '예고 없이
+We Set The Tone', 2),
+       ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',
+        false, '/upload/Mine.mp3', '2024-05-27', 2, '예고 없이
 지는 그림자
 Mine
 두려움을
@@ -1199,7 +1206,9 @@ Mine
 It’s all Mine
 know you want it like
 It’s all Mine
-Mine', 2), ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정', '/upload/Licorice.mp4', 'Dance', false, '/upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
+Mine', 2),
+       ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
+        '/upload/Licorice.mp4', 'Dance', false, '/upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
 Licorice
 Licorice
@@ -1321,7 +1330,9 @@ Licorice
 Licorice
 Licorice
 자꾸 손이 가
-Like Licorice', 2), ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null, 'Dance', false, '/upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
+Like Licorice', 2),
+       ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,
+        'Dance', false, '/upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
 ba ba
 Bahama, hama
 (Bahama)
@@ -1456,7 +1467,9 @@ Bahama, hama
 We should go
 To the beach
 Take it slow
-Bahama', 2), ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리', '/upload/Long Chat.mp4', 'Dance', false, '/upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
+Bahama', 2),
+       ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
+        '/upload/Long Chat.mp4', 'Dance', false, '/upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
 Woo Ah
 
@@ -1601,7 +1614,9 @@ Hashtag
 너의 속마음을 듣고파
 
 I’ll be the girl who likes a
-Long Chat', 2), ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/Prologue.mp3', '2024-05-27', 2, 'Woo Woo Woo
+Long Chat', 2),
+       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/Prologue.mp3',
+        '2024-05-27', 2, 'Woo Woo Woo
 La-la
 Woo Woo Woo
 La-la
@@ -1699,7 +1714,9 @@ Woo Woo Woo
 La-la
 Woo Woo Woo
 La-la
-', 2), ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4', 'Rock/Metal', false, '/upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
+', 2),
+       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4',
+        'Rock/Metal', false, '/upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
 고지식한
 그런 사고방식
 Say 솔직한 마음만
@@ -1801,7 +1818,9 @@ Live My Life
 외쳐봐
 Live My Life
 
-Life', 2), ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/목소리 (Melody).mp3', '2024-05-27', 2, 'Every night
+Life', 2),
+       ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/목소리 (Melody).mp3',
+        '2024-05-27', 2, 'Every night
 지친 하루 끝에
 커져가는 빈자리
 그럴 땐
@@ -1880,7 +1899,10 @@ Oh You’re the one
 나를 부르는
 목소리
 우릴 이어준
-목소리', 2), ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman', 'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)', '/upload/How Sweet.mp4', 'Dance', true, '/upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
+목소리', 2),
+       ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman',
+        'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)',
+        '/upload/How Sweet.mp4', 'Dance', true, '/upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
 알게 됐어 나 (I know)
 그동안 맨날
 Always up and down (No more)
@@ -1967,7 +1989,10 @@ Don’t knock on my door 너 얼른 나가버려
 Toxic lover
 You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
-Don’t knock on my door, I’ll see you out', 3), ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman', '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/해야 (HEYA).mp4', 'Dance', true, '/upload/해야 (HEYA).mp3', '2024-04-29', 4, 'Let’s get it
+Don’t knock on my door, I’ll see you out', 3),
+       ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman',
+        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/해야 (HEYA).mp4', 'Dance', true, '/upload/해야 (HEYA).mp3', '2024-04-29',
+        4, 'Let’s get it
     Look at it
     Pay attention
 
@@ -2061,7 +2086,11 @@ Don’t knock on my door, I’ll see you out', 3), ('해야 (HEYA)', 'Ryan S. Jh
     해야 해야 해야
     뜨겁게 떠오르는 해야
     별안간 홀린 그 순간 Bite
-    Da da da dun dun dun', 4), ('첫 만남은 계획대로 되지 않아', 'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK', 'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', '/upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true, '/upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
+    Da da da dun dun dun', 4),
+       ('첫 만남은 계획대로 되지 않아',
+        'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK',
+        'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', '/upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
+        '/upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
 거울 속에 내 표정 봐 봐
 느낌 So good 기다려온 D-day
 연습했던 손든 인사도 그대로 하면 돼
@@ -2113,7 +2142,10 @@ Na na na-
 
 이렇게 만나서 반가워
 내일 또 봐 안녕
-', 5), ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영', '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/고민중독.mp4', 'Rock/Metal', true, '/upload/고민중독.mp3', '2024-04-01', 6, 'One! Two! Q! W! E! R!
+', 5),
+       ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영',
+        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/고민중독.mp4', 'Rock/Metal', true, '/upload/고민중독.mp3',
+        '2024-04-01', 6, 'One! Two! Q! W! E! R!
 어떤 인사가 괜찮을까 천 번쯤 상상해 봤어
 근데 오늘도 천 번 하고 한 번 더 고민 중
 
@@ -2151,7 +2183,8 @@ Na na na-
 벅차오르다 못해 내 맘이 쿡쿡 아려와
 두 번은 말 못 해 너 지금 잘 들어봐
 매일 고민하고 연습했던 말
-좋아해', 6), ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
+좋아해', 6),
+       ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
 붙잡지 못하고 가슴만 떨었지
 내 아름답던 사람아
@@ -2184,7 +2217,9 @@ Na na na-
 꼭 움켜쥐지만
 그리움이 쫓아 사랑은 늘 도망가
 잠시 쉬어가면 좋을 텐데
-잠시 쉬어가면 좋을 텐데', 7), ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)', '/upload/SPOT! (feat. JENNIE).mp4', 'HipHop', true, '/upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
+잠시 쉬어가면 좋을 텐데', 7),
+       ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)',
+        '/upload/SPOT! (feat. JENNIE).mp4', 'HipHop', true, '/upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
 Turn the music up
 
 Uhm we’re not going home tonight, alright
@@ -2255,7 +2290,9 @@ Everybody Stop
 Wait a minute ahhh
 
 Come vibe with us
-Ride with us', 8), ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false, '/upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
+Ride with us', 8),
+       ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,
+        '/upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
 똑같이 하루를 시작하고
 온종일 한 손엔 아이스 아메리카노
 피곤해 죽겠네
@@ -2301,7 +2338,11 @@ Ride with us', 8), ('나는 아픈 건 딱 질색이니까', '소연 ((여자)�
 나는 생각은 딱 질색이니까
 
 아냐 지나치는 게 나을 것 같아
-나는 아픈 건 딱 질색이니까', 9), ('Magnetic', 'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES', 'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES', '/upload/Magnetic.mp4', 'Dance', true, '/upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
+나는 아픈 건 딱 질색이니까', 9),
+       ('Magnetic',
+        'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
+        'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
+        '/upload/Magnetic.mp4', 'Dance', true, '/upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
 I’m just trying to play it cool
 But I just can’t hide that
 I want you
@@ -2377,7 +2418,9 @@ Dash-da-da Dash-da-da Dash-da
 Like it’s magnetic
 BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
-Baby don’t say no', 10), ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/소나기.mp3', '2024-04-08', 11, '그치지 않기를 바랬죠
+Baby don’t say no', 10),
+       ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/소나기.mp3',
+        '2024-04-08', 11, '그치지 않기를 바랬죠
     처음 그대 내게로 오던 그날에
     잠시 동안 적시는
     그런 비가 아니길
@@ -4852,6 +4895,235 @@ VALUES ('Boom Boom Bass', 'Peter Wallevik, Daniel Davidsen, Ben Samama, David Ar
 
         Boom ba doom
         boom boom bass', 40);
+
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('주저하는 연인들을 위해', '잔나비 최정훈, 김도형, 유영현', '잔나비 최정훈', '/upload/song/주저하는연인들을위해.mp4', 'Indie', true,
+        '/upload/song/주저하는연인들을위해.mp3', '2019-03-13', 41, '나는 읽기 쉬운 마음이야
+당신도 스윽 훑고 가셔요
+달랠 길 없는 외로운 마음 있지
+머물다 가셔요 음
+내게 긴 여운을 남겨줘요
+사랑을 사랑을 해줘요
+할 수 있다면 그럴 수만 있다면
+새하얀 빛으로 그댈 비춰 줄게요
+그러다 밤이 찾아오면
+우리 둘만의 비밀을 새겨요
+추억할 그 밤 위에 갈피를 꽂고 선
+남몰래 펼쳐보아요
+나의 자라나는 마음을
+못 본채 꺾어 버릴 수는 없네
+미련 남길바엔 그리워 아픈 게 나아
+서둘러 안겨본 그 품은 따스할 테니
+그러다 밤이 찾아오면
+우리 둘만의 비밀을 새겨요
+추억할 그 밤 위에 갈피를 꽂고 선
+남몰래 펼쳐보아요
+언젠가 또 그날이 온대도
+우린 서둘러 뒤돌지 말아요
+마주보던 그대로 뒷걸음치면서
+서로의 안녕을 보아요
+피고 지는 마음을 알아요 다시 돌아온 계절도
+난 한 동안 새 활짝 피었다 질래 또 한번 영원히
+그럼에도 내 사랑은 또 같은 꿈을 꾸고
+그럼에도 꾸던 꿈을 미루진 않을래
+', 41);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('그게 아니고', '10cm', '10cm', null, 'Indie', true, '/upload/song/그게아니고.mp3', '2011-02-10', 42, '어두운 밤 골목길을 혼자 털레털레 오르다
+지나가는 네 생각에 내가 눈물이 난 게 아니고
+이부자리를 치우다 너의 양말 한 짝이 나와서
+갈아 신던 그 모습이
+내가 그리워져 운 게 아니고
+보일러가 고장 나서 울지
+책상서랍을 비우다 니가 먹던 감기약을 보곤
+환절기마다 아프던 니가 걱정돼서 운 게 아니고
+선물 받았던 목도리 말라빠진 어깨에 두르고
+늦은 밤 내내 못 자고
+술이나 마시며 운 게 아니고
+보일러가 고장 나서 울지
+어두운 밤 골목길을 혼자 털레털레 오르다
+지나가는 네 생각에 우네
+', 42);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('연애 같은 걸 하니까', '고영배', '고영배', '/upload/song/연애_같은_걸_하니까.mp4', 'Indie', true, '/upload/song/연애_같은_걸_하니까.mp3',
+        '2017-11-22', 43, '그러게 연애 같은 걸 하니까
+이렇게 힘들 줄 몰랐으니까
+나 지금 되게 슬프고 뻔해
+그것 봐 내 주제에
+사랑은 무슨 사랑
+사랑 같은 소리들 하네
+나한텐 어렵기만 하던데
+TV 속에 다 가진 주인공
+로맨스는 누가 못해
+오늘 밤은 길기도 하네
+그때는 그렇게도 짧더니
+이 좋은 밤 혼자서 외롭게
+너 때문에 이게 다 뭐야
+그러게 연애 같은 걸 하니까
+이렇게 힘들 줄 몰랐으니까
+나 지금 되게 불쌍해
+너의 사진을 몇백 장째 보다가
+괜히 또 그립기만 하다니까
+억지로 맘을 멈출 순 없을까
+뒤척여봐도 똑같은 생각 그것 봐 내 주제에
+사랑은 무슨 사랑
+이해 못하고
+흘려들었던 노래들이
+못 듣겠잖아
+눈물이 나서
+이런 거 진짜 싫어했었는데
+그러게 연애 같은 걸 하니까
+나는 또 바보처럼 굴 테니까
+나 지금 되게 불쌍해
+혹시 이런 날 네가 알아 주지는
+않을까 기대하고 있다니까
+우연히 마주치면 어떡할까
+노력해봐도 똑같은 생각 그것 봐 내 주제에
+사랑은 무슨 사랑
+내 주제에
+연애는 무슨 연애
+', 43);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('나랑 아니면', '검정치마', '검정치마', '/upload/song/나랑아니면.mp4', 'Indie', true, '/upload/song/나랑아니면.mp3', '2017-05-30', 44, '야 나랑 놀자 밤늦게까지 함께 손뼉 치면서
+나랑 마셔 너와 나의 몸이 녹아 내리면
+나랑 걷자 저 멀리까지가다 지쳐 누우면
+나랑 자자 두 눈 꼭 감고 나랑 입 맞추자
+나랑 아니면 누구랑 사랑 할 수 있겠니
+나랑 아니면 어디에 자랑 할 수 있겠니
+나랑 아니면
+야 나랑 놀자 어디 가지 말고
+그리울 틈 없도록
+나랑 살자 아주 오랫동안
+우리 같이 살자
+나랑 아니면 누구랑 사랑 할 수 있겠니
+나랑 아니면 어디에 자랑 할 수 있겠니
+나랑 아니면
+아무렇지 않게 넌 내게 말했지
+날 위해 죽을 수도, 죽일 수도 있다고
+알아, 나도 언제나 같은 마음이야 baby
+아마도 우린 오래 아주 오래 함께할 거야
+', 44);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('들었다 놨다', '데이브레이크', '데이브레이크', null, 'Indie', true, '/upload/song/들었다놨다.mp3', '2010-08-05', 45, '처음 너를 본순간 정신 차릴수없어
+내 마음을 들킬까봐 조심조심해
+어떡하면 네 맘을 답답해진 내 맘을
+쫄깃해진 심장이 나 어쩌면 좋아
+가까워졌다 점점 멀어져가는 이상해
+울다가 웃다 나 좀 내버려둬요 언제나
+이랬따 저랬다 헷갈려 그녀는
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다 hey
+다시 너를 본순간 차갑게 대해보려
+애써 관심 없는 듯이 외면 했지만
+너의 눈빛 하나에 너의 손짓 하나에
+바짝바짝 말라버려 나의 입술은
+멀어져갔다 다시 다가와주는 오늘도
+울다가 웃다 점점 짜증이나요 언제나
+이랬다 저랬다 헷갈려 그녀는
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다 hey
+들어다 놨다 들었다 놨다 들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+오 어떡하면 그녀를 내 맘속에
+가둬둘 수 있을까 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+들었다 놨다 들었다 놨다 hey
+', 45);
+
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+VALUES ('도망가자', '선우정아', '선우정아, 곽은정', '/upload/song/도망가자.mp4', 'Indie', true, '/upload/song/도망가자.mp3', '2019-12-12', 46, '도망가자
+어디든 가야 할 것만 같아
+넌 금방이라도 울 것 같아
+괜찮아
+
+우리 가자
+걱정은 잠시 내려놓고
+대신 가볍게 짐을 챙기자
+실컷 웃고 다시 돌아오자
+거기서는 우리 아무 생각말자
+
+너랑 있을게 이렇게
+손 내밀면 내가 잡을게
+있을까, 두려울 게
+어디를 간다 해도
+우린 서로를 꼭 붙잡고 있으니
+
+너라서 나는 충분해
+나를 봐 눈 맞춰줄래
+너의 얼굴 위에 빛이 스며들 때까지
+가보자 지금 나랑
+
+도망가자
+멀리 안 가도 괜찮을 거야
+너와 함께라면 난 다 좋아
+너의 맘이 편할 수 있는 곳
+그게 어디든지 얘기 해줘
+
+너랑 있을게 이렇게
+손 내밀면 내가 잡을게
+있을까, 두려울 게
+어디를 간다 해도
+우린 서로를 꼭 붙잡고 있으니
+
+가보는 거야 달려도 볼까
+어디로든 어떻게든
+내가 옆에 있을게 마음껏 울어도 돼
+그 다음에
+
+돌아오자 씩씩하게
+지쳐도 돼 내가 안아줄게
+괜찮아 좀 느려도 천천히 걸어도
+나만은 너랑 갈 거야 어디든
+
+당연해 가자 손잡고
+사랑해 눈 맞춰줄래
+너의 얼굴 위에 빛이 스며들 때까지
+가보자 지금 나랑
+
+도망가자
+', 46);
+
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics, artist_id)
+-- VALUES (47, , 47);
+-- --
+-- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+-- --                      lyrics, artist_id)
+-- -- VALUES (48, , 48);
+-- --
+-- --
+-- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+-- --                      lyrics, artist_id)
+-- -- VALUES (49, , 49);
+-- --
+-- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+-- --                      lyrics, artist_id)
+-- -- VALUES (50, , 50);
 
 --  테이블 : playlist
 
