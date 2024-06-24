@@ -2,6 +2,7 @@ package org.example.projectspringfalling.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 
@@ -27,6 +28,7 @@ public class UserResponse {
     }
 
     // 로그인 DTO
+    @NoArgsConstructor
     @Data
     public static class LoginDTO {
         private Integer id; // 유저 번호
