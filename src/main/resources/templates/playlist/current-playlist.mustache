@@ -72,7 +72,7 @@
 </div>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         const audioPlayer = $('#audio-player')[0];
         const songList = $('#song-list');
         const prevBtn = $('#prev-btn');
@@ -88,15 +88,16 @@
         const durationSpan = $('#duration');
 
         const PLAY_MODES = [
-            { icon: '<i class="fa-solid fa-repeat" style="color: #3f3fff"></i>', name: 'repeat-all' },
-            { icon: '<i class="fas fa-repeat" style="color: #3f3fff"></i> <span>1</span>', name: 'repeat-one' },
-            { icon: '<i class="fa-solid fa-repeat"></i>', name: 'normal' }
+            {icon: '<i class="fa-solid fa-repeat"></i>', name: 'normal'},
+            {icon: '<i class="fas fa-repeat" style="color: #3f3fff"></i> <span>1</span>', name: 'repeat-one'},
+            {icon: '<i class="fa-solid fa-repeat" style="color: #3f3fff"></i>', name: 'repeat-all'}
+
         ];
 
         let currentIndex = 0;
         let previousIndex = null;
         let songs = [];
-        let playMode = 'normal'; // 초기 모드는 normal
+        let currentModeIndex = 0; // 초기 모드는 normal
 
         // 노래 목록 초기화
         {{#songs}}
@@ -108,9 +109,8 @@
             });
         {{/songs}}
 
-
         // 플레이 리스트 재생/일시정지 버튼 처리
-        playBtn.on('click', function() {
+        playBtn.on('click', function () {
             if (audioPlayer.src === '') {
                 // 버튼 클릭 시 첫 번째 노래 재생
                 playSong(0);
@@ -159,7 +159,7 @@
         }
 
         // progressBar의 값이 변경될 때 오디오의 현재 재생 시간을 progressBar의 값으로 설정
-        progressBar.on('change', function() {
+        progressBar.on('change', function () {
             audioPlayer.currentTime = progressBar.val();
         });
 
@@ -171,7 +171,7 @@
         }
 
         // 노래 목록 클릭 시 재생
-        songList.on('click', 'li', function() {
+        songList.on('click', 'li', function () {
             const index = $(this).index();
             playSong(index);
         });
@@ -187,11 +187,35 @@
             durationSpan.text(formatTime(audioPlayer.duration));
         });
 
+        // 모드 변경 버튼 클릭 이벤트 리스너
+        modeBtn.on('click', function () {
+            currentModeIndex = (currentModeIndex + 1) % PLAY_MODES.length;
+            updatePlayMode();
+        });
+
+        // 모드 업데이트 함수
+        function updatePlayMode() {
+            const playMode = PLAY_MODES[currentModeIndex];
+            modeBtn.html(playMode.icon);
+
+            switch (playMode.name) {
+                case 'normal':
+                    audioPlayer.loop = false;
+                    break;
+                case 'repeat-all':
+                    audioPlayer.loop = false;
+                    break;
+                case 'repeat-one':
+                    audioPlayer.loop = true;
+                    break;
+            }
+        }
+
         // 오디오 플레이어가 끝났을 때 이벤트 처리
-        $(audioPlayer).on('ended', function() {
-            if (playMode === 'repeat-one') {
+        $(audioPlayer).on('ended', function () {
+            if (PLAY_MODES[currentModeIndex].name === 'repeat-one') {
                 audioPlayer.play();
-            } else if (playMode === 'repeat-all') {
+            } else if (PLAY_MODES[currentModeIndex].name === 'repeat-all') {
                 currentIndex = (currentIndex + 1) % songs.length;
                 if (currentIndex === 0) {
                     playSong(0);
@@ -209,7 +233,7 @@
         });
 
         // 셔플 버튼 클릭 이벤트 리스너
-        shuffleBtn.on('click', function() {
+        shuffleBtn.on('click', function () {
             shuffleArray(songs);
             renderPlaylist();
             playSong(0);
@@ -250,43 +274,24 @@
             return array;
         }
 
-        // 모드 변경 버튼 클릭 이벤트 리스너
-        modeBtn.on('click', function() {
-            const currentModeIndex = PLAY_MODES.indexOf(playMode);
-            playMode = PLAY_MODES[(currentModeIndex + 1) % PLAY_MODES.length];
-            updatePlayMode();
-        });
-
-        // 모드 업데이트 함수
-        function updatePlayMode() {
-            switch (playMode) {
-                case 'normal':
-                    audioPlayer.loop = false;
-                    break;
-                case 'repeat-one':
-                    audioPlayer.loop = true;
-                    break;
-                case 'repeat-all':
-                    audioPlayer.loop = false;
-                    break;
-            }
-            modeBtn.text(`${playMode}`);
-        }
-
         // 재생/일시정지 상태에 따라 버튼 텍스트 변경
-        $(audioPlayer).on('play', function() {
+        $(audioPlayer).on('play', function () {
             playBtn.html('<i class="fas fa-pause"></i>');
         });
 
-        $(audioPlayer).on('pause', function() {
+        $(audioPlayer).on('pause', function () {
             playBtn.html('<i class="fas fa-play"></i>');
         });
 
         // playPrevious, playNext 함수 추가
         prevBtn.on('click', playPrevious);
         nextBtn.on('click', playNext);
+
+        // 초기 모드 설정
+        updatePlayMode();
     });
 </script>
+
 
 </body>
 </html>
