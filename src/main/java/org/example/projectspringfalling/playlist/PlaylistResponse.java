@@ -60,12 +60,14 @@ public class PlaylistResponse {
         private String artistName;
         private String musicFile;
         private String albumImg;
+        private String lyrics;
 
-        public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg) {
+        public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg,String lyrics) {
             this.songTitle = songTitle;
             this.artistName = artistName;
             this.musicFile = musicFile;
             this.albumImg = albumImg;
+            this.lyrics = lyrics;
         }
     }
 
