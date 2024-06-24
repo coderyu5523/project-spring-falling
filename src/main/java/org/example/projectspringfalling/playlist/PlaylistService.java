@@ -33,7 +33,7 @@ public class PlaylistService {
     // 재생중인 플레이리스트 테스트용
     public List<RestResponse.PlaylistDTO> musicTest() {
         List<RestResponse.PlaylistDTO> songs = new ArrayList<>();
-        songs.add(new RestResponse.PlaylistDTO("고민중독", "QWER", "/upload/song/고민중독.mp3", "/upload/album/고민중독.jpg","이동혁, 한아영\n" +
+        songs.add(new RestResponse.PlaylistDTO("고민중독", "QWER", "/upload/song/고민중독.mp3", "/upload/album/고민중독.jpg",
                 "One! Two! Q! W! E! R! \n" +
                 "\n" +
                 "어떤 인사가 괜찮을까 \n" +
