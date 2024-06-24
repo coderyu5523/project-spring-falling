@@ -80,51 +80,17 @@
         <br>
 
         <div class="album-grid">
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/듣기만 해도 머리에서 계속 맴돌 거예요.jpg">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
+            {{#main.newPlaylist}}
+                <div class="album-card">
+                    <div class="album-img">
+                        <a href="/playlists/{{playlistId}}">
+                            <img src="{{playlistImg}}">
+                            <div class="play-icon"><i class="fa fa-play"></i></div>
+                        </a>
+                    </div>
+                    <a href="/playlists/{{playlistId}}"><h5 class="album-font">{{playlistTitle}}</h5></a>
                 </div>
-                <a href="#"><h5 class="album-font">듣기만 해도 머리에서 계속 맴돌 거예요</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/틱톡에서 핫한 레전드 음원.jpg">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">틱톡에서 핫한 레전드 음원🔥</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/아침에 눈을 뜨면 듣는 Jpop.jpg">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">아침에 눈을 뜨면 듣는 Jpop</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/에어컨 안틀어도 돼! 전기세 줄여주는 케이팝.jpg">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">🥶에어컨 안틀어도 돼! 전기세 줄여주는 케이팝</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/카페에서 나올 법한 노래들☕️.jpg" alt="비가 오면">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">카페에서 나올 법한 노래들☕️</h5></a>
-            </div>
+            {{/main.newPlaylist}}
         </div>
 
         <br>

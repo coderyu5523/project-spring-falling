@@ -33,6 +33,11 @@ public class SongService {
         }).toList();
 
         // 오늘의 HOT&NEW
+        List<Playlist> newPlaylist = playlistRepository.findNewPlaylist(pageable);
+        List<SongResponse.MainDTO.AdminPlaylistDTO> hotAndNewPlaylist = newPlaylist.stream().map(p -> {
+            String playlistImg = playlistSongRepository.findByPlaylistId(p.getId()).getFirst().getSong().getAlbum().getAlbumImg();
+            return new SongResponse.MainDTO.AdminPlaylistDTO(p, playlistImg);
+        }).toList();
 
         // 장르 콜렉션
 
@@ -42,7 +47,7 @@ public class SongService {
             String playlistImg = playlistSongRepository.findByPlaylistId(p.getId()).getFirst().getSong().getAlbum().getAlbumImg();
             return new SongResponse.MainDTO.AdminPlaylistDTO(p, playlistImg);
         }).toList();
-        return new SongResponse.MainDTO(latestAlbumList, adminPlaylist);
+        return new SongResponse.MainDTO(latestAlbumList, adminPlaylist, hotAndNewPlaylist);
     }
 
     // 곡 상세보기

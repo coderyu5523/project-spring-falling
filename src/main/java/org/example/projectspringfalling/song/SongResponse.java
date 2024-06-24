@@ -16,10 +16,12 @@ public class SongResponse {
     @Data
     public static class MainDTO {
         private List<LatestAlbumDTO> latestAlbumList; // 최신 앨범
+        private List<AdminPlaylistDTO> newPlaylist; // 관리자 플레이리스트
         private List<AdminPlaylistDTO> adminPlaylist; // 관리자 플레이리스트
 
-        public MainDTO(List<LatestAlbumDTO> latestAlbumList, List<AdminPlaylistDTO> adminPlaylist) {
+        public MainDTO(List<LatestAlbumDTO> latestAlbumList, List<AdminPlaylistDTO> newPlaylist, List<AdminPlaylistDTO> adminPlaylist) {
             this.latestAlbumList = latestAlbumList;
+            this.newPlaylist = newPlaylist;
             this.adminPlaylist = adminPlaylist;
         }
 
@@ -42,6 +44,7 @@ public class SongResponse {
             }
         }
 
+        // 관리자의 최신 플레이리스트
         // 관리자 플레이리스트
         @NoArgsConstructor
         @Data

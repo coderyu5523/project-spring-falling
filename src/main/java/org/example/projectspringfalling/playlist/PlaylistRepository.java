@@ -8,6 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface PlaylistRepository extends JpaRepository<Playlist, Integer> {
+    // 메인 (최신 플레이리스트 찾기)
+    @Query("SELECT p FROM Playlist p JOIN FETCH p.playlistSong WHERE p.admin IS NOT NULL ORDER BY p.createdAt DESC")
+    List<Playlist> findNewPlaylist(Pageable pageable);
+
     // 메인 (관리자 플레이리스트 찾기)
     @Query("SELECT p FROM Playlist p JOIN FETCH p.playlistSong WHERE p.admin IS NOT NULL")
     List<Playlist> findAdminPlaylist(Pageable pageable);
