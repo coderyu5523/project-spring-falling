@@ -10,6 +10,7 @@ import static org.example.projectspringfalling._core.utils.DateUtil.timestampToS
 
 public class RestResponse {
 
+    // 자동완성
     @Data
     public static class SearchAutoCompleteDTO {
         private String songTitle;
@@ -36,4 +37,24 @@ public class RestResponse {
             return timestampToString(this.createdAt);
         }
     }
+
+
+    // 재생중인 플레이리스트 테스트용
+    @Data
+    public static class PlaylistDTO {
+        private String songTitle;
+        private String artistName;
+        private String musicFile;
+        private String albumImg;
+        private String lyrics;
+
+        public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg,String lyrics) {
+            this.songTitle = songTitle;
+            this.artistName = artistName;
+            this.musicFile = musicFile;
+            this.albumImg = albumImg;
+            this.lyrics = lyrics;
+        }
+    }
+
 }

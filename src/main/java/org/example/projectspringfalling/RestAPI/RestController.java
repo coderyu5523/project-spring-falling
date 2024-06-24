@@ -3,6 +3,7 @@ package org.example.projectspringfalling.RestAPI;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
+import org.example.projectspringfalling.playlist.PlaylistResponse;
 import org.example.projectspringfalling.playlist.PlaylistService;
 import org.example.projectspringfalling.song.SongService;
 import org.example.projectspringfalling.user.UserResponse;
@@ -10,6 +11,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -33,5 +35,13 @@ public class RestController {
         UserResponse.LoginDTO sessionUser = (UserResponse.LoginDTO) rt.opsForValue().get("sessionUser");
         return new ApiUtil<>(playlistService.getMyList(sessionUser.getId()));
     }
+
+
+    // 재생중인 플레이리스트 데이터 요청
+    @GetMapping("/api/playlists/current")
+    public List<RestResponse.PlaylistDTO> getCurrentPlaylist() {
+        return new ArrayList<>(playlistService.musicTest());
+    }
+
 
 }
