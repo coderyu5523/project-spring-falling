@@ -190,51 +190,17 @@
         </div>
         <br>
         <div class="album-grid">
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/여름에 듣기 좋은 청량팝 Top 40.jfif" alt="오래된 노래">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
+            {{#main.adminPlaylist}}
+                <div class="album-card">
+                    <div class="album-img">
+                        <a href="/playlists/{{playlistId}}">
+                            <img src="{{playlistImg}}" alt="{{playlistTitle}}">
+                            <div class="play-icon"><i class="fa fa-play"></i></div>
+                        </a>
+                    </div>
+                    <a href="/playlists/{{playlistId}}"><h5 class="album-font">{{playlistTitle}}</h5></a>
                 </div>
-                <a href="#"><h5 class="album-font">여름에 듣기 좋은 청량팝 Top 40</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/올 여름은 이런 프로필 뮤직 어때요.png" alt="엄마, 단둘이 여행 갈래? OST">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">올 여름은 이런 프로필 뮤직 어때요?</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/여름에도 발라드 감성은 꼭 필요하다구요.jfif" alt="Cafe In Love">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">여름에도 발라드 감성은 꼭 필요하다구요</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/첫사랑 기억 조작하는 풋풋한 인디.jfif" alt="sociavoidance">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">첫사랑 기억 조작하는 풋풋한 인디</h5></a>
-            </div>
-            <div class="album-card">
-                <div class="album-img">
-                    <a href="#">
-                        <img src="../images/main/응답하라! 2000년대 추억의 여름 노래.jpg" alt="비가 오면">
-                        <div class="play-icon"><i class="fa fa-play"></i></div>
-                    </a>
-                </div>
-                <a href="#"><h5 class="album-font">응답하라! 2000년대 추억의 여름 노래</h5></a>
-            </div>
+            {{/main.adminPlaylist}}
         </div>
 
         <br>

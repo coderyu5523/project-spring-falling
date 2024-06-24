@@ -16,17 +16,17 @@ public class SongController {
 
     // 곡 상세보기
     @GetMapping("/songs/{songId}")
-    public String songDetail(@PathVariable Integer songId) {
+    public String songDetail(HttpServletRequest request, @PathVariable Integer songId) {
         SongResponse.DetailDTO resp = songService.songDetail(songId);
-        session.setAttribute("song", resp);
+        request.setAttribute("song", resp);
         return "song/song-detail";
     }
 
     // 메인 페이지
     @GetMapping("/")
-    public String index() {
+    public String index(HttpServletRequest request) {
         SongResponse.MainDTO resp = songService.main();
-        session.setAttribute("main", resp);
+        request.setAttribute("main", resp);
         return "index";
     }
 

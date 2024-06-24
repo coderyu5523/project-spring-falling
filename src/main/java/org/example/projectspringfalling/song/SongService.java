@@ -5,6 +5,9 @@ import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.Album;
 import org.example.projectspringfalling.album.AlbumRepository;
+import org.example.projectspringfalling.playlist.Playlist;
+import org.example.projectspringfalling.playlist.PlaylistRepository;
+import org.example.projectspringfalling.playlistSong.PlaylistSongRepository;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -16,17 +19,30 @@ import java.util.List;
 public class SongService {
     private final SongRepository songRepository;
     private final AlbumRepository albumRepository;
+    private final PlaylistRepository playlistRepository;
+    private final PlaylistSongRepository playlistSongRepository;
 
     // 메인 페이지
     public SongResponse.MainDTO main() {
-        // 최신 앨범 9개 가져오기
-        Pageable pageable = PageRequest.of(0, 9);
+        Pageable pageable = PageRequest.of(0, 6); // 6개만 가져오려고 pageable 설정
+
+        // 오늘 발매 음악
         List<Album> albumList = albumRepository.findLatestAlbums(pageable);
         List<SongResponse.MainDTO.LatestAlbumDTO> latestAlbumList = albumList.stream().map(album -> {
             return new SongResponse.MainDTO.LatestAlbumDTO(album, album.getArtist());
         }).toList();
 
-        return new SongResponse.MainDTO(latestAlbumList);
+        // 오늘의 HOT&NEW
+
+        // 장르 콜렉션
+
+        // Editor's PICK
+        List<Playlist> playlist = playlistRepository.findAdminPlaylist(pageable);
+        List<SongResponse.MainDTO.AdminPlaylistDTO> adminPlaylist = playlist.stream().map(p -> {
+            String playlistImg = playlistSongRepository.findByPlaylistId(p.getId()).getFirst().getSong().getAlbum().getAlbumImg();
+            return new SongResponse.MainDTO.AdminPlaylistDTO(p, playlistImg);
+        }).toList();
+        return new SongResponse.MainDTO(latestAlbumList, adminPlaylist);
     }
 
     // 곡 상세보기

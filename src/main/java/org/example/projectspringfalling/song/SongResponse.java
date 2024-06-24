@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
 import org.example.projectspringfalling.artist.Artist;
+import org.example.projectspringfalling.playlist.Playlist;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -15,9 +16,11 @@ public class SongResponse {
     @Data
     public static class MainDTO {
         private List<LatestAlbumDTO> latestAlbumList; // 최신 앨범
+        private List<AdminPlaylistDTO> adminPlaylist; // 관리자 플레이리스트
 
-        public MainDTO(List<LatestAlbumDTO> latestAlbumList) {
+        public MainDTO(List<LatestAlbumDTO> latestAlbumList, List<AdminPlaylistDTO> adminPlaylist) {
             this.latestAlbumList = latestAlbumList;
+            this.adminPlaylist = adminPlaylist;
         }
 
         // 최신 앨범
@@ -36,6 +39,21 @@ public class SongResponse {
                 this.albumTitle = album.getTitle();
                 this.artistId = artist.getId();
                 this.artistName = artist.getName();
+            }
+        }
+
+        // 관리자 플레이리스트
+        @NoArgsConstructor
+        @Data
+        public static class AdminPlaylistDTO {
+            private Integer playlistId; // 플레이리스트 pk
+            private String playlistImg; // 플레이리스트 이미지
+            private String playlistTitle; // 플레이리스트 이름
+
+            public AdminPlaylistDTO(Playlist playlist, String playlistImg) {
+                this.playlistId = playlist.getId();
+                this.playlistImg = playlistImg;
+                this.playlistTitle = playlist.getName();
             }
         }
     }

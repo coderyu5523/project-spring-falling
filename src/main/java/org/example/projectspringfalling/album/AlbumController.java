@@ -16,17 +16,17 @@ public class AlbumController {
 
     // 앨범 수록곡 보기
     @GetMapping("/albums/{albumId}/list")
-    public String songList(@PathVariable Integer albumId) {
+    public String songList(HttpServletRequest request, @PathVariable Integer albumId) {
         AlbumResponse.ListDTO resp = albumService.songList(albumId);
-        session.setAttribute("album", resp);
+        request.setAttribute("album", resp);
         return "album/album-list";
     }
 
     // 앨범 상세보기
     @GetMapping("/albums/{albumId}/detail")
-    public String albumDetail(@PathVariable Integer albumId) {
+    public String albumDetail(HttpServletRequest request, @PathVariable Integer albumId) {
         AlbumResponse.DetailDTO resp = albumService.albumDetail(albumId);
-        session.setAttribute("album", resp);
+        request.setAttribute("album", resp);
         return "album/album-detail";
     }
 
