@@ -4997,3 +4997,195 @@ insert into playlist_song_tb (playlist_id, song_id)
 values (13, 10);
 insert into playlist_song_tb (playlist_id, song_id)
 values (13, 11);
+
+
+--  히스토리 테이블
+
+insert into history_tb(user_id,song_id,created_at) values (1,1,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,2,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,3,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,4,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,5,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,6,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,7,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,8,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,9,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,10,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,11,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,12,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,13,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,14,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,15,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,16,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,17,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,18,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,19,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,20,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,21,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,22,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,23,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,24,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,25,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (1,2,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,4,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,6,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,8,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,10,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,12,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,14,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,16,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,18,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,20,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,22,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,24,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,26,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (1,28,'2024-06-21');
+
+
+insert into history_tb(user_id,song_id,created_at) values (2,25,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,26,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,27,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,28,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,29,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,30,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,31,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,32,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,33,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,25,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,34,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,35,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,36,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,37,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,38,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,39,'2024-06-20');
+insert into history_tb(user_id,song_id,created_at) values (2,40,'2024-06-20');
+
+insert into history_tb(user_id,song_id,created_at) values (3,1,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,3,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,5,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,7,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,9,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,10,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,12,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,14,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,16,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,18,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (3,20,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (3,22,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (3,24,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (3,26,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (3,28,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (3,30,'2024-06-22');
+
+insert into history_tb(user_id,song_id,created_at) values (4,40,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,39,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,38,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,37,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,36,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,35,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,34,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,33,'2024-06-21');
+insert into history_tb(user_id,song_id,created_at) values (4,32,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (4,31,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (4,30,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (4,29,'2024-06-22');
+insert into history_tb(user_id,song_id,created_at) values (4,28,'2024-06-22');
+
+
+-- 좋아요 테이블
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,1,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,3,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,5,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,7,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,8,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,9,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,10,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,11,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,13,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,15,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,17,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,19,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,20,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,22,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,24,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,26,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,28,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,30,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,31,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,32,null,null,'2024-06-20');
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,2,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,3,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,4,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,5,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,6,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,7,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,8,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,9,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,10,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,11,null,'2024-06-21');
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,30,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,31,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,32,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,33,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,34,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,35,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,36,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,37,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,38,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,39,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (1,null,null,40,'2024-06-22');
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,20,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,21,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,22,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,23,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,24,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,25,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,26,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,27,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,28,null,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,29,null,null,'2024-06-20');
+
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,4,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,5,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,6,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,7,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,8,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,9,null,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,10,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,11,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,12,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,13,null,'2024-06-21');
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,null,31,'2024-06-20');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,null,33,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,null,35,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,null,37,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (2,null,null,39,'2024-06-21');
+
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,10,null,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,12,null,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,14,null,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,16,null,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,18,null,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,20,null,null,'2024-06-21');
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,5,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,6,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,7,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,8,null,'2024-06-21');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,9,null,'2024-06-22');
+
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,23,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,24,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,25,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,26,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,27,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,28,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,29,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,30,'2024-06-22');
+insert into like_tb(user_id,song_id,album_id,artist_id,created_at) values (3,null,null,31,'2024-06-22');
