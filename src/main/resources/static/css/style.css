@@ -27,7 +27,7 @@
 /* playlist */
 @import url(storage.css);
 @import url(playlist.css);
-
+@import url(playlist-modal.css);
 
 /* subscription  */
 @import url(subscription-list.css);
