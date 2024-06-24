@@ -2,9 +2,10 @@ package org.example.projectspringfalling.user;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
-
+@NoArgsConstructor
 @Data
 public class SessionUser {
     private Integer id;
