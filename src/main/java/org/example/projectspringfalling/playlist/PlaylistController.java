@@ -31,15 +31,10 @@ public class PlaylistController {
 
     // 현재 재생중인 플레이리스트
     @GetMapping("/playlists/current")
-    public String currentPlaylist() {
-        return "playlist/current-playlist";
-    }
-
-
-    @GetMapping("playlists/test")
-    public String playlistTest(Model model) {
+    public String currentPlaylist(Model model) {
         List<PlaylistResponse.PlaylistDTO> songs = playlistService.musicTest();
         model.addAttribute("songs", songs);
         return "playlist/current-playlist";
     }
+
 }
