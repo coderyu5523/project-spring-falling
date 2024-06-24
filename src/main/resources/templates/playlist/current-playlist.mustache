@@ -88,6 +88,8 @@
         const currentTimeSpan = $('#currentTime');
         const progressBar = $('#progressBar');
         const durationSpan = $('#duration');
+        const lyricsList = $('#lyrics-list');
+
 
         const PLAY_MODES = [
             {icon: '<i class="fa-solid fa-repeat"></i>', name: 'normal'},
@@ -107,7 +109,8 @@
                 songTitle: '{{songTitle}}',
                 artistName: '{{artistName}}',
                 musicFile: '{{musicFile}}',
-                albumImg: '{{albumImg}}'
+                albumImg: '{{albumImg}}',
+                lyrics: '{{lyrics}}',
             });
         {{/songs}}
 
@@ -126,6 +129,7 @@
         // 노래 재생 함수
         function playSong(index) {
             songName.text(songs[index].songTitle);
+            lyricsList.text(songs[index].lyrics);
             artistName.text(songs[index].artistName);
             audioPlayer.src = songs[index].musicFile;
             coverImage.attr('src', songs[index].albumImg);
