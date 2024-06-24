@@ -9,6 +9,37 @@ import java.sql.Timestamp;
 import java.util.List;
 
 public class SongResponse {
+
+    // 메인페이지
+    @NoArgsConstructor
+    @Data
+    public static class MainDTO {
+        private List<LatestAlbumDTO> latestAlbumList; // 최신 앨범
+
+        public MainDTO(List<LatestAlbumDTO> latestAlbumList) {
+            this.latestAlbumList = latestAlbumList;
+        }
+
+        // 최신 앨범
+        @NoArgsConstructor
+        @Data
+        public static class LatestAlbumDTO {
+            private Integer albumId; // 앨범 pk
+            private String albumImage; // 앨범 이미지
+            private String albumTitle; // 앨범 이름
+            private Integer artistId; // 아티스트 pk
+            private String artistName; // 아티스트 이름
+
+            public LatestAlbumDTO(Album album, Artist artist) {
+                this.albumId = album.getId();
+                this.albumImage = album.getAlbumImg();
+                this.albumTitle = album.getTitle();
+                this.artistId = artist.getId();
+                this.artistName = artist.getName();
+            }
+        }
+    }
+
     // 노래 상세보기 DTO
     @NoArgsConstructor
     @Data
