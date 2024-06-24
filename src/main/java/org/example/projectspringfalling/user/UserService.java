@@ -43,7 +43,7 @@ public class UserService {
 
     // 카카오 로그인
     @Transactional
-    public UserResponse.LoginDTO kakaoLogin(String code) {
+    public SessionUser kakaoLogin(String code) {
         // 1. code로 카카오에서 토큰 받기 (위임 완료) - OAuth2.0
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
@@ -95,7 +95,7 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return new UserResponse.LoginDTO(userPS);
+            return new SessionUser(userPS);
         } else {
             // 강제 회원가입
             User user = User.builder()
@@ -104,13 +104,13 @@ public class UserService {
                     .provider("Kakao")
                     .build();
             User returnUser = userRepository.save(user);
-            return new UserResponse.LoginDTO(returnUser);
+            return new SessionUser(returnUser);
         }
     }
 
     // 네이버 로그인
     @Transactional
-    public UserResponse.LoginDTO naverLogin(String code) {
+    public SessionUser naverLogin(String code) {
         // 1. code로 네이버에서 토큰 받기 (위임 완료) - OAuth2.0
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
@@ -163,7 +163,7 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return new UserResponse.LoginDTO(userPS);
+            return new SessionUser(userPS);
         } else {
             User user = User.builder()
                     .email(email)
@@ -173,7 +173,7 @@ public class UserService {
                     .provider("Naver")
                     .build();
             User returnUser = userRepository.save(user);
-            return new UserResponse.LoginDTO(returnUser);
+            return new SessionUser(returnUser);
         }
     }
 
