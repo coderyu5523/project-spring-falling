@@ -1,10 +1,10 @@
-.main-container{
+.main-container {
     display: flex;
     justify-content: center;
 }
 
 
-.main-album{
+.main-album {
     width: 1000px;
 }
 
@@ -13,6 +13,7 @@
     grid-template-columns: repeat(5, 1fr); /* 5개씩 배치 */
     gap: 20px;
 }
+
 .album-card {
     position: relative;
     text-align: start;
@@ -24,9 +25,10 @@
 }
 
 .album-img img {
-    width: 100%;
+    height: 320px;
+    width: 320px;
     border-radius: 10px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* 그림자 설정 */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
 
@@ -46,9 +48,11 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .play-icon:hover {
     transform: scale(1.2);
 }
+
 .album-font {
     font-size: 17px;
     display: inline-block;
@@ -71,7 +75,7 @@
     gap: 10px;
 }
 
-.main-title-filter{
+.main-title-filter {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -110,7 +114,7 @@
     z-index: -2;
 }
 
-.genre-choice-img{
+.genre-choice-img {
     width: 1000px;
 }
 

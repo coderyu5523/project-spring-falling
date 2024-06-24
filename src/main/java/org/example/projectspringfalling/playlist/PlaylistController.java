@@ -1,5 +1,6 @@
 package org.example.projectspringfalling.playlist;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -23,23 +24,18 @@ public class PlaylistController {
 
     // 플레이리스트 보기
     @GetMapping("/playlists/{playlistId}")
-    public String playlist(@PathVariable Integer playlistId) {
+    public String playlist(HttpServletRequest request, @PathVariable Integer playlistId) {
         PlaylistResponse.PlaylistDetailDTO resp = playlistService.playlistDetail(playlistId);
-        session.setAttribute("playlist", resp);
+        request.setAttribute("playlist", resp);
         return "playlist/playlist";
     }
 
     // 현재 재생중인 플레이리스트
     @GetMapping("/playlists/current")
-    public String currentPlaylist() {
+    public String currentPlaylist(Model model) {
+//        List<PlaylistResponse.PlaylistDTO> songs = playlistService.musicTest();
+//        model.addAttribute("songs", songs);
         return "playlist/current-playlist";
     }
 
-
-    @GetMapping("playlists/test")
-    public String playlistTest(Model model) {
-        List<PlaylistResponse.PlaylistDTO> songs = playlistService.musicTest();
-        model.addAttribute("songs", songs);
-        return "playlist/current-playlist";
-    }
 }

@@ -53,16 +53,28 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('Bruno Mars', 'Solo', '/upload/artist/브루스마노.jpg', '2009-12-15'),
        ('Rihanna', 'Solo', '/upload/artist/리한나.jpg', '2005-08-21'),
 
-        ('이영지', 'Solo', '/upload/artist/이영지.jpg', '2019-11-02'),
-        ('DAY6 (데이식스)', 'Group', '/upload/artist/데이식스.jpg', '2015-09-07'),
-        ('이무진', 'Solo', '/upload/artist/이무진.jpg', '2021-05-14'),
-        ('비비 (BIBI)', 'Solo', '/upload/artist/비비.jpg', '2019-05-15'),
-        ('BABYMONSTER', 'Group', '/upload/artist/베이비몬스터.jpg', '2024-04-01'),
-        ('이창섭', 'Solo', '/upload/artist/이창섭.jpg', '2018-12-11'),
-        ('Crush', 'Solo', '/upload/artist/Crush.jpg', '2012-12-07'),
-        ('임재현', 'Solo', '/upload/artist/임재현.jpg', '2018-09-25'),
-        ('박재정', 'Solo', '/upload/artist/박재정.jpg', '2013-11-20'),
-        ('RIIZE', 'Group', '/upload/artist/라이즈.jpg', '2023-09-04');
+       ('이영지', 'Solo', '/upload/artist/이영지.jpg', '2019-11-02'),
+       ('DAY6 (데이식스)', 'Group', '/upload/artist/데이식스.jpg', '2015-09-07'),
+       ('이무진', 'Solo', '/upload/artist/이무진.jpg', '2021-05-14'),
+       ('비비 (BIBI)', 'Solo', '/upload/artist/비비.jpg', '2019-05-15'),
+       ('BABYMONSTER', 'Group', '/upload/artist/베이비몬스터.jpg', '2024-04-01'),
+       ('이창섭', 'Solo', '/upload/artist/이창섭.jpg', '2018-12-11'),
+       ('Crush', 'Solo', '/upload/artist/Crush.jpg', '2012-12-07'),
+       ('임재현', 'Solo', '/upload/artist/임재현.jpg', '2018-09-25'),
+       ('박재정', 'Solo', '/upload/artist/박재정.jpg', '2013-11-20'),
+       ('RIIZE', 'Group', '/upload/artist/라이즈.jpg', '2023-09-04'),
+
+       ('잔나비', 'Group', '/upload/artist/잔나비.jpg', '2014-04-28'),
+       ('십센치', 'Solo', '/upload/artist/십센치.jpg', '2010-03-28'),
+       ('소란', 'Group', '/upload/artist/소란.jpg', '2010-08-19'),
+       ('검정치마', 'Solo', '/upload/artist/검정치마''.jpg', '2008-11-13'),
+       ('데이브레이크', 'Group', '/upload/artist/데이브레이크.jpg', '2007-09-18'),
+       ('선우정아', 'Solo', '/upload/artist/선우정아.jpg', '2006-05-10'),
+       ('새소년', 'Group', '/upload/artist/새소년.jpg', '2017-06-20'),
+       ('카더가든', 'Solo', '/upload/artist/카더가든.jpg', '2013-09-24'),
+       ('혁오밴드', 'Group', '/upload/artist/혁오밴드.jpg', '2014-09-18'),
+       ('장미여관', 'Group', '/upload/artist/장미여관.jpg', '2011-11-01');
+
 
 -- 테이블: album
 
@@ -450,7 +462,8 @@ VALUES ('16 Fantasy', '카카오엔터테인먼트', '메인스트림', '국내'
         '눈치없지만 그 누구보다도 용감했던 16살 그 때 처럼');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Every DAY6 February', 'Dreamus', '(주)JYP엔터테인먼트', '국내', '싱글', '/upload/album/Every DAY6 February.jpg', 32, '2017-02-06',
+VALUES ('Every DAY6 February', 'Dreamus', '(주)JYP엔터테인먼트', '국내', '싱글', '/upload/album/Every DAY6 February.jpg', 32,
+        '2017-02-06',
         'JYP밴드 DAY6 매월 신곡 발표… 2월 프로젝트 앨범 ''Every DAY6 February'' 발표
 
 실력파 JYP밴드 DAY6가 매월 신곡을 발표하는 ''Every DAY6''의 두번째 프로젝트를 시작한다.
@@ -463,118 +476,206 @@ DAY6는 2월 6일 디지털 싱글 앨범 ''Every DAY6 February''를 발표한�
 
 ''My Day''는 "나의 하루를 채우는 너"라는 가사의 내용처럼 꽉 찬 기타사운드가 DAY6의 열정을 느끼게 한다. 도입부에서의 피아노에 악기들이 하나하나 더해져 후렴에서는 강렬하게 바뀌며 하프타임과 더블타임을 넘나드는 편곡이 감성적이기도 신나기도 하다. 특히 곡의 B파트와 브릿지 파트에서 나오는 화음은 DAY6의 보컬적 에너지를 폭발시키며 곡의 감정을 고조시킨다.
 
-1월부터 매월 신곡을 발표하는 DAY6는 2월부터 매월 신곡 발표 전 콘서트도 개최할 예정이다.'
-);
+1월부터 매월 신곡을 발표하는 DAY6는 2월부터 매월 신곡 발표 전 콘서트도 개최할 예정이다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('에피소드', '카카오엔터테인먼트', 'BIGPLANETMADE', '국내', '싱글', '/upload/album/에피소드.jpg', 33, '2023-12-13',
-'이무진 DS ''에피소드''
+        '이무진 DS ''에피소드''
 
-지난봄, 풋풋하고 설레는 고백송 ''잠깐 시간 될까''로 큰 사랑을 받은 싱어송라이터 이무진이 약 7개월 만에 신곡 ''에피소드''로 돌아왔다.
+        지난봄, 풋풋하고 설레는 고백송 ''잠깐 시간 될까''로 큰 사랑을 받은 싱어송라이터 이무진이 약 7개월 만에 신곡 ''에피소드''로 돌아왔다.
 
-''에피소드''는 예쁘게 사랑을 시작했던 첫 만남부터 헤어짐까지의 서사를 현재 시점에서 회상을 통해 후일담을 이야기하듯 그려낸 곡으로, 이제는 하나의 에피소드가 되어버린 추억들을 되짚어 보며 다시금 느끼는 감정의 곡선을 이무진만의 감성으로 표현하였다.
+        ''에피소드''는 예쁘게 사랑을 시작했던 첫 만남부터 헤어짐까지의 서사를 현재 시점에서 회상을 통해 후일담을 이야기하듯 그려낸 곡으로, 이제는 하나의 에피소드가 되어버린 추억들을 되짚어 보며 다시금 느끼는 감정의 곡선을 이무진만의 감성으로 표현하였다.
 
-또한, 필름 FX 사운드를 시작으로 다이내믹한 스트링 선율, 차임벨 등 다채로운 악기 사운드가 리드미컬한 멜로디와 어우러져 겨울의 로맨틱하면서도 서정적인 무드를 느낄 수 있다.
-특히 ''새드 엔딩'', ''크레딧'', ''에필로그'' 등 영화 같은 가삿말에 곡의 기승전결을 따라 전개되는 드라마틱한 사운드가 더해져 마치 영화 속 한 장면이 펼쳐지는 듯한 몰입감을 선사한다.'
-);
+        또한, 필름 FX 사운드를 시작으로 다이내믹한 스트링 선율, 차임벨 등 다채로운 악기 사운드가 리드미컬한 멜로디와 어우러져 겨울의 로맨틱하면서도 서정적인 무드를 느낄 수 있다.
+        특히 ''새드 엔딩'', ''크레딧'', ''에필로그'' 등 영화 같은 가삿말에 곡의 기승전결을 따라 전개되는 드라마틱한 사운드가 더해져 마치 영화 속 한 장면이 펼쳐지는 듯한 몰입감을 선사한다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('밤양갱', '카카오엔터테인먼트', 'FeelGhoodMusic', '국내', '싱글', '/upload/album/밤양갱.jpg', 34, '2024-02-13',
-'비비 사랑의 era 시작
+        '비비 사랑의 era 시작
 
-[밤양갱]
-진수성찬을 차려주는 게 사랑인 줄 알았는데, 생각해보니 우리가 노나먹었던 양갱이 하나가 더 생각나더라 우리 했던 사랑이 초라한 게 아니라 양갱이가 완전 대단한 걸지도 몰라'
-);
+        [밤양갱]
+        진수성찬을 차려주는 게 사랑인 줄 알았는데, 생각해보니 우리가 노나먹었던 양갱이 하나가 더 생각나더라 우리 했던 사랑이 초라한 게 아니라 양갱이가 완전 대단한 걸지도 몰라');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('BABYMONS7ER', 'YG PLUS', 'YG Entertainment', '국내', '미니', '/upload/album/BABYMONS7ER.jpg', 35, '2024-04-01',
-'글로벌 게임체인저로 등판한 BABYMONSTER가 첫 번째 미니앨범 [BABYMONS7ER]를 발표한다.
+        '글로벌 게임체인저로 등판한 BABYMONSTER가 첫 번째 미니앨범 [BABYMONS7ER]를 발표한다.
 
-지난 2월 선공개 곡 ‘Stuck In The Middle’을 통해 장르를 뛰어넘는 음악성을 보여준 BABYMONSTER가 첫 번째 미니 앨범 [BABYMONS7ER]로 한층 다채로운 모습을 선보일 전망이다.
+        지난 2월 선공개 곡 ‘Stuck In The Middle’을 통해 장르를 뛰어넘는 음악성을 보여준 BABYMONSTER가 첫 번째 미니 앨범 [BABYMONS7ER]로 한층 다채로운 모습을 선보일 전망이다.
 
-[BABYMONS7ER]는 팀명 내 철자 T를 일곱 멤버를 상징하는 7로 변주 준 앨범명으로, 강렬한 힙합 장르의 타이틀곡 ’SHEESH’를 비롯해 BABYMONSTER의 정체성을 드러내는 인트로곡 ''MONSTERS'', 세계적인 싱어송라이터 찰리 푸스와 협업한 ''LIKE THAT'', 그리고 프리 데뷔곡 ''DREAM'' 등 다양한 장르의 7개 트랙이 수록되었다.
+        [BABYMONS7ER]는 팀명 내 철자 T를 일곱 멤버를 상징하는 7로 변주 준 앨범명으로, 강렬한 힙합 장르의 타이틀곡 ’SHEESH’를 비롯해 BABYMONSTER의 정체성을 드러내는 인트로곡 ''MONSTERS'', 세계적인 싱어송라이터 찰리 푸스와 협업한 ''LIKE THAT'', 그리고 프리 데뷔곡 ''DREAM'' 등 다양한 장르의 7개 트랙이 수록되었다.
 
-첫 번째 미니앨범을 통해 전세계를 무대로 활동을 시작할 BABYMONSTER의 행보가 기대된다.'
-);
+        첫 번째 미니앨범을 통해 전세계를 무대로 활동을 시작할 BABYMONSTER의 행보가 기대된다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('천상연 (웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB))', 'YG PLUS', 'TOON STUDIO', '국내', '싱글', '/upload/album/천상연.jpg', 36, '2024-02-21',
-'웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB) 컬래버 음원 ‘천상연''
+VALUES ('천상연 (웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB))', 'YG PLUS', 'TOON STUDIO', '국내', '싱글', '/upload/album/천상연.jpg', 36,
+        '2024-02-21',
+        '웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB) 컬래버 음원 ‘천상연''
 
-전래동화 선녀와 나무꾼을 모티브 한 작품으로 날개 옷을 되찾기 위한
-21세기 선녀의 피 튀는 복수, 증오, 그리고 사랑 이야기
+        전래동화 선녀와 나무꾼을 모티브 한 작품으로 날개 옷을 되찾기 위한
+        21세기 선녀의 피 튀는 복수, 증오, 그리고 사랑 이야기
 
-1998년 그룹 캔의 정규 1집 앨범 타이틀곡 ‘천상연''이 2024년 이창섭과 만나
-네이버 웹툰 ‘선녀외전''의 컬래버 음원으로 재탄생했다.
+        1998년 그룹 캔의 정규 1집 앨범 타이틀곡 ‘천상연''이 2024년 이창섭과 만나
+        네이버 웹툰 ‘선녀외전''의 컬래버 음원으로 재탄생했다.
 
-그룹 비투비(BTOB)의 멤버로 꾸준한 사랑을 받으며, 올해 데뷔 12주년을 맞은 이창섭이
-‘천상연''을 통해 한단계 더 성장한 보컬리스트로서의 모습을 보여줬다.
+        그룹 비투비(BTOB)의 멤버로 꾸준한 사랑을 받으며, 올해 데뷔 12주년을 맞은 이창섭이
+        ‘천상연''을 통해 한단계 더 성장한 보컬리스트로서의 모습을 보여줬다.
 
-긴장감 넘치는 스트링 오케스트라로 시작해 이창섭의 애절한 보이스로 이어지는 도입부와
-노랫말에 대답하듯 메아리처럼 들려오는 기타 연주, 덤덤하지만 절절하게 느껴지는 이창섭만의
-보컬은 ‘천상연''이 갖는 의미를 가득 채워 밀도 높게 완성했다.
+        긴장감 넘치는 스트링 오케스트라로 시작해 이창섭의 애절한 보이스로 이어지는 도입부와
+        노랫말에 대답하듯 메아리처럼 들려오는 기타 연주, 덤덤하지만 절절하게 느껴지는 이창섭만의
+        보컬은 ‘천상연''이 갖는 의미를 가득 채워 밀도 높게 완성했다.
 
-웹툰 ''선녀외전''은 네이버 웹툰 매일 플러스에서 만나볼 수 있다.'
-);
+        웹툰 ''선녀외전''은 네이버 웹툰 매일 플러스에서 만나볼 수 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST', '/upload/album/눈물의 여왕', 37, '2024-03-24',
-'"왜 하필 이때가 떠올랐을까. 만약 여기서 내가 죽는다면, 마지막 순간에 네 생각을 하는 걸까?"
+        '"왜 하필 이때가 떠올랐을까. 만약 여기서 내가 죽는다면, 마지막 순간에 네 생각을 하는 걸까?"
 
-눈물의 여왕 3부 수렵 사냥 중 갑작스러운 멧돼지의 습격과 환영으로 위태로운 상황을 맞이한 ''해인''(김지원 분). 죽음을 앞둔 순간, 가장 먼저 떠오른 것은 언제나 곁에 있어주겠다던 남편 ''현우''. 그리고 거짓말처럼 ''현우''는 ''해인'' 앞에 나타났다.
+        눈물의 여왕 3부 수렵 사냥 중 갑작스러운 멧돼지의 습격과 환영으로 위태로운 상황을 맞이한 ''해인''(김지원 분). 죽음을 앞둔 순간, 가장 먼저 떠오른 것은 언제나 곁에 있어주겠다던 남편 ''현우''. 그리고 거짓말처럼 ''현우''는 ''해인'' 앞에 나타났다.
 
-기적처럼 ''현우''의 도움으로 위기에서 벗어난 ''해인''의 독백씬에서 처음 등장했던 OST ''미안해 미워해 사랑해 - Crush''는 지독한 미움과 애증을 지나 진정한 사랑을 깨닫기까지 두 사람의 변화하는 감정선을 섬세하게 녹여낸 곡이다. 마음 가장 깊은 내면에 자리한 기억을 더듬듯이 전개되는 인트로의 기타 리프와 공간감 있는 앰비언트가 높은 몰입감을 주며, 서정적인 멜로디 라인과 크러쉬의 따뜻한 음색이 조화롭게 깃들어 깊은 여운을 선사한다.
+        기적처럼 ''현우''의 도움으로 위기에서 벗어난 ''해인''의 독백씬에서 처음 등장했던 OST ''미안해 미워해 사랑해 - Crush''는 지독한 미움과 애증을 지나 진정한 사랑을 깨닫기까지 두 사람의 변화하는 감정선을 섬세하게 녹여낸 곡이다. 마음 가장 깊은 내면에 자리한 기억을 더듬듯이 전개되는 인트로의 기타 리프와 공간감 있는 앰비언트가 높은 몰입감을 주며, 서정적인 멜로디 라인과 크러쉬의 따뜻한 음색이 조화롭게 깃들어 깊은 여운을 선사한다.
 
-작년 정규 3집 ''Wonderego''로 돌아와 한층 깊어진 음악 세계를 선보인 크러쉬는 타이틀곡 ''흠칫(Hmm-cheat)''과 ''미워(Ego)'' 를 발매 직후 국내 주요 음원 차트 상위권에 안착시키며 많은 사랑을 받았다.
+        작년 정규 3집 ''Wonderego''로 돌아와 한층 깊어진 음악 세계를 선보인 크러쉬는 타이틀곡 ''흠칫(Hmm-cheat)''과 ''미워(Ego)'' 를 발매 직후 국내 주요 음원 차트 상위권에 안착시키며 많은 사랑을 받았다.
 
-''미안해 미워해 사랑해''는 ''눈물의 여왕''의 ''남혜승'' 음악감독과 김경희가 함께 작업한 곡으로, 크러쉬와는 ''사랑의 불시착''을 통해 메가 히트 OST를 탄생시켰던 만큼 이번 ''눈물의 여왕''에서도 극 중 인물들의 감정과 서사를 세밀하게 대변하는 웰메이드 OST로 진한 감동을 선사할 예정이다.'
-);
+        ''미안해 미워해 사랑해''는 ''눈물의 여왕''의 ''남혜승'' 음악감독과 김경희가 함께 작업한 곡으로, 크러쉬와는 ''사랑의 불시착''을 통해 메가 히트 OST를 탄생시켰던 만큼 이번 ''눈물의 여왕''에서도 극 중 인물들의 감정과 서사를 세밀하게 대변하는 웰메이드 OST로 진한 감동을 선사할 예정이다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('비의 랩소디', '지니뮤직', '새벽테잎, IK PRODUCTION', '국내', '싱글', '/upload/album/비의랩소디.jpg', 38, '2023-12-03',
-'일출이 가까운 밤의 끝자락, 먼동이 터 올 즈음.
-그때가 가장 어둡겠지만, 새벽이 지나면 밝은 아침이 온다.
-‘새벽테잎’의 아침을 기다리는 일곱 번째 새벽, ‘비의 랩소디 - 임재현’
+        '일출이 가까운 밤의 끝자락, 먼동이 터 올 즈음.
+        그때가 가장 어둡겠지만, 새벽이 지나면 밝은 아침이 온다.
+        ‘새벽테잎’의 아침을 기다리는 일곱 번째 새벽, ‘비의 랩소디 - 임재현’
 
-비의 랩소디는 2000년 발매한 최재훈의 Believe In 5462 앨범 타이틀곡으로,
-임재현의 보이스로 다시 재탄생되었다.
+        비의 랩소디는 2000년 발매한 최재훈의 Believe In 5462 앨범 타이틀곡으로,
+        임재현의 보이스로 다시 재탄생되었다.
 
-임재현이 재해석한 ''비의 랩소디''는 원곡의 느낌을 최대한 해치지 않으면서도
-이별에 대한 아픔을 덤덤하게 담아냈다
-또한, 임재현의 애절하면서도, 파워풀한 가창력이 돋보이는 곡이다'
-);
+        임재현이 재해석한 ''비의 랩소디''는 원곡의 느낌을 최대한 해치지 않으면서도
+        이별에 대한 아픔을 덤덤하게 담아냈다
+        또한, 임재현의 애절하면서도, 파워풀한 가창력이 돋보이는 곡이다');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('1집 Alone', '카카오엔터테인먼트', '주식회사 로맨틱팩토리', '국내', '정규', '/upload/album/Alone.jpg', 39, '2023-04-20',
-'데뷔 10년만에 본인의 자작곡으로 첫 정규 앨범을 가져온 박재정
-4년이 넘는 시간 동안 공들인 박재정의 첫 정규 앨범
-열아홉 살 플로리다는 그랬다. 늦은 나이 가족을 따라 지낸 그곳은 말도 통하지 않아 우울함을 털어놓을 방법이 없었다. 다시 돌아갈 거라고 다시 행복할 거라고 기대에 부푼 20대를 꿈꿨다. 10년이 지난 지금 내 안에 것은 전혀 바뀐 게 없다. 아직 혼자인 것 만 같다. 아직 플로리다의 나와 다를 바 없다.'
-);
+        '데뷔 10년만에 본인의 자작곡으로 첫 정규 앨범을 가져온 박재정
+        4년이 넘는 시간 동안 공들인 박재정의 첫 정규 앨범
+        열아홉 살 플로리다는 그랬다. 늦은 나이 가족을 따라 지낸 그곳은 말도 통하지 않아 우울함을 털어놓을 방법이 없었다. 다시 돌아갈 거라고 다시 행복할 거라고 기대에 부푼 20대를 꿈꿨다. 10년이 지난 지금 내 안에 것은 전혀 바뀐 게 없다. 아직 혼자인 것 만 같다. 아직 플로리다의 나와 다를 바 없다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('RIIZING - The 1st Mini Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', '미니', '/upload/album/RIIZING.jpg', 40, '2024-06-17',
-'2024년 확신의 ‘라이즈 붐’은 온다!
-RIIZE, 첫 미니앨범 ‘RIIZING’ 발매!
-타이틀 곡 ‘Boom Boom Bass’ 포함 총 8곡 수록!
+VALUES ('RIIZING - The 1st Mini Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', '미니', '/upload/album/RIIZING.jpg', 40,
+        '2024-06-17',
+        '2024년 확신의 ‘라이즈 붐’은 온다!
+        RIIZE, 첫 미니앨범 ‘RIIZING’ 발매!
+        타이틀 곡 ‘Boom Boom Bass’ 포함 총 8곡 수록!
 
-RIIZE가 첫 미니앨범 ‘RIIZING’을 발매했다.
+        RIIZE가 첫 미니앨범 ‘RIIZING’을 발매했다.
 
-이번 앨범에는 타이틀 곡 ‘Boom Boom Bass’를 포함해 총 8곡이 수록되어, 멤버들의 다양한 감정을 음악에 표현하는 RIIZE 독자적 장르 ‘이모셔널 팝’을 보다 다채롭게 즐길 수 있다.
+        이번 앨범에는 타이틀 곡 ‘Boom Boom Bass’를 포함해 총 8곡이 수록되어, 멤버들의 다양한 감정을 음악에 표현하는 RIIZE 독자적 장르 ‘이모셔널 팝’을 보다 다채롭게 즐길 수 있다.
 
-앞서 RIIZE는 2023년 9월 데뷔준비생으로 보낸 시간을 테마로 한 첫 싱글 앨범 ‘Get A Guitar’를 통해 멤버들이 함께한 추억과 서로 주고받은 영감을 음악에 녹였고, 전 세계 리스너를 매료시키며 K팝 새 시대를 리드할 ‘톱티어’ 그룹의 탄생을 알렸다.
+        앞서 RIIZE는 2023년 9월 데뷔준비생으로 보낸 시간을 테마로 한 첫 싱글 앨범 ‘Get A Guitar’를 통해 멤버들이 함께한 추억과 서로 주고받은 영감을 음악에 녹였고, 전 세계 리스너를 매료시키며 K팝 새 시대를 리드할 ‘톱티어’ 그룹의 탄생을 알렸다.
 
-특히 새롭게 발표되는 앨범명 ‘RIIZING’은 RIIZE가 지금까지 이뤄온 것을 넘어 다음 목표를 향해 ‘HUSTLE’하게 도전하겠다는 포부를 RIIZE만의 표현법으로 정의한 만큼, 이들이 2024년 한 팀으로서 함께하는 매 순간 이어질 ‘성장과 실현’의 순간을 더욱 기대하게 만든다.
+        특히 새롭게 발표되는 앨범명 ‘RIIZING’은 RIIZE가 지금까지 이뤄온 것을 넘어 다음 목표를 향해 ‘HUSTLE’하게 도전하겠다는 포부를 RIIZE만의 표현법으로 정의한 만큼, 이들이 2024년 한 팀으로서 함께하는 매 순간 이어질 ‘성장과 실현’의 순간을 더욱 기대하게 만든다.
 
-이번에는 베이스 기타 잡은 RIIZE! ‘Boom Boom Bass’로 느끼는 청춘 그루브!
+        이번에는 베이스 기타 잡은 RIIZE! ‘Boom Boom Bass’로 느끼는 청춘 그루브!
 
-타이틀 곡 ‘Boom Boom Bass’는 펑키한 디스코 비트와 그루비한 베이스 라인이 돋보이는 곡으로, 가사에는 베이스 기타 연주를 통해 서로에 대한 설렘을 자유롭게 표현하는 청춘의 모습을 그렸으며, 음의 높낮이로 점차 깊어지는 친밀감을 나타내 듣는 재미를 더했다.
+        타이틀 곡 ‘Boom Boom Bass’는 펑키한 디스코 비트와 그루비한 베이스 라인이 돋보이는 곡으로, 가사에는 베이스 기타 연주를 통해 서로에 대한 설렘을 자유롭게 표현하는 청춘의 모습을 그렸으며, 음의 높낮이로 점차 깊어지는 친밀감을 나타내 듣는 재미를 더했다.
 
-또한 데뷔 전 퍼포먼스 비디오로 오픈된 ‘Siren’은 무대를 위해 연습한 시간을 기반으로 한 RIIZE 패기의 출사표를 만날 수 있으며, RIIZE 스타일의 하우스 음악 ‘Impossible’은 서로 같은 꿈을 향해 나아가는 순간 더이상 불가능이란 존재하지 않는다는 메시지를 담았다.
+        또한 데뷔 전 퍼포먼스 비디오로 오픈된 ‘Siren’은 무대를 위해 연습한 시간을 기반으로 한 RIIZE 패기의 출사표를 만날 수 있으며, RIIZE 스타일의 하우스 음악 ‘Impossible’은 서로 같은 꿈을 향해 나아가는 순간 더이상 불가능이란 존재하지 않는다는 메시지를 담았다.
 
-더불어 일주일이 9일처럼 느껴질 정도로 바쁘지만 지치지 않겠다는 다짐을 녹인 ‘9 Days’, 스스로를 헤치는 사랑에 이별을 고하는 이야기와 감미로운 보컬이 어우러진 ‘Honestly’, 벅찬 감성이 느껴지는 RIIZE의 첫 팬송 ‘One Kiss’도 귀를 사로잡는다.
+        더불어 일주일이 9일처럼 느껴질 정도로 바쁘지만 지치지 않겠다는 다짐을 녹인 ‘9 Days’, 스스로를 헤치는 사랑에 이별을 고하는 이야기와 감미로운 보컬이 어우러진 ‘Honestly’, 벅찬 감성이 느껴지는 RIIZE의 첫 팬송 ‘One Kiss’도 귀를 사로잡는다.
 
-여기에 낯선 상대를 향한 RIIZE만의 솔직한 관심 표현법을 드러낸 ‘Talk Saxy’와 문득 찾아온 첫사랑의 감정을 응급 상황에 빗대어 풀어낸 ‘Love 119’까지 이미 음원 공개되어 많은 사랑을 받고 있는 곡들도 같이 만날 수 있다.'
-);
+        여기에 낯선 상대를 향한 RIIZE만의 솔직한 관심 표현법을 드러낸 ‘Talk Saxy’와 문득 찾아온 첫사랑의 감정을 응급 상황에 빗대어 풀어낸 ‘Love 119’까지 이미 음원 공개되어 많은 사랑을 받고 있는 곡들도 같이 만날 수 있다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('전설', '카카오엔터테인먼트', '(주)페포니뮤직', '국내', '정규', '/upload/album/전설.jpg', 41, '2019-03-13', '잔나비 정규 2집 [전설]
+3년 만에 돌아온 잔나비의 2집이네요. 머나먼 시간이었죠.
+그 사이 많은 것들이 변했어요. 세상은 더 이상 갈망하지 않고, 치열하게 부딪히며 사랑하던 모든 관계 역시 시대답게 편리해진 듯해요. 그것도 모르고 언제나 더 뜨겁고자 했던 나와 내 친구들은 어디에 몸을 부벼야 할지 몰라 한낱 음악 속에 우리 이야기를 눈치 없이 다 담아버렸네요. ‘전설’이라는 쓸데없이 장엄하고 촌스럽기 그지없는 이름과 함께요. 투 머치 인포메이션. 그래서 빙빙 돌며 같은 말을 반복하기도 할테니 남 이야기 듣듯 무심히 들어주세요. 언젠가는 다 사라져 전설로 남을 청춘의 처절했던 시간들에 대한 이야기라며.  많은 시간 함께 기다려준 우리 팬분들께 감사 드립니다. 우리도 얼마나 많이 기다려왔는지 몰라요.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('1.0', '마운드미디어', '10cm', '국내', '정규', '/upload/album/1_0.jpg', 42, '2011-02-10', '뉴욕맨하탄 스타일의 밴드 10cm의 첫번째 정규앨범 ''1.0''
+
+2009년 홍대의 몇몇 클럽에서 처음으로 모습을 보인 10cm는 어느덧 2년차의 경력을 자랑하는 밴드가 되었다. 2010년 4월 발매된 첫번째 가내수공업 EP앨범과 컴필레이션 앨범 ''Life''의 ''오늘밤은 어둠이 무서워요''를 통하여 어쿠스틱 음악신의 새로운 아이콘으로 떠오른 10cm는 그해 8월 ''아메리카노''라는 말도 안되는 디지탈 싱글의 발매로 말도 안되는 인기를 누리는 밴드가 되었고, 피시방비와 담뱃값을 충당하기 위해 길거리 공연을 서슴치 않던 10cm는 어느덧 수천명 규모의 페스티발에서도 환영받는 존재가 되었으며 용돈 걱정을 하지 않아도 되는 먹고 살만한 생활을 누리게 되었다. (태어나서 처음으로!) 그러나 정작 10cm는 누가봐도 대견해할만한 이 분위기를 그리 탐탁치 않게 생각하고 있었다.
+
+10cm의 대표곡이라고 할 수 있는 ''오늘밤은 어둠이 무서워요''나 ''아메리카노'' 등의 싱글들은 10cm 음악의 지향점에 있는 곡들이라고는 할 수 없었고, 논란 그득한 EP앨범의 사운드는 너무나도 예의가 없었다. 모든 것이 거품이라는 것을 느낀 10cm는 자신들의 트레이드 마크인 귀차니즘을 극복해내고 마침내 정규앨범 작업에 돌입했으며, 말도 많고 탈도 많았던 6개월의 작업기간을 거쳐 이제 첫번째 앨범을 내놓았다.
+
+두 멤버의 부모님들께 차마 들려드리기 힘들것이라는 문제의 노래 ''킹스타''가 하필 앨범 첫 트랙으로서 포문을 열고, 재밌지만 그만큼 씁쓸한 가사의 ''우정, 그 씁쓸함에 대하여'', 데뷔 이래 처음으로 선보이는 밴드 사운드의 발라드 넘버이자 주변 지인들의 눈물을 쏙뺐다는 타이틀곡 ''그게 아니고'' 를 지나 기존의 사운드로 표현해낸(그렇지만 차원이 다른 질을 자랑하는)''Talk''와 ''사랑은 은하수 다방에서'' 까지 들었다면 이 앨범을 위해 두 멤버가 얼마나 각고의 노력을 쏟아부었는지 알 수 있다. 보컬 권정열이 노래를 어디까지 야하게 부를 수 있을 것인가, 그리고 윤철종의 기타는 어디까지 섬세할 수 있을 것인가를 시험하는 듯한 노래''Beautiful''이 10cm의 19금 노래의 맥을 이어가고, EP앨범의 수록곡 중에서도 가장 저질의 사운드로 녹음되었던 ''죽겠네''가 앨범버전으로 완전히 재녹음되어 기존 음원의 곡을 하나도 수록하지 않겠다던 두 멤버의 은근히 지조없는 면이 드러난다. 목소리를 키보드의 패드 사운드처럼 사용하여 더 오묘한 느낌을 자아내는 ''살'' 손발이 오그라드는 재기발랄한 가사의 ''곱슬머리'', EP앨범에 실렸을 법한 단촐한 구성의 곡 ''Rebirth''를 지나면 절대 녹음하기 귀찮아서가 아니라 앨범의 소소한 재미를 주기 위해 가볍게 원테이크로 녹음된 ''헤이빌리''를 만날 수 있다. 그리고 마지막곡 답게 굉장히 따뜻한 사운드로 녹음된 ''beautiful moon''을 끝으로 이 앨범의 감상은 훈훈하게 막을 내린다.
+
+이 앨범의 사운드는 굉장히 편안한 악기 구성과 무난한 듣기 좋은 사운드를 자랑하지만 이것이 본래 10cm를 아는 이들에게는 충격적일 수도 있겠다. 이전의 앨범에서는 한번도 들을 수 없던 드럼소리, 베이스 소리, 심지어 일렉기타의 소리까지 태연하게 담아놓았기 때문. 그러나 소규모 라이브 사운드의 대명사로 불리던 메리트를 과감히 포기하고, 음악적 감동을 창조해내는 것에 주력, 자유로운 편곡을 서슴지 않은 이 앨범은 10cm에게 상당한 의미가 있다.
+
+다만, 추운 한겨울에 발매하기 위해 준비되었다던 이 앨범이 봄이 얼마 남지 않은 이 시점에야 완성되어 나온 것이 애석하고도 애석할 뿐.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Polar', 'RIAK', '해피로봇레코드', '국내', '미니', '/upload/album/Polar.jpg', 43, '2017-11-22', '당신의 오늘에 전하는 뜻밖의 순간들
+소란(SORAN) 미니 앨범 [Polar]
+
+지금은 잠깐 후회 중입니다, 그러니까 아주 잠깐.
+당신과의 속삭임, 눈 맞춤으로 그토록 짧았던 그 밤들이 이제는 지나치게 길어졌습니다. 돌이켜보면 이상하리만큼 좋았던 추억과 아쉬운 순간들만 떠오릅니다. 당신의 웃음이 떠올라 뒤적이는 휴대폰 속에도 당신이 가득합니다. 잠을 잃은 새벽이 오면 난 더욱 우리였던 시간이 떠오릅니다. ''오늘까지만''이라던 다짐도 몇 번이나 지나쳐 보냈는지 모르겠습니다. 그런 내가 나에게 묻습니다. 연애 같은 걸 왜 했을까? 딱 오늘까지만, 아니 내일까지만, 당신을 떠올리고 싶습니다.
+
+01 연애 같은 걸 하니까
+연애 같은 걸 안 했더라면 이렇게 슬프고 불쌍해질 일 없었을 텐데…. 하는 마음을 담백한 어쿠스틱 팝 사운드의 곡으로 누구나 공감할 수 있도록 만들었습니다.
+
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Team Baby', 'YG PLUS', '도기리치', '국내', '정규', '/upload/album/Team Baby.jpg', 44, '2017-05-30', 'Love is all, all is love
+검정치마 [Team Baby]
+
+인류가 이야기를 멜로디에 실어 부르기 시작한 이래, 대부분의 노래는 사랑에 관한 것이었다.
+누군가 누군가와 사랑에 빠지는 순간, 호르몬은 요동치고 일상은 흔들린다.
+어떤 형태로든 그 활화산같은 감정을 표현하고 싶어진다. 그저 그런 재능을 가진 범부라 할지라도 하다못해 일생일대의 연서라도 남기는 법, 하물며 예술가라 불리우는 이들은 어떻겠는가.
+우리는 빼어난 재능이 사랑의 터널을 통과하며 탄생시킨 수많은 명작들을 알고 있다.
+그 터널에 비추는 빛이 순애 건, 짝사랑이건, 그리움이건 간에 그 모든 사랑은 곧 창작의 강고한 원천이 되었고 우리는 그 명작들에 열광해왔고, 또 다른 사랑의 산물을 기다려왔다.
+나는 말할 수 있다. 검정치마의 3집 [Team Baby]는 그 기다림에 화답할 수 있는 꽃다발이라고.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Aurora', 'RIAK', '해피로봇레코드', '국내', '정규', '/upload/album/Aurora.jpg', 45, '2010-08-05', '짜릿한 에너지, 과감한 무대매너
+객석을 들었다 놨다 하는 라이브계 절대강자 ‘데이브레이크’ 그들의 유쾌한 기운을 응집해 놓은 2집
+
+2010년 1월 발표한 미니앨범 “New Day”로 상반기 치열한 활동을 보여준 ‘데이브레이크’. 그들은 남녀노소를 모두 아울러 긍정의 기운을 품게 해준 곡 ‘좋다’와 무대에서 발산해 내는 짜릿한 에너지로 단기간에 다양한 팬 층을 흡수했다. 이는 그들의 매력인 심플하고 소소한 위트를 간직한 음악과, 라이브 무대에서 과감하게 뿜어져 나오는 유쾌함이 십분 발휘된 결과라 할 수 있다.
+
+그리고 2007년 1집 이 후 무려 3년이라는 시간이 걸려서야 세상에 내놓은 정규 2집 “aurora”. 그래서인지 수록된 트랙들은 일부러 지어낸 소설 같은 이야기가 아닌 ‘데이브레이크’의 과거, 현재, 미래에 대한 진솔한 스토리를 담고 있다. 앨범 타이틀 “aurora(여명, 새벽의 빛 이라는 뜻)” 역시 음악을 듣는 이들을 감싸 안고 싶다는 ‘데이브레이크’의 소박한 소망의 이름으로 지었다.
+
+어떤 공연에서든 특출한 역량을 보여주는 ‘데이브레이크’인 만큼 2집에서는 전체적으로 관객들과의 신나는 무대가 연상되는 곡들이 포진되어 있다. 각 곡들의 면면을 보면, 쉽게 들려도 막상 연주하려면 흉내내기조차 어려워 라이브계 절대강자라 인정받는 연주력과 가창력, 유행처럼 번지는 가벼운 말장난의 가사가 아닌 우직하지만 조심스럽게 농담을 건네는 가사들 그리고 밴드 스스로 풀어낸 자신들의 사연으로 빼곡하다. 농도 짙게 뽑아낸 ‘데이브레이크’의 진심이 담긴 음악들로 자연스럽게 관객들의 떼창을 유발해 내고 싶다는 순수청년들. 2010년 후반기까지 거의 모든 사람들이 ‘데이브레이크’의 공연을 한번씩은 접하게 하겠다는 야심이 담긴 2집 “aurora”이다.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Serenade', '마운드미디어', '매직스트로베리사운드', '국내', '정규', '/upload/album/Serenade.jpg', 46, '2019-12-12', 'Serenade : ''저녁음악''의 뜻.
+Serenade 는 본래 저녁의 음악을 뜻한다. 많이 알려진 의미는 사랑 노래인데, Serenade 가 뜻하는 몇 가지 의미 중 하나이다.
+
+대부분의 제 노래들이 낮보다 밤에 더 어울린다고 생각해왔고, 모양은 다르지만 모두 사랑을 뿌리로 두고 자란 노래들이라 ‘Serenade’라는 제목을 지었습니다. 저녁에 여러분들의 귓가에 이 16개의 사랑 노래들을 들려드리는 마음으로 정규 3집을 발매합니다.
+
+- swja');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('여름깃', '마운드미디어', '매직스트로베리사운드', '국내', '미니', '/upload/album/여름깃.jpg', 47, '2017-10-26', '새소년 - [여름깃]
+
+SSN#004. Track. 1. 음반을 여는 첫 번째 트랙은 타이틀곡인 ‘나는 새롭게 떠오른 외로움을 봐요’. 정처 없이 공허한 외로움을 반복적인 노랫말과 섬세한 연주로 ‘새소년 만의 사이키델릭’으로 담아낸 곡으로 황소윤의 깊숙한 목소리가 특별하게 느껴지는 노래다. 더불어 영상 스튜디오 GABWORKS가 연출한 뮤직비디오도 ‘긴 꿈’ 못지 않게 아름다운 느낌을 선사한다.
+
+SSN#004. Track. 2-4. 이전에 선보였던 두 번째 트랙, 지금의 새소년이 있게 만든 노래인 ‘긴 꿈’을 지나고 세 번째로 만나는 ‘여름깃’은 음반의 제목을 제공한 노래로, 황소윤의 감각적인 가사가 돋보이는 곡이다. 한편으로 현재의 베이시스트 문팬시가 합류한 후 처음으로 함께 만들어낸 곡이라서 그런지 그의 유려한 베이스 연주와 함께 멤버 셋의 호흡이 생생하게 느껴지는 곡이기도 하다. 이어지는 네 번째 트랙인 ‘구르미’는 드러머 강토가 리드하는 독특한 리듬 위에 프로듀서 김한주가 공들여 만들어낸 신디사이저와 전자악기의 음색이 어우러져 전체 음반 안에서 가장 독특한 분위기를 갖고 있는 곡이다.
+
+SSN#004. Track. 5-6. 이제 음반의 종반부, 이미 싱글로 선보여 그 강력한 에너지를 유감없이 선보인 ‘새소년을 록스타로 만드는 단 하나의 곡’, 다섯 번째 트랙 ‘파도’를 지나면 이제 마지막 트랙인 ‘새소년’의 순서다. 밴드의 이름과 같은 제목으로 밴드 ‘새소년’보다는 보통의 ‘새소년들’에 관한 얘기를, 같은 또래의 이들이 느끼는 시간의 흐름 속의 한 순간을 담아내고 싶었다는 황소윤의 노랫말은 전체 앨범에서 가장 솔직하고 내밀한 감정을 여지없이 드러내며 감동적인 순간으로 앨범을 마무리한다.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Apartment', 'MO records', '두루두루 아티스트 컴퍼니', '국내', '정규', '/upload/album/APARTMENT.jpg', 48, '2017-12-12', '[장기하가 말하는 APARTMENT]
+“매일 토해내는 젊음을 누군가 알아주길” [Beyond] 가사의 일부다. 나는 아마 올 한 해 카더가든이 젊음을 토해내는 모습을 가장 많이 지켜본 사람 중 하나일 것이다. 하루가 멀다 하고 같이 술을 마셨거든. 카더가든은 젊다. 호기로울 때는 아주 기세등등하지만 위축될 때는 그렇게 소심할 수가 없다. 주변 사람들과 두루두루 잘 지내지만 알고 보면 대단히 외로운 인간이다. 그런 젊음이 이 앨범에 가득 담겼다.
+
+젊은 사랑은 벅찬 것이라서 그걸 경험하는 이들은 “모든 게 어제와만 같기를([젊은 꿈])” 바라지만 결국은 서툴러서 “모든 것을 주고도 미안([Lost 2])”해 하고 만다. 젊은 삶은 “깨고 싶지 않은 구슬 같은 것([Blue Blue])”처럼 보이지만 역시나 “왠지 열어보기 두려워만([Mother])”지는 것이다.
+
+풍족하지 않았던 어린 시절, 카더가든은 아파트에 살아보는 것이 꿈이었다고 한다. 이번 앨범에서 그는 아파트를 지었다. 오혁, 파라솔, 선우정아, 구름, 진실, 나잠수, 오존 등 사랑하는 동료들과 함께. 음악적으로 다양하게 뻗어 나가려는 의욕이 펄떡거리는 음반이다. 그런 의미에서 이 앨범은 카더가든에게 결과물이라기보다는 출발점이다. 세월이 흘러 그가 이 출발의 계절을 “떠나 보낼 때에도 잊어버리지는([젊은 꿈])” 않았으면 좋겠다. 이 앨범에 담긴 빛나는 젊은 꿈을.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('사랑으로', 'MO records', '두루두루아티스트컴퍼니', '국내', '정규', '/upload/album/사랑으로.jpg', 49, '2020-01-30', '[혁오의 다섯 번째 앨범: 사랑으로]
+혁오가 <24: How to find true love and happiness>이후 1년 만에 새 앨범 <사랑으로>로 돌아왔다. 그간 혁오가 진행했던 작업 방식이 미리 정해둔 음악적 지향점을 향해 나아가는 것이었다면, 이번 앨범 작업은 다분히 과정지향적인 방식으로 이루어졌다. 폴 사이먼, 에이미 와인하우스, 뷔욕, 칸예 웨스트 등이 작업한 바 있는 영국의 유서깊은 리얼월드 스튜디오 Real World Studios에서 악기 녹음을, 베를린에서 혁오의 오랜 협업자인 놀먼 니체와 함께 보컬 녹음 및 믹싱을 진행한 이번 앨범은 혁오가 [23] 때부터 적극적으로 추구했던 아날로그 사운드에 보다 가까이 다가갔으며, 형식 면에서는 앨범을 만드는 데 가장 필요한 요소 외의 모든 것을 덜어내고자 했다. 멤버 모두가 사운드적으로 가장 만족스러운 결과물이라 자부하는 이번 앨범은 데뷔 6년차 밴드 혁오가 보여주는 음악적 대화와 그 과정의 기록이라고 할 수 있다.
+');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('너 그러다 장가 못간다', '미러볼뮤직', 'doob sound', '국내', '싱글', '/upload/album/너_그러다_장가_못간다.jpg', 50, '2011-11-01', '한 번 들으면 입가에 맴돌 만큼 중독성이 강한 ‘장미여관’의 음악. 그 흡입력의 원천은 감성과 본능에 충실한 솔직함이다. ‘장미여관’의 음악에서 가장 두드러지는 점은 남의 시선 때문에 하지 못했던 말 혹은 누군가 대신 이야기 해 줬으면 하는 타인의 마음을 음악으로 솔직하게 전달한다는 점이다.
+
+첫번째 트랙 봉숙이는 부산사투리로 작사한 곡으로 부산사투리 고유의 발음을 음악 속에 잘 풀어서 새로운 느낌을 선사한다. 그리고 전곡의 작사, 작곡, 편곡, 믹싱, 녹음을 팀원들 스스로 해냈다는 점에서 그들만의 독특한 색깔을 느낄 수 있다.
+
+남자의 본능을 익살스럽게 풀어낸 3인조 밴드 ''장미여관’. 부산 출신 세 남자의 멋진 음악을 기대해본다.
+');
 
 -- 테이블: song
 
@@ -619,7 +720,6 @@ VALUES ('전부 너였다', '런치송 프로젝트', '양재선', '/upload/song
 다시 헤어져도
 나는 또 그대겠죠
 ', 1),
-
        ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/슈퍼노바.mp4', 'Dance',
         true, '/upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
 Watch out
@@ -709,7 +809,6 @@ Supernova
 (Nova)
 Bring the light of a dying star
 Supernova', 2),
-
        ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)',
         '/upload/Armageddon.mp4', 'Dance', true, '/upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
 Shoot
@@ -832,7 +931,6 @@ Armageddon
 (Aw wayo wayo)
 끝과 시작의
 Armageddon', 2),
-
        ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/tone.mp3',
         '2024-05-27', 2, 'We Set The Tone
 Music on where we go
@@ -968,7 +1066,6 @@ We Set The Tone
 We Set The Tone
 We take it home
 We Set The Tone', 2),
-
        ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',
         false, '/upload/Mine.mp3', '2024-05-27', 2, '예고 없이
 지는 그림자
@@ -1110,7 +1207,6 @@ It’s all Mine
 know you want it like
 It’s all Mine
 Mine', 2),
-
        ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
         '/upload/Licorice.mp4', 'Dance', false, '/upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
@@ -1235,7 +1331,6 @@ Licorice
 Licorice
 자꾸 손이 가
 Like Licorice', 2),
-
        ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,
         'Dance', false, '/upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
 ba ba
@@ -1373,7 +1468,6 @@ We should go
 To the beach
 Take it slow
 Bahama', 2),
-
        ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
         '/upload/Long Chat.mp4', 'Dance', false, '/upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
@@ -1521,7 +1615,6 @@ Hashtag
 
 I’ll be the girl who likes a
 Long Chat', 2),
-
        ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/Prologue.mp3',
         '2024-05-27', 2, 'Woo Woo Woo
 La-la
@@ -1622,7 +1715,6 @@ La-la
 Woo Woo Woo
 La-la
 ', 2),
-
        ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4',
         'Rock/Metal', false, '/upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
 고지식한
@@ -1727,7 +1819,6 @@ Live My Life
 Live My Life
 
 Life', 2),
-
        ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/목소리 (Melody).mp3',
         '2024-05-27', 2, 'Every night
 지친 하루 끝에
@@ -1809,7 +1900,6 @@ Oh You’re the one
 목소리
 우릴 이어준
 목소리', 2),
-
        ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman',
         'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)',
         '/upload/How Sweet.mp4', 'Dance', true, '/upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
@@ -1900,11 +1990,9 @@ Toxic lover
 You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
 Don’t knock on my door, I’ll see you out', 3),
-
        ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman',
         '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/해야 (HEYA).mp4', 'Dance', true, '/upload/해야 (HEYA).mp3', '2024-04-29',
-        4,
-        'Let’s get it
+        4, 'Let’s get it
     Look at it
     Pay attention
 
@@ -1999,7 +2087,6 @@ Don’t knock on my door, I’ll see you out', 3),
     뜨겁게 떠오르는 해야
     별안간 홀린 그 순간 Bite
     Da da da dun dun dun', 4),
-
        ('첫 만남은 계획대로 되지 않아',
         'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK',
         'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', '/upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
@@ -2056,7 +2143,6 @@ Na na na-
 이렇게 만나서 반가워
 내일 또 봐 안녕
 ', 5),
-
        ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영',
         '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/고민중독.mp4', 'Rock/Metal', true, '/upload/고민중독.mp3',
         '2024-04-01', 6, 'One! Two! Q! W! E! R!
@@ -2098,7 +2184,6 @@ Na na na-
 두 번은 말 못 해 너 지금 잘 들어봐
 매일 고민하고 연습했던 말
 좋아해', 6),
-
        ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
 붙잡지 못하고 가슴만 떨었지
@@ -2133,10 +2218,8 @@ Na na na-
 그리움이 쫓아 사랑은 늘 도망가
 잠시 쉬어가면 좋을 텐데
 잠시 쉬어가면 좋을 텐데', 7),
-
        ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)',
-        '/upload/SPOT! (feat. JENNIE).mp4',
-        'HipHop', true, '/upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
+        '/upload/SPOT! (feat. JENNIE).mp4', 'HipHop', true, '/upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
 Turn the music up
 
 Uhm we’re not going home tonight, alright
@@ -2208,7 +2291,6 @@ Wait a minute ahhh
 
 Come vibe with us
 Ride with us', 8),
-
        ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,
         '/upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
 똑같이 하루를 시작하고
@@ -2257,7 +2339,6 @@ Ride with us', 8),
 
 아냐 지나치는 게 나을 것 같아
 나는 아픈 건 딱 질색이니까', 9),
-
        ('Magnetic',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
@@ -2338,7 +2419,6 @@ Like it’s magnetic
 BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
 Baby don’t say no', 10),
-
        ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/소나기.mp3',
         '2024-04-08', 11, '그치지 않기를 바랬죠
     처음 그대 내게로 오던 그날에
@@ -3465,8 +3545,10 @@ dancin’ on my grave
 BREAK!
 ', 23);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('Give It to Me', '이단옆차기, 박장근, 챈슬러', '이단옆차기, 박장근, 챈슬러', '/upload/song/give_it_to_me.mp4', 'Dance', true, '/upload/song/give_it_to_me.mp3', '2013-06-10', 24, 'You see I don''t usually do this but
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Give It to Me', '이단옆차기, 박장근, 챈슬러', '이단옆차기, 박장근, 챈슬러', '/upload/song/give_it_to_me.mp4', 'Dance', true,
+        '/upload/song/give_it_to_me.mp3', '2013-06-10', 24, 'You see I don''t usually do this but
 I really need you tonight
 Give it to me give it to me
 Give it to me give it to me
@@ -3527,8 +3609,10 @@ Oh oh oh
 Oh babe give it to me
 ', 24);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('Lucifer', 'Ryan Jhun, 유영진, Adam Kapit, Bebe Rexha', '유영진', '/upload/song/lucifer.mp4', 'Dance', true,'/upload/song/lucifer.mp3', '2010-07-19', 25, '숨을 곳도 찾지 못해 나는 피하려고 애써봐도
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Lucifer', 'Ryan Jhun, 유영진, Adam Kapit, Bebe Rexha', '유영진', '/upload/song/lucifer.mp4', 'Dance', true,
+        '/upload/song/lucifer.mp3', '2010-07-19', 25, '숨을 곳도 찾지 못해 나는 피하려고 애써봐도
 거부조차 할 수 없는 네게 갇혀버린 나
 사랑이었다면 정말 사랑했던 거라면
 내게 이러지는 말아
@@ -3604,8 +3688,10 @@ Loverhollic
 
 ', 25);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('Go Away', 'Teddy', 'Teddy', '/upload/song/go_away.mp4', 'Dance', true, '/upload/song/go_away.mp3','2010-09-09', 26, '너무 치사하잖아 너답지 못하잖아
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Go Away', 'Teddy', 'Teddy', '/upload/song/go_away.mp4', 'Dance', true, '/upload/song/go_away.mp3',
+        '2010-09-09', 26, '너무 치사하잖아 너답지 못하잖아
 지금 적응이 안돼 어 어 어지러워 왜
 누가 누구랑 헤어져 네가 나랑 헤어져
 잘 생각하고 말해 Yeah 날 따라다니던 남자
@@ -3652,8 +3738,9 @@ Cause love is over
 Love love is over tonight
 ', 26);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('Bad', 'Rphabet', 'Rphabet', '/upload/song/bad.mp4', 'Dance', true, '/upload/song/bad.mp3', '2015-07-13', 27,'Betting on you
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Bad', 'Rphabet', 'Rphabet', '/upload/song/bad.mp4', 'Dance', true, '/upload/song/bad.mp3', '2015-07-13', 27, 'Betting on you
 Betting on you
 다시 차가워진 눈빛 날카로운 네 혀끝이
 날 파고들어 제발 멈춰줘
@@ -3720,8 +3807,10 @@ Bad Bad Bad bet a bad bad girl
 절대 그냥은 못 보내 너
 ', 27);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('Rolling in the Deep', 'Adele Adkins, Paul Epworth', 'Adele Adkins, Paul Epworth', '/upload/song/rolling_in_the_deep.mp4', 'POP', true, '/upload/song/rolling_in_the_deep.mp3', '2011-01-24', 28, 'There''s a fire starting in my heart
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Rolling in the Deep', 'Adele Adkins, Paul Epworth', 'Adele Adkins, Paul Epworth',
+        '/upload/song/rolling_in_the_deep.mp4', 'POP', true, '/upload/song/rolling_in_the_deep.mp3', '2011-01-24', 28, 'There''s a fire starting in my heart
 Reaching a fever pitch
 and it''s bring me out the dark
 Finally I can see you
@@ -3792,8 +3881,10 @@ You played it
 You played it to the beat
 ', 28);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('Uptown Funk', 'Mark Ronson', 'Bruno Mars', '/upload/song/uptown_funk.mp4', 'POP', true, '/upload/song/uptown_funk.mp3', '2014-11-10', 29, 'This hit That ice cold
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Uptown Funk', 'Mark Ronson', 'Bruno Mars', '/upload/song/uptown_funk.mp4', 'POP', true,
+        '/upload/song/uptown_funk.mp3', '2014-11-10', 29, 'This hit That ice cold
 Michelle Pfeiffer That white gold
 This one for them hood girls
 Them good girls Straight masterpieces
@@ -3890,10 +3981,10 @@ Uptown Funk you up Uptown Funk you up
 say whaa
 Uptown Funk you up
 ', 29);
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES
- ('Work', 'Rihanna', 'Rihanna', '/upload/song/Rihanna_work.mp4', 'POP', true, '/upload/song/Rihanna_work.mp3',
-    '2016-01-28', 30, '상세정보유사곡
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Work', 'Rihanna', 'Rihanna', '/upload/song/Rihanna_work.mp4', 'POP', true, '/upload/song/Rihanna_work.mp3',
+        '2016-01-28', 30, '상세정보유사곡
 곡명
 Work
 작곡
@@ -4011,790 +4102,1028 @@ Mmmh
 Work, work, work, work, work, work
 Mmmh', 30);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('Small girl (feat. 도경수(D.O.))', 'PEEJAY, 이영지', '이영지', null, 'HipHop', true, '/upload/song/Small girl.mp3', '2024-06-21', 31,
-'If I got a two small cheeks
-and a bright pink lips
-Baby would you‘ve wanted to kiss me?
-만약 내가 작은 볼과 밝은 핑크색 입술을 가졌으면
-네가 나한테 키스하고 싶었을까?
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Small girl (feat. 도경수(D.O.))', 'PEEJAY, 이영지', '이영지', null, 'HipHop', true, '/upload/song/Small girl.mp3',
+        '2024-06-21', 31,
+        'If I got a two small cheeks
+        and a bright pink lips
+        Baby would you‘ve wanted to kiss me?
+        만약 내가 작은 볼과 밝은 핑크색 입술을 가졌으면
+        네가 나한테 키스하고 싶었을까?
 
-Maybe a thin ass waist
-With a Brown long hair
-Baby, Would you''ve wanted to hold me?
-또는 갈색 긴 머리에 얇은 허리를 가졌다면
-네가 나를 껴안고 싶었을까?
+        Maybe a thin ass waist
+        With a Brown long hair
+        Baby, Would you''ve wanted to hold me?
+        또는 갈색 긴 머리에 얇은 허리를 가졌다면
+        네가 나를 껴안고 싶었을까?
 
-No, you never
-아니, 전혀
+        No, you never
+        아니, 전혀
 
-No, I’m never gonna get them all
-나는 그 조건들을 전부 다 가질 수가 없어
+        No, I’m never gonna get them all
+        나는 그 조건들을 전부 다 가질 수가 없어
 
-Yeah,
-that’s what makes me feel lonely
-그래 그게 나를 참 외롭게 만들어
+        Yeah,
+        that’s what makes me feel lonely
+        그래 그게 나를 참 외롭게 만들어
 
-Oh it’s never
-글쎄, 전혀
+        Oh it’s never
+        글쎄, 전혀
 
-It can never ever happen to me
-나한텐 전혀 일어날 수가 없는 일들이야
+        It can never ever happen to me
+        나한텐 전혀 일어날 수가 없는 일들이야
 
-Cause I’m that girl
-tall girle
-나는 키가 큰 여자니까
+        Cause I’m that girl
+        tall girle
+        나는 키가 큰 여자니까
 
 
-Boy, I got a small girl fantasy
-나는 작은 여자들에 대한 환상이 있어
+        Boy, I got a small girl fantasy
+        나는 작은 여자들에 대한 환상이 있어
 
-Baby, would you still love me?
-자기야, 그래도 날 사랑해 줄래?
+        Baby, would you still love me?
+        자기야, 그래도 날 사랑해 줄래?
 
-Though I got a big laugh, big voice
-& big personality
-비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
+        Though I got a big laugh, big voice
+        & big personality
+        비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
 
-Would you guarantee it?
-사랑해줄 수 있어?
+        Would you guarantee it?
+        사랑해줄 수 있어?
 
-Know you got a small girl fantasy
-너도 작은 여자들에 대한 환상이 있다는 걸 알아
+        Know you got a small girl fantasy
+        너도 작은 여자들에 대한 환상이 있다는 걸 알아
 
-Baby, would you still love me?
-자기야, 그래도 날 사랑해줄래?
+        Baby, would you still love me?
+        자기야, 그래도 날 사랑해줄래?
 
-Though I got a big laugh, big voice
-& big personality
-비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
+        Though I got a big laugh, big voice
+        & big personality
+        비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
 
-Would you guarantee ?
-장담해 줄 수 있어?
+        Would you guarantee ?
+        장담해 줄 수 있어?
 
-If I got a-
+        If I got a-
 
 
-If I got a-
+        If I got a-
 
 
-Would you guarantee ?
-장담할 수 있겠어?
+        Would you guarantee ?
+        장담할 수 있겠어?
 
 
-If I got a-
+        If I got a-
 
 
-If I got a-
+        If I got a-
 
 
-Would you guarantee ?
-장담할 수 있겠어?
+        Would you guarantee ?
+        장담할 수 있겠어?
 
 
-If I got a-
+        If I got a-
 
 
-If I got a-
+        If I got a-
 
 
-If I cared about
-All Those thing that you care
-Then I’m not yours
-만약 내가 네가 신경쓰고 있는 것들
-전부를 신경쓰고 있었다면 난 네 것이 아니었을거야
+        If I cared about
+        All Those thing that you care
+        Then I’m not yours
+        만약 내가 네가 신경쓰고 있는 것들
+        전부를 신경쓰고 있었다면 난 네 것이 아니었을거야
 
-Yes, you’re wasting all your time
-On some stupid things
-맞아, 넌 너무 바보같은 것들에 시간을 낭비하고 있어
+        Yes, you’re wasting all your time
+        On some stupid things
+        맞아, 넌 너무 바보같은 것들에 시간을 낭비하고 있어
 
-Baby Im already yours
-난 이미 네 것이잖아
+        Baby Im already yours
+        난 이미 네 것이잖아
 
-You keep asking me
-넌 자꾸 물어봐
+        You keep asking me
+        넌 자꾸 물어봐
 
-Do I really suit you?
-Do I really look good?
-“내가 너랑 잘 어울리는 거 같아?”
-“내가 진짜 예뻐 보여?”
+        Do I really suit you?
+        Do I really look good?
+        “내가 너랑 잘 어울리는 거 같아?”
+        “내가 진짜 예뻐 보여?”
 
-Girl, I don’t understand you
-난 당최 이해를 할 수가 없어
+        Girl, I don’t understand you
+        난 당최 이해를 할 수가 없어
 
-All you have to do is
-Smiling at me
-Like there’s no one to interrupt us
-넌 그냥 우릴 방해하는 사람이 아무도 없는 것처럼
-날 향해 환히 웃어주기만 하면 돼
+        All you have to do is
+        Smiling at me
+        Like there’s no one to interrupt us
+        넌 그냥 우릴 방해하는 사람이 아무도 없는 것처럼
+        날 향해 환히 웃어주기만 하면 돼
 
-‘Cause that’s all I need from you
-그게 내가 너한테 바라는 전부야
+        ‘Cause that’s all I need from you
+        그게 내가 너한테 바라는 전부야
 
-Make that fingers v
-수줍어 하지 말고
-가까이 더 붙어
-난 여기있어
+        Make that fingers v
+        수줍어 하지 말고
+        가까이 더 붙어
+        난 여기있어
 
-니가 뭘 원하던지간에
-난 항상 똑같아
-다른 조건은 애초에
-없었어
+        니가 뭘 원하던지간에
+        난 항상 똑같아
+        다른 조건은 애초에
+        없었어
 
-Big eyes, big laugh
-Big voice or big personality
-큰 눈, 큰 웃음소리
-큰 목소리나 성격
+        Big eyes, big laugh
+        Big voice or big personality
+        큰 눈, 큰 웃음소리
+        큰 목소리나 성격
 
-Girl I don’t got no fantasy
-난 어떤 환상도 없어
-Theres’s no more other fantasy
-그리고 그 어떤 환상도 없을거야
+        Girl I don’t got no fantasy
+        난 어떤 환상도 없어
+        Theres’s no more other fantasy
+        그리고 그 어떤 환상도 없을거야
 
 
-If I got a two small cheeks
-And a bright pink lips
-Baby would you‘ve wanted to kiss me?
-만약 내가 작은 볼과 밝은 핑크색 입술을 가졌으면
-네가 나한테 키스하고 싶었을까?
+        If I got a two small cheeks
+        And a bright pink lips
+        Baby would you‘ve wanted to kiss me?
+        만약 내가 작은 볼과 밝은 핑크색 입술을 가졌으면
+        네가 나한테 키스하고 싶었을까?
 
-Maybe a thin ass waist
-With a Brown long hair
-Baby, Would you''ve wanted to hold me?
-또는 갈색 긴 머리에 얇은 허리를 가졌다면
-네가 나를 껴안고 싶었을까?
+        Maybe a thin ass waist
+        With a Brown long hair
+        Baby, Would you''ve wanted to hold me?
+        또는 갈색 긴 머리에 얇은 허리를 가졌다면
+        네가 나를 껴안고 싶었을까?
 
-No, you never
-아니, 전혀
+        No, you never
+        아니, 전혀
 
-No, I’m never gonna get them all
-나는 그 조건들을 전부 다 가질 수가 없어
+        No, I’m never gonna get them all
+        나는 그 조건들을 전부 다 가질 수가 없어
 
-Yeah,
-that’s what makes me feel lonely
-그래 그게 나를 참 외롭게 만들어
+        Yeah,
+        that’s what makes me feel lonely
+        그래 그게 나를 참 외롭게 만들어
 
-Oh it’s never
-글쎄, 전혀
+        Oh it’s never
+        글쎄, 전혀
 
-It can never ever happen to me
-나한텐 전혀 일어날 수가 없는 일들이야
+        It can never ever happen to me
+        나한텐 전혀 일어날 수가 없는 일들이야
 
-Cause I’m that girl
-tall girle
-나는 키가 큰 여자니까
-
-
-Boy, I got a small girl fantasy
-나 작은 여자들에 대한 환상이 있어
-
-Baby, would you still love me?
-자기야, 그래도 날 사랑해 줄래?
-
-Though I got a big laugh, big voice
-& big personality
-비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
-
-Would you guarantee ?
-사랑해줄 수 있어?
-
-Know you got a small girl fantasy
-너도 작은 여자들에 대한 환상이 있다는 걸 알아
-
-Baby, would you still love me?
-자기야, 그래도 날 사랑해줄래?
-
-Though I got a big laugh, big voice
-& big personality
-비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
-
-Would you guarantee ?
-사랑해줄 수 있어?
-
-If I got a-
-
-
-If I got a-
-
-
-Would you guarantee ?
-장담할 수 있겠어?
-
-
-If I got a-
-
-
-If I got a-
-
-
-Would you guarantee ?
-장담할 수 있겠어?
-
-
-If I got a-
-
-
-If I got a-', 31
-);
-
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('예뻤어', '홍지상, 원필 (DAY6), Young K (DAY6), "이우민""collapsedone"""', 'Young K (DAY6)', '/upload/song/예뻤어.mp4', 'Rock/Metal', true, '/upload/song/예뻤어.mp3', '2017-02-06', 32,
-'지금 이 말이
-우리가 다시
-시작하자는 건 아냐
-그저 너의
-남아있던 기억들이
-떠올랐을 뿐이야
-정말 하루도 빠짐없이 너는
-사랑한다 말해줬었지
-잠들기 전에 또
-눈 뜨자마자 말해주던 너
-생각이 나 말해보는 거야
-예뻤어
-날 바라봐 주던 그 눈빛
-날 불러주던 그 목소리
-다 다
-그 모든 게 내겐
-예뻤어
-더 바랄게 없는듯한 느낌
-오직 너만이 주던 순간들
-다 다
-지났지만
-넌 너무 예뻤어
-너도 이제는
-나와의 기억이
-추억이 되었을 거야
-너에게는
-어떤 말을 해도 다
-지나간 일일 거야
-정말 한번도 빠짐없이 너는
-나를 먼저 생각해줬어
-아무 일 아니어도
-미안해 고마워 해주던 너
-생각이 나 말해보는 거야
-예뻤어
-날 바라봐 주던 그 눈빛
-날 불러주던 그 목소리
-다 다
-그 모든 게 내겐
-예뻤어
-더 바랄게 없는듯한 느낌
-오직 너만이 주던 순간들
-다 다
-지났지만
-넌 너무 예뻤어
-아직도 가끔 네 생각이 나
-어렵게 전화를 걸어볼까
-생각이 들 때도 많지만
-Baby I know it''s already over
-아무리 원해도 너는 이제
-이미 끝나버린 지난날의
-한편의 영화였었단 걸
-난 알아
-마지막
-날 바라봐 주던 그 눈빛
-잘 지내라던 그 목소리
-다 다
-그마저도 내겐
-예뻤어
-내게 보여준 눈물까지
-너와 가졌던 순간들은
-다 다
-지났지만
-넌 너무 예뻤어', 32
-);
-
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('에피소드', '이무진, 함준석, Eastwest, Junzo', '이무진', '/upload/song/에피소드.mp4', 'Rock/Metal', true, '/upload/song/에피소드.mp3', '2023-12-13', 33,
-'나는 말야
-버릇이 하나
-있어 그건 매일 잠에 들 시간마다
-잘 모아둔 기억 조각들 중
-잡히는 걸 집은 후
-혼자 조용히 꼬꼬무
-
-이걸 난
-궁상이란
-이름으로 지었어 고민 고민하다가
-아무튼 뭐 오늘은 하필이면
-너가 스쳐버려서
-우리였을 때로
-우리 정말 좋았던 그때로
-
-우리의 에피소드가
-찬란하게 막을 연다
-배경은 너의 집 앞
-첫 데이트가 끝난
-둘만의 에피소드가
-참 예쁜 얘기로 시작
-자작자작 조심스런 대화
-그새 늦은 시간
-
-굿바이
-좋은 뜻일 뿐인 굿바이
-With a happy smile
-이게 이 스토리의 서막
-눈 내리던 그 밤
-겨울 향이 배어서
-더 눈부신
-우리의 에피소드다
-
-매일이 마지막인 듯이
-함께라면 어디든지
-사랑이란 걸 끝도 없이
-주고받고 나눴어 그치?
-서로만 있음 마음이
-시릴 날이 없던 우리
-넌 오아시스 내겐 마치
-
-근데 있잖아
-별 소용없다?
-생각만 해도 행복한 순간들은 말야
-모른 척해도 결국엔 이건
-끝을 봤던 에피소드
-점점 점점 점점
-
-우리의 에피소드가
-결말에 가까워져가
-곧 새드 엔딩이다
-크레딧엔 너와 나
-둘만의 에피소드가
-참 쓸쓸한 끝을 맞아
-두 주인공의 서글픈 마지막
-결국 건넨 인사
-
-굿바이
-너무 아픈 이별의 굿바이
-눈물이 뺨을 스쳐
-도착한 입가엔 미소
-애써 웃고 있어
-우린 서로를 보며
-첨 같던 미소로 안녕
-웃으며 안녕
-
-눈 뜨면 에필로그다
-침대에 기대어 혼자
-펑펑 울고 있는 나
-이 궁상 밖의 난
-둘만의 에피소드완
-전혀 다른 모습 난 그날
-돌아서지 말았어야 했다
-널 안았어야 했다
-
-그 밤
-눈꽃이 널 덮은 그 밤의
-향을 잊음과
-함께 잃었던 따스함
-춥게 눈을 뜬다
-겨울밤이 되어서
-맞이한 향이
-우리의 에피소드다', 33
-);
-
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+        Cause I’m that girl
+        tall girle
+        나는 키가 큰 여자니까
+
+
+        Boy, I got a small girl fantasy
+        나 작은 여자들에 대한 환상이 있어
+
+        Baby, would you still love me?
+        자기야, 그래도 날 사랑해 줄래?
+
+        Though I got a big laugh, big voice
+        & big personality
+        비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
+
+        Would you guarantee ?
+        사랑해줄 수 있어?
+
+        Know you got a small girl fantasy
+        너도 작은 여자들에 대한 환상이 있다는 걸 알아
+
+        Baby, would you still love me?
+        자기야, 그래도 날 사랑해줄래?
+
+        Though I got a big laugh, big voice
+        & big personality
+        비록 내가 큰 웃음소리, 큰 목소리, 크고 시끄러운 성격을 가졌대도
+
+        Would you guarantee ?
+        사랑해줄 수 있어?
+
+        If I got a-
+
+
+        If I got a-
+
+
+        Would you guarantee ?
+        장담할 수 있겠어?
+
+
+        If I got a-
+
+
+        If I got a-
+
+
+        Would you guarantee ?
+        장담할 수 있겠어?
+
+
+        If I got a-
+
+
+        If I got a-', 31);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('예뻤어', '홍지상, 원필 (DAY6), Young K (DAY6), "이우민""collapsedone"""', 'Young K (DAY6)', '/upload/song/예뻤어.mp4',
+        'Rock/Metal', true, '/upload/song/예뻤어.mp3', '2017-02-06', 32,
+        '지금 이 말이
+        우리가 다시
+        시작하자는 건 아냐
+        그저 너의
+        남아있던 기억들이
+        떠올랐을 뿐이야
+        정말 하루도 빠짐없이 너는
+        사랑한다 말해줬었지
+        잠들기 전에 또
+        눈 뜨자마자 말해주던 너
+        생각이 나 말해보는 거야
+        예뻤어
+        날 바라봐 주던 그 눈빛
+        날 불러주던 그 목소리
+        다 다
+        그 모든 게 내겐
+        예뻤어
+        더 바랄게 없는듯한 느낌
+        오직 너만이 주던 순간들
+        다 다
+        지났지만
+        넌 너무 예뻤어
+        너도 이제는
+        나와의 기억이
+        추억이 되었을 거야
+        너에게는
+        어떤 말을 해도 다
+        지나간 일일 거야
+        정말 한번도 빠짐없이 너는
+        나를 먼저 생각해줬어
+        아무 일 아니어도
+        미안해 고마워 해주던 너
+        생각이 나 말해보는 거야
+        예뻤어
+        날 바라봐 주던 그 눈빛
+        날 불러주던 그 목소리
+        다 다
+        그 모든 게 내겐
+        예뻤어
+        더 바랄게 없는듯한 느낌
+        오직 너만이 주던 순간들
+        다 다
+        지났지만
+        넌 너무 예뻤어
+        아직도 가끔 네 생각이 나
+        어렵게 전화를 걸어볼까
+        생각이 들 때도 많지만
+        Baby I know it''s already over
+        아무리 원해도 너는 이제
+        이미 끝나버린 지난날의
+        한편의 영화였었단 걸
+        난 알아
+        마지막
+        날 바라봐 주던 그 눈빛
+        잘 지내라던 그 목소리
+        다 다
+        그마저도 내겐
+        예뻤어
+        내게 보여준 눈물까지
+        너와 가졌던 순간들은
+        다 다
+        지났지만
+        넌 너무 예뻤어', 32);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('에피소드', '이무진, 함준석, Eastwest, Junzo', '이무진', '/upload/song/에피소드.mp4', 'Rock/Metal', true,
+        '/upload/song/에피소드.mp3', '2023-12-13', 33,
+        '나는 말야
+        버릇이 하나
+        있어 그건 매일 잠에 들 시간마다
+        잘 모아둔 기억 조각들 중
+        잡히는 걸 집은 후
+        혼자 조용히 꼬꼬무
+
+        이걸 난
+        궁상이란
+        이름으로 지었어 고민 고민하다가
+        아무튼 뭐 오늘은 하필이면
+        너가 스쳐버려서
+        우리였을 때로
+        우리 정말 좋았던 그때로
+
+        우리의 에피소드가
+        찬란하게 막을 연다
+        배경은 너의 집 앞
+        첫 데이트가 끝난
+        둘만의 에피소드가
+        참 예쁜 얘기로 시작
+        자작자작 조심스런 대화
+        그새 늦은 시간
+
+        굿바이
+        좋은 뜻일 뿐인 굿바이
+        With a happy smile
+        이게 이 스토리의 서막
+        눈 내리던 그 밤
+        겨울 향이 배어서
+        더 눈부신
+        우리의 에피소드다
+
+        매일이 마지막인 듯이
+        함께라면 어디든지
+        사랑이란 걸 끝도 없이
+        주고받고 나눴어 그치?
+        서로만 있음 마음이
+        시릴 날이 없던 우리
+        넌 오아시스 내겐 마치
+
+        근데 있잖아
+        별 소용없다?
+        생각만 해도 행복한 순간들은 말야
+        모른 척해도 결국엔 이건
+        끝을 봤던 에피소드
+        점점 점점 점점
+
+        우리의 에피소드가
+        결말에 가까워져가
+        곧 새드 엔딩이다
+        크레딧엔 너와 나
+        둘만의 에피소드가
+        참 쓸쓸한 끝을 맞아
+        두 주인공의 서글픈 마지막
+        결국 건넨 인사
+
+        굿바이
+        너무 아픈 이별의 굿바이
+        눈물이 뺨을 스쳐
+        도착한 입가엔 미소
+        애써 웃고 있어
+        우린 서로를 보며
+        첨 같던 미소로 안녕
+        웃으며 안녕
+
+        눈 뜨면 에필로그다
+        침대에 기대어 혼자
+        펑펑 울고 있는 나
+        이 궁상 밖의 난
+        둘만의 에피소드완
+        전혀 다른 모습 난 그날
+        돌아서지 말았어야 했다
+        널 안았어야 했다
+
+        그 밤
+        눈꽃이 널 덮은 그 밤의
+        향을 잊음과
+        함께 잃었던 따스함
+        춥게 눈을 뜬다
+        겨울밤이 되어서
+        맞이한 향이
+        우리의 에피소드다', 33);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
 VALUES ('밤양갱', '장기하', '장기하', '/upload/song/밤양갱.mp4', 'R&B', true, '/upload/song/밤양갱.mp3', '2024-02-13', 34,
-'떠나는 길에 니가 내게 말했지
-‘너는 바라는 게 너무나 많아
-잠깐이라도 널 안 바라보면
-머리에 불이 나버린다니까’
-나는 흐르려는 눈물을 참고
-하려던 얘길 어렵게 누르고
-‘그래 미안해’라는 한 마디로
-너랑 나눈 날들 마무리했었지
+        '떠나는 길에 니가 내게 말했지
+        ‘너는 바라는 게 너무나 많아
+        잠깐이라도 널 안 바라보면
+        머리에 불이 나버린다니까’
+        나는 흐르려는 눈물을 참고
+        하려던 얘길 어렵게 누르고
+        ‘그래 미안해’라는 한 마디로
+        너랑 나눈 날들 마무리했었지
 
-달디달고 달디달고 달디단 밤양갱 밤양갱
-내가 먹고 싶었던 건 달디단 밤양갱 밤양갱이야
+        달디달고 달디달고 달디단 밤양갱 밤양갱
+        내가 먹고 싶었던 건 달디단 밤양갱 밤양갱이야
 
-떠나는 길에 니가 내게 말했지
-‘너는 바라는 게 너무나 많아’
-아냐 내가 늘 바란 건 하나야
-한 개뿐이야 달디단 밤양갱
+        떠나는 길에 니가 내게 말했지
+        ‘너는 바라는 게 너무나 많아’
+        아냐 내가 늘 바란 건 하나야
+        한 개뿐이야 달디단 밤양갱
 
-달디달고 달디달고 달디단 밤양갱 밤양갱
-내가 먹고 싶었던 건 달디단 밤양갱 밤양갱이야
+        달디달고 달디달고 달디단 밤양갱 밤양갱
+        내가 먹고 싶었던 건 달디단 밤양갱 밤양갱이야
 
-상다리가 부러지고
-둘이서 먹다 하나가 쓰러져버려도
-나라는 사람을 몰랐던 넌
+        상다리가 부러지고
+        둘이서 먹다 하나가 쓰러져버려도
+        나라는 사람을 몰랐던 넌
 
-떠나가다가 돌아서서 말했지
-‘너는 바라는 게 너무나 많아’
-아냐 내가 늘 바란 건 하나야
-한 개뿐이야 달디단 밤양갱', 34
-);
+        떠나가다가 돌아서서 말했지
+        ‘너는 바라는 게 너무나 많아’
+        아냐 내가 늘 바란 건 하나야
+        한 개뿐이야 달디단 밤양갱', 34);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('SHEESH', 'CHOICE37, LP, YG, Sonny, LIL G, 최현석, Sandra Wikström', 'CHOICE37, Sonny, LIL G, LP, 최현석, Sandra Wikström', '/upload/song/SHEESH.mp4', 'R&B', true, '/upload/song/SHEESH.mp3', '2024-04-01', 35,
-'Da la lun dun
-Da la lun dun
-Da la lun dun
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('SHEESH', 'CHOICE37, LP, YG, Sonny, LIL G, 최현석, Sandra Wikström',
+        'CHOICE37, Sonny, LIL G, LP, 최현석, Sandra Wikström', '/upload/song/SHEESH.mp4', 'R&B', true,
+        '/upload/song/SHEESH.mp3', '2024-04-01', 35,
+        'Da la lun dun
+        Da la lun dun
+        Da la lun dun
 
-BABY I’mma MONSTER
+        BABY I’mma MONSTER
 
-Mano a mano
-I see you in slow mo’
-You know you’re in trouble
-Ooh hoo hoo hoo
+        Mano a mano
+        I see you in slow mo’
+        You know you’re in trouble
+        Ooh hoo hoo hoo
 
-발버둥 쳐봐
-어차피 손바닥
-위에서 못 나가
-You know that
+        발버둥 쳐봐
+        어차피 손바닥
+        위에서 못 나가
+        You know that
 
-눈을 뜬 순간
-피어나
-All eyes on me
-불을 질러라
+        눈을 뜬 순간
+        피어나
+        All eyes on me
+        불을 질러라
 
-Do or die
-On my life
-Yeah you ain’t seen nothing yet
+        Do or die
+        On my life
+        Yeah you ain’t seen nothing yet
 
-Got them all going
-Sheesh Sheesh
-Sheesh Sheesh Sheesh yeah
+        Got them all going
+        Sheesh Sheesh
+        Sheesh Sheesh Sheesh yeah
 
-B.A.B.Y.M.O.N
-Sheesh Sheesh
-Sheesh Sheesh Sheesh yeah
-Got them all going
+        B.A.B.Y.M.O.N
+        Sheesh Sheesh
+        Sheesh Sheesh Sheesh yeah
+        Got them all going
 
-Yo hold on 쉿
-걍 들이부어라 네 달팽이관에
-이건 네 귀에 줄 축복
-음악에 맞춰 걍 춤 춰
+        Yo hold on 쉿
+        걍 들이부어라 네 달팽이관에
+        이건 네 귀에 줄 축복
+        음악에 맞춰 걍 춤 춰
 
-히비리 합 합 boom boom pow
-분위기 타올라 너네들 눈 돌아
-띵하니 적잖이 충격일 거야
+        히비리 합 합 boom boom pow
+        분위기 타올라 너네들 눈 돌아
+        띵하니 적잖이 충격일 거야
 
-Crown this queen
-홈런은 쳤고 내 다음은 위
-어중이떠중이 중간 아님
-날 보고 닫혔던 입들 say
-Sheesh Sheesh Sheesh
+        Crown this queen
+        홈런은 쳤고 내 다음은 위
+        어중이떠중이 중간 아님
+        날 보고 닫혔던 입들 say
+        Sheesh Sheesh Sheesh
 
-You know what it is
-I be running this
-Pull up in a ghost
-Peek a peek a boo hoo
-Vroom vroom
-너네 심장에 박동이 pump pump pop
-Pedal to the metal
-Click clack click
-Put’em up to the sky
-High high high high
+        You know what it is
+        I be running this
+        Pull up in a ghost
+        Peek a peek a boo hoo
+        Vroom vroom
+        너네 심장에 박동이 pump pump pop
+        Pedal to the metal
+        Click clack click
+        Put’em up to the sky
+        High high high high
 
-눈을 뜬 순간
-피어나
-All eyes on me
-불을 질러라
+        눈을 뜬 순간
+        피어나
+        All eyes on me
+        불을 질러라
 
-Do or die
-On my life
-Yeah you ain’t seen nothing yet
+        Do or die
+        On my life
+        Yeah you ain’t seen nothing yet
 
-Got them all going
-Sheesh Sheesh
-Sheesh Sheesh Sheesh yeah
+        Got them all going
+        Sheesh Sheesh
+        Sheesh Sheesh Sheesh yeah
 
-B.A.B.Y.M.O.N
-Sheesh Sheesh
-Sheesh Sheesh Sheesh yeah
-Got them all going
+        B.A.B.Y.M.O.N
+        Sheesh Sheesh
+        Sheesh Sheesh Sheesh yeah
+        Got them all going
 
-마음껏 웃어봐
-이젠 내 차례니까
+        마음껏 웃어봐
+        이젠 내 차례니까
 
-천천히 불태워 네가 잠든 사이
+        천천히 불태워 네가 잠든 사이
 
-Time’s up
-올라가 올라가 더
+        Time’s up
+        올라가 올라가 더
 
-꼭대기 꼭대기로
-하늘 위 하늘 위로
+        꼭대기 꼭대기로
+        하늘 위 하늘 위로
 
-Fly away
-온 세상을 뒤집어
-Come on let’s ride
+        Fly away
+        온 세상을 뒤집어
+        Come on let’s ride
 
-BABY I’mma MONSTER
+        BABY I’mma MONSTER
 
-B A B Y M O N
-Tell a friend tell a friend tell a friend
-B A B Y M O N
-Tell a friend tell a friend tell a friend
+        B A B Y M O N
+        Tell a friend tell a friend tell a friend
+        B A B Y M O N
+        Tell a friend tell a friend tell a friend
 
-Let''s go
-Jump jump and let it go
-Watch out we on a roll
-Rum pump pump pump it up then
+        Let''s go
+        Jump jump and let it go
+        Watch out we on a roll
+        Rum pump pump pump it up then
 
-Jump jump and let it go
-Watch out we on a roll
-Rum pump pump pump it up then', 35
-);
+        Jump jump and let it go
+        Watch out we on a roll
+        Rum pump pump pump it up then', 35);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
 VALUES ('천상연', '유해준', '유해준', null, 'Ballad', true, '/upload/song/천상연.mp3', '2024-02-21', 36,
-'아니길 바랬었어
-꿈이길 기도했지
-너 없는 가슴으로 살아가야 하는 건
-내게는 너무 힘겨운걸
+        '아니길 바랬었어
+        꿈이길 기도했지
+        너 없는 가슴으로 살아가야 하는 건
+        내게는 너무 힘겨운걸
 
-그렇게 사랑했던
-너무도 소중했던
-지난날이 서러워 자꾸 눈물이 흘러
-내 삶은 너뿐인데
+        그렇게 사랑했던
+        너무도 소중했던
+        지난날이 서러워 자꾸 눈물이 흘러
+        내 삶은 너뿐인데
 
-사랑해 널 잊을 순 없을 거야
-미안해 너를 지키지 못한 것을
-너의 행복한 모습 나 보기를 원해
-부디 새롭게 시작하길 바래
+        사랑해 널 잊을 순 없을 거야
+        미안해 너를 지키지 못한 것을
+        너의 행복한 모습 나 보기를 원해
+        부디 새롭게 시작하길 바래
 
-하늘이 우리를 갈라 놓지만
-눈물로 너를 보내려고 하지만
-너를 얼마나 내가 사랑했는 줄 아니
-영원히 너를 지켜보며 살 거야
-행복하길 바래
+        하늘이 우리를 갈라 놓지만
+        눈물로 너를 보내려고 하지만
+        너를 얼마나 내가 사랑했는 줄 아니
+        영원히 너를 지켜보며 살 거야
+        행복하길 바래
 
-그렇게 사랑했던
-너무도 소중했던
-지난날이 서러워 자꾸 눈물이 흘러
-내 삶은 너뿐인데
+        그렇게 사랑했던
+        너무도 소중했던
+        지난날이 서러워 자꾸 눈물이 흘러
+        내 삶은 너뿐인데
 
-사랑해 널 잊을 순 없을 거야
-미안해 너를 지키지 못한 것을
-너의 행복한 모습 나 보기를 원해
-부디 새롭게 시작하길 바래
+        사랑해 널 잊을 순 없을 거야
+        미안해 너를 지키지 못한 것을
+        너의 행복한 모습 나 보기를 원해
+        부디 새롭게 시작하길 바래
 
-하늘이 우리를 갈라 놓지만
-눈물로 너를 보내려고 하지만
-너를 얼마나 내가 사랑했는 줄 아니
-영원히 너를 지켜보며 살 거야
-행복하길 바래
+        하늘이 우리를 갈라 놓지만
+        눈물로 너를 보내려고 하지만
+        너를 얼마나 내가 사랑했는 줄 아니
+        영원히 너를 지켜보며 살 거야
+        행복하길 바래
 
-널 사랑해
-미안해 너를 지키지 못한 것을
-너의 행복한 모습 나 보기를 원해
-부디 새롭게 시작하길 바래
+        널 사랑해
+        미안해 너를 지키지 못한 것을
+        너의 행복한 모습 나 보기를 원해
+        부디 새롭게 시작하길 바래
 
-행복하길 바래', 36
-);
+        행복하길 바래', 36);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('미안해 미워해 사랑해', '남혜승, 김경희', '남혜승, 김경희', '/upload/song/미안해 미워해 사랑해.mp4', 'Ballad', true, '/upload/song/미안해 미워해 사랑해.mp3', '2024-03-24', 37,
-'It''s the same day
-이렇게 너를
-다시 불러보는
-잊고 있던 마음들과
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('미안해 미워해 사랑해', '남혜승, 김경희', '남혜승, 김경희', '/upload/song/미안해 미워해 사랑해.mp4', 'Ballad', true,
+        '/upload/song/미안해 미워해 사랑해.mp3', '2024-03-24', 37,
+        'It''s the same day
+        이렇게 너를
+        다시 불러보는
+        잊고 있던 마음들과
 
-이제야 내미는
-나의 미련한 진심들
-늦어서 미안해
+        이제야 내미는
+        나의 미련한 진심들
+        늦어서 미안해
 
-I wish I could have told you that
-I was born to love you
-To love you with all my heart
-널 향한 심장이 멈춰지지가 않아
+        I wish I could have told you that
+        I was born to love you
+        To love you with all my heart
+        널 향한 심장이 멈춰지지가 않아
 
-Still want you all the time
-아직 내 마음속 한켠의 방에
-그리움으로 가득 채워
-너를 기다려
-Need you all the time
-아무 말도 전하지 못해
-시간속을 헤메이는
-나를 미워해
+        Still want you all the time
+        아직 내 마음속 한켠의 방에
+        그리움으로 가득 채워
+        너를 기다려
+        Need you all the time
+        아무 말도 전하지 못해
+        시간속을 헤메이는
+        나를 미워해
 
-It’s the same night
-흐릿한 어느 밤 안개 속에 너를
-불러보곤 해 난 또
+        It’s the same night
+        흐릿한 어느 밤 안개 속에 너를
+        불러보곤 해 난 또
 
-시간 저편에 빛나던
-기억을 떠올려
-두 손 꼭 잡았던
+        시간 저편에 빛나던
+        기억을 떠올려
+        두 손 꼭 잡았던
 
-I wish I could have told you that
-I was made to love you
-To love you with all my heart
-망설이다 혼자 삼켰던 말 사랑해
+        I wish I could have told you that
+        I was made to love you
+        To love you with all my heart
+        망설이다 혼자 삼켰던 말 사랑해
 
-Still want you all the time
-아직 내 마음속 한켠의 방에
-그리움으로 가득 채워
-너를 기다려
-Need you all the time
-미친 듯이 네게 달려가
-두 팔 가득 너를 품고
+        Still want you all the time
+        아직 내 마음속 한켠의 방에
+        그리움으로 가득 채워
+        너를 기다려
+        Need you all the time
+        미친 듯이 네게 달려가
+        두 팔 가득 너를 품고
 
-And I want you to know you’re the only reason
-that I still breathe that I still live
-And to tell you
-사랑했던 나의 진심이
-사랑받던 모든 기억이
-내 모든 이유
-유일한 이유
-Hmmm', 37
-);
+        And I want you to know you’re the only reason
+        that I still breathe that I still live
+        And to tell you
+        사랑했던 나의 진심이
+        사랑받던 모든 기억이
+        내 모든 이유
+        유일한 이유
+        Hmmm', 37);
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
 VALUES ('비의 랩소디', '주영훈', '주영훈, 이세준', null, 'Ballad', true, '/upload/song/비의 랩소디.mp3', '2023-12-03', 38,
-'이젠 눈물 그쳐 나를 봐요
-우는 그대 더 아름다워
-내게 이 모습조차 더 남지 않도록
-그냥 고개 돌려요
-그저 미안한 마음뿐이죠
-그댈 위해 해줄 게 없어
-모두 이해할게요 그댈 아끼는 맘
-그분들도 같을 거란 걸
+        '이젠 눈물 그쳐 나를 봐요
+        우는 그대 더 아름다워
+        내게 이 모습조차 더 남지 않도록
+        그냥 고개 돌려요
+        그저 미안한 마음뿐이죠
+        그댈 위해 해줄 게 없어
+        모두 이해할게요 그댈 아끼는 맘
+        그분들도 같을 거란 걸
 
-한참 동안을 비틀거렸죠
-그댈 사랑했던 그만큼
-떠나가요 아주 먼 곳으로
-그대 소식 내게 올 수 없을 그만큼
-다 잊어요 내겐 마지막이 될
-사람도 모두 다 버려두고 갈게요
+        한참 동안을 비틀거렸죠
+        그댈 사랑했던 그만큼
+        떠나가요 아주 먼 곳으로
+        그대 소식 내게 올 수 없을 그만큼
+        다 잊어요 내겐 마지막이 될
+        사람도 모두 다 버려두고 갈게요
 
-나를 위해 많이 애썼단 걸
-알고 있죠 난 감사해요
-허나 이룰 수 없는 건 어쩔 수 없죠
-내가 용기 낼게요 이젠
-죽는 날까지 사랑한대도
-가질 수 없는 그대인걸
+        나를 위해 많이 애썼단 걸
+        알고 있죠 난 감사해요
+        허나 이룰 수 없는 건 어쩔 수 없죠
+        내가 용기 낼게요 이젠
+        죽는 날까지 사랑한대도
+        가질 수 없는 그대인걸
 
-떠나가요 아주 먼 곳으로
-그대 소식 내게 올 수 없을 그만큼
-다 잊어요 내겐 마지막이 될
-사람도 모두 다 버려두고 갈게요
+        떠나가요 아주 먼 곳으로
+        그대 소식 내게 올 수 없을 그만큼
+        다 잊어요 내겐 마지막이 될
+        사람도 모두 다 버려두고 갈게요
 
-떠나가요 아주 먼 곳으로
-그대 소식 내게 올 수 없을 그만큼
-혹시라도 내가 그리울 때면
-세상에 내가 없다고 믿어요', 38
-);
+        떠나가요 아주 먼 곳으로
+        그대 소식 내게 올 수 없을 그만큼
+        혹시라도 내가 그리울 때면
+        세상에 내가 없다고 믿어요', 38);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/song/헤어지자 말해요.mp4', 'Ballad', true, '/upload/song/헤어지자 말해요.mp3',
+        '2023-04-20', 39,
+        '헤어지자고 말하려 오늘
+        너에게 가다가 우리 추억 생각해 봤어
+        처음 본 네 얼굴
+        마주친 눈동자
+        가까스로 본 너의 그 미소들
+        손을 잡고 늘 걷던 거리에
+        첫눈을 보다가 문득 고백했던 그 순간
+        가보고 싶었던 식당
+        난생처음 준비한 선물
+        고맙다는 너의 그 눈물들이
+        바뀔까 봐 두려워
+        그대 먼저 헤어지자 말해요
+        나는 사실 그대에게 좋은 사람이 아녜요
+        그대 이제 날 떠난다 말해요
+        잠시라도 이 행복을 느껴서 고마웠다고
+        시간이 지나고 나면 나는
+        어쩔 수 없을 걸 문득 너의 사진 보겠지
+        새로 사귄 친구 함께
+        웃음 띤 네 얼굴 보면
+        말할 수 없을 묘한 감정들이
+        힘들단 걸 알지만
+        그대 먼저 헤어지자 말해요
+        나는 사실 그대에게 좋은 사람이 아녜요
+        그대 이제 날 떠난다 말해요
+        잠시라도 이 행복을 느껴서 고마웠다고
+        한 번은 널 볼 수 있을까
+        이기적인 거 나도 잘 알아
+        그땐 그럴 수밖에 없던
+        어린 내게 한 번만 더 기회를 주길
+        그댈 정말 사랑했다 말해요
+        나는 사실 그대에게
+        좋은 사람이 되고 싶었어
+        영영 다신 못 본다 해도
+        그댈 위한 이 노래가
+        당신을 영원히 사랑할 테니', 39);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('Boom Boom Bass', 'Peter Wallevik, Daniel Davidsen, Ben Samama, David Arkwright',
+        '길정진 (Jamfactory), 차메인 (ChaMane)', '/upload/song/Boom Boom Bass.mp4', 'Dance', true,
+        '/upload/song/Boom Boom Bass.mp3', '2024-06-17', 40,
+        'My baby like to string me on
+        좀 더 내게 다가와
+        네게 맞춰 온 My bass
+        살짝 너의 맘을 Slide
+
+        그냥 놓치긴 아쉬워 난
+        넌 어떻게 생각해
+        자 Follow me now
+        이 리듬이 다시 Make me spin
+
+        We makin’ music
+        Every day we play
+        가볍게 Groovin’
+        느낀 대로 해
+        Don’t stop the music
+        Hands up on my bass
+        지금부터 Lower lower lower
+        We want that
+
+        Boom ba doom
+        boom boom bass
+        That boom ba doom
+        boom boom bass
+        We got that
+        boom ba doom on my bass
+        우린 좀 더 Lower lower lower
+        We want that
+
+        박자에 맞춰
+        Up down 줄을 감싸
+        밀고 당겨
+        Doom slap let’s countdown
+        음은 자꾸만 Flat
+        괜찮아 뭐 어때
+        우리 사이
+        Keep going make a bassline
+        너도 왠지 템포가 빨라
+        따라와 둘만의 Timeline
+        Hands in the sky yeah
+        you know what I like
+
+        We makin’ music
+        Every day we play
+        가볍게 Groovin’
+        느낀 대로 해
+        Don’t stop the music
+        Hands up on my bass
+        지금부터 Lower lower lower
+        We want that
+
+        Boom ba doom
+        boom boom bass
+        That boom ba doom
+        boom boom bass
+        We got that
+        boom ba doom on my bass
+        우린 좀 더 Lower lower lower
+        We want that
+
+        We makin’ music
+        Every day we play
+        가볍게 Groovin’
+        느낀 대로 해
+        Don’t stop the music
+        Hands up on my bass
+        지금부터 Lower lower lower
+        We want that
+
+        Aye alright
+        나의 손을 잡고 떠올라
+        Aye alright
+        너와 내가 자꾸 떠올라
+        Aye alright
+        우린 계속 같이 떠올라
+        지금부터 Lower lower lower
+        We want that
+
+        Boom ba doom
+        boom boom bass', 40);
+
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('주저하는 연인들을 위해', '잔나비 최정훈, 김도형, 유영현', '잔나비 최정훈', '/upload/song/주저하는연인들을위해.mp4', 'Indie', true,
+        '/upload/song/주저하는연인들을위해.mp3', '2019-03-13', 41, '나는 읽기 쉬운 마음이야
+당신도 스윽 훑고 가셔요
+달랠 길 없는 외로운 마음 있지
+머물다 가셔요 음
+내게 긴 여운을 남겨줘요
+사랑을 사랑을 해줘요
+할 수 있다면 그럴 수만 있다면
+새하얀 빛으로 그댈 비춰 줄게요
+그러다 밤이 찾아오면
+우리 둘만의 비밀을 새겨요
+추억할 그 밤 위에 갈피를 꽂고 선
+남몰래 펼쳐보아요
+나의 자라나는 마음을
+못 본채 꺾어 버릴 수는 없네
+미련 남길바엔 그리워 아픈 게 나아
+서둘러 안겨본 그 품은 따스할 테니
+그러다 밤이 찾아오면
+우리 둘만의 비밀을 새겨요
+추억할 그 밤 위에 갈피를 꽂고 선
+남몰래 펼쳐보아요
+언젠가 또 그날이 온대도
+우린 서둘러 뒤돌지 말아요
+마주보던 그대로 뒷걸음치면서
+서로의 안녕을 보아요
+피고 지는 마음을 알아요 다시 돌아온 계절도
+난 한 동안 새 활짝 피었다 질래 또 한번 영원히
+그럼에도 내 사랑은 또 같은 꿈을 꾸고
+그럼에도 꾸던 꿈을 미루진 않을래
+', 41);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('그게 아니고', '10cm', '10cm', null, 'Indie', true, '/upload/song/그게아니고.mp3', '2011-02-10', 42, '어두운 밤 골목길을 혼자 털레털레 오르다
+지나가는 네 생각에 내가 눈물이 난 게 아니고
+이부자리를 치우다 너의 양말 한 짝이 나와서
+갈아 신던 그 모습이
+내가 그리워져 운 게 아니고
+보일러가 고장 나서 울지
+책상서랍을 비우다 니가 먹던 감기약을 보곤
+환절기마다 아프던 니가 걱정돼서 운 게 아니고
+선물 받았던 목도리 말라빠진 어깨에 두르고
+늦은 밤 내내 못 자고
+술이나 마시며 운 게 아니고
+보일러가 고장 나서 울지
+어두운 밤 골목길을 혼자 털레털레 오르다
+지나가는 네 생각에 우네
+', 42);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('연애 같은 걸 하니까', '고영배', '고영배', '/upload/song/연애_같은_걸_하니까.mp4', 'Indie', true, '/upload/song/연애_같은_걸_하니까.mp3',
+        '2017-11-22', 43, '그러게 연애 같은 걸 하니까
+이렇게 힘들 줄 몰랐으니까
+나 지금 되게 슬프고 뻔해
+그것 봐 내 주제에
+사랑은 무슨 사랑
+사랑 같은 소리들 하네
+나한텐 어렵기만 하던데
+TV 속에 다 가진 주인공
+로맨스는 누가 못해
+오늘 밤은 길기도 하네
+그때는 그렇게도 짧더니
+이 좋은 밤 혼자서 외롭게
+너 때문에 이게 다 뭐야
+그러게 연애 같은 걸 하니까
+이렇게 힘들 줄 몰랐으니까
+나 지금 되게 불쌍해
+너의 사진을 몇백 장째 보다가
+괜히 또 그립기만 하다니까
+억지로 맘을 멈출 순 없을까
+뒤척여봐도 똑같은 생각 그것 봐 내 주제에
+사랑은 무슨 사랑
+이해 못하고
+흘려들었던 노래들이
+못 듣겠잖아
+눈물이 나서
+이런 거 진짜 싫어했었는데
+그러게 연애 같은 걸 하니까
+나는 또 바보처럼 굴 테니까
+나 지금 되게 불쌍해
+혹시 이런 날 네가 알아 주지는
+않을까 기대하고 있다니까
+우연히 마주치면 어떡할까
+노력해봐도 똑같은 생각 그것 봐 내 주제에
+사랑은 무슨 사랑
+내 주제에
+연애는 무슨 연애
+', 43);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('나랑 아니면', '검정치마', '검정치마', '/upload/song/나랑아니면.mp4', 'Indie', true, '/upload/song/나랑아니면.mp3', '2017-05-30', 44, '야 나랑 놀자 밤늦게까지 함께 손뼉 치면서
+나랑 마셔 너와 나의 몸이 녹아 내리면
+나랑 걷자 저 멀리까지가다 지쳐 누우면
+나랑 자자 두 눈 꼭 감고 나랑 입 맞추자
+나랑 아니면 누구랑 사랑 할 수 있겠니
+나랑 아니면 어디에 자랑 할 수 있겠니
+나랑 아니면
+야 나랑 놀자 어디 가지 말고
+그리울 틈 없도록
+나랑 살자 아주 오랫동안
+우리 같이 살자
+나랑 아니면 누구랑 사랑 할 수 있겠니
+나랑 아니면 어디에 자랑 할 수 있겠니
+나랑 아니면
+아무렇지 않게 넌 내게 말했지
+날 위해 죽을 수도, 죽일 수도 있다고
+알아, 나도 언제나 같은 마음이야 baby
+아마도 우린 오래 아주 오래 함께할 거야
+', 44);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id)
+VALUES ('들었다 놨다', '데이브레이크', '데이브레이크', null, 'Indie', true, '/upload/song/들었다놨다.mp3', '2010-08-05', 45, '처음 너를 본순간 정신 차릴수없어
+내 마음을 들킬까봐 조심조심해
+어떡하면 네 맘을 답답해진 내 맘을
+쫄깃해진 심장이 나 어쩌면 좋아
+가까워졌다 점점 멀어져가는 이상해
+울다가 웃다 나 좀 내버려둬요 언제나
+이랬따 저랬다 헷갈려 그녀는
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다 hey
+다시 너를 본순간 차갑게 대해보려
+애써 관심 없는 듯이 외면 했지만
+너의 눈빛 하나에 너의 손짓 하나에
+바짝바짝 말라버려 나의 입술은
+멀어져갔다 다시 다가와주는 오늘도
+울다가 웃다 점점 짜증이나요 언제나
+이랬다 저랬다 헷갈려 그녀는
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다 hey
+들어다 놨다 들었다 놨다 들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+오 어떡하면 그녀를 내 맘속에
+가둬둘 수 있을까 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+내 맘을 들어다 놨다 들었다 놨다
+들었다 놨다 hey
+들었다 놨다 들었다 놨다 hey
+', 45);
+
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/song/헤어지자 말해요.mp4', 'Ballad', true, '/upload/song/헤어지자 말해요.mp3', '2023-04-20', 39,
-'헤어지자고 말하려 오늘
-너에게 가다가 우리 추억 생각해 봤어
-처음 본 네 얼굴
-마주친 눈동자
-가까스로 본 너의 그 미소들
-손을 잡고 늘 걷던 거리에
-첫눈을 보다가 문득 고백했던 그 순간
-가보고 싶었던 식당
-난생처음 준비한 선물
-고맙다는 너의 그 눈물들이
-바뀔까 봐 두려워
-그대 먼저 헤어지자 말해요
-나는 사실 그대에게 좋은 사람이 아녜요
-그대 이제 날 떠난다 말해요
-잠시라도 이 행복을 느껴서 고마웠다고
-시간이 지나고 나면 나는
-어쩔 수 없을 걸 문득 너의 사진 보겠지
-새로 사귄 친구 함께
-웃음 띤 네 얼굴 보면
-말할 수 없을 묘한 감정들이
-힘들단 걸 알지만
-그대 먼저 헤어지자 말해요
-나는 사실 그대에게 좋은 사람이 아녜요
-그대 이제 날 떠난다 말해요
-잠시라도 이 행복을 느껴서 고마웠다고
-한 번은 널 볼 수 있을까
-이기적인 거 나도 잘 알아
-그땐 그럴 수밖에 없던
-어린 내게 한 번만 더 기회를 주길
-그댈 정말 사랑했다 말해요
-나는 사실 그대에게
-좋은 사람이 되고 싶었어
-영영 다신 못 본다 해도
-그댈 위한 이 노래가
-당신을 영원히 사랑할 테니', 39
-);
+VALUES ('도망가자', '선우정아', '선우정아, 곽은정', '/upload/song/도망가자.mp4', 'Indie', true, '/upload/song/도망가자.mp3', '2019-12-12', 46, '도망가자
+어디든 가야 할 것만 같아
+넌 금방이라도 울 것 같아
+괜찮아
 
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,lyrics, artist_id)
-VALUES('Boom Boom Bass', 'Peter Wallevik, Daniel Davidsen, Ben Samama, David Arkwright', '길정진 (Jamfactory), 차메인 (ChaMane)', '/upload/song/Boom Boom Bass.mp4', 'Dance', true, '/upload/song/Boom Boom Bass.mp3','2024-06-17', 40,
-'My baby like to string me on
-좀 더 내게 다가와
-네게 맞춰 온 My bass
-살짝 너의 맘을 Slide
+우리 가자
+걱정은 잠시 내려놓고
+대신 가볍게 짐을 챙기자
+실컷 웃고 다시 돌아오자
+거기서는 우리 아무 생각말자
 
-그냥 놓치긴 아쉬워 난
-넌 어떻게 생각해
-자 Follow me now
-이 리듬이 다시 Make me spin
+너랑 있을게 이렇게
+손 내밀면 내가 잡을게
+있을까, 두려울 게
+어디를 간다 해도
+우린 서로를 꼭 붙잡고 있으니
 
-We makin’ music
-Every day we play
-가볍게 Groovin’
-느낀 대로 해
-Don’t stop the music
-Hands up on my bass
-지금부터 Lower lower lower
-We want that
+너라서 나는 충분해
+나를 봐 눈 맞춰줄래
+너의 얼굴 위에 빛이 스며들 때까지
+가보자 지금 나랑
 
-Boom ba doom
-boom boom bass
-That boom ba doom
-boom boom bass
-We got that
-boom ba doom on my bass
-우린 좀 더 Lower lower lower
-We want that
+도망가자
+멀리 안 가도 괜찮을 거야
+너와 함께라면 난 다 좋아
+너의 맘이 편할 수 있는 곳
+그게 어디든지 얘기 해줘
 
-박자에 맞춰
-Up down 줄을 감싸
-밀고 당겨
-Doom slap let’s countdown
-음은 자꾸만 Flat
-괜찮아 뭐 어때
-우리 사이
-Keep going make a bassline
-너도 왠지 템포가 빨라
-따라와 둘만의 Timeline
-Hands in the sky yeah
-you know what I like
+너랑 있을게 이렇게
+손 내밀면 내가 잡을게
+있을까, 두려울 게
+어디를 간다 해도
+우린 서로를 꼭 붙잡고 있으니
 
-We makin’ music
-Every day we play
-가볍게 Groovin’
-느낀 대로 해
-Don’t stop the music
-Hands up on my bass
-지금부터 Lower lower lower
-We want that
+가보는 거야 달려도 볼까
+어디로든 어떻게든
+내가 옆에 있을게 마음껏 울어도 돼
+그 다음에
 
-Boom ba doom
-boom boom bass
-That boom ba doom
-boom boom bass
-We got that
-boom ba doom on my bass
-우린 좀 더 Lower lower lower
-We want that
+돌아오자 씩씩하게
+지쳐도 돼 내가 안아줄게
+괜찮아 좀 느려도 천천히 걸어도
+나만은 너랑 갈 거야 어디든
 
-We makin’ music
-Every day we play
-가볍게 Groovin’
-느낀 대로 해
-Don’t stop the music
-Hands up on my bass
-지금부터 Lower lower lower
-We want that
+당연해 가자 손잡고
+사랑해 눈 맞춰줄래
+너의 얼굴 위에 빛이 스며들 때까지
+가보자 지금 나랑
 
-Aye alright
-나의 손을 잡고 떠올라
-Aye alright
-너와 내가 자꾸 떠올라
-Aye alright
-우린 계속 같이 떠올라
-지금부터 Lower lower lower
-We want that
+도망가자
+', 46);
 
-Boom ba doom
-boom boom bass', 40
-);
+-- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+--                      lyrics, artist_id)
+-- VALUES (47, , 47);
+-- --
+-- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+-- --                      lyrics, artist_id)
+-- -- VALUES (48, , 48);
+-- --
+-- --
+-- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+-- --                      lyrics, artist_id)
+-- -- VALUES (49, , 49);
+-- --
+-- -- INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+-- --                      lyrics, artist_id)
+-- -- VALUES (50, , 50);
 
 --  테이블 : playlist
 
@@ -4997,3 +5326,366 @@ insert into playlist_song_tb (playlist_id, song_id)
 values (13, 10);
 insert into playlist_song_tb (playlist_id, song_id)
 values (13, 11);
+
+
+--  히스토리 테이블
+
+insert into history_tb(user_id, song_id, created_at)
+values (1, 1, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 2, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 3, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 4, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 5, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 6, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 7, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 8, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 9, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 10, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 11, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 12, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 13, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 14, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 15, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 16, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 17, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 18, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 19, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 20, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 21, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 22, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 23, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 24, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 25, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 2, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 4, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 6, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 8, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 10, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 12, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 14, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 16, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 18, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 20, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 22, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 24, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 26, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (1, 28, '2024-06-21');
+
+
+insert into history_tb(user_id, song_id, created_at)
+values (2, 25, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 26, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 27, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 28, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 29, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 30, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 31, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 32, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 33, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 25, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 34, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 35, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 36, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 37, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 38, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 39, '2024-06-20');
+insert into history_tb(user_id, song_id, created_at)
+values (2, 40, '2024-06-20');
+
+insert into history_tb(user_id, song_id, created_at)
+values (3, 1, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 3, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 5, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 7, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 9, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 10, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 12, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 14, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 16, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 18, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 20, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 22, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 24, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 26, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 28, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (3, 30, '2024-06-22');
+
+insert into history_tb(user_id, song_id, created_at)
+values (4, 40, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 39, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 38, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 37, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 36, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 35, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 34, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 33, '2024-06-21');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 32, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 31, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 30, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 29, '2024-06-22');
+insert into history_tb(user_id, song_id, created_at)
+values (4, 28, '2024-06-22');
+
+
+-- 좋아요 테이블
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 1, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 3, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 5, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 7, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 8, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 9, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 10, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 11, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 13, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 15, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 17, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 19, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 20, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 22, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 24, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 26, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 28, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 30, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 31, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, 32, null, null, '2024-06-20');
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 2, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 3, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 4, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 5, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 6, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 7, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 8, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 9, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 10, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, 11, null, '2024-06-21');
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 30, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 31, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 32, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 33, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 34, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 35, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 36, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 37, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 38, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 39, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (1, null, null, 40, '2024-06-22');
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 20, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 21, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 22, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 23, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 24, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 25, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 26, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 27, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 28, null, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, 29, null, null, '2024-06-20');
+
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 4, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 5, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 6, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 7, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 8, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 9, null, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 10, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 11, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 12, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, 13, null, '2024-06-21');
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, null, 31, '2024-06-20');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, null, 33, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, null, 35, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, null, 37, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (2, null, null, 39, '2024-06-21');
+
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, 10, null, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, 12, null, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, 14, null, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, 16, null, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, 18, null, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, 20, null, null, '2024-06-21');
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, 5, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, 6, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, 7, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, 8, null, '2024-06-21');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, 9, null, '2024-06-22');
+
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 23, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 24, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 25, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 26, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 27, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 28, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 29, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 30, '2024-06-22');
+insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
+values (3, null, null, 31, '2024-06-22');

@@ -3,6 +3,7 @@ package org.example.projectspringfalling.RestAPI;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
+import org.example.projectspringfalling.playlist.PlaylistResponse;
 import org.example.projectspringfalling.playlist.PlaylistService;
 import org.example.projectspringfalling.playlistSong.PlaylistSongRequest;
 import org.example.projectspringfalling.playlistSong.PlaylistSongService;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -40,9 +42,17 @@ public class RestController {
         return new ApiUtil<>(playlistService.getMyList(sessionUser.getId()));
     }
 
+
     // 플레이리스트 곡 추가하기
     @PostMapping("/add-song")
     public ResponseEntity<?> addSongToPlaylist(PlaylistSongRequest.AddSongToPlaylist requestDTO) {
         return playlistSongService.addSongToPlaylist(requestDTO);
     }
+
+    // 재생중인 플레이리스트 데이터 요청
+    @GetMapping("/api/playlists/current")
+    public List<RestResponse.PlaylistDTO> getCurrentPlaylist() {
+        return new ArrayList<>(playlistService.musicTest());
+    }
+
 }
