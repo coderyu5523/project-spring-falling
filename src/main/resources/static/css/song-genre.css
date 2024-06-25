@@ -26,7 +26,7 @@
     height: 180px;
 }
 
-.genre-list p{
+.genre-list p {
     margin-top: 10px;
 }
 
@@ -34,6 +34,9 @@
     border-radius: 10px;
     height: 80%;
     object-fit: cover;
+    display: block;
+    vertical-align: bottom
+
 }
 
 .genre div {
