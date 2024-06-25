@@ -85,6 +85,8 @@
         let currentModeIndex = 0; // 초기 모드는 normal
         let currentLyrics = [];
         let lyricsIndex = 0;
+        let listenCount = 0;
+        let isOneMinutePassed = false;
 
         // 플레이리스트 데이터 불러옴
         $.getJSON('/api/playlists/current', function (data) {
@@ -139,6 +141,13 @@
             // currentTimeSpan에 현재 재생 시간을 포맷, 텍스트로 출력
             currentTimeSpan.text(formatTime(audioPlayer.currentTime));
             updateCurrentLyrics(audioPlayer.currentTime);
+
+            // 1분 이상 재생되었는지 확인
+            if (!isOneMinutePassed && audioPlayer.currentTime >= 60) {
+                isOneMinutePassed = true;
+                listenCount++;
+                console.log('Listen count incremented:', listenCount); // listenCount 증가 확인용 콘솔 로그
+            }
         }
 
         // 현재 시간에 맞는 가사 표시 함수
@@ -282,6 +291,7 @@
         // 초기 모드 설정
         updatePlayMode();
     });
+</script>
 
 
 

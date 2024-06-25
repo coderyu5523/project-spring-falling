@@ -221,4 +221,23 @@ public class UserService {
     public Optional<UserSubscription> getActiveUserSubscription(Integer userId) {
         return userSubscriptionRepository.findByUserIdAndStatus(userId, "ACTIVE");
     }
+
+    // 현재 비밀번호 일치 확인
+    public boolean passwordCheck(String email, String inputPassword) {
+        System.out.println("999999999999999999999999");
+        System.out.println(email);
+        User user = userRepository.findByEmail(email);
+        System.out.println("101010101010101010");
+        if (user == null) {
+            System.out.println("1212121212121212212");
+            System.out.println("User not found for email: " + email);
+            return false; // 사용자 존재하지 않음
+        }
+        System.out.println("User found: " + user.getEmail());
+        System.out.println("Stored password: " + user.getPassword());
+        System.out.println("Input password: " + inputPassword);
+        boolean isMatch = inputPassword.equals(user.getPassword()); // 입력된 비밀번호와 저장된 비밀번호 비교
+        System.out.println("Password match result: " + isMatch);
+        return isMatch;
+    }
 }
