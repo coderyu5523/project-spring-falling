@@ -4633,7 +4633,7 @@ VALUES ('SHEESH', 'CHOICE37, LP, YG, Sonny, LIL G, 최현석, Sandra Wikström',
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics, artist_id,listen_count)
-VALUES ('천상연', '유해준', '유해준', null, 'Ballad', true, '/upload/song/천상연.mp3', '2024-02-21', 36,
+VALUES ('천상연', '유해준', '유해준', null, 'Ballad', true, '/upload/song/천상연-이창섭.mp3', '2024-02-21', 36,
         '아니길 바랬었어
         꿈이길 기도했지
         너 없는 가슴으로 살아가야 하는 건

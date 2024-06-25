@@ -41,7 +41,7 @@ public class RestResponse {
     }
 
 
-    // 재생중인 플레이리스트 테스트용
+    // 재생중인 플레이리스트
     @Data
     public static class PlaylistDTO {
         private String songTitle;
@@ -58,15 +58,16 @@ public class RestResponse {
             this.lyrics = lyrics;
         }
 
-        @Data
-        public static class LyricLineDTO {
-            private int time;
-            private String text;
+    }
+    // 가사 파싱
+    @Data
+    public static class LyricLineDTO {
+        private int time;
+        private String text;
 
-            public LyricLineDTO(int time, String text) {
-                this.time = time;
-                this.text = text;
-            }
+        public LyricLineDTO(int time, String text) {
+            this.time = time;
+            this.text = text;
         }
     }
 

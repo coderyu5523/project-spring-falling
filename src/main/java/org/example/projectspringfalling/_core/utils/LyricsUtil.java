@@ -7,15 +7,15 @@ import java.util.List;
 
 public class LyricsUtil {
 
-    public static List<RestResponse.PlaylistDTO.LyricLineDTO> parseLyrics(String lyricsText) {
-        List<RestResponse.PlaylistDTO.LyricLineDTO> lyrics = new ArrayList<>();
+    public static List<RestResponse.LyricLineDTO> parseLyrics(String lyricsText) {
+        List<RestResponse.LyricLineDTO> lyrics = new ArrayList<>();
         String[] lines = lyricsText.split("\n");
 
         for (String line : lines) {
             String[] parts = line.split(" ", 2);
             int time = parseTime(parts[0]);
             String text = parts.length > 1 ? parts[1] : "";
-            lyrics.add(new RestResponse.PlaylistDTO.LyricLineDTO(time, text));
+            lyrics.add(new RestResponse.LyricLineDTO(time, text));
         }
 
         return lyrics;

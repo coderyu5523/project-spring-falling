@@ -86,7 +86,7 @@
         let currentLyrics = [];
         let lyricsIndex = 0;
 
-        // Fetch the playlist data from the server
+        // 플레이리스트 데이터 불러옴
         $.getJSON('/api/playlists/current', function (data) {
             songs = data;
             renderPlaylist();
