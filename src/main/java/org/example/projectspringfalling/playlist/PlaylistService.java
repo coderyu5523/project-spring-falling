@@ -33,6 +33,9 @@ public class PlaylistService {
 
     // 재생중인 플레이리스트 테스트용
     public List<RestResponse.PlaylistDTO> musicTest() {
+        List<RestResponse.PlaylistDTO> playlist = new ArrayList<>();
+
+
         String lyricsText = "00:00 One! Two! Q! W! E! R!\n" +
                 "00:03 간주중\n"+
                 "00:14 어떤 인사가 괜찮을까\n" +
@@ -73,10 +76,10 @@ public class PlaylistService {
 
         List<RestResponse.PlaylistDTO.LyricLineDTO> lyrics = LyricsUtil.parseLyrics(lyricsText);
 
-        RestResponse.PlaylistDTO playlistDTO = new RestResponse.PlaylistDTO("고민중독", "QWER", "/upload/song/고민중독.mp3", "/upload/album/고민중독.jpg", lyrics);
+        playlist.add(new RestResponse.PlaylistDTO("고민중독", "QWER", "/upload/song/고민중독.mp3", "/upload/album/고민중독.jpg", lyrics)) ;
+        playlist.add(new RestResponse.PlaylistDTO("전부 너였다", "노을", "/upload/song/전부너였다.mp3", "/upload/album/전부너였다.jpg", null)) ;
+        playlist.add(new RestResponse.PlaylistDTO("헤어지자 말해요", "박재정", "/upload/song/헤어지자말해요.mp3", "/upload/album/Alone.jpg", null)) ;
 
-        List<RestResponse.PlaylistDTO> playlist = new ArrayList<>();
-        playlist.add(playlistDTO);
 
         return playlist;
     }

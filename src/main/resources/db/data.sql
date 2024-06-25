@@ -4773,7 +4773,7 @@ VALUES ('비의 랩소디', '주영훈', '주영훈, 이세준', null, 'Ballad',
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics, artist_id,listen_count)
-VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/song/헤어지자 말해요.mp4', 'Ballad', true, '/upload/song/헤어지자 말해요.mp3',
+VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/song/헤어지자말해요.mp4', 'Ballad', true, '/upload/song/헤어지자말해요.mp3',
         '2023-04-20', 39,
         '헤어지자고 말하려 오늘
         너에게 가다가 우리 추억 생각해 봤어
