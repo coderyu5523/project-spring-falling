@@ -26,6 +26,27 @@ public class UserService {
     private final UserRepository userRepository;
     private final UserSubscriptionRepository userSubscriptionRepository;
 
+    // 로그아웃
+    @Transactional
+    public void logoutKakao(SessionUser sessionUser) {
+        // RestTemplate 설정
+        RestTemplate rt = new RestTemplate();
+
+        // http header 설정
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
+        headers.add("Authorization", "Bearer " + sessionUser.getAccessToken());
+
+        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(headers);
+
+        // api 요청하기
+        rt.exchange(
+                "https://kapi.kakao.com/v1/user/logout",
+                HttpMethod.POST,
+                request,
+                Long.class);
+    }
+
     // 회원가입
     @Transactional
     public UserResponse.JoinDTO join(UserRequest.JoinDTO reqDTO) {
@@ -95,7 +116,7 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return new SessionUser(userPS);
+            return new SessionUser(userPS, response.getBody().getAccessToken());
         } else {
             // 강제 회원가입
             User user = User.builder()
@@ -104,7 +125,7 @@ public class UserService {
                     .provider("Kakao")
                     .build();
             User returnUser = userRepository.save(user);
-            return new SessionUser(returnUser);
+            return new SessionUser(returnUser, response.getBody().getAccessToken());
         }
     }
 
@@ -163,7 +184,7 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return new SessionUser(userPS);
+            return new SessionUser(userPS, response.getBody().getAccessToken());
         } else {
             User user = User.builder()
                     .email(email)
@@ -173,7 +194,7 @@ public class UserService {
                     .provider("Naver")
                     .build();
             User returnUser = userRepository.save(user);
-            return new SessionUser(returnUser);
+            return new SessionUser(returnUser, response.getBody().getAccessToken());
         }
     }
 

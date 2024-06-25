@@ -20,6 +20,23 @@ public class UserController {
     private final HttpSession session;
     private final RedisTemplate<String, Object> rt;
 
+    // 로그아웃
+    @PostMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
+        switch (sessionUser.getProvider()) {
+            case "Kakao":
+                userService.logoutKakao(sessionUser);
+                break;
+//            case "Naver":
+//                userService.logoutNaver();
+//                break;
+            default:
+                session.invalidate();
+                break;
+        }
+        return "redirect:/";
+    }
 
     // 회원가입 선택 페이지
     @GetMapping("/join-section")
@@ -96,5 +113,4 @@ public class UserController {
         return "user/profile-password";
 //        return "user/profile-phone";
     }
-
 }
