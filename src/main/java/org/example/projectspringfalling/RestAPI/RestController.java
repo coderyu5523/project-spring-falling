@@ -1,6 +1,5 @@
 package org.example.projectspringfalling.RestAPI;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
@@ -42,7 +41,7 @@ public class RestController {
     // 플레이리스트 모달
     @GetMapping("/storage/my-list")
     public ApiUtil<List<RestResponse.StoragePlaylist>> storageMyList() {
-        UserResponse.LoginDTO sessionUser = (UserResponse.LoginDTO) rt.opsForValue().get("sessionUser");
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         return new ApiUtil<>(playlistService.getMyList(sessionUser.getId()));
     }
 

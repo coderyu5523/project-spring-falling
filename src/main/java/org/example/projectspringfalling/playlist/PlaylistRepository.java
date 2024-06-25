@@ -13,11 +13,11 @@ public interface PlaylistRepository extends JpaRepository<Playlist, Integer> {
     // 플레이리스트 모달
     @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$StoragePlaylist(p.id, p.name, MIN(a.albumImg), COUNT(ps), p.createdAt) " +
             "FROM Playlist p " +
-            "JOIN p.playlistSong ps " +
-            "JOIN ps.song s " +
-            "JOIN s.album a " +
+            "LEFT JOIN p.playlistSong ps " +
+            "LEFT JOIN ps.song s " +
+            "LEFT JOIN s.album a " +
             "WHERE p.user.id = :userId " +
-            "GROUP BY p.id, p.name, p.createdAt")
+            "GROUP BY p.id, p.name, p.createdAt ORDER BY p.createdAt DESC")
     List<RestResponse.StoragePlaylist> findAllPlaylistById(Integer userId);
 
     // 메인 (최신 플레이리스트 찾기)
