@@ -235,7 +235,7 @@ public class UserService {
         if(phone == null){
             user.update(user.getPhone(),password);
         }else if(password == null){
-            user.update(phone,user.getPhone());
+            user.update(phone,user.getPassword());
         }
         return new UserResponse.UpdateDTO(user) ;
     }

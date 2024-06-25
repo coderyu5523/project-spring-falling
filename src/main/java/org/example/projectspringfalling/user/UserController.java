@@ -3,7 +3,6 @@ package org.example.projectspringfalling.user;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.example.projectspringfalling._core.utils.ApiUtil;
 import org.example.projectspringfalling.userSubscription.UserSubscription;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -105,11 +104,10 @@ public class UserController {
         String subscriptionName = userSubscriptionOpt.map(us -> us.getSubscription().getName())
                 .orElse("사용중인 이용권이 없습니다.");
 
-        UserRequest.ProfileDTO profile = new UserRequest.ProfileDTO(provider, email, subscriptionName);
+        UserRequest.ProfileDTO profile = new UserRequest.ProfileDTO(provider, email, subscriptionName,sessionUser.getPhone());
         request.setAttribute("profile", profile);
 
-        return "user/profile-password";
-//        return "user/profile-phone";
+        return "user/profile";
     }
 
 
@@ -118,6 +116,6 @@ public class UserController {
     public String update(String password, String phone) {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         UserResponse.UpdateDTO responseDTO = userService.update(sessionUser, password,phone);
-        return "user/profile-password";
+        return "user/profile";
     }
 }
