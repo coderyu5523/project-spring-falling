@@ -21,20 +21,20 @@ public class UserController {
     private final RedisTemplate<String, Object> rt;
 
     // 로그아웃
-    @PostMapping("/logout")
+    @GetMapping("/logout")
     public String logout(HttpServletRequest request) {
         SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
         switch (sessionUser.getProvider()) {
             case "Kakao":
-                userService.logoutKakao(sessionUser);
+                userService.logoutKakao(sessionUser, request);
                 break;
 //            case "Naver":
 //                userService.logoutNaver();
 //                break;
             default:
-                session.invalidate();
                 break;
         }
+        request.removeAttribute("sessionUser"); // request에서 sessionUser 제거
         return "redirect:/";
     }
 

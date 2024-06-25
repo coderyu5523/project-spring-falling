@@ -1,9 +1,12 @@
 package org.example.projectspringfalling.user;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.userSubscription.UserSubscription;
 import org.example.projectspringfalling.userSubscription.UserSubscriptionRepository;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -25,10 +28,11 @@ import static org.example.projectspringfalling._core.utils.DateUtil.formatYear;
 public class UserService {
     private final UserRepository userRepository;
     private final UserSubscriptionRepository userSubscriptionRepository;
+    private final RedisTemplate<String, Object> redisTemplate;
 
-    // 로그아웃
+    // 카카오 로그아웃
     @Transactional
-    public void logoutKakao(SessionUser sessionUser) {
+    public void logoutKakao(SessionUser sessionUser, HttpServletRequest request) {
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
 
@@ -37,14 +41,21 @@ public class UserService {
         headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
         headers.add("Authorization", "Bearer " + sessionUser.getAccessToken());
 
-        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(headers);
+        HttpEntity<MultiValueMap<String, String>> req = new HttpEntity<>(headers);
 
         // api 요청하기
-        rt.exchange(
-                "https://kapi.kakao.com/v1/user/logout",
+        ResponseEntity<String> response = rt.exchange(
+                "https://kapi.kakao.com/v1/user/unlink",
                 HttpMethod.POST,
-                request,
-                Long.class);
+                req,
+                String.class);
+
+        // Redis에서 세션 유저 정보 삭제
+        HttpSession session = request.getSession();
+        String redisKey = "sessionUser:" + session.getId();
+        redisTemplate.delete(redisKey);
+
+        System.out.println("로그아웃 성공");
     }
 
     // 회원가입
