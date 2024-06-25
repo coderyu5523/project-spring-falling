@@ -2,6 +2,7 @@ package org.example.projectspringfalling.RestAPI;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.example.projectspringfalling.playlist.Playlist;
 import org.example.projectspringfalling.song.Song;
 
 import java.sql.Timestamp;
@@ -49,12 +50,24 @@ public class RestResponse {
         private String albumImg;
         private String lyrics;
 
-        public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg,String lyrics) {
+        public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg, String lyrics) {
             this.songTitle = songTitle;
             this.artistName = artistName;
             this.musicFile = musicFile;
             this.albumImg = albumImg;
             this.lyrics = lyrics;
+        }
+    }
+
+    // 플레이리스트 추가하기(모달)
+    @Data
+    public static class AddPlaylistDTO {
+        private Integer playlistId;
+        private String playlistName;
+
+        public AddPlaylistDTO(Playlist playlist) {
+            this.playlistId = playlist.getId();
+            this.playlistName = playlist.getName();
         }
     }
 
