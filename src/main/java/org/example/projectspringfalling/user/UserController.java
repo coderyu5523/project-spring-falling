@@ -7,10 +7,7 @@ import org.example.projectspringfalling._core.utils.ApiUtil;
 import org.example.projectspringfalling.userSubscription.UserSubscription;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
@@ -104,29 +101,23 @@ public class UserController {
     @GetMapping("/api/password-same-check")
     public @ResponseBody ApiUtil<Boolean> passwordSameCheck(@RequestParam String inputPassword, HttpServletRequest request) {
 
-        System.out.println("11111111111111111111111");
         SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
-        System.out.println("sessionUser = " + sessionUser);
-
         try {
-            System.out.println("@2222222222222222");
             if (sessionUser == null) {
-                System.out.println("33333333333333333333");
                 throw new IllegalStateException("로그인이 되지 않았습니다.");
             }
-
-            System.out.println("44444444444444444");
-            String email = sessionUser.getEmail();
-            System.out.println("55555555555555555555");
-            System.out.println("Checking password for email: " + email);
-            boolean isValid = userService.passwordCheck(email, inputPassword);
-            System.out.println("66666666666666666666666");
+            boolean isValid = userService.passwordCheck(sessionUser.getEmail(), inputPassword);
             return new ApiUtil<>(isValid);
         } catch (Exception e) {
-            System.out.println("7777777777777777777777777777777");
             e.printStackTrace();
-            System.out.println("8888888888888888888888");
             return new ApiUtil<>(false);
         }
+    }
+
+    @PutMapping("/users")
+    public String update(String password, String phone, HttpServletRequest request) {
+        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
+        UserResponse.UpdateDTO responseDTO = userService.update(sessionUser, password,phone);
+        return "user/profile";
     }
 }
