@@ -5,6 +5,7 @@ import lombok.Data;
 import org.example.projectspringfalling.song.Song;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 import static org.example.projectspringfalling._core.utils.DateUtil.timestampToString;
 
@@ -40,21 +41,33 @@ public class RestResponse {
     }
 
 
-    // 재생중인 플레이리스트 테스트용
+    // 재생중인 플레이리스트
     @Data
     public static class PlaylistDTO {
         private String songTitle;
         private String artistName;
         private String musicFile;
         private String albumImg;
-        private String lyrics;
+        private List<LyricLineDTO> lyrics;
 
-        public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg,String lyrics) {
+        public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg, List<LyricLineDTO> lyrics) {
             this.songTitle = songTitle;
             this.artistName = artistName;
             this.musicFile = musicFile;
             this.albumImg = albumImg;
             this.lyrics = lyrics;
+        }
+
+    }
+    // 가사 파싱
+    @Data
+    public static class LyricLineDTO {
+        private int time;
+        private String text;
+
+        public LyricLineDTO(int time, String text) {
+            this.time = time;
+            this.text = text;
         }
     }
 
