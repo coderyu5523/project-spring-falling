@@ -93,7 +93,7 @@ $(document).ready(function () {
                 data.body.forEach(function (item) {
                     let listItem = `
                             <li class="modal-list-item">
-                                <img class="my-playlist-img" src="${item.albumImg}" alt="default" width="50" height="50">
+                                <img class="my-playlist-img" onerror="this.src='/images/logo_2.png'" src="${item.albumImg}" alt="default" width="50" height="50">
                                 <div>
                                     <div>${item.playlistName}</div>
                                     <div>${item.playlistSongCount}곡</div>
