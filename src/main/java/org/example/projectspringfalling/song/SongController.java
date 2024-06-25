@@ -3,6 +3,7 @@ package org.example.projectspringfalling.song;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class SongController {
     private final SongService songService;
     private final HttpSession session;
+    private final RedisTemplate<String, Object> rt;
 
     // 곡 상세보기
     @GetMapping("/songs/{songId}")
@@ -26,6 +28,7 @@ public class SongController {
     @GetMapping("/")
     public String index(HttpServletRequest request) {
         SongResponse.MainDTO resp = songService.main();
+        System.out.println("확인 : " + session.getAttribute("sessionUser"));
         request.setAttribute("main", resp);
         return "index";
     }

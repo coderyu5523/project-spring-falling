@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 
 @RequiredArgsConstructor
 @Controller
@@ -22,20 +21,19 @@ public class UserController {
 
     // 로그아웃
     @GetMapping("/logout")
-    public String logout(HttpServletRequest request) {
-        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
+    public String logout() {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         switch (sessionUser.getProvider()) {
             case "Kakao":
-                userService.logoutKakao(sessionUser, request);
+                userService.logoutKakao(sessionUser);
                 break;
             case "Naver":
-                userService.logoutNaver(sessionUser, request);
+                userService.logoutNaver(sessionUser);
                 break;
             default:
-                userService.logout(request);
                 break;
         }
-        request.removeAttribute("sessionUser"); // request에서 sessionUser 제거
+        session.invalidate();
         return "redirect:/";
     }
 
@@ -68,9 +66,8 @@ public class UserController {
     @PostMapping("/login")
     public String login(UserRequest.LoginDTO reqDTO, HttpServletRequest request) {
         SessionUser sessionUser = userService.login(reqDTO);
-        HttpSession session = request.getSession();  // 세션 생성
-        String sessionId = session.getId();  // 세션 ID 가져오기
-        rt.opsForValue().set("sessionUser:" + sessionId, sessionUser, 30, TimeUnit.MINUTES); // Redis에 세션 ID를 키로 사용하여 저장
+        rt.opsForValue().set("sessionUser:" + sessionUser.getId(), sessionUser);
+        session.setAttribute("sessionUser", sessionUser);
         return "redirect:/";
     }
 
@@ -78,9 +75,8 @@ public class UserController {
     @GetMapping("/oauth/callback/kakao")
     public String oauthCallbackKakao(String code, HttpServletRequest request) {
         SessionUser sessionUser = userService.kakaoLogin(code);
-        HttpSession session = request.getSession();  // 세션 생성
-        String sessionId = session.getId();  // 세션 ID 가져오기
-        rt.opsForValue().set("sessionUser:" + sessionId, sessionUser, 30, TimeUnit.MINUTES); // Redis에 세션 ID를 키로 사용하여 저장
+        rt.opsForValue().set("sessionUser:" + sessionUser.getId(), sessionUser);
+        session.setAttribute("sessionUser", sessionUser);
         return "redirect:/";
     }
 
@@ -88,9 +84,8 @@ public class UserController {
     @GetMapping("/oauth/callback/naver")
     public String oauthCallbackNaver(String code, HttpServletRequest request) {
         SessionUser sessionUser = userService.naverLogin(code);
-        HttpSession session = request.getSession();  // 현재 request에 대한 세션 생성
-        String sessionId = session.getId();  // 생성된 세션 ID 가져오기
-        rt.opsForValue().set("sessionUser:" + sessionId, sessionUser, 30, TimeUnit.MINUTES); // Redis에 세션 ID를 키로 사용하여 저장
+        rt.opsForValue().set("sessionUser:" + sessionUser.getId(), sessionUser);
+        session.setAttribute("sessionUser", sessionUser);
         return "redirect:/";
     }
 
@@ -98,7 +93,7 @@ public class UserController {
     @GetMapping("/profile")
     public String profile(HttpServletRequest request) {
 
-        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
 
         // 회원 정보 (계정, 이메일, 이용권)
         String provider = sessionUser.getProvider();

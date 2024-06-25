@@ -1,12 +1,9 @@
 package org.example.projectspringfalling.user;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.userSubscription.UserSubscription;
 import org.example.projectspringfalling.userSubscription.UserSubscriptionRepository;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -28,11 +25,10 @@ import static org.example.projectspringfalling._core.utils.DateUtil.formatYear;
 public class UserService {
     private final UserRepository userRepository;
     private final UserSubscriptionRepository userSubscriptionRepository;
-    private final RedisTemplate<String, Object> redisTemplate;
 
     // 카카오 로그아웃
     @Transactional
-    public void logoutKakao(SessionUser sessionUser, HttpServletRequest request) {
+    public void logoutKakao(SessionUser sessionUser) {
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
 
@@ -50,28 +46,12 @@ public class UserService {
                 req,
                 String.class);
 
-        // Redis에서 세션 유저 정보 삭제
-        HttpSession session = request.getSession();
-        String redisKey = "sessionUser:" + session.getId();
-        redisTemplate.delete(redisKey);
-
-        System.out.println("로그아웃 성공");
-    }
-
-    // 로그아웃
-    @Transactional
-    public void logout(HttpServletRequest request) {
-        // Redis에서 세션 유저 정보 삭제
-        HttpSession session = request.getSession();
-        String redisKey = "sessionUser:" + session.getId();
-        redisTemplate.delete(redisKey);
-
         System.out.println("로그아웃 성공");
     }
 
     // 네이버 로그아웃
     @Transactional
-    public void logoutNaver(SessionUser sessionUser, HttpServletRequest request) {
+    public void logoutNaver(SessionUser sessionUser) {
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
 
@@ -82,11 +62,6 @@ public class UserService {
 
         // API 호출
         String response = rt.getForObject(url, String.class);
-
-        // Redis에서 세션 유저 정보 삭제
-        HttpSession session = request.getSession();
-        String redisKey = "sessionUser:" + session.getId();
-        redisTemplate.delete(redisKey);
 
         System.out.println("로그아웃 성공");
     }

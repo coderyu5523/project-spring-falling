@@ -22,8 +22,10 @@ public class SongService {
     private final PlaylistRepository playlistRepository;
     private final PlaylistSongRepository playlistSongRepository;
 
+
     // 메인 페이지
     public SongResponse.MainDTO main() {
+
         Pageable pageable = PageRequest.of(0, 6); // 6개만 가져오려고 pageable 설정
 
         // 오늘 발매 음악
