@@ -2,6 +2,7 @@ package org.example.projectspringfalling.RestAPI;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.example.projectspringfalling.playlist.Playlist;
 import org.example.projectspringfalling.song.Song;
 
 import java.sql.Timestamp;
@@ -50,6 +51,7 @@ public class RestResponse {
         private String albumImg;
         private List<LyricLineDTO> lyrics;
 
+
         public PlaylistDTO(String songTitle, String artistName, String musicFile, String albumImg, List<LyricLineDTO> lyrics) {
             this.songTitle = songTitle;
             this.artistName = artistName;
@@ -59,6 +61,7 @@ public class RestResponse {
         }
 
     }
+
     // 가사 파싱
     @Data
     public static class LyricLineDTO {
@@ -68,6 +71,18 @@ public class RestResponse {
         public LyricLineDTO(int time, String text) {
             this.time = time;
             this.text = text;
+        }
+    }
+
+    // 플레이리스트 추가하기(모달)
+    @Data
+    public static class AddPlaylistDTO {
+        private Integer playlistId;
+        private String playlistName;
+
+        public AddPlaylistDTO(Playlist playlist) {
+            this.playlistId = playlist.getId();
+            this.playlistName = playlist.getName();
         }
     }
 

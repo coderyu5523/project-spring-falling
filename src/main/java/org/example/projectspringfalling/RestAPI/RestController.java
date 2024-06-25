@@ -4,7 +4,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
-import org.example.projectspringfalling.playlist.PlaylistResponse;
 import org.example.projectspringfalling.playlist.PlaylistService;
 import org.example.projectspringfalling.playlistSong.PlaylistSongRequest;
 import org.example.projectspringfalling.playlistSong.PlaylistSongService;
@@ -47,6 +46,13 @@ public class RestController {
         return new ApiUtil<>(playlistService.getMyList(sessionUser.getId()));
     }
 
+    // 플레이리스트 추가하기(모달)
+    @PostMapping("/add-playlist")
+    public ResponseEntity<?> addPlaylist(String playlistName) {
+        System.out.println("playlistName : " + playlistName);
+        UserResponse.LoginDTO sessionUser = (UserResponse.LoginDTO) rt.opsForValue().get("sessionUser");
+        return ResponseEntity.ok(new ApiUtil<>(playlistService.addPlaylist(sessionUser.getId(), playlistName)));
+    }
 
     // 플레이리스트 곡 추가하기
     @PostMapping("/add-song")
