@@ -58,6 +58,28 @@ public class UserService {
         System.out.println("로그아웃 성공");
     }
 
+    // 네이버 로그아웃
+    @Transactional
+    public void logoutNaver(SessionUser sessionUser, HttpServletRequest request) {
+        // RestTemplate 설정
+        RestTemplate rt = new RestTemplate();
+
+        String url = String.format(
+                "https://nid.naver.com/oauth2.0/token?grant_type=delete&client_id=B_iv0qTaEJVdKWa_FPzy&client_secret=Svp3dM07pF&access_token=%s&service_provider=NAVER",
+                sessionUser.getAccessToken()
+        );
+
+        // API 호출
+        String response = rt.getForObject(url, String.class);
+
+        // Redis에서 세션 유저 정보 삭제
+        HttpSession session = request.getSession();
+        String redisKey = "sessionUser:" + session.getId();
+        redisTemplate.delete(redisKey);
+
+        System.out.println("로그아웃 성공");
+    }
+
     // 회원가입
     @Transactional
     public UserResponse.JoinDTO join(UserRequest.JoinDTO reqDTO) {

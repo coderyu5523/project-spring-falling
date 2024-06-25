@@ -28,9 +28,9 @@ public class UserController {
             case "Kakao":
                 userService.logoutKakao(sessionUser, request);
                 break;
-//            case "Naver":
-//                userService.logoutNaver();
-//                break;
+            case "Naver":
+                userService.logoutNaver(sessionUser, request);
+                break;
             default:
                 break;
         }
