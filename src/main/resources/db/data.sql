@@ -4633,7 +4633,7 @@ VALUES ('SHEESH', 'CHOICE37, LP, YG, Sonny, LIL G, 최현석, Sandra Wikström',
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics, artist_id,listen_count)
-VALUES ('천상연', '유해준', '유해준', null, 'Ballad', true, '/upload/song/천상연.mp3', '2024-02-21', 36,
+VALUES ('천상연', '유해준', '유해준', null, 'Ballad', true, '/upload/song/천상연-이창섭.mp3', '2024-02-21', 36,
         '아니길 바랬었어
         꿈이길 기도했지
         너 없는 가슴으로 살아가야 하는 건
@@ -4773,7 +4773,7 @@ VALUES ('비의 랩소디', '주영훈', '주영훈, 이세준', null, 'Ballad',
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics, artist_id,listen_count)
-VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/song/헤어지자 말해요.mp4', 'Ballad', true, '/upload/song/헤어지자 말해요.mp3',
+VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/song/헤어지자말해요.mp4', 'Ballad', true, '/upload/song/헤어지자말해요.mp3',
         '2023-04-20', 39,
         '헤어지자고 말하려 오늘
         너에게 가다가 우리 추억 생각해 봤어
