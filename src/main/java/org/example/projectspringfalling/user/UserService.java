@@ -223,11 +223,8 @@ public class UserService {
     }
 
     // 현재 비밀번호 일치 확인
-    public boolean passwordCheck(String email, String inputPassword) {
+    public Boolean passwordCheck(String email, String inputPassword) {
         User user = userRepository.findByEmail(email);
-        if (user == null) {
-            return false; // 사용자 존재하지 않음
-        }
         boolean isMatch = inputPassword.equals(user.getPassword()); // 입력된 비밀번호와 저장된 비밀번호 비교
         return isMatch;
     }
@@ -238,7 +235,7 @@ public class UserService {
         if(phone == null){
             user.update(user.getPhone(),password);
         }else if(password == null){
-            user.update(phone,user.getPhone());
+            user.update(phone,user.getPassword());
         }
         return new UserResponse.UpdateDTO(user) ;
     }

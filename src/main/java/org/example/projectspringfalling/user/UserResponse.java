@@ -119,14 +119,14 @@ public class UserResponse {
     }
 
     @Data
-    public static class UpdateDTO{
+    public static class UpdateDTO {
         private Integer id;
+        private String phone;
 
         public UpdateDTO(User user) {
             this.id = user.getId();
+            this.phone = user.getPhone();
         }
     }
-
-
 
 }
