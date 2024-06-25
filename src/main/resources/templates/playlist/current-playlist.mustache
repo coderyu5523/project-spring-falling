@@ -83,6 +83,8 @@
         let previousIndex = null;
         let songs = [];
         let currentModeIndex = 0; // 초기 모드는 normal
+        let currentLyrics = [];
+        let lyricsIndex = 0;
 
         // Fetch the playlist data from the server
         $.getJSON('/api/playlists/current', function (data) {
@@ -105,11 +107,13 @@
         // 노래 재생 함수
         function playSong(index) {
             songName.text(songs[index].songTitle);
-            lyricsList.text(songs[index].lyrics);
             artistName.text(songs[index].artistName);
             audioPlayer.src = songs[index].musicFile;
             coverImage.attr('src', songs[index].albumImg);
             audioPlayer.play();
+
+            // 가사 업데이트
+            updateLyrics(songs[index].lyrics);
 
             // 이전에 재생 중이었던 노래의 active 속성 제거
             if (previousIndex !== null && previousIndex !== index) {
@@ -121,16 +125,12 @@
             currentIndex = index;
         }
 
-        // 이전 곡 재생 함수
-        function playPrevious() {
-            currentIndex = (currentIndex - 1 + songs.length) % songs.length;
-            playSong(currentIndex);
-        }
-
-        // 다음 곡 재생 함수
-        function playNext() {
-            currentIndex = (currentIndex + 1) % songs.length;
-            playSong(currentIndex);
+        // 가사 업데이트 함수
+        function updateLyrics(lyrics) {
+            lyricsList.empty();
+            currentLyrics = lyrics;
+            lyricsIndex = 0;
+            lyricsList.append('<p>' + currentLyrics[lyricsIndex].text + '</p>');
         }
 
         // progressBar의 값을 현재 재생 시간으로 업데이트
@@ -138,6 +138,16 @@
             progressBar.val(audioPlayer.currentTime);
             // currentTimeSpan에 현재 재생 시간을 포맷, 텍스트로 출력
             currentTimeSpan.text(formatTime(audioPlayer.currentTime));
+            updateCurrentLyrics(audioPlayer.currentTime);
+        }
+
+        // 현재 시간에 맞는 가사 표시 함수
+        function updateCurrentLyrics(currentTime) {
+            if (lyricsIndex < currentLyrics.length - 1 && currentTime >= currentLyrics[lyricsIndex + 1].time) {
+                lyricsIndex++;
+                lyricsList.empty();
+                lyricsList.append('<p>' + currentLyrics[lyricsIndex].text + '</p>');
+            }
         }
 
         // progressBar의 값이 변경될 때 오디오의 현재 재생 시간을 progressBar의 값으로 설정
@@ -272,6 +282,9 @@
         // 초기 모드 설정
         updatePlayMode();
     });
+
+
+
 </script>
 
 
