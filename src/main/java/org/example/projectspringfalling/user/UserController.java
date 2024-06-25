@@ -112,27 +112,10 @@ public class UserController {
 //        return "user/profile-phone";
     }
 
-    // 현재 비밀번호 일치 확인
-    @GetMapping("/api/password-same-check")
-    public @ResponseBody ApiUtil<Boolean> passwordSameCheck(@RequestParam String inputPassword, HttpServletRequest request) {
 
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
-        System.out.println("세션값 없나?" + sessionUser.getId());
-        try {
-            if (sessionUser == null) {
-                throw new IllegalStateException("로그인이 되지 않았습니다.");
-            }
-            boolean isValid = userService.passwordCheck(sessionUser.getEmail(), inputPassword);
-            return new ApiUtil<>(isValid);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ApiUtil<>(false);
-        }
-    }
-
+    // 회원정보 수정
     @PutMapping("/users")
     public String update(String password, String phone) {
-        System.out.println("1111111111111111111111111");
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         UserResponse.UpdateDTO responseDTO = userService.update(sessionUser, password,phone);
         return "user/profile-password";
