@@ -39,7 +39,7 @@ function changePassword() {
         $.ajax({
             type: "put",
             url: "/users",
-            data: {password: password}
+            data: { password: password }
         }).done((res) => {
             $("#passwordMessage2").text("비밀번호가 성공적으로 변경되었습니다.").css("color", "green");
         }).fail((res) => {
@@ -49,6 +49,7 @@ function changePassword() {
         $("#passwordMessage2").text("현재 비밀번호가 일치하지 않습니다.").css("color", "red");
     }
 }
+
 
 $(document).ready(function () {
     $("#passwordCheck").on('input', passwordSameCheck);

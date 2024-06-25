@@ -116,7 +116,8 @@ public class UserController {
     @GetMapping("/api/password-same-check")
     public @ResponseBody ApiUtil<Boolean> passwordSameCheck(@RequestParam String inputPassword, HttpServletRequest request) {
 
-        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        System.out.println("세션값 없나?" + sessionUser.getId());
         try {
             if (sessionUser == null) {
                 throw new IllegalStateException("로그인이 되지 않았습니다.");
@@ -130,9 +131,10 @@ public class UserController {
     }
 
     @PutMapping("/users")
-    public String update(String password, String phone, HttpServletRequest request) {
-        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
+    public String update(String password, String phone) {
+        System.out.println("1111111111111111111111111");
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         UserResponse.UpdateDTO responseDTO = userService.update(sessionUser, password,phone);
-        return "user/profile";
+        return "user/profile-password";
     }
 }
