@@ -26,6 +26,7 @@ public class UserController {
     @GetMapping("/logout")
     public String logout() {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        System.out.println("로그아웃 사용자: " + session.getId());
         switch (sessionUser.getProvider()) {
             case "Kakao":
                 userService.logoutKakao(sessionUser);
@@ -70,7 +71,7 @@ public class UserController {
     @PostMapping("/login")
     public String login(UserRequest.LoginDTO reqDTO, HttpServletRequest request) {
         SessionUser sessionUser = userService.login(reqDTO);
-        rt.opsForValue().set("sessionUser:" + sessionUser.getId(), sessionUser);
+        rt.opsForValue().set("sessionUser:" + session.getId(), sessionUser);
         session.setAttribute("sessionUser", sessionUser);
         return "redirect:/";
     }
@@ -79,7 +80,7 @@ public class UserController {
     @GetMapping("/oauth/callback/kakao")
     public String oauthCallbackKakao(String code, HttpServletRequest request) {
         SessionUser sessionUser = userService.kakaoLogin(code);
-        rt.opsForValue().set("sessionUser:" + sessionUser.getId(), sessionUser);
+        rt.opsForValue().set("sessionUser:" + session.getId(), sessionUser);
         session.setAttribute("sessionUser", sessionUser);
         return "redirect:/";
     }
@@ -88,7 +89,7 @@ public class UserController {
     @GetMapping("/oauth/callback/naver")
     public String oauthCallbackNaver(String code, HttpServletRequest request) {
         SessionUser sessionUser = userService.naverLogin(code);
-        rt.opsForValue().set("sessionUser:" + sessionUser.getId(), sessionUser);
+        rt.opsForValue().set("sessionUser:" + session.getId(), sessionUser);
         session.setAttribute("sessionUser", sessionUser);
         return "redirect:/";
     }
