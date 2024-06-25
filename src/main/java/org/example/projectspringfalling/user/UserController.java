@@ -32,6 +32,7 @@ public class UserController {
                 userService.logoutNaver(sessionUser, request);
                 break;
             default:
+                userService.logout(request);
                 break;
         }
         request.removeAttribute("sessionUser"); // request에서 sessionUser 제거

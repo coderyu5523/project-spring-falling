@@ -58,6 +58,17 @@ public class UserService {
         System.out.println("로그아웃 성공");
     }
 
+    // 로그아웃
+    @Transactional
+    public void logout(HttpServletRequest request) {
+        // Redis에서 세션 유저 정보 삭제
+        HttpSession session = request.getSession();
+        String redisKey = "sessionUser:" + session.getId();
+        redisTemplate.delete(redisKey);
+
+        System.out.println("로그아웃 성공");
+    }
+
     // 네이버 로그아웃
     @Transactional
     public void logoutNaver(SessionUser sessionUser, HttpServletRequest request) {
