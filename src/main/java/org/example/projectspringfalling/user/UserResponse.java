@@ -1,6 +1,7 @@
 package org.example.projectspringfalling.user;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -114,6 +115,17 @@ public class UserResponse {
             private String birthday; // 생일
             private String birthyear; // 출생년도
             private String mobile; // 전화번호
+        }
+    }
+
+    @Data
+    public static class UpdateDTO {
+        private Integer id;
+        private String phone;
+
+        public UpdateDTO(User user) {
+            this.id = user.getId();
+            this.phone = user.getPhone();
         }
     }
 

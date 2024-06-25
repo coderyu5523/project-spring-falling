@@ -1,5 +1,6 @@
 .genre {
-    width: 1100px;
+    width: 100%; /* 1100px에서 100%로 변경 */
+    max-width: 1100px; /* 최대 너비를 1100px로 설정 */
     justify-content: center;
     margin: 0 auto;
 }
@@ -12,30 +13,62 @@
     height: 100%;
     margin-top: 20px;
     margin-bottom: 40px;
-    gap: 20px;
+    gap: 10px; /* 아이템 사이의 간격을 좁힘 */
     display: flex;
     flex-wrap: wrap;
-    padding: 0%;
+    padding: 0;
     list-style-type: none;
+    justify-content: space-between; /* 아이템 간의 공간을 균등하게 분배 */
 }
 
 .genre-list li {
     text-align: center;
     font-size: 13px;
     color: #a2a0a0;
-    height: 180px;
+    /*height: 200px; !* 높이를 조금 늘림 *!*/
+    flex: 0 0 calc(20% - 10px); /* 아이템 크기를 계산하여 5개씩 배치하고 간격 조정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.genre-list p{
-    margin-top: 10px;
+.genre-list div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.genre-list a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .genre-list img {
     border-radius: 10px;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-.genre div {
-    width: 100%;
+.genre-list p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+.genre-list a:hover img {
+    transform: scale(1.05);
+    filter: brightness(70%);
+}
+
+

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+
 @NoArgsConstructor
 @Data
 public class SessionUser {
@@ -12,6 +13,7 @@ public class SessionUser {
     private String email;
     private String phone;
     private String provider;
+    private String accessToken;
     private Timestamp createdAt;
 
     @Builder
@@ -28,6 +30,15 @@ public class SessionUser {
         this.email = user.getEmail();
         this.phone = user.getPhone();
         this.provider = user.getProvider();
+        this.createdAt = user.getCreatedAt();
+    }
+
+    public SessionUser(User user, String accessToken) {
+        this.id = user.getId();
+        this.email = user.getEmail();
+        this.phone = user.getPhone();
+        this.provider = user.getProvider();
+        this.accessToken = accessToken;
         this.createdAt = user.getCreatedAt();
     }
 }
