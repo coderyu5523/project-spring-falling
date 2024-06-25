@@ -10,6 +10,10 @@ import java.util.Optional;
 
 public interface SongRepository extends JpaRepository<Song, Integer> {
 
+    // Main chart
+    @Query("SELECT s FROM Song s JOIN FETCH s.album JOIN FETCH s.artist ORDER BY s.listenCount DESC")
+    List<Song> findMainChart();
+
     // Song id로 song, album 찾기
     @Query("SELECT s, al FROM Song s JOIN FETCH s.album al WHERE s.id=:songId")
     Song findSongAndAlbumById(@Param("songId") Integer songId);

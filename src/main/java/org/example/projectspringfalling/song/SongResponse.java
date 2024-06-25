@@ -11,6 +11,32 @@ import java.util.List;
 
 public class SongResponse {
 
+    // 메인 차트
+    @NoArgsConstructor
+    @Data
+    public static class MainChartDTO {
+        private Integer index; // 인덱스
+        private Integer songId; // 곡 pk
+        private String title; // 곡 제목
+        private String coverImg; // 곡 커버 이미지
+        private Integer albumId; // 앨범 pk
+        private String albumTitle; // 앨범 제목
+        private Integer artistId; // 아티스트 pk
+        private String artistName; // 아티스트 이름
+
+        public MainChartDTO(Song song, Album album, Artist artist, Integer index) {
+            this.index = index;
+            this.songId = song.getId();
+            this.title = song.getTitle();
+            this.coverImg = album.getAlbumImg();
+            this.albumId = album.getId();
+            this.albumTitle = album.getTitle();
+            this.artistId = artist.getId();
+            this.artistName = artist.getName();
+        }
+
+    }
+
     // 메인페이지
     @NoArgsConstructor
     @Data

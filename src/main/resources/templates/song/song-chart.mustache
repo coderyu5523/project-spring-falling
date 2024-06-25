@@ -3,27 +3,27 @@
 <div class="chart">
     <div class="chart-tags">
         <ul>
-            <li>FLO 차트</li>
-            <li>해외 소셜 차트</li>
-            <li>국내 발라드</li>
-            <li>해외 팝</li>
-            <li>국내 댄스/일렉</li>
-            <li>국내 알앤비</li>
-            <li>국내 힙합</li>
-            <li>트로트</li>
-            <li>해외 알앤비</li>
-            <li>해외 힙합</li>
-            <li>OST/BGM</li>
-            <li>키즈</li>
-            <li>국내 인디</li>
-            <li>클래식</li>
-            <li>뉴에이지</li>
-            <li>국내 팝/어쿠스틱</li>
-            <li>해외 일렉트로닉</li>
-            <li>CCM</li>
+            <li id="tab1" class="active-tab">FLO 차트</li>
+            <li id="tab2">해외 소셜 차트</li>
+            <li id="tab3">국내 발라드</li>
+            <li id="tab4">해외 팝</li>
+            <li id="tab5">국내 댄스/일렉</li>
+            <li id="tab6">국내 알앤비</li>
+            <li id="tab7">국내 힙합</li>
+            <li id="tab8">트로트</li>
+            <li id="tab9">해외 알앤비</li>
+            <li id="tab10">해외 힙합</li>
+            <li id="tab11">OST/BGM</li>
+            <li id="tab12">키즈</li>
+            <li id="tab13">국내 인디</li>
+            <li id="tab14">클래식</li>
+            <li id="tab15">뉴에이지</li>
+            <li id="tab16">국내 팝/어쿠스틱</li>
+            <li id="tab17">해외 일렉트로닉</li>
+            <li id="tab18">CCM</li>
         </ul>
     </div>
-    <div class="chart-main">
+    <div id="content1" class="chart-main tab-content active-content">
         <div class="chart-header">
             <h3>FLO 차트</h3>
             <div>▷ 전체듣기</div>
@@ -39,70 +39,65 @@
                 <th>내 리스트</th>
                 <th>더보기</th>
             </tr>
-            <tr class="chart-main-table-body">
-                <td><input type="checkbox"></td>
-                <td>1</td>
-                <td>
-                    <div class="chart-main-table-body-img">
-                        <img class="chart-img" src="../images/chart/Armageddon.webp" alt="Armageddon">
-                        <span>
-                        <div>Supernova</div>
-                        <div class="chart-album-name">Armageddon - The 1st Album</div>
+            {{#chart}}
+                <tr class="chart-main-table-body">
+                    <td><input type="checkbox"></td>
+                    <td>{{index}}</td>
+                    <td>
+                        <div class="chart-main-table-body-img">
+                            <img class="chart-img" src="{{coverImg}}" alt="{{title}}">
+                            <span>
+                        <div>{{title}}</div>
+                        <div class="chart-album-name">{{albumTitle}}m</div>
                     </span>
-                    </div>
-                </td>
+                        </div>
+                    </td>
 
-                <td>aespa</td>
-                <td><i class="fa-solid fa-play"></i></td>
-                <td><i class="fa-solid fa-list-ul"></i></td>
-                <td><i class="fa-solid fa-folder-plus"></i></td>
-                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
-            </tr>
-            <tr class="chart-main-table-body">
-                <td><input type="checkbox"></td>
-                <td>2</td>
-                <td>
-                    <div class="chart-main-table-body-img">
-                        <img class="chart-img" src="../images/chart/HowSweet.webp" alt="HowSweet">
-                        <span>
-                        <div>How Sweet</div>
-                        <div class="chart-album-name">How Sweet</div>
-                    </span>
-                    </div>
-                </td>
-
-                <td>NewJeans</td>
-                <td><i class="fa-solid fa-play"></i></td>
-                <td><i class="fa-solid fa-list-ul"></i></td>
-                <td><i class="fa-solid fa-folder-plus"></i></td>
-                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
-            </tr>
-            <tr class="chart-main-table-body">
-                <td><input type="checkbox"></td>
-                <td>3</td>
-                <td>
-                    <div class="chart-main-table-body-img">
-                        <img class="chart-img" src="../images/chart/IVE Switch.webp" alt="IVESwitch">
-                        <span>
-                        <div>해야 (HEYA)</div>
-                        <div class="chart-album-name">IVE Switch</div>
-                    </span>
-                    </div>
-                </td>
-
-                <td>aespa</td>
-                <td><i class="fa-solid fa-play"></i></td>
-                <td><i class="fa-solid fa-list-ul"></i></td>
-                <td><i class="fa-solid fa-folder-plus"></i></td>
-                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
-            </tr>
+                    <td>{{artistName}}</td>
+                    <td><i class="fa-solid fa-play"></i></td>
+                    <td><i class="fa-solid fa-list-ul"></i></td>
+                    <td><i class="fa-solid fa-folder-plus"></i></td>
+                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                </tr>
+            {{/chart}}
         </table>
-        <div class="chart-more-button">
+        <div class="chart-more-button" id="load">
             더보기 <i class="fa-solid fa-chevron-down"></i>
         </div>
     </div>
 
+    <div id="content2" class="chart-main tab-content active-content">
+
+    </div>
+
 </div>
+<!--<script type="module" src="/js/song-chart.js"></script>-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const loadButton = document.getElementById("load");
+        const chartTableBody = document.querySelector(".chart-main-table tbody");
+        let currentIndex = 5;  // 처음에 5개만 보여줌
+
+        // 초기 5개 항목만 보이도록 설정
+        const chartItems = document.querySelectorAll(".chart-main-table-body");
+        for (let i = currentIndex; i < chartItems.length; i++) {
+            chartItems[i].style.display = "none";
+        }
+
+        loadButton.addEventListener("click", function () {
+            let itemsToShow = currentIndex + 10;
+            for (let i = currentIndex; i < itemsToShow && i < chartItems.length; i++) {
+                chartItems[i].style.display = "";
+            }
+            currentIndex = itemsToShow;
+
+            // 만약 모든 항목이 다 로드되었으면 더보기 버튼 숨김
+            if (currentIndex >= chartItems.length) {
+                loadButton.style.display = "none";
+            }
+        });
+    });
+</script>
 
 
 {{>layout/footer}}

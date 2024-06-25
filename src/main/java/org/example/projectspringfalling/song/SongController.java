@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Controller
 public class SongController {
@@ -43,7 +45,9 @@ public class SongController {
 
     // 차트별 페이지
     @GetMapping("/song-chart")
-    public String songChart() {
+    public String songChart(HttpServletRequest request) {
+        List<SongResponse.MainChartDTO> resp = songService.mainChart();
+        request.setAttribute("chart", resp);
         return "song/song-chart";
     }
 
