@@ -36,4 +36,9 @@ public class User {
         this.status = status;
         this.createdAt = createdAt;
     }
+
+    public void update(String phone, String password){
+        this.phone = phone;
+        this.password = password;
+    }
 }
