@@ -18,6 +18,7 @@ public class SongResponse {
         private Integer index; // 인덱스
         private Integer songId; // 곡 pk
         private String title; // 곡 제목
+        private String musicFile; // 곡 파일
         private String coverImg; // 곡 커버 이미지
         private Integer albumId; // 앨범 pk
         private String albumTitle; // 앨범 제목
@@ -28,6 +29,7 @@ public class SongResponse {
             this.index = index;
             this.songId = song.getId();
             this.title = song.getTitle();
+            this.musicFile = song.getMusicFile();
             this.coverImg = album.getAlbumImg();
             this.albumId = album.getId();
             this.albumTitle = album.getTitle();

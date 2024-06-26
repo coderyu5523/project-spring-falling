@@ -111,6 +111,10 @@
     white-space: nowrap;
 }
 
+.chart-more-button:hover {
+    cursor: pointer;
+}
+
 .chart-img {
     width: 60px;
     height: 60px;

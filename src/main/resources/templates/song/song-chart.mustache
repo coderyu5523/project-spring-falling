@@ -41,7 +41,7 @@
             </tr>
             {{#chart}}
                 <tr class="chart-main-table-body">
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" value="{{songId}}"></td>
                     <td>{{index}}</td>
                     <td>
                         <div class="chart-main-table-body-img">
@@ -54,7 +54,10 @@
                     </td>
 
                     <td>{{artistName}}</td>
-                    <td><i class="fa-solid fa-play"></i></td>
+                    <td>
+                        <input type="hidden" value="{{musicFile}}">
+                        <i class="fa-solid fa-play"></i>
+                    </td>
                     <td><i class="fa-solid fa-list-ul"></i></td>
                     <td><i class="fa-solid fa-folder-plus"></i></td>
                     <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
@@ -71,33 +74,6 @@
     </div>
 
 </div>
-<!--<script type="module" src="/js/song-chart.js"></script>-->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const loadButton = document.getElementById("load");
-        const chartTableBody = document.querySelector(".chart-main-table tbody");
-        let currentIndex = 5;  // 처음에 5개만 보여줌
-
-        // 초기 5개 항목만 보이도록 설정
-        const chartItems = document.querySelectorAll(".chart-main-table-body");
-        for (let i = currentIndex; i < chartItems.length; i++) {
-            chartItems[i].style.display = "none";
-        }
-
-        loadButton.addEventListener("click", function () {
-            let itemsToShow = currentIndex + 10;
-            for (let i = currentIndex; i < itemsToShow && i < chartItems.length; i++) {
-                chartItems[i].style.display = "";
-            }
-            currentIndex = itemsToShow;
-
-            // 만약 모든 항목이 다 로드되었으면 더보기 버튼 숨김
-            if (currentIndex >= chartItems.length) {
-                loadButton.style.display = "none";
-            }
-        });
-    });
-</script>
-
+<script type="module" src="/js/song-chart.js"></script>
 
 {{>layout/footer}}
