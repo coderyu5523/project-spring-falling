@@ -51,7 +51,6 @@ public class RestResponse {
         private String songName;
         private String albumTitle;
         private String artistName;
-
     }
 
     // 보관함 - 좋아요(앨범)
@@ -78,6 +77,18 @@ public class RestResponse {
         private String artistImg;
         private String artistName;
         private String artistType;
+    }
+
+    // 보관함 - 최근 감상
+    @AllArgsConstructor
+    @Data
+    public static class RecentSongs {
+        private Integer songId;
+        private Integer albumId;
+        private String albumImg;
+        private String songName;
+        private String albumTitle;
+        private String artistName;
     }
 
     // 재생중인 플레이리스트

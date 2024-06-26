@@ -43,7 +43,7 @@ $(document).ready(function () {
                 getContent('/storage/like-artist', likeArtists);
                 break;
             case 'tab5':
-                getContent('/storage/latest', latestList);
+                getContent('/storage/recent-song', recentSongs);
                 break;
         }
     });
@@ -162,7 +162,7 @@ $(document).ready(function () {
             <input class="storage-like-artist-list-album-id" type="hidden" value="${item.artistId}">
             <div class="storage-tabs-like-artist-img-container">
                 <a href="#">
-                    <img src="..${item.artistImg}">
+                    <img src="..${item.artistImg}" alt="${item.artistName}">
                     <button class="storage-tabs-like-artist-play-button">▶</button>
                 </a>
             </div>
@@ -174,6 +174,49 @@ $(document).ready(function () {
         </div>
             `;
         }).join('') + `</div>`;
+    }
+
+    // 최근 감상
+    function recentSongs(body) {
+        return `
+        <div class="storage-tabs-like-chart">
+        <div class="storage-tabs-like-chart-playall">
+            <div>▷ 전체듣기</div>
+        </div>
+        <table class="storage-tabs-like-chart-main-table">
+            <tr class="storage-tabs-like-chart-main-table-header">
+                <th><input type="checkbox"></th>
+                <th>곡/앨범</th>
+                <th>아티스트</th>
+                <th>듣기</th>
+                <th>재생목록</th>
+                <th>내 리스트</th>
+                <th>더보기</th>
+            </tr>` + body.map(item => {
+            return `
+            <tr class="storage-tabs-like-chart-main-table-body">
+                <input class="storage-like-artist-list-album-id" type="hidden" value="${item.songId}">
+                <td><input type="checkbox"></td>
+                <td>
+                    <div class="storage-tabs-like-chart-main-table-body-img">
+                        <img class="storage-tabs-like-chart-img" src="..${item.albumImg}"
+                             alt="${item.songName}">
+                        <span>
+                            <div>${item.songName}</div>
+                            <div class="storage-tabs-like-chart-album-name">${item.albumTitle}</div>
+                        </span>
+                    </div>
+                </td>
+
+                <td>${item.artistName}</td>
+                <td><i class="fa-solid fa-play"></i></td>
+                <td><i class="fa-solid fa-list-ul"></i></td>
+                <td><i class="fa-solid fa-folder-plus"></i></td>
+                <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+            </tr>
+            `;
+        }).join('') + `</table>
+    </div>`;
     }
 
     getContent('/storage/my-list', myList);
