@@ -58,6 +58,17 @@
 
 <script>
     $(document).ready(function () {
+        // Local Storage에서 데이터 읽기
+        var songData = JSON.parse(localStorage.getItem('currentSong'));
+
+        if (songData) {
+            // 데이터를 페이지에 반영
+            $('#song-name').text(songData.title);
+            $('#artist-name').text(songData.artistName);
+            $('#cover-image').attr('src', songData.coverImg);
+            $('#audio-player').attr('src', songData.musicFile);
+        }
+
         const audioPlayer = $('#audio-player')[0];
         const songList = $('#song-list');
         const prevBtn = $('#prev-btn');
@@ -216,13 +227,9 @@
         $(audioPlayer).on('ended', function () {
             if (PLAY_MODES[currentModeIndex].name === 'repeat-one') {
                 audioPlayer.play();
-            } else if (PLAY_MODES[currentModeIndex].name === 'repeat-all') {
+            } else if (PLAY_MODES.currentModeIndex.name === 'repeat-all') {
                 currentIndex = (currentIndex + 1) % songs.length;
-                if (currentIndex === 0) {
-                    playSong(0);
-                } else {
-                    playSong(currentIndex);
-                }
+                playSong(currentIndex);
             } else {
                 currentIndex = (currentIndex + 1) % songs.length;
                 if (currentIndex === 0) {
@@ -232,6 +239,18 @@
                 }
             }
         });
+
+        // 이전 곡 재생 함수
+        function playPrevious() {
+            currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+            playSong(currentIndex);
+        }
+
+        // 다음 곡 재생 함수
+        function playNext() {
+            currentIndex = (currentIndex + 1) % songs.length;
+            playSong(currentIndex);
+        }
 
         // 셔플 버튼 클릭 이벤트 리스너
         shuffleBtn.on('click', function () {
@@ -292,11 +311,5 @@
         updatePlayMode();
     });
 </script>
-
-
-
-</script>
-
-
 </body>
 </html>
