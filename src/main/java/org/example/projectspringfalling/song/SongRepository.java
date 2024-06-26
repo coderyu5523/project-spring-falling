@@ -10,7 +10,11 @@ import java.util.Optional;
 
 public interface SongRepository extends JpaRepository<Song, Integer> {
 
-    // Main chart
+    // 해외 소셜 차트
+    @Query("SELECT s FROM Song s JOIN FETCH s.album JOIN FETCH s.artist WHERE s.album.nationality='해외' ORDER BY s.listenCount DESC")
+    List<Song> findGlobalChart();
+
+    // 메인 차트
     @Query("SELECT s FROM Song s JOIN FETCH s.album JOIN FETCH s.artist ORDER BY s.listenCount DESC")
     List<Song> findMainChart();
 
