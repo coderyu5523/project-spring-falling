@@ -217,7 +217,7 @@ JYP엔터테인먼트 수장 박진영은 트와이스의 히트곡 ''SIGNAL''(�
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('Don`t Mess Up My Tempo', '카카오엔터테인먼트', 'SM Entertainment', '국내', '정규',
-        '/upload/ablum/dontmessupmytempo.png', 16, '2018-11-02', '‘K-POP 킹’ 엑소의 귀환!
+        '/upload/album/dontmessupmytempo.png', 16, '2018-11-02', '‘K-POP 킹’ 엑소의 귀환!
 정규 5집 ‘DON’T MESS UP MY TEMPO’ 공개!
 타이틀 곡 ‘Tempo’ 포함 다채로운 장르의 총 11곡 수록!
 
@@ -243,7 +243,7 @@ VALUES ('Don`t Mess Up My Tempo', '카카오엔터테인먼트', 'SM Entertainme
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('The ReVe Festival: Finale', '카카오엔터테인먼트', 'SM Entertainment', '국내', '정규',
-        '/album/album/therevefestivalfinale.jpg', 17, '2019-12-23', 'Album Introduce
+        '/upload/album/therevefestivalfinale.jpg', 17, '2019-12-23', 'Album Introduce
 레드벨벳, 2019년 음악 축제 화려한 피날레!
 리패키지 앨범 ‘‘The ReVe Festival’ Finale’ 발매!
 쿨&스윗 러브송 ‘Psycho’로 독보적인 음악 세계 ‘레벨 업’ 한다!
@@ -538,7 +538,7 @@ VALUES ('천상연 (웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB))', 'YG PL
         웹툰 ''선녀외전''은 네이버 웹툰 매일 플러스에서 만나볼 수 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕', 37, '2024-03-24',
+VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕.jpg', 37, '2024-03-24',
         '"왜 하필 이때가 떠올랐을까. 만약 여기서 내가 죽는다면, 마지막 순간에 네 생각을 하는 걸까?"
 
         눈물의 여왕 3부 수렵 사냥 중 갑작스러운 멧돼지의 습격과 환영으로 위태로운 상황을 맞이한 ''해인''(김지원 분). 죽음을 앞둔 순간, 가장 먼저 떠오른 것은 언제나 곁에 있어주겠다던 남편 ''현우''. 그리고 거짓말처럼 ''현우''는 ''해인'' 앞에 나타났다.
@@ -689,7 +689,7 @@ VALUES ('너 그러다 장가 못간다', '미러볼뮤직', 'doob sound', '국�
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('To. X - The 5th Mini Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', '미니', '/upload/album/To.X', 51, '2023-11-27', '태연, 다섯 번째 미니앨범 ‘To. X’ 발매!
+VALUES ('To. X - The 5th Mini Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', '미니', '/upload/album/To. X.jpg', 51, '2023-11-27', '태연, 다섯 번째 미니앨범 ‘To. X’ 발매!
 한층 짙어진 ‘믿듣탱’표 보컬 매력과 음악 감성!
 태연의 감각을 느낄 수 있는 다채로운 총 6곡 수록!
 
@@ -852,8 +852,8 @@ VALUES ('전부 너였다', '런치송 프로젝트', '양재선', '/upload/song
 다시 헤어져도
 나는 또 그대겠죠
 ', 1,179746),
-       ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/슈퍼노바.mp4', 'Dance',
-        true, '/upload/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
+       ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/song/슈퍼노바.mp4', 'Dance',
+        true, '/upload/song/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
 Watch out
 Look at me go
 재미 좀 볼
@@ -942,7 +942,7 @@ Supernova
 Bring the light of a dying star
 Supernova', 2,246012),
        ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)',
-        '/upload/Armageddon.mp4', 'Dance', true, '/upload/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
+        '/upload/song/Armageddon.mp4', 'Dance', true, '/upload/song/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
 Shoot
 Imma get ’em
 Shoot
@@ -1063,7 +1063,7 @@ Armageddon
 (Aw wayo wayo)
 끝과 시작의
 Armageddon', 2,1023143),
-       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/tone.mp3',
+       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/song/tone.mp3',
         '2024-05-27', 2, 'We Set The Tone
 Music on where we go
 미친 Beat drum
@@ -1199,7 +1199,7 @@ We Set The Tone
 We take it home
 We Set The Tone', 2,123123),
        ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',
-        false, '/upload/Mine.mp3', '2024-05-27', 2, '예고 없이
+        false, '/upload/song/Mine.mp3', '2024-05-27', 2, '예고 없이
 지는 그림자
 Mine
 두려움을
@@ -1340,7 +1340,7 @@ know you want it like
 It’s all Mine
 Mine', 2,1245),
        ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
-        '/upload/Licorice.mp4', 'Dance', false, '/upload/Licorice.mp3', '2024-05-27', 2, '넌 정말
+        '/upload/Licorice.mp4', 'Dance', false, '/upload/song/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
 Licorice
 Licorice
@@ -1464,7 +1464,7 @@ Licorice
 자꾸 손이 가
 Like Licorice', 2,55247),
        ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,
-        'Dance', false, '/upload/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
+        'Dance', false, '/upload/song/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
 ba ba
 Bahama, hama
 (Bahama)
@@ -1601,7 +1601,7 @@ To the beach
 Take it slow
 Bahama', 2,214),
        ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
-        '/upload/Long Chat.mp4', 'Dance', false, '/upload/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
+        '/upload/Long Chat.mp4', 'Dance', false, '/upload/song/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
 Woo Ah
 
@@ -1747,7 +1747,7 @@ Hashtag
 
 I’ll be the girl who likes a
 Long Chat', 2,112368),
-       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/Prologue.mp3',
+       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/song/Prologue.mp3',
         '2024-05-27', 2, 'Woo Woo Woo
 La-la
 Woo Woo Woo
@@ -1848,7 +1848,7 @@ Woo Woo Woo
 La-la
 ', 2,45557),
        ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4',
-        'Rock/Metal', false, '/upload/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
+        'Rock/Metal', false, '/upload/song/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
 고지식한
 그런 사고방식
 Say 솔직한 마음만
@@ -1951,7 +1951,7 @@ Live My Life
 Live My Life
 
 Life', 2,987),
-       ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/목소리 (Melody).mp3',
+       ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/song/목소리 (Melody).mp3',
         '2024-05-27', 2, 'Every night
 지친 하루 끝에
 커져가는 빈자리
@@ -2034,7 +2034,7 @@ Oh You’re the one
 목소리', 2,32547),
        ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman',
         'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)',
-        '/upload/How Sweet.mp4', 'Dance', true, '/upload/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
+        '/upload/song/How Sweet.mp4', 'Dance', true, '/upload/song/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
 알게 됐어 나 (I know)
 그동안 맨날
 Always up and down (No more)
@@ -2123,7 +2123,7 @@ You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
 Don’t knock on my door, I’ll see you out', 3,554236),
        ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman',
-        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/해야 (HEYA).mp4', 'Dance', true, '/upload/해야 (HEYA).mp3', '2024-04-29',
+        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/song/해야 (HEYA).mp4', 'Dance', true, '/upload/song/해야 (HEYA).mp3', '2024-04-29',
         4, 'Let’s get it
     Look at it
     Pay attention
@@ -2221,8 +2221,8 @@ Don’t knock on my door, I’ll see you out', 3,554236),
     Da da da dun dun dun', 4,1147896),
        ('첫 만남은 계획대로 되지 않아',
         'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK',
-        'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', '/upload/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
-        '/upload/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
+        'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', '/upload/song/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
+        '/upload/song/첫 만남은 계획대로 되지 않아.mp3', '2024-01-22', 5, 'Ay ay ay ay ay
 거울 속에 내 표정 봐 봐
 느낌 So good 기다려온 D-day
 연습했던 손든 인사도 그대로 하면 돼
@@ -2276,7 +2276,7 @@ Na na na-
 내일 또 봐 안녕
 ', 5,45763),
        ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영',
-        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/고민중독.mp4', 'Rock/Metal', true, '/upload/고민중독.mp3',
+        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/song/고민중독.mp4', 'Rock/Metal', true, '/upload/song/고민중독.mp3',
         '2024-04-01', 6, 'One! Two! Q! W! E! R!
 어떤 인사가 괜찮을까 천 번쯤 상상해 봤어
 근데 오늘도 천 번 하고 한 번 더 고민 중
@@ -2316,7 +2316,7 @@ Na na na-
 두 번은 말 못 해 너 지금 잘 들어봐
 매일 고민하고 연습했던 말
 좋아해', 6,974561),
-       ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
+       ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/song/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/song/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
 붙잡지 못하고 가슴만 떨었지
 내 아름답던 사람아
@@ -2351,7 +2351,7 @@ Na na na-
 잠시 쉬어가면 좋을 텐데
 잠시 쉬어가면 좋을 텐데', 7,67841),
        ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)',
-        '/upload/SPOT! (feat. JENNIE).mp4', 'HipHop', true, '/upload/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
+        '/upload/song/SPOT! (feat. JENNIE).mp4', 'HipHop', true, '/upload/song/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
 Turn the music up
 
 Uhm we’re not going home tonight, alright
@@ -2424,7 +2424,7 @@ Wait a minute ahhh
 Come vibe with us
 Ride with us', 8,7841),
        ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,
-        '/upload/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
+        '/upload/song/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
 똑같이 하루를 시작하고
 온종일 한 손엔 아이스 아메리카노
 피곤해 죽겠네
@@ -2474,7 +2474,7 @@ Ride with us', 8,7841),
        ('Magnetic',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
-        '/upload/Magnetic.mp4', 'Dance', true, '/upload/Magnetic.mp3', '2024-03-25', 10, 'Baby
+        '/upload/song/Magnetic.mp4', 'Dance', true, '/upload/song/Magnetic.mp3', '2024-03-25', 10, 'Baby
 I’m just trying to play it cool
 But I just can’t hide that
 I want you
@@ -2551,7 +2551,7 @@ Like it’s magnetic
 BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
 Baby don’t say no', 10,12474),
-       ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/소나기.mp3',
+       ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/song/소나기.mp3',
         '2024-04-08', 11, '그치지 않기를 바랬죠
     처음 그대 내게로 오던 그날에
     잠시 동안 적시는
