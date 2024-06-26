@@ -84,8 +84,18 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('나연 (TWICE)', 'Solo', '/upload/artist/나연.jpg', '2022-06-24'),
        ('AKMU (악뮤)', 'Group', '/upload/artist/악뮤.jpg', '2014-04-07'),
        ('폴킴', 'Solo', '/upload/artist/폴킴.jpg', '2014-01-21'),
-       ('VIVIZ (비비지)', 'Group', '/upload/artist/비비지.jpg', '2021-02-09');
+       ('VIVIZ (비비지)', 'Group', '/upload/artist/비비지.jpg', '2021-02-09'),
 
+       ('H1-KEY (하이키)', 'Group', '/upload/artist/하이키.jpg', '2022-01-05'),
+       ('거북이', 'Group', '/upload/artist/거북이.jpg', '2001-12-20'),
+       ('Tommy Richman', 'Solo', '/upload/artist/Tommy Richman.jpg', '2021-09-03'),
+       ('이승철', 'Solo', '/upload/artist/이승철.jpg', '1988-12-01'),
+       ('장윤정', 'Solo', '/upload/artist/장윤정.jpg', '2004-10-22'),
+       ('영탁', 'Solo', '/upload/artist/영탁.jpg', '2007-03-05'),
+       ('진성', 'Solo', '/upload/artist/진성.jpg', '1997-09-01'),
+       ('노브레인 (NoBrain)', 'Group', '/upload/artist/노브레인.jpg', '1997-03-01'),
+       ('혁오 (HYUKOH)', 'Group', '/upload/artist/혁오.jpg', '2014-09-18'),
+       ('강산에', 'Solo', '/upload/artist/강산에.jpg', '1993-03-26');
 
 -- 테이블: album
 
@@ -807,7 +817,6 @@ VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLAN
 
 이처럼 VIVIZ의 수많은 선택으로 태어난 이번 앨범은 전달하고자 하는 메시지를 상징적 컬러로 표현했던 이전 앨범들과 달리 다양한 컬러들을 담은 컬러칩 그 자체이다. 수많은 컬러들이 질서 있게 존재하지만 때때로 규칙을 벗어나 예측할 수 없는 조합을 만들어 내듯 다양한 스토리를 통해 끊임없이 질문(선택)을 던지고 듣는 이로 하여금 스스로 컬러(운명)의 방향을 결정하도록 안내한다.
 그들이 준비한 다섯 트랙을 모두 다 듣고 나면 그들의 고민과 선택이 우리를 좋은 길로 안내할 것이란 믿음이 확신이 되어 VIVIZ에게 운명처럼 이끌릴 것이다.');
-
 
 -- 테이블: song
 
