@@ -538,7 +538,7 @@ VALUES ('천상연 (웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB))', 'YG PL
         웹툰 ''선녀외전''은 네이버 웹툰 매일 플러스에서 만나볼 수 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕', 37, '2024-03-24',
+VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕.jpg', 37, '2024-03-24',
         '"왜 하필 이때가 떠올랐을까. 만약 여기서 내가 죽는다면, 마지막 순간에 네 생각을 하는 걸까?"
 
         눈물의 여왕 3부 수렵 사냥 중 갑작스러운 멧돼지의 습격과 환영으로 위태로운 상황을 맞이한 ''해인''(김지원 분). 죽음을 앞둔 순간, 가장 먼저 떠오른 것은 언제나 곁에 있어주겠다던 남편 ''현우''. 그리고 거짓말처럼 ''현우''는 ''해인'' 앞에 나타났다.
@@ -724,7 +724,7 @@ VALUES ('<ASSEMBLE24>', '카카오엔터테인먼트', '모드하우스', '국�
 트리플에스의 대표곡 ‘Generation’과 ‘Girls’ Capitalism’을 만든 EL CAPITXN과 Vendors의 합작으로 완성도 높은 곡이 만들어졌다. 그리고 NCT와 더보이즈의 안무가로 활약한 최효제의 리드로 만들어진 24인조의 군무를 통해 메가 걸그룹의 위용을 시각적으로 표현했다. 뮤직비디오는 ‘Generation’과 ‘Rising’, ‘Girls’ Capitalism’을 이어가며 서울을 살고 있는 소녀들의 일상을 담았던 언더무드 필름의 연출로 이야기를 자연스럽게 이어간다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('별에서 온 그대 OST Part.7', '카카오엔터테인먼트', '㈜SBS콘텐츠허브', '국내', 'OST/BGM', '/upload/album/별에서온그대.jpg', 54, '2014-02-12', '별에서 온 그대 OST Part 7 <성시경 – 너의 모든 순간>
+VALUES ('별에서 온 그대 OST Part.7', '카카오엔터테인먼트', '㈜SBS콘텐츠허브', '국내', 'OST/BGM', '/upload/album/별에서온그대7.jpg', 54, '2014-02-12', '별에서 온 그대 OST Part 7 <성시경 – 너의 모든 순간>
 
 별에서 온 그대 OST Part 7 <너의 모든 순간>은 성시경이 직접 작곡한 곡으로, 도민준과 천송이의 애틋한 사랑이야기를 감미롭고 아름다운 멜로디에 담고 있다.
 
