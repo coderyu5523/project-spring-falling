@@ -18,7 +18,7 @@
     overflow: hidden;
 }
 
-.chart-tags > ul > li{
+.chart-tags > ul > li {
     font-size: 14px;
     border: 1px solid #ddd;
     border-radius: 20px;
@@ -32,12 +32,19 @@
     white-space: nowrap;
 }
 
+.chart-tags .active-tab {
+    background-color: #3461B8;
+    color: white;
+    font-weight: bold;
+}
+
 .chart-header {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .chart-header > div {
     font-size: 14px;
 }
@@ -45,21 +52,23 @@
 .chart-main {
     text-align: center;
     width: 100%;
+    border: none;
 }
 
-.chart-main-table{
+.chart-main-table {
     margin-bottom: 40px;
     width: 100%;
 }
 
-.chart-main-table-header{
+.chart-main-table-header {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     font-size: 13px;
     width: 100%;
     color: #cdcdcd;
 }
-.chart-main-table-header > th{
+
+.chart-main-table-header > th {
     text-align: center;
     padding: 15px 0;
 }
@@ -75,19 +84,19 @@
     border-bottom: 1px solid #e4e4e4;
 }
 
-.chart-main-table-body-img{
+.chart-main-table-body-img {
     display: flex;
     text-align: left;
     align-items: center;
     gap: 10px;
 }
 
-.chart-album-name{
+.chart-album-name {
     color: #cdcdcd;
     font-size: 12px;
 }
 
-.chart-more-button{
+.chart-more-button {
     margin-bottom: 40px;
     font-size: 14px;
     border: 1px solid #ddd;
@@ -102,7 +111,12 @@
     white-space: nowrap;
 }
 
+.chart-more-button:hover {
+    cursor: pointer;
+}
+
 .chart-img {
     width: 60px;
     height: 60px;
 }
+

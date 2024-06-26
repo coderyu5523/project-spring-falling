@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @RequiredArgsConstructor
 @Service
@@ -22,6 +24,13 @@ public class SongService {
     private final PlaylistRepository playlistRepository;
     private final PlaylistSongRepository playlistSongRepository;
 
+    // 메인 차트
+    public List<SongResponse.MainChartDTO> mainChart() {
+        List<Song> songList = songRepository.findMainChart();
+        return IntStream.range(0, songList.size())
+                .mapToObj(i -> new SongResponse.MainChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
+                .collect(Collectors.toList());
+    }
 
     // 메인 페이지
     public SongResponse.MainDTO main() {
