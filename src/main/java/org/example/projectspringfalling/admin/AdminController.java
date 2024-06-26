@@ -97,5 +97,10 @@ public class AdminController {
         return "admin/user-list";
     }
 
+    // 고객센터
+    @GetMapping("/admin/help")
+    public String help() {
+        return "admin/help";
+    }
 
 }
