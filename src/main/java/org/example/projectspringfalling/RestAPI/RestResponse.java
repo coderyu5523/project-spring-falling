@@ -44,7 +44,7 @@ public class RestResponse {
     // 보관함 - 좋아요(곡)
     @AllArgsConstructor
     @Data
-    public static class StorageLikeSong {
+    public static class StorageLikeSongs {
         private Integer songId;
         private Integer albumId;
         private String albumImg;
@@ -52,6 +52,22 @@ public class RestResponse {
         private String albumTitle;
         private String artistName;
 
+    }
+
+    // 보관함 - 좋아요(앨범)
+    @AllArgsConstructor
+    @Data
+    public static class StorageLikeAlbums {
+        private Integer albumId;
+        private String albumImg;
+        private String albumTitle;
+        private String artistName;
+        private Timestamp createdAt;
+        private String albumType;
+
+        public String getCreatedAt() {
+            return timestampToString(this.createdAt);
+        }
     }
 
     // 재생중인 플레이리스트

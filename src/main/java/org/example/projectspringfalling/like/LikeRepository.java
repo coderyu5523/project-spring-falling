@@ -9,7 +9,11 @@ import java.util.List;
 public interface LikeRepository extends JpaRepository<Like, Integer> {
 
     // 보관함 - 좋아요(곡)
-    @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$StorageLikeSong(s.id, a.id, a.albumImg, s.title, a.title, ar.name) FROM Like l JOIN l.song s JOIN s.album a JOIN s.artist ar WHERE l.user.id = :userId")
-    List<RestResponse.StorageLikeSong> findAllLikedSongs(Integer userId);
+    @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$StorageLikeSongs(s.id, a.id, a.albumImg, s.title, a.title, ar.name) FROM Like l JOIN l.song s JOIN s.album a JOIN s.artist ar WHERE l.user.id = :userId")
+    List<RestResponse.StorageLikeSongs> findAllLikedSongs(Integer userId);
+
+    // 보관함 - 좋아요(앨범)
+    @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$StorageLikeAlbums(a.id, a.albumImg, a.title, ar.name, a.createdAt, a.category) FROM Like l JOIN l.album a JOIN a.artist ar WHERE l.user.id = :userId")
+    List<RestResponse.StorageLikeAlbums> findAllLikedAlbums(Integer userId);
 
 }

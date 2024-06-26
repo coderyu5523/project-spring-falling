@@ -37,11 +37,11 @@
 
 .storage-tabs-mylist-items {
     margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
     gap: 80px;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .storage-tabs-mylist-item {

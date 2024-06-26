@@ -11,7 +11,13 @@ import java.util.List;
 public class LikeService {
     private final LikeRepository likeRepository;
 
-    public List<RestResponse.StorageLikeSong> getLikedSongs(Integer userId) {
+    // 좋아요 - 곡
+    public List<RestResponse.StorageLikeSongs> getLikedSongs(Integer userId) {
         return likeRepository.findAllLikedSongs(userId);
+    }
+
+    // 좋아요 - 앨범
+    public List<RestResponse.StorageLikeAlbums> getLikedAlbums(Integer userId) {
+        return likeRepository.findAllLikedAlbums(userId);
     }
 }

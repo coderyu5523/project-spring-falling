@@ -37,7 +37,7 @@ $(document).ready(function () {
                 getContent('/storage/like-song', likeSongs);
                 break;
             case 'tab3':
-                getContent('/storage/latest', latestList);
+                getContent('/storage/like-album', likeAlbums);
                 break;
             case 'tab4':
                 getContent('/storage/latest', latestList);
@@ -99,8 +99,8 @@ $(document).ready(function () {
                 <td><input type="checkbox"></td>
                 <td>
                     <div class="storage-tabs-like-chart-main-table-body-img">
-                        <input class="storatge-like-song-id" type="hidden" value="${item.songId}">
-                        <input class="storage-like-album-id" type="hidden" value="${item.albumId}">
+                        <input class="storage-like-song-list-song-id" type="hidden" value="${item.songId}">
+                        <input class="storage-like-song-list-album-id" type="hidden" value="${item.albumId}">
                         <img class="storage-tabs-like-chart-img" src="..${item.albumImg}"
                              alt="${item.albumTitle}">
                         <span>
@@ -119,6 +119,39 @@ $(document).ready(function () {
             `;
         }).join('') + `</table>
     </div>`;
+    }
+
+    // 좋아요 - 앨범
+    function likeAlbums(body) {
+        return `<div class="storage-tabs-mylist-items">` + body.map(item => {
+            return `
+            <div class="storage-tabs-mylist-item">
+            <input class="storage-like-album-list-album-id" type="hidden" value="${item.albumId}">
+            <a href="#">
+                <img src="..${item.albumImg}" alt="${item.albumTitle}">
+            </a>
+            <div class="storage-tabs-mylist-item-info">
+                <a href="#">
+                    <h3 style="font-weight: 600;">${item.albumTitle}</h3>
+                </a>
+                <a href="#">
+                    <p>${item.artistName}</p>
+                </a>
+                <a href="#">
+                    <p>${item.albumType}</p>
+                </a>
+                <a href="#">
+                    <p>${item.createdAt}</p>
+                </a>
+                <br>
+                <div class="storage-tabs-mylist-item-icons">
+                    <a href="#"><i class="album-icon fas fa-list icon"></i></a>
+                    <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
+                </div>
+            </div>
+        </div>
+            `;
+        }).join('') + `</div>`;
     }
 
     getContent('/storage/my-list', myList);
