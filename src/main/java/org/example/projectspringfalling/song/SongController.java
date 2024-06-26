@@ -50,7 +50,8 @@ public class SongController {
         List<SongResponse.ChartDTO> globalChartDTOs = songService.globalChart(); // 해외 소셜 차트
         List<SongResponse.ChartDTO> domesticChartDTOs = songService.domesticBalladChart(); // 국내 발라드 차트
         List<SongResponse.ChartDTO> globalPopChartDTOs = songService.globalPopChart(); // 해외 팝 차트
-        SongResponse.AllChartDTO resp = new SongResponse.AllChartDTO(MainChartDTOs, globalChartDTOs, domesticChartDTOs, globalPopChartDTOs);
+        List<SongResponse.ChartDTO> globalHipHopChartDTOs = songService.globalHipHopChart(); // 해외 힙합 차트
+        SongResponse.AllChartDTO resp = new SongResponse.AllChartDTO(MainChartDTOs, globalChartDTOs, domesticChartDTOs, globalPopChartDTOs, globalHipHopChartDTOs);
         request.setAttribute("all", resp);
         return "song/song-chart";
     }
