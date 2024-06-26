@@ -120,3 +120,29 @@
     height: 60px;
 }
 
+/* 탭 스타일링 */
+.chart-tags ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chart-tags li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.active-tab {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+/* 콘텐츠 영역 스타일링 */
+.tab-content {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}

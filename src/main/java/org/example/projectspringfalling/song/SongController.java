@@ -48,6 +48,7 @@ public class SongController {
     public String songChart(HttpServletRequest request) {
         List<SongResponse.MainChartDTO> resp = songService.mainChart();
         request.setAttribute("chart", resp);
+        request.setAttribute("global", resp);
         return "song/song-chart";
     }
 
