@@ -3,7 +3,6 @@ package org.example.projectspringfalling.user;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.example.projectspringfalling._core.utils.ApiUtil;
 import org.example.projectspringfalling.userSubscription.UserSubscription;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -105,33 +104,17 @@ public class UserController {
         String subscriptionName = userSubscriptionOpt.map(us -> us.getSubscription().getName())
                 .orElse("사용중인 이용권이 없습니다.");
 
-        UserRequest.ProfileDTO profile = new UserRequest.ProfileDTO(provider, email, subscriptionName);
+        UserRequest.ProfileDTO profile = new UserRequest.ProfileDTO(provider, email, subscriptionName,sessionUser.getPhone());
         request.setAttribute("profile", profile);
 
-        return "user/profile-password";
-//        return "user/profile-phone";
+        return "user/profile";
     }
 
-    // 현재 비밀번호 일치 확인
-    @GetMapping("/api/password-same-check")
-    public @ResponseBody ApiUtil<Boolean> passwordSameCheck(@RequestParam String inputPassword, HttpServletRequest request) {
 
-        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
-        try {
-            if (sessionUser == null) {
-                throw new IllegalStateException("로그인이 되지 않았습니다.");
-            }
-            boolean isValid = userService.passwordCheck(sessionUser.getEmail(), inputPassword);
-            return new ApiUtil<>(isValid);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ApiUtil<>(false);
-        }
-    }
-
+    // 회원정보 수정
     @PutMapping("/users")
-    public String update(String password, String phone, HttpServletRequest request) {
-        SessionUser sessionUser = (SessionUser) request.getAttribute("sessionUser");
+    public String update(String password, String phone) {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         UserResponse.UpdateDTO responseDTO = userService.update(sessionUser, password,phone);
         return "user/profile";
     }
