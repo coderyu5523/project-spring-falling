@@ -25,10 +25,10 @@ public class SongService {
     private final PlaylistSongRepository playlistSongRepository;
 
     // 메인 차트
-    public List<SongResponse.MainChartDTO> mainChart() {
+    public List<SongResponse.ChartDTO> mainChart() {
         List<Song> songList = songRepository.findMainChart();
         return IntStream.range(0, songList.size())
-                .mapToObj(i -> new SongResponse.MainChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
+                .mapToObj(i -> new SongResponse.ChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
                 .collect(Collectors.toList());
     }
 

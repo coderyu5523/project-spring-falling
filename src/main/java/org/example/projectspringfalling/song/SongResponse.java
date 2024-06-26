@@ -11,10 +11,11 @@ import java.util.List;
 
 public class SongResponse {
 
+    // 해외 소셜 차트
     // 메인 차트
     @NoArgsConstructor
     @Data
-    public static class MainChartDTO {
+    public static class ChartDTO {
         private Integer index; // 인덱스
         private Integer songId; // 곡 pk
         private String title; // 곡 제목
@@ -25,7 +26,7 @@ public class SongResponse {
         private Integer artistId; // 아티스트 pk
         private String artistName; // 아티스트 이름
 
-        public MainChartDTO(Song song, Album album, Artist artist, Integer index) {
+        public ChartDTO(Song song, Album album, Artist artist, Integer index) {
             this.index = index;
             this.songId = song.getId();
             this.title = song.getTitle();

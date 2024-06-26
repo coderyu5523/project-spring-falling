@@ -46,8 +46,9 @@ public class SongController {
     // 차트별 페이지
     @GetMapping("/song-chart")
     public String songChart(HttpServletRequest request) {
-        List<SongResponse.MainChartDTO> resp = songService.mainChart();
-        request.setAttribute("chart", resp);
+        List<SongResponse.ChartDTO> MainChartDTOs = songService.mainChart();
+        request.setAttribute("chart", MainChartDTOs);
+        List<SongResponse.ChartDTO> resp = songService.globalChart();
         request.setAttribute("global", resp);
         return "song/song-chart";
     }
