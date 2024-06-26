@@ -1,6 +1,4 @@
-// 탭 기능 + 더보기 기능
 document.addEventListener("DOMContentLoaded", function () {
-    /* 탭 기능 */
     const tabs = document.querySelectorAll(".chart-tags li");
     const contents = document.querySelectorAll(".tab-content");
 
@@ -29,23 +27,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function activateTab(index) {
+        // 모든 탭과 콘텐츠 비활성화
+        tabs.forEach(t => t.classList.remove("active-tab"));
+        contents.forEach(c => c.classList.remove("active-content"));
+
+        // 클릭한 탭과 해당하는 콘텐츠 활성화
+        tabs[index].classList.add("active-tab");
+        contents[index].classList.add("active-content");
+
+        // 더보기 버튼 로직 설정
+        setLoadMoreButton(index);
+    }
+
     tabs.forEach((tab, index) => {
         tab.addEventListener("click", function () {
-            // 모든 탭과 콘텐츠 비활성화
-            tabs.forEach(t => t.classList.remove("active-tab"));
-            contents.forEach(c => c.classList.remove("active-content"));
-
-            // 클릭한 탭과 해당하는 콘텐츠 활성화
-            tab.classList.add("active-tab");
-            contents[index].classList.add("active-content");
-
-            // 더보기 버튼 로직 설정
-            setLoadMoreButton(index);
+            // URL 해시 업데이트
+            window.location.hash = `tab${index + 1}`;
+            // 탭 활성화
+            activateTab(index);
         });
     });
 
     // 초기 설정
-    setLoadMoreButton(0);
+    if (window.location.hash) {
+        const hash = window.location.hash;
+        const tabIndex = parseInt(hash.replace('#tab', '')) - 1;
+        if (tabIndex >= 0 && tabIndex < tabs.length) {
+            activateTab(tabIndex);
+        } else {
+            activateTab(0);
+        }
+    } else {
+        activateTab(0);
+    }
 
     // 체크박스를 모두 체크/해제
     function toggleAllCheckboxes(checked) {
