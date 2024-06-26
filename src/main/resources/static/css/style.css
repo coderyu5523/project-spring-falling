@@ -6,8 +6,7 @@
 @import url(login-form.css);
 @import url(join-section.css);
 @import url(join-form.css);
-@import url(profile-password.css);
-@import url(profile-phone.css);
+@import url(profile.css);
 
 /* song  */
 @import url(index.css);
@@ -27,7 +26,7 @@
 /* playlist */
 @import url(storage.css);
 @import url(playlist.css);
-
+@import url(playlist-modal.css);
 
 /* subscription  */
 @import url(subscription-list.css);
@@ -35,4 +34,9 @@
 
 a:link, a:visited {
     color: black;
+}
+
+a {
+    display: block;
+    vertical-align: bottom;
 }

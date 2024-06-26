@@ -1,31 +1,31 @@
 {{>layout/header}}
 <br>
-<div class="main-container">
-    <div class="contents">
-        <div class="album">
+<div class="artist-album-list-main-container">
+    <div class="artist-album-list-contents">
+        <div class="artist-album-list-album">
             <br>
-            <div class="result-item">
-                <div class="album-cover">
+            <div class="artist-album-list-result-item">
+                <div class="artist-album-list-album-cover">
                     <a href="#">
-                        <img src="/images/artist/RIIZE.jpg" alt="Artist Image">
+                        <img src="{{song.artistImage}}" alt="Artist Image">
                     </a>
                     <div>
-                        <a href="#"><i class="play-btn fas fa-solid fa-circle-play"></i></a>
+                        <a href="#"><i class="artist-album-list-play-btn fas fa-solid fa-circle-play"></i></a>
                     </div>
                 </div>
-                <div class="result-info">
+                <div class="artist-album-list-result-info">
                     <a href="#">
-                        <h3 style="font-weight: 600;">RIIZE</h3>
+                        <h3 style="font-weight: 600;">{{song.artistName}}</h3>
                     </a>
-                    <div class="album-info">
-                        <p class="album-category">그룹 | 댄스팝</p>
+                    <div class="artist-album-list-album-info">
+                        <p class="artist-album-list-album-category">{{song.artistType}} | {{song.artistGenre}}</p>
                     </div>
 
-                    <div class="icons">
-                        <a href="#"><i class="btn-add-like fa-regular fa-heart"></i></a>
-                        <a href="#" class="title-play">
-                            <i class="title-play-btn fas fa-play play-button"></i>
-                            <div class="title-play-text">타이틀곡 듣기</div>
+                    <div class="artist-album-list-icons">
+                        <a href="#"><i class="artist-album-list-btn-add-like fa-regular fa-heart"></i></a>
+                        <a href="#" class="artist-album-list-title-play">
+                            <i class="artist-album-list-title-play-btn fas fa-play play-button"></i>
+                            <div class="artist-album-list-title-play-text">타이틀곡 듣기</div>
                         </a>
                     </div>
                 </div>
@@ -33,38 +33,38 @@
         </div>
 
         <br>
-        <div class="tab-button">
-            <button class="song-list">곡</button>
-            <button class="album-list">앨범</button>
+        <div class="artist-album-list-tab-button">
+            <button class="artist-album-list-song-list">곡</button>
+            <button class="artist-album-list-album-list">앨범</button>
         </div>
-        <div class="song-list">
-            <table class="song-list-table">
-                <div class="filter">
-                    <div class="table-menu">
-                        <div class="table-order">
-                            <div class="filter-album-category">
+        <div class="artist-album-list-song-list">
+            <table class="artist-album-list-song-list-table">
+                <div class="artist-album-list-filter">
+                    <div class="artist-album-list-table-menu">
+                        <div class="artist-album-list-table-order">
+                            <div class="artist-album-list-filter-album-category">
                                 <p>
-                                    <a href="#" class="all">전체</a>
+                                    <a href="#" class="artist-album-list-all">전체</a>
                                 </p>
                                 <p>
-                                    <a href="#" class="album-category">정규/싱글</a>
+                                    <a href="#" class="artist-album-list-album-category">정규/싱글</a>
                                 </p>
                                 <p>
-                                    <a href="#" class="participation">참여</a>
+                                    <a href="#" class="artist-album-list-participation">참여</a>
                                 </p>
                                 <p>
                                     |
                                 </p>
                             </div>
-                            <div class="filter-order-by">
+                            <div class="artist-album-list-filter-order-by">
                                 <p>
-                                    <a href="#" class="order-by-date">최신순</a>
+                                    <a href="#" class="artist-album-list-order-by-date">최신순</a>
                                 </p>
                                 <p>
-                                    <a href="#" class="order-by-popularity">인기순</a>
+                                    <a href="#" class="artist-album-list-order-by-popularity">인기순</a>
                                 </p>
                                 <p>
-                                    <a href="#" class="order-by-korean">가나다순</a>
+                                    <a href="#" class="artist-album-list-order-by-korean">가나다순</a>
                                 </p>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                 <tr>
                     <td><input type="checkbox"></th>
                     <td>곡/앨범</th>
-                    <td class="table-artist">아티스트</th>
+                    <td class="artist-album-list-table-artist">아티스트</th>
                     <td>듣기</th>
                     <td>재생목록</th>
                     <td>내 리스트</th>
@@ -84,111 +84,44 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="/images/artist/RIIZE_1stmini.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <div class="title-group">
-                                <div class="song-title">
-                                    <a href="#"></a>
-                                    Siren
-                                    </a>
-                                </div>
-                            </div>
+                {{#song.songList}}
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td class="artist-album-list-table-album-container">
                             <a href="#">
-                                <p class="album-title" style="font-size: 12px;">RIIZING - The 1st Mini Album</p>
+                                <img src="{{albumImage}}" alt="Album Cover">
                             </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">RIIZE</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="play-btn fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="add-playlist-btn fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="add-list-btn fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="more-btn fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="/images/artist/RIIZE_GetAGuitar.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <div class="title-group">
-                                <div class="song-title">
-                                    <a href="#"></a>
-                                    Get A Guitar
-                                    </a>
+                            <div class="artist-album-list-text-container">
+                                <div class="artist-album-list-title-group">
+                                    <div class="artist-album-list-song-title">
+                                        <a href="#"></a>
+                                        {{title}}
+                                        </a>
+                                    </div>
                                 </div>
+                                <a href="#">
+                                    <p class="artist-album-list-album-title" style="font-size: 12px;">{{albumTitle}}</p>
+                                </a>
                             </div>
-                            <a href="#">
-                                <p class="album-title" style="font-size: 12px;">Get A Guitar</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">RIIZE</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="play-btn fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="add-playlist-btn fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="add-list-btn fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="more-btn fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td class="table-album-container">
-                        <a href="#">
-                            <img src="/images/artist/RIIZE_Love119.jpg" alt="Album Cover">
-                        </a>
-                        <div class="text-container">
-                            <div class="title-group">
-                                <div class="song-title">
-                                    <a href="#"></a>
-                                    Love 119
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <p class="album-title" style="font-size: 12px;">Get A Guitar</p>
-                            </a>
-                        </div>
-                    </td>
-                    <td class="table-artist">
-                        <a href="#">RIIZE</a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="play-btn fas fa-play play-button"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="add-playlist-btn fas fa-list icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="add-list-btn fas fa-folder-plus custom-icon"></i></a>
-                    </td>
-                    <td>
-                        <a href="#"><i class="more-btn fas fa-ellipsis-h icon"></i></a>
-                    </td>
-                </tr>
+                        </td>
+                        <td class="artist-album-list-table-artist">
+                            <a href="#">{{artistName}}</a>
+                        </td>
+                        <td>
+                            <a href="#"><i class="artist-album-list-play-btn fas fa-play play-button"></i></a>
+                        </td>
+                        <td>
+                            <a href="#"><i class="artist-album-list-add-playlist-btn fas fa-list icon"></i></a>
+                        </td>
+                        <td>
+                            <a href="#"><i
+                                    class="artist-album-list-add-list-btn fas fa-folder-plus custom-icon"></i></a>
+                        </td>
+                        <td>
+                            <a href="#"><i class="artist-album-list-more-btn fas fa-ellipsis-h icon"></i></a>
+                        </td>
+                    </tr>
+                {{/song.songList}}
                 </tbody>
             </table>
         </div>

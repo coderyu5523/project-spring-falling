@@ -4,11 +4,115 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.projectspringfalling.album.Album;
 import org.example.projectspringfalling.artist.Artist;
+import org.example.projectspringfalling.playlist.Playlist;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 public class SongResponse {
+
+    // 모든 차트의 DTO
+    @NoArgsConstructor
+    @Data
+    public static class AllChartDTO {
+        private List<SongResponse.ChartDTO> mainChart;
+        private List<SongResponse.ChartDTO> globalChart;
+        private List<SongResponse.ChartDTO> domesticChart;
+        private List<SongResponse.ChartDTO> globalPopChart;
+        private List<SongResponse.ChartDTO> globalHipHopChart;
+
+        public AllChartDTO(List<SongResponse.ChartDTO> MainChartDTOs,
+                           List<SongResponse.ChartDTO> globalChartDTOs,
+                           List<SongResponse.ChartDTO> domesticChartDTOs,
+                           List<SongResponse.ChartDTO> globalPopChartDTOs,
+                           List<SongResponse.ChartDTO> globalHipHopChart) {
+            this.mainChart = MainChartDTOs;
+            this.globalChart = globalChartDTOs;
+            this.domesticChart = domesticChartDTOs;
+            this.globalPopChart = globalPopChartDTOs;
+            this.globalHipHopChart = globalHipHopChart;
+        }
+
+    }
+
+    // 각 차트의 DTO
+    @NoArgsConstructor
+    @Data
+    public static class ChartDTO {
+        private Integer index; // 인덱스
+        private Integer songId; // 곡 pk
+        private String title; // 곡 제목
+        private String musicFile; // 곡 파일
+        private String coverImg; // 곡 커버 이미지
+        private Integer albumId; // 앨범 pk
+        private String albumTitle; // 앨범 제목
+        private Integer artistId; // 아티스트 pk
+        private String artistName; // 아티스트 이름
+
+        public ChartDTO(Song song, Album album, Artist artist, Integer index) {
+            this.index = index;
+            this.songId = song.getId();
+            this.title = song.getTitle();
+            this.musicFile = song.getMusicFile();
+            this.coverImg = album.getAlbumImg();
+            this.albumId = album.getId();
+            this.albumTitle = album.getTitle();
+            this.artistId = artist.getId();
+            this.artistName = artist.getName();
+        }
+
+    }
+
+    // 메인페이지
+    @NoArgsConstructor
+    @Data
+    public static class MainDTO {
+        private List<LatestAlbumDTO> latestAlbumList; // 최신 앨범
+        private List<AdminPlaylistDTO> newPlaylist; // 관리자 플레이리스트
+        private List<AdminPlaylistDTO> adminPlaylist; // 관리자 플레이리스트
+
+        public MainDTO(List<LatestAlbumDTO> latestAlbumList, List<AdminPlaylistDTO> newPlaylist, List<AdminPlaylistDTO> adminPlaylist) {
+            this.latestAlbumList = latestAlbumList;
+            this.newPlaylist = newPlaylist;
+            this.adminPlaylist = adminPlaylist;
+        }
+
+        // 최신 앨범
+        @NoArgsConstructor
+        @Data
+        public static class LatestAlbumDTO {
+            private Integer albumId; // 앨범 pk
+            private String albumImage; // 앨범 이미지
+            private String albumTitle; // 앨범 이름
+            private Integer artistId; // 아티스트 pk
+            private String artistName; // 아티스트 이름
+
+            public LatestAlbumDTO(Album album, Artist artist) {
+                this.albumId = album.getId();
+                this.albumImage = album.getAlbumImg();
+                this.albumTitle = album.getTitle();
+                this.artistId = artist.getId();
+                this.artistName = artist.getName();
+            }
+        }
+
+        // 관리자의 최신 플레이리스트
+        // 관리자 플레이리스트
+        @NoArgsConstructor
+        @Data
+        public static class AdminPlaylistDTO {
+            private Integer playlistId; // 플레이리스트 pk
+            private String playlistImg; // 플레이리스트 이미지
+            private String playlistTitle; // 플레이리스트 이름
+
+            public AdminPlaylistDTO(Playlist playlist, String playlistImg) {
+                this.playlistId = playlist.getId();
+                this.playlistImg = playlistImg;
+                this.playlistTitle = playlist.getName();
+            }
+        }
+    }
+
     // 노래 상세보기 DTO
     @NoArgsConstructor
     @Data

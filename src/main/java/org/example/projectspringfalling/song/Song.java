@@ -29,6 +29,7 @@ public class Song {
     private String genre; // 장르
     private Boolean isTitle; // 타이틀 여부
     private String musicFile; // 음악 파일
+    private Long listenCount;
 
     @CreationTimestamp
     private Timestamp createdAt; // 생성 날짜
@@ -41,7 +42,7 @@ public class Song {
     private Artist artist; // 아티스트
 
     @Builder
-    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt, Album album, String musicFile,Artist artist) {
+    public Song(Integer id, String title, String lyrics, String songWriter, String lyricist, String musicVideo, String genre, Boolean isTitle, Timestamp createdAt, Album album, String musicFile,Artist artist,Long listenCount) {
         this.id = id;
         this.title = title;
         this.lyrics = lyrics;
@@ -54,6 +55,7 @@ public class Song {
         this.album = album;
         this.musicFile = musicFile;
         this.artist = artist;
+        this.listenCount = listenCount;
     }
 
     // 인서트용 생성자

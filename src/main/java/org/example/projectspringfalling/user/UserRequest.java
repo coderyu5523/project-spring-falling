@@ -38,4 +38,21 @@ public class UserRequest {
         private String email; // 이메일
         private String password; // 비밀번호
     }
+
+    // 프로필 DTO
+    @Data
+    public static class ProfileDTO {
+        private String provider; // 계정 정보
+        private String email; // 이메일
+        private String subscriptionName; // 이용권 이름
+        private String phone;
+
+
+        public ProfileDTO(String provider, String email, String subscriptionName, String phone) {
+            this.provider = provider;
+            this.email = email;
+            this.subscriptionName = subscriptionName;
+            this.phone = phone;
+        }
+    }
 }

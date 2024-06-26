@@ -2,6 +2,8 @@ package org.example.projectspringfalling.user;
 
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
+import org.example.projectspringfalling.userSubscription.UserSubscription;
+import org.example.projectspringfalling.userSubscription.UserSubscriptionRepository;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -12,6 +14,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.example.projectspringfalling._core.utils.DateUtil.formatDate;
@@ -21,6 +24,47 @@ import static org.example.projectspringfalling._core.utils.DateUtil.formatYear;
 @Service
 public class UserService {
     private final UserRepository userRepository;
+    private final UserSubscriptionRepository userSubscriptionRepository;
+
+    // 카카오 로그아웃
+    @Transactional
+    public void logoutKakao(SessionUser sessionUser) {
+        // RestTemplate 설정
+        RestTemplate rt = new RestTemplate();
+
+        // http header 설정
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
+        headers.add("Authorization", "Bearer " + sessionUser.getAccessToken());
+
+        HttpEntity<MultiValueMap<String, String>> req = new HttpEntity<>(headers);
+
+        // api 요청하기
+        ResponseEntity<String> response = rt.exchange(
+                "https://kapi.kakao.com/v1/user/unlink",
+                HttpMethod.POST,
+                req,
+                String.class);
+
+        System.out.println("로그아웃 성공");
+    }
+
+    // 네이버 로그아웃
+    @Transactional
+    public void logoutNaver(SessionUser sessionUser) {
+        // RestTemplate 설정
+        RestTemplate rt = new RestTemplate();
+
+        String url = String.format(
+                "https://nid.naver.com/oauth2.0/token?grant_type=delete&client_id=B_iv0qTaEJVdKWa_FPzy&client_secret=Svp3dM07pF&access_token=%s&service_provider=NAVER",
+                sessionUser.getAccessToken()
+        );
+
+        // API 호출
+        String response = rt.getForObject(url, String.class);
+
+        System.out.println("로그아웃 성공");
+    }
 
     // 회원가입
     @Transactional
@@ -31,15 +75,15 @@ public class UserService {
 
     // 로그인
     @Transactional
-    public UserResponse.LoginDTO login(UserRequest.LoginDTO reqDTO) {
+    public SessionUser login(UserRequest.LoginDTO reqDTO) {
         User sessionUser = userRepository.findByEmailAndPassword(reqDTO.getEmail(), reqDTO.getPassword())
                 .orElseThrow(() -> new Exception404("존재 하지 않는 회원입니다"));
-        return new UserResponse.LoginDTO(sessionUser);
+        return new SessionUser(sessionUser);
     }
 
     // 카카오 로그인
     @Transactional
-    public UserResponse.LoginDTO kakaoLogin(String code) {
+    public SessionUser kakaoLogin(String code) {
         // 1. code로 카카오에서 토큰 받기 (위임 완료) - OAuth2.0
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
@@ -91,7 +135,7 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return new UserResponse.LoginDTO(userPS);
+            return new SessionUser(userPS, response.getBody().getAccessToken());
         } else {
             // 강제 회원가입
             User user = User.builder()
@@ -100,13 +144,13 @@ public class UserService {
                     .provider("Kakao")
                     .build();
             User returnUser = userRepository.save(user);
-            return new UserResponse.LoginDTO(returnUser);
+            return new SessionUser(returnUser, response.getBody().getAccessToken());
         }
     }
 
     // 네이버 로그인
     @Transactional
-    public UserResponse.LoginDTO naverLogin(String code) {
+    public SessionUser naverLogin(String code) {
         // 1. code로 네이버에서 토큰 받기 (위임 완료) - OAuth2.0
         // RestTemplate 설정
         RestTemplate rt = new RestTemplate();
@@ -159,7 +203,7 @@ public class UserService {
 
         // 4. 있으면 조회된 유저 정보를 리턴, 없으면 강제 회원가입
         if (userPS != null) {
-            return new UserResponse.LoginDTO(userPS);
+            return new SessionUser(userPS, response.getBody().getAccessToken());
         } else {
             User user = User.builder()
                     .email(email)
@@ -169,7 +213,30 @@ public class UserService {
                     .provider("Naver")
                     .build();
             User returnUser = userRepository.save(user);
-            return new UserResponse.LoginDTO(returnUser);
+            return new SessionUser(returnUser, response.getBody().getAccessToken());
         }
+    }
+
+    // 프로필에 활성화된 이용권 이름 넣기
+    public Optional<UserSubscription> getActiveUserSubscription(Integer userId) {
+        return userSubscriptionRepository.findByUserIdAndStatus(userId, "ACTIVE");
+    }
+
+    // 현재 비밀번호 일치 확인
+    public Boolean passwordCheck(String email, String inputPassword) {
+        User user = userRepository.findByEmail(email);
+        boolean isMatch = inputPassword.equals(user.getPassword()); // 입력된 비밀번호와 저장된 비밀번호 비교
+        return isMatch;
+    }
+
+    @Transactional
+    public UserResponse.UpdateDTO update(SessionUser sessionUser, String password, String phone) {
+        User user = userRepository.findById(sessionUser.getId()).orElseThrow(() -> new Exception404("조회된 정보가 없습니다."));
+        if(phone == null){
+            user.update(user.getPhone(),password);
+        }else if(password == null){
+            user.update(phone,user.getPassword());
+        }
+        return new UserResponse.UpdateDTO(user) ;
     }
 }

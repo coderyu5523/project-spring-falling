@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="/css/current-playlist.css">
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -15,9 +13,10 @@
 <body>
 <div class="container">
     <div class="left-panel">
-        <div style="font-size: 20px; font-weight: 600; margin-bottom: 10px">오래된 노래</div>
-        <div style="font-size: 15px; color: gray; margin-bottom: 20px">허각&임한별&이무진&이진성&김희재&안녕 ></div>
-        <img src="../sample.jpg" class="playlist-img">
+        <div id="song-name" style="font-size: 20px; font-weight: 600; margin-bottom: 10px">재생중인 음악이 없습니다.</div>
+        <div id="artist-name" style="font-size: 15px; color: gray; margin-bottom: 20px"></div>
+        <img id="cover-image" src="/upload/album/main-cover.jpg" style="width: 400px">
+        <div id="lyrics-list" style="font-size: 15px; color: gray; margin-bottom: 20px; white-space: pre-line">가사가 없습니다.</div>
     </div>
     <div class="right-panel">
         <div>
@@ -28,65 +27,8 @@
                 <input type="text" placeholder="재생목록에서 검색하세요.">
             </div>
 
-            <ul>
-                <li class="d-flex">
-                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
-                    <div class="info">
-                        <a href="#">
-                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
-                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
-                        </a>
-                    </div>
-                    <div class="icon-container">
-                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
-                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
-                    </div>
-                </li>
-
-                <li class="d-flex">
-                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
-                    <div class="info">
-                        <a href="#">
-                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
-                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
-                        </a>
-                    </div>
-                    <div class="../icon-container">
-                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
-                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
-                    </div>
-                </li>
-
-
-                <li class="d-flex">
-                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
-                    <div class="info">
-                        <a href="#">
-                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
-                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
-                        </a>
-                    </div>
-                    <div class="icon-container">
-                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
-                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
-                    </div>
-                </li>
-
-
-                <li class="d-flex">
-                    <img src="../sample.jpg" class="playlist-img" style="width: 50px;">
-                    <div class="info">
-                        <a href="#">
-                            <div style="font-size: 15px; font-weight: 600">오래된 만남</div>
-                            <div style="font-size: 12px; color: gray">허각&임한별&이무진&이진성&김희재&안녕</div>
-                        </a>
-                    </div>
-                    <div class="icon-container">
-                        <a href="#"><i class="album-icon fas fa-list icon" style="margin-right: 10px"></i></a>
-                        <a href="#"><i class="fas fa-ellipsis-v icon" style="color:white;"></i></a>
-                    </div>
-                </li>
-
+            <ul id="song-list">
+                <!-- The playlist will be dynamically generated here -->
             </ul>
         </div>
     </div>
@@ -101,82 +43,125 @@
     <div class="controls">
         <div></div>
         <div>
-            <button onclick="playPrevious()">&#9664;&#9664;</button>
-            <button onclick="playPause()">&#9654;</button>
-            <button onclick="playNext()">&#9654;&#9654;</button>
+            <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
+            <button id="prev-btn">&#9664;&#9664;</button>
+            <button id="play-btn">&#9654;</button>
+            <button id="next-btn">&#9654;&#9654;</button>
+            <button id="mode-btn"><i class="fa-solid fa-repeat"></i></button>
         </div>
         <div><a class="add-page" style="cursor: pointer"><i class="fa-solid fa-sliders"></i></a></div>
-
     </div>
-    <audio id="audioPlayer">
-        <source src="../sample.mp3" type="audio/mpeg">
+    <audio id="audio-player">
+        <source src="" type="audio/mpeg">
     </audio>
 </div>
 
 <script>
     $(document).ready(function () {
-        // audioPlayer 변수에 저장
-        const $audioPlayer = $('#audioPlayer');
+        const audioPlayer = $('#audio-player')[0];
+        const songList = $('#song-list');
+        const prevBtn = $('#prev-btn');
+        const playBtn = $('#play-btn');
+        const nextBtn = $('#next-btn');
+        const modeBtn = $('#mode-btn');
+        const shuffleBtn = $('#shuffle-btn');
+        const songName = $('#song-name');
+        const artistName = $('#artist-name');
+        const coverImage = $('#cover-image');
+        const currentTimeSpan = $('#currentTime');
+        const progressBar = $('#progressBar');
+        const durationSpan = $('#duration');
+        const lyricsList = $('#lyrics-list');
 
-        // .controls 클래스 내부의 두 번째 버튼(가운데 버튼)을 선택하여 변수에 저장
-        const $playPauseButton = $('.controls button:nth-child(2)');
+        const PLAY_MODES = [
+            {icon: '<i class="fa-solid fa-repeat"></i>', name: 'normal'},
+            {icon: '<i class="fas fa-repeat" style="color: #3f3fff"></i> <span>1</span>', name: 'repeat-one'},
+            {icon: '<i class="fa-solid fa-repeat" style="color: #3f3fff"></i>', name: 'repeat-all'}
+        ];
 
-        // progressBar 아이디 변수로 저장.
-        const $progressBar = $('#progressBar');
+        let currentIndex = 0;
+        let previousIndex = null;
+        let songs = [];
+        let currentModeIndex = 0; // 초기 모드는 normal
+        let currentLyrics = [];
+        let lyricsIndex = 0;
+        let listenCount = 0;
+        let isOneMinutePassed = false;
 
-        // currentTime 아이디 변수 저장
-        const $currentTimeSpan = $('#currentTime');
-
-        // duration 아이디 변수 저장
-        const $durationSpan = $('#duration');
-
-        // 오디오 플레이어의 재생 시간이 업데이트될 때마다 updateProgress 함수 호출
-        $audioPlayer.on('timeupdate', updateProgress);
-
-        // 오디오 데이터가 로드되면 progressBar의 최대값을 오디오의 전체 길이로 설정.
-        $audioPlayer.on('loadedmetadata', function () {
-            $progressBar.attr('max', $audioPlayer[0].duration);
-
-            // durationSpan에 오디오의 전체 길이를 포맷하여 텍스트로 설정합니다.
-            $durationSpan.text(formatTime($audioPlayer[0].duration));
+        // 플레이리스트 데이터 불러옴
+        $.getJSON('/api/playlists/current', function (data) {
+            songs = data;
+            renderPlaylist();
         });
 
-        // playPauseButton이 클릭되면 playPause 함수를 호출합니다.
-        $playPauseButton.on('click', function () {
-            playPause();
-        });
-
-        function playPause() {
-            if ($audioPlayer[0].paused) {
-                $audioPlayer[0].play();
-                $playPauseButton.html('&#10074;&#10074;');
-                // 오디오가 일시 정지 상태라면 재생하고, 버튼의 HTML을 일시 정지 아이콘으로 변경합니다.
+        // 플레이 리스트 재생/일시정지 버튼 처리
+        playBtn.on('click', function () {
+            if (audioPlayer.src === '') {
+                // 버튼 클릭 시 첫 번째 노래 재생
+                playSong(0);
+            } else if (audioPlayer.paused) {
+                audioPlayer.play();
             } else {
-                $audioPlayer[0].pause();
-                $playPauseButton.html('&#9654;');
-                // 오디오가 재생 중이라면 일시 정지하고, 버튼의 HTML을 재생 아이콘으로 변경합니다.
+                audioPlayer.pause();
             }
+        });
+
+        // 노래 재생 함수
+        function playSong(index) {
+            songName.text(songs[index].songTitle);
+            artistName.text(songs[index].artistName);
+            audioPlayer.src = songs[index].musicFile;
+            coverImage.attr('src', songs[index].albumImg);
+            audioPlayer.play();
+
+            // 가사 업데이트
+            updateLyrics(songs[index].lyrics);
+
+            // 이전에 재생 중이었던 노래의 active 속성 제거
+            if (previousIndex !== null && previousIndex !== index) {
+                songList.children().eq(previousIndex).removeClass('active');
+            }
+            songList.children().eq(index).addClass('active');
+
+            previousIndex = index;
+            currentIndex = index;
         }
 
-        // 이전 곡 재생 함수
-        function playPrevious() {
-
-        }
-
-        // 다음 곡 재생 함수
-        function playNext() {
+        // 가사 업데이트 함수
+        function updateLyrics(lyrics) {
+            lyricsList.empty();
+            currentLyrics = lyrics;
+            lyricsIndex = 0;
+            lyricsList.append('<p>' + currentLyrics[lyricsIndex].text + '</p>');
         }
 
         // progressBar의 값을 현재 재생 시간으로 업데이트
         function updateProgress() {
-            $progressBar.val($audioPlayer[0].currentTime);
+            progressBar.val(audioPlayer.currentTime);
             // currentTimeSpan에 현재 재생 시간을 포맷, 텍스트로 출력
-            $currentTimeSpan.text(formatTime($audioPlayer[0].currentTime));
+            currentTimeSpan.text(formatTime(audioPlayer.currentTime));
+            updateCurrentLyrics(audioPlayer.currentTime);
+
+            // 1분 이상 재생되었는지 확인
+            if (!isOneMinutePassed && audioPlayer.currentTime >= 60) {
+                isOneMinutePassed = true;
+                listenCount++;
+                console.log('Listen count incremented:', listenCount); // listenCount 증가 확인용 콘솔 로그
+            }
+        }
+
+        // 현재 시간에 맞는 가사 표시 함수
+        function updateCurrentLyrics(currentTime) {
+            if (lyricsIndex < currentLyrics.length - 1 && currentTime >= currentLyrics[lyricsIndex + 1].time) {
+                lyricsIndex++;
+                lyricsList.empty();
+                lyricsList.append('<p>' + currentLyrics[lyricsIndex].text + '</p>');
+            }
         }
 
         // progressBar의 값이 변경될 때 오디오의 현재 재생 시간을 progressBar의 값으로 설정
-        $progressBar.on('change', function () {
-            $audioPlayer[0].currentTime = $progressBar.val();
+        progressBar.on('change', function () {
+            audioPlayer.currentTime = progressBar.val();
         });
 
         // 초를 분과 초로 변환하여 "분:초" 형식의 문자열로 표시
@@ -185,10 +170,133 @@
             const secs = Math.floor(seconds % 60);
             return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
         }
+
+        // 노래 목록 클릭 시 재생
+        songList.on('click', 'li', function () {
+            const index = $(this).index();
+            playSong(index);
+        });
+
+        // 오디오 플레이어의 재생 시간이 업데이트될 때마다 updateProgress 함수 호출
+        $(audioPlayer).on('timeupdate', updateProgress);
+
+        // 오디오 데이터가 로드되면 progressBar의 최대값을 오디오의 전체 길이로 설정.
+        $(audioPlayer).on('loadedmetadata', function () {
+            progressBar.attr('max', audioPlayer.duration);
+
+            // durationSpan에 오디오의 전체 길이를 포맷하여 텍스트로 설정합니다.
+            durationSpan.text(formatTime(audioPlayer.duration));
+        });
+
+        // 모드 변경 버튼 클릭 이벤트 리스너
+        modeBtn.on('click', function () {
+            currentModeIndex = (currentModeIndex + 1) % PLAY_MODES.length;
+            updatePlayMode();
+        });
+
+        // 모드 업데이트 함수
+        function updatePlayMode() {
+            const playMode = PLAY_MODES[currentModeIndex];
+            modeBtn.html(playMode.icon);
+
+            switch (playMode.name) {
+                case 'normal':
+                    audioPlayer.loop = false;
+                    break;
+                case 'repeat-all':
+                    audioPlayer.loop = false;
+                    break;
+                case 'repeat-one':
+                    audioPlayer.loop = true;
+                    break;
+            }
+        }
+
+        // 오디오 플레이어가 끝났을 때 이벤트 처리
+        $(audioPlayer).on('ended', function () {
+            if (PLAY_MODES[currentModeIndex].name === 'repeat-one') {
+                audioPlayer.play();
+            } else if (PLAY_MODES[currentModeIndex].name === 'repeat-all') {
+                currentIndex = (currentIndex + 1) % songs.length;
+                if (currentIndex === 0) {
+                    playSong(0);
+                } else {
+                    playSong(currentIndex);
+                }
+            } else {
+                currentIndex = (currentIndex + 1) % songs.length;
+                if (currentIndex === 0) {
+                    audioPlayer.pause();
+                } else {
+                    playSong(currentIndex);
+                }
+            }
+        });
+
+        // 셔플 버튼 클릭 이벤트 리스너
+        shuffleBtn.on('click', function () {
+            shuffleArray(songs);
+            renderPlaylist();
+            playSong(0);
+        });
+
+        // 플레이리스트 렌더링 함수
+        function renderPlaylist() {
+            songList.empty();
+            songs.forEach((song, index) => {
+                const li = $('<li>').addClass('d-flex'); // 'd-flex' 클래스를 추가하여 Flexbox 사용
+                const img = $('<img>').attr('src', song.albumImg).addClass('playlist-img').css('width', '50px');
+                const infoDiv = $('<div>').addClass('info');
+                const a = $('<a>').attr('href', '#');
+                const titleDiv = $('<div>').text(song.songTitle).css({'font-size': '15px', 'font-weight': '600'});
+                const artistDiv = $('<div>').text(song.artistName).css({'font-size': '12px', 'color': 'gray'});
+
+                a.append(titleDiv).append(artistDiv);
+                infoDiv.append(a);
+
+                const iconContainer = $('<div>').addClass('icon-container');
+                const listIcon = $('<a>').attr('href', '#').append($('<i>').addClass('album-icon fas fa-list icon').css('margin-right', '10px'));
+                const moreIcon = $('<a>').attr('href', '#').append($('<i>').addClass('fas fa-ellipsis-v icon').css('color', 'white'));
+
+                iconContainer.append(listIcon).append(moreIcon);
+
+                li.append(img).append(infoDiv).append(iconContainer);
+
+                songList.append(li);
+            });
+        }
+
+        // 배열 셔플 함수
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // 재생/일시정지 상태에 따라 버튼 텍스트 변경
+        $(audioPlayer).on('play', function () {
+            playBtn.html('<i class="fas fa-pause"></i>');
+        });
+
+        $(audioPlayer).on('pause', function () {
+            playBtn.html('<i class="fas fa-play"></i>');
+        });
+
+        // playPrevious, playNext 함수 추가
+        prevBtn.on('click', playPrevious);
+        nextBtn.on('click', playNext);
+
+        // 초기 모드 설정
+        updatePlayMode();
     });
+</script>
+
+
 
 </script>
 
-</body>
 
+</body>
 </html>

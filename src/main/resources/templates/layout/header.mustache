@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
 </head>
 <body>
 <header class="header-main" style="margin-top: 10px">
@@ -46,48 +47,16 @@
             </form>
         </div>
         <div class="auth-links">
-            <a href="/login-form" class="text-body">로그인</a>
-            <a href="/join-section" class="text-body">회원가입</a>
-            <!--                <a href="/logout" class="text-body">로그아웃</a>-->
-            <!--                <a href="/profile" class="text-body">마이페이지</a>-->
+            {{#sessionUser}}
+                <a href="/logout" class="text-body">로그아웃</a>
+                <a href="/profile" class="text-body">마이페이지</a>
+            {{/sessionUser}}
+            {{^sessionUser}}
+                <a href="/login-form" class="text-body">로그인</a>
+                <a href="/join-section" class="text-body">회원가입</a>
+            {{/sessionUser}}
         </div>
     </nav>
 </header>
 <!-- header end -->
-<script>
-        $(document).ready(function () {
-        $('#search-keyword').autocomplete({
-            source: function (request, response) {
-                $.ajax({
-                    url: '/search/auto',
-                    type: 'GET',
-                    data: { keyword: request.term },
-                    dataType: 'json',
-                    success: function (data) {
-                        console.log('통신 확인:', data);
-                        response($.map(data.body, function (item) {
-                            return {
-                                label: item.songTitle,
-                                value: item.songTitle,
-                                songTitle: item.songTitle,
-                                albumTitle: item.albumTitle,
-                                artistName: item.artistName,
-                            };
-                        }));
-                    },
-                    error: function (xhr, status, error) {
-                        console.error('Error:', error);
-                        console.error('Status:', status);
-                        console.error('Response:', xhr.responseText);
-                    }
-                });
-            },
-            minLength: 1,
-            select: function (event, ui) {
-                console.log('Selected ID:', ui.item.id);
-            }
-        });
-    });
-</script>
-</body>
-</html>
+<script type="module" src="/js/header.js"></script>

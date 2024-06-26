@@ -79,8 +79,8 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
-    width: 250px;
+    margin-right: 20px;
+    width: 150px;
 }
 
 .right-panel li .info a {
@@ -149,7 +149,7 @@ body {
 }
 
 .search-bar input {
-    width: 400px;
+    width: 300px;
     padding: 8px 12px 8px 40px; /* 왼쪽 패딩을 늘려 아이콘 공간 확보 */
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -165,6 +165,4 @@ body {
     color: #000000;
 }
 
-.add-page{
 
-}
