@@ -41,6 +41,18 @@ public class RestResponse {
         }
     }
 
+    // 보관함 - 좋아요(곡)
+    @AllArgsConstructor
+    @Data
+    public static class StorageLikeSong {
+        private Integer songId;
+        private Integer albumId;
+        private String albumImg;
+        private String songName;
+        private String albumTitle;
+        private String artistName;
+
+    }
 
     // 재생중인 플레이리스트
     @Data
@@ -85,5 +97,6 @@ public class RestResponse {
             this.playlistName = playlist.getName();
         }
     }
+
 
 }

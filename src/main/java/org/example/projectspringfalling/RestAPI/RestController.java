@@ -3,6 +3,7 @@ package org.example.projectspringfalling.RestAPI;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
+import org.example.projectspringfalling.like.LikeService;
 import org.example.projectspringfalling.playlist.PlaylistService;
 import org.example.projectspringfalling.playlistSong.PlaylistSongRequest;
 import org.example.projectspringfalling.playlistSong.PlaylistSongService;
@@ -29,6 +30,7 @@ public class RestController {
     private final PlaylistService playlistService;
     private final PlaylistSongService playlistSongService;
     private final UserService userService;
+    private final LikeService likeService;
 
     // 검색 자동완성 기능
     @GetMapping("/search/auto")
@@ -43,6 +45,13 @@ public class RestController {
     public ResponseEntity<?> storageMyList() {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         return ResponseEntity.ok(new ApiUtil<>(playlistService.getMyList(sessionUser.getId())));
+    }
+
+    // 보관함 - 좋아요(곡)
+    @GetMapping("/storage/like-song")
+    public ResponseEntity<?> storageLikedSongs() {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        return ResponseEntity.ok(new ApiUtil<>(likeService.getLikedSongs(sessionUser.getId())));
     }
 
     // 플레이리스트 추가하기(모달)
