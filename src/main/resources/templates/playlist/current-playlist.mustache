@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-
 <body>
 <div class="container">
     <div class="left-panel">
@@ -58,6 +56,17 @@
 
 <script>
     $(document).ready(function () {
+        // Local Storage에서 데이터 읽기
+        var songData = JSON.parse(localStorage.getItem('currentSong'));
+
+        if (songData) {
+            // 데이터를 페이지에 반영
+            $('#song-name').text(songData.title);
+            $('#artist-name').text(songData.artistName);
+            $('#cover-image').attr('src', songData.coverImg);
+            $('#audio-player').attr('src', songData.musicFile);
+        }
+
         const audioPlayer = $('#audio-player')[0];
         const songList = $('#song-list');
         const prevBtn = $('#prev-btn');
@@ -292,11 +301,6 @@
         updatePlayMode();
     });
 </script>
-
-
-
-</script>
-
 
 </body>
 </html>

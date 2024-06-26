@@ -149,8 +149,8 @@ body {
 }
 
 .search-bar input {
-    width: 300px;
-    padding: 8px 12px 8px 40px; /* 왼쪽 패딩을 늘려 아이콘 공간 확보 */
+    width: 180px;
+    padding: 8px 12px 8px 40px;
     border: 1px solid #ccc;
     border-radius: 20px;
     font-size: 14px;

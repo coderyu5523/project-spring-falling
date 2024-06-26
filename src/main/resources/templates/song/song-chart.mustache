@@ -55,7 +55,7 @@
                         </a>
                     </td>
                     <td><a href="#">{{artistName}}</a></td>
-                    <td><a href="#"><i class="fa-solid fa-play"></i></a></td>
+                    <td><a href="#" class="play-btn" data-musicfile="{{musicFile}}"><i class="fa-solid fa-play"></i></a></td>
                     <td><a href="#"><i class="fa-solid fa-list-ul"></i></a></td>
                     <td><a href="#"><i class="fa-solid fa-folder-plus"></i></a></td>
                     <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
@@ -68,10 +68,33 @@
     </div>
 
     <div id="content2" class="chart-main tab-content active-content">
-
+        <!-- 다른 콘텐츠들 -->
     </div>
-
 </div>
 <script type="module" src="/js/song-chart.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.chart-main-table-body a.play-btn').click(function(event) {
+            event.preventDefault();
+
+            // 데이터 가져오기
+            var songRow = $(this).closest('tr');
+            var songData = {
+                index: songRow.find('td:eq(1) a').text(),
+                coverImg: songRow.find('.chart-img').attr('src'),
+                title: songRow.find('.chart-main-table-body-img span div:first-child').text(),
+                albumTitle: songRow.find('.chart-album-name').text(),
+                artistName: songRow.find('td:eq(3) a').text(),
+                musicFile: $(this).data('musicfile')
+            };
+
+            // Local Storage에 데이터 저장
+            localStorage.setItem('currentSong', JSON.stringify(songData));
+
+            // 새로운 팝업 창 열기
+            window.open('playlists/current', '플레이리스트', 'width=1200,height=700');
+        });
+    });
+</script>
 
 {{>layout/footer}}
