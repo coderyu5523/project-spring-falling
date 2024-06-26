@@ -41,7 +41,7 @@ public class SongController {
         SongResponse.SearchDTO reponseDTO = songService.searchKeyword(keyword);
         request.setAttribute("reponseDTO", reponseDTO);
         return "search";
-    }`
+    }
 
     // 차트별 페이지
     @GetMapping("/song-chart")
