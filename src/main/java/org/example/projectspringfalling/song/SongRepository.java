@@ -10,6 +10,14 @@ import java.util.Optional;
 
 public interface SongRepository extends JpaRepository<Song, Integer> {
 
+    // 해외 힙합 차트
+    @Query("SELECT s FROM Song s JOIN FETCH s.album JOIN FETCH s.artist WHERE s.album.nationality='해외' AND s.genre='HipHop' ORDER BY s.listenCount DESC")
+    List<Song> findGlobalHipHopChart();
+
+    // 해외 팝 차트
+    @Query("SELECT s FROM Song s JOIN FETCH s.album JOIN FETCH s.artist WHERE s.album.nationality='해외' AND s.genre='Pop' ORDER BY s.listenCount DESC")
+    List<Song> findGlobalPopChart();
+
     // 국내 발라드 차트
     @Query("SELECT s FROM Song s JOIN FETCH s.album JOIN FETCH s.artist WHERE s.album.nationality='국내' AND s.genre='Ballad' ORDER BY s.listenCount DESC")
     List<Song> findDomesticBalladChart();

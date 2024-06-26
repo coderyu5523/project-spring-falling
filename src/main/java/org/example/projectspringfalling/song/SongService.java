@@ -48,6 +48,22 @@ public class SongService {
                 .collect(Collectors.toList());
     }
 
+    // 해외 팝 차트
+    public List<SongResponse.ChartDTO> globalPopChart() {
+        List<Song> songList = songRepository.findGlobalPopChart();
+        return IntStream.range(0, songList.size())
+                .mapToObj(i -> new SongResponse.ChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
+                .collect(Collectors.toList());
+    }
+
+    // 해외 힙합 차트
+    public List<SongResponse.ChartDTO> globalHipHopChart() {
+        List<Song> songList = songRepository.findGlobalHipHopChart();
+        return IntStream.range(0, songList.size())
+                .mapToObj(i -> new SongResponse.ChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
+                .collect(Collectors.toList());
+    }
+
     // 메인 페이지
     public SongResponse.MainDTO main() {
 
