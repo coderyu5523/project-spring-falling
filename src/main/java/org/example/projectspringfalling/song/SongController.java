@@ -46,8 +46,11 @@ public class SongController {
     // 차트별 페이지
     @GetMapping("/song-chart")
     public String songChart(HttpServletRequest request) {
-        List<SongResponse.MainChartDTO> resp = songService.mainChart();
-        request.setAttribute("chart", resp);
+        List<SongResponse.ChartDTO> MainChartDTOs = songService.mainChart(); // 메인 차트
+        List<SongResponse.ChartDTO> globalChartDTOs = songService.globalChart(); // 해외 소셜 차트
+        List<SongResponse.ChartDTO> domesticChartDTOs = songService.domesticBalladChart(); // 국내 발라드 차트
+        SongResponse.AllChartDTO resp = new SongResponse.AllChartDTO(MainChartDTOs, globalChartDTOs, domesticChartDTOs);
+        request.setAttribute("all", resp);
         return "song/song-chart";
     }
 

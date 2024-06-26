@@ -11,10 +11,26 @@ import java.util.List;
 
 public class SongResponse {
 
-    // 메인 차트
+    // 모든 차트의 DTO
     @NoArgsConstructor
     @Data
-    public static class MainChartDTO {
+    public static class AllChartDTO {
+        private List<SongResponse.ChartDTO> mainChart;
+        private List<SongResponse.ChartDTO> globalChart;
+        private List<SongResponse.ChartDTO> domesticChart;
+
+        public AllChartDTO(List<SongResponse.ChartDTO> MainChartDTOs, List<SongResponse.ChartDTO> globalChartDTOs, List<SongResponse.ChartDTO> domesticChartDTOs) {
+            this.mainChart = MainChartDTOs;
+            this.globalChart = globalChartDTOs;
+            this.domesticChart = domesticChartDTOs;
+        }
+
+    }
+
+    // 각 차트의 DTO
+    @NoArgsConstructor
+    @Data
+    public static class ChartDTO {
         private Integer index; // 인덱스
         private Integer songId; // 곡 pk
         private String title; // 곡 제목
@@ -25,7 +41,7 @@ public class SongResponse {
         private Integer artistId; // 아티스트 pk
         private String artistName; // 아티스트 이름
 
-        public MainChartDTO(Song song, Album album, Artist artist, Integer index) {
+        public ChartDTO(Song song, Album album, Artist artist, Integer index) {
             this.index = index;
             this.songId = song.getId();
             this.title = song.getTitle();
