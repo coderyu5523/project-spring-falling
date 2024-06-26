@@ -56,7 +56,7 @@
                     </td>
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
-                        <a href="#" class="play-btn" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                        <a href="#" class="play-btn" data-songId="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -104,7 +104,7 @@
                     </td>
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
-                        <a href="#" class="play-btn" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                        <a href="#" class="play-btn" data-songId="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -152,7 +152,7 @@
                     </td>
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
-                        <a href="#" class="play-btn" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                        <a href="#" class="play-btn" data-id="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -200,7 +200,7 @@
                     </td>
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
-                        <a href="#" class="play-btn" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                        <a href="#" class="play-btn" data-songId="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -263,7 +263,7 @@
                     </td>
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
-                        <a href="#" class="play-btn" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                        <a href="#" class="play-btn" data-songId="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -311,6 +311,7 @@
 
             // 데이터 가져오기
             var songData = {
+                songId : $(this).data('songId'),
                 index: $(this).data('index'),
                 title: $(this).data('title'),
                 artistName: $(this).data('artist'),
