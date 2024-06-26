@@ -35,3 +35,7 @@
 a:link, a:visited {
     color: black;
 }
+a {
+    display: block;
+    vertical-align: bottom;
+}
