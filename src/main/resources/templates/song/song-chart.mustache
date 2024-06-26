@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/css/current-playlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
 {{>layout/header}}
 
 <div class="chart">
@@ -152,7 +165,7 @@
                     </td>
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
-                        <a href="#" class="play-btn" data-id="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                        <a href="#" class="play-btn" data-songId="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -311,13 +324,15 @@
 
             // 데이터 가져오기
             var songData = {
-                songId : $(this).data('songId'),
+                songId : $(this).data('songid'), // 데이터 속성 이름을 소문자로 변경
                 index: $(this).data('index'),
                 title: $(this).data('title'),
                 artistName: $(this).data('artist'),
                 coverImg: $(this).data('cover'),
                 musicFile: $(this).data('music')
             };
+
+            console.log("Song Data: ", songData);
 
             // Local Storage에 데이터 저장
             localStorage.setItem('currentSong', JSON.stringify(songData));
@@ -328,4 +343,4 @@
     });
 </script>
 
-{{>layout/footer}}
+{{>layout/footer
