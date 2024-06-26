@@ -538,7 +538,7 @@ VALUES ('천상연 (웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB))', 'YG PL
         웹툰 ''선녀외전''은 네이버 웹툰 매일 플러스에서 만나볼 수 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕', 37, '2024-03-24',
+VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕.jpg', 37, '2024-03-24',
         '"왜 하필 이때가 떠올랐을까. 만약 여기서 내가 죽는다면, 마지막 순간에 네 생각을 하는 걸까?"
 
         눈물의 여왕 3부 수렵 사냥 중 갑작스러운 멧돼지의 습격과 환영으로 위태로운 상황을 맞이한 ''해인''(김지원 분). 죽음을 앞둔 순간, 가장 먼저 떠오른 것은 언제나 곁에 있어주겠다던 남편 ''현우''. 그리고 거짓말처럼 ''현우''는 ''해인'' 앞에 나타났다.

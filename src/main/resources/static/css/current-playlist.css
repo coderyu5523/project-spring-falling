@@ -45,14 +45,16 @@ body {
 .right-panel li {
     padding: 10px 0;
     border-bottom: 1px solid #333;
-    display: flex; align-items: center
+    display: flex;
+    align-items: center
 }
 
 .right-panel li a {
     color: white;
     text-decoration: none;
 }
-.right-panel li img{
+
+.right-panel li img {
     margin-right: 10px;
 }
 
@@ -149,7 +151,7 @@ body {
 }
 
 .search-bar input {
-    width: 300px;
+    width: 180px;
     padding: 8px 12px 8px 40px; /* 왼쪽 패딩을 늘려 아이콘 공간 확보 */
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -165,4 +167,7 @@ body {
     color: #000000;
 }
 
-
+.song-list {
+    overflow-y: scroll;
+    height: 300px;
+}
