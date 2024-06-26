@@ -46,7 +46,7 @@
             <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
             <button id="prev-btn">&#9664;&#9664;</button>
             <button id="play-btn">&#9654;</button>
-            <button id="next-btn">&#9654;&#9654;</button>
+            <button id="next-btn">&#9654;&#9654;"></button>
             <button id="mode-btn"><i class="fa-solid fa-repeat"></i></button>
         </div>
         <div><a class="add-page" style="cursor: pointer"><i class="fa-solid fa-sliders"></i></a></div>
@@ -58,6 +58,17 @@
 
 <script>
     $(document).ready(function () {
+        // Local Storage에서 데이터 읽기
+        var songData = JSON.parse(localStorage.getItem('currentSong'));
+
+        if (songData) {
+            // 데이터를 페이지에 반영
+            $('#song-name').text(songData.title);
+            $('#artist-name').text(songData.artistName);
+            $('#cover-image').attr('src', songData.coverImg);
+            $('#audio-player').attr('src', songData.musicFile);
+        }
+
         const audioPlayer = $('#audio-player')[0];
         const songList = $('#song-list');
         const prevBtn = $('#prev-btn');
@@ -292,11 +303,5 @@
         updatePlayMode();
     });
 </script>
-
-
-
-</script>
-
-
 </body>
 </html>
