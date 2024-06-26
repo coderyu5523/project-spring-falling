@@ -207,9 +207,11 @@
 
 .storage-tabs-like-artists {
     margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 70px;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 }
 
 .storage-tabs-like-artist-box {

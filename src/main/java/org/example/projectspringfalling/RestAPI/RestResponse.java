@@ -70,6 +70,16 @@ public class RestResponse {
         }
     }
 
+    // 보관함 - 좋아요(아티스트)
+    @AllArgsConstructor
+    @Data
+    public static class StorageLikeArtists {
+        private Integer artistId;
+        private String artistImg;
+        private String artistName;
+        private String artistType;
+    }
+
     // 재생중인 플레이리스트
     @Data
     public static class PlaylistDTO {

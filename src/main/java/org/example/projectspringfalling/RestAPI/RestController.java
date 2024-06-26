@@ -61,6 +61,13 @@ public class RestController {
         return ResponseEntity.ok(new ApiUtil<>(likeService.getLikedAlbums(sessionUser.getId())));
     }
 
+    // 보관함 - 좋아요(아티스트)
+    @GetMapping("/storage/like-artist")
+    public ResponseEntity<?> storageLikedArtists() {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        return ResponseEntity.ok(new ApiUtil<>(likeService.getLikedArtists(sessionUser.getId())));
+    }
+
     // 플레이리스트 추가하기(모달)
     @PostMapping("/add-playlist")
     public ResponseEntity<?> addPlaylist(String playlistName) {

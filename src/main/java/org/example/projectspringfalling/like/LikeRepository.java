@@ -16,4 +16,7 @@ public interface LikeRepository extends JpaRepository<Like, Integer> {
     @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$StorageLikeAlbums(a.id, a.albumImg, a.title, ar.name, a.createdAt, a.category) FROM Like l JOIN l.album a JOIN a.artist ar WHERE l.user.id = :userId")
     List<RestResponse.StorageLikeAlbums> findAllLikedAlbums(Integer userId);
 
+    @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$StorageLikeArtists(a.id, a.artistImg, a.name, a.artistType) FROM Like l JOIN l.artist a WHERE l.user.id = :userId")
+    List<RestResponse.StorageLikeArtists> findAllLikedArtists(Integer userId);
+
 }

@@ -40,7 +40,7 @@ $(document).ready(function () {
                 getContent('/storage/like-album', likeAlbums);
                 break;
             case 'tab4':
-                getContent('/storage/latest', latestList);
+                getContent('/storage/like-artist', likeArtists);
                 break;
             case 'tab5':
                 getContent('/storage/latest', latestList);
@@ -148,6 +148,28 @@ $(document).ready(function () {
                     <a href="#"><i class="album-icon fas fa-list icon"></i></a>
                     <a href="#"><i class="album-icon fas fa-folder-plus custom-icon"></i></a>
                 </div>
+            </div>
+        </div>
+            `;
+        }).join('') + `</div>`;
+    }
+
+    // 좋아요 - 아티스트
+    function likeArtists(body) {
+        return `<div class="storage-tabs-like-artists">` + body.map(item => {
+            return `
+            <div class="storage-tabs-like-artist-box">
+            <input class="storage-like-artist-list-album-id" type="hidden" value="${item.artistId}">
+            <div class="storage-tabs-like-artist-img-container">
+                <a href="#">
+                    <img src="..${item.artistImg}">
+                    <button class="storage-tabs-like-artist-play-button">▶</button>
+                </a>
+            </div>
+            <div class="storage-tabs-like-artist-info">
+                <div class="storage-tabs-like-artist-name">${item.artistName}</div>
+                <div class="storage-tabs-like-artist-role">${item.artistType}</div>
+                <div class="storage-tabs-like-artist-play">▷ 인기곡 듣기</div>
             </div>
         </div>
             `;

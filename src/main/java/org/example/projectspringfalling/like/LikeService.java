@@ -20,4 +20,9 @@ public class LikeService {
     public List<RestResponse.StorageLikeAlbums> getLikedAlbums(Integer userId) {
         return likeRepository.findAllLikedAlbums(userId);
     }
+
+    // 좋아요 - 아티스트
+    public List<RestResponse.StorageLikeArtists> getLikedArtists(Integer userId) {
+        return likeRepository.findAllLikedArtists(userId);
+    }
 }
