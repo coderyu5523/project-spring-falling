@@ -73,7 +73,18 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('새소년', 'Group', '/upload/artist/새소년.jpg', '2017-06-20'),
        ('카더가든', 'Solo', '/upload/artist/카더가든.jpg', '2013-09-24'),
        ('혁오밴드', 'Group', '/upload/artist/혁오밴드.jpg', '2014-09-18'),
-       ('장미여관', 'Group', '/upload/artist/장미여관.jpg', '2011-11-01');
+       ('장미여관', 'Group', '/upload/artist/장미여관.jpg', '2011-11-01'),
+
+       ('태연 (TAEYEON)', 'Solo', '/upload/artist/태연.jpg', '2015-10-07'),
+       ('LE SSERAFIM (르세라핌)', 'Group', '/upload/artist/르세라핌.jpg', '2022-05-02'),
+       ('tripleS (트리플에스)', 'Group', '/upload/artist/트리플에스.jpg', '2023-05-01'),
+       ('성시경', 'Solo', '/upload/artist/성시경.jpg', '2000-10-17'),
+       ('DK(디셈버)', 'Solo', '/upload/artist/DK(디셈버).jpg', '2011-03-03'),
+       ('범진', 'Solo', '/upload/artist/범진.jpg', '2019-05-25'),
+       ('나연 (TWICE)', 'Solo', '/upload/artist/나연.jpg', '2022-06-24'),
+       ('AKMU (악뮤)', 'Group', '/upload/artist/악뮤.jpg', '2014-04-07'),
+       ('폴킴', 'Solo', '/upload/artist/폴킴.jpg', '2014-01-21'),
+       ('VIVIZ (비비지)', 'Group', '/upload/artist/비비지.jpg', '2021-02-09');
 
 
 -- 테이블: album
@@ -527,7 +538,7 @@ VALUES ('천상연 (웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB))', 'YG PL
         웹툰 ''선녀외전''은 네이버 웹툰 매일 플러스에서 만나볼 수 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST', '/upload/album/눈물의 여왕', 37, '2024-03-24',
+VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕', 37, '2024-03-24',
         '"왜 하필 이때가 떠올랐을까. 만약 여기서 내가 죽는다면, 마지막 순간에 네 생각을 하는 걸까?"
 
         눈물의 여왕 3부 수렵 사냥 중 갑작스러운 멧돼지의 습격과 환영으로 위태로운 상황을 맞이한 ''해인''(김지원 분). 죽음을 앞둔 순간, 가장 먼저 떠오른 것은 언제나 곁에 있어주겠다던 남편 ''현우''. 그리고 거짓말처럼 ''현우''는 ''해인'' 앞에 나타났다.
@@ -676,6 +687,127 @@ VALUES ('너 그러다 장가 못간다', '미러볼뮤직', 'doob sound', '국�
 
 남자의 본능을 익살스럽게 풀어낸 3인조 밴드 ''장미여관’. 부산 출신 세 남자의 멋진 음악을 기대해본다.
 ');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('To. X - The 5th Mini Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', '미니', '/upload/album/To.X', 51, '2023-11-27', '태연, 다섯 번째 미니앨범 ‘To. X’ 발매!
+한층 짙어진 ‘믿듣탱’표 보컬 매력과 음악 감성!
+태연의 감각을 느낄 수 있는 다채로운 총 6곡 수록!
+
+태연의 다섯 번째 미니앨범 ‘To. X’는 불합리한 관계와 내면의 취약함에서 비롯한 불완전한 인간상을 다각적인 이야기로 풀어낸 앨범으로, 태연이 앨범 테마부터 가사 콘셉트 구성까지 직접 참여해 태연의 감각을 엿볼 수 있다.
+
+이번 앨범은 위태로움과 차가움을 넘나드는 태연의 유려한 보컬이 장르를 불문하고 뚜렷한 존재감을 드러내는 곡들로 구성되어 있으며, 태연의 전곡 코러스 참여로 독보적인 보컬과 섬세한 감성을 아낌없이 담은 만큼, 음악 팬들의 깊은 공감을 얻을 것으로 보인다.
+
+또한 유기적으로 전개되는 서사가 돋보이는 곡 소개글은 편지 콘셉트의 앨범 테마에 대한 몰입감을 한층 높여, 또 하나의 감상 포인트가 될 전망이다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('EASY', 'YG PLUS', '쏘스뮤직', '국내', '미니', '/upload/album/EASY.jpg', 52, '2024-02-19', '르세라핌, 2월 19일 미니 3집 ‘EASY’ 발매…새로운 음악적 시도로 증명할 성장!
+당당함 이면의 불안과 고민을 솔직하게 토로…멤버들 곡 작업 참여로 진정성 배가
+“쉽지 않음 내가 쉽게 easy” 타이틀곡 ‘EASY’에 담은 각오
+
+르세라핌(LE SSERAFIM)이 2월 19일 세 번째 미니 앨범 ‘EASY’로 돌아온다.
+
+르세라핌(김채원, 사쿠라, 허윤진, 카즈하, 홍은채)은 지난해 연이어 내놓은 정규 1집 ‘UNFORGIVEN’, 두 장의 일본 싱글과 첫 영어 디지털 싱글 ‘Perfect Night’로 괄목할 성과를 거뒀다. 전세계 팬들은 정상에 서고자 하는 욕망을 따라 시련에 맞서고 동료들과 연대하는 르세라핌의 이야기에 몰입했고, 다섯 멤버는 당당함과 자신감의 대명사가 됐다. 더할 나위 없는 탄탄대로가 펼쳐진 지금, 르세라핌은 누구도 예상하지 못한 이야기로 대중 앞에 선다.
+
+미니 3집 ‘EASY’는 르세라핌이 그간 한 번도 들려 준 적 없는, 무대 뒤의 불안과 고민을 다룬다. 세상의 시선에 흔들림 없고(‘FEARLESS’), 시련 앞에서 단단해지며(‘ANTIFRAGILE’), 타인의 용서 따위는 필요 없을 만큼(‘UNFORGIVEN’) 당찬 모습은 사실 타고난 것이 아니었다. 르세라핌은 지금까지 이룬 모든 것이 숱한 고민의 밤과 셀 수 없는 노력의 결과물이라고 솔직하게 말한다.
+
+
+당당한 르세라핌…그 이면의 불안과 고민
+르세라핌은 트레이드마크와 같은 당당함과 의연함뿐 아니라 초조함, 걱정 등 날것의 감정을 꺼내 놓는 데에도 주저함이 없다. 내면의 불안과 고민을 드러내지만, 자기연민에 머물기보다 이를 헤쳐 나가겠다고 노래한다. 앨범 디자인에도 이러한 메시지가 녹아 있다. 진흙 속에서 만개하는 연꽃과 우아함의 대명사인 백조의 깃털을 함께 배치해 완벽한 결과물 뒤에 숨은 노력을 시각화했다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('<ASSEMBLE24>', '카카오엔터테인먼트', '모드하우스', '국내', '정규', '/upload/album/ASSEMBLE24.jpg', 53, '2024-05-08', 'tripleS <ASSEMBLE24>
+
+''2023 MAMA AWARDS'' 여자 신인상과 ‘2023 한터뮤직어워즈'' 올해의 루키상을 거머쥐며 가장 빛나는 신인의 모습을 보여준 혁신적인 아이돌, 트리플에스가 드디어 24명의 완전체 앨범 <ASSEMBLE24>의 베일을 벗었다. 활동기마다 팬들의 투표를 통해 멤버를 구성하고 타이틀 곡을 정하는 방식으로 세계 최초 팬 참여형 그룹으로서의 기세를 높여가는 트리플에스가 2년 만에 24명의 멤버 진용을 갖추고 <ASSEMBLE24> 앨범을 공개한다. 1년에 단 한 번. 모든 멤버가 모여 만들어지는 의미를 담은 앨범 <ASSEMBLE24>를 위해 첫 멤버 윤서연부터 24번째 멤버 지연까지 힘을 합쳤다.
+
+첫 데뷔 완전체 앨범을 위해 팬들은 무려 13만 표를 ‘Girls Never Die’에 던졌고 그렇게 트리플에스의 첫 완전체 타이틀 곡이 결정되었다. 타이틀 곡 ‘Girls Never Die’는 쓰러져도 또 일어나는 소녀들에 대한 이야기이다. 실패를 두려워하고 낙오자에 대한 관용이 없어진 지금, 실패가 얼마나 값지고 멋있는 경험인지에 대해 노래한다. 이 곡은 4번의 전개로 구성되어 있다. "시련-자각-극복-우리"라는 서사는 트리플에스의 이야기이자 지금을 살고있는 소녀들의 이야기로 확장된다.
+
+트리플에스의 대표곡 ‘Generation’과 ‘Girls’ Capitalism’을 만든 EL CAPITXN과 Vendors의 합작으로 완성도 높은 곡이 만들어졌다. 그리고 NCT와 더보이즈의 안무가로 활약한 최효제의 리드로 만들어진 24인조의 군무를 통해 메가 걸그룹의 위용을 시각적으로 표현했다. 뮤직비디오는 ‘Generation’과 ‘Rising’, ‘Girls’ Capitalism’을 이어가며 서울을 살고 있는 소녀들의 일상을 담았던 언더무드 필름의 연출로 이야기를 자연스럽게 이어간다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('별에서 온 그대 OST Part.7', '카카오엔터테인먼트', '㈜SBS콘텐츠허브', '국내', 'OST/BGM', '/upload/album/별에서온그대.jpg', 54, '2014-02-12', '별에서 온 그대 OST Part 7 <성시경 – 너의 모든 순간>
+
+별에서 온 그대 OST Part 7 <너의 모든 순간>은 성시경이 직접 작곡한 곡으로, 도민준과 천송이의 애틋한 사랑이야기를 감미롭고 아름다운 멜로디에 담고 있다.
+
+최고의 라인업으로 각종 음원 차트를 휩쓸며 화제몰이를 하고 있는 별에서 온 그대 OST에 “끝판왕” 성시경이 합류하면서, OST의 완성도를 높이고 있다.
+
+성시경만의 깊이 있는 특유의 애절함에 히트곡 메이커 심현보가 드라마 ‘별에서 온 그대’의 내용에서 영감을 얻은 아름다운 가사로 작사에 참여한 환상의 조합은 음원 출시 전부터 폭발적인 반응을 끌어내어 최고의 OST가 탄생했음을 알리고 있다.
+
+본인의 수많은 히트곡 이외에도 ‘시크릿 가든’ <너는 나의 봄이다> ‘응답하라 1994’ <너에게> 발표, ‘OST의 신’이라 불릴 정도로 드라마에 몰입도를 높이는 OST들로 극찬을 받아온 성시경의 이번 <너의 모든 순간>은 드라마 분위기에 걸맞은 곡을 만들어내는 싱어송라이터로서의 성시경의 모습을 보여준다.
+
+감성 발라드의 선두주자 성시경의 애절한 가창력과 감미로운 목소리에 피아노 현악기의 아름다운 선율이 더해진 <너의 모든 순간>과 함께 따뜻한 겨울을 기대해도 좋을 것이다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('심(心)', '카카오엔터테인먼트', '방구석캐스팅', '국내', '싱글', '/upload/album/심.jpg', 55, '2023-02-19', '기다리고 있을게. 사랑하니까, ‘심(心)’
+
+‘심(心)''은 2002년 발매한 얀의 정규앨범 [Another Story]의 수록곡으로, DK(디셈버)의 보이스로 재탄생되었다.
+
+DK(디셈버)가 재해석한 ‘심(心)’은 헤어진 전 연인의 행복을 바라는 남자의 마음을 담아냈으며, DK의 애절하면서도, 파워풀한 보이스가 가사 진정성에 힘을 보태주고 있다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('인사', '미러볼뮤직', 'JMG(더블엑스엔터테인먼트)', '국내', '싱글', '/upload/album/인사.jpg', 56, '2021-12-24', '만남과 이별, 두 가지 이야기를 담은 노래, 범진의 [인사]
+
+
+"나의 슬픈 사랑에게, 또 사랑하는 가족에게 인사를 보낼 수 있기를"
+
+더블엑스엔터테인먼트 소속의 실력파 감성 싱어송라이터 범진이 자작곡 ''인사''를 들고 돌아왔다.
+신곡 ''인사''는 나의 어제와 나의 오늘을 위로해주는 마음을 담은 곡으로, 우리의 내일에 더 좋은 날이 오기를 바라는 희망찬 인사를 보내는 노래다.
+
+또한, 범진은 ''명예퇴직을 하던 아버지의 모습을 떠올리며 쓴 곡이기도 하다. 쓸쓸한 뒷모습과 무거운 짐을 짊어졌던 아버지를 위로해드리고 싶었다''는 이야기를 전했다.
+
+자신만의 따스한 이야기를 담은 범진의 ''인사''를 통해 범진만의 색깔있는 감성을 기대해보자.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('NA', 'Dreamus', '㈜JYP엔터테인먼트', '국내', '미니', '/upload/album/NA.jpg', 57, '2024-06-14', '트와이스 나연, 6월 14일 미니 2집 ''NA'' 및 타이틀곡 ''ABCD'' 발매!
+
+- 2년 만의 반가운 솔로 음반! "나! 오로지 나!" 오직 나연을 보여줄 두 번째 챕터!
+- 타이틀곡 ''ABCD'', 빠져들 수밖에 없는 나연 고유 매력 + 과감하고 색다른 시도!
+- JYP 대표 프로듀서 박진영, AKMU 이찬혁 등 유수 작가진에 샘김, KISS OF LIFE 쥴리 피처링 지원사격!
+- ''글로벌 정상 걸그룹'' 트와이스 & ''K팝 여성 솔로 아티스트'' 나연, 전 세계 팬심 매료할 2024 맹활약!
+
+트와이스 나연이 6월 14일 새 미니 앨범 ''NA''(나)를 발매하고 2년 만에 솔로 아티스트로 전격 컴백한다.
+
+''트와이스 첫 솔로 주자'' 나연은 2022년 6월 미니 1집 ''IM NAYEON''(아이엠 나연)을 발매하고 국내외 차트서 각종 기록을 쏟아냈다. 미국 빌보드 메인 차트 ''빌보드 200'' 7위에 올라 2022년 7월 기준 K팝 솔로 아티스트 사상 가장 높은 성적을 거뒀고 해당 음반과 타이틀곡 ''POP!''(팝!)으로 빌보드 총 18개 부문에 진입했다. 여름 계절감과 잘 어울리는 곡 분위기, 나연의 톡톡 터지는 에너지가 탁월한 시너지를 내며 멜론, 벅스, 지니 등 음원사이트 실시간 차트 최상위권에서 롱런 인기를 누렸다. 약 2년 만에 여름 컴백에 나서는 나연이 새 앨범 ''NA''로 ''K팝 솔로 퀸''이자 ''썸머퀸'' 명성을 공고히 한다.
+
+신보명 ''NA''는 나연의 ''나''이자 "나! 오로지 나!"라는 사랑스러운 의미를 품고 있다. "오로지 ''나''를 보여주겠다"는 당당함이 돋보인다. 나연은 타이틀곡 ''ABCD''(에이비씨디)를 통해 그녀가 가진 무한 가지 매력 중 또 하나의 포인트를 꺼내 보인다. "Hey listen to me now A you''re gonna B my babe Everytime you C me 빠져 Deeper deeper babe Hey listen to me now ABCD 반복해 How to fall in love 가르쳐 줄게"와 같이 알파벳을 활용한 재치 있는 가사로 A부터 Z까지 내 타입인 상대를 향해 사랑에 대해 하나부터 열까지 알려주고 유혹하겠다는 자신감을 노래한다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Love Lee', 'YG PLUS', 'YG Entertainment', '국내', '싱글', 'upload/album/Love Lee.jpg', 58, '2023-08-21', '@ AKMU 4th SINGLE [Love Lee]
+
+‘가사는 특별하게, 음악은 담백하게''
+AKMU가 4번째 싱글 [Love Lee]로 돌아왔다.
+
+이번 앨범은 청량하고 밝은 에너지를 담은 ‘Love Lee'', 위로와 공감이 될 수 있는 가사가 돋보이는 ‘후라이의 꿈'' 두 곡이 수록되었으며 누구나 쉽게 접할 수 있는 소재를 AKMU만의 톡톡 튀는 감성으로 풀어내었다.
+
+[Love Lee]는 누구에게나 사랑스러운 선물 같은 앨범이길 바란다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('''키스 먼저 할까요?'' OST Part.3', '카카오엔터테인먼트', 'SM Entertainment', '국내', 'OST/BGM', '/upload/album/키스먼저할까요3.jpg', 59, '2018-03-20', 'SBS 월화드라마 ‘키스 먼저 할까요?’ OST Part.3 공개!
+감성 보컬리스트 폴킴 참여!
+
+SBS 월화드라마 ‘키스 먼저 할까요?’ OST의 세 번째 주자로 ‘감성 보컬리스트’ 폴킴이 출격한다.
+
+‘키스 먼저 할까요?’ OST Part.3로 선보이는 폴킴의 ‘모든 날, 모든 순간 (Every day, Every Moment)’은 잔잔한 분위기의 어쿠스틱 팝 발라드 곡으로, ‘미녀 공심이’ OST ‘예뻐보여’, ‘W’ OST ‘그대와 나’, ‘저글러스’ OST ‘코스믹 걸 (Cosmic Girl)’ 등 다수의 드라마 OST에 참여한 실력파 작곡팀 ‘어깨깡패 (CLEF CREW)’가 작사, 작곡, 편곡을 맡았으며, 폴킴의 부드러운 음색이 더해져 귀를 매료시킨다.
+
+또한 이번 곡은 가사에 고단하고 불안한 하루 속에서도 항상 함께 하자는 진심 어린 고백을 담고 있는 만큼, 앞으로 겪게 될 시련을 극복해 나가는 안순진(김선아 분)과 손무한(감우성 분)의 굳은 믿음과 사랑을 잘 표현해 드라마의 몰입도를 한층 높일 것으로 보인다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLANETMADE', '국내', '미니', 'upload/album/VERSUS.jpg', 60, '2023-11-02', 'VIVIZ - The 4th Mini Album ''VERSUS''
+
+- VIVIZ, 11월 2일 미니 4집 ‘VERSUS’ 공개!
+- “사랑 말고 다른 말론 설명할 수 없는 멜로” 이거 사랑 맞지?
+- VIVIZ가 만들어 나아가는 새로운 색의 스펙트럼
+
+매 앨범마다 팀명 VIVIZ처럼 선명하고 다채로운 색깔을 지닌 앨범들을 통해 늘 새로운 모습을 보여줬던 VIVIZ가 강렬하고 자신감 넘치는 모습을 표현했던 세 번째 앨범 ‘VarioUS’에 이어 운명을 결정짓는 수많은 선택에 대해 심도 있게 다룬 네 번째 앨범 ''VERSUS''로 돌아온다.
+
+네 번째 미니앨범 ‘VERSUS’는 ‘타인이 만들어낸 환상 속의 세상과 내가 만들어가는 세상’이라는 두 가지 세상 속 VIVIZ의 고민과 해답을 담아냈다. 다양한 ‘VERSUS’를 통해 선택과 결정을 이야기하고, 아름답지만 위험한, 험난하지만 행복한 순간들에 대해 속이거나 감추지 않고 솔직하게 표현해 진정 원하는 것에 대해 다시금 생각해 보게 만든다.
+
+이번 신보에는 타이틀곡 ‘MANIAC’을 포함하여 총 5곡이 수록되었다. 타이틀곡 ‘MANIAC’은 사랑이란 이름으로 서로에게 상처 입히고 상처받지만 이 또한 결국 사랑임을 인정하는 모습을 감각적으로 풀어낸 가사와 중독성 있는 멜로디가 인상적인 곡이다. 비욘세, SHINee(샤이니) 등 국내외 유수 아티스트의 안무를 제작한 안무가 Kany의 퍼포먼스와 만나 완성도를 한층 더 끌어올렸다. 또 기쁨, 슬픔, 우정 등 사람 사이의 다양한 감정선을 담은 뮤직비디오는 VIVIZ의 표현력과 만나 더욱 몰입감을 높였으며, 다채로운 화면 전환과 섬세한 스토리로 풍부한 볼거리를 선사한다.
+
+이 밖에도 SNS 속 작은 틀에 갇히지 않고 당당하게 나아가겠다는 내용의 ‘Untie’, 정리되지 못하고 넘쳐흐르는 감정을 표현한 R&B 기반의 댄스 곡 ‘Overflow’, 경쾌한 미디엄 템포의 팝 곡 ‘한 걸음 (Day by day)’, 나의 결정으로 시작되는 이야기를 담아낸 ‘Up 2 Me’까지 더욱 주체적이고 성숙해진 VIVIZ의 성장을 만날 수 있다.
+
+이처럼 VIVIZ의 수많은 선택으로 태어난 이번 앨범은 전달하고자 하는 메시지를 상징적 컬러로 표현했던 이전 앨범들과 달리 다양한 컬러들을 담은 컬러칩 그 자체이다. 수많은 컬러들이 질서 있게 존재하지만 때때로 규칙을 벗어나 예측할 수 없는 조합을 만들어 내듯 다양한 스토리를 통해 끊임없이 질문(선택)을 던지고 듣는 이로 하여금 스스로 컬러(운명)의 방향을 결정하도록 안내한다.
+그들이 준비한 다섯 트랙을 모두 다 듣고 나면 그들의 고민과 선택이 우리를 좋은 길로 안내할 것이란 믿음이 확신이 되어 VIVIZ에게 운명처럼 이끌릴 것이다.');
+
 
 -- 테이블: song
 
@@ -5237,6 +5369,532 @@ VALUES ('봉숙이','강준우, 육중완','강준우, 육중완',null,'Indie',t
 사랑을 찾아서 사람을 찾아서
 오늘도 헤매고 있잖아
 ' ,50,5156);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('To. X', 'Stephen Puth, dazy, Kristin Carpenter', 'Kenzie', '/upload/song/To X.mp4', 'R&B', true, '/upload/song/To X.mp3', '2023-11-27', 51,
+'처음 본 널 기억해
+We skipped the small talk
+바로 다음 단계였지 뭐
+단점이라곤 없는 게 단점이라던
+그 허세도 마냥 좋았어
+
+하지만 내 일기가
+재미없어진 이유
+내가 없어진 나의
+매일들은 허전해
+
+좀 이상해 왜 둘 사이에
+너만 너만 보이는 걸까
+난 까다롭고 힘든 아이라
+그런 피곤한 생각만 한대
+
+오늘 나눈 문자 속에
+새로 산 티셔츠
+그 얘기뿐이야
+이제야 난 알 것 같아
+Gonna block you
+불을 꺼 To. X
+
+그 좋아했던 립스틱
+싫단 말에 버린
+널 좋아했던 만큼
+다 맞추려 했어
+
+‘나 아님 누가
+그런 세상 안아주겠어’
+그 말이 그땐 그리
+달콤했던 거야 Oh no
+
+새벽의 긴 통화도
+이젠 피곤해졌어
+Every day, every night
+나로 채우고 싶어
+
+좀 이상해 왜 둘 사이에
+너만 너만 보이는 걸까
+난 까다롭고 힘든 아이라
+그런 피곤한 생각만 한대
+
+오늘 나눈 문자 속에
+새로 산 티셔츠
+그 얘기뿐이야
+이제야 난 알 것 같아
+Gonna block you
+불을 꺼 To. X
+
+Gonna block you
+불을 꺼 To. X
+
+Say Bye
+Gonna block you
+불을 꺼 To. X
+
+깜빡거리는
+흔들거리는 Light
+Gonna block you
+불을 꺼 To. X
+
+좀 이상해 왜 둘 사이에
+너만 너만 보이는 걸까
+(너만 보일까)
+난 까다롭고 힘든 아이라
+그런 피곤한 생각만 한대
+
+오늘 나눈 문자 속에
+(이제 불을 꺼)
+새로 산 티셔츠
+그 얘기뿐이야
+이제야 난 알 것 같아
+Gonna block you
+불을 꺼 To. X
+
+Gonna block you
+불을 꺼 To. X', 51, 44817);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('EASY', 'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang', 'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang', '/upload/song/EASY.mp4', 'HipHop', true, '/upload/song/EASY.mp3', '2024-02-19', 52,
+'다친대도 길을 걸어 kiss me
+쉽지 않음 내가 쉽게 easy
+Stage 위엔 불이 튀어, 내 body
+Pull up and I rip it up like ballet
+
+Damn, I really make it look easy
+Yuh know that I make it look easy
+
+Clap your hands, 너도 나와 같다면 clap your hands now
+의구심 따윈 그냥 치워, 그냥 말해 “I’m the real one”
+
+조명 꺼진 뒤의 난 wander in the night
+Don’t know what is right, don’t know ‘bout my rights
+시기심, 의심, 불신, 이젠 friends of me, yuh
+세상에게 난 반쪽짜리 seraphim, yuh
+
+Uhm I’ve been tryin’ so long to show you show you show you
+I’m the one that you need
+
+다친대도 길을 걸어 kiss me
+쉽지 않음 내가 쉽게 easy
+Stage 위엔 불이 튀어, 내 body
+Pull up and I rip it up like ballet
+
+Damn, I really make it look easy
+Yuh know that I make it look easy
+
+Yah know that I make it look easy
+수면 위의 백조가 돼 whippin’
+때론 풀려, 나의 다리 but I keep it
+Get, set, go, come and see me, I’m the FEARLESS
+
+나의 발걸음은 매 순간 history, 이건 my way
+영웅처럼 걸어 even if I am not flawless
+편하게만 왔다고?
+날 몰라봤다면 you have to know
+
+Uhm I’ve been tryin’ so long to show you show you show you
+I’m the one that you need
+
+다친대도 길을 걸어 kiss me
+쉽지 않음 내가 쉽게 easy
+
+Stage 위엔 불이 튀어, 내 body
+Pull up and I rip it up like ballet
+
+Damn, I really make it look easy
+Yuh know that I make it look easy', 52, 85130);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('Girls Never Die', '장이정, Maria Marcus, Arineh Karimi, Vendors (ZENUR), Vendors (Nano), Vendors (COLL!N), Vendors (JNX’s), 김종수', 'Jaden Jeong', '/upload/song/Girls Never Die.mp4', 'Dance', true, '/upload/song/Girls Never Die.mp3', '2024-05-08', 53,
+'다시 해보자
+
+La La La La La La La
+끝까지 가볼래 포기는 안 할래 난
+La La La La La La La
+쓰러져도 일어나
+We Go, We High, Go Now
+La La La La La La La
+Girls Never Die 절대 Never Cry
+
+세상은 늘 화려한 꿈 내 눈이 멀게
+눈부셔 Shine Better
+난 여기 보이지 않겠지 점점
+초라한 내가 싫어
+날 보이기도 싫어
+
+짙게 화장했던 이유
+필터 꼈던 이유 알겠니
+이젠 알겠니
+
+La La La La La La La
+끝까지 가볼래 포기는 안 할래 난
+La La La La La La La
+쓰러져도 일어나
+We Go, We High, Go Now
+La La La La La La La
+Girls Never Die 절대 Never Cry
+
+비켜봐 봐 비켜 핑계는
+우린 본질 속에 진주가 될래
+꿈의 난이도 좀 더 난 높일게
+고통 시련 다듬어 내가 될게
+
+I’m Just
+이제 조금 알겠어
+I Shine
+왜 날 힘들게 울게만 둔 건지
+Hold Me Closer Broken Myself
+
+La La La La La La La
+끝까지 가볼래 포기는 안할래 난
+La La La La La La La
+쓰러져도 일어나
+We Go, We High, Go Now
+La La La La La La La
+Girls Never Die 절대 Never Cry
+
+날 따라와 달라진 날
+하나가 되자
+너의 꿈이 내가 되고
+우리 함께 꾸는 꿈
+
+두려움 따위다
+함께 있다면은
+이제 무서울 것 없지
+
+다시 해볼까
+
+La La La La La La La
+끝까지 가볼래 포기는 안 할래 난
+La La La La La La La
+쓰러져도 일어나
+We Go, We High, Go Now
+La La La La La La La
+Girls Never Die 절대 Never Cry
+
+La La La La La La La
+Girls Never Die 절대 Never Cry
+La La La La La La La
+끝까지 가볼래 포기는 안 할래
+We Go, We High, Go Now
+La La La La La La La
+Girls Never Die 절대 Never Cry', 53, 8914);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('너의 모든 순간', '성시경', '심현보', null, 'OST/BGM', true, '/upload/song/너의 모든 순간.mp3', '2014-02-12', 54,
+'이윽고 내가 한눈에
+너를 알아봤을 때
+모든 건 분명 달라지고 있었어
+내 세상은 널 알기 전과 후로 나뉘어
+니가 숨 쉬면 따스한 바람이 불어와
+니가 웃으면 눈부신 햇살이 비춰
+거기 있어줘서 그게 너라서
+가끔 내 어깨에 가만히 기대주어서
+나는 있잖아 정말 빈틈없이 행복해
+너를 따라서 시간은 흐르고 멈춰
+물끄러미 너를 들여다 보곤 해
+그것 말고는 아무것도 할 수 없어서
+너의 모든 순간 그게
+나였으면 좋겠다
+생각만 해도 가슴이 차올라
+나는 온통 너로
+보고 있으면 왠지 꿈처럼 아득한 것
+몇 광년 동안 날 향해 날아온 별빛
+또 지금의 너
+거기 있어줘서 그게 너라서
+가끔 나에게 조용하게 안겨주어서
+나는 있잖아 정말 남김없이 고마워
+너를 따라서 시간은 흐르고 멈춰
+물끄러미 너를 들여다보곤 해
+너를 보는 게 나에게는 사랑이니까
+너의 모든 순간 그게
+나였으면 좋겠다
+생각만 해도 가슴이 차올라
+나는 온통 너로
+니 모든 순간 나였으면', 54, 5400);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('심(心)', '이근상', '박준배', null, 'Rock/Metal', true, '/upload/song/심.mp3', '2023-02-19', 55,
+'한땐 너를 사랑했지만
+네 곁에 있는 사랑이
+너무 아름다워 보기 좋았었기에
+잘 되길 바래왔는데
+
+많은 축복에 둘러싸인
+행복한 그 사람 곁에
+이젠 네가 아닌 다른 그의 사랑이
+또다시 날 아프게 해
+
+미안해 너를 위해 기대어줄
+가슴 밖에 빌려줄 수 없는 나인걸
+
+슬퍼하는 너를 위해서
+해줄게 남아 있다면
+무엇이든 다 얘길 해주길 바래
+나 기다리고 있을게
+
+야윈 그대 안에 눈물이
+마르는 그날이 오면
+웃으며 다시 그댈 보내줄게요
+사랑하니까
+
+슬퍼하는 너를 위해서
+해줄게 남아 있다면
+무엇이든 다 얘길 해주길 바래
+나 기다리고 있을게
+
+야윈 그대 안에 눈물이
+마르는 그날이 오면
+웃으며 다시 그댈 보내줄게요
+사랑하니까', 55, 5500);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('인사', '범진', '범진, 김석영', '/upload/song/인사.mp4', 'Indie', true, '/upload/song/인사.mp3', '2021-12-24', 56,
+'돌아서는 너를 보며
+난 아무 말도 할 수 없었고
+슬퍼하기엔 짧았던
+나의 해는 저물어 갔네
+지나치는 모진 기억이
+바람 따라 흩어질 때면
+아무 일도 없듯이 보내주려 해
+아픈 맘이 남지 않도록
+안녕 멀어지는 나의 하루야
+빛나지 못한 나의 별들아
+차마 아껴왔던 말 이제서야
+잘 지내 인사를 보낼 게
+떠나가는 너를 보며
+난 아무 말도 할 수 없었고
+슬퍼하기엔 짧았던
+나의 해는 저물어 갔네
+돌이킬 순 없는 추억이
+바람 따라 흩어질 때면
+아무 일도 없듯이 보내주려 해
+아픈 맘이 남지 않도록
+안녕 멀어지는 나의 하루야
+빛나지 못한 나의 별들아
+차마 아껴왔던 말 이제서야
+잘 지내 인사를 보낼 게
+잘 지내 인사를 보낼 게', 56, 15954);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('ABCD', 'Pdogg, GHSTLOOP, Aron Bergerwall, Louise Lindberg, Shorelle', 'Rick bridges, J.Y. Park "The Asiansoul"', '/upload/song/ABCD.mp4', 'R&B', true, '/upload/song/ABCD.mp3', '2024-06-14', 57,
+'Slo-mo
+Hey I see you looking at me and
+I like it oh yeah
+No more
+다가오길 기다리는 건
+Not my option yeah
+피어나 My desire
+원하는 건 가져야 하는 걸
+All I want is love love wit'' you
+Stop thinkin'' 거부할 수 없을걸
+Hey listen to me now
+A you''re gonna B my babe
+Everytime you C me
+빠져 Deeper deeper babe
+Hey listen to me now
+ABCD 반복해
+How to fall in love 가르쳐 줄게
+너는 들어왔어 in my Fantasy
+벗어날 수 없어 나의 Gravity
+In love in love can''t get Enough
+Hey 빠져들고 있어 you''re Hypnotized
+홀린 듯 하나가 되는 you & I
+In love in love can''t get Enough
+넌 따라오면 돼 My babe
+지금부터 Imma drive you crazy
+아슬아슬한 너와 내 Emotion
+자칫하면 이성의 끈을 놓쳐
+대화는 필요 없어 Mute
+본능이 향하는 곳 Move
+전부 벗어던질래
+진짜 나를 볼 수 있게
+피어나 Feel alive
+떨리는 마음 감출 수 없는 걸
+All I want is love love wit'' you
+Stop thinkin'' 거부할 수 없을걸
+Hey listen to me now
+A you''re gonna B my babe
+Everytime you C me
+빠져 Deeper deeper babe
+Hey listen to me now
+ABCD 반복해
+How to fall in love 가르쳐 줄게
+너는 들어왔어 in my Fantasy
+벗어날 수 없어 나의 Gravity
+In love in love can''t get Enough
+Hey 빠져들고 있어 you''re Hypnotized
+홀린 듯 하나가 되는 you & I
+In love in love can''t get Enough
+I don''t care and I like yeah
+A to Z you''re my type yeah
+알려줄게 Baby how to love
+알기 쉽게 네게 One by one
+I don''t care and I like yeah
+A to Z you''re my type yeah
+알려줄게 Baby how to love
+알기 쉽게 네게 One by one
+A you''re gonna B my babe
+Everytime you C me
+빠져 Deeper deeper babe
+ABCD 반복해
+How to fall in love 가르쳐 줄게', 57, 7601);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('Love Lee', '이찬혁, MILLENNIUM, 시황', '이찬혁', '/upload/song/Love Lee.mp4', 'Dance', true, '/upload/song/Love Lee.mp3', '2023-08-21', 58,
+'You know
+내 스타일이 아닌 음악을 들어도
+You know
+좋아하지 않는 음식을 먹어도
+우산 없이 비가 와 홀딱 다 젖어도 좋아
+I love it because I love you
+
+우리 관계 디비디비딥
+매일 봐도 처음같이 비기비기닝
+춤추고 싶어 빌리빌리진
+우리 앞 우리 옆 시기시기질투
+자유로운 날갯짓 훨훨훨
+꽃송이가 나를 삼킬 걸
+알면서 난 뛰어들었어
+Jump j-j-jump jump jump jump
+
+So lovely day so lovely
+Errday with you so lovely
+Du durudu durudu du durudu
+
+Spell L.o.v.e.L.e.e
+이름만 불러도 you can feel me
+눈빛만 봐도 알면서 my love
+
+You know
+아끼는 옷에 coffee를 쏟아도
+You know
+내가 준 목걸이를 잃어버려도
+한 번 더 같은 것 사준 걸 다시 또 잃어도 좋아
+I don''t care I just care about you
+
+여기 어때 how you like that
+다 퍼주고 될게 빈털터리
+Jubilate 박수갈채
+안 반하고 누가 배겨 love sick
+비타민 U가 필요해
+만들어줘 샛노랗게
+체크무늬 벌집 두 눈에
+Honey help honey help
+
+So lovely day so lovely
+Errday with you so lovely
+Du durudu durudu du durudu
+
+Spell L.o.v.e.L.e.e
+이름만 불러도 you can feel me
+눈빛만 봐도 알면서 my love
+
+누구 사랑 먹고 그리 이쁘게 컸니
+Mommy or your daddy or them both
+Lovey-dovey things 너의 곁에 everyday
+Good morning good night
+너의 이름 부를 때
+
+So lovely day so lovely
+Errday with you so lovely
+Du durudu durudu du durudu
+
+Spell L.o.v.e.L.e.e
+이름만 불러도 you can feel me
+눈빛만 봐도 알면서 my love', 58, 121562);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('모든 날, 모든 순간 (Every day, Every Moment)', '어깨깡패', '어깨깡패', null, 'Ballad', 'true', '/upload/song/모든 날 모든 순간.mp3', '2018-03-20', 59,
+'네가 없이 웃을 수 있을까
+생각만 해도 눈물이나
+힘든 시간 날 지켜준 사람
+이제는 내가 그댈 지킬 테니
+너의 품은 항상 따뜻했어
+고단했던 나의 하루에
+유일한 휴식처
+나는 너 하나로 충분해
+긴 말 안 해도 눈빛으로 다 아니깐
+한 송이의 꽃이 피고 지는
+모든 날 모든 순간 함께해
+햇살처럼 빛나고 있었지
+나를 보는 네 눈빛은
+꿈이라고 해도 좋을 만큼
+그 모든 순간은 눈부셨다
+불안했던 나의 고된 삶에
+한줄기 빛처럼 다가와
+날 웃게 해준 너
+나는 너 하나로 충분해
+긴 말 안 해도 눈빛으로 다 아니깐
+한 송이의 꽃이 피고 지는
+모든 날 모든 순간 함께해
+알 수 없는 미래지만
+네 품속에 있는 지금 순간 순간이
+영원 했으면 해
+갈게 바람이 좋은 날에
+햇살 눈부신 어떤 날에 너에게로
+처음 내게 왔던 그날처럼
+모든 날 모든 순간 함께해', 59, 5900);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('MANIAC', 'Jack Brady, Jordan Roman, Chloe Copoloff, Austin Nicole Wolfe, TMM', '구여름', '/upload/song/MANIAC.mp4', 'Dance', true, '/upload/song/MANIAC.mp3', '2023-11-02', 60,
+'힘껏 내팽개친 Roses
+말론 안 통하지 역시 어쩜 이리 안 변해
+인정 같은 소린 됐고
+이쯤에서 끝내 Let go 인내심도 Out of space
+
+얼룩지는 Red carpet 그렇게 또 Fade away
+치워줘 Scarred face 끝까지 신경 쓰여 Huh
+
+This love is maniac maniac maniac
+But I can’t killin’ it killin’ it killin’ it
+사랑 말고 다른 말론 설명할 수 없는 멜로
+It’s maniac maniac maniac
+
+자극적 이끌림 잔인해진 Orbit
+지겨운 Love-phobic yeah
+그래 솔직하자 넌 지금 즐긴 거야
+
+얼음처럼 날 선 말 부서질 듯 던져 막
+심장을 푹 찌르고 또 Melted
+완벽하게 Cliche 웃기지도 않는 꼴
+갈피 없이 뒤집히는 Magnet
+
+답이 없는 Zero-sum game 뭐가 문제였던 건데
+결국 또 미뤄진 End 이것도 재주야 Perfect
+
+This love is maniac maniac maniac
+But I can’t killin’ it killin’ it killin’ it
+사랑 말고 다른 말론 설명할 수 없는 멜로
+It’s maniac maniac
+
+Crystal처럼 조각난 Lighting 그 아래 선 우린
+Living in a moment Bloody truth
+짓이겨져 물든 Rose 결국 벗어던진 Mask
+말해 What you wanna do Woo woo ah
+
+This love is maniac maniac maniac
+And I’m okay with it okay with it okay with it
+끝내 너와 나마저도 이해할 수 없는 멜로
+It’s maniac maniac maniac
+
+화려한 이 Tragic 이거 사랑 맞지
+영원할 Scenery yeah
+그래 솔직하자 우리는 즐긴 거야
+
+Never ever
+It’s coming down It’s coming down
+It’s coming down
+Maniac
+Yeah yeah woo woo woo', 60, 31841);
 
 --  테이블 : playlist
 
