@@ -41,26 +41,24 @@
             </tr>
             {{#chart}}
                 <tr class="chart-main-table-body">
-                    <td><input type="checkbox" value="{{songId}}"></td>
-                    <td>{{index}}</td>
+                    <td><a href="#"><input type="checkbox" value="{{songId}}"></a></td>
+                    <td><a href="#">{{index}}</a></td>
                     <td>
-                        <div class="chart-main-table-body-img">
-                            <img class="chart-img" src="{{coverImg}}" alt="{{title}}">
-                            <span>
-                        <div>{{title}}</div>
-                        <div class="chart-album-name">{{albumTitle}}m</div>
-                    </span>
-                        </div>
+                        <a href="#">
+                            <div class="chart-main-table-body-img">
+                                <img class="chart-img" src="{{coverImg}}" alt="{{title}}">
+                                <span>
+                                    <div>{{title}}</div>
+                                    <div class="chart-album-name">{{albumTitle}}m</div>
+                                </span>
+                            </div>
+                        </a>
                     </td>
-
-                    <td>{{artistName}}</td>
-                    <td>
-                        <input type="hidden" value="{{musicFile}}">
-                        <i class="fa-solid fa-play"></i>
-                    </td>
-                    <td><i class="fa-solid fa-list-ul"></i></td>
-                    <td><i class="fa-solid fa-folder-plus"></i></td>
-                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                    <td><a href="#">{{artistName}}</a></td>
+                    <td><a href="#"><i class="fa-solid fa-play"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-list-ul"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-folder-plus"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
                 </tr>
             {{/chart}}
         </table>
