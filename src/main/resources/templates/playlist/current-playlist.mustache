@@ -46,7 +46,7 @@
             <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
             <button id="prev-btn">&#9664;&#9664;</button>
             <button id="play-btn">&#9654;</button>
-            <button id="next-btn">&#9654;&#9654;"></button>
+            <button id="next-btn">&#9654;&#9654;</button>
             <button id="mode-btn"><i class="fa-solid fa-repeat"></i></button>
         </div>
         <div><a class="add-page" style="cursor: pointer"><i class="fa-solid fa-sliders"></i></a></div>
@@ -227,13 +227,9 @@
         $(audioPlayer).on('ended', function () {
             if (PLAY_MODES[currentModeIndex].name === 'repeat-one') {
                 audioPlayer.play();
-            } else if (PLAY_MODES[currentModeIndex].name === 'repeat-all') {
+            } else if (PLAY_MODES.currentModeIndex.name === 'repeat-all') {
                 currentIndex = (currentIndex + 1) % songs.length;
-                if (currentIndex === 0) {
-                    playSong(0);
-                } else {
-                    playSong(currentIndex);
-                }
+                playSong(currentIndex);
             } else {
                 currentIndex = (currentIndex + 1) % songs.length;
                 if (currentIndex === 0) {
@@ -243,6 +239,18 @@
                 }
             }
         });
+
+        // 이전 곡 재생 함수
+        function playPrevious() {
+            currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+            playSong(currentIndex);
+        }
+
+        // 다음 곡 재생 함수
+        function playNext() {
+            currentIndex = (currentIndex + 1) % songs.length;
+            playSong(currentIndex);
+        }
 
         // 셔플 버튼 클릭 이벤트 리스너
         shuffleBtn.on('click', function () {
