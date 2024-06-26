@@ -5651,6 +5651,251 @@ VALUES ('심(心)', '이근상', '박준배', null, 'Rock/Metal', true, '/upload
 웃으며 다시 그댈 보내줄게요
 사랑하니까', 55, 5500);
 
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('인사', '범진', '범진, 김석영', '/upload/song/인사.mp4', 'Indie', true, '/upload/song/인사.mp3', '2021-12-24', 56,
+'돌아서는 너를 보며
+난 아무 말도 할 수 없었고
+슬퍼하기엔 짧았던
+나의 해는 저물어 갔네
+지나치는 모진 기억이
+바람 따라 흩어질 때면
+아무 일도 없듯이 보내주려 해
+아픈 맘이 남지 않도록
+안녕 멀어지는 나의 하루야
+빛나지 못한 나의 별들아
+차마 아껴왔던 말 이제서야
+잘 지내 인사를 보낼 게
+떠나가는 너를 보며
+난 아무 말도 할 수 없었고
+슬퍼하기엔 짧았던
+나의 해는 저물어 갔네
+돌이킬 순 없는 추억이
+바람 따라 흩어질 때면
+아무 일도 없듯이 보내주려 해
+아픈 맘이 남지 않도록
+안녕 멀어지는 나의 하루야
+빛나지 못한 나의 별들아
+차마 아껴왔던 말 이제서야
+잘 지내 인사를 보낼 게
+잘 지내 인사를 보낼 게', 56, 15954);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('ABCD', 'Pdogg, GHSTLOOP, Aron Bergerwall, Louise Lindberg, Shorelle', 'Rick bridges, J.Y. Park "The Asiansoul"', '/upload/song/ABCD.mp4', 'R&B', true, '/upload/song/ABCD.mp3', '2024-06-14', 57,
+'Slo-mo
+Hey I see you looking at me and
+I like it oh yeah
+No more
+다가오길 기다리는 건
+Not my option yeah
+피어나 My desire
+원하는 건 가져야 하는 걸
+All I want is love love wit'' you
+Stop thinkin'' 거부할 수 없을걸
+Hey listen to me now
+A you''re gonna B my babe
+Everytime you C me
+빠져 Deeper deeper babe
+Hey listen to me now
+ABCD 반복해
+How to fall in love 가르쳐 줄게
+너는 들어왔어 in my Fantasy
+벗어날 수 없어 나의 Gravity
+In love in love can''t get Enough
+Hey 빠져들고 있어 you''re Hypnotized
+홀린 듯 하나가 되는 you & I
+In love in love can''t get Enough
+넌 따라오면 돼 My babe
+지금부터 Imma drive you crazy
+아슬아슬한 너와 내 Emotion
+자칫하면 이성의 끈을 놓쳐
+대화는 필요 없어 Mute
+본능이 향하는 곳 Move
+전부 벗어던질래
+진짜 나를 볼 수 있게
+피어나 Feel alive
+떨리는 마음 감출 수 없는 걸
+All I want is love love wit'' you
+Stop thinkin'' 거부할 수 없을걸
+Hey listen to me now
+A you''re gonna B my babe
+Everytime you C me
+빠져 Deeper deeper babe
+Hey listen to me now
+ABCD 반복해
+How to fall in love 가르쳐 줄게
+너는 들어왔어 in my Fantasy
+벗어날 수 없어 나의 Gravity
+In love in love can''t get Enough
+Hey 빠져들고 있어 you''re Hypnotized
+홀린 듯 하나가 되는 you & I
+In love in love can''t get Enough
+I don''t care and I like yeah
+A to Z you''re my type yeah
+알려줄게 Baby how to love
+알기 쉽게 네게 One by one
+I don''t care and I like yeah
+A to Z you''re my type yeah
+알려줄게 Baby how to love
+알기 쉽게 네게 One by one
+A you''re gonna B my babe
+Everytime you C me
+빠져 Deeper deeper babe
+ABCD 반복해
+How to fall in love 가르쳐 줄게', 57, 7601);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('Love Lee', '이찬혁, MILLENNIUM, 시황', '이찬혁', '/upload/song/Love Lee.mp4', 'Dance', true, '/upload/song/Love Lee.mp3', '2023-08-21', 58,
+'You know
+내 스타일이 아닌 음악을 들어도
+You know
+좋아하지 않는 음식을 먹어도
+우산 없이 비가 와 홀딱 다 젖어도 좋아
+I love it because I love you
+
+우리 관계 디비디비딥
+매일 봐도 처음같이 비기비기닝
+춤추고 싶어 빌리빌리진
+우리 앞 우리 옆 시기시기질투
+자유로운 날갯짓 훨훨훨
+꽃송이가 나를 삼킬 걸
+알면서 난 뛰어들었어
+Jump j-j-jump jump jump jump
+
+So lovely day so lovely
+Errday with you so lovely
+Du durudu durudu du durudu
+
+Spell L.o.v.e.L.e.e
+이름만 불러도 you can feel me
+눈빛만 봐도 알면서 my love
+
+You know
+아끼는 옷에 coffee를 쏟아도
+You know
+내가 준 목걸이를 잃어버려도
+한 번 더 같은 것 사준 걸 다시 또 잃어도 좋아
+I don''t care I just care about you
+
+여기 어때 how you like that
+다 퍼주고 될게 빈털터리
+Jubilate 박수갈채
+안 반하고 누가 배겨 love sick
+비타민 U가 필요해
+만들어줘 샛노랗게
+체크무늬 벌집 두 눈에
+Honey help honey help
+
+So lovely day so lovely
+Errday with you so lovely
+Du durudu durudu du durudu
+
+Spell L.o.v.e.L.e.e
+이름만 불러도 you can feel me
+눈빛만 봐도 알면서 my love
+
+누구 사랑 먹고 그리 이쁘게 컸니
+Mommy or your daddy or them both
+Lovey-dovey things 너의 곁에 everyday
+Good morning good night
+너의 이름 부를 때
+
+So lovely day so lovely
+Errday with you so lovely
+Du durudu durudu du durudu
+
+Spell L.o.v.e.L.e.e
+이름만 불러도 you can feel me
+눈빛만 봐도 알면서 my love', 58, 121562);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('모든 날, 모든 순간 (Every day, Every Moment)', '어깨깡패', '어깨깡패', null, 'Ballad', 'true', '/upload/song/모든 날 모든 순간.mp3', '2018-03-20', 59,
+'네가 없이 웃을 수 있을까
+생각만 해도 눈물이나
+힘든 시간 날 지켜준 사람
+이제는 내가 그댈 지킬 테니
+너의 품은 항상 따뜻했어
+고단했던 나의 하루에
+유일한 휴식처
+나는 너 하나로 충분해
+긴 말 안 해도 눈빛으로 다 아니깐
+한 송이의 꽃이 피고 지는
+모든 날 모든 순간 함께해
+햇살처럼 빛나고 있었지
+나를 보는 네 눈빛은
+꿈이라고 해도 좋을 만큼
+그 모든 순간은 눈부셨다
+불안했던 나의 고된 삶에
+한줄기 빛처럼 다가와
+날 웃게 해준 너
+나는 너 하나로 충분해
+긴 말 안 해도 눈빛으로 다 아니깐
+한 송이의 꽃이 피고 지는
+모든 날 모든 순간 함께해
+알 수 없는 미래지만
+네 품속에 있는 지금 순간 순간이
+영원 했으면 해
+갈게 바람이 좋은 날에
+햇살 눈부신 어떤 날에 너에게로
+처음 내게 왔던 그날처럼
+모든 날 모든 순간 함께해', 59, 5900);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('MANIAC', 'Jack Brady, Jordan Roman, Chloe Copoloff, Austin Nicole Wolfe, TMM', '구여름', '/upload/song/MANIAC.mp4', 'Dance', true, '/upload/song/MANIAC.mp3', '2023-11-02', 60,
+'힘껏 내팽개친 Roses
+말론 안 통하지 역시 어쩜 이리 안 변해
+인정 같은 소린 됐고
+이쯤에서 끝내 Let go 인내심도 Out of space
+
+얼룩지는 Red carpet 그렇게 또 Fade away
+치워줘 Scarred face 끝까지 신경 쓰여 Huh
+
+This love is maniac maniac maniac
+But I can’t killin’ it killin’ it killin’ it
+사랑 말고 다른 말론 설명할 수 없는 멜로
+It’s maniac maniac maniac
+
+자극적 이끌림 잔인해진 Orbit
+지겨운 Love-phobic yeah
+그래 솔직하자 넌 지금 즐긴 거야
+
+얼음처럼 날 선 말 부서질 듯 던져 막
+심장을 푹 찌르고 또 Melted
+완벽하게 Cliche 웃기지도 않는 꼴
+갈피 없이 뒤집히는 Magnet
+
+답이 없는 Zero-sum game 뭐가 문제였던 건데
+결국 또 미뤄진 End 이것도 재주야 Perfect
+
+This love is maniac maniac maniac
+But I can’t killin’ it killin’ it killin’ it
+사랑 말고 다른 말론 설명할 수 없는 멜로
+It’s maniac maniac
+
+Crystal처럼 조각난 Lighting 그 아래 선 우린
+Living in a moment Bloody truth
+짓이겨져 물든 Rose 결국 벗어던진 Mask
+말해 What you wanna do Woo woo ah
+
+This love is maniac maniac maniac
+And I’m okay with it okay with it okay with it
+끝내 너와 나마저도 이해할 수 없는 멜로
+It’s maniac maniac maniac
+
+화려한 이 Tragic 이거 사랑 맞지
+영원할 Scenery yeah
+그래 솔직하자 우리는 즐긴 거야
+
+Never ever
+It’s coming down It’s coming down
+It’s coming down
+Maniac
+Yeah yeah woo woo woo', 60, 31841);
+
 --  테이블 : playlist
 
 insert into playlist_tb(user_id, admin_id, name, created_at)
