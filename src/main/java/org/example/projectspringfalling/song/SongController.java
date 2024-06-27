@@ -51,9 +51,10 @@ public class SongController {
         List<SongResponse.ChartDTO> domesticChartDTOs = songService.domesticBalladChart(); // 국내 발라드 차트
         List<SongResponse.ChartDTO> globalPopChartDTOs = songService.globalPopChart(); // 해외 팝 차트
         List<SongResponse.ChartDTO> globalHipHopChartDTOs = songService.globalHipHopChart(); // 해외 힙합 차트
-        List<SongResponse.ChartDTO> domesticRBChartDTOs = songService.domesticRBChart();// 국내 알앤비 차트
-        // 국내 댄스/일렉
-        SongResponse.AllChartDTO resp = new SongResponse.AllChartDTO(MainChartDTOs, globalChartDTOs, domesticChartDTOs, globalPopChartDTOs, globalHipHopChartDTOs, domesticRBChartDTOs);
+        List<SongResponse.ChartDTO> domesticRBChartDTOs = songService.domesticRBChart(); // 국내 알앤비 차트
+        List<SongResponse.ChartDTO> domesticDanceAndElectronicChartDTOs = songService.domesticDanceAndElectronicChart(); // 국내 댄스,일렉 차트
+
+        SongResponse.AllChartDTO resp = new SongResponse.AllChartDTO(MainChartDTOs, globalChartDTOs, domesticChartDTOs, globalPopChartDTOs, globalHipHopChartDTOs, domesticRBChartDTOs, domesticDanceAndElectronicChartDTOs);
         request.setAttribute("all", resp);
         return "song/song-chart";
     }

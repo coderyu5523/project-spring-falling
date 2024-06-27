@@ -72,6 +72,14 @@ public class SongService {
                 .collect(Collectors.toList());
     }
 
+    // 국내 댄스,일렉 차트
+    public List<SongResponse.ChartDTO> domesticDanceAndElectronicChart() {
+        List<Song> songList = songRepository.findDomesticDanceAndElectronicChart();
+        return IntStream.range(0, songList.size())
+                .mapToObj(i -> new SongResponse.ChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
+                .collect(Collectors.toList());
+    }
+
     // 메인 페이지
     public SongResponse.MainDTO main() {
 

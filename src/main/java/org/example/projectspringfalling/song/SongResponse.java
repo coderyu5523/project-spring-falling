@@ -21,19 +21,22 @@ public class SongResponse {
         private List<SongResponse.ChartDTO> globalPopChart;
         private List<SongResponse.ChartDTO> globalHipHopChart;
         private List<SongResponse.ChartDTO> domesticRBChart;
+        private List<SongResponse.ChartDTO> domesticDanceAndElectronicChart;
 
         public AllChartDTO(List<SongResponse.ChartDTO> MainChartDTOs,
                            List<SongResponse.ChartDTO> globalChartDTOs,
                            List<SongResponse.ChartDTO> domesticChartDTOs,
                            List<SongResponse.ChartDTO> globalPopChartDTOs,
                            List<SongResponse.ChartDTO> globalHipHopChartDTOs,
-                           List<SongResponse.ChartDTO> domesticRBChartDTOs) {
+                           List<SongResponse.ChartDTO> domesticRBChartDTOs,
+                           List<SongResponse.ChartDTO> domesticDanceAndElectronicChartDTOs) {
             this.globalChart = globalChartDTOs;
             this.mainChart = MainChartDTOs;
             this.domesticChart = domesticChartDTOs;
             this.globalPopChart = globalPopChartDTOs;
             this.globalHipHopChart = globalHipHopChartDTOs;
             this.domesticRBChart = domesticRBChartDTOs;
+            this.domesticDanceAndElectronicChart = domesticDanceAndElectronicChartDTOs;
         }
 
     }
