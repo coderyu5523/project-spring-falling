@@ -245,10 +245,36 @@ tr .album-detail-more-btn {
     padding-left: 9px;
 }
 
-tr .album-detail-add-playlist-btn {
+tr .album-detail-btn-add-playlist {
     padding-left: 12px;
 }
 
-tr .album-detail-add-list-btn {
+tr .album-detail-btn-add-list {
     padding-left: 18px;
+}
+
+.album-detail-album-about {
+    margin-bottom: 40px;
+}
+
+
+.album-about .album-about-title {
+    width: 30%;
+    font-weight: 900;
+    padding-bottom: 15px;
+}
+
+.album-detail-album-about .album-detail-album-about-content {
+    width: 70%;
+    padding-bottom: 15px;
+}
+
+.album-detail-song-intro-title {
+    padding-bottom: 15px;
+
+}
+
+.album-detail-song-intro-content {
+    white-space: pre-line;
+    padding-bottom: 80px;
 }
