@@ -3,6 +3,7 @@ package org.example.projectspringfalling.album;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.user.SessionUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,21 +15,19 @@ public class AlbumController {
     private final AlbumService albumService;
     private final HttpSession session;
 
-    // 앨범 수록곡 보기
+    // 앨범 상세보기
     @GetMapping("/albums/{albumId}/list")
     public String songList(HttpServletRequest request, @PathVariable Integer albumId) {
-        AlbumResponse.ListDTO resp = albumService.songList(albumId);
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        Integer userId = (sessionUser != null) ? sessionUser.getId() : 0;
+
+        AlbumResponse.DetailDTO resp = albumService.albumDetail(albumId, userId);
         request.setAttribute("album", resp);
+
         return "album/album-list";
+//        return "album/album-detail";
     }
 
-    // 앨범 상세보기
-    @GetMapping("/albums/{albumId}/detail")
-    public String albumDetail(HttpServletRequest request, @PathVariable Integer albumId) {
-        AlbumResponse.DetailDTO resp = albumService.albumDetail(albumId);
-        request.setAttribute("album", resp);
-        return "album/album-detail";
-    }
 
     // 앨범 추가하기
     @PostMapping("/albums/register")
