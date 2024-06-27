@@ -63,15 +63,4 @@ public class SongController {
     }
 
 
-    // todo : 더미 테스트용
-    @GetMapping("/song-test")
-    public String test(HttpServletRequest request) {
-        int id = 31;
-        Song song = songService.getImg(id);
-        System.out.println("음악" + song.getMusicFile());
-        request.setAttribute("song", song);
-        return "song-test";
-    }
-
-
 }

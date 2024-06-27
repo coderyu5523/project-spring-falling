@@ -43,14 +43,26 @@ public interface SongRepository extends JpaRepository<Song, Integer> {
     List<Song> findByAlbumId(@Param("AlbumId") Integer AlbumId);
 
     // 검색
-    @Query("select s,ar,al from Song s join fetch s.album al join fetch s.artist ar where s.title like %:keyword% or s.lyrics like %:keyword% or " +
-            "s.songWriter like %:keyword% or s.lyricist like %:keyword% or s.genre  like %:keyword% or " +
-            "al.title like %:keyword% or al.distributor like %:keyword% or al.agency like %:keyword% or al.intro like %:keyword% or al.category  like %:keyword% or " +
-            "ar.name like %:keyword% or  ar.artistType like %:keyword%")
+    @Query("select s,ar,al from Song s join fetch s.album al join fetch s.artist ar " +
+            "where LOWER(s.title) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(s.lyrics) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(s.songWriter) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(s.lyricist) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(s.genre) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(al.title) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(al.distributor) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(al.agency) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(al.intro) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(al.category) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(ar.name) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(ar.artistType) like LOWER(CONCAT('%', :keyword, '%'))")
     Optional<List<Song>> findByKeyword(@Param("keyword") String keyword);
 
     // 자동 검색
-    @Query("select s,ar,al from Song s join fetch s.album al join fetch s.artist ar where s.title like %:keyword% or al.title like %:keyword%  or ar.name like %:keyword%")
+    @Query("select s,ar,al from Song s join fetch s.album al join fetch s.artist ar " +
+            "where LOWER(s.title) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(al.title) like LOWER(CONCAT('%', :keyword, '%')) or " +
+            "LOWER(ar.name) like LOWER(CONCAT('%', :keyword, '%'))")
     Optional<List<Song>> findByAutoComplete(@Param("keyword") String keyword);
 
     // 관리자 곡 목록보기
