@@ -26,11 +26,11 @@
     <div id="content1" class="chart-main tab-content active-content">
         <div class="chart-header">
             <h3>FLO 차트</h3>
-            <div>▷ 전체듣기</div>
+            <div id="selected-play-btn">▷ 선택듣기</div>
         </div>
         <table class="chart-main-table">
             <tr class="chart-main-table-header">
-                <th><input type="checkbox"></th>
+                <th><input type="checkbox" id="select-all"></th>
                 <th>순위</th>
                 <th>곡/앨범</th>
                 <th>아티스트</th>
@@ -41,7 +41,7 @@
             </tr>
             {{#all.mainChart}}
                 <tr class="chart-main-table-body">
-                    <td><input type="checkbox" value="{{songId}}"></td>
+                    <td><input type="checkbox" class="song-checkbox" value="{{songId}}"></td>
                     <td>{{index}}</td>
                     <td>
                         <a href="/albums/{{albumId}}/list">
@@ -413,9 +413,26 @@
     </div>
 
 </div>
+
 <script type="module" src="/js/song-chart.js"></script>
 <script>
     $(document).ready(function () {
+        function addSongIfNotExists(songData) {
+            // 기존 저장된 노래 목록 가져오기
+            var selectedSongs = JSON.parse(localStorage.getItem('selectedSongs')) || [];
+
+            // 중복 확인
+            var isSongExists = selectedSongs.some(function(song) {
+                return song.songId === songData.songId;
+            });
+
+            // 중복이 아닐 경우에만 추가
+            if (!isSongExists) {
+                selectedSongs.push(songData);
+                localStorage.setItem('selectedSongs', JSON.stringify(selectedSongs));
+            }
+        }
+
         $('.play-btn').click(function (event) {
             event.preventDefault();
 
@@ -430,21 +447,42 @@
                 islogin: $(this).data('islogin')
             };
 
-            // URL에 데이터 추가
-            var url = new URL('/playlists/current', window.location.origin);
-            Object.keys(songData).forEach(key => url.searchParams.append(key, songData[key]));
+            addSongIfNotExists(songData);
 
             // 새로운 팝업 창 열기
-            window.open(url.toString(), '플레이리스트', 'width=1200,height=700');
+            window.open('/playlists/current', '플레이리스트', 'width=1200,height=700');
         });
+
+        $('#selected-play-btn').click(function (event) {
+            event.preventDefault();
+
+            // 선택된 체크박스의 노래 데이터 가져오기
+            $('.chart-main-table-body input[type="checkbox"]:checked').each(function () {
+                var row = $(this).closest('tr');
+                var songData = {
+                    songId: row.find('.play-btn').data('songid'),
+                    index: row.find('.play-btn').data('index'),
+                    title: row.find('.play-btn').data('title'),
+                    artistName: row.find('.play-btn').data('artist'),
+                    coverImg: row.find('.play-btn').data('cover'),
+                    musicFile: row.find('.play-btn').data('music'),
+                    islogin: row.find('.play-btn').data('islogin')
+                };
+                addSongIfNotExists(songData);
+            });
+
+            // 새로운 팝업 창 열기
+            window.open('/playlists/current', '플레이리스트', 'width=1200,height=700');
+        });
+
         window.addEventListener("message", function (event) {
             if (event.data === "closePopup") {
                 // 팝업 창을 닫고 로그인 페이지로 리디렉션
                 window.location.href = "/login-form";
             }
         });
-
     });
+
 </script>
 
 {{>layout/footer}}

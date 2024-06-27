@@ -61,29 +61,8 @@
 
 <script>
     $(document).ready(function () {
-        // URL에서 데이터 읽기
-        const urlParams = new URLSearchParams(window.location.search);
-        const songData = {
-            songId: urlParams.get('songId'),
-            index: urlParams.get('index'),
-            title: urlParams.get('title'),
-            artistName: urlParams.get('artistName'),
-            coverImg: urlParams.get('coverImg'),
-            musicFile: urlParams.get('musicFile'),
-            islogin: urlParams.get('islogin') === 'true' // boolean으로 변환
-        };
-
-        // // 로컬 스토리지에서 기존 데이터를 삭제
-        // localStorage.removeItem('currentSongs');
-        // localStorage.removeItem('currentSong');
-
-        // 새 노래 데이터가 중복되지 않도록 확인 후 로컬 스토리지에 추가
-        var currentSongs = JSON.parse(localStorage.getItem('currentSongs')) || [];
-
-        if (songData.songId && !currentSongs.some(song => song.songId === songData.songId)) {
-            currentSongs.push(songData);
-            localStorage.setItem('currentSongs', JSON.stringify(currentSongs));
-        }
+        // localStorage에서 데이터 읽기
+        var selectedSongs = JSON.parse(localStorage.getItem('selectedSongs')) || [];
 
         // 플레이리스트 렌더링
         function renderPlaylist(songs) {
@@ -103,8 +82,9 @@
                 var iconContainer = $('<div>').addClass('icon-container');
                 var listIcon = $('<a>').attr('href', '#').append($('<i>').addClass('album-icon fas fa-list icon').css('margin-right', '10px'));
                 var moreIcon = $('<a>').attr('href', '#').append($('<i>').addClass('fas fa-ellipsis-v icon').css('color', 'white'));
+                var deleteIcon = $('<a>').attr('href', '#').addClass('delete-btn').append($('<i>').addClass('fas fa-trash icon').css('color', 'white'));
 
-                iconContainer.append(listIcon).append(moreIcon);
+                iconContainer.append(listIcon).append(moreIcon).append(deleteIcon);
 
                 li.append(img).append(infoDiv).append(iconContainer);
 
@@ -112,11 +92,11 @@
             });
         }
 
-        renderPlaylist(currentSongs);
+        renderPlaylist(selectedSongs);
 
         // 첫 번째 노래를 페이지에 반영
-        if (currentSongs.length > 0) {
-            var firstSong = currentSongs[0];
+        if (selectedSongs.length > 0) {
+            var firstSong = selectedSongs[0];
             $('#song-name').text(firstSong.title);
             $('#artist-name').text(firstSong.artistName);
             $('#cover-image').attr('src', firstSong.coverImg);
@@ -146,7 +126,6 @@
 
         let currentIndex = 0;
         let previousIndex = null;
-        let songs = currentSongs;
         let currentModeIndex = 0; // 초기 모드는 normal
         let currentLyrics = [];
         let lyricsIndex = 0;
@@ -167,7 +146,7 @@
 
         // 노래 재생 함수
         function playSong(index) {
-            var song = songs[index];
+            var song = selectedSongs[index];
             songName.text(song.title);
             artistName.text(song.artistName);
             audioPlayer.src = song.musicFile;
@@ -188,7 +167,6 @@
 
             // 새로운 노래 재생될 때 1분 체크 초기화함
             isOneMinutePassed = false;
-
         }
 
         // 가사 업데이트 함수
@@ -212,8 +190,8 @@
 
             // 1분 이상 재생되었는지 확인
             if (!isOneMinutePassed && audioPlayer.currentTime >= 60) {
-                console.log("islogin", songData.islogin);
-                if (songData.islogin === false) {
+                console.log("islogin", selectedSongs[currentIndex].islogin);
+                if (selectedSongs[currentIndex].islogin === false) {
                     alert("로그인이 필요합니다");
                     window.opener.postMessage("closePopup", "*");
                     window.close(); // 팝업 창 닫기
@@ -224,15 +202,13 @@
                     $.ajax({
                         type: "put",
                         url: "/api/songs/count",
-                        data: {listenCount: listenCount, songId: urlParams.get('songId')}
+                        data: {listenCount: listenCount, songId: selectedSongs[currentIndex].songId}
                     }).done((res) => {
                         alert("노래 조회수 1추가")
                     }).fail((res) => {
                         alert("오류")
-                    })
+                    });
                 }
-
-
             }
         }
 
@@ -303,10 +279,10 @@
             if (PLAY_MODES[currentModeIndex].name === 'repeat-one') {
                 audioPlayer.play();
             } else if (PLAY_MODES[currentModeIndex].name === 'repeat-all') {
-                currentIndex = (currentIndex + 1) % songs.length;
+                currentIndex = (currentIndex + 1) % selectedSongs.length;
                 playSong(currentIndex);
             } else {
-                currentIndex = (currentIndex + 1) % songs.length;
+                currentIndex = (currentIndex + 1) % selectedSongs.length;
                 if (currentIndex === 0) {
                     audioPlayer.pause();
                 } else {
@@ -317,20 +293,20 @@
 
         // 이전 곡 재생 함수
         function playPrevious() {
-            currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+            currentIndex = (currentIndex - 1 + selectedSongs.length) % selectedSongs.length;
             playSong(currentIndex);
         }
 
         // 다음 곡 재생 함수
         function playNext() {
-            currentIndex = (currentIndex + 1) % songs.length;
+            currentIndex = (currentIndex + 1) % selectedSongs.length;
             playSong(currentIndex);
         }
 
         // 셔플 버튼 클릭 이벤트 리스너
         shuffleBtn.on('click', function () {
-            shuffleArray(songs);
-            renderPlaylist(songs);
+            shuffleArray(selectedSongs);
+            renderPlaylist(selectedSongs);
             playSong(0);
         });
 
@@ -355,6 +331,36 @@
         // playPrevious, playNext 함수 추가
         prevBtn.on('click', playPrevious);
         nextBtn.on('click', playNext);
+
+        // 삭제 버튼 클릭 시 처리
+        songList.on('click', '.delete-btn', function (event) {
+            event.preventDefault();
+            var index = $(this).closest('li').data('index');
+
+            // selectedSongs 배열에서 항목 삭제
+            selectedSongs.splice(index, 1);
+
+            // localStorage 업데이트
+            localStorage.setItem('selectedSongs', JSON.stringify(selectedSongs));
+
+            // 플레이리스트 다시 렌더링
+            renderPlaylist(selectedSongs);
+
+            // 첫 번째 노래를 페이지에 반영
+            if (selectedSongs.length > 0) {
+                var firstSong = selectedSongs[0];
+                $('#song-name').text(firstSong.title);
+                $('#artist-name').text(firstSong.artistName);
+                $('#cover-image').attr('src', firstSong.coverImg);
+                $('#audio-player').attr('src', firstSong.musicFile);
+            } else {
+                $('#song-name').text('재생중인 음악이 없습니다.');
+                $('#artist-name').text('');
+                $('#cover-image').attr('src', '/upload/album/main-cover.jpg');
+                $('#audio-player').attr('src', '');
+                $('#lyrics-list').text('가사가 없습니다.');
+            }
+        });
 
         // 초기 모드 설정
         updatePlayMode();
