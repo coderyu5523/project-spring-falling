@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="/images/favicon-96x96.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Falling</title>
     <link rel="stylesheet" href="/css/current-playlist.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -73,7 +74,7 @@
         };
 
         // // 로컬 스토리지에서 기존 데이터를 삭제
-        localStorage.removeItem('currentSongs');
+        // localStorage.removeItem('currentSongs');
         // localStorage.removeItem('currentSong');
 
         // 새 노래 데이터가 중복되지 않도록 확인 후 로컬 스토리지에 추가
@@ -184,6 +185,10 @@
 
             previousIndex = index;
             currentIndex = index;
+
+            // 새로운 노래 재생될 때 1분 체크 초기화함
+            isOneMinutePassed = false;
+
         }
 
         // 가사 업데이트 함수
