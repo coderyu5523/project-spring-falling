@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface LikeRepository extends JpaRepository<Like, Integer> {
     // 앨범 상세보기 - 좋아요
     @Query("SELECT l FROM Like l WHERE l.user.id = :userId AND l.album.id = :albumId")
-    Optional<Like> findUserLikedSongs(Integer userId, Integer albumId);
+    Optional<Like> findUserLikedAlbums(Integer userId, Integer albumId);
 
     // 보관함 - 좋아요(곡)
     @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$StorageLikeSongs(s.id, a.id, a.albumImg, s.title, a.title, ar.name) FROM Like l JOIN l.song s JOIN s.album a JOIN s.artist ar WHERE l.user.id = :userId")

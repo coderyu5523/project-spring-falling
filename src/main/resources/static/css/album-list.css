@@ -96,12 +96,23 @@ body {
 
 .album-list-tab-button .album-list-album-songs {
     font-size: 14px;
-    color: #F9FCFF;
+    color: #464646;
     font-weight: 00;
     padding: 4px 13px 4px 13px;
     border-radius: 17px;
-    background-color: #403FFF;
+    background-color: transparent;
     border: none;
+}
+
+.album-list-tab-button .album-list-album-songs:hover,
+.album-list-tab-button .album-list-album-detail:hover {
+    color: #F9FCFF !important;
+    background-color: #403FFF !important;
+}
+
+.album-selected-tab {
+    color: #F9FCFF !important;
+    background-color: #403FFF !important;
 }
 
 .album-list-song-list .album-list-all-play {
