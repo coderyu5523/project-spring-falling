@@ -1,6 +1,7 @@
 package org.example.projectspringfalling.song;
 
 import org.assertj.core.api.Assertions;
+import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -45,8 +46,44 @@ public class SongRepositoryTest {
         System.out.println("findByAlbumId_test albumTitle: " + songs.get(0).getAlbum().getId());
 
         // then
-        Assertions.assertThat(songs.get(0).getAlbum().getCategory()).isEqualTo("발라드");
+        Assertions.assertThat(songs.get(0).getAlbum().getCategory()).isEqualTo("정규");
         Assertions.assertThat(songs.get(0).getAlbum().getArtist().getArtistType()).isEqualTo("Solo");
 
+    }
+
+    // 검색 페이지
+    @Test
+    public void searchKeyword_test(){
+        //given
+        String keyword = "사랑";
+
+        //when
+        List<Song> songList = songRepository.findByKeyword(keyword).orElseThrow(() -> new Exception404("조회된 데이터가 없습니다."));
+
+        // eye
+        System.out.println("searchKeyword_tEST songTitle: " + songList.get(1).getTitle());
+        System.out.println("searchKeyword_tEST artistName: " + songList.get(1).getArtist().getName());
+        System.out.println("searchKeyword_tEST genre: " + songList.get(1).getGenre());
+
+        //then
+        Assertions.assertThat(songList.get(0).getAlbum().getCategory()).isEqualTo("정규");
+        Assertions.assertThat(songList.get(0).getAlbum().getArtist().getArtistType()).isEqualTo("Solo");
+    }
+
+    @Test
+    public void searchKeywordAuto_test(){
+        //given
+        String keyword = "사랑";
+
+        //when
+        List<Song> songList = songRepository.findByAutoComplete(keyword).orElseThrow(() -> new RuntimeException("조회된 데이터가 없습니다."));
+
+        // eye
+        System.out.println("searchKeyword_tEST songTitle: " + songList.get(1).getTitle());
+        System.out.println("searchKeyword_tEST artistName: " + songList.get(1).getArtist().getName());
+        System.out.println("searchKeyword_tEST genre: " + songList.get(1).getGenre());
+
+        //then
+        Assertions.assertThat(songList.get(0).getAlbum().getArtist().getArtistType()).isEqualTo("Solo");
     }
 }

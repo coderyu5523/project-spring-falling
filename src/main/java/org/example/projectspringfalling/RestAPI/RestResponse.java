@@ -1,5 +1,6 @@
 package org.example.projectspringfalling.RestAPI;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.example.projectspringfalling.playlist.Playlist;
@@ -132,6 +133,17 @@ public class RestResponse {
         public AddPlaylistDTO(Playlist playlist) {
             this.playlistId = playlist.getId();
             this.playlistName = playlist.getName();
+        }
+    }
+
+    @Data
+    public static class listenCountDTO{
+        private Integer songId;
+        private Long listenCount;
+
+        public listenCountDTO(Song song) {
+            this.songId = song.getId();
+            this.listenCount = song.getListenCount();
         }
     }
 
