@@ -11,6 +11,7 @@ import org.example.projectspringfalling.playlistSong.PlaylistSongRepository;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -59,6 +60,22 @@ public class SongService {
     // 해외 힙합 차트
     public List<SongResponse.ChartDTO> globalHipHopChart() {
         List<Song> songList = songRepository.findGlobalHipHopChart();
+        return IntStream.range(0, songList.size())
+                .mapToObj(i -> new SongResponse.ChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
+                .collect(Collectors.toList());
+    }
+
+    // 국내 알앤비 차트
+    public List<SongResponse.ChartDTO> domesticRBChart() {
+        List<Song> songList = songRepository.findDomesticRBChart();
+        return IntStream.range(0, songList.size())
+                .mapToObj(i -> new SongResponse.ChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
+                .collect(Collectors.toList());
+    }
+
+    // 국내 댄스,일렉 차트
+    public List<SongResponse.ChartDTO> domesticDanceAndElectronicChart() {
+        List<Song> songList = songRepository.findDomesticDanceAndElectronicChart();
         return IntStream.range(0, songList.size())
                 .mapToObj(i -> new SongResponse.ChartDTO(songList.get(i), songList.get(i).getAlbum(), songList.get(i).getArtist(), i + 1))
                 .collect(Collectors.toList());
@@ -114,4 +131,11 @@ public class SongService {
         return songList.stream().map(song -> new RestResponse.SearchAutoCompleteDTO(song)).toList();
     }
 
+    @Transactional
+    public RestResponse.listenCountDTO updateCount(Long listenCount, Integer songId) {
+       Song song = songRepository.findById(songId).orElseThrow(() -> new Exception404("조회된 정보가 없습니다."));
+       Long newListenCount = listenCount + song.getListenCount();
+       song.updateCount(newListenCount);
+       return new RestResponse.listenCountDTO(song);
+    }
 }

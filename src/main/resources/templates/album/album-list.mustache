@@ -29,7 +29,13 @@
                     <div class="album-list-icons">
                         <a href="#"><i class="album-list-btn-add-list fas fa-list icon"></i></a>
                         <a href="#"><i class="album-list-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
-                        <a href="#"><i class="album-list-btn-add-like fa-regular fa-heart"></i></a>
+                        {{#album.isLike}}
+                            <a href="#"><i class="album-list-btn-add-like fas fa-heart"></i></a>
+                        {{/album.isLike}}
+                        {{^album.isLike}}
+                            <a href="#"><i class="album-list-btn-add-like fa-regular fa-heart"></i></a>
+                        {{/album.isLike}}
+
                     </div>
                 </div>
             </div>

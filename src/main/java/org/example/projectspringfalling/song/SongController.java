@@ -7,6 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -46,12 +47,18 @@ public class SongController {
     // 차트별 페이지
     @GetMapping("/song-chart")
     public String songChart(HttpServletRequest request) {
+        boolean isLogin = session.getAttribute("sessionUser") != null; // 로그인 되어있으면 true, 아니면 false
         List<SongResponse.ChartDTO> MainChartDTOs = songService.mainChart(); // 메인 차트
         List<SongResponse.ChartDTO> globalChartDTOs = songService.globalChart(); // 해외 소셜 차트
         List<SongResponse.ChartDTO> domesticChartDTOs = songService.domesticBalladChart(); // 국내 발라드 차트
         List<SongResponse.ChartDTO> globalPopChartDTOs = songService.globalPopChart(); // 해외 팝 차트
         List<SongResponse.ChartDTO> globalHipHopChartDTOs = songService.globalHipHopChart(); // 해외 힙합 차트
-        SongResponse.AllChartDTO resp = new SongResponse.AllChartDTO(MainChartDTOs, globalChartDTOs, domesticChartDTOs, globalPopChartDTOs, globalHipHopChartDTOs);
+        List<SongResponse.ChartDTO> domesticRBChartDTOs = songService.domesticRBChart(); // 국내 알앤비 차트
+        List<SongResponse.ChartDTO> domesticDanceAndElectronicChartDTOs = songService.domesticDanceAndElectronicChart(); // 국내 댄스,일렉 차트
+
+        SongResponse.AllChartDTO resp = new SongResponse.AllChartDTO(
+                isLogin, MainChartDTOs, globalChartDTOs, domesticChartDTOs,
+                globalPopChartDTOs, globalHipHopChartDTOs, domesticRBChartDTOs, domesticDanceAndElectronicChartDTOs);
         request.setAttribute("all", resp);
         return "song/song-chart";
     }
@@ -62,16 +69,6 @@ public class SongController {
         return "song/song-genre";
     }
 
-
-    // todo : 더미 테스트용
-    @GetMapping("/song-test")
-    public String test(HttpServletRequest request) {
-        int id = 31;
-        Song song = songService.getImg(id);
-        System.out.println("음악" + song.getMusicFile());
-        request.setAttribute("song", song);
-        return "song-test";
-    }
 
 
 }

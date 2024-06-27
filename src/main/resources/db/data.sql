@@ -100,7 +100,7 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
 -- 테이블: album
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '발라드', '/upload/album/전부너였다.jpg', 1, NOW(),
+VALUES ('전부 너였다', 'Dreamus', '제이와이피엔터테인먼트', '국내', '정규', '/upload/album/전부너였다.jpg', 1, NOW(),
         '- 섬세한 사랑의 감정을 노래한 "전부 너였다" 붙잡고도, 인연, 아파도 아파도, 청혼 등 2장의 앨범을 통해서 색깔있는 가창력을 선보였던 그룹 ''노을''이 기나긴 작업 기간을 보내고 섬세한 사랑의 감정을 담은 세번째 앨범 "전부 너였다"로 돌아왔다. 데뷔앨범인 "붙잡고도"와 2집 앨범 "아파도 아파도"를 통해 뛰어난 가창력과 멤버 각각의 독특한 보이스 칼라로 최고의 R&B그룹으로 평가 받아왔던 노을이 또 한번의 음악적 변신을 시도한다. 기나긴 작업기간 동안 4명의 멤버가 가장 신경쓴 부분은 각각의 보이스 컬러의 조화와 모든 이들이 공감할 수 있는 편안한 모습으로 팬들에게 다가가는 것이었다. 이번 앨범에서는 그 동안 노을이 보여주었던 슬픔의 극대화가 아닌 슬픈 감정의 절제를 노래하는 노을을 만나볼 수 있을 것이다. 타이틀 곡인 ''전부 너였다''는 제목이 주는 이미지 그대로 누구나 공감할 수 있는 가사가 돋보이는 곡으로 노을의 ''청혼''과 god의 ''보통날''을 작곡했던 권태은의 서정적인 멜로디에 양재선의 감성적인 노랫말과 노을의 Voice가 잘 조화된 곡으로 이별의 슬픈 감정을 절제하면서 덤덤하게 노래하여 이번 앨범의 컨셉을 가장 잘 표현하였다. - "노을스럽다"를 보여주는 곡 "나무" 사랑의 감정을 한 곳에 뿌리박은 나무에 비유한 "나무"는 노을 Voice와 웅장한 오케스트레이션의 조화가 돋보이며 최고의 프로듀서 방시혁의 노랫말이 귀에 쏙쏙 들어오며 가장 ''노을스럽다''라는 말이 어울리는 곡이다. 또한 이외에도 일본의 여가수 아무로 나미에의 최근작인 히트 발라드 "All for you"를 노을 만의 감성으로 새롭게 재해석한 "All for you"와 드라마 궁의 OST "perhaps love"를 작곡한 박근철의 "A better tomorrow", MC몽의 ''180도'', M(이민우)의 "Last first kiss"등을 작곡한 장준호의 멜로디와 "10 Minetes"의 작사가 Maybee의 가사의 조화가 돋보이는 댄스넘버 "남자라서", 조성모, BMK 및 여러 가수들의 앨범을 프로듀서한 mAd sOuL cHiLd가 선사하는 트랜디한 사운드와 감성의 조화가 돋보이는 ''A nice day'', 천상의 목소리 이소은과 노을의 리더 이상곤이 듀엣으로 노래한 러브 발라드 "여행" 등을 통해 또 한번 새로운 노을만의 색깔을 선보일 예정이다. 이번 노을의 세번째 앨범 ''전부 너였다''는 노을의 음악세계에 새로운 변화를 제시하며 동시에 가장 ''노을스럽다''라는 말이 어울리는 듣는이로 하여금 편안한 감동을 선사할 수 있는 최고의 앨범이 될 것이다.'),
        ('Armageddon - The 1st Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', 'Dance', '/upload/album/슈퍼노바.jpg', 2,
         '2024-05-27',
@@ -699,7 +699,8 @@ VALUES ('너 그러다 장가 못간다', '미러볼뮤직', 'doob sound', '국�
 ');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('To. X - The 5th Mini Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', '미니', '/upload/album/To. X.jpg', 51, '2023-11-27', '태연, 다섯 번째 미니앨범 ‘To. X’ 발매!
+VALUES ('To. X - The 5th Mini Album', '카카오엔터테인먼트', 'SM ENTERTAINMENT', '국내', '미니', '/upload/album/To. X.jpg', 51,
+        '2023-11-27', '태연, 다섯 번째 미니앨범 ‘To. X’ 발매!
 한층 짙어진 ‘믿듣탱’표 보컬 매력과 음악 감성!
 태연의 감각을 느낄 수 있는 다채로운 총 6곡 수록!
 
@@ -791,7 +792,8 @@ AKMU가 4번째 싱글 [Love Lee]로 돌아왔다.
 [Love Lee]는 누구에게나 사랑스러운 선물 같은 앨범이길 바란다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('''키스 먼저 할까요?'' OST Part.3', '카카오엔터테인먼트', 'SM Entertainment', '국내', 'OST/BGM', '/upload/album/키스먼저할까요3.jpg', 59, '2018-03-20', 'SBS 월화드라마 ‘키스 먼저 할까요?’ OST Part.3 공개!
+VALUES ('''키스 먼저 할까요?'' OST Part.3', '카카오엔터테인먼트', 'SM Entertainment', '국내', 'OST/BGM', '/upload/album/키스먼저할까요3.jpg', 59,
+        '2018-03-20', 'SBS 월화드라마 ‘키스 먼저 할까요?’ OST Part.3 공개!
 감성 보컬리스트 폴킴 참여!
 
 SBS 월화드라마 ‘키스 먼저 할까요?’ OST의 세 번째 주자로 ‘감성 보컬리스트’ 폴킴이 출격한다.
@@ -801,7 +803,8 @@ SBS 월화드라마 ‘키스 먼저 할까요?’ OST의 세 번째 주자로 �
 또한 이번 곡은 가사에 고단하고 불안한 하루 속에서도 항상 함께 하자는 진심 어린 고백을 담고 있는 만큼, 앞으로 겪게 될 시련을 극복해 나가는 안순진(김선아 분)과 손무한(감우성 분)의 굳은 믿음과 사랑을 잘 표현해 드라마의 몰입도를 한층 높일 것으로 보인다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLANETMADE', '국내', '미니', '/upload/album/VERSUS.jpg', 60, '2023-11-02', 'VIVIZ - The 4th Mini Album ''VERSUS''
+VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLANETMADE', '국내', '미니', '/upload/album/VERSUS.jpg', 60,
+        '2023-11-02', 'VIVIZ - The 4th Mini Album ''VERSUS''
 
 - VIVIZ, 11월 2일 미니 4집 ‘VERSUS’ 공개!
 - “사랑 말고 다른 말론 설명할 수 없는 멜로” 이거 사랑 맞지?
@@ -920,7 +923,7 @@ Vol.6 (7집) 수록된 모든 곡들을 강산에가 직접 작사 작곡은 물
 -- 테이블: song
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('전부 너였다', '런치송 프로젝트', '양재선', '/upload/song/전부너였다.mp4', 'Ballad', true, '/upload/song/전부너였다.mp3', now(), 1, '가슴을 떼어 놓은
 채 살 순 없나요
 아무런 느낌도 없는 채로
@@ -959,8 +962,9 @@ VALUES ('전부 너였다', '런치송 프로젝트', '양재선', '/upload/song
 보내고 보내도 헤어지고
 다시 헤어져도
 나는 또 그대겠죠
-', 1,179746),
-       ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/song/슈퍼노바.mp4', 'Dance',
+', 1, 179746),
+       ('Supernova', 'Kenzie, Paris Alexa, Dwayne “Dem Jointz” Abernathy Jr.', 'Kenzie', '/upload/song/슈퍼노바.mp4',
+        'Dance',
         true, '/upload/song/슈퍼노바.mp3', '2024-05-13', 2, 'I’m like some kind of Supernova
 Watch out
 Look at me go
@@ -1048,7 +1052,7 @@ Supernova
 질문은 계속돼 Ah Oh Ay
 (Nova)
 Bring the light of a dying star
-Supernova', 2,246012),
+Supernova', 2, 246012),
        ('Armageddon', 'EJAE, SUMIN (수민), Waker (153/Joombas), 노 아이덴티티 (No Identity)', '방혜현 (Jam Factory)',
         '/upload/song/Armageddon.mp4', 'Dance', true, '/upload/song/Armageddon.mp3', '2024-05-27', 2, 'Armageddon
 Shoot
@@ -1170,8 +1174,9 @@ Warning all night long)
 Armageddon
 (Aw wayo wayo)
 끝과 시작의
-Armageddon', 2,1023143),
-       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false, '/upload/song/tone.mp3',
+Armageddon', 2, 1023143),
+       ('Set The Tone', 'Ludwig Lindell, Daniel Caesar, Ylva Dimberg', '조윤경', null, 'Dance', false,
+        '/upload/song/tone.mp3',
         '2024-05-27', 2, 'We Set The Tone
 Music on where we go
 미친 Beat drum
@@ -1305,7 +1310,7 @@ We Set The Tone
 
 We Set The Tone
 We take it home
-We Set The Tone', 2,123123),
+We Set The Tone', 2, 123123),
        ('Mine', 'Mike Daley, Mitchell Owens, Nicole “Kole” Cohen, Adrian McKinnon', '이은화 (153/Joombas)', null, 'Dance',
         false, '/upload/song/Mine.mp3', '2024-05-27', 2, '예고 없이
 지는 그림자
@@ -1446,9 +1451,9 @@ Mine
 It’s all Mine
 know you want it like
 It’s all Mine
-Mine', 2,1245),
+Mine', 2, 1245),
        ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
-        '/upload/Licorice.mp4', 'Dance', false, '/upload/song/Licorice.mp3', '2024-05-27', 2, '넌 정말
+        '/upload/song/Licorice.mp4', 'Dance', false, '/upload/song/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
 Licorice
 Licorice
@@ -1570,7 +1575,7 @@ Licorice
 Licorice
 Licorice
 자꾸 손이 가
-Like Licorice', 2,55247),
+Like Licorice', 2, 55247),
        ('BAHAMA', 'Kenzie, Jonatan Gusmark, Ludvig Evers, Moa “Cazzi Opeia” Carlebecker, Ellen Berg', 'Kenzie', null,
         'Dance', false, '/upload/song/BAHAMA.mp3', '2024-05-27', 2, 'Bahama,
 ba ba
@@ -1707,9 +1712,9 @@ Bahama, hama
 We should go
 To the beach
 Take it slow
-Bahama', 2,214),
+Bahama', 2, 214),
        ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
-        '/upload/Long Chat.mp4', 'Dance', false, '/upload/song/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
+        '/upload/song/Long Chat.mp4', 'Dance', false, '/upload/song/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
 Woo Ah
 
@@ -1854,8 +1859,9 @@ Hashtag
 너의 속마음을 듣고파
 
 I’ll be the girl who likes a
-Long Chat', 2,112368),
-       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false, '/upload/song/Prologue.mp3',
+Long Chat', 2, 112368),
+       ('Prologue', 'Gil Lewis, Micky Blue', 'Mola (PNP), 미아 (153/Joombas)', null, 'R&B', false,
+        '/upload/song/Prologue.mp3',
         '2024-05-27', 2, 'Woo Woo Woo
 La-la
 Woo Woo Woo
@@ -1954,8 +1960,8 @@ Woo Woo Woo
 La-la
 Woo Woo Woo
 La-la
-', 2,45557),
-       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4',
+', 2, 45557),
+       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/song/Live My Life.mp4',
         'Rock/Metal', false, '/upload/song/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
 고지식한
 그런 사고방식
@@ -2058,7 +2064,7 @@ Live My Life
 외쳐봐
 Live My Life
 
-Life', 2,987),
+Life', 2, 987),
        ('목소리 (Melody)', '밍지션 (minGtion), Sophia Pae', '이오늘', null, 'Ballad', false, '/upload/song/목소리 (Melody).mp3',
         '2024-05-27', 2, 'Every night
 지친 하루 끝에
@@ -2139,7 +2145,7 @@ Oh You’re the one
 나를 부르는
 목소리
 우릴 이어준
-목소리', 2,32547),
+목소리', 2, 32547),
        ('How Sweet', '250, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman',
         'Gigi, Sarah Aarons, Elvira Anderfjard, Oscar Scheller, Stella Bennett, Tove Burman, 다니엘(DANIELLE)',
         '/upload/song/How Sweet.mp4', 'Dance', true, '/upload/song/How Sweet.mp3', '2024-05-24', 3, 'All I know is now
@@ -2229,9 +2235,10 @@ Don’t knock on my door 너 얼른 나가버려
 Toxic lover
 You’re no better, 거기 숨지 말고 얼른 나와
 You little demon in my storyline
-Don’t knock on my door, I’ll see you out', 3,554236),
+Don’t knock on my door, I’ll see you out', 3, 554236),
        ('해야 (HEYA)', 'Ryan S. Jhun, Dwayne Abernathy Jr., Ido Nadjar, Kloe Latimer, Jack Brady, Jordan Roman',
-        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/song/해야 (HEYA).mp4', 'Dance', true, '/upload/song/해야 (HEYA).mp3', '2024-04-29',
+        '이스란, 엑시 (우주소녀), 솔희 (SOHLHEE)', '/upload/song/해야 (HEYA).mp4', 'Dance', true, '/upload/song/해야 (HEYA).mp3',
+        '2024-04-29',
         4, 'Let’s get it
     Look at it
     Pay attention
@@ -2326,7 +2333,7 @@ Don’t knock on my door, I’ll see you out', 3,554236),
     해야 해야 해야
     뜨겁게 떠오르는 해야
     별안간 홀린 그 순간 Bite
-    Da da da dun dun dun', 4,1147896),
+    Da da da dun dun dun', 4, 1147896),
        ('첫 만남은 계획대로 되지 않아',
         'WASURENAI, 전진, Ohway!, Nmore, Heon Seo (헌서), BuildingOwner, Glenn, T-SK (Chizaki Taisuke), YouthK',
         'WASURENAI, 브라더수, 전진, BuildingOwner, Glenn', '/upload/song/첫 만남은 계획대로 되지 않아.mp4', 'Dance', true,
@@ -2382,9 +2389,10 @@ Na na na-
 
 이렇게 만나서 반가워
 내일 또 봐 안녕
-', 5,45763),
+', 5, 45763),
        ('고민중독', '이동혁, 홍훈기 (PRISMFILTER), Elum, Gesture (PRISMFILTER), 한아영',
-        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/song/고민중독.mp4', 'Rock/Metal', true, '/upload/song/고민중독.mp3',
+        '이동혁, Gesture (PRISMFILTER), 김혜정, Elum, 마젠타', '/upload/song/고민중독.mp4', 'Rock/Metal', true,
+        '/upload/song/고민중독.mp3',
         '2024-04-01', 6, 'One! Two! Q! W! E! R!
 어떤 인사가 괜찮을까 천 번쯤 상상해 봤어
 근데 오늘도 천 번 하고 한 번 더 고민 중
@@ -2423,8 +2431,9 @@ Na na na-
 벅차오르다 못해 내 맘이 쿡쿡 아려와
 두 번은 말 못 해 너 지금 잘 들어봐
 매일 고민하고 연습했던 말
-좋아해', 6,974561),
-       ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/song/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/song/사랑은 늘 도망가.mp3', '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
+좋아해', 6, 974561),
+       ('사랑은 늘 도망가', '홍진영', '강태규', '/upload/song/사랑은 늘 도망가.mp4', 'Ballad', true, '/upload/song/사랑은 늘 도망가.mp3',
+        '2021-10-11', 7, '눈물이 난다 이 길을 걸으면
 그 사람 손길이 자꾸 생각이 난다
 붙잡지 못하고 가슴만 떨었지
 내 아름답던 사람아
@@ -2457,9 +2466,10 @@ Na na na-
 꼭 움켜쥐지만
 그리움이 쫓아 사랑은 늘 도망가
 잠시 쉬어가면 좋을 텐데
-잠시 쉬어가면 좋을 텐데', 7,67841),
+잠시 쉬어가면 좋을 텐데', 7, 67841),
        ('SPOT! (feat. JENNIE)', '지코 (ZICO), 은희영, 노 아이덴티티 (No Identity)', '지코 (ZICO)',
-        '/upload/song/SPOT! (feat. JENNIE).mp4', 'HipHop', true, '/upload/song/SPOT! (feat. JENNIE).mp3', '2024-04-26', 8, 'Everything ok my man
+        '/upload/song/SPOT! (feat. JENNIE).mp4', 'HipHop', true, '/upload/song/SPOT! (feat. JENNIE).mp3', '2024-04-26',
+        8, 'Everything ok my man
 Turn the music up
 
 Uhm we’re not going home tonight, alright
@@ -2530,7 +2540,7 @@ Everybody Stop
 Wait a minute ahhh
 
 Come vibe with us
-Ride with us', 8,7841),
+Ride with us', 8, 7841),
        ('나는 아픈 건 딱 질색이니까', '소연 ((여자)아이들), Pop Time, Daily, Likey', '소연 ((여자)아이들)', null, 'Dance', false,
         '/upload/song/나는 아픈 건 딱 질색이니까.mp3', '2024-01-29', 9, '오늘도 아침엔 입에 빵을 물고
 똑같이 하루를 시작하고
@@ -2578,7 +2588,7 @@ Ride with us', 8,7841),
 나는 생각은 딱 질색이니까
 
 아냐 지나치는 게 나을 것 같아
-나는 아픈 건 딱 질색이니까', 9,65897),
+나는 아픈 건 딱 질색이니까', 9, 65897),
        ('Magnetic',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
         'Slow Rabbit, "Hitman" Bang, martin, salem ilese, danke, VINCENZO, 이이진, piri, Lauren Amber Aquilina, Marcus Andersson, 김키위, 오현선 (lalala studio), JAMES',
@@ -2658,7 +2668,7 @@ Dash-da-da Dash-da-da Dash-da
 Like it’s magnetic
 BAE BAE BAE BAE BAE BAE BAE BAE BAE
 Dash-da-da Dash-da-da
-Baby don’t say no', 10,12474),
+Baby don’t say no', 10, 12474),
        ('소나기', '한성호, 박수석, Moon Kim (Room 01)', '한성호, 수윤 (Sooyoon)', null, 'Ballad', true, '/upload/song/소나기.mp3',
         '2024-04-08', 11, '그치지 않기를 바랬죠
     처음 그대 내게로 오던 그날에
@@ -2713,11 +2723,11 @@ Baby don’t say no', 10,12474),
     내게 주었던
     작은 기억 하나도
     오늘도 새겨봅니다
-    내겐 선물인 그댈', 11,111);
+    내겐 선물인 그댈', 11, 111);
 
 -- song_tb에 더미 데이터 삽입
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('ON', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
 ', 'Pdogg, RM, August Rigo, Melanie Fontana, Michel ''Lindgren'' Schulz, SUGA, j-hope, Antonina Armato, Krysta Youngs, Julia Ross
 ', '/upload/song/ON.mp4', 'Dance', TRUE, '/upload/song/ON.mp3', '2020-02-21', 12, 'I can''t understand what people are sayin''
@@ -2827,9 +2837,9 @@ All that I know
 is just goin’ on & on & on & on
 (Eh-oh)
 가져와 bring the pain oh yeah
-', 12,4541);
+', 12, 4541);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Lovesick Girls', 'TEDDY, 24, 제니 (JENNIE), Brian Lee, Leah Haywood, R.Tee, David Guetta', 'TEDDY, LØREN, 지수 (JISOO), 제니 (JENNIE), DANNY CHUNG
 ', '/upload/song/Lovesick Girls.mp4', 'Pop', TRUE, '/upload/song/Lovesick Girls.mp3', '2020-10-02', 13, '영원한 밤
 창문 없는 방에
@@ -2921,9 +2931,9 @@ Lovesick girls
 아프고 또 아파도
 Lovesick girls
 But we’re still looking for love
-', 13,457);
+', 13, 457);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('팔레트 (Feat. G-DRAGON)', '아이유 (IU)', '아이유 (IU)', '/upload/song/Palette.mp4', 'Ballade', TRUE,
         '/upload/song/Palette.mp3', '2017-04-21', 14, '이상하게도 요즘엔 그냥 쉬운 게 좋아
 하긴 그래도 여전히 코린 음악은 좋더라
@@ -2973,9 +2983,9 @@ I like it I''m twenty five
 날 미워하는 거 알아
 I got this I''ve truly found
 이제 조금 알 것 같아 날
-', 14,4512364);
+', 14, 4512364);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('I CAN`T STOP ME', 'Melanie Fontana, Michel ''Lindgren'' Schulz, A Wright
 ', 'J.Y. Park "The Asiansoul", 심은지', '/upload/song/I CAN`T STOP ME.mp4', 'Dance', TRUE,
         '/upload/song/I CAN`T STOP ME.mp3',
@@ -3088,9 +3098,9 @@ can’t stop me
 
 I can’t stop me
 can’t stop me
-', 15,4517);
+', 15, 4517);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Tempo', 'Tay Jasper, Leven Kali, MZMC, JAMIL “DIGI” CHAMMAS, Adrian McKinnon
 ', 'JQ, 페노메코 (PENOMECO), 유영진', 'tempo_mv.mp4', 'Dance', TRUE, '/upload/song/Tempo.mp3', '2018-11-02', 16, 'I can''t believe
 기다렸던 이런 느낌
@@ -3177,9 +3187,9 @@ I said don''t mess up my tempo
 어디에도 없을 이런 완벽한 1, 2, 3
 Don''t mess up my tempo
 멈출 수 없는 이끌림
-', 16,954);
+', 16, 954);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Psycho', 'Andrew Scott, Cazzi Opeia, EJAE', 'Kenzie', '/upload/song/Psycho.mp4', 'Dance', TRUE,
         '/upload/song/Psycho.mp3', '2019-12-23', 17,
         'Psycho
@@ -3267,9 +3277,9 @@ It''s alright
 It''s alright
 우린 좀 이상해
 Psycho
-', 17,7831);
+', 17, 7831);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('사이렌(Siren)', 'FRANTS, 선미', '선미', '/upload/song/siren.mp4', 'Dance', TRUE, '/upload/song/siren.mp3',
         '2018-09-04', 18,
         '내가 말했잖아 속지 말라고 이 손을 잡는 순간
@@ -3313,9 +3323,9 @@ Get away out of my face
 더 바라보지 마 boy 슬퍼해도 난 울지 않아
 라랄라라라 라랄라라라
 라랄라라라 라랄라라라
-', 18,12031);
+', 18, 12031);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('독 : Fear', 'Woozi', 'Woozi', 'fear_mv.mp4', 'Dance', TRUE, '/upload/song/Fear.mp3', '2019-09-16', 19,
         '넌 내 기억을 지워야 돼 I’m poison
 I know I can’t take it no more
@@ -3390,9 +3400,9 @@ Uh uh wuh ya ya uh uh uh
 Uh uh wuh ya ya uh uh uh
 Uh uh wuh ya ya uh uh uh
 The way I love the way I love
-', 19,10230);
+', 19, 10230);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Moonlight', '카카오엔터테인먼트', 'SM ENTERTAINMENT', 'makeawish_mv.mp4', 'Pop', TRUE, 'makeawish.mp3',
         '2024-06-05', 20, '過ぎる今日に Good-bye
 手を振ろう (Oh yeah Oh yeah ey)
@@ -3484,10 +3494,10 @@ Singing to the night sky
 輝かせよう
 Dancing into the moonlight
 Frequencies of dream
-', 20,52);
+', 20, 52);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('봄여름가을겨울 (Still Life)', 'KUSH, VVN, Vince, G-DRAGON, T.O.P', 'G-DRAGON, T.O.P, KUSH',
         '/upload/song/봄여름가을겨울.mp4', 'Ballad', true,
         '/upload/song/봄여름가을겨울.mp3', '2022-04-05', 21, '이듬해 질 녘 꽃 피는 봄
@@ -3552,10 +3562,10 @@ La la la la la la la la la la la
 한여름 밤의 꿈
 가을 타 겨울 내린 눈
 봄 여름 가을 겨울
-', 21,87954);
+', 21, 87954);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('FOREVER 1', 'Kenzie, Ylva Dimberg', 'KENZIE', '/upload/song/forever1.mp4', 'Dance', true,
         '/upload/song/forever1.mp3', '2022-08-05', 22, 'FOREVER 1
 It’s love It’s love
@@ -3662,10 +3672,10 @@ We’re still FOREVER 1)
 Yeah we’re forever
 (Yeah we are,
 We’re still FOREVER 1)
-', 22,785);
+', 22, 785);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('ANTIHERO', '타블로, DJ 투컷', '타블로, Mithra Jin (미쓰라 진)', '/upload/song/ANTIHERO.mp4', 'HipHop', true,
         '/upload/song/ANTIHERO.mp3', '2024-06-20', 23, 'When I be on the microphone
 기립박수 짤 박아
@@ -3783,10 +3793,10 @@ Dancin’ on your grave
 For all the times all of you were
 dancin’ on my grave
 BREAK!
-', 23,499);
+', 23, 499);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Give It to Me', '이단옆차기, 박장근, 챈슬러', '이단옆차기, 박장근, 챈슬러', '/upload/song/give_it_to_me.mp4', 'Dance', true,
         '/upload/song/give_it_to_me.mp3', '2013-06-10', 24, 'You see I don''t usually do this but
 I really need you tonight
@@ -3847,10 +3857,10 @@ Oh oh oh oh oh oh
 사랑을 달란 말이야 그거면 된다는 말이야
 Oh oh oh
 Oh babe give it to me
-', 24,553);
+', 24, 553);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Lucifer', 'Ryan Jhun, 유영진, Adam Kapit, Bebe Rexha', '유영진', '/upload/song/lucifer.mp4', 'Dance', true,
         '/upload/song/lucifer.mp3', '2010-07-19', 25, '숨을 곳도 찾지 못해 나는 피하려고 애써봐도
 거부조차 할 수 없는 네게 갇혀버린 나
@@ -3926,10 +3936,10 @@ Loverhollic
 Loverhollic
 거부할 수 없는 너의 마력은 LUCIFER
 
-', 25,66584);
+', 25, 66584);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Go Away', 'Teddy', 'Teddy', '/upload/song/go_away.mp4', 'Dance', true, '/upload/song/go_away.mp3',
         '2010-09-09', 26, '너무 치사하잖아 너답지 못하잖아
 지금 적응이 안돼 어 어 어지러워 왜
@@ -3976,10 +3986,10 @@ Love love is over tonight
 널 후회하게 만들어 줄게 슬픔은 지금 뿐야 boy
 Cause love is over
 Love love is over tonight
-', 26,54512);
+', 26, 54512);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Bad', 'Rphabet', 'Rphabet', '/upload/song/bad.mp4', 'Dance', true, '/upload/song/bad.mp3', '2015-07-13', 27, 'Betting on you
 Betting on you
 다시 차가워진 눈빛 날카로운 네 혀끝이
@@ -4045,10 +4055,10 @@ Bad Bad Bad bet a bad bad girl
 Bad Bad Bad bet a bad bad girl
 Bad Bad Bad bet a bad bad girl
 절대 그냥은 못 보내 너
-', 27,45121);
+', 27, 45121);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Rolling in the Deep', 'Adele Adkins, Paul Epworth', 'Adele Adkins, Paul Epworth',
         '/upload/song/rolling_in_the_deep.mp4', 'POP', true, '/upload/song/rolling_in_the_deep.mp3', '2011-01-24', 28, 'There''s a fire starting in my heart
 Reaching a fever pitch
@@ -4119,10 +4129,10 @@ But you played it
 You played it
 You played it
 You played it to the beat
-', 28,1020);
+', 28, 1020);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Uptown Funk', 'Mark Ronson', 'Bruno Mars', '/upload/song/uptown_funk.mp4', 'POP', true,
         '/upload/song/uptown_funk.mp3', '2014-11-10', 29, 'This hit That ice cold
 Michelle Pfeiffer That white gold
@@ -4220,9 +4230,9 @@ Uptown Funk you up Uptown Funk you up
 Uptown Funk you up Uptown Funk you up
 say whaa
 Uptown Funk you up
-', 29,6910);
+', 29, 6910);
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Work', 'Rihanna', 'Rihanna', '/upload/song/Rihanna_work.mp4', 'POP', true, '/upload/song/Rihanna_work.mp3',
         '2016-01-28', 30, '상세정보유사곡
 곡명
@@ -4340,10 +4350,10 @@ hurt, hurt, hurt, hurting
 Mmmh
 Mmmh
 Work, work, work, work, work, work
-Mmmh', 30,54);
+Mmmh', 30, 54);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Small girl (feat. 도경수(D.O.))', 'PEEJAY, 이영지', '이영지', null, 'HipHop', true, '/upload/song/Small girl.mp3',
         '2024-06-21', 31,
         'If I got a two small cheeks
@@ -4567,10 +4577,10 @@ VALUES ('Small girl (feat. 도경수(D.O.))', 'PEEJAY, 이영지', '이영지', 
         If I got a-
 
 
-        If I got a-', 31,451);
+        If I got a-', 31, 451);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('예뻤어', '홍지상, 원필 (DAY6), Young K (DAY6), "이우민""collapsedone"""', 'Young K (DAY6)', '/upload/song/예뻤어.mp4',
         'Rock/Metal', true, '/upload/song/예뻤어.mp3', '2017-02-06', 32,
         '지금 이 말이
@@ -4635,10 +4645,10 @@ VALUES ('예뻤어', '홍지상, 원필 (DAY6), Young K (DAY6), "이우민""coll
         너와 가졌던 순간들은
         다 다
         지났지만
-        넌 너무 예뻤어', 32,544);
+        넌 너무 예뻤어', 32, 544);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('에피소드', '이무진, 함준석, Eastwest, Junzo', '이무진', '/upload/song/에피소드.mp4', 'Rock/Metal', true,
         '/upload/song/에피소드.mp3', '2023-12-13', 33,
         '나는 말야
@@ -4723,10 +4733,10 @@ VALUES ('에피소드', '이무진, 함준석, Eastwest, Junzo', '이무진', '/
         춥게 눈을 뜬다
         겨울밤이 되어서
         맞이한 향이
-        우리의 에피소드다', 33,4032);
+        우리의 에피소드다', 33, 4032);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('밤양갱', '장기하', '장기하', '/upload/song/밤양갱.mp4', 'R&B', true, '/upload/song/밤양갱.mp3', '2024-02-13', 34,
         '떠나는 길에 니가 내게 말했지
         ‘너는 바라는 게 너무나 많아
@@ -4755,10 +4765,10 @@ VALUES ('밤양갱', '장기하', '장기하', '/upload/song/밤양갱.mp4', 'R&
         떠나가다가 돌아서서 말했지
         ‘너는 바라는 게 너무나 많아’
         아냐 내가 늘 바란 건 하나야
-        한 개뿐이야 달디단 밤양갱', 34,124754);
+        한 개뿐이야 달디단 밤양갱', 34, 124754);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('SHEESH', 'CHOICE37, LP, YG, Sonny, LIL G, 최현석, Sandra Wikström',
         'CHOICE37, Sonny, LIL G, LP, 최현석, Sandra Wikström', '/upload/song/SHEESH.mp4', 'R&B', true,
         '/upload/song/SHEESH.mp3', '2024-04-01', 35,
@@ -4869,10 +4879,10 @@ VALUES ('SHEESH', 'CHOICE37, LP, YG, Sonny, LIL G, 최현석, Sandra Wikström',
 
         Jump jump and let it go
         Watch out we on a roll
-        Rum pump pump pump it up then', 35,4514);
+        Rum pump pump pump it up then', 35, 4514);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('천상연', '유해준', '유해준', null, 'Ballad', true, '/upload/song/천상연-이창섭.mp3', '2024-02-21', 36,
         '아니길 바랬었어
         꿈이길 기도했지
@@ -4916,10 +4926,10 @@ VALUES ('천상연', '유해준', '유해준', null, 'Ballad', true, '/upload/so
         너의 행복한 모습 나 보기를 원해
         부디 새롭게 시작하길 바래
 
-        행복하길 바래', 36,50061);
+        행복하길 바래', 36, 50061);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('미안해 미워해 사랑해', '남혜승, 김경희', '남혜승, 김경희', '/upload/song/미안해 미워해 사랑해.mp4', 'Ballad', true,
         '/upload/song/미안해 미워해 사랑해.mp3', '2024-03-24', 37,
         'It''s the same day
@@ -4973,10 +4983,10 @@ VALUES ('미안해 미워해 사랑해', '남혜승, 김경희', '남혜승, 김
         사랑받던 모든 기억이
         내 모든 이유
         유일한 이유
-        Hmmm', 37,10230);
+        Hmmm', 37, 10230);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('비의 랩소디', '주영훈', '주영훈, 이세준', null, 'Ballad', true, '/upload/song/비의 랩소디.mp3', '2023-12-03', 38,
         '이젠 눈물 그쳐 나를 봐요
         우는 그대 더 아름다워
@@ -5009,10 +5019,10 @@ VALUES ('비의 랩소디', '주영훈', '주영훈, 이세준', null, 'Ballad',
         떠나가요 아주 먼 곳으로
         그대 소식 내게 올 수 없을 그만큼
         혹시라도 내가 그리울 때면
-        세상에 내가 없다고 믿어요', 38,6580);
+        세상에 내가 없다고 믿어요', 38, 6580);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/song/헤어지자말해요.mp4', 'Ballad', true, '/upload/song/헤어지자말해요.mp3',
         '2023-04-20', 39,
         '헤어지자고 말하려 오늘
@@ -5049,10 +5059,10 @@ VALUES ('헤어지자 말해요', '박재정, 박현중', '박재정', '/upload/
         좋은 사람이 되고 싶었어
         영영 다신 못 본다 해도
         그댈 위한 이 노래가
-        당신을 영원히 사랑할 테니', 39,254781);
+        당신을 영원히 사랑할 테니', 39, 254781);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('Boom Boom Bass', 'Peter Wallevik, Daniel Davidsen, Ben Samama, David Arkwright',
         '길정진 (Jamfactory), 차메인 (ChaMane)', '/upload/song/Boom Boom Bass.mp4', 'Dance', true,
         '/upload/song/Boom Boom Bass.mp3', '2024-06-17', 40,
@@ -5134,11 +5144,11 @@ VALUES ('Boom Boom Bass', 'Peter Wallevik, Daniel Davidsen, Ben Samama, David Ar
         We want that
 
         Boom ba doom
-        boom boom bass', 40,4512);
+        boom boom bass', 40, 4512);
 
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('주저하는 연인들을 위해', '잔나비 최정훈, 김도형, 유영현', '잔나비 최정훈', '/upload/song/주저하는연인들을위해.mp4', 'Indie', true,
         '/upload/song/주저하는연인들을위해.mp3', '2019-03-13', 41, '나는 읽기 쉬운 마음이야
 당신도 스윽 훑고 가셔요
@@ -5168,10 +5178,10 @@ VALUES ('주저하는 연인들을 위해', '잔나비 최정훈, 김도형, 유
 난 한 동안 새 활짝 피었다 질래 또 한번 영원히
 그럼에도 내 사랑은 또 같은 꿈을 꾸고
 그럼에도 꾸던 꿈을 미루진 않을래
-', 41,7451);
+', 41, 7451);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('그게 아니고', '10cm', '10cm', null, 'Indie', true, '/upload/song/그게아니고.mp3', '2011-02-10', 42, '어두운 밤 골목길을 혼자 털레털레 오르다
 지나가는 네 생각에 내가 눈물이 난 게 아니고
 이부자리를 치우다 너의 양말 한 짝이 나와서
@@ -5186,10 +5196,10 @@ VALUES ('그게 아니고', '10cm', '10cm', null, 'Indie', true, '/upload/song/�
 보일러가 고장 나서 울지
 어두운 밤 골목길을 혼자 털레털레 오르다
 지나가는 네 생각에 우네
-', 42,54752);
+', 42, 54752);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('연애 같은 걸 하니까', '고영배', '고영배', '/upload/song/연애_같은_걸_하니까.mp4', 'Indie', true, '/upload/song/연애_같은_걸_하니까.mp3',
         '2017-11-22', 43, '그러게 연애 같은 걸 하니까
 이렇게 힘들 줄 몰랐으니까
@@ -5227,10 +5237,10 @@ TV 속에 다 가진 주인공
 사랑은 무슨 사랑
 내 주제에
 연애는 무슨 연애
-', 43,137);
+', 43, 137);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('나랑 아니면', '검정치마', '검정치마', '/upload/song/나랑아니면.mp4', 'Indie', true, '/upload/song/나랑아니면.mp3', '2017-05-30', 44, '야 나랑 놀자 밤늦게까지 함께 손뼉 치면서
 나랑 마셔 너와 나의 몸이 녹아 내리면
 나랑 걷자 저 멀리까지가다 지쳐 누우면
@@ -5249,10 +5259,10 @@ VALUES ('나랑 아니면', '검정치마', '검정치마', '/upload/song/나랑
 날 위해 죽을 수도, 죽일 수도 있다고
 알아, 나도 언제나 같은 마음이야 baby
 아마도 우린 오래 아주 오래 함께할 거야
-', 44,50);
+', 44, 50);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('들었다 놨다', '데이브레이크', '데이브레이크', null, 'Indie', true, '/upload/song/들었다놨다.mp3', '2010-08-05', 45, '처음 너를 본순간 정신 차릴수없어
 내 마음을 들킬까봐 조심조심해
 어떡하면 네 맘을 답답해진 내 맘을
@@ -5292,11 +5302,11 @@ VALUES ('들었다 놨다', '데이브레이크', '데이브레이크', null, 'I
 내 맘을 들어다 놨다 들었다 놨다
 들었다 놨다 hey
 들었다 놨다 들었다 놨다 hey
-', 45,5557);
+', 45, 5557);
 
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('도망가자', '선우정아', '선우정아, 곽은정', '/upload/song/도망가자.mp4', 'Indie', true, '/upload/song/도망가자.mp3', '2019-12-12', 46, '도망가자
 어디든 가야 할 것만 같아
 넌 금방이라도 울 것 같아
@@ -5347,10 +5357,10 @@ VALUES ('도망가자', '선우정아', '선우정아, 곽은정', '/upload/song
 가보자 지금 나랑
 
 도망가자
-', 46,311);
+', 46, 311);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('여름깃', 'So!YoON! (황소윤)', 'So!YoON! (황소윤)', null, 'Indie', false, '/upload/song/여름깃.mp3', '2017-10-26', 47, '곧 지나갈 여름밤의 소리
 여기 어리고 새 푸른 두 눈
 들이쉬고 내뱉는 나의 코와
@@ -5364,12 +5374,12 @@ VALUES ('여름깃', 'So!YoON! (황소윤)', 'So!YoON! (황소윤)', null, 'Indi
 음 익숙해진 건 멍청한 나의 알람시계
 음 곤란해진 건 닦이지 않는 얼룩이었고
 음 익숙해진 건 멍청한 나의 알람시계
-', 47,457);
+', 47, 457);
 
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
-VALUES ('섬으로 가요(Feat. 오혁)','오혁, 카더가든, U-Turn','오혁',null,'Indie',true,'/upload/song/섬으로가요.mp4','2017-12-12',48, '그래서 하루를 가만히 있었지
+                     lyrics, artist_id, listen_count)
+VALUES ('섬으로 가요(Feat. 오혁)', '오혁, 카더가든, U-Turn', '오혁', null, 'Indie', true, '/upload/song/섬으로가요.mp4', '2017-12-12', 48, '그래서 하루를 가만히 있었지
 이제야 당신의 마음을 알아요
 그래도 술집은 섬으로만 가는
 내 마음 당신은 알아줘요
@@ -5405,12 +5415,12 @@ Let me cut and sew
 A little bit change your mind
 A little bit change your mind
 A little bit change your mind
-', 48,121);
+', 48, 121);
 
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics, artist_id,listen_count)
-VALUES ('Help','오혁','오혁',null,'Indie',true,'/upload/song/help.mp3','2020-01-30',49, 'suddenly they’re all disappeared
+                     lyrics, artist_id, listen_count)
+VALUES ('Help', '오혁', '오혁', null, 'Indie', true, '/upload/song/help.mp3', '2020-01-30', 49, 'suddenly they’re all disappeared
 take a look and no one is there
 finally i am free
 sun is out but my mind is blind
@@ -5443,12 +5453,12 @@ never gonna let us down
 never gonna let us down
 never gonna let us down
 never gonna let us down
-', 49,1023);
+', 49, 1023);
 
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('봉숙이','강준우, 육중완','강준우, 육중완',null,'Indie',true,'/upload/song/봉숙이.mp3','2011-11-01',50,'야 봉숙아 말라고 집에 드갈라고
+                     lyrics, artist_id, listen_count)
+VALUES ('봉숙이', '강준우, 육중완', '강준우, 육중완', null, 'Indie', true, '/upload/song/봉숙이.mp3', '2011-11-01', 50, '야 봉숙아 말라고 집에 드갈라고
 꿀발라스 났드나
 나도 함 묵어보자
 아까는 집에 안 간다고
@@ -5476,533 +5486,546 @@ VALUES ('봉숙이','강준우, 육중완','강준우, 육중완',null,'Indie',t
 오늘도 헤매고 있잖아
 사랑을 찾아서 사람을 찾아서
 오늘도 헤매고 있잖아
-' ,50,5156);
+', 50, 5156);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('To. X', 'Stephen Puth, dazy, Kristin Carpenter', 'Kenzie', '/upload/song/To X.mp4', 'R&B', true, '/upload/song/To X.mp3', '2023-11-27', 51,
-'처음 본 널 기억해
-We skipped the small talk
-바로 다음 단계였지 뭐
-단점이라곤 없는 게 단점이라던
-그 허세도 마냥 좋았어
+                     lyrics, artist_id, listen_count)
+VALUES ('To. X', 'Stephen Puth, dazy, Kristin Carpenter', 'Kenzie', '/upload/song/To X.mp4', 'R&B', true,
+        '/upload/song/To X.mp3', '2023-11-27', 51,
+        '처음 본 널 기억해
+        We skipped the small talk
+        바로 다음 단계였지 뭐
+        단점이라곤 없는 게 단점이라던
+        그 허세도 마냥 좋았어
 
-하지만 내 일기가
-재미없어진 이유
-내가 없어진 나의
-매일들은 허전해
+        하지만 내 일기가
+        재미없어진 이유
+        내가 없어진 나의
+        매일들은 허전해
 
-좀 이상해 왜 둘 사이에
-너만 너만 보이는 걸까
-난 까다롭고 힘든 아이라
-그런 피곤한 생각만 한대
+        좀 이상해 왜 둘 사이에
+        너만 너만 보이는 걸까
+        난 까다롭고 힘든 아이라
+        그런 피곤한 생각만 한대
 
-오늘 나눈 문자 속에
-새로 산 티셔츠
-그 얘기뿐이야
-이제야 난 알 것 같아
-Gonna block you
-불을 꺼 To. X
+        오늘 나눈 문자 속에
+        새로 산 티셔츠
+        그 얘기뿐이야
+        이제야 난 알 것 같아
+        Gonna block you
+        불을 꺼 To. X
 
-그 좋아했던 립스틱
-싫단 말에 버린
-널 좋아했던 만큼
-다 맞추려 했어
+        그 좋아했던 립스틱
+        싫단 말에 버린
+        널 좋아했던 만큼
+        다 맞추려 했어
 
-‘나 아님 누가
-그런 세상 안아주겠어’
-그 말이 그땐 그리
-달콤했던 거야 Oh no
+        ‘나 아님 누가
+        그런 세상 안아주겠어’
+        그 말이 그땐 그리
+        달콤했던 거야 Oh no
 
-새벽의 긴 통화도
-이젠 피곤해졌어
-Every day, every night
-나로 채우고 싶어
+        새벽의 긴 통화도
+        이젠 피곤해졌어
+        Every day, every night
+        나로 채우고 싶어
 
-좀 이상해 왜 둘 사이에
-너만 너만 보이는 걸까
-난 까다롭고 힘든 아이라
-그런 피곤한 생각만 한대
+        좀 이상해 왜 둘 사이에
+        너만 너만 보이는 걸까
+        난 까다롭고 힘든 아이라
+        그런 피곤한 생각만 한대
 
-오늘 나눈 문자 속에
-새로 산 티셔츠
-그 얘기뿐이야
-이제야 난 알 것 같아
-Gonna block you
-불을 꺼 To. X
+        오늘 나눈 문자 속에
+        새로 산 티셔츠
+        그 얘기뿐이야
+        이제야 난 알 것 같아
+        Gonna block you
+        불을 꺼 To. X
 
-Gonna block you
-불을 꺼 To. X
+        Gonna block you
+        불을 꺼 To. X
 
-Say Bye
-Gonna block you
-불을 꺼 To. X
+        Say Bye
+        Gonna block you
+        불을 꺼 To. X
 
-깜빡거리는
-흔들거리는 Light
-Gonna block you
-불을 꺼 To. X
+        깜빡거리는
+        흔들거리는 Light
+        Gonna block you
+        불을 꺼 To. X
 
-좀 이상해 왜 둘 사이에
-너만 너만 보이는 걸까
-(너만 보일까)
-난 까다롭고 힘든 아이라
-그런 피곤한 생각만 한대
+        좀 이상해 왜 둘 사이에
+        너만 너만 보이는 걸까
+        (너만 보일까)
+        난 까다롭고 힘든 아이라
+        그런 피곤한 생각만 한대
 
-오늘 나눈 문자 속에
-(이제 불을 꺼)
-새로 산 티셔츠
-그 얘기뿐이야
-이제야 난 알 것 같아
-Gonna block you
-불을 꺼 To. X
+        오늘 나눈 문자 속에
+        (이제 불을 꺼)
+        새로 산 티셔츠
+        그 얘기뿐이야
+        이제야 난 알 것 같아
+        Gonna block you
+        불을 꺼 To. X
 
-Gonna block you
-불을 꺼 To. X', 51, 44817);
-
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('EASY', 'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang', 'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang', '/upload/song/EASY.mp4', 'HipHop', true, '/upload/song/EASY.mp3', '2024-02-19', 52,
-'다친대도 길을 걸어 kiss me
-쉽지 않음 내가 쉽게 easy
-Stage 위엔 불이 튀어, 내 body
-Pull up and I rip it up like ballet
-
-Damn, I really make it look easy
-Yuh know that I make it look easy
-
-Clap your hands, 너도 나와 같다면 clap your hands now
-의구심 따윈 그냥 치워, 그냥 말해 “I’m the real one”
-
-조명 꺼진 뒤의 난 wander in the night
-Don’t know what is right, don’t know ‘bout my rights
-시기심, 의심, 불신, 이젠 friends of me, yuh
-세상에게 난 반쪽짜리 seraphim, yuh
-
-Uhm I’ve been tryin’ so long to show you show you show you
-I’m the one that you need
-
-다친대도 길을 걸어 kiss me
-쉽지 않음 내가 쉽게 easy
-Stage 위엔 불이 튀어, 내 body
-Pull up and I rip it up like ballet
-
-Damn, I really make it look easy
-Yuh know that I make it look easy
-
-Yah know that I make it look easy
-수면 위의 백조가 돼 whippin’
-때론 풀려, 나의 다리 but I keep it
-Get, set, go, come and see me, I’m the FEARLESS
-
-나의 발걸음은 매 순간 history, 이건 my way
-영웅처럼 걸어 even if I am not flawless
-편하게만 왔다고?
-날 몰라봤다면 you have to know
-
-Uhm I’ve been tryin’ so long to show you show you show you
-I’m the one that you need
-
-다친대도 길을 걸어 kiss me
-쉽지 않음 내가 쉽게 easy
-
-Stage 위엔 불이 튀어, 내 body
-Pull up and I rip it up like ballet
-
-Damn, I really make it look easy
-Yuh know that I make it look easy', 52, 85130);
+        Gonna block you
+        불을 꺼 To. X', 51, 44817);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('Girls Never Die', '장이정, Maria Marcus, Arineh Karimi, Vendors (ZENUR), Vendors (Nano), Vendors (COLL!N), Vendors (JNX’s), 김종수', 'Jaden Jeong', '/upload/song/Girls Never Die.mp4', 'Dance', true, '/upload/song/Girls Never Die.mp3', '2024-05-08', 53,
-'다시 해보자
+                     lyrics, artist_id, listen_count)
+VALUES ('EASY',
+        'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang',
+        'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang',
+        '/upload/song/EASY.mp4', 'HipHop', true, '/upload/song/EASY.mp3', '2024-02-19', 52,
+        '다친대도 길을 걸어 kiss me' ||
+        '
+        쉽지 않음 내가 쉽게 easy
+        Stage 위엔 불이 튀어, 내 body
+        Pull up and I rip it up like ballet
 
-La La La La La La La
-끝까지 가볼래 포기는 안 할래 난
-La La La La La La La
-쓰러져도 일어나
-We Go, We High, Go Now
-La La La La La La La
-Girls Never Die 절대 Never Cry
+        Damn, I really make it look easy
+        Yuh know that I make it look easy
 
-세상은 늘 화려한 꿈 내 눈이 멀게
-눈부셔 Shine Better
-난 여기 보이지 않겠지 점점
-초라한 내가 싫어
-날 보이기도 싫어
+        Clap your hands, 너도 나와 같다면 clap your hands now
+        의구심 따윈 그냥 치워, 그냥 말해 “I’m the real one”
 
-짙게 화장했던 이유
-필터 꼈던 이유 알겠니
-이젠 알겠니
+        조명 꺼진 뒤의 난 wander in the night
+        Don’t know what is right, don’t know ‘bout my rights
+        시기심, 의심, 불신, 이젠 friends of me, yuh
+        세상에게 난 반쪽짜리 seraphim, yuh
 
-La La La La La La La
-끝까지 가볼래 포기는 안 할래 난
-La La La La La La La
-쓰러져도 일어나
-We Go, We High, Go Now
-La La La La La La La
-Girls Never Die 절대 Never Cry
+        Uhm I’ve been tryin’ so long to show you show you show you
+        I’m the one that you need
 
-비켜봐 봐 비켜 핑계는
-우린 본질 속에 진주가 될래
-꿈의 난이도 좀 더 난 높일게
-고통 시련 다듬어 내가 될게
+        다친대도 길을 걸어 kiss me
+        쉽지 않음 내가 쉽게 easy
+        Stage 위엔 불이 튀어, 내 body
+        Pull up and I rip it up like ballet
 
-I’m Just
-이제 조금 알겠어
-I Shine
-왜 날 힘들게 울게만 둔 건지
-Hold Me Closer Broken Myself
+        Damn, I really make it look easy
+        Yuh know that I make it look easy
 
-La La La La La La La
-끝까지 가볼래 포기는 안할래 난
-La La La La La La La
-쓰러져도 일어나
-We Go, We High, Go Now
-La La La La La La La
-Girls Never Die 절대 Never Cry
+        Yah know that I make it look easy
+        수면 위의 백조가 돼 whippin’
+        때론 풀려, 나의 다리 but I keep it
+        Get, set, go, come and see me, I’m the FEARLESS
 
-날 따라와 달라진 날
-하나가 되자
-너의 꿈이 내가 되고
-우리 함께 꾸는 꿈
+        나의 발걸음은 매 순간 history, 이건 my way
+        영웅처럼 걸어 even if I am not flawless
+        편하게만 왔다고?
+        날 몰라봤다면 you have to know
 
-두려움 따위다
-함께 있다면은
-이제 무서울 것 없지
+        Uhm I’ve been tryin’ so long to show you show you show you
+        I’m the one that you need
 
-다시 해볼까
+        다친대도 길을 걸어 kiss me
+        쉽지 않음 내가 쉽게 easy
 
-La La La La La La La
-끝까지 가볼래 포기는 안 할래 난
-La La La La La La La
-쓰러져도 일어나
-We Go, We High, Go Now
-La La La La La La La
-Girls Never Die 절대 Never Cry
+        Stage 위엔 불이 튀어, 내 body
+        Pull up and I rip it up like ballet
 
-La La La La La La La
-Girls Never Die 절대 Never Cry
-La La La La La La La
-끝까지 가볼래 포기는 안 할래
-We Go, We High, Go Now
-La La La La La La La
-Girls Never Die 절대 Never Cry', 53, 8914);
+        Damn, I really make it look easy
+        Yuh know that I make it look easy', 52, 85130);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
+VALUES ('Girls Never Die',
+        '장이정, Maria Marcus, Arineh Karimi, Vendors (ZENUR), Vendors (Nano), Vendors (COLL!N), Vendors (JNX’s), 김종수',
+        'Jaden Jeong', '/upload/song/Girls Never Die.mp4', 'Dance', true, '/upload/song/Girls Never Die.mp3',
+        '2024-05-08', 53,
+        '다시 해보자
+
+        La La La La La La La
+        끝까지 가볼래 포기는 안 할래 난
+        La La La La La La La
+        쓰러져도 일어나
+        We Go, We High, Go Now
+        La La La La La La La
+        Girls Never Die 절대 Never Cry
+
+        세상은 늘 화려한 꿈 내 눈이 멀게
+        눈부셔 Shine Better
+        난 여기 보이지 않겠지 점점
+        초라한 내가 싫어
+        날 보이기도 싫어
+
+        짙게 화장했던 이유
+        필터 꼈던 이유 알겠니
+        이젠 알겠니
+
+        La La La La La La La
+        끝까지 가볼래 포기는 안 할래 난
+        La La La La La La La
+        쓰러져도 일어나
+        We Go, We High, Go Now
+        La La La La La La La
+        Girls Never Die 절대 Never Cry
+
+        비켜봐 봐 비켜 핑계는
+        우린 본질 속에 진주가 될래
+        꿈의 난이도 좀 더 난 높일게
+        고통 시련 다듬어 내가 될게
+
+        I’m Just
+        이제 조금 알겠어
+        I Shine
+        왜 날 힘들게 울게만 둔 건지
+        Hold Me Closer Broken Myself
+
+        La La La La La La La
+        끝까지 가볼래 포기는 안할래 난
+        La La La La La La La
+        쓰러져도 일어나
+        We Go, We High, Go Now
+        La La La La La La La
+        Girls Never Die 절대 Never Cry
+
+        날 따라와 달라진 날
+        하나가 되자
+        너의 꿈이 내가 되고
+        우리 함께 꾸는 꿈
+
+        두려움 따위다
+        함께 있다면은
+        이제 무서울 것 없지
+
+        다시 해볼까
+
+        La La La La La La La
+        끝까지 가볼래 포기는 안 할래 난
+        La La La La La La La
+        쓰러져도 일어나
+        We Go, We High, Go Now
+        La La La La La La La
+        Girls Never Die 절대 Never Cry
+
+        La La La La La La La
+        Girls Never Die 절대 Never Cry
+        La La La La La La La
+        끝까지 가볼래 포기는 안 할래
+        We Go, We High, Go Now
+        La La La La La La La
+        Girls Never Die 절대 Never Cry', 53, 8914);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id, listen_count)
 VALUES ('너의 모든 순간', '성시경', '심현보', null, 'OST/BGM', true, '/upload/song/너의 모든 순간.mp3', '2014-02-12', 54,
-'이윽고 내가 한눈에
-너를 알아봤을 때
-모든 건 분명 달라지고 있었어
-내 세상은 널 알기 전과 후로 나뉘어
-니가 숨 쉬면 따스한 바람이 불어와
-니가 웃으면 눈부신 햇살이 비춰
-거기 있어줘서 그게 너라서
-가끔 내 어깨에 가만히 기대주어서
-나는 있잖아 정말 빈틈없이 행복해
-너를 따라서 시간은 흐르고 멈춰
-물끄러미 너를 들여다 보곤 해
-그것 말고는 아무것도 할 수 없어서
-너의 모든 순간 그게
-나였으면 좋겠다
-생각만 해도 가슴이 차올라
-나는 온통 너로
-보고 있으면 왠지 꿈처럼 아득한 것
-몇 광년 동안 날 향해 날아온 별빛
-또 지금의 너
-거기 있어줘서 그게 너라서
-가끔 나에게 조용하게 안겨주어서
-나는 있잖아 정말 남김없이 고마워
-너를 따라서 시간은 흐르고 멈춰
-물끄러미 너를 들여다보곤 해
-너를 보는 게 나에게는 사랑이니까
-너의 모든 순간 그게
-나였으면 좋겠다
-생각만 해도 가슴이 차올라
-나는 온통 너로
-니 모든 순간 나였으면', 54, 5400);
+        '이윽고 내가 한눈에
+        너를 알아봤을 때
+        모든 건 분명 달라지고 있었어
+        내 세상은 널 알기 전과 후로 나뉘어
+        니가 숨 쉬면 따스한 바람이 불어와
+        니가 웃으면 눈부신 햇살이 비춰
+        거기 있어줘서 그게 너라서
+        가끔 내 어깨에 가만히 기대주어서
+        나는 있잖아 정말 빈틈없이 행복해
+        너를 따라서 시간은 흐르고 멈춰
+        물끄러미 너를 들여다 보곤 해
+        그것 말고는 아무것도 할 수 없어서
+        너의 모든 순간 그게
+        나였으면 좋겠다
+        생각만 해도 가슴이 차올라
+        나는 온통 너로
+        보고 있으면 왠지 꿈처럼 아득한 것
+        몇 광년 동안 날 향해 날아온 별빛
+        또 지금의 너
+        거기 있어줘서 그게 너라서
+        가끔 나에게 조용하게 안겨주어서
+        나는 있잖아 정말 남김없이 고마워
+        너를 따라서 시간은 흐르고 멈춰
+        물끄러미 너를 들여다보곤 해
+        너를 보는 게 나에게는 사랑이니까
+        너의 모든 순간 그게
+        나였으면 좋겠다
+        생각만 해도 가슴이 차올라
+        나는 온통 너로
+        니 모든 순간 나였으면', 54, 5400);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('심(心)', '이근상', '박준배', null, 'Rock/Metal', true, '/upload/song/심.mp3', '2023-02-19', 55,
-'한땐 너를 사랑했지만
-네 곁에 있는 사랑이
-너무 아름다워 보기 좋았었기에
-잘 되길 바래왔는데
+        '한땐 너를 사랑했지만
+        네 곁에 있는 사랑이
+        너무 아름다워 보기 좋았었기에
+        잘 되길 바래왔는데
 
-많은 축복에 둘러싸인
-행복한 그 사람 곁에
-이젠 네가 아닌 다른 그의 사랑이
-또다시 날 아프게 해
+        많은 축복에 둘러싸인
+        행복한 그 사람 곁에
+        이젠 네가 아닌 다른 그의 사랑이
+        또다시 날 아프게 해
 
-미안해 너를 위해 기대어줄
-가슴 밖에 빌려줄 수 없는 나인걸
+        미안해 너를 위해 기대어줄
+        가슴 밖에 빌려줄 수 없는 나인걸
 
-슬퍼하는 너를 위해서
-해줄게 남아 있다면
-무엇이든 다 얘길 해주길 바래
-나 기다리고 있을게
+        슬퍼하는 너를 위해서
+        해줄게 남아 있다면
+        무엇이든 다 얘길 해주길 바래
+        나 기다리고 있을게
 
-야윈 그대 안에 눈물이
-마르는 그날이 오면
-웃으며 다시 그댈 보내줄게요
-사랑하니까
+        야윈 그대 안에 눈물이
+        마르는 그날이 오면
+        웃으며 다시 그댈 보내줄게요
+        사랑하니까
 
-슬퍼하는 너를 위해서
-해줄게 남아 있다면
-무엇이든 다 얘길 해주길 바래
-나 기다리고 있을게
+        슬퍼하는 너를 위해서
+        해줄게 남아 있다면
+        무엇이든 다 얘길 해주길 바래
+        나 기다리고 있을게
 
-야윈 그대 안에 눈물이
-마르는 그날이 오면
-웃으며 다시 그댈 보내줄게요
-사랑하니까', 55, 5500);
+        야윈 그대 안에 눈물이
+        마르는 그날이 오면
+        웃으며 다시 그댈 보내줄게요
+        사랑하니까', 55, 5500);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('인사', '범진', '범진, 김석영', '/upload/song/인사.mp4', 'Indie', true, '/upload/song/인사.mp3', '2021-12-24', 56,
-'돌아서는 너를 보며
-난 아무 말도 할 수 없었고
-슬퍼하기엔 짧았던
-나의 해는 저물어 갔네
-지나치는 모진 기억이
-바람 따라 흩어질 때면
-아무 일도 없듯이 보내주려 해
-아픈 맘이 남지 않도록
-안녕 멀어지는 나의 하루야
-빛나지 못한 나의 별들아
-차마 아껴왔던 말 이제서야
-잘 지내 인사를 보낼 게
-떠나가는 너를 보며
-난 아무 말도 할 수 없었고
-슬퍼하기엔 짧았던
-나의 해는 저물어 갔네
-돌이킬 순 없는 추억이
-바람 따라 흩어질 때면
-아무 일도 없듯이 보내주려 해
-아픈 맘이 남지 않도록
-안녕 멀어지는 나의 하루야
-빛나지 못한 나의 별들아
-차마 아껴왔던 말 이제서야
-잘 지내 인사를 보낼 게
-잘 지내 인사를 보낼 게', 56, 15954);
+        '돌아서는 너를 보며
+        난 아무 말도 할 수 없었고
+        슬퍼하기엔 짧았던
+        나의 해는 저물어 갔네
+        지나치는 모진 기억이
+        바람 따라 흩어질 때면
+        아무 일도 없듯이 보내주려 해
+        아픈 맘이 남지 않도록
+        안녕 멀어지는 나의 하루야
+        빛나지 못한 나의 별들아
+        차마 아껴왔던 말 이제서야
+        잘 지내 인사를 보낼 게
+        떠나가는 너를 보며
+        난 아무 말도 할 수 없었고
+        슬퍼하기엔 짧았던
+        나의 해는 저물어 갔네
+        돌이킬 순 없는 추억이
+        바람 따라 흩어질 때면
+        아무 일도 없듯이 보내주려 해
+        아픈 맘이 남지 않도록
+        안녕 멀어지는 나의 하루야
+        빛나지 못한 나의 별들아
+        차마 아껴왔던 말 이제서야
+        잘 지내 인사를 보낼 게
+        잘 지내 인사를 보낼 게', 56, 15954);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('ABCD', 'Pdogg, GHSTLOOP, Aron Bergerwall, Louise Lindberg, Shorelle', 'Rick bridges, J.Y. Park "The Asiansoul"', '/upload/song/ABCD.mp4', 'R&B', true, '/upload/song/ABCD.mp3', '2024-06-14', 57,
-'Slo-mo
-Hey I see you looking at me and
-I like it oh yeah
-No more
-다가오길 기다리는 건
-Not my option yeah
-피어나 My desire
-원하는 건 가져야 하는 걸
-All I want is love love wit'' you
-Stop thinkin'' 거부할 수 없을걸
-Hey listen to me now
-A you''re gonna B my babe
-Everytime you C me
-빠져 Deeper deeper babe
-Hey listen to me now
-ABCD 반복해
-How to fall in love 가르쳐 줄게
-너는 들어왔어 in my Fantasy
-벗어날 수 없어 나의 Gravity
-In love in love can''t get Enough
-Hey 빠져들고 있어 you''re Hypnotized
-홀린 듯 하나가 되는 you & I
-In love in love can''t get Enough
-넌 따라오면 돼 My babe
-지금부터 Imma drive you crazy
-아슬아슬한 너와 내 Emotion
-자칫하면 이성의 끈을 놓쳐
-대화는 필요 없어 Mute
-본능이 향하는 곳 Move
-전부 벗어던질래
-진짜 나를 볼 수 있게
-피어나 Feel alive
-떨리는 마음 감출 수 없는 걸
-All I want is love love wit'' you
-Stop thinkin'' 거부할 수 없을걸
-Hey listen to me now
-A you''re gonna B my babe
-Everytime you C me
-빠져 Deeper deeper babe
-Hey listen to me now
-ABCD 반복해
-How to fall in love 가르쳐 줄게
-너는 들어왔어 in my Fantasy
-벗어날 수 없어 나의 Gravity
-In love in love can''t get Enough
-Hey 빠져들고 있어 you''re Hypnotized
-홀린 듯 하나가 되는 you & I
-In love in love can''t get Enough
-I don''t care and I like yeah
-A to Z you''re my type yeah
-알려줄게 Baby how to love
-알기 쉽게 네게 One by one
-I don''t care and I like yeah
-A to Z you''re my type yeah
-알려줄게 Baby how to love
-알기 쉽게 네게 One by one
-A you''re gonna B my babe
-Everytime you C me
-빠져 Deeper deeper babe
-ABCD 반복해
-How to fall in love 가르쳐 줄게', 57, 7601);
+                     lyrics, artist_id, listen_count)
+VALUES ('ABCD', 'Pdogg, GHSTLOOP, Aron Bergerwall, Louise Lindberg, Shorelle',
+        'Rick bridges, J.Y. Park "The Asiansoul"', '/upload/song/ABCD.mp4', 'R&B', true, '/upload/song/ABCD.mp3',
+        '2024-06-14', 57,
+        'Slo-mo
+        Hey I see you looking at me and
+        I like it oh yeah
+        No more
+        다가오길 기다리는 건
+        Not my option yeah
+        피어나 My desire
+        원하는 건 가져야 하는 걸
+        All I want is love love wit'' you
+        Stop thinkin'' 거부할 수 없을걸
+        Hey listen to me now
+        A you''re gonna B my babe
+        Everytime you C me
+        빠져 Deeper deeper babe
+        Hey listen to me now
+        ABCD 반복해
+        How to fall in love 가르쳐 줄게
+        너는 들어왔어 in my Fantasy
+        벗어날 수 없어 나의 Gravity
+        In love in love can''t get Enough
+        Hey 빠져들고 있어 you''re Hypnotized
+        홀린 듯 하나가 되는 you & I
+        In love in love can''t get Enough
+        넌 따라오면 돼 My babe
+        지금부터 Imma drive you crazy
+        아슬아슬한 너와 내 Emotion
+        자칫하면 이성의 끈을 놓쳐
+        대화는 필요 없어 Mute
+        본능이 향하는 곳 Move
+        전부 벗어던질래
+        진짜 나를 볼 수 있게
+        피어나 Feel alive
+        떨리는 마음 감출 수 없는 걸
+        All I want is love love wit'' you
+        Stop thinkin'' 거부할 수 없을걸
+        Hey listen to me now
+        A you''re gonna B my babe
+        Everytime you C me
+        빠져 Deeper deeper babe
+        Hey listen to me now
+        ABCD 반복해
+        How to fall in love 가르쳐 줄게
+        너는 들어왔어 in my Fantasy
+        벗어날 수 없어 나의 Gravity
+        In love in love can''t get Enough
+        Hey 빠져들고 있어 you''re Hypnotized
+        홀린 듯 하나가 되는 you & I
+        In love in love can''t get Enough
+        I don''t care and I like yeah
+        A to Z you''re my type yeah
+        알려줄게 Baby how to love
+        알기 쉽게 네게 One by one
+        I don''t care and I like yeah
+        A to Z you''re my type yeah
+        알려줄게 Baby how to love
+        알기 쉽게 네게 One by one
+        A you''re gonna B my babe
+        Everytime you C me
+        빠져 Deeper deeper babe
+        ABCD 반복해
+        How to fall in love 가르쳐 줄게', 57, 7601);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('Love Lee', '이찬혁, MILLENNIUM, 시황', '이찬혁', '/upload/song/Love Lee.mp4', 'Dance', true, '/upload/song/Love Lee.mp3', '2023-08-21', 58,
-'You know
-내 스타일이 아닌 음악을 들어도
-You know
-좋아하지 않는 음식을 먹어도
-우산 없이 비가 와 홀딱 다 젖어도 좋아
-I love it because I love you
+                     lyrics, artist_id, listen_count)
+VALUES ('Love Lee', '이찬혁, MILLENNIUM, 시황', '이찬혁', '/upload/song/Love Lee.mp4', 'Dance', true,
+        '/upload/song/Love Lee.mp3', '2023-08-21', 58,
+        'You know
+        내 스타일이 아닌 음악을 들어도
+        You know
+        좋아하지 않는 음식을 먹어도
+        우산 없이 비가 와 홀딱 다 젖어도 좋아
+        I love it because I love you
 
-우리 관계 디비디비딥
-매일 봐도 처음같이 비기비기닝
-춤추고 싶어 빌리빌리진
-우리 앞 우리 옆 시기시기질투
-자유로운 날갯짓 훨훨훨
-꽃송이가 나를 삼킬 걸
-알면서 난 뛰어들었어
-Jump j-j-jump jump jump jump
+        우리 관계 디비디비딥
+        매일 봐도 처음같이 비기비기닝
+        춤추고 싶어 빌리빌리진
+        우리 앞 우리 옆 시기시기질투
+        자유로운 날갯짓 훨훨훨
+        꽃송이가 나를 삼킬 걸
+        알면서 난 뛰어들었어
+        Jump j-j-jump jump jump jump
 
-So lovely day so lovely
-Errday with you so lovely
-Du durudu durudu du durudu
+        So lovely day so lovely
+        Errday with you so lovely
+        Du durudu durudu du durudu
 
-Spell L.o.v.e.L.e.e
-이름만 불러도 you can feel me
-눈빛만 봐도 알면서 my love
+        Spell L.o.v.e.L.e.e
+        이름만 불러도 you can feel me
+        눈빛만 봐도 알면서 my love
 
-You know
-아끼는 옷에 coffee를 쏟아도
-You know
-내가 준 목걸이를 잃어버려도
-한 번 더 같은 것 사준 걸 다시 또 잃어도 좋아
-I don''t care I just care about you
+        You know
+        아끼는 옷에 coffee를 쏟아도
+        You know
+        내가 준 목걸이를 잃어버려도
+        한 번 더 같은 것 사준 걸 다시 또 잃어도 좋아
+        I don''t care I just care about you
 
-여기 어때 how you like that
-다 퍼주고 될게 빈털터리
-Jubilate 박수갈채
-안 반하고 누가 배겨 love sick
-비타민 U가 필요해
-만들어줘 샛노랗게
-체크무늬 벌집 두 눈에
-Honey help honey help
+        여기 어때 how you like that
+        다 퍼주고 될게 빈털터리
+        Jubilate 박수갈채
+        안 반하고 누가 배겨 love sick
+        비타민 U가 필요해
+        만들어줘 샛노랗게
+        체크무늬 벌집 두 눈에
+        Honey help honey help
 
-So lovely day so lovely
-Errday with you so lovely
-Du durudu durudu du durudu
+        So lovely day so lovely
+        Errday with you so lovely
+        Du durudu durudu du durudu
 
-Spell L.o.v.e.L.e.e
-이름만 불러도 you can feel me
-눈빛만 봐도 알면서 my love
+        Spell L.o.v.e.L.e.e
+        이름만 불러도 you can feel me
+        눈빛만 봐도 알면서 my love
 
-누구 사랑 먹고 그리 이쁘게 컸니
-Mommy or your daddy or them both
-Lovey-dovey things 너의 곁에 everyday
-Good morning good night
-너의 이름 부를 때
+        누구 사랑 먹고 그리 이쁘게 컸니
+        Mommy or your daddy or them both
+        Lovey-dovey things 너의 곁에 everyday
+        Good morning good night
+        너의 이름 부를 때
 
-So lovely day so lovely
-Errday with you so lovely
-Du durudu durudu du durudu
+        So lovely day so lovely
+        Errday with you so lovely
+        Du durudu durudu du durudu
 
-Spell L.o.v.e.L.e.e
-이름만 불러도 you can feel me
-눈빛만 봐도 알면서 my love', 58, 121562);
-
-INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('모든 날, 모든 순간 (Every day, Every Moment)', '어깨깡패', '어깨깡패', null, 'Ballad', 'true', '/upload/song/모든 날 모든 순간.mp3', '2018-03-20', 59,
-'네가 없이 웃을 수 있을까
-생각만 해도 눈물이나
-힘든 시간 날 지켜준 사람
-이제는 내가 그댈 지킬 테니
-너의 품은 항상 따뜻했어
-고단했던 나의 하루에
-유일한 휴식처
-나는 너 하나로 충분해
-긴 말 안 해도 눈빛으로 다 아니깐
-한 송이의 꽃이 피고 지는
-모든 날 모든 순간 함께해
-햇살처럼 빛나고 있었지
-나를 보는 네 눈빛은
-꿈이라고 해도 좋을 만큼
-그 모든 순간은 눈부셨다
-불안했던 나의 고된 삶에
-한줄기 빛처럼 다가와
-날 웃게 해준 너
-나는 너 하나로 충분해
-긴 말 안 해도 눈빛으로 다 아니깐
-한 송이의 꽃이 피고 지는
-모든 날 모든 순간 함께해
-알 수 없는 미래지만
-네 품속에 있는 지금 순간 순간이
-영원 했으면 해
-갈게 바람이 좋은 날에
-햇살 눈부신 어떤 날에 너에게로
-처음 내게 왔던 그날처럼
-모든 날 모든 순간 함께해', 59, 5900);
+        Spell L.o.v.e.L.e.e
+        이름만 불러도 you can feel me
+        눈빛만 봐도 알면서 my love', 58, 121562);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('MANIAC', 'Jack Brady, Jordan Roman, Chloe Copoloff, Austin Nicole Wolfe, TMM', '구여름', '/upload/song/MANIAC.mp4', 'Dance', true, '/upload/song/MANIAC.mp3', '2023-11-02', 60,
-'힘껏 내팽개친 Roses
-말론 안 통하지 역시 어쩜 이리 안 변해
-인정 같은 소린 됐고
-이쯤에서 끝내 Let go 인내심도 Out of space
+                     lyrics, artist_id, listen_count)
+VALUES ('모든 날, 모든 순간 (Every day, Every Moment)', '어깨깡패', '어깨깡패', null, 'Ballad', 'true', '/upload/song/모든 날 모든 순간.mp3',
+        '2018-03-20', 59,
+        '네가 없이 웃을 수 있을까
+        생각만 해도 눈물이나
+        힘든 시간 날 지켜준 사람
+        이제는 내가 그댈 지킬 테니
+        너의 품은 항상 따뜻했어
+        고단했던 나의 하루에
+        유일한 휴식처
+        나는 너 하나로 충분해
+        긴 말 안 해도 눈빛으로 다 아니깐
+        한 송이의 꽃이 피고 지는
+        모든 날 모든 순간 함께해
+        햇살처럼 빛나고 있었지
+        나를 보는 네 눈빛은
+        꿈이라고 해도 좋을 만큼
+        그 모든 순간은 눈부셨다
+        불안했던 나의 고된 삶에
+        한줄기 빛처럼 다가와
+        날 웃게 해준 너
+        나는 너 하나로 충분해
+        긴 말 안 해도 눈빛으로 다 아니깐
+        한 송이의 꽃이 피고 지는
+        모든 날 모든 순간 함께해
+        알 수 없는 미래지만
+        네 품속에 있는 지금 순간 순간이
+        영원 했으면 해
+        갈게 바람이 좋은 날에
+        햇살 눈부신 어떤 날에 너에게로
+        처음 내게 왔던 그날처럼
+        모든 날 모든 순간 함께해', 59, 5900);
 
-얼룩지는 Red carpet 그렇게 또 Fade away
-치워줘 Scarred face 끝까지 신경 쓰여 Huh
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics, artist_id, listen_count)
+VALUES ('MANIAC', 'Jack Brady, Jordan Roman, Chloe Copoloff, Austin Nicole Wolfe, TMM', '구여름',
+        '/upload/song/MANIAC.mp4', 'Dance', true, '/upload/song/MANIAC.mp3', '2023-11-02', 60,
+        '힘껏 내팽개친 Roses
+        말론 안 통하지 역시 어쩜 이리 안 변해
+        인정 같은 소린 됐고
+        이쯤에서 끝내 Let go 인내심도 Out of space
 
-This love is maniac maniac maniac
-But I can’t killin’ it killin’ it killin’ it
-사랑 말고 다른 말론 설명할 수 없는 멜로
-It’s maniac maniac maniac
+        얼룩지는 Red carpet 그렇게 또 Fade away
+        치워줘 Scarred face 끝까지 신경 쓰여 Huh
 
-자극적 이끌림 잔인해진 Orbit
-지겨운 Love-phobic yeah
-그래 솔직하자 넌 지금 즐긴 거야
+        This love is maniac maniac maniac
+        But I can’t killin’ it killin’ it killin’ it
+        사랑 말고 다른 말론 설명할 수 없는 멜로
+        It’s maniac maniac maniac
 
-얼음처럼 날 선 말 부서질 듯 던져 막
-심장을 푹 찌르고 또 Melted
-완벽하게 Cliche 웃기지도 않는 꼴
-갈피 없이 뒤집히는 Magnet
+        자극적 이끌림 잔인해진 Orbit
+        지겨운 Love-phobic yeah
+        그래 솔직하자 넌 지금 즐긴 거야
 
-답이 없는 Zero-sum game 뭐가 문제였던 건데
-결국 또 미뤄진 End 이것도 재주야 Perfect
+        얼음처럼 날 선 말 부서질 듯 던져 막
+        심장을 푹 찌르고 또 Melted
+        완벽하게 Cliche 웃기지도 않는 꼴
+        갈피 없이 뒤집히는 Magnet
 
-This love is maniac maniac maniac
-But I can’t killin’ it killin’ it killin’ it
-사랑 말고 다른 말론 설명할 수 없는 멜로
-It’s maniac maniac
+        답이 없는 Zero-sum game 뭐가 문제였던 건데
+        결국 또 미뤄진 End 이것도 재주야 Perfect
 
-Crystal처럼 조각난 Lighting 그 아래 선 우린
-Living in a moment Bloody truth
-짓이겨져 물든 Rose 결국 벗어던진 Mask
-말해 What you wanna do Woo woo ah
+        This love is maniac maniac maniac
+        But I can’t killin’ it killin’ it killin’ it
+        사랑 말고 다른 말론 설명할 수 없는 멜로
+        It’s maniac maniac
 
-This love is maniac maniac maniac
-And I’m okay with it okay with it okay with it
-끝내 너와 나마저도 이해할 수 없는 멜로
-It’s maniac maniac maniac
+        Crystal처럼 조각난 Lighting 그 아래 선 우린
+        Living in a moment Bloody truth
+        짓이겨져 물든 Rose 결국 벗어던진 Mask
+        말해 What you wanna do Woo woo ah
 
-화려한 이 Tragic 이거 사랑 맞지
-영원할 Scenery yeah
-그래 솔직하자 우리는 즐긴 거야
+        This love is maniac maniac maniac
+        And I’m okay with it okay with it okay with it
+        끝내 너와 나마저도 이해할 수 없는 멜로
+        It’s maniac maniac maniac
 
-Never ever
-It’s coming down It’s coming down
-It’s coming down
-Maniac
-Yeah yeah woo woo woo', 60, 31841);
+        화려한 이 Tragic 이거 사랑 맞지
+        영원할 Scenery yeah
+        그래 솔직하자 우리는 즐긴 거야
+
+        Never ever
+        It’s coming down It’s coming down
+        It’s coming down
+        Maniac
+        Yeah yeah woo woo woo', 60, 31841);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics,artist_id,listen_count)

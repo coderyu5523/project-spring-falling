@@ -16,7 +16,9 @@
         <div id="song-name" style="font-size: 20px; font-weight: 600; margin-bottom: 10px">재생중인 음악이 없습니다.</div>
         <div id="artist-name" style="font-size: 15px; color: gray; margin-bottom: 20px"></div>
         <img id="cover-image" src="/upload/album/main-cover.jpg" style="width: 400px">
-        <div id="lyrics-list" style="font-size: 15px; color: gray; margin-bottom: 20px; white-space: pre-line">가사가 없습니다.</div>
+        <div id="lyrics-list" style="font-size: 15px; color: gray; margin-bottom: 20px; white-space: pre-line">가사가
+            없습니다.
+        </div>
     </div>
     <div class="right-panel">
         <div>
@@ -27,8 +29,8 @@
                 <input type="text" placeholder="재생목록에서 검색하세요.">
             </div>
 
-            <ul id="song-list">
-                <!-- The playlist will be dynamically generated here -->
+            <ul id="song-list" class="song-list">
+                <!-- 여기에 재생목록 추가 됨-->
             </ul>
         </div>
     </div>
@@ -58,15 +60,66 @@
 
 <script>
     $(document).ready(function () {
-        // Local Storage에서 데이터 읽기
-        var songData = JSON.parse(localStorage.getItem('currentSong'));
+        // URL에서 데이터 읽기
+        const urlParams = new URLSearchParams(window.location.search);
+        const songData = {
+            songId: urlParams.get('songId'),
+            index: urlParams.get('index'),
+            title: urlParams.get('title'),
+            artistName: urlParams.get('artistName'),
+            coverImg: urlParams.get('coverImg'),
+            musicFile: urlParams.get('musicFile'),
+            islogin: urlParams.get('islogin') === 'true' // boolean으로 변환
+        };
 
-        if (songData) {
-            // 데이터를 페이지에 반영
-            $('#song-name').text(songData.title);
-            $('#artist-name').text(songData.artistName);
-            $('#cover-image').attr('src', songData.coverImg);
-            $('#audio-player').attr('src', songData.musicFile);
+        // // 로컬 스토리지에서 기존 데이터를 삭제
+        localStorage.removeItem('currentSongs');
+        // localStorage.removeItem('currentSong');
+
+        // 새 노래 데이터가 중복되지 않도록 확인 후 로컬 스토리지에 추가
+        var currentSongs = JSON.parse(localStorage.getItem('currentSongs')) || [];
+
+        if (songData.songId && !currentSongs.some(song => song.songId === songData.songId)) {
+            currentSongs.push(songData);
+            localStorage.setItem('currentSongs', JSON.stringify(currentSongs));
+        }
+
+        // 플레이리스트 렌더링
+        function renderPlaylist(songs) {
+            $('#song-list').empty(); // 목록 초기화
+
+            songs.forEach(function (song, index) {
+                var li = $('<li>').addClass('d-flex').attr('data-index', index); // data-index 속성 추가
+                var img = $('<img>').attr('src', song.coverImg).addClass('playlist-img').css('width', '50px');
+                var infoDiv = $('<div>').addClass('info');
+                var a = $('<a>').attr('href', '#');
+                var titleDiv = $('<div>').text(song.title).css({'font-size': '15px', 'font-weight': '600'});
+                var artistDiv = $('<div>').text(song.artistName).css({'font-size': '12px', 'color': 'gray'});
+
+                a.append(titleDiv).append(artistDiv);
+                infoDiv.append(a);
+
+                var iconContainer = $('<div>').addClass('icon-container');
+                var listIcon = $('<a>').attr('href', '#').append($('<i>').addClass('album-icon fas fa-list icon').css('margin-right', '10px'));
+                var moreIcon = $('<a>').attr('href', '#').append($('<i>').addClass('fas fa-ellipsis-v icon').css('color', 'white'));
+
+                iconContainer.append(listIcon).append(moreIcon);
+
+                li.append(img).append(infoDiv).append(iconContainer);
+
+                $('#song-list').append(li);
+            });
+        }
+
+        renderPlaylist(currentSongs);
+
+        // 첫 번째 노래를 페이지에 반영
+        if (currentSongs.length > 0) {
+            var firstSong = currentSongs[0];
+            $('#song-name').text(firstSong.title);
+            $('#artist-name').text(firstSong.artistName);
+            $('#cover-image').attr('src', firstSong.coverImg);
+            $('#audio-player').attr('src', firstSong.musicFile);
         }
 
         const audioPlayer = $('#audio-player')[0];
@@ -92,18 +145,12 @@
 
         let currentIndex = 0;
         let previousIndex = null;
-        let songs = [];
+        let songs = currentSongs;
         let currentModeIndex = 0; // 초기 모드는 normal
         let currentLyrics = [];
         let lyricsIndex = 0;
         let listenCount = 0;
         let isOneMinutePassed = false;
-
-        // 플레이리스트 데이터 불러옴
-        $.getJSON('/api/playlists/current', function (data) {
-            songs = data;
-            renderPlaylist();
-        });
 
         // 플레이 리스트 재생/일시정지 버튼 처리
         playBtn.on('click', function () {
@@ -119,14 +166,15 @@
 
         // 노래 재생 함수
         function playSong(index) {
-            songName.text(songs[index].songTitle);
-            artistName.text(songs[index].artistName);
-            audioPlayer.src = songs[index].musicFile;
-            coverImage.attr('src', songs[index].albumImg);
+            var song = songs[index];
+            songName.text(song.title);
+            artistName.text(song.artistName);
+            audioPlayer.src = song.musicFile;
+            coverImage.attr('src', song.coverImg);
             audioPlayer.play();
 
             // 가사 업데이트
-            updateLyrics(songs[index].lyrics);
+            updateLyrics(song.lyrics);
 
             // 이전에 재생 중이었던 노래의 active 속성 제거
             if (previousIndex !== null && previousIndex !== index) {
@@ -141,9 +189,13 @@
         // 가사 업데이트 함수
         function updateLyrics(lyrics) {
             lyricsList.empty();
-            currentLyrics = lyrics;
+            currentLyrics = lyrics || [];
             lyricsIndex = 0;
-            lyricsList.append('<p>' + currentLyrics[lyricsIndex].text + '</p>');
+            if (currentLyrics.length > 0) {
+                lyricsList.append('<p>' + currentLyrics[lyricsIndex].text + '</p>');
+            } else {
+                lyricsList.append('<p>가사 없음</p>');
+            }
         }
 
         // progressBar의 값을 현재 재생 시간으로 업데이트
@@ -155,9 +207,27 @@
 
             // 1분 이상 재생되었는지 확인
             if (!isOneMinutePassed && audioPlayer.currentTime >= 60) {
-                isOneMinutePassed = true;
-                listenCount++;
-                console.log('Listen count incremented:', listenCount); // listenCount 증가 확인용 콘솔 로그
+                console.log("islogin", songData.islogin);
+                if (songData.islogin === false) {
+                    alert("로그인이 필요합니다");
+                    window.opener.postMessage("closePopup", "*");
+                    window.close(); // 팝업 창 닫기
+                } else {
+                    isOneMinutePassed = true;
+                    listenCount++;
+
+                    $.ajax({
+                        type: "put",
+                        url: "/api/songs/count",
+                        data: {listenCount: listenCount, songId: urlParams.get('songId')}
+                    }).done((res) => {
+                        alert("노래 조회수 1추가")
+                    }).fail((res) => {
+                        alert("오류")
+                    })
+                }
+
+
             }
         }
 
@@ -227,7 +297,7 @@
         $(audioPlayer).on('ended', function () {
             if (PLAY_MODES[currentModeIndex].name === 'repeat-one') {
                 audioPlayer.play();
-            } else if (PLAY_MODES.currentModeIndex.name === 'repeat-all') {
+            } else if (PLAY_MODES[currentModeIndex].name === 'repeat-all') {
                 currentIndex = (currentIndex + 1) % songs.length;
                 playSong(currentIndex);
             } else {
@@ -255,35 +325,9 @@
         // 셔플 버튼 클릭 이벤트 리스너
         shuffleBtn.on('click', function () {
             shuffleArray(songs);
-            renderPlaylist();
+            renderPlaylist(songs);
             playSong(0);
         });
-
-        // 플레이리스트 렌더링 함수
-        function renderPlaylist() {
-            songList.empty();
-            songs.forEach((song, index) => {
-                const li = $('<li>').addClass('d-flex'); // 'd-flex' 클래스를 추가하여 Flexbox 사용
-                const img = $('<img>').attr('src', song.albumImg).addClass('playlist-img').css('width', '50px');
-                const infoDiv = $('<div>').addClass('info');
-                const a = $('<a>').attr('href', '#');
-                const titleDiv = $('<div>').text(song.songTitle).css({'font-size': '15px', 'font-weight': '600'});
-                const artistDiv = $('<div>').text(song.artistName).css({'font-size': '12px', 'color': 'gray'});
-
-                a.append(titleDiv).append(artistDiv);
-                infoDiv.append(a);
-
-                const iconContainer = $('<div>').addClass('icon-container');
-                const listIcon = $('<a>').attr('href', '#').append($('<i>').addClass('album-icon fas fa-list icon').css('margin-right', '10px'));
-                const moreIcon = $('<a>').attr('href', '#').append($('<i>').addClass('fas fa-ellipsis-v icon').css('color', 'white'));
-
-                iconContainer.append(listIcon).append(moreIcon);
-
-                li.append(img).append(infoDiv).append(iconContainer);
-
-                songList.append(li);
-            });
-        }
 
         // 배열 셔플 함수
         function shuffleArray(array) {
