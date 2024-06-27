@@ -59,7 +59,7 @@
                         <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
                            data-title="{{title}}"
                            data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
-                           data-lyrics="{{lyrics}}">
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -108,7 +108,8 @@
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
                         <a href="#" class="play-btn" data-index="{{index}}" data-title="{{title}}"
-                           data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                           data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -159,7 +160,7 @@
                         <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
                            data-title="{{title}}"
                            data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
-                           data-lyrics="{{lyrics}}">
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -210,7 +211,7 @@
                         <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
                            data-title="{{title}}"
                            data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
-                           data-lyrics="{{lyrics}}">
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -226,9 +227,105 @@
     </div>
 
     <div id="content5" class="chart-main tab-content">
+        <div class="chart-header">
+            <h3>국내 댄스/일렉 차트</h3>
+            <div>▷ 전체듣기</div>
+        </div>
+        <table class="chart-main-table">
+            <tr class="chart-main-table-header">
+                <th><input type="checkbox"></th>
+                <th>순위</th>
+                <th>곡/앨범</th>
+                <th>아티스트</th>
+                <th>듣기</th>
+                <th>재생목록</th>
+                <th>내 리스트</th>
+                <th>더보기</th>
+            </tr>
+            {{#all.domesticDanceAndElectronicChart}}
+                <tr class="chart-main-table-body">
+                    <td><input type="checkbox" value="{{songId}}"></td>
+                    <td>{{index}}</td>
+                    <td>
+                        <a href="/albums/{{albumId}}/list">
+                            <div class="chart-main-table-body-img">
+                                <img class="chart-img" src="{{coverImg}}" alt="{{title}}">
+                                <span>
+                                    <div>{{title}}</div>
+                                    <div class="chart-album-name">{{albumTitle}}</div>
+                                </span>
+                            </div>
+                        </a>
+                    </td>
+                    <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
+                    <td>
+                        <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
+                           data-title="{{title}}"
+                           data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </td>
+                    <td><a href="#"><i class="fa-solid fa-list-ul"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-folder-plus"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
+                </tr>
+            {{/all.domesticDanceAndElectronicChart}}
+        </table>
+        <div class="chart-more-button" id="load">
+            더보기 <i class="fa-solid fa-chevron-down"></i>
+        </div>
     </div>
 
     <div id="content6" class="chart-main tab-content">
+        <div class="chart-header">
+            <h3>국내 알앤비 차트</h3>
+            <div>▷ 전체듣기</div>
+        </div>
+        <table class="chart-main-table">
+            <tr class="chart-main-table-header">
+                <th><input type="checkbox"></th>
+                <th>순위</th>
+                <th>곡/앨범</th>
+                <th>아티스트</th>
+                <th>듣기</th>
+                <th>재생목록</th>
+                <th>내 리스트</th>
+                <th>더보기</th>
+            </tr>
+            {{#all.domesticRBChart}}
+                <tr class="chart-main-table-body">
+                    <td><input type="checkbox" value="{{songId}}"></td>
+                    <td>{{index}}</td>
+                    <td>
+                        <a href="/albums/{{albumId}}/list">
+                            <div class="chart-main-table-body-img">
+                                <img class="chart-img" src="{{coverImg}}" alt="{{title}}">
+                                <span>
+                                    <div>{{title}}</div>
+                                    <div class="chart-album-name">{{albumTitle}}</div>
+                                </span>
+                            </div>
+                        </a>
+                    </td>
+                    <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
+                    <td>
+                        <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
+                           data-title="{{title}}"
+                           data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </td>
+                    <td><a href="#"><i class="fa-solid fa-list-ul"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-folder-plus"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></td>
+                </tr>
+            {{/all.domesticRBChart}}
+        </table>
+        <div class="chart-more-button" id="load">
+            더보기 <i class="fa-solid fa-chevron-down"></i>
+        </div>
     </div>
 
     <div id="content7" class="chart-main tab-content">
@@ -276,7 +373,7 @@
                         <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
                            data-title="{{title}}"
                            data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
-                           data-lyrics="{{lyrics}}">
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
