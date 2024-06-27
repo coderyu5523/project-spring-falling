@@ -3,6 +3,7 @@ package org.example.projectspringfalling.album;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.enums.FilePathEnum;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
+import org.example.projectspringfalling.like.LikeRepository;
 import org.example.projectspringfalling.song.Song;
 import org.example.projectspringfalling.song.SongRepository;
 import org.springframework.stereotype.Service;
@@ -19,22 +20,16 @@ import static org.example.projectspringfalling._core.utils.FileUtil.fileSave;
 public class AlbumService {
     private final AlbumRepository albumRepository;
     private final SongRepository songRepository;
+    private final LikeRepository likeRepository;
 
-    // 앨범 수록곡 보기
-    public AlbumResponse.ListDTO songList(Integer albumId) {
+    // 앨범 상세보기
+    public AlbumResponse.DetailDTO albumDetail(Integer albumId, Integer userId) {
         Album album = albumRepository.findAlbumAndArtistById(albumId)
                 .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
         List<Song> songList = songRepository.findByAlbumId(albumId);
         String albumGenre = removeDuplicates(albumRepository.findAlbumGenres(albumId));
-        return new AlbumResponse.ListDTO(album, songList, albumGenre);
-    }
-
-    // 앨범 상세보기
-    public AlbumResponse.DetailDTO albumDetail(Integer albumId) {
-        Album album = albumRepository.findAlbumAndArtistById(albumId)
-                .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
-        String albumGenre = removeDuplicates(albumRepository.findAlbumGenres(albumId));
-        return new AlbumResponse.DetailDTO(album, albumGenre);
+        boolean isLike = likeRepository.findUserLikedSongs(userId, albumId).isPresent();
+        return new AlbumResponse.DetailDTO(album, songList, albumGenre, isLike);
     }
 
     public Album getImage(int id) {
