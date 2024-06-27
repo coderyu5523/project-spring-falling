@@ -150,7 +150,7 @@ VALUES ('Map of the Soul: 7', 'YG PLUS', 'BIGHIT MUSIC', '국내', '정규', '/u
 음악으로 전 세계 사람들과 경계 없는 소통을 해오며 글로벌 아티스트의 반열에 선 방탄소년단은 이번 앨범을 통해 자기 자신을 들여다보고자 했다. 데뷔 후 7년, 이 자리에 오기까지의 삶은 험난했고 성공에 가리어진 그늘 또한 버겁게 느껴질 때가 있었다. 하지만 방탄소년단은 앞으로 나아가야 할 내일에 보다 주목하고자 한다. 지금의 자신들을 있게 한 근원이자 주변부에 있던 자신들을 전 세계적인 슈퍼스타로 만들어낸 팬클럽 아미(ARMY)와 함께 주어진 길을 계속해서 걸어가고자 한다.
 ');
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('The Album', 'YG PLUS', 'YG Entertainment', '국내', '정규', 'upload/album/The Album.jpg', 13,
+VALUES ('The Album', 'YG PLUS', 'YG Entertainment', '국내', '정규', '/upload/album/The Album.jpg', 13,
         '2020-10-02', 'How You Like That, Ice Cream (with Selena Gomez)은 싱글로 발매된 [How You Like That]과 [Ice Cream (with Selena Gomez)]에서 감상하실 수 있습니다.
 
 2016년 ’SQUARE ONE’으로 데뷔하여 글로벌 아티스트로 성장한 블랙핑크의 첫 정규 앨범 ‘The Album’이 10월 2일 발매된다.
@@ -771,7 +771,7 @@ VALUES ('NA', 'Dreamus', '㈜JYP엔터테인먼트', '국내', '미니', '/uploa
 신보명 ''NA''는 나연의 ''나''이자 "나! 오로지 나!"라는 사랑스러운 의미를 품고 있다. "오로지 ''나''를 보여주겠다"는 당당함이 돋보인다. 나연은 타이틀곡 ''ABCD''(에이비씨디)를 통해 그녀가 가진 무한 가지 매력 중 또 하나의 포인트를 꺼내 보인다. "Hey listen to me now A you''re gonna B my babe Everytime you C me 빠져 Deeper deeper babe Hey listen to me now ABCD 반복해 How to fall in love 가르쳐 줄게"와 같이 알파벳을 활용한 재치 있는 가사로 A부터 Z까지 내 타입인 상대를 향해 사랑에 대해 하나부터 열까지 알려주고 유혹하겠다는 자신감을 노래한다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('Love Lee', 'YG PLUS', 'YG Entertainment', '국내', '싱글', 'upload/album/Love Lee.jpg', 58, '2023-08-21', '@ AKMU 4th SINGLE [Love Lee]
+VALUES ('Love Lee', 'YG PLUS', 'YG Entertainment', '국내', '싱글', '/upload/album/Love Lee.jpg', 58, '2023-08-21', '@ AKMU 4th SINGLE [Love Lee]
 
 ‘가사는 특별하게, 음악은 담백하게''
 AKMU가 4번째 싱글 [Love Lee]로 돌아왔다.
@@ -791,7 +791,7 @@ SBS 월화드라마 ‘키스 먼저 할까요?’ OST의 세 번째 주자로 �
 또한 이번 곡은 가사에 고단하고 불안한 하루 속에서도 항상 함께 하자는 진심 어린 고백을 담고 있는 만큼, 앞으로 겪게 될 시련을 극복해 나가는 안순진(김선아 분)과 손무한(감우성 분)의 굳은 믿음과 사랑을 잘 표현해 드라마의 몰입도를 한층 높일 것으로 보인다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLANETMADE', '국내', '미니', 'upload/album/VERSUS.jpg', 60, '2023-11-02', 'VIVIZ - The 4th Mini Album ''VERSUS''
+VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLANETMADE', '국내', '미니', '/upload/album/VERSUS.jpg', 60, '2023-11-02', 'VIVIZ - The 4th Mini Album ''VERSUS''
 
 - VIVIZ, 11월 2일 미니 4집 ‘VERSUS’ 공개!
 - “사랑 말고 다른 말론 설명할 수 없는 멜로” 이거 사랑 맞지?
@@ -1340,7 +1340,7 @@ know you want it like
 It’s all Mine
 Mine', 2,1245),
        ('Licorice', 'Daniel Davidsen, Peter Wallevik, Moa “Cazzi Opeia” Carlebecker, Karen Poole', '강은정',
-        '/upload/Licorice.mp4', 'Dance', false, '/upload/song/Licorice.mp3', '2024-05-27', 2, '넌 정말
+        '/upload/song/Licorice.mp4', 'Dance', false, '/upload/song/Licorice.mp3', '2024-05-27', 2, '넌 정말
 Licorice
 Licorice
 Licorice
@@ -1601,7 +1601,7 @@ To the beach
 Take it slow
 Bahama', 2,214),
        ('Long Chat (#♥)', 'Stian Nyhammer Olsen, Live Rabo Lund-Roland, Nora Grefstad, Julia Finnseter', '문설리',
-        '/upload/Long Chat.mp4', 'Dance', false, '/upload/song/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
+        '/upload/song/Long Chat.mp4', 'Dance', false, '/upload/song/Long Chat.mp3', '2024-05-27', 2, 'Ha I’ll be the
 girl who likes a Long Chat
 Woo Ah
 
@@ -1847,7 +1847,7 @@ La-la
 Woo Woo Woo
 La-la
 ', 2,45557),
-       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/Live My Life.mp4',
+       ('Live My Life', 'Sophia Brenan, Nick Hahn, Edvard Forre Erfjord', 'Leslie', '/upload/song/Live My Life.mp4',
         'Rock/Metal', false, '/upload/song/Live My Life.mp3', '2024-05-27', 2, 'Bye 따분한
 고지식한
 그런 사고방식
@@ -5455,7 +5455,8 @@ Gonna block you
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
                      lyrics,artist_id,listen_count)
 VALUES ('EASY', 'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang', 'Amanda "Kiddo A.I." Ibanez, Sean Turk, Joseph Barrios, Alex Fernandez, Jordyn Smith, Hadar Adora, Supreme Boi, Score (13), Megatone (13), "Hitman" Bang', '/upload/song/EASY.mp4', 'HipHop', true, '/upload/song/EASY.mp3', '2024-02-19', 52,
-'다친대도 길을 걸어 kiss me
+'다친대도 길을 걸어 kiss me' ||
+'
 쉽지 않음 내가 쉽게 easy
 Stage 위엔 불이 튀어, 내 body
 Pull up and I rip it up like ballet
