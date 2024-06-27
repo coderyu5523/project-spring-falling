@@ -3,6 +3,7 @@ package org.example.projectspringfalling.artist;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.user.SessionUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,20 +16,17 @@ public class ArtistController {
     private final HttpSession session;
 
     // 가수 상세보기 (앨범)
-    @GetMapping("/artists/{artistId}/albums")
+    @GetMapping("/artists/{artistId}")
     public String artistDetailAlbumList(HttpServletRequest request, @PathVariable Integer artistId) {
-        ArtistResponse.AlbumListDTO resp = artistService.artistDetailAlbumList(artistId);
-        request.setAttribute("album", resp);
-        return "artist/artist-song-list";
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        Integer userId = (sessionUser != null) ? sessionUser.getId() : 0;
 
-    }
+        ArtistResponse.ArtistDetailDTO resp = artistService.artistDetail(artistId, userId);
+        request.setAttribute("artist", resp);
 
-    // 가수 상세보기 (곡)
-    @GetMapping("/artists/{artistId}/songs")
-    public String artistDetailSongList(HttpServletRequest request, @PathVariable Integer artistId) {
-        ArtistResponse.ArtistSongListDTO resp = artistService.artistDetailSongList(artistId);
-        request.setAttribute("song", resp);
+//        return "artist/artist-song-list";
         return "artist/artist-album-list";
+
     }
 
     // 가수 등록하기
