@@ -56,7 +56,10 @@
                     </td>
                     <td><a href="/artists/{{artistId}}/songs">{{artistName}}</a></td>
                     <td>
-                        <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}" data-title="{{title}}" data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}">
+                        <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
+                           data-title="{{title}}"
+                           data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
+                           data-lyrics="{{lyrics}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -76,8 +79,8 @@
 </div>
 <script type="module" src="/js/song-chart.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.play-btn').click(function(event) {
+    $(document).ready(function () {
+        $('.play-btn').click(function (event) {
             event.preventDefault();
 
             // 데이터 가져오기
