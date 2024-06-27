@@ -34,8 +34,8 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('이클립스 (ECLIPSE)', 'Solo', '/upload/artist/이클립스.jpg', '2024-04-08'),
        ('BTS', 'Group', '/upload/artist/bts.jpg', '2013-06-13'),
        ('Blackpink', 'Group', '/upload/artist/블랙핑크.jpg', '2016-08-08'),
-       ('아이유', 'Solo', '/upload/aritst/아이유.jpg', '2008-09-18'),
-       ('Twice', 'Group', '/upload/aritst/트와이스.jpg', '2015-10-20'),
+       ('아이유', 'Solo', '/upload/artist/아이유.jpg', '2008-09-18'),
+       ('Twice', 'Group', '/upload/artist/트와이스.jpg', '2015-10-20'),
        ('EXO', 'Group', '/upload/artist/엑소.jpg', '2012-04-08'),
        ('Red Velvet', 'Group', '/upload/artist/레드벨벳.jpg', '2014-08-01'),
        ('선미', 'Solo', '/upload/artist/선미.jpg', '2007-02-13'),
@@ -67,12 +67,12 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('잔나비', 'Group', '/upload/artist/잔나비.jpg', '2014-04-28'),
        ('십센치', 'Solo', '/upload/artist/십센치.jpg', '2010-03-28'),
        ('소란', 'Group', '/upload/artist/소란.jpg', '2010-08-19'),
-       ('검정치마', 'Solo', '/upload/artist/검정치마''.jpg', '2008-11-13'),
+       ('검정치마', 'Solo', '/upload/artist/검정치마.jpg', '2008-11-13'),
        ('데이브레이크', 'Group', '/upload/artist/데이브레이크.jpg', '2007-09-18'),
        ('선우정아', 'Solo', '/upload/artist/선우정아.jpg', '2006-05-10'),
        ('새소년', 'Group', '/upload/artist/새소년.jpg', '2017-06-20'),
        ('카더가든', 'Solo', '/upload/artist/카더가든.jpg', '2013-09-24'),
-       ('혁오밴드', 'Group', '/upload/artist/혁오밴드.jpg', '2014-09-18'),
+       ('혁오밴드', 'Group', '/upload/artist/혁오.jpg', '2014-09-18'),
        ('장미여관', 'Group', '/upload/artist/장미여관.jpg', '2011-11-01'),
 
        ('태연 (TAEYEON)', 'Solo', '/upload/artist/태연.jpg', '2015-10-07'),
@@ -84,8 +84,18 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('나연 (TWICE)', 'Solo', '/upload/artist/나연.jpg', '2022-06-24'),
        ('AKMU (악뮤)', 'Group', '/upload/artist/악뮤.jpg', '2014-04-07'),
        ('폴킴', 'Solo', '/upload/artist/폴킴.jpg', '2014-01-21'),
-       ('VIVIZ (비비지)', 'Group', '/upload/artist/비비지.jpg', '2021-02-09');
+       ('VIVIZ (비비지)', 'Group', '/upload/artist/비비지.jpg', '2021-02-09'),
 
+       ('H1-KEY (하이키)', 'Group', '/upload/artist/하이키.jpg', '2022-01-05'),
+       ('거북이', 'Group', '/upload/artist/거북이.jpg', '2001-12-20'),
+       ('Tommy Richman', 'Solo', '/upload/artist/Tommy Richman.jpg', '2021-09-03'),
+       ('이승철', 'Solo', '/upload/artist/이승철.jpg', '1988-12-01'),
+       ('장윤정', 'Solo', '/upload/artist/장윤정.jpg', '2004-10-22'),
+       ('영탁', 'Solo', '/upload/artist/영탁.jpg', '2007-03-05'),
+       ('진성', 'Solo', '/upload/artist/진성.jpg', '1997-09-01'),
+       ('노브레인 (NoBrain)', 'Group', '/upload/artist/노브레인.jpg', '1997-03-01'),
+       ('자우림', 'Group', '/upload/artist/자우림.jpg', '1997-11-01'),
+       ('강산에', 'Solo', '/upload/artist/강산에.jpg', '1993-03-26');
 
 -- 테이블: album
 
@@ -811,6 +821,104 @@ VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLAN
 이처럼 VIVIZ의 수많은 선택으로 태어난 이번 앨범은 전달하고자 하는 메시지를 상징적 컬러로 표현했던 이전 앨범들과 달리 다양한 컬러들을 담은 컬러칩 그 자체이다. 수많은 컬러들이 질서 있게 존재하지만 때때로 규칙을 벗어나 예측할 수 없는 조합을 만들어 내듯 다양한 스토리를 통해 끊임없이 질문(선택)을 던지고 듣는 이로 하여금 스스로 컬러(운명)의 방향을 결정하도록 안내한다.
 그들이 준비한 다섯 트랙을 모두 다 듣고 나면 그들의 고민과 선택이 우리를 좋은 길로 안내할 것이란 믿음이 확신이 되어 VIVIZ에게 운명처럼 이끌릴 것이다.');
 
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('H1-KEY 1st Mini Album [Rose Blossom]', 'Sony Music', 'GLG', '국내', '미니', '/upload/album/Rose Blossom.jpg', 61, '2023-01-05', '완전히 새로워진 비주얼과 더욱 당당해진 태도로 돌아온 하이키!
+데뷔 1주년에 맞춰 2023년 1월 5일 컴백!
+꿈을 포기하지 않고 악착같이 피어나려는 이들에게 바치는 앨범 [Rose Blossom]
+
+H1-KEY 1st Mini Album [Rose Blossom]
+
+쉽지만은 않은 인생. 누구나 한계에 직면한다.
+[Rose Blossom]은 그럼에도 자신의 꿈과 희망을 포기하지 않고 악착같이 피어나려는 이들에게 바치는 앨범이다.
+
+하이키의 지난 앨범들이 피지컬적인 건강美를 주로 표현했다면, 이번 앨범은 보다 내적인 건강함에 포커싱을 맞췄다. 모든 트랙에 하이키 특유의 건강하고 긍정적인 마인드가 가득 수놓아져 있다. 당당함의 시작과 끝은 결국 건강한 정신이기에.
+
+하이키는 이번 미니앨범을 통해 비주얼적으로도 완전히 새로운 모습을 보여준다. STUDIO L''EXTREME이 비주얼 디렉터로 참여하였으며, 하이키는 장미가 피어난다(Rose Blossom)는 일련의 코드 안에서 그간 시도하지 않았던 다채로운 스타일을 표현하였다. 그 변화는 과감하면서도 트랜디하다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('거북이 사요!!', null, '아이에스뮤직스', '국내', '정규', '/upload/album/거북이사요.jpg', 62, '2006-07-20', '"사계", "향기로운 추억", "Come On"과 "왜 이래", 3집의 "빙고" 등 유쾌하고 시원한 댄스 음악으로 일명 ''뽕댄스''로 대중적 인기를 얻었던 거북의 네 번째 앨범이다. 리더인 터틀맨이 참여한 마지막 작품으로 전작에 이어 천진난만한 멜로디와 가사 그리고 걸쭉한 터틀맨의 랩과 두 여성 보컬의 통쾌한 보컬이 작품 전반을 채웠다.
+
+비행(飛行)과 비행(非行)의 의미를 유쾌하게 풀어 낸 "비행기"를 비롯, 90년대 풍의 강렬한 힙합 댄스 "우습단 말야", 후렴구를 제창해 풍성함을 살린 "Remember me", 여름을 위한 특화 곡 "여행이야"와 공백기 동안 무대 위에 벅차는 순간을 상상하며 써내려 간 "꼭" 등 전체적으로 밝고 경쾌한 매력이 인상적이다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('MILLION DOLLAR BABY', 'Universal Music Group', 'PULSE Records', '해외', '싱글', '/upload/album/MILLION DOLLAR BABY.jpg', 63, '2024-06-04', null);
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('청연', 'NHN벅스', '진엔원뮤직웍스', '국내', 'OST/BGM', '/upload/album/청연.jpg', 64, '2005-12-22', '최고의 아티스트 [이승철]과 최고의 영화 [청연]과의 만남만으로도 설레이는 O.S.T
+
+시대에겐 가장 놀라운 여자, 한 남자에겐 가장 아름다운 사랑 1925년, 최초의 민간 여류비행사 박경원 이야기를 다룬 최고의 기대작인 세상, 그 위로 날아오르다... [청연]의 개봉에 맞쳐서 최고의 O.S.T 가 발매될 예정이다.
+
+특히 이승철이 부른 [청연] OST 주제가 ‘서쪽하늘’은 그가 직접 작사까지 하는 등 남다른 열의를 보인 곡으로 드라마와 스케일을 그대로 느낄 수 있는 감미롭고도 힘있는 멜로디라는 평가를 받고 있다. 올해로 가수 데뷔 20주년을 맞는 이승철은 “[청연]은 너무도 작업하고 싶었던 영화라 먼저 작업을 청했다”면서 “영화의 내용에 깊은 감동을 받아 그 감정을 그대로 가사에 표현했다”고 이번 작업에 대한 소감을 밝혔다.
+
+‘서쪽하늘’은 장윤정의 히트곡‘어머나’를 만든 윤명선이 작곡했지만 트로트가 아니라 영화 분위기에 걸맞는 애절한 발라드곡이다. ');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('올래', '카카오엔터테인먼트', '㈜ 아이더블유 ENTERTAINMENT', '국내', '정규', '/upload/album/올래.jpg', 65, '2010-06-08', '트로트 퀸  장윤정 정규 5집 앨범 [올래] 발표!!
+
+대한민국의 여름을 삼킬 트로트 퀸의 귀환!!
+
+전 세대를 아우르며 어느덧 국민 가수로 자리매김한 트로트 퀸 장윤정이 대한민국의 여름을 평정하러 기세등등하게 돌아왔다. 지난 [장윤정 트위스트]이후 약 2년여만에 발표된 이번 정규 5집 앨범은 타이틀곡 <올래>를 포함한 총 14트랙이 수록 되였으며 정통가요는 물론 하와이언 하우스 뮤직, 라틴 댄스등 다양한 장르를 담아내 보다 완성도 높은 앨범을 탄생시켰다. 장윤정은 이번 신곡 [올래]를 통해 데뷔 7년차에 접어든 중견가수로써의 성숙미는 물론 걸그룹에 견주어도 뒤지지 않을 상큼발랄한 매력을 발산하며 더위에 지친 대중들의 눈과 귀를 만족시켜 줄 예정이다
+
+트로트 퀸 장윤정이 드디어 오는 6월 정규 5집 앨범과 함께 우리 곁으로 돌아온다. 지난 2008년 [장윤정 트위스트]이후 약 2년여만에 선보인 이번 앨범은 타이틀곡 [올래]를 포함한 총14트랙이 담겨져 있다. 신곡 10곡과 기존에 큰 사랑을 받았던 [당신이 좋아] 그리고 [올래] 리믹스 버전과 함께 MR들이 수록되어 있는다. 이번 앨범은 오랫동안 장윤정의 노래에 목말라있던 팬들의 갈증을 해소시켜 줄 예정이다. 타이틀 곡 [올래]는 하와이언 뮤직과 하우스음악의 리듬을 접목 시켜 또 다른 퓨전 스타일로 새롭게 빚어낸 곡으로써 [꽃], [짠짜라]등을 작곡하며 트로트 히트 제조기로 평가받고 있는 작곡가 임강현의 야심작이기도 하다.
+
+그 외에도 80년대 유행했던 스타일의 복고풍 댄스곡 [불나비], [스타킹]과 가야금을 사용한 전주, 간주의 톡톡 튀는 편곡이 재미를 더한 네오 트로트 곡 [아차차]가 수록되어있다. 더불어 라틴댄스풍의 [카사노바]와 아르메니아 ‘두둑’, 인도 ‘산투르’, 일본 ‘코토’등 각 나라의 전통악기가 어우러져 만들어낸 오리엔탈느낌의 발라드곡인 [송인], [초혼]이 더해진 이번 앨범을 통해 다양한 음악적 시도를 꾀한 장윤정의 노력을 엿볼 수가 있다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('내일은 미스터트롯 데스매치 PART1', '카카오엔터테인먼트', 'TV CHOSUN, (주)쇼플레이', '국내', '싱글', '/upload/album/내일은미스터트롯데스매치1.jpg', 66, '2020-01-30', '내일은 미스터트롯 <데스매치 PART1>
+
+대한민국에 트롯열풍을 일으키고 있는 TV조선 내일은 미스터트롯!!
+예선, 본선1차전을 거쳐 올라온 30명의 1:1 데스매치 방송분 음원공개 (2020년 1월 23일 4회 방송)
+
+■ 영탁 [막걸리 한잔] TITLE
+〔류선우 작사 / 류선우 작곡 / 원곡 가수 강진〕
+▶ 트롯계 핵인싸! 트롯쾌남! 영탁 [막걸리 한 잔] VS 아이돌계의 시조새! 트로트 신생아 천명훈 [가라지]
+▶ 2019년에 발매된 강진의 노래로 아버지에 대한 그리움을 막걸리로 절절히 풀어낸 곡이다.
+
+■ 천명훈 [가라지]
+〔추세호 작사 / 추세호 작곡 / 원곡 가수 나훈아〕
+▶ 트롯계 핵인싸! 트롯쾌남! 영탁 [막걸리 한 잔] VS 아이돌계의 시조새! 트로트 신생아 천명훈 [가라지]
+▶ 1983년에 발표된 나훈아의 노래로 김수희의 멍에를 작곡한 추세호 작곡가가 슬로우록 선율로 만든 곡이다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('님의 사랑 / 안동역에서', 'RIAK', '월드미디어', '국내', '정규', '/upload/album/안동역에서.jpg', 67, '2012-08-23', null);
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Stand Up Again!', '미러볼뮤직', '록스타뮤직앤라이브', '국내', '미니', '/upload/album/Stand Up Again.jpg', 68, '2004-12-02', '대한민국에 인디의 새로운 문화를 정착시킨 그들. [노브레인]이 돌아 왔다.
+
+전 소속사와 계약 만료 후 자신들만의 자체 레이블 [록스타뮤직 (ROXTA MUZIK)]을 설립하고 새롭게 시작하는 의미에서 야심차게 준비한 미니앨범을 들고 그들이 다시 돌아왔다.
+
+2004년 부쩍 성숙해진 [노브레인]
+3집 음반 “안녕, mary poppins” 발표 이후 [노브레인]에게 2004년은 자신들만의 새로운 자체 레이블 설립과 멤버의 재구성 등으로 어수선한 한해 였다. 게다가 음반 시장의 불황, 축소 등으로 모두들 힘들어 하는 만큼 노브레인에게도 2004년의 한해가 그리 행복한 나날들이 아니였다.
+“아픈 만큼 성숙해진다” 라는 말처럼 그들의 한층 더 성숙해진 느낌이 이번 앨범에서 고스란히 전해져 온다.
+
+올 2004년을 마무리 하는 시점에서 그들이 야침차게 준비한 미니 앨범 stand up again !!
+새로운 시작은 또 다른 시련과 고통을 의미하지만 새로운 밝은 미래도 의미 하는법~!! 노브레인과 모든이들이 앨범의 타이틀처럼 모두가 다시 일어서 보자는 노브레인의 작은 외침 울려 퍼진다. ');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('자우림', '지니뮤직', '인터파크 엔터테인먼트', '국내', '정규', '/upload/album/자우림.jpg', 69, '2018-06-22', '‘자우림’ 정규 10집 [자우림]
+
+강렬하게 휘몰아치더니 이내 템포를 절묘하게 조절하면서 호흡을 고른다. 몽환적이면서도 감각적인 김윤아의 목소리가 들리고, 서서히 긴장감을 끌어올리면서 절정에서 폭발한다. 이렇게 1번 ‘狂犬時代’를 시작으로 2번 ‘아는 아이’를 거쳐 3번 ‘Sleeping Beauty’까지만 들어봐도, 자우림이 이 앨범의 곡 배치에 얼마나 세심하게 신경 썼는지를 파악할 수 있을 것이다. 자우림의 통산 10집 [자우림]은 밴드 역사상 가장 인상적인 스타트로 초반부터 듣는 이를 압도한다.
+
+10이라는 상징적인 숫자, 다른 수식 없이 오직 ‘자우림’만을 내건 타이틀. 어쩌면 이는 새로운 출발을 암시하는 것일지도 모른다. 그리고 또 하나, 자우림이 지난 세월 동안 들려줬던 음악을 집대성하고 싶다는 욕망의 반영일 수도 있다.
+
+과연 그렇다. 앨범에는 희망에 대한 노래가 있는가 하면, 회한의 정서가 짙게 배어있는 곡도 있다. 병들어 있는 사회에 대한 날카로운 비판을 잊지 않는가 하면, 지극히 사적인 감수성에 기대어 있는 사랑 혹은 이별 노래도 있다. 절망에 빠져 있는 와중에 분노를 토해내고, 그 분노를 토해내면서도 아름다웠던 추억을 회상하며 미래를 갈구한다. 이 모든 면들이 합쳐져야 비로소 자우림이라는 요체가 형성된다는 점은 굳이 강조하지 않아도 될 것이다. 그들은 무엇보다 자신들을 포함한 이 세계가 단일하게 해석되지 않는다는 걸 아주 잘 알고 있는 밴드다. 내가 그들의 곡을 넘어 앨범을 애정 하는 가장 큰 바탕이다. ');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('강영걸 (강산에 Vol.6)', 'MO records', '강영걸 레코드', '국내', '정규', '/upload/album/강영걸.jpg', 70, '2002-10-07', '* 4년만의 Vol 6.(7집) 신보 [강영걸] 발매.
+
+인기에 편승해서 몇 개월에 한번씩 음반을 쏟아내는 요즘가수들과는 달리 강산에는 음반발표에 참으로 인색한 가수이다. 평균적으로 2년에 한번씩 음반을 내어왔고 이번에는 4년이라는 실로 긴 시간만에 7집 음반 [강영걸]로 팬 곁을 찾았다.
+
+강산에의 새 음반은 평범한 소재에서 진솔한 삶의 모습을 걸쭉하게 풀어 가는 강산에식 록 음악을 기다렸던 팬뿐만 아니라 천편일률적인 댄스 음악에 지쳐 신선한 음악에 대한 갈증을 느껴왔던 많은 사람들에게 반가운 선물이 될 것이다.
+
+1집 <라구요>라는 노래에서는 구세대와 신세대가 분단의 아픔에 대해 함께 공감할 수 있었고, 2집 <넌 할 수 있어>라는 노래에서는 고단한 삶을 살아가는 많은 사람들에게 용기와 힘을 주었다. 그리고 <3집 삐딱이>앨범에서는 당시 혼란한 사회 상황과 삐딱한 현실을 매섭게 꼬집는 현실 비판의 메시지를 당당히 던졌다. 99년 발표된 <연어>라는 앨범에서 보편적이고 일상적인 주제로 돌아온 그는 거슬러 흐르는 저 힘찬 연어들처럼이라는 노래에서 IMF를 힘겹게 이겨나가고 있는 서민들에게 새로운 시작과 도전의 메시지를 전달했다.
+
+이렇듯 매 앨범마다 신선함과 다양한 느낌의 음악들을 선사해 온 강산에가 정규앨범으로는 4년만에 우리곁을 다시 찾아 왔다.
+
+Vol.6 (7집) 수록된 모든 곡들을 강산에가 직접 작사 작곡은 물론 대부분 곡들을 편곡했다. 특히나 이번 음반은 자신이 직접 프로듀스로서 처음 작업한 음반이기도 하다. 이번 음반은 완성도를 높이기 위해서 마이클 잭슨 등 세계 유명 아티스트들이 음반작업을 했던 세계적인 스튜디오인 Bernie Grundman Mastering Studio(도쿄)에서 mastering 작업을 했다.
+
+“긴 여행을 하고 돌아 온 느낌입니다. 모든 것이 새롭고 그렇기에 흥미롭고 알고 싶지만 때론 힘들고 두렵기도 합니다. 자꾸만 변해 가는 세상 앞에서 언제나 나는 Beginner라는 생각이 듭니다. 이번 앨범 역시 Beginner라는 마음으로 준비했습니다." 라고 음반 발매 소감을 밝힌 그는 이번 새 앨범에 대한 애정이 각별하다.
+
+그는 이번 앨범에서 음악뿐만 아니라 자켓에도 세심한 정성을 아끼지 않았다. 여권 형식으로 만들어져 있는 앨범은 ''Welcome to Republic of Kang Young Gul"이라는 안내 메시지로 시작되고, 속지를 한 장 한 장 넘기다 보면 마치 강산에 공화국을 여행하는 기분마저 들게 한다. 각 곡의 컨셉에 맞는 아기자기한 디자인으로 꾸며진 그림책 같은 앨범 자켓은 오랫동안 기다린 팬들에게 보내는 보너스 선물이기도 하다. ');
 
 -- 테이블: song
 
@@ -5918,6 +6026,403 @@ VALUES ('MANIAC', 'Jack Brady, Jordan Roman, Chloe Copoloff, Austin Nicole Wolfe
         It’s coming down
         Maniac
         Yeah yeah woo woo woo', 60, 31841);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('건물 사이에 피어난 장미 (Rose Blossom)', '홍지상, Hong Ji Sang', 'Young K', '/upload/song/건물 사이에 피어난 장미.mp4', 'Dance', true, '/upload/song/건물 사이에 피어난 장미.mp3', '2023-01-05', 61,
+'건물 사이에 피어난 장미
+제발 살아남아 줬으면
+꺾이지 마 잘 자라줘
+온몸을 덮고 있는 가시
+얼마나 힘이 들었으면
+견뎌내줘서 고마워
+예쁘지 않은 꽃은 다들
+골라내고 잘라내
+예쁘면 또 예쁜 대로
+꺾어 언젠가는 시들고
+왜 내버려 두지를 못해
+그냥 가던 길 좀 가
+어렵게 나왔잖아
+악착같이 살잖아 hey
+나는 건물 사이에 피어난 장미
+삭막한 이 도시가
+아름답게 물들 때까지
+고갤 들고 버틸게 끝까지
+모두가 내 향길 맡고 취해
+웃을 때까지
+Oh oh oh oh
+No I''m not goin'' down
+I''ll be alright
+Yeh I''m only goin'' up
+and Imma be alright
+Hey
+내가 원해서 여기서 나왔냐고
+원망해 봐도 안 달라져 하나도
+지나고 돌아보면
+앞만 보던 내가 보여
+그때그때 잘 견뎌냈다고
+생각 안 해 그냥 날 믿었다고
+거센 바람이 불어와
+내 살을 베려 해도
+자꾸 벌레들이 나를
+괴롭히고 파고들어도
+No 언제나 굴하지 않고
+쓰러지지 않아 난
+어렵게 나왔잖아
+악착같이 살잖아
+나는 건물 사이에 피어난 장미
+삭막한 이 도시가
+아름답게 물들 때까지
+고갤 들고 버틸게 끝까지
+모두가 내 향길 맡고
+취해 웃을 때까지
+Keep it up
+Oh oh oh oh
+It''s a song for you and I
+Say that we''re alive
+Celebrate it now
+나는 건물 사이에 피어난 장미
+삭막한 이 도시가
+아름답게 물들 때까지
+고갤 들고 버틸게 끝까지
+모두가 내 향길 맡고
+취해 웃을 때까지
+Keep it up
+Oh oh oh oh
+No I''m not goin'' down
+I''ll be alright
+Yeh I''m only goin'' up
+and Imma be alright
+Hey
+Keep it up
+Oh oh oh oh
+No I''m not goin'' down
+I''ll be alright
+Yeh I''m growin'' up
+and Imma be alright
+Hey', 61, 55028);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('비행기', '임성훈', '임성훈', '/upload/song/비행기.mp4', 'Dance', true, '/upload/song/비행기.mp3', '2006-07-20', 62,
+'Yes Turtles Forth album
+New mind New song
+철없을 적 내 기억속에
+비행기 타고가요
+Yeah Let''s go
+파란 하늘위로 훨훨 날아가겠죠
+어려서 꿈꾸었던 비행기 타고
+기다리는 동안 아무말도 못해요
+내 생각 말할순 없어요
+모든 준비 다 끝났어
+곱게 차려 입고 나선
+바깥 풍경마저 들뜬 기분
+때가 왔어 하늘위로
+날으는 순간이야
+조금은 두려워도
+애써 내색 할 순 없어
+이번이 처음이지만
+전에 자주 비행했었잖아
+친구들과 말썽장이
+거북이 비행기로 올라타
+준비됐나
+수많은 사람들 속을 지나쳐
+마지막 게이트야
+나도 모르게 안절부절하고 있어
+이럴 땐 침착해 좀 자연스럽게
+파란 하늘위로 훨훨 날아가겠죠
+어려서 꿈꾸었던 비행기 타고
+기다리는 동안 아무말도 못해요
+내 생각 말할순 없어요
+Yes Remember
+비행기를 타고 가던 너
+따라가고 싶어 울었던
+철없을 적 내 기억속에
+비행기 타고가요
+Yes Fly 다들 아무 일도 없는 듯
+하늘을 나르는데 아무걱정 없는 듯
+왠지 철닥서니 없었나 문득
+이런 내 모습 촌스러 입 다문듯
+쳐다보지 말아요
+다들 처음 탈 때 이러지 않았나요
+딴 데 봐요
+신경 쓰지 마요
+나 혼자 이런게 나 좋아요
+어떤 느낌일까 정말
+새들처럼 나는 기분
+세상 모든 것이 점처럼
+보 여 지겠지
+개구쟁이 거북이
+비행기로 드디어 출발한다
+수많은 사람들 속을 지나쳐
+마지막 게이트야
+나도 모르게 안절부절하고 있어
+이럴 땐 침착해 좀 자연스럽게
+파란 하늘위로 훨훨 날아가겠죠
+어려서 꿈꾸었던 비행기 타고
+기다리는 동안 아무말도 못해요
+내 생각 말할순 없어요
+파란 하늘위로 훨훨 날아가겠죠
+어려서 꿈꾸었던 비행기 타고
+기다리는 동안 아무말도 못해요
+내 생각 말할순 없어요 Yes Remember
+비행기를 타고 가던 너
+따라가고 싶어 울었던
+철없을 적 내 기억속에
+비행기 타고가요', 62, 168130);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('MILLION DOLLAR BABY', 'Tommy Richman, Gideon Endalkachew', 'Tommy Richman, Gideon Endalkachew', null, 'HipHop', true, '/upload/song/MILLION DOLLAR BABY.mp3', '2024-04-26', 63,
+'Do it, baby, do what I should think
+Do it, do it, baby, do what I could think
+Do it, do it, baby, do what I should think
+Do it, do it, baby, do what I could think
+Do it, do it, do it, baby, do what I should think
+Do it, baby, do what I could think
+Do it, do it, do it, baby, do what I should think
+Do it, do it baby, do what I could think
+I ain''t never rep a set, baby, I ain''t do no wrong
+I could clean up good for you, oh, I know right from wrong
+''Cause I wanna make it so badly
+I''m a million dollar baby, don''t at me (yeah)
+Hell nah (yeah, yeah), you rep my city for so damn long (ah, ah)
+But you still don''t notice me, my sound next
+VA next (yeah, yeah), I''m at they neck (yeah, yeah)
+I''m running up a check (yeah, yeah, yeah, yeah)
+She a bad lil'' mama, she a diva
+No matter what happens, he cannot come between
+Us again
+I know we''re better than friends (better than friends)
+I took her to Queen''s Gambit (yeah, yeah)
+Showed around my friends (right now)
+Tried to pick some energy up, it don''t matter (matter)
+I know you haven''t moved on, if you tried (oh, no)
+I don''t believe it, baby, I know you lied (oh, no)
+All night long (oh, no)
+What you mean I changed? (Oh, no) haven''t stayed the same
+I''ve been losing my mind (ooh, ooh, ooh)
+I said, "The city is mine" (ooh, ooh, ooh)
+I ain''t never rep a set, baby, I ain''t do no wrong
+I could clean up, do it for you, oh, I know right from wrong
+''Cause I wanna make it, so badly
+I''m a million dollar baby, don''t at me (yeah)
+I ain''t never rep a set, baby, I ain''t do no wrong
+I could clean up good for you, oh, I know right from wrong
+''Cause I wanna make it so badly
+I''m a million dollar baby, don''t at me (yeah)
+Hell nah
+Hell-hell nah, yeah, yeah
+Hell-hell nah (do it, do it, baby, do what I should think)
+Hell-hell nah (do it, do it, baby, do what I could think)
+Hell-hell nah (do it, do it, baby, do what I should think)
+Hell-hell nah (do it, do it, baby, do what I could think)
+Hell-hell nah, yeah, yeah
+Hell-hell nah', 63, 36000);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('서쪽 하늘', '윤명선', '이승철', null, 'Ballad', true, '/upload/song/서쪽 하늘.mp3', '2005-12-20', 64,
+'서쪽하늘로 노을은 지고
+이젠 슬픔이 돼버린 그대를
+다시 부를수 없을 것 같아
+또 한번 불러보네
+소리쳐 불러도 늘 허공에
+부서져 돌아오는 너의 이름
+이젠 더 견딜 힘조차 없게
+날 버려두고 가지
+사랑하는 날 떠나가는 날
+하늘도 슬퍼서 울어준 날
+빗속에 떠날 나였음을
+넌 알고 있는듯이
+비가오는 날엔 난 항상
+널 그리워해
+언젠간 널 다시 만나는
+그 날을 기다리며
+비내린 하늘은 왜그리 날 슬프게해
+흩어진 내 눈물로 널
+잊고 싶은데
+비가오는 날엔 난 항상
+널 그리워해
+언젠간 널 다시 만나는
+그 날을 기다리며
+비내린 하늘은 왜그리 날 슬프게해
+흩어진 내 눈물로 널
+잊고 싶은데
+가고싶어 널 보고싶어 꼭 찾고 싶었어
+하지만 너의 모습은 아직도 그 자리에
+비가오는 날엔 난 항상
+널 그리워해
+언젠간 널 다시 만나는
+그 날을 기다리며
+비내린 하늘은 왜그리 날 슬프게해
+흩어진 내 눈물로 널
+잊고 싶은데
+하지만 난 널 사랑해', 64, 87031);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('초혼', '임강현', '김순곤', null, 'Trot', false, '/upload/song/초혼.mp3', '2010-06-08', 65,
+'살아서는 갖지 못하는 그런 이름 하나 때문에
+그리운 맘 눈물 속에
+난 띄워 보낼 뿐이죠
+스치듯 보낼 사람이 어쩌다 내게 들어와
+장미의 가시로 남아서 날 아프게 지켜보네요
+따라가면 만날 수 있나
+멀고 먼 세상 끝까지
+그대라면 어디라도 난 그저 행복할 테니
+살아서는 갖지 못하는 그런 이름 하나 때문에
+그리운 맘 눈물 속에
+난 띄워 보낼 뿐이죠
+스치듯 보낼 사람이 어쩌다 내게 들어와
+장미의 가시로 남아서 날 아프게 지켜보네요
+따라가면 만날 수 있나
+멀고 먼 세상 끝까지
+그대라면 어디라도 난 그저 행복할 테니
+난 너무 행복할 테니', 65, 195935);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('막걸리 한잔', '류선우', '류선우', null, 'Trot', true, '/upload/song/막걸리 한잔.mp3', '2020-01-30', 66,
+'막걸리 한 잔
+온 동네 소문 났던 천덕꾸러기
+막내아들 장가가던 날
+앓던 이가 빠졌다며 덩실 더덩실
+춤을 추던 우리 아버지
+아버지 우리 아들 많이 컸지요
+인물은 그래도 내가 낫지요
+고사리 손으로
+따라주는 막걸리 한잔
+아버지 생각나네
+황소처럼 일만 하셔도
+살림살이는 마냥 그 자리
+우리 엄마 고생시키는
+아버지 원망했어요
+아빠처럼 살긴 싫다며
+가슴에 대못을 박던
+못난 아들을 달래주시며
+따라주던 막걸리 한잔
+따라주던 막걸리 한잔
+
+황소처럼 일만 하셔도
+살림살이는 마냥 그 자리
+우리 엄마 고생시키는
+아버지 원망했어요
+아빠처럼 살긴 싫다며
+가슴에 대못을 박던
+못난 아들을 달래주시며
+따라주던 막걸리 한잔
+따라주던 막걸리 막걸리 한잔', 66, 66000);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('안동역에서', '최강산', '김병걸', null, 'Trot', false, '/upload/song/안동역에서.mp3', '2012-08-23', 67,
+'바람에 날려버린 허무한 맹세였나
+첫눈이 내리는 날 안동역 앞에서
+만나자고 약속한 사람 새벽부터 오는 눈이
+무릎까지 덮는데 안 오는 건지 못 오는 건지
+오지 않는 사람아 안타까운 내 마음만
+녹고 녹는다 기적소리 끊어진 밤에
+어차피 지워야 할 사랑은 꿈이였나
+첫눈이 내리는 날 안동역 앞에서
+만나자고 약속한 사람 새벽부터 오는 눈이
+무릎까지 덮는데 안 오는 건지 못 오는 건지
+대답 없는 사람아 기다리는 내 마음만
+녹고 녹는다 밤이 깊은 안동역에서
+기다리는 내 마음만 녹고 녹는다
+밤이 깊은 안동역에서', 67, 676700);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('넌 내게 반했어', '노브레인 (NoBrain)', '노브레인 (NoBrain)', '/upload/song/넌 내게 반했어.mp4', 'Rock/Metal', true, '/upload/song/넌 내게 반했어.mp3', '2004-12-02', 68,
+'(넌 내게 반했어)화려한 조명속에 빛나고 있는
+(넌 내게 반했어)웃지 말고 대답해봐
+(넌 내게 반했어)뜨거운 토요일밤의 열기속에
+(넌 내게 반했어)솔직하게 말을 해봐
+도도한 눈빛으로 제압하려 해도
+난 그런 속임수에 속지 않어 예예
+워우 워우 워 워
+(넌 내게 반했어)애매한 그 눈빛은
+뭘 말하는거니
+(넌 내게 반했어)춤을 춰줘
+come on come on
+내눈과 너의 눈이마주쳤던 순간
+튀었던 정열의 불꽃들
+oh stand by me stand by me stand by me
+원한다면 밤하늘의 별도 따줄텐데
+oh stand by me stand by me stand by me
+내 볼에다 입맞춰줘 오우예
+oh stand by me stand by me stand by me
+원한다면 밤하늘의 별도 따줄텐데
+oh stand by me stand by me stand by me
+내 볼에다 입맞춰줘 오우 예
+워우 워우 워 워 넌 내게 반했어', 68, 6800);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('영원히 영원히', '김윤아', '김윤아', '/upload/song/영원히 영원히.mp4', 'Rock/Metal', true, '/upload/song/영원히 영원히.mp3', '2018-06-22', 69,
+'라라라라라라
+너의 손을 꼭 잡고서
+영원히 영원히 영원히
+너와 함께 있고 싶어
+라라라라라라
+사라지지마 흐려지지마
+영원히 영원히 여기 있어 줘
+사랑은 시들고
+노래는 잊혀진다고
+그렇게 사람들 말하곤 하지
+언젠가 너도 시들어
+기억에서 사라질까
+계절이 흘러 가버리는 것처럼
+노을이 지던 골목길
+너와 걷던 그 길
+별을 헤며 어느 밤에 나누던 꿈들
+다시는 돌아가지 못 할 그날들
+아른아른 눈가를 적시네
+라라라라라라
+그저 노래를 부를 뿐
+왔다 가 버리는 모든 걸
+잡아둘 수는 없으니까
+라라라라라라
+사라지지마 흐려지지마
+영원히 영원히
+영원히 영원히
+라라라라라라
+너의 손을 꼭 잡고서
+영원히 영원히 영원히
+너와 함께 있고 싶어
+라라라 라라라
+사라지지마 흐려지지마
+영원히 영원히
+영원히 영원히
+노을이 지던 골목길
+너와 걷던 그 길
+별을 헤며 어느 밤에 나누던 꿈들
+다시는 돌아가지 못 할 그날들
+아른아른 눈가를 적시네
+라라라라라라
+사라지지마 흐려지지마
+영원히 영원히', 69, 16163);
+
+INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
+                     lyrics,artist_id,listen_count)
+VALUES ('와그라노', '강산에', '강산에', null, 'Rock/Metal', true, '/upload/song/와그라노.mp3', '2002-10-07', 70,
+'와그라노 니 또 와그라노
+와그라노 니 또 와그라노
+와그라노 니 또 와그라노
+와그라노 니 또 와그라노
+와그라노 워우와
+아우와 그래쌌노
+뭐라케쌓노 뭐라케쌓노 니
+니 와그라노
+우짜라꾸 이허 웃네
+우짜라고 웃네네네
+네는 어쩌라
+말이꼬
+우짤라고 웃 니
+우짤라꼬 그러라노
+니단디해라
+마 고마해라 니고마해라 니', 70, 70000);
 
 --  테이블 : playlist
 
