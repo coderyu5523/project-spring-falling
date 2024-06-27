@@ -26,7 +26,7 @@
     <div id="content1" class="chart-main tab-content active-content">
         <div class="chart-header">
             <h3>FLO 차트</h3>
-            <div id="selected-play-btn">▷ 선택듣기</div>
+            <div class="selected-play-btn" id="selected-play-btn">▷ 선택듣기</div>
         </div>
         <table class="chart-main-table">
             <tr class="chart-main-table-header">
@@ -142,7 +142,7 @@
             </tr>
             {{#all.domesticChart}}
                 <tr class="chart-main-table-body">
-                    <td><input type="checkbox" value="{{songId}}"></td>
+                    <td><input type="checkbox" value="{{songId}}" hidden=""></td>
                     <td>{{index}}</td>
                     <td>
                         <a href="/albums/{{albumId}}/list">
@@ -466,7 +466,7 @@
                     artistName: row.find('.play-btn').data('artist'),
                     coverImg: row.find('.play-btn').data('cover'),
                     musicFile: row.find('.play-btn').data('music'),
-                    islogin: row.find('.play-btn').data('islogin')
+                    islogin: row.find('.play-btn').attr('data-islogin') === 'true'
                 };
                 addSongIfNotExists(songData);
             });
