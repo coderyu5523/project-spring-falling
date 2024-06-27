@@ -24,8 +24,8 @@ public class AlbumController {
         AlbumResponse.DetailDTO resp = albumService.albumDetail(albumId, userId);
         request.setAttribute("album", resp);
 
-        return "album/album-list";
-//        return "album/album-detail";
+//        return "album/album-list";
+        return "album/album-detail";
     }
 
 
