@@ -11,6 +11,7 @@ import org.example.projectspringfalling.playlistSong.PlaylistSongRepository;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -114,4 +115,11 @@ public class SongService {
         return songList.stream().map(song -> new RestResponse.SearchAutoCompleteDTO(song)).toList();
     }
 
+    @Transactional
+    public RestResponse.listenCountDTO updateCount(Long listenCount, Integer songId) {
+       Song song = songRepository.findById(songId).orElseThrow(() -> new Exception404("조회된 정보가 없습니다."));
+       Long newListenCount = listenCount + song.getListenCount();
+       song.updateCount(newListenCount);
+       return new RestResponse.listenCountDTO(song);
+    }
 }

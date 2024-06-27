@@ -14,10 +14,7 @@ import org.example.projectspringfalling.user.UserResponse;
 import org.example.projectspringfalling.user.UserService;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -103,5 +100,12 @@ public class RestController {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         Boolean isValid = userService.passwordCheck(sessionUser.getEmail(), inputPassword);
         return new ApiUtil<>(isValid);
+    }
+
+    //  조회수 카운트
+    @PutMapping("/api/songs/count")
+    public RestResponse.listenCountDTO songCount(Long listenCount, Integer songId) {
+        return songService.updateCount(listenCount, songId);
+
     }
 }
