@@ -71,4 +71,7 @@ public class Song {
         this.musicFile = musicFile;
 
     }
+    public void updateCount(long newListenCount){
+        this.listenCount = newListenCount;
+    }
 }

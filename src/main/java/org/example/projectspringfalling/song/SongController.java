@@ -7,6 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -68,16 +69,6 @@ public class SongController {
         return "song/song-genre";
     }
 
-
-    // todo : 더미 테스트용
-    @GetMapping("/song-test")
-    public String test(HttpServletRequest request) {
-        int id = 31;
-        Song song = songService.getImg(id);
-        System.out.println("음악" + song.getMusicFile());
-        request.setAttribute("song", song);
-        return "song-test";
-    }
 
 
 }
