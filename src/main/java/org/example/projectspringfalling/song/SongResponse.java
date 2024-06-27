@@ -15,6 +15,7 @@ public class SongResponse {
     @NoArgsConstructor
     @Data
     public static class AllChartDTO {
+        private boolean isLogin; // 로그인 여부 확인
         private List<SongResponse.ChartDTO> mainChart;
         private List<SongResponse.ChartDTO> globalChart;
         private List<SongResponse.ChartDTO> domesticChart;
@@ -23,13 +24,15 @@ public class SongResponse {
         private List<SongResponse.ChartDTO> domesticRBChart;
         private List<SongResponse.ChartDTO> domesticDanceAndElectronicChart;
 
-        public AllChartDTO(List<SongResponse.ChartDTO> MainChartDTOs,
+        public AllChartDTO(boolean isLogin,
+                           List<SongResponse.ChartDTO> MainChartDTOs,
                            List<SongResponse.ChartDTO> globalChartDTOs,
                            List<SongResponse.ChartDTO> domesticChartDTOs,
                            List<SongResponse.ChartDTO> globalPopChartDTOs,
                            List<SongResponse.ChartDTO> globalHipHopChartDTOs,
                            List<SongResponse.ChartDTO> domesticRBChartDTOs,
                            List<SongResponse.ChartDTO> domesticDanceAndElectronicChartDTOs) {
+            this.isLogin = isLogin;
             this.globalChart = globalChartDTOs;
             this.mainChart = MainChartDTOs;
             this.domesticChart = domesticChartDTOs;
