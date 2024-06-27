@@ -41,6 +41,55 @@ public class RestResponse {
         }
     }
 
+    // 보관함 - 좋아요(곡)
+    @AllArgsConstructor
+    @Data
+    public static class StorageLikeSongs {
+        private Integer songId;
+        private Integer albumId;
+        private String albumImg;
+        private String songName;
+        private String albumTitle;
+        private String artistName;
+    }
+
+    // 보관함 - 좋아요(앨범)
+    @AllArgsConstructor
+    @Data
+    public static class StorageLikeAlbums {
+        private Integer albumId;
+        private String albumImg;
+        private String albumTitle;
+        private String artistName;
+        private Timestamp createdAt;
+        private String albumType;
+
+        public String getCreatedAt() {
+            return timestampToString(this.createdAt);
+        }
+    }
+
+    // 보관함 - 좋아요(아티스트)
+    @AllArgsConstructor
+    @Data
+    public static class StorageLikeArtists {
+        private Integer artistId;
+        private String artistImg;
+        private String artistName;
+        private String artistType;
+    }
+
+    // 보관함 - 최근 감상
+    @AllArgsConstructor
+    @Data
+    public static class RecentSongs {
+        private Integer songId;
+        private Integer albumId;
+        private String albumImg;
+        private String songName;
+        private String albumTitle;
+        private String artistName;
+    }
 
     // 재생중인 플레이리스트
     @Data
@@ -85,5 +134,6 @@ public class RestResponse {
             this.playlistName = playlist.getName();
         }
     }
+
 
 }
