@@ -3,15 +3,17 @@ package org.example.projectspringfalling.admin;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.user.SessionUser;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @Controller
 public class AdminController {
     private final AdminService adminService;
     private final HttpSession session;
+    private final RedisTemplate<String, Object> rt;
 
     // 앨범 상세보기
     @GetMapping("/admin/albums/{id}")
@@ -103,4 +105,24 @@ public class AdminController {
         return "admin/help";
     }
 
+    // 로그인 페이지
+    @GetMapping("/admin/login-form")
+    public String loginForm() {
+        return "admin/login-form";
+    }
+
+    // 로그인
+    @PostMapping("/admin/login")
+    public String login() {
+        return "/admin/login-form";
+    }
+
+    // 로그아웃
+    @GetMapping("/admin/logout")
+    public String logout() {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("user");
+        rt.delete("sessionUser" + sessionUser.getId());
+        session.invalidate();
+        return "redirect:/admin/login-form";
+    }
 }

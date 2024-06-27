@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- login form start -->
+<div class="main-container mt-4">
+    <div class="main-login">
+        <div class="login-container">
+            <!-- 이미지 추가 -->
+            <img src="/images/admin/전체로고.jpg" alt="Logo" class="logo-image">
+            <form class="login-form" action="/admin/login" method="post"
+                  enctype="application/x-www-form-urlencoded">
+                <label for="email" class="input-label"></label>
+                <div class="email-container">
+                    <input class="input-font" type="text" id="email" placeholder="아이디" name="email" required>
+                    <span>@nate.com</span>
+                </div>
+                <label for="password" class="input-label"></label>
+                <input class="input-font" type="password" id="password" placeholder="비밀번호" name="password" required>
+                <br>
+
+                <div class="remember-box">
+                    <input type="checkbox" id="remember-id">
+                    <label for="remember-id">아이디 저장</label>
+                </div>
+                <br>
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- login form end -->
+</body>
+</html>
