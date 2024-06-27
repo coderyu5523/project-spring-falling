@@ -373,7 +373,7 @@
                         <a href="#" class="play-btn" data-songid="{{songId}}" data-index="{{index}}"
                            data-title="{{title}}"
                            data-artist="{{artistName}}" data-cover="{{coverImg}}" data-music="{{musicFile}}"
-                           data-lyrics="{{lyrics}}" data-islogin="{{artist.isLogin}}">
+                           data-lyrics="{{lyrics}}" data-islogin="{{all.isLogin}}">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </td>
@@ -427,7 +427,7 @@
                 artistName: $(this).data('artist'),
                 coverImg: $(this).data('cover'),
                 musicFile: $(this).data('music'),
-                islogin : $(this).data('islogin')
+                islogin: $(this).data('islogin')
             };
 
             // URL에 데이터 추가
@@ -437,7 +437,7 @@
             // 새로운 팝업 창 열기
             window.open(url.toString(), '플레이리스트', 'width=1200,height=700');
         });
-        window.addEventListener("message", function(event) {
+        window.addEventListener("message", function (event) {
             if (event.data === "closePopup") {
                 // 팝업 창을 닫고 로그인 페이지로 리디렉션
                 window.location.href = "/login-form";

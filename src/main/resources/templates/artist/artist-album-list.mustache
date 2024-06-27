@@ -93,24 +93,24 @@
                     <tr class="artist-main-table-body">
                         <td><input type="checkbox"></td>
                         <td class="artist-album-list-table-album-container">
-                            <a href="#">
+                            <a href="/albums/{{albumId}}/list">
                                 <img src="{{coverImg}}" alt="Album Cover">
                             </a>
                             <div class="artist-album-list-text-container">
                                 <div class="artist-album-list-title-group">
                                     <div class="artist-album-list-song-title">
-                                        <a href="#">
+                                        <a href="/songs/{{songId}}">
                                             {{title}}
                                         </a>
                                     </div>
                                 </div>
-                                <a href="#">
+                                <a href="/albums/{{albumId}}/list">
                                     <p class="artist-album-list-album-title" style="font-size: 12px;">{{albumTitle}}</p>
                                 </a>
                             </div>
                         </td>
                         <td class="artist-album-list-table-artist">
-                            <a href="#">{{artistName}}</a>
+                            <a href="/artists/{{artistId}}">{{artistName}}</a>
                         </td>
                         <td>
                             <a href="#" class="play-btn" data-songid="{{songId}}" data-title="{{title}}"
