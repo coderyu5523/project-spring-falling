@@ -8,7 +8,7 @@
             <div class="artist-song-list-result-item">
                 <div class="artist-song-list-album-cover">
                     <a href="#">
-                        <img src="{{album.artistImage}}" alt="artistImage">
+                        <img src="{{artist.artistImage}}" alt="artistImage">
                     </a>
                     <div>
                         <a href="#"><i class="artist-song-list-play-btn fas fa-solid fa-circle-play"></i></a>
@@ -16,14 +16,19 @@
                 </div>
                 <div class="artist-song-list-result-info">
                     <a href="#">
-                        <h3 style="font-weight: 600;">{{album.artistName}}</h3>
+                        <h3 style="font-weight: 600;">{{artist.artistName}}</h3>
                     </a>
                     <div class="artist-song-list-album-info">
-                        <p class="artist-song-list-album-category">{{album.artistType}} | {{album.artistGenre}}</p>
+                        <p class="artist-song-list-album-category">{{artist.artistType}} | {{artist.artistGenre}}</p>
                     </div>
 
                     <div class="artist-song-list-info-icons">
-                        <a href="#"><i class="artist-song-list-btn-add-like fa-regular fa-heart"></i></a>
+                        {{#artist.isArtistLike}}
+                            <a href="#"><i class="artist-song-list-btn-add-like fas fa-heart"></i></a>
+                        {{/artist.isArtistLike}}
+                        {{^artist.isArtistLike}}
+                            <a href="#"><i class="artist-song-list-btn-add-like fa-regular fa-heart"></i></a>
+                        {{/artist.isArtistLike}}
                         <a href="#" class="artist-song-list-title-play">
                             <i class="artist-song-list-title-play-btn fas fa-play play-button"></i>
                             <div class="artist-song-list-title-play-text">타이틀곡 듣기</div>
@@ -75,7 +80,7 @@
 
         <div>
             <ul class="artist-song-list-album-list">
-                {{#album.albumList}}
+                {{#artist.albumList}}
                     <li>
                         <div class="artist-song-list-badge-area">
                             <div class="artist-song-list-album-cover">
@@ -87,7 +92,7 @@
                                     <a href="#"></a>
                                     <p class="artist-song-list-album-title">{{albumTitle}}</p></a>
                                     <a href="#"></a>
-                                    <p class="artist-song-list-album-artist">{{album.artistName}} ></p></a>
+                                    <p class="artist-song-list-album-artist">{{artist.artistName}} ></p></a>
                                 </div>
                                 <div class="artist-song-list-explain_area">
                                     <div class="artist-song-list-album-category">
@@ -101,12 +106,21 @@
                                     <a href="#"><i class="artist-song-list-btn-add-list fas fa-list icon"></i></a>
                                     <a href="#"><i
                                             class="artist-song-list-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
-                                    <a href="#"><i class="artist-song-list-btn-add-like fa-regular fa-heart"></i></a>
+                                    {{#artist.isAlbumLike}}
+                                        <a href="#">
+                                            <i class="artist-song-list-btn-add-like fas fa-heart"></i>
+                                        </a>
+                                    {{/artist.isAlbumLike}}
+                                    {{^artist.isAlbumLike}}
+                                        <a href="#">
+                                            <i class="artist-song-list-btn-add-like fa-regular fa-heart"></i>
+                                        </a>
+                                    {{/artist.isAlbumLike}}
                                 </div>
                             </div>
                         </div>
                     </li>
-                {{/album.albumList}}
+                {{/artist.albumList}}
             </ul>
         </div>
     </div>

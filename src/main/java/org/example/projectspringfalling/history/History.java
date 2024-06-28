@@ -8,6 +8,7 @@ import org.example.projectspringfalling.user.User;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @Getter
@@ -18,7 +19,8 @@ public class History {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @CreationTimestamp
-    private Timestamp createdAt; // 생성날짜
+    private LocalDateTime createdAt; // 생성날짜
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;  // 회원
@@ -27,10 +29,14 @@ public class History {
     private Song song; // 노래
 
     @Builder
-    public History(Integer id, Timestamp createdAt, User user, Song song) {
+    public History(Integer id, LocalDateTime createdAt, User user, Song song) {
         this.id = id;
         this.createdAt = createdAt;
         this.user = user;
         this.song = song;
+    }
+
+    public void update(){
+        createdAt = LocalDateTime.now();
     }
 }

@@ -147,3 +147,6 @@
     display: block;
 }
 
+.selected-play-btn{
+    cursor : pointer
+}

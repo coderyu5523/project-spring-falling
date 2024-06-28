@@ -5,6 +5,7 @@ import org.example.projectspringfalling._core.enums.FilePathEnum;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.Album;
 import org.example.projectspringfalling.album.AlbumRepository;
+import org.example.projectspringfalling.like.LikeRepository;
 import org.example.projectspringfalling.song.SongRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,26 +23,25 @@ public class ArtistService {
     private final ArtistRepository artistRepository;
     private final AlbumRepository albumRepository;
     private final SongRepository songRepository;
+    private final LikeRepository likeRepository;
 
     // 가수 상세보기 (앨범)
-    public ArtistResponse.AlbumListDTO artistDetailAlbumList(Integer artistId) {
+    public ArtistResponse.ArtistDetailDTO artistDetail(Integer artistId, Integer userId) {
         Artist artist = artistRepository.findArtistAndAlbumByArtistId(artistId)
                 .orElseThrow(() -> new Exception404("존재하지 않는 아티스트입니다."));
         List<Album> albumList = albumRepository.findByArtistId(artistId);
-        String artistGenre = removeDuplicates(artistRepository.findArtistGenres(artistId));
-        return new ArtistResponse.AlbumListDTO(artist, albumList, artistGenre);
-    }
 
-    // 가수 상세보기 (곡)
-    public ArtistResponse.ArtistSongListDTO artistDetailSongList(Integer artistId) {
-        Artist artist = artistRepository.findArtistAndAlbumByArtistId(artistId)
-                .orElseThrow(() -> new Exception404("존재하지 않는 아티스트입니다."));
-        String artistGenre = removeDuplicates(artistRepository.findArtistGenres(artistId));
-        List<ArtistResponse.ArtistSongListDTO.SongListDTO> songListDTO = albumRepository.findAlbumByArtistId(artistId).stream()
+        List<ArtistResponse.ArtistDetailDTO.SongListDTO> songListDTO = albumRepository.findAlbumByArtistId(artistId).stream()
                 .flatMap(album -> songRepository.findByAlbumId(album.getId()).stream()
-                        .map(song -> new ArtistResponse.ArtistSongListDTO.SongListDTO(song, album)))
+                        .map(song -> new ArtistResponse.ArtistDetailDTO.SongListDTO(song, album)))
                 .collect(Collectors.toList());
-        return new ArtistResponse.ArtistSongListDTO(artist, songListDTO, artistGenre);
+
+        String artistGenre = removeDuplicates(artistRepository.findArtistGenres(artistId));
+        boolean isArtistLike = likeRepository.findUserLikedArtist(userId, artistId).isPresent();
+        boolean isAlbumLike = likeRepository.findUserLikedAlbum(userId, artistId).isPresent();
+        boolean isLogin = userId != 0; // 로그인 되어있으면 true, 아니면 false
+
+        return new ArtistResponse.ArtistDetailDTO(artist, albumList, songListDTO, artistGenre, isArtistLike, isAlbumLike, isLogin);
     }
 
     @Transactional
