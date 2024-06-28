@@ -138,9 +138,10 @@ public class SongResponse {
         private String lyricist; // 작사가
         private String lyrics; // 가사
         private String musicFile; // 음악 파일
+        private boolean isLike; // 좋아요 여부
 
 
-        public DetailDTO(Song song, Album album) {
+        public DetailDTO(Song song, Album album, boolean isLike) {
             this.songId = song.getId();
             this.title = song.getTitle();
             this.albumId = album.getId();
@@ -150,6 +151,7 @@ public class SongResponse {
             this.songWriter = song.getSongWriter();
             this.lyricist = song.getLyricist();
             this.lyrics = song.getLyrics();
+            this.isLike = isLike;
         }
     }
 

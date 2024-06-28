@@ -105,6 +105,22 @@ public class RestController {
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
 
+    // 곡 좋아요 하기
+    @PostMapping("/songs/like")
+    public ResponseEntity<?> likeSong(@RequestBody Integer songId) {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        likeService.saveLikeSong(sessionUser.getId(), songId);
+        return ResponseEntity.ok(new ApiUtil<>(null));
+    }
+
+    // 곡 좋아요 삭제
+    @DeleteMapping("/songs/like")
+    public ResponseEntity<?> deleteSongLike(@RequestBody Integer songId) {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        likeService.deleteLikeSong(sessionUser.getId(), songId);
+        return ResponseEntity.ok(new ApiUtil<>(null));
+    }
+
     // 재생중인 플레이리스트 데이터 요청
     @GetMapping("/api/playlists/current")
     public List<RestResponse.PlaylistDTO> getCurrentPlaylist() {
@@ -127,8 +143,8 @@ public class RestController {
     }
 
     @PostMapping("/api/history")
-    public HistoryResponse.SaveDTO history(Integer songId){
+    public HistoryResponse.SaveDTO history(Integer songId) {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
-        return historyService.saveHistory(sessionUser,songId);
+        return historyService.saveHistory(sessionUser, songId);
     }
 }
