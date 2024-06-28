@@ -203,3 +203,12 @@
     margin-right: 15px;
     font-size: 18px;
 }
+
+
+.artist-song-list-filter-album-category p {
+    cursor: pointer;
+}
+
+.artist-song-list-filter-order-by p {
+    cursor: pointer;
+}

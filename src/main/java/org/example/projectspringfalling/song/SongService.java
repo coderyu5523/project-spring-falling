@@ -27,7 +27,7 @@ public class SongService {
     private final PlaylistRepository playlistRepository;
     private final PlaylistSongRepository playlistSongRepository;
 
-    // 필터 및 정렬
+    // 필터 및 정렬 (곡)
     public List<RestResponse.SongListDTO> sortAndFilterSongs(String keyword, Integer artistId) {
         List<RestResponse.SongListDTO> songListDTO = albumRepository.sortAndFilterSongs(artistId).stream()
                 .flatMap(album -> songRepository.findByAlbumId(album.getId()).stream()
@@ -93,7 +93,7 @@ public class SongService {
                 .collect(Collectors.toList());
     }
 
-    // 필터 및 정렬
+    // 필터 및 정렬 (앨범)
     public List<RestResponse.AlbumListDTO> sortAndFilterAlbums(String keyword, Integer artistId) {
         List<RestResponse.AlbumListDTO> albumListDTO = albumRepository.sortAndFilterAlbums(artistId).stream()
                 .flatMap(album -> songRepository.findByAlbumId(album.getId()).stream()

@@ -70,7 +70,7 @@ $(document).ready(function () {
 
     // 노래 리스트
     function albums(body) {
-        console.log("Rendering songs:", body); // 콘솔 로그 추가
+        console.log("Rendering albums:", body); // 콘솔 로그 추가
         return body.map(item => {
             return `
                 <li>

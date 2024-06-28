@@ -24,8 +24,8 @@ public class ArtistController {
         ArtistResponse.ArtistDetailDTO resp = artistService.artistDetail(artistId, userId);
         request.setAttribute("artist", resp);
 
-        return "artist/artist-song-list";
-//        return "artist/artist-album-list";
+//        return "artist/artist-song-list";
+        return "artist/artist-album-list";
 
     }
 

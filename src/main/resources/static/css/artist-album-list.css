@@ -300,3 +300,11 @@ tr .artist-album-list-add-playlist-btn {
 tr .artist-album-list-add-list-btn {
     padding-left: 18px;
 }
+
+.artist-album-list-filter-album-category p {
+    cursor: pointer;
+}
+
+.artist-album-list-filter-order-by p {
+    cursor: pointer;
+}
