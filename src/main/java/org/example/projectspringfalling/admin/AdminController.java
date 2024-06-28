@@ -98,12 +98,6 @@ public class AdminController {
         return "admin/user-list";
     }
 
-    // 고객센터
-    @GetMapping("/admin/help")
-    public String help() {
-        return "admin/help";
-    }
-
     // 로그인 페이지
     @GetMapping("/admin/login-form")
     public String loginForm() {
