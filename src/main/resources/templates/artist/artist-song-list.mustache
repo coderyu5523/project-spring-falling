@@ -6,6 +6,7 @@
         <div class="artist-song-list-album">
             <br>
             <div class="artist-song-list-result-item">
+                <input type="hidden" id="artist-id" value="{{artist.artistId}}">
                 <div class="artist-song-list-album-cover">
                     <a href="#">
                         <img src="{{artist.artistImage}}" alt="artistImage">
@@ -47,14 +48,14 @@
             <div class="artist-song-list-table-menu">
                 <div class="artist-song-list-table-order">
                     <div class="artist-song-list-filter-album-category">
-                        <p>
-                            <a href="#" class="artist-song-list-all">전체</a>
+                        <p class="artist-song-list-all" data-keyword="전체">
+                            전체
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-album-category">정규/싱글</a>
+                        <p class="artist-song-list-album-category" data-keyword="정규/싱글">
+                            정규/싱글
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-participation">참여</a>
+                        <p class="artist-song-list-participation" data-keyword="참여">
+                            참여
                         </p>
                         <p>
                             |
@@ -62,13 +63,13 @@
                     </div>
                     <div class="artist-song-list-filter-order-by">
                         <p>
-                            <a href="#" class="artist-song-list-order-by-date">최신순</a>
+                            <a href="#" class="artist-song-list-order-by-date" data-keyword="최신순">최신순</a>
                         </p>
                         <p>
-                            <a href="#" class="artist-song-list-order-by-popularity">인기순</a>
+                            <a href="#" class="artist-song-list-order-by-popularity" data-keyword="인기순">인기순</a>
                         </p>
                         <p>
-                            <a href="#" class="artist-song-list-order-by-korean">가나다순</a>
+                            <a href="#" class="artist-song-list-order-by-korean" data-keyword="가나다순">가나다순</a>
                         </p>
                     </div>
                 </div>
@@ -80,51 +81,114 @@
 
         <div>
             <ul class="artist-song-list-album-list">
-                {{#artist.albumList}}
-                    <li>
-                        <div class="artist-song-list-badge-area">
-                            <div class="artist-song-list-album-cover">
-                                <img src="{{albumImage}}" alt="Album Cover">
-                                <a href="#"><i class="artist-song-list-play-btn fa fa-play"></i></a>
-                            </div>
-                            <div class="artist-song-list-album-info">
-                                <div class="artist-song-list-info-area">
-                                    <a href="#"></a>
-                                    <p class="artist-song-list-album-title">{{albumTitle}}</p></a>
-                                    <a href="#"></a>
-                                    <p class="artist-song-list-album-artist">{{artist.artistName}} ></p></a>
-                                </div>
-                                <div class="artist-song-list-explain_area">
-                                    <div class="artist-song-list-album-category">
-                                        <p>{{albumCategory}}</p>
-                                    </div>
-                                    <div class="artist-song-list-album-date">
-                                        <p>{{createdAt}}</p>
-                                    </div>
-                                </div>
-                                <div class="artist-song-list-icons">
-                                    <a href="#"><i class="artist-song-list-btn-add-list fas fa-list icon"></i></a>
-                                    <a href="#"><i
-                                            class="artist-song-list-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
-                                    {{#artist.isAlbumLike}}
-                                        <a href="#">
-                                            <i class="artist-song-list-btn-add-like fas fa-heart"></i>
-                                        </a>
-                                    {{/artist.isAlbumLike}}
-                                    {{^artist.isAlbumLike}}
-                                        <a href="#">
-                                            <i class="artist-song-list-btn-add-like fa-regular fa-heart"></i>
-                                        </a>
-                                    {{/artist.isAlbumLike}}
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                {{/artist.albumList}}
+
             </ul>
         </div>
     </div>
 </div>
 <br>
+<script>
+    $(document).ready(function () {
+        // 초기화: 모든 옵션 초기화
+        var selectedCategory = "";
+        var selectedOrderBy = "";
+        var artistId = $('#artist-id').val();
 
+        // 전체, 정규/싱글, 참여 중 하나만 선택되도록 처리
+        $('.artist-song-list-filter-album-category p').click(function (e) {
+            e.preventDefault();
+            var keyword = $(this).data('keyword');
+
+            // 기존 선택 제거
+            $('.artist-song-list-filter-album-category p').removeClass('active');
+            $(this).addClass('active');
+
+            // 선택된 카테고리 저장
+            selectedCategory = keyword;
+
+            // 필터링 함수 호출
+            filterSongs(selectedCategory, selectedOrderBy);
+        });
+
+        // 최신순, 인기순, 가나다순 중 하나만 선택되도록 처리
+        $('.artist-song-list-filter-order-by a').click(function (e) {
+            e.preventDefault();
+            var orderBy = $(this).data('orderby');
+
+            // 기존 선택 제거
+            $('.artist-song-list-filter-order-by a').removeClass('active');
+            $(this).addClass('active');
+
+            // 선택된 정렬 순서 저장
+            selectedOrderBy = orderBy;
+
+            // 필터링 함수 호출 (여기서는 예시로 console.log로 대체)
+            filterSongs(selectedCategory, selectedOrderBy);
+        });
+
+
+        function filterSongs(category, orderBy) {
+            console.log("Filtering songs by:", category, "Order by:", orderBy);
+            getContent('/' + artistId + '/sort-and-filter', songs);
+        }
+
+        function getContent(url, pageCallback) {
+            $.ajax({
+                url: url,
+                method: 'GET',
+                dataType: 'json',
+                data: selectedCategory + " " + selectedOrderBy,
+                success: function (data) {
+                    $("#artist-song-list-album-list").html(pageCallback(data.body))
+                },
+                error: function () {
+                    alert("데이터 가져오기 실패");
+                }
+            })
+        }
+
+        // 노래 리스트
+        function songs(body) {
+            return body.map(item => {
+                return `
+                <li>
+                    <div class="artist-song-list-badge-area">
+                        <div class="artist-song-list-album-cover">
+                            <img src="..${item.coverImg}" alt="Album Cover">
+                                <a href="#"><i class="artist-song-list-play-btn fa fa-play"></i></a>
+                        </div>
+                        <div class="artist-song-list-album-info">
+                            <div class="artist-song-list-info-area">
+                                <a href="#"></a>
+                                <p class="artist-song-list-album-title">${item.albumTitle}</p></a>
+                            <a href="#"></a>
+                            <p class="artist-song-list-album-artist">${item.artistName}></p></a>
+                    </div>
+                    <div class="artist-song-list-explain_area">
+                        <div class="artist-song-list-album-category">
+                            <p>${item.category}\</p>
+                        </div>
+                        <div class="artist-song-list-album-date">
+                            <p>${item.createdAt}</p>
+                        </div>
+                    </div>
+                    <div class="artist-song-list-icons">
+                        <a href="#"><i class="artist-song-list-btn-add-list fas fa-list icon"></i></a>
+                        <a href="#"><i
+                                class="artist-song-list-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
+                        <a href="#">
+                            <i class="artist-song-list-btn-add-like fas fa-heart"></i>
+                        </a>
+                        <a href="#">
+                            <i class="artist-song-list-btn-add-like fa-regular fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </li>
+                ;`
+            }).join('');
+        }
+    });
+</script>
 {{>layout/footer}}

@@ -25,6 +25,80 @@ public class SongService {
     private final PlaylistRepository playlistRepository;
     private final PlaylistSongRepository playlistSongRepository;
 
+    // 필터 및 정렬
+    public List<RestResponse.SongListDTO> sortAndFilter(String keyword, Integer artistId) {
+        List<RestResponse.SongListDTO> songListDTO = albumRepository.sortAndFilter(artistId).stream()
+                .flatMap(album -> songRepository.findByAlbumId(album.getId()).stream()
+                        .map(song -> new RestResponse.SongListDTO(song, album)))
+                .toList();
+
+        // 필터링 및 정렬 조건에 따라 처리
+        boolean isRegularAndSingle = false;
+        boolean isMini = false;
+        boolean isRecentSort = false;
+        boolean isPopularSort = false;
+        boolean isAlphabeticalSort = false;
+
+        if (keyword != null && !keyword.isEmpty()) {
+            String[] tokens = keyword.split("\\s+");
+
+            for (String token : tokens) {
+                switch (token) {
+                    case "정규/싱글":
+                        isRegularAndSingle = true;
+                        break;
+                    case "미니":
+                        isMini = true;
+                        break;
+                    case "최신순":
+                        isRecentSort = true;
+                        break;
+                    case "인기순":
+                        isPopularSort = true;
+                        break;
+                    case "가나다순":
+                        isAlphabeticalSort = true;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        boolean finalIsRegularAndSingle = isRegularAndSingle;
+        boolean finalIsMini = isMini;
+        boolean finalIsRecentSort = isRecentSort;
+        boolean finalIsPopularSort = isPopularSort;
+        boolean finalIsAlphabeticalSort = isAlphabeticalSort;
+        List<RestResponse.SongListDTO> songs = songListDTO.stream()
+                .filter(song -> {
+                    // 필터링 조건 설정
+                    if (finalIsRegularAndSingle) {
+                        return "싱글".equals(song.getCategory()) || "정규".equals(song.getCategory());
+                    }
+                    if (finalIsMini) {
+                        return "미니".equals(song.getCategory());
+                    }
+                    return true; // 추가적인 필터링 조건이 필요하면 여기에 추가
+                })
+                .sorted((song1, song2) -> {
+                    // 정렬 조건 설정
+                    if (finalIsRecentSort) {
+                        return song2.getCreatedAt().compareTo(song1.getCreatedAt()); // 최신순 내림차순 정렬
+                    }
+                    if (finalIsPopularSort) {
+                        return Long.compare(song2.getListenCount(), song1.getListenCount()); // 인기순 내림차순 정렬
+                    }
+                    if (finalIsAlphabeticalSort) {
+                        return song1.getTitle().compareToIgnoreCase(song2.getTitle()); // 가나다순 오름차순 정렬
+                    }
+                    return 0; // 기본 정렬 방식
+                })
+                .collect(Collectors.toList());
+
+        return songs;
+    }
+
     // 메인 차트
     public List<SongResponse.ChartDTO> mainChart() {
         List<Song> songList = songRepository.findMainChart();
@@ -133,9 +207,9 @@ public class SongService {
 
     @Transactional
     public RestResponse.listenCountDTO updateCount(Long listenCount, Integer songId) {
-       Song song = songRepository.findById(songId).orElseThrow(() -> new Exception404("조회된 정보가 없습니다."));
-       Long newListenCount = listenCount + song.getListenCount();
-       song.updateCount(newListenCount);
-       return new RestResponse.listenCountDTO(song);
+        Song song = songRepository.findById(songId).orElseThrow(() -> new Exception404("조회된 정보가 없습니다."));
+        Long newListenCount = listenCount + song.getListenCount();
+        song.updateCount(newListenCount);
+        return new RestResponse.listenCountDTO(song);
     }
 }

@@ -31,6 +31,16 @@ public class RestController {
     private final LikeService likeService;
     private final HistoryService historyService;
 
+    // 필터 및 정렬
+    @GetMapping("/{artistId}/sort-and-filter")
+    public ResponseEntity<?> sortAndFilter(
+            @RequestParam(name = "keyword", required = false) String keyword,
+            @PathVariable(name = "artistId") Integer artistId) {
+        System.out.println("호출 완");
+        return ResponseEntity.ok(new ApiUtil<>(songService.sortAndFilter(keyword, artistId)));
+    }
+
+
     // 검색 자동완성 기능
     @GetMapping("/search/auto")
     public ApiUtil<List<RestResponse.SearchAutoCompleteDTO>> searchAuto(@RequestParam("keyword") String keyword) {

@@ -22,6 +22,10 @@ public interface AlbumRepository extends JpaRepository<Album, Integer> {
     @Query("SELECT al FROM Album al WHERE al.artist.id=:artistId")
     List<Album> findAlbumByArtistId(@Param("artistId") Integer artistId);
 
+    // 가수 상세보기 곡 정렬
+    @Query("SELECT al FROM Album al WHERE al.artist.id=:artistId")
+    List<Album> sortAndFilter(@Param("artistId") Integer artistId);
+
     // 가수 상세보기 (앨범)
     @Query("SELECT al FROM Album al WHERE al.artist.id=:artistId")
     List<Album> findByArtistId(@Param("artistId") Integer artistId);
