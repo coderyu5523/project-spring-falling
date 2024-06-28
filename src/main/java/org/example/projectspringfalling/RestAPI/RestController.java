@@ -3,6 +3,7 @@ package org.example.projectspringfalling.RestAPI;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
+import org.example.projectspringfalling.history.HistoryResponse;
 import org.example.projectspringfalling.history.HistoryService;
 import org.example.projectspringfalling.like.LikeService;
 import org.example.projectspringfalling.playlist.PlaylistService;
@@ -107,5 +108,11 @@ public class RestController {
     public RestResponse.listenCountDTO songCount(Long listenCount, Integer songId) {
         return songService.updateCount(listenCount, songId);
 
+    }
+
+    @PostMapping("/api/history")
+    public HistoryResponse.SaveDTO history(Integer songId){
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        return historyService.saveHistory(sessionUser,songId);
     }
 }
