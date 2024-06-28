@@ -1,11 +1,14 @@
 package org.example.projectspringfalling.admin;
 
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.AlbumRepository;
 import org.example.projectspringfalling.artist.ArtistRepository;
 import org.example.projectspringfalling.song.SongRepository;
+import org.example.projectspringfalling.user.SessionUser;
 import org.example.projectspringfalling.user.UserRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -19,6 +22,13 @@ public class AdminService {
     private final SongRepository songRepository;
     private final AlbumRepository albumRepository;
     private final ArtistRepository artistRepository;
+
+    // 관리자 로그인
+    public Admin login(AdminRequest.LoginDTO reqDTO) {
+        Admin admin = adminRepository.findByEmailAndPassword(reqDTO.getEmail(), reqDTO.getPassword())
+                .orElseThrow(() -> new Exception404("아이디 또는 비밀번호가 틀렸습니다."));
+        return admin;
+    }
 
     // 아티스트 상세보기
     public AdminResponse.ArtistDetailDTO getArtist(Integer artistId) {

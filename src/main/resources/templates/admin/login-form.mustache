@@ -10,10 +10,11 @@
         <div class="login-container">
             <!-- 이미지 추가 -->
             <img src="/images/admin/전체로고.jpg" class="logo-image">
-            <form class="login-form" action="/admin/login" method="post" enctype="application/x-www-form-urlencoded">
+            <form class="login-form" id="loginForm" action="/admin/login" method="post" enctype="application/x-www-form-urlencoded">
                 <label for="email" class="input-label"></label>
                 <div class="email-container">
-                    <input class="input-font" type="text" id="email" placeholder="아이디" name="email" required>
+                    <input class="input-font" type="text" id="email" placeholder="아이디" required>
+                    <input type="hidden" id="hiddenEmail" name="email">
                     <span class="email-fixed">@nate.com</span>
                 </div>
                 <label for="password" class="input-label"></label>

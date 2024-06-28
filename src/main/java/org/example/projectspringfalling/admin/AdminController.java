@@ -3,7 +3,6 @@ package org.example.projectspringfalling.admin;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.example.projectspringfalling.user.SessionUser;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -113,15 +112,15 @@ public class AdminController {
 
     // 로그인
     @PostMapping("/admin/login")
-    public String login() {
-        return "/admin/login-form";
+    public String login(AdminRequest.LoginDTO reqDTO) {
+        Admin admin = adminService.login(reqDTO);
+        session.setAttribute("admin", admin);
+        return "redirect:/admin/albums";
     }
 
     // 로그아웃
     @GetMapping("/admin/logout")
     public String logout() {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("user");
-        rt.delete("sessionUser" + sessionUser.getId());
         session.invalidate();
         return "redirect:/admin/login-form";
     }
