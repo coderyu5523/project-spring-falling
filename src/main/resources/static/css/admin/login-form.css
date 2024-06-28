@@ -1,0 +1,104 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.main-login {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.logo-image {
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.input-label {
+    align-self: flex-start;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 0 20px 0 20px;
+}
+
+.input-font {
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-right: 80px; /* 오른쪽 패딩을 늘려 고정 텍스트를 위한 공간 확보 */
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* 패딩을 포함한 높이 계산 */
+    position: relative;
+}
+
+.email-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px; /* 아이디 칸과 비밀번호 칸 사이의 간격 조정 */
+}
+
+.email-container::after {
+    color: #fff; /* 하얀색으로 보이지 않게 할 경우 #fff */
+    pointer-events: none;
+    font-size: 15px;
+}
+
+.email-fixed {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    pointer-events: none; /* 클릭할 수 없도록 설정 */
+    font-size: 15px;
+}
+
+.remember-box {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
