@@ -95,7 +95,18 @@ VALUES ('노을', 'Solo', '/upload/artist/노을.jpg', '2002-12-24'),
        ('진성', 'Solo', '/upload/artist/진성.jpg', '1997-09-01'),
        ('노브레인 (NoBrain)', 'Group', '/upload/artist/노브레인.jpg', '1997-03-01'),
        ('자우림', 'Group', '/upload/artist/자우림.jpg', '1997-11-01'),
-       ('강산에', 'Solo', '/upload/artist/강산에.jpg', '1993-03-26');
+       ('강산에', 'Solo', '/upload/artist/강산에.jpg', '1993-03-26'),
+
+       ('김연자', 'Solo', '/upload/artist/김연자.jpg', '1974-08-30'),
+       ('Paul Blanco', 'Solo', '/upload/artist/Paul Blanco.jpg', '2018-10-27'),
+       ('Lil Nas X', 'Solo', '/upload/artist/Lil Nas X.jpg', '2018-07-24'),
+       ('하현우', 'Solo', '/upload/artist/하현우.jpg', '2018-10-28'),
+       ('버즈', 'Group', '/upload/artist/버즈.jpg', '2003-10-11'),
+       ('버즈커 버스커', 'Group', '/upload/artist/버스커 버스커.jpg', '2012-03-29'),
+       ('Charlie Puth', 'Solo', '/upload/artist/Charlie Puth.jpg', '2010-12-10'),
+       ('Benson Boone', 'Solo', '/upload/artist/Benson Boone.jpg', '2021-10-15'),
+       ('Alan Walker', 'Solo', '/upload/artist/Alan Walker.jpg', '2014-08-17'),
+       ('The Chainsmokers', 'Group', '/upload/artist/The Chainsmokers.jpg', '2012-01-01');
 
 -- 테이블: album
 
@@ -548,7 +559,7 @@ VALUES ('천상연 (웹툰 ''선녀외전'' X 이창섭 (LEE CHANGSUB))', 'YG PL
         웹툰 ''선녀외전''은 네이버 웹툰 매일 플러스에서 만나볼 수 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', 'OST/BGM', '/upload/album/눈물의 여왕.jpg', 37, '2024-03-24',
+VALUES ('눈물의 여왕 OST Part.4', 'NHN벅스', '소리날리, 스튜디오드래곤', '국내', '싱글', '/upload/album/눈물의 여왕.jpg', 37, '2024-03-24',
         '"왜 하필 이때가 떠올랐을까. 만약 여기서 내가 죽는다면, 마지막 순간에 네 생각을 하는 걸까?"
 
         눈물의 여왕 3부 수렵 사냥 중 갑작스러운 멧돼지의 습격과 환영으로 위태로운 상황을 맞이한 ''해인''(김지원 분). 죽음을 앞둔 순간, 가장 먼저 떠오른 것은 언제나 곁에 있어주겠다던 남편 ''현우''. 그리고 거짓말처럼 ''현우''는 ''해인'' 앞에 나타났다.
@@ -735,7 +746,7 @@ VALUES ('<ASSEMBLE24>', '카카오엔터테인먼트', '모드하우스', '국�
 트리플에스의 대표곡 ‘Generation’과 ‘Girls’ Capitalism’을 만든 EL CAPITXN과 Vendors의 합작으로 완성도 높은 곡이 만들어졌다. 그리고 NCT와 더보이즈의 안무가로 활약한 최효제의 리드로 만들어진 24인조의 군무를 통해 메가 걸그룹의 위용을 시각적으로 표현했다. 뮤직비디오는 ‘Generation’과 ‘Rising’, ‘Girls’ Capitalism’을 이어가며 서울을 살고 있는 소녀들의 일상을 담았던 언더무드 필름의 연출로 이야기를 자연스럽게 이어간다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('별에서 온 그대 OST Part.7', '카카오엔터테인먼트', '㈜SBS콘텐츠허브', '국내', 'OST/BGM', '/upload/album/별에서온그대7.jpg', 54, '2014-02-12', '별에서 온 그대 OST Part 7 <성시경 – 너의 모든 순간>
+VALUES ('별에서 온 그대 OST Part.7', '카카오엔터테인먼트', '㈜SBS콘텐츠허브', '국내', '싱글', '/upload/album/별에서온그대7.jpg', 54, '2014-02-12', '별에서 온 그대 OST Part 7 <성시경 – 너의 모든 순간>
 
 별에서 온 그대 OST Part 7 <너의 모든 순간>은 성시경이 직접 작곡한 곡으로, 도민준과 천송이의 애틋한 사랑이야기를 감미롭고 아름다운 멜로디에 담고 있다.
 
@@ -792,7 +803,7 @@ AKMU가 4번째 싱글 [Love Lee]로 돌아왔다.
 [Love Lee]는 누구에게나 사랑스러운 선물 같은 앨범이길 바란다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('''키스 먼저 할까요?'' OST Part.3', '카카오엔터테인먼트', 'SM Entertainment', '국내', 'OST/BGM', '/upload/album/키스먼저할까요3.jpg', 59,
+VALUES ('''키스 먼저 할까요?'' OST Part.3', '카카오엔터테인먼트', 'SM Entertainment', '국내', '싱글', '/upload/album/키스먼저할까요3.jpg', 59,
         '2018-03-20', 'SBS 월화드라마 ‘키스 먼저 할까요?’ OST Part.3 공개!
 감성 보컬리스트 폴킴 참여!
 
@@ -844,7 +855,7 @@ INSERT INTO album_tb (title, distributor, agency, nationality, category, album_i
 VALUES ('MILLION DOLLAR BABY', 'Universal Music Group', 'PULSE Records', '해외', '싱글', '/upload/album/MILLION DOLLAR BABY.jpg', 63, '2024-06-04', null);
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('청연', 'NHN벅스', '진엔원뮤직웍스', '국내', 'OST/BGM', '/upload/album/청연.jpg', 64, '2005-12-22', '최고의 아티스트 [이승철]과 최고의 영화 [청연]과의 만남만으로도 설레이는 O.S.T
+VALUES ('청연', 'NHN벅스', '진엔원뮤직웍스', '국내', '미니', '/upload/album/청연.jpg', 64, '2005-12-22', '최고의 아티스트 [이승철]과 최고의 영화 [청연]과의 만남만으로도 설레이는 O.S.T
 
 시대에겐 가장 놀라운 여자, 한 남자에겐 가장 아름다운 사랑 1925년, 최초의 민간 여류비행사 박경원 이야기를 다룬 최고의 기대작인 세상, 그 위로 날아오르다... [청연]의 개봉에 맞쳐서 최고의 O.S.T 가 발매될 예정이다.
 
@@ -919,6 +930,43 @@ Vol.6 (7집) 수록된 모든 곡들을 강산에가 직접 작사 작곡은 물
 “긴 여행을 하고 돌아 온 느낌입니다. 모든 것이 새롭고 그렇기에 흥미롭고 알고 싶지만 때론 힘들고 두렵기도 합니다. 자꾸만 변해 가는 세상 앞에서 언제나 나는 Beginner라는 생각이 듭니다. 이번 앨범 역시 Beginner라는 마음으로 준비했습니다." 라고 음반 발매 소감을 밝힌 그는 이번 새 앨범에 대한 애정이 각별하다.
 
 그는 이번 앨범에서 음악뿐만 아니라 자켓에도 세심한 정성을 아끼지 않았다. 여권 형식으로 만들어져 있는 앨범은 ''Welcome to Republic of Kang Young Gul"이라는 안내 메시지로 시작되고, 속지를 한 장 한 장 넘기다 보면 마치 강산에 공화국을 여행하는 기분마저 들게 한다. 각 곡의 컨셉에 맞는 아기자기한 디자인으로 꾸며진 그림책 같은 앨범 자켓은 오랫동안 기다린 팬들에게 보내는 보너스 선물이기도 하다. ');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('아모르 파티', 'RIAK', 'RIAK', '국내', '정규', '/upload/album/아모르 파티.jpg', 71, '2013-07-23', '한류원조 엔카의 여왕 김연자! 히트 메이커 작곡가 ''윤일상''과 만난 그녀의 국내 복귀 신곡 "아모르 파티" 발매!');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Summer', '지니뮤직, Stone Music Entertainment', 'AMBITION MUSIK', '국내', '싱글', '/upload/album/Summer.jpg', 72, '2022-06-15', null);
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('STAR WALKIN'' (League of Legends Worlds Anthem)', 'Sony Music', 'Columbia', '해외', '싱글', '/upload/album/STAR WALKIN''.jpg', 73, '2022-09-22', '세계적인 팝 & 패션 아이콘 릴 나스 엑스 (Lil Nas X) 리그 오브 레전드 (롤) 회장으로 취임!
+전 세계가 주목하는 ‘2022 리그 오브 레전드 월드 챔피언십’ (이하 롤드컵)의 주제곡 [STAR WALKIN’] 9월 23일 발매!
+
+리그 오브 레전드 신임 회장으로 취임한 릴 나스 엑스의 ''STAR WALKIN’''은 9월 23일 멕시코시티에서 개최되는 롤드컵에서 공식적으로 공개된다. 릴 나스 엑스는 11월 5일, 샌프란시스코 체이스 센터에서 열리는 2022 롤드컵 파이널의 오프닝 공연을 글로벌 팬들과 월간 1억 8천만 명 이상을 자랑하는 롤 유저들을 위해 잊지 못할 라이브 퍼포먼스로 장식할 예정이다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('검은사막 모바일 격투가 X 질풍가도', '(주)뮤직앤뉴', '검은사막 모바일', '국내', '싱글', '/upload/album/검은사막 모바일 격투가.jpg', 74, '2019-01-25', '[검은사막 모바일 격투가 X 질풍가도]
+
+월드클래스 MMORPG 검은사막 모바일!
+2019년 첫 신규 클래스, 격투가 업데이트를 기념하여 4명의 가수가 부른 스페셜 음원 [질풍가도]를 공개하였다.
+
+질풍 같은 격투와 타격 액션이 매력적인 격투가를 공개하기에 앞서 캐릭터와 가장 어울리는 곡에 대한 고민을 많이 했고, 남녀노소 신나게 즐길 수 있는 락 사운드로 사랑받고 있는 질풍가도가 선곡되었다.
+
+가창력 넘치는 4명의 가수들이 참여한 이번 프로젝트는 검은사막 모바일의 음악에 대한 남다른 사랑을 보여주며, 금번 음원 공개를 시작으로 지속인 음원 발매를 할 예정으로 앞으로의 행보가 주목된다.');
+
+INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
+VALUES ('Buzz Effect', 'VOSTOK', '예전미디어', '국내', '정규', '/upload/album/Buzz Effect.jpg', 75, '2005-03-03', '2004년 최고의 신인 밴드 그들이 돌아온다!!
+2005 BUZZ CONCERT? 『BUZZ EFFECT』
+
+라이브로 검증된 밴드 버즈 (buzz) 가 돌아온다.
+
+지난해 최고의 락 발라드 넘버였던 ‘어쩌면’, ‘모놀로그’ 의 밴드 버즈가 전국투어로 화려한 컴백을 꿈꾼다. 2005년 4월 2일 서울을 시작으로 하는 버즈 프로모션 투어에서는 1집의 히트곡을 비롯해 새로운 앨범의 수록곡들도 처음 선보이게 된다.
+버즈는 홍대 인디밴드 출신으로 탄탄한 라이브 실력를 자랑하며 예쁘장한 외모로 대표되는 아이돌 밴드가 아닌 외모와 실력을 겸비했다는 평을 듣고 있다.
+버즈의 이번 콘서트는 새 앨범 발매와 함께 쇼프로 에서의 얼굴 알리기 보다는 팬들에게 음악으로 다가가는 것을 우선으로 생각하는 버즈의 자존심과 지난해 전국투어을 흥행으로 이끈 자신감이 함께 느껴지는 것이다.
+
+작은 날개 짓이 세상을 바꾼다 “BUZZ EFFECT”
+
+나비효과가 전혀 생각지도 못했던 작은 변수가 세계를 변화시킬 수 있음을 보여준다면, 버즈 이펙트 (BUZZ EFFECT)는 불황이라고 불리는 음반업계, 그 중에서도 락 음악계에 던지는 버즈의 도전이다. 이미 지난해 버즈는 절반의 성공을 거두었다. 아무도 예상하지 못했던 신인, 그것도 댄스도 아닌 락 밴드로서 두 곡을 연달아 히트 시키면서 미소년으로 구성된 락 밴드 붐을 불러 일으켰다.
+2005년 상반기 이제 다시 침체된 락 음악계는 새로운 활력을 불어 넣는 버즈 이펙트로 인해 새로운 활력에 빠져들게 될 것이다. ');
 
 -- 테이블: song
 
