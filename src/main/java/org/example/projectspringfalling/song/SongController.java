@@ -3,11 +3,11 @@ package org.example.projectspringfalling.song;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.user.SessionUser;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -22,7 +22,8 @@ public class SongController {
     // 곡 상세보기
     @GetMapping("/songs/{songId}")
     public String songDetail(HttpServletRequest request, @PathVariable Integer songId) {
-        SongResponse.DetailDTO resp = songService.songDetail(songId);
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SongResponse.DetailDTO resp = songService.songDetail(songId, sessionUser.getId());
         request.setAttribute("song", resp);
         return "song/song-detail";
     }
@@ -68,7 +69,6 @@ public class SongController {
     public String songGenre() {
         return "song/song-genre";
     }
-
 
 
 }

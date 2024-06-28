@@ -30,4 +30,7 @@ public interface LikeRepository extends JpaRepository<Like, Integer> {
     // 앨범 좋아요
     Optional<Like> findLikeByUserIdAndAlbumId(Integer userId, Integer albumId);
 
+    // 곡 좋아요
+    Optional<Like> findLikeByUserIdAndSongId(Integer userId, Integer songId);
+
 }
