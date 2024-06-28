@@ -74,6 +74,10 @@ body {
     font-size: 18px;
 }
 
+.album-list-btn-add-like {
+    color: red;
+}
+
 .album-list-result-item .album-list-icons {
     display: flex;
     flex-direction: row;
