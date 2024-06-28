@@ -422,7 +422,7 @@
             var selectedSongs = JSON.parse(localStorage.getItem('selectedSongs')) || [];
 
             // 중복 확인
-            var isSongExists = selectedSongs.some(function(song) {
+            var isSongExists = selectedSongs.some(function (song) {
                 return song.songId === songData.songId;
             });
 
@@ -447,16 +447,17 @@
                 islogin: $(this).data('islogin')
 
             };
-            $.ajax({
-                type: "post",
-                url: "/api/history",
-                data: {songId : songData.songId}
-            }).done((res) => {
-                alert("히스토리가 생성되었습니다.")
-            }).fail((res) => {
-                alert("히스토리 오류.")
-
-            });
+            if (songData.islogin === true) {
+                $.ajax({
+                    type: "post",
+                    url: "/api/history",
+                    data: {songId: songData.songId}
+                }).done((res) => {
+                    alert("히스토리가 생성되었습니다.")
+                }).fail((res) => {
+                    alert("히스토리 오류.")
+                });
+            }
             addSongIfNotExists(songData);
 
             // 새로운 팝업 창 열기
