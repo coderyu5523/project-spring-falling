@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -34,39 +35,62 @@ public class UserControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    private MockHttpSession session;
+
+
     @Autowired
     private ObjectMapper objectMapper;
 
     @BeforeEach
     public void setup() {
         this.mockMvc = webAppContextSetup(this.webApplicationContext).build();
+        this.session = new MockHttpSession(); // 세션 초기화
     }
 
     @Test
     public void join_test() throws Exception {
         // given
-        UserRequest.JoinDTO joinDTO = new UserRequest.JoinDTO();
-        joinDTO.setEmail("test@example.com");
-        joinDTO.setPassword("password123");
-        joinDTO.setPhone(PhoneUtil.formatPhoneNumber("01012345678")); // phone 설정
-        joinDTO.setBirth("2000-01-01");
-        joinDTO.setCreatedAt(Timestamp.from(Instant.now()));
+        UserRequest.JoinDTO requestDTO = new UserRequest.JoinDTO();
+        requestDTO.setEmail("test@example.com");
+        requestDTO.setPassword("password123");
+        requestDTO.setPhone(PhoneUtil.formatPhoneNumber("01012345678")); // phone 설정
+        requestDTO.setBirth("2000-01-01");
+        requestDTO.setCreatedAt(Timestamp.from(Instant.now()));
 
         // when & then
         mockMvc.perform(post("/join")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                        .param("email", joinDTO.getEmail())
-                        .param("password", joinDTO.getPassword())
-                        .param("phone", joinDTO.getPhone())
-                        .param("birth", joinDTO.getBirth())
-                        .param("createdAt", joinDTO.getCreatedAt().toString()))
-                    .andExpect(status().is3xxRedirection())   // http 검증용. 리다이렉션이면 302
-                    .andExpect(redirectedUrl("/login-form"));  // 리다이렉션 주소
+                        .param("email", requestDTO.getEmail())
+                        .param("password", requestDTO.getPassword())
+                        .param("phone", requestDTO.getPhone())
+                        .param("birth", requestDTO.getBirth())
+                        .param("createdAt", requestDTO.getCreatedAt().toString()))
+                .andExpect(status().is3xxRedirection())   // http 검증용. 리다이렉션이면 302,
+                .andExpect(redirectedUrl("/login-form"));  // 리다이렉션 주소
 
         // 추가 검증
         User savedUser = userRepository.findByEmail("test@example.com");
         assertNotNull(savedUser, "User should be saved and not null");
         assertEquals("test@example.com", savedUser.getEmail());
+    }
+
+
+    // todo : 로그인시 리다이렉션 302 맞는데 자꾸 200 떠서 오류남.
+    @Test
+    public void login_test() throws Exception {
+        //given
+        UserRequest.LoginDTO requestDTO = new UserRequest.LoginDTO();
+        requestDTO.setEmail("test@example.com");
+        requestDTO.setPassword("password123");
+
+        // when
+        mockMvc.perform(post("/login")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .param("email", requestDTO.getEmail())
+                        .param("password", requestDTO.getPassword())
+                        .session(session))
+                .andExpect(status().is3xxRedirection())   // http 검증용. 리다이렉션이면 302, 성공이면 200 , 근데 이건 왜 200인지 모르겟음
+                .andExpect(redirectedUrl("/"));  // 리다이렉션 주소
     }
 
 }
