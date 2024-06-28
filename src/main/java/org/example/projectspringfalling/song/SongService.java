@@ -5,6 +5,7 @@ import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.Album;
 import org.example.projectspringfalling.album.AlbumRepository;
+import org.example.projectspringfalling.like.LikeRepository;
 import org.example.projectspringfalling.playlist.Playlist;
 import org.example.projectspringfalling.playlist.PlaylistRepository;
 import org.example.projectspringfalling.playlistSong.PlaylistSongRepository;
@@ -26,6 +27,7 @@ public class SongService {
     private final AlbumRepository albumRepository;
     private final PlaylistRepository playlistRepository;
     private final PlaylistSongRepository playlistSongRepository;
+    private final LikeRepository likeRepository;
 
     // 필터 및 정렬 (곡)
     public List<RestResponse.SongListDTO> sortAndFilterSongs(String keyword, Integer artistId) {
@@ -252,9 +254,10 @@ public class SongService {
     }
 
     // 곡 상세보기
-    public SongResponse.DetailDTO songDetail(Integer songId) {
+    public SongResponse.DetailDTO songDetail(Integer songId, Integer userId) {
         Song song = songRepository.findSongAndAlbumAndArtistById(songId);
-        return new SongResponse.DetailDTO(song, song.getAlbum());
+
+        return new SongResponse.DetailDTO(song, song.getAlbum(), likeRepository.findLikeByUserIdAndSongId(userId, songId).isPresent());
     }
 
     public Song getImg(int id) {

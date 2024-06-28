@@ -29,7 +29,8 @@
             <p class="song-detail-icons">
                 <a href="#"><i class="song-detail-btn-add-list fas fa-list icon"></i></a>
                 <a id="myBtn" href="#"><i class="song-detail-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
-                <a href="#"><i class="song-detail-btn-add-like fa-regular fa-heart"></i></a>
+                <input id="song-like" type="hidden" value="{{song.isLike}}">
+                <input id="song-id" type="hidden" value="{{song.songId}}">
             </p>
         </div>
     </div>
@@ -44,5 +45,6 @@
 </div>
 
 <script type="module" src="/js/playlist-modal.js"></script>
+<script type="module" src="/js/song-detail.js"></script>
 
 {{>layout/footer}}

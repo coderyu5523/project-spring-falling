@@ -110,12 +110,17 @@ public class UserController {
         return "user/profile";
     }
 
-
     // 회원정보 수정
     @PutMapping("/users")
     public String update(String password, String phone) {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         UserResponse.UpdateDTO responseDTO = userService.update(sessionUser, password,phone);
         return "user/profile";
+    }
+
+    // 고객센터
+    @GetMapping("/help")
+    public String help() {
+        return "user/help";
     }
 }

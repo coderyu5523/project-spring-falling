@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static org.example.projectspringfalling._core.utils.DateUtil.timestampToString;
+
 public class AlbumResponse {
 
     // 앨범 수록곡 리스트 DTO
@@ -22,7 +24,6 @@ public class AlbumResponse {
         private String albumTitle; // 앨범 이름
         private String category; // 앨범 유형
         private String albumGenre; // 앨범 장르
-        // TODO: Util써서 Timestamp가 아닌 String으로 받기
         private Timestamp createdAt; // 앨범 발매 날짜
         private String albumArtist; // 앨범 아티스트 이름
         private String distributor; // 유통사
@@ -30,6 +31,10 @@ public class AlbumResponse {
         private String albumIntro; // 앨범 소개글
         private List<SongResponse.AlbumListDTO> songList = new ArrayList<>(); // 앨범 수록곡
         private boolean isLike; // 좋아요 여부
+
+        public String getCreatedAt() {
+            return timestampToString(this.createdAt);
+        }
 
         public DetailDTO(Album album, List<Song> songList, String albumGenre, boolean isLike) {
             this.albumId = album.getId();
