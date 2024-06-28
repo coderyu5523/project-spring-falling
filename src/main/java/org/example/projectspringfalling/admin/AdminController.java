@@ -99,7 +99,7 @@ public class AdminController {
     }
 
     // 로그인 페이지
-    @GetMapping("/admin/login-form")
+    @GetMapping("/admin")
     public String loginForm() {
         return "admin/login-form";
     }
@@ -107,15 +107,18 @@ public class AdminController {
     // 로그인
     @PostMapping("/admin/login")
     public String login(AdminRequest.LoginDTO reqDTO) {
-        Admin admin = adminService.login(reqDTO);
-        session.setAttribute("admin", admin);
+        Admin sessionAdmin = adminService.login(reqDTO);
+        rt.opsForValue().set("sessionAdmin:" + sessionAdmin.getId(), sessionAdmin);
+        session.setAttribute("sessionAdmin", sessionAdmin);
         return "redirect:/admin/albums";
     }
 
     // 로그아웃
     @GetMapping("/admin/logout")
     public String logout() {
+        Admin sessionAdmin = (Admin) session.getAttribute("sessionAdmin");
+        rt.delete("sessionAdmin" + sessionAdmin.getId());
         session.invalidate();
-        return "redirect:/admin/login-form";
+        return "redirect:/admin";
     }
 }

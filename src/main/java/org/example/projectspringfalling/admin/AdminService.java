@@ -25,9 +25,9 @@ public class AdminService {
 
     // 관리자 로그인
     public Admin login(AdminRequest.LoginDTO reqDTO) {
-        Admin admin = adminRepository.findByEmailAndPassword(reqDTO.getEmail(), reqDTO.getPassword())
+        Admin sessionAdmin = adminRepository.findByEmailAndPassword(reqDTO.getEmail(), reqDTO.getPassword())
                 .orElseThrow(() -> new Exception404("아이디 또는 비밀번호가 틀렸습니다."));
-        return admin;
+        return sessionAdmin;
     }
 
     // 아티스트 상세보기
