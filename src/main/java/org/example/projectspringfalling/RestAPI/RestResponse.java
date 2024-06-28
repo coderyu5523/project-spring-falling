@@ -14,7 +14,43 @@ import static org.example.projectspringfalling._core.utils.DateUtil.timestampToS
 
 public class RestResponse {
 
-    // 검색 및 정렬
+    // 검색 및 정렬(앨범)
+    @NoArgsConstructor
+    @Data
+    public static class AlbumListDTO {
+        private Integer songId; // 곡 pk
+        private String lyrics; // 가사
+        private String title; // 곡 제목
+        private String musicFile; // 음악 파일
+
+        private Integer albumId; // 앨범 pk
+        private String coverImg; // 앨범 이미지
+        private String albumTitle; // 앨범 이름
+        private String artistName; // 가수 이름
+        private Timestamp albumCreatedAt; // 앨범 발매 날짜
+
+        /* 필터와 정렬을 위해 필요 */
+        private String category; // 앨범 카테고리
+        // 앨범 발매 날짜
+        private Long listenCount; // 곡 재생 횟수
+
+
+        public AlbumListDTO(Song song, Album album) {
+            this.songId = song.getId();
+            this.title = song.getTitle();
+            this.artistName = song.getArtist().getName();
+            this.musicFile = song.getMusicFile();
+            this.lyrics = song.getLyrics();
+            this.albumId = album.getId();
+            this.coverImg = album.getAlbumImg();
+            this.albumTitle = album.getTitle();
+            this.category = album.getCategory();
+            this.albumCreatedAt = album.getCreatedAt();
+            this.listenCount = song.getListenCount();
+        }
+    }
+
+    // 검색 및 정렬(곡)
     @NoArgsConstructor
     @Data
     public static class SongListDTO {
@@ -26,11 +62,11 @@ public class RestResponse {
         private Integer albumId; // 앨범 pk
         private String coverImg; // 앨범 이미지
         private String albumTitle; // 앨범 이름
-
         /* 필터와 정렬을 위해 필요 */
         private String category; // 앨범 카테고리
         private Timestamp createdAt; // 곡 발매 날짜
         private Long listenCount; // 곡 재생 횟수
+
 
         public SongListDTO(Song song, Album album) {
             this.songId = song.getId();

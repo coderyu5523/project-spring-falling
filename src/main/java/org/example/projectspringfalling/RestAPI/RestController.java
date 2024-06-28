@@ -33,11 +33,19 @@ public class RestController {
     private final HistoryService historyService;
 
     // 필터 및 정렬
-    @GetMapping("/{artistId}/sort-and-filter")
-    public ResponseEntity<?> sortAndFilter(
+    @GetMapping("/{artistId}/sort-and-filter/songs")
+    public ResponseEntity<?> sortAndFilterSongs(
             @RequestParam(name = "keyword", required = false) String keyword,
             @PathVariable(name = "artistId") Integer artistId) {
-        return ResponseEntity.ok(new ApiUtil<>(songService.sortAndFilter(keyword.trim(), artistId)));
+        return ResponseEntity.ok(new ApiUtil<>(songService.sortAndFilterSongs(keyword.trim(), artistId)));
+    }
+
+    // 필터 및 정렬
+    @GetMapping("/{artistId}/sort-and-filter/albums")
+    public ResponseEntity<?> sortAndFilterAlbums(
+            @RequestParam(name = "keyword", required = false) String keyword,
+            @PathVariable(name = "artistId") Integer artistId) {
+        return ResponseEntity.ok(new ApiUtil<>(songService.sortAndFilterAlbums(keyword.trim(), artistId)));
     }
 
 

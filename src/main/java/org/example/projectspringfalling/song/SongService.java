@@ -13,7 +13,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -26,12 +28,12 @@ public class SongService {
     private final PlaylistSongRepository playlistSongRepository;
 
     // 필터 및 정렬
-    public List<RestResponse.SongListDTO> sortAndFilter(String keyword, Integer artistId) {
-        List<RestResponse.SongListDTO> songListDTO = albumRepository.sortAndFilter(artistId).stream()
+    public List<RestResponse.SongListDTO> sortAndFilterSongs(String keyword, Integer artistId) {
+        List<RestResponse.SongListDTO> songListDTO = albumRepository.sortAndFilterSongs(artistId).stream()
                 .flatMap(album -> songRepository.findByAlbumId(album.getId()).stream()
                         .map(song -> new RestResponse.SongListDTO(song, album)))
                 .toList();
-        
+
         boolean isRegularAndSingle = false;
         boolean isMini = false;
         boolean isRecentSort = false;
@@ -85,6 +87,78 @@ public class SongService {
                     }
                     if (finalIsAlphabeticalSort) {
                         return song1.getTitle().compareToIgnoreCase(song2.getTitle()); // 가나다순 오름차순 정렬
+                    }
+                    return 0; // 기본 정렬 방식
+                })
+                .collect(Collectors.toList());
+    }
+
+    // 필터 및 정렬
+    public List<RestResponse.AlbumListDTO> sortAndFilterAlbums(String keyword, Integer artistId) {
+        List<RestResponse.AlbumListDTO> albumListDTO = albumRepository.sortAndFilterAlbums(artistId).stream()
+                .flatMap(album -> songRepository.findByAlbumId(album.getId()).stream()
+                        .map(song -> new RestResponse.AlbumListDTO(song, album)))
+                .toList();
+
+        boolean isRegularAndSingle = false;
+        boolean isMini = false;
+        boolean isRecentSort = false;
+        boolean isPopularSort = false;
+        boolean isAlphabeticalSort = false;
+
+        if (keyword != null && !keyword.isEmpty()) {
+            String[] tokens = keyword.split("\\s*,\\s*");
+
+            for (String token : tokens) {
+                if (token.contains("정규/싱글")) {
+                    isRegularAndSingle = true;
+                }
+                if (token.contains("미니")) {
+                    isMini = true;
+                }
+                if (token.contains("최신순")) {
+                    isRecentSort = true;
+                }
+                if (token.contains("인기순")) {
+                    isPopularSort = true;
+                }
+                if (token.contains("가나다순")) {
+                    isAlphabeticalSort = true;
+                }
+            }
+        }
+
+        boolean finalIsRegularAndSingle = isRegularAndSingle;
+        boolean finalIsMini = isMini;
+        boolean finalIsRecentSort = isRecentSort;
+        boolean finalIsPopularSort = isPopularSort;
+        boolean finalIsAlphabeticalSort = isAlphabeticalSort;
+
+        Set<Integer> seenAlbumIds = new HashSet<>();
+
+        return albumListDTO.stream()
+                .filter(album -> {
+                    if (seenAlbumIds.contains(album.getAlbumId())) {
+                        return false; // 중복된 앨범 아이디는 필터링
+                    }
+                    seenAlbumIds.add(album.getAlbumId());
+                    if (finalIsRegularAndSingle) {
+                        return "싱글".equals(album.getCategory()) || "정규".equals(album.getCategory());
+                    }
+                    if (finalIsMini) {
+                        return "미니".equals(album.getCategory());
+                    }
+                    return true;
+                })
+                .sorted((album1, album2) -> {
+                    if (finalIsRecentSort) {
+                        return album2.getAlbumCreatedAt().compareTo(album1.getAlbumCreatedAt()); // 최신순 내림차순 정렬
+                    }
+                    if (finalIsPopularSort) {
+                        return Long.compare(album2.getListenCount(), album1.getListenCount()); // 인기순 내림차순 정렬
+                    }
+                    if (finalIsAlphabeticalSort) {
+                        return album1.getTitle().compareToIgnoreCase(album2.getTitle()); // 가나다순 오름차순 정렬
                     }
                     return 0; // 기본 정렬 방식
                 })
