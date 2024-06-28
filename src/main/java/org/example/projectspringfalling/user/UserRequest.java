@@ -1,6 +1,7 @@
 package org.example.projectspringfalling.user;
 
 import lombok.Data;
+import org.example.projectspringfalling._core.utils.PhoneUtil;
 
 import java.sql.Timestamp;
 
@@ -24,7 +25,7 @@ public class UserRequest {
                     .id(id)
                     .email(email)
                     .password(password)
-                    .phone(formatPhoneNumber(phone))
+                    .phone(PhoneUtil.formatPhoneNumber(phone)) // formatPhoneNumber 호출
                     .birth(birth)
                     .provider("Email") // 일반 회원가입을 한 회원은 "Email"로 값 지정
                     .createdAt(createdAt)

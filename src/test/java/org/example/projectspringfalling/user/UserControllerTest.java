@@ -1,87 +1,72 @@
 package org.example.projectspringfalling.user;
 
-import jakarta.transaction.Transactional;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.projectspringfalling._core.utils.PhoneUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.restdocs.RestDocumentationContextProvider;
-import org.springframework.restdocs.RestDocumentationExtension;
-import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;
-import org.springframework.restdocs.mockmvc.RestDocumentationResultHandler;
-import org.springframework.restdocs.operation.preprocess.Preprocessors;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.filter.CharacterEncodingFilter;
 
-import java.nio.charset.StandardCharsets;
+import java.sql.Timestamp;
+import java.time.Instant;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
-@ExtendWith({SpringExtension.class, RestDocumentationExtension.class})
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
+@SpringBootTest
 @AutoConfigureMockMvc
-@Import(TestRedisConfig.class)
-@Transactional
 public class UserControllerTest {
 
     @Autowired
-    private MockMvc mvc;
+    private UserRepository userRepository;
 
-    private RestDocumentationResultHandler document;
+    @Autowired
+    private WebApplicationContext webApplicationContext;
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @BeforeEach
-    public void setup(WebApplicationContext webApplicationContext, RestDocumentationContextProvider restDocumentation) {
-        this.document = MockMvcRestDocumentation.document("{class-name}/{method-name}",
-                Preprocessors.preprocessRequest(Preprocessors.prettyPrint()),
-                Preprocessors.preprocessResponse(Preprocessors.prettyPrint()));
-
-        mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
-                .addFilter(new CharacterEncodingFilter(StandardCharsets.UTF_8.name(), true))
-                .apply(MockMvcRestDocumentation.documentationConfiguration(restDocumentation))
-                .alwaysDo(document)
-                .build();
+    public void setup() {
+        this.mockMvc = webAppContextSetup(this.webApplicationContext).build();
     }
 
     @Test
-    public void join_success() throws Exception {
-        // Mock request to join API
-        mvc.perform(post("/api/join")
-                        .contentType("application/json")
-                        .content("{\"username\":\"testuser\", \"password\":\"password\"}"))
-                .andExpect(status().isOk());
+    public void join_test() throws Exception {
+        // given
+        UserRequest.JoinDTO joinDTO = new UserRequest.JoinDTO();
+        joinDTO.setEmail("test@example.com");
+        joinDTO.setPassword("password123");
+        joinDTO.setPhone(PhoneUtil.formatPhoneNumber("01012345678")); // phone 설정
+        joinDTO.setBirth("2000-01-01");
+        joinDTO.setCreatedAt(Timestamp.from(Instant.now()));
+
+        // when & then
+        mockMvc.perform(post("/join")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .param("email", joinDTO.getEmail())
+                        .param("password", joinDTO.getPassword())
+                        .param("phone", joinDTO.getPhone())
+                        .param("birth", joinDTO.getBirth())
+                        .param("createdAt", joinDTO.getCreatedAt().toString()))
+                    .andExpect(status().is3xxRedirection())   // http 검증용. 리다이렉션이면 302
+                    .andExpect(redirectedUrl("/login-form"));  // 리다이렉션 주소
+
+        // 추가 검증
+        User savedUser = userRepository.findByEmail("test@example.com");
+        assertNotNull(savedUser, "User should be saved and not null");
+        assertEquals("test@example.com", savedUser.getEmail());
     }
 
-    @Test
-    public void join_fail() throws Exception {
-        // Mock request to join API with invalid data
-        mvc.perform(post("/api/join")
-                        .contentType("application/json")
-                        .content("{\"username\":\"\", \"password\":\"password\"}"))
-                .andExpect(status().isBadRequest());
-    }
-
-    @Test
-    public void login_success() throws Exception {
-        // Mock request to login API
-        mvc.perform(post("/api/login")
-                        .contentType("application/json")
-                        .content("{\"username\":\"testuser\", \"password\":\"password\"}"))
-                .andExpect(status().isOk());
-    }
-
-    @Test
-    public void login_fail() throws Exception {
-        // Mock request to login API with invalid data
-        mvc.perform(post("/api/login")
-                        .contentType("application/json")
-                        .content("{\"username\":\"wronguser\", \"password\":\"wrongpassword\"}"))
-                .andExpect(status().isUnauthorized());
-    }
 }

@@ -11,7 +11,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @TestConfiguration
-public class TestRedisConfig {
+public class RedisConfigTest {
 
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
