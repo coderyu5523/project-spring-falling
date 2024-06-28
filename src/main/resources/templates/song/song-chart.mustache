@@ -466,7 +466,7 @@
                     artistName: row.find('.play-btn').data('artist'),
                     coverImg: row.find('.play-btn').data('cover'),
                     musicFile: row.find('.play-btn').data('music'),
-                    islogin: row.find('.play-btn').attr('data-islogin') === 'true'
+                    islogin: row.find('.play-btn').data('islogin') === true // 정확하게 논리값 비교
                 };
                 addSongIfNotExists(songData);
             });
