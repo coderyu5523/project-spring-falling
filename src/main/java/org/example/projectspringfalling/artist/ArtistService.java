@@ -25,7 +25,7 @@ public class ArtistService {
     private final SongRepository songRepository;
     private final LikeRepository likeRepository;
 
-    // 가수 상세보기 (앨범)
+    // 가수 상세보기
     public ArtistResponse.ArtistDetailDTO artistDetail(Integer artistId, Integer userId) {
         Artist artist = artistRepository.findArtistAndAlbumByArtistId(artistId)
                 .orElseThrow(() -> new Exception404("존재하지 않는 아티스트입니다."));

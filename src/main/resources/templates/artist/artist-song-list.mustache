@@ -6,6 +6,7 @@
         <div class="artist-song-list-album">
             <br>
             <div class="artist-song-list-result-item">
+                <input type="hidden" id="artist-id" value="{{artist.artistId}}">
                 <div class="artist-song-list-album-cover">
                     <a href="#">
                         <img src="{{artist.artistImage}}" alt="artistImage">
@@ -47,28 +48,28 @@
             <div class="artist-song-list-table-menu">
                 <div class="artist-song-list-table-order">
                     <div class="artist-song-list-filter-album-category">
-                        <p>
-                            <a href="#" class="artist-song-list-all">전체</a>
+                        <p class="artist-song-list-all" data-keyword="전체">
+                            전체
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-album-category">정규/싱글</a>
+                        <p class="artist-song-list-album-category" data-keyword="정규/싱글">
+                            정규/싱글
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-participation">참여</a>
+                        <p class="artist-song-list-participation" data-keyword="미니">
+                            미니
                         </p>
                         <p>
                             |
                         </p>
                     </div>
                     <div class="artist-song-list-filter-order-by">
-                        <p>
-                            <a href="#" class="artist-song-list-order-by-date">최신순</a>
+                        <p class="artist-song-list-order-by-date">
+                            최신순
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-order-by-popularity">인기순</a>
+                        <p class="artist-song-list-order-by-popularity" data-orderby="인기순">
+                            인기순
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-order-by-korean">가나다순</a>
+                        <p class="artist-song-list-order-by-korean" data-orderby="가나다순">
+                            가나다순
                         </p>
                     </div>
                 </div>
@@ -79,52 +80,12 @@
         <br>
 
         <div>
-            <ul class="artist-song-list-album-list">
-                {{#artist.albumList}}
-                    <li>
-                        <div class="artist-song-list-badge-area">
-                            <div class="artist-song-list-album-cover">
-                                <img src="{{albumImage}}" alt="Album Cover">
-                                <a href="#"><i class="artist-song-list-play-btn fa fa-play"></i></a>
-                            </div>
-                            <div class="artist-song-list-album-info">
-                                <div class="artist-song-list-info-area">
-                                    <a href="#"></a>
-                                    <p class="artist-song-list-album-title">{{albumTitle}}</p></a>
-                                    <a href="#"></a>
-                                    <p class="artist-song-list-album-artist">{{artist.artistName}} ></p></a>
-                                </div>
-                                <div class="artist-song-list-explain_area">
-                                    <div class="artist-song-list-album-category">
-                                        <p>{{albumCategory}}</p>
-                                    </div>
-                                    <div class="artist-song-list-album-date">
-                                        <p>{{createdAt}}</p>
-                                    </div>
-                                </div>
-                                <div class="artist-song-list-icons">
-                                    <a href="#"><i class="artist-song-list-btn-add-list fas fa-list icon"></i></a>
-                                    <a href="#"><i
-                                            class="artist-song-list-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
-                                    {{#artist.isAlbumLike}}
-                                        <a href="#">
-                                            <i class="artist-song-list-btn-add-like fas fa-heart"></i>
-                                        </a>
-                                    {{/artist.isAlbumLike}}
-                                    {{^artist.isAlbumLike}}
-                                        <a href="#">
-                                            <i class="artist-song-list-btn-add-like fa-regular fa-heart"></i>
-                                        </a>
-                                    {{/artist.isAlbumLike}}
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                {{/artist.albumList}}
+            <ul class="artist-song-list-album-list" id="artist-song-list-album-list">
+
             </ul>
         </div>
     </div>
 </div>
 <br>
-
+<script type="module" src="/js/artist-song-list.js"></script>
 {{>layout/footer}}
