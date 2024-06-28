@@ -445,8 +445,18 @@
                 coverImg: $(this).data('cover'),
                 musicFile: $(this).data('music'),
                 islogin: $(this).data('islogin')
-            };
 
+            };
+            $.ajax({
+                type: "post",
+                url: "/api/history",
+                data: {songId : songData.songId}
+            }).done((res) => {
+                alert("히스토리가 생성되었습니다.")
+            }).fail((res) => {
+                alert("히스토리 오류.")
+
+            });
             addSongIfNotExists(songData);
 
             // 새로운 팝업 창 열기
