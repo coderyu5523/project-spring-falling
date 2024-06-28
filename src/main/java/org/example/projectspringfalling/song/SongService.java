@@ -31,8 +31,7 @@ public class SongService {
                 .flatMap(album -> songRepository.findByAlbumId(album.getId()).stream()
                         .map(song -> new RestResponse.SongListDTO(song, album)))
                 .toList();
-
-        // 필터링 및 정렬 조건에 따라 처리
+        
         boolean isRegularAndSingle = false;
         boolean isMini = false;
         boolean isRecentSort = false;
@@ -40,27 +39,23 @@ public class SongService {
         boolean isAlphabeticalSort = false;
 
         if (keyword != null && !keyword.isEmpty()) {
-            String[] tokens = keyword.split("\\s+");
+            String[] tokens = keyword.split("\\s*,\\s*");
 
             for (String token : tokens) {
-                switch (token) {
-                    case "정규/싱글":
-                        isRegularAndSingle = true;
-                        break;
-                    case "미니":
-                        isMini = true;
-                        break;
-                    case "최신순":
-                        isRecentSort = true;
-                        break;
-                    case "인기순":
-                        isPopularSort = true;
-                        break;
-                    case "가나다순":
-                        isAlphabeticalSort = true;
-                        break;
-                    default:
-                        break;
+                if (token.contains("정규/싱글")) {
+                    isRegularAndSingle = true;
+                }
+                if (token.contains("미니")) {
+                    isMini = true;
+                }
+                if (token.contains("최신순")) {
+                    isRecentSort = true;
+                }
+                if (token.contains("인기순")) {
+                    isPopularSort = true;
+                }
+                if (token.contains("가나다순")) {
+                    isAlphabeticalSort = true;
                 }
             }
         }
@@ -70,19 +65,18 @@ public class SongService {
         boolean finalIsRecentSort = isRecentSort;
         boolean finalIsPopularSort = isPopularSort;
         boolean finalIsAlphabeticalSort = isAlphabeticalSort;
-        List<RestResponse.SongListDTO> songs = songListDTO.stream()
+
+        return songListDTO.stream()
                 .filter(song -> {
-                    // 필터링 조건 설정
                     if (finalIsRegularAndSingle) {
                         return "싱글".equals(song.getCategory()) || "정규".equals(song.getCategory());
                     }
                     if (finalIsMini) {
                         return "미니".equals(song.getCategory());
                     }
-                    return true; // 추가적인 필터링 조건이 필요하면 여기에 추가
+                    return true;
                 })
                 .sorted((song1, song2) -> {
-                    // 정렬 조건 설정
                     if (finalIsRecentSort) {
                         return song2.getCreatedAt().compareTo(song1.getCreatedAt()); // 최신순 내림차순 정렬
                     }
@@ -95,9 +89,8 @@ public class SongService {
                     return 0; // 기본 정렬 방식
                 })
                 .collect(Collectors.toList());
-
-        return songs;
     }
+
 
     // 메인 차트
     public List<SongResponse.ChartDTO> mainChart() {

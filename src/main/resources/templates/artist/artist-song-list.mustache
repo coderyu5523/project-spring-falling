@@ -54,22 +54,22 @@
                         <p class="artist-song-list-album-category" data-keyword="정규/싱글">
                             정규/싱글
                         </p>
-                        <p class="artist-song-list-participation" data-keyword="참여">
-                            참여
+                        <p class="artist-song-list-participation" data-keyword="미니">
+                            미니
                         </p>
                         <p>
                             |
                         </p>
                     </div>
                     <div class="artist-song-list-filter-order-by">
-                        <p>
-                            <a href="#" class="artist-song-list-order-by-date" data-keyword="최신순">최신순</a>
+                        <p class="artist-song-list-order-by-date" data-orderby="최신순">
+                            최신순
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-order-by-popularity" data-keyword="인기순">인기순</a>
+                        <p class="artist-song-list-order-by-popularity" data-orderby="인기순">
+                            인기순
                         </p>
-                        <p>
-                            <a href="#" class="artist-song-list-order-by-korean" data-keyword="가나다순">가나다순</a>
+                        <p class="artist-song-list-order-by-korean" data-orderby="가나다순">
+                            가나다순
                         </p>
                     </div>
                 </div>
@@ -90,9 +90,17 @@
 <script>
     $(document).ready(function () {
         // 초기화: 모든 옵션 초기화
-        var selectedCategory = "";
-        var selectedOrderBy = "";
+        var selectedCategory = localStorage.getItem('selectedCategory') || "";
+        var selectedOrderBy = localStorage.getItem('selectedOrderBy') || "";
         var artistId = $('#artist-id').val();
+
+        // 저장된 값을 불러와서 적용
+        if (selectedCategory) {
+            $('.artist-song-list-filter-album-category p[data-keyword="' + selectedCategory + '"]').addClass('active');
+        }
+        if (selectedOrderBy) {
+            $('.artist-song-list-filter-order-by p[data-orderby="' + selectedOrderBy + '"]').addClass('active');
+        }
 
         // 전체, 정규/싱글, 참여 중 하나만 선택되도록 처리
         $('.artist-song-list-filter-album-category p').click(function (e) {
@@ -111,18 +119,18 @@
         });
 
         // 최신순, 인기순, 가나다순 중 하나만 선택되도록 처리
-        $('.artist-song-list-filter-order-by a').click(function (e) {
+        $('.artist-song-list-filter-order-by p').click(function (e) {
             e.preventDefault();
             var orderBy = $(this).data('orderby');
 
             // 기존 선택 제거
-            $('.artist-song-list-filter-order-by a').removeClass('active');
+            $('.artist-song-list-filter-order-by p').removeClass('active');
             $(this).addClass('active');
 
             // 선택된 정렬 순서 저장
             selectedOrderBy = orderBy;
 
-            // 필터링 함수 호출 (여기서는 예시로 console.log로 대체)
+            // 필터링 함수 호출
             filterSongs(selectedCategory, selectedOrderBy);
         });
 
@@ -137,7 +145,9 @@
                 url: url,
                 method: 'GET',
                 dataType: 'json',
-                data: selectedCategory + " " + selectedOrderBy,
+                data: {
+                    keyword: selectedCategory + "," + selectedOrderBy
+                },
                 success: function (data) {
                     $("#artist-song-list-album-list").html(pageCallback(data.body))
                 },
@@ -149,7 +159,7 @@
 
         // 노래 리스트
         function songs(body) {
-            return body.map(item => {
+            return "<div class=\"storage-tabs-mylist-items\">" + body.map(item => {
                 return `
                 <li>
                     <div class="artist-song-list-badge-area">
@@ -187,7 +197,7 @@
             </div>
             </li>
                 ;`
-            }).join('');
+            }).join('') + "</div>";
         }
     });
 </script>

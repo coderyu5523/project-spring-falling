@@ -37,8 +37,7 @@ public class RestController {
     public ResponseEntity<?> sortAndFilter(
             @RequestParam(name = "keyword", required = false) String keyword,
             @PathVariable(name = "artistId") Integer artistId) {
-        System.out.println("호출 완");
-        return ResponseEntity.ok(new ApiUtil<>(songService.sortAndFilter(keyword, artistId)));
+        return ResponseEntity.ok(new ApiUtil<>(songService.sortAndFilter(keyword.trim(), artistId)));
     }
 
 
@@ -121,8 +120,8 @@ public class RestController {
     }
 
     @PostMapping("/api/history")
-    public HistoryResponse.SaveDTO history(Integer songId){
+    public HistoryResponse.SaveDTO history(Integer songId) {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
-        return historyService.saveHistory(sessionUser,songId);
+        return historyService.saveHistory(sessionUser, songId);
     }
 }
