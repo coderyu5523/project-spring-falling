@@ -29,13 +29,8 @@
                     <div class="album-list-icons">
                         <a href="#"><i class="album-list-btn-add-list fas fa-list icon"></i></a>
                         <a href="#"><i class="album-list-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
-                        {{#album.isLike}}
-                            <a href="#"><i class="album-list-btn-add-like fas fa-heart"></i></a>
-                        {{/album.isLike}}
-                        {{^album.isLike}}
-                            <a href="#"><i class="album-list-btn-add-like fa-regular fa-heart"></i></a>
-                        {{/album.isLike}}
-
+                        <input id="album-like" type="hidden" value="{{album.isLike}}">
+                        <input id="album-id" type="hidden" value="{{album.albumId}}">
                     </div>
                 </div>
             </div>
@@ -43,78 +38,117 @@
 
         <br>
         <div class="album-list-tab-button">
-            <button class="album-list-album-detail">상세정보</button>
-            <button class="album-list-album-songs">수록곡</button>
+            <button class="album-list-album-detail" data-tab="album-about">상세정보</button>
+            <button class="album-list-album-songs album-selected-tab" data-tab="album-song-list">수록곡</button>
         </div>
-        <div class="album-list-song-list">
-            <table class="album-list-song-list-table">
-                <a href="#" class="album-list-all-play"><i class="album-list-all-play-btn fas fa-play play-button"></i>
-                    전체듣기</a>
-                <thead>
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td>번호</td>
-                    <td>곡/앨범</td>
-                    <td class="album-list-table-artist">아티스트</td>
-                    <td>듣기</td>
-                    <td>재생목록</td>
-                    <td>내 리스트</td>
-                    <td>더보기</td>
-                </tr>
-                </thead>
-                <tbody>
-                <!--타이틀 곡
-                -->
-                {{#album.songList}}
+        <div>
+            <!--        상세정보        -->
+            <div id="album-about" style="display: none">
+                <div class="album-detail-album-about">
+                    <table class="album-detail-album-about">
+                        <tr>
+                            <td class="album-detail-album-about-title">앨범명</td>
+                            <td class="album-detail-album-about-content">{{album.albumTitle}}</td>
+                        </tr>
+                        <tr>
+                            <td class="album-detail-album-about-title">아티스트</td>
+                            <td class="album-detail-album-about-content">{{album.albumArtist}}</td>
+                        </tr>
+                        <tr>
+                            <td class="album-detail-album-about-title">유통사</td>
+                            <td class="album-detail-album-about-content">{{album.distributor}}</td>
+                        </tr>
+                        <tr>
+                            <td class="album-detail-album-about-title">기획사</td>
+                            <td class="album-detail-album-about-content"> {{album.agency}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="album-detail-song-intro">
+                    <div class="album-detail-song-intro-title">
+                        <b>앨범소개</b>
+                    </div>
+                    <div class="album-detail-song-intro-content">
+                        {{album.albumIntro}}
+                    </div>
+                </div>
+            </div>
+            <!--        수록곡-->
+            <div id="album-song-list" class="album-list-song-list">
+                <table class="album-list-song-list-table">
+                    <a href="#" class="album-list-all-play"><i
+                            class="album-list-all-play-btn fas fa-play play-button"></i>
+                        전체듣기</a>
+                    <thead>
                     <tr>
                         <td><input type="checkbox"></td>
-                        <td>
-                            <div class="album-list-no">
-                                {{index}}
-                            </div>
-                        </td>
-                        <td class="album-list-table-album-container">
-                            <a href="#">
-                                <img src="{{album.albumImage}}" alt="Album Cover">
-                            </a>
-                            <div class="album-list-text-container">
-                                <div class="album-list-title-group">
-                                    {{#isTitle}}
-                                        <div class="album-list-title-mark">TITLE</div>
-                                    {{/isTitle}}
-                                    <div class="album-list-song-title">
-                                        <a href="#"></a>
-                                        {{title}}
-                                        </a>
-                                    </div>
-                                </div>
-                                <a href="#">
-                                    <p class="album-list-album-title" style="font-size: 12px;">{{album.albumTitle}}</p>
-                                </a>
-                            </div>
-                        </td>
-                        <td class="album-list-table-artist">
-                            <a href="#">{{artistName}}</a>
-                        </td>
-                        <td>
-                            <a href="#"><i class="album-list-play-btn fas fa-play play-button"></i></a>
-                        </td>
-                        <td>
-                            <a href="#"><i class="album-list-add-playlist-btn fas fa-list icon"></i></a>
-                        </td>
-                        <td>
-                            <a href="#"><i class="album-list-add-list-btn fas fa-folder-plus custom-icon"></i></a>
-                        </td>
-                        <td>
-                            <a href="#"><i class="album-list-more-btn fas fa-ellipsis-h icon"></i></a>
-                        </td>
+                        <td>번호</td>
+                        <td>곡/앨범</td>
+                        <td class="album-list-table-artist">아티스트</td>
+                        <td>듣기</td>
+                        <td>재생목록</td>
+                        <td>내 리스트</td>
+                        <td>더보기</td>
                     </tr>
-                {{/album.songList}}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    <!--타이틀 곡
+                    -->
+                    {{#album.songList}}
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <div class="album-list-no">
+                                    {{index}}
+                                </div>
+                            </td>
+                            <td class="album-list-table-album-container">
+                                <a href="#">
+                                    <img src="{{album.albumImage}}" alt="Album Cover">
+                                </a>
+                                <div class="album-list-text-container">
+                                    <div class="album-list-title-group">
+                                        {{#isTitle}}
+                                            <div class="album-list-title-mark">TITLE</div>
+                                        {{/isTitle}}
+                                        <div class="album-list-song-title">
+                                            <a href="#"></a>
+                                            {{title}}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <a href="#">
+                                        <p class="album-list-album-title"
+                                           style="font-size: 12px;">{{album.albumTitle}}</p>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="album-list-table-artist">
+                                <a href="#">{{artistName}}</a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="album-list-play-btn fas fa-play play-button"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="album-list-add-playlist-btn fas fa-list icon"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="album-list-add-list-btn fas fa-folder-plus custom-icon"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="album-list-more-btn fas fa-ellipsis-h icon"></i></a>
+                            </td>
+                        </tr>
+                    {{/album.songList}}
+                    </tbody>
+                </table>
+            </div>
         </div>
+
     </div>
 </div>
 <br>
+
+<script type="module" src="/js/album-detail.js"></script>
 
 {{>layout/footer}}

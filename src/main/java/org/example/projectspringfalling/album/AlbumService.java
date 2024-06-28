@@ -28,7 +28,9 @@ public class AlbumService {
                 .orElseThrow(() -> new Exception404("존재하지 않는 앨범입니다."));
         List<Song> songList = songRepository.findByAlbumId(albumId);
         String albumGenre = removeDuplicates(albumRepository.findAlbumGenres(albumId));
+
         boolean isLike = likeRepository.findUserLikedAlbum(userId, albumId).isPresent();
+
         return new AlbumResponse.DetailDTO(album, songList, albumGenre, isLike);
     }
 
