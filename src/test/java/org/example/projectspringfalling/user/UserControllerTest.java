@@ -59,7 +59,6 @@ public class UserControllerTest {
         requestDTO.setBirth("2000-01-01");
         requestDTO.setCreatedAt(Timestamp.from(Instant.now()));
 
-
         // when & then
         mockMvc.perform(post("/join")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
