@@ -72,10 +72,10 @@ public class UserControllerTest {
 
 
         // 추가적으로 모델 데이터 검증, 도커 켜야 테스트 가능한듯. 나중에 티스트 해봐야지
-//        mockMvc.perform(MockMvcRequestBuilders.get("/login-form"))  // 가입 후 로그인 페이지 접속
-//                .andExpect(MockMvcResultMatchers.status().isOk())    // HTTP 상태 코드 검증
-//                .andExpect(MockMvcResultMatchers.model().attributeExists("message")) // 모델에 message 속성이 있는지 검증
-//                .andExpect(MockMvcResultMatchers.model().attribute("message", "회원 가입이 완료되었습니다.")); // message 값 검증
+        mockMvc.perform(MockMvcRequestBuilders.get("/login-form"))  // 가입 후 로그인 페이지 접속
+                .andExpect(MockMvcResultMatchers.status().isOk())    // HTTP 상태 코드 검증
+                .andExpect(MockMvcResultMatchers.model().attributeExists("message")) // 모델에 message 속성이 있는지 검증
+                .andExpect(MockMvcResultMatchers.model().attribute("message", "회원 가입이 완료되었습니다.")); // message 값 검증
 
     }
 

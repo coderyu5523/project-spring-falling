@@ -53,17 +53,16 @@ public class UserController {
 
     // 회원가입
     @PostMapping("/join")
-    public String join(UserRequest.JoinDTO reqDTO, Model model) {
+    public String join(UserRequest.JoinDTO reqDTO) {
         userService.join(reqDTO);
-        // 모델값 검증
-        model.addAttribute("message", "회원 가입이 완료되었습니다.");
-
         return "redirect:/login-form";
     }
 
     // 로그인 페이지
     @GetMapping("/login-form")
-    public String loginForm() {
+    public String loginForm(Model model) {
+        // 모델값 검증
+        model.addAttribute("message", "회원 가입이 완료되었습니다.");
         return "user/login-form";
     }
 
