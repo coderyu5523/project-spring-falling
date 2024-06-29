@@ -1,5 +1,6 @@
 package org.example.projectspringfalling.user;
 
+import org.springframework.ui.Model;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -52,8 +53,11 @@ public class UserController {
 
     // 회원가입
     @PostMapping("/join")
-    public String join(UserRequest.JoinDTO reqDTO) {
+    public String join(UserRequest.JoinDTO reqDTO, Model model) {
         userService.join(reqDTO);
+        // 모델값 검증
+        model.addAttribute("message", "회원 가입이 완료되었습니다.");
+
         return "redirect:/login-form";
     }
 
