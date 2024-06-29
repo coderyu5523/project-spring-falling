@@ -2,6 +2,7 @@ package org.example.projectspringfalling.user;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.projectspringfalling._core.utils.PhoneUtil;
+import org.example.projectspringfalling.userSubscription.UserSubscription;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,7 @@ import java.time.Instant;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
 @SpringBootTest
@@ -75,11 +75,10 @@ public class UserControllerTest {
         // 추가적으로 모델 데이터 검증, 도커 켜야 테스트 가능한듯. 나중에 티스트 해봐야지
         mockMvc.perform(get("/login-form"))  // 가입 후 로그인 페이지 접속
                 .andExpect(MockMvcResultMatchers.status().isOk())    // HTTP 상태 코드 검증
-                .andExpect(MockMvcResultMatchers.model().attributeExists("message")) // 모델에 message 속성이 있는지 검증
-                .andExpect(MockMvcResultMatchers.model().attribute("message", "회원 가입이 완료되었습니다.")); // message 값 검증
+                .andExpect(model().attributeExists("message")) // 모델에 message 속성이 있는지 검증
+                .andExpect(model().attribute("message", "회원 가입이 완료되었습니다.")); // message 값 검증
 
     }
-
 
 
     // todo : 로그인시 리다이렉션 302 맞는데 자꾸 200 떠서 오류남.
@@ -114,6 +113,31 @@ public class UserControllerTest {
         mockMvc.perform(get("/logout").session(session))
                 .andExpect(status().is3xxRedirection()) // http 검증용
                 .andExpect(redirectedUrl("/")); // 리다이렉션 주소
+    }
+
+    // todo : 사용자 더미에 대해 정확한 이해가 필요한 것 같음
+    @Test
+    public void profile_without_subscription_test() throws Exception { // 이용권 없을 때
+        // given
+        User user = userRepository.findByEmail("jane@naver.com");
+
+        // when & then
+        MockHttpSession session = new MockHttpSession();
+        session.setAttribute("sessionUser", new SessionUser(user, "dummyAccessToken"));
+
+        mockMvc.perform(get("/profile").session(session))
+                .andExpect(status().isOk()) // HTTP 상태 검증
+                .andExpect(view().name("user/profile")) // 뷰 이름 검증
+                .andExpect(model().attribute("profile.provider", user.getProvider())) // provider 검증
+                .andExpect(model().attribute("profile.email", user.getEmail())) // email 검증
+                .andExpect(model().attribute("profile.subscriptionName", "사용중인 이용권이 없습니다.")) // subscriptionName 검증
+                .andExpect(model().attribute("profile.phone", user.getPhone())); // phone 검증
+
+        // 추가적으로 모델 데이터 검증
+//        mockMvc.perform(get("/profile"))  // 가입 후 로그인 페이지 접속
+//                .andExpect(MockMvcResultMatchers.status().isOk())    // HTTP 상태 코드 검증
+//                .andExpect(model().attributeExists("message")) // 모델에 message 속성이 있는지 검증
+//                .andExpect(model().attribute("message", "비밀번호 변경페이지입니다")); // message 값 검증
     }
 
 }

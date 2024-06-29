@@ -95,7 +95,7 @@ public class UserController {
 
     // 마이페이지
     @GetMapping("/profile")
-    public String profile(HttpServletRequest request) {
+    public String profile(HttpServletRequest request, Model model) {
 
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
 
@@ -109,6 +109,9 @@ public class UserController {
 
         UserRequest.ProfileDTO profile = new UserRequest.ProfileDTO(provider, email, subscriptionName,sessionUser.getPhone());
         request.setAttribute("profile", profile);
+
+        // 모델값 검증
+        model.addAttribute("message", "비밀번호 변경페이지입니다");
 
         return "user/profile";
     }
