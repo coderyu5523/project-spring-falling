@@ -67,6 +67,10 @@
     font-size: 18px;
 }
 
+.artist-album-list-btn-add-like {
+    color: red;
+}
+
 .artist-album-list-result-item .artist-album-list-icons {
     display: flex;
     flex-direction: row;

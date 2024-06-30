@@ -138,6 +138,22 @@ public class RestController {
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
 
+    // 아티스트 좋아요 하기
+    @PostMapping("/artists/like")
+    public ResponseEntity<?> likeArtist(@RequestBody Integer artistId) {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        likeService.saveLikeArtist(sessionUser.getId(), artistId);
+        return ResponseEntity.ok(new ApiUtil<>(null));
+    }
+
+    // 아티스트 좋아요 삭제
+    @DeleteMapping("/artists/like")
+    public ResponseEntity<?> deleteArtistLike(@RequestBody Integer artistId) {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        likeService.deleteLikeArtist(sessionUser.getId(), artistId);
+        return ResponseEntity.ok(new ApiUtil<>(null));
+    }
+
     // 재생중인 플레이리스트 데이터 요청
     @GetMapping("/api/playlists/current")
     public List<RestResponse.PlaylistDTO> getCurrentPlaylist() {
