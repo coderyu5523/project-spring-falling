@@ -43,3 +43,7 @@ spring:
     multipart:
       max-file-size: 100MB   # 최대 파일 크기를 100MB로 설정
       max-request-size: 100MB  # 최대 요청 크기를 100MB로 설정
+
+openai:
+  api:
+    key: ${openai.api.key}

@@ -31,3 +31,49 @@ $(document).ready(function () {
         }
     });
 });
+
+var stompClient = null;
+
+function connect() {
+    var socket = new SockJS('/chat-websocket');
+    stompClient = Stomp.over(socket);
+    stompClient.connect({}, function(frame) {
+        console.log('Connected: ' + frame);
+        stompClient.subscribe('/topic/messages', function(response) {
+            showMessage(JSON.parse(response.body));
+        });
+    });
+}
+
+function sendMessage() {
+    var messageContent = $('#message').val();
+    var chatMessage = {
+        content: messageContent,
+    };
+    stompClient.send('/app/chat.sendMessage', {}, JSON.stringify(chatMessage));
+    $('#message').val('');
+    showUserMessage(chatMessage); // 사용자의 메시지를 바로 표시
+}
+
+function showMessage(message) {
+    var messageElement = $('<div class="message ai-message"></div>');
+    messageElement.html(message.content); // HTML로 처리
+    $('#chatArea').append(messageElement);
+    $('#chatArea').scrollTop($('#chatArea')[0].scrollHeight); // 스크롤을 아래로
+}
+
+function showUserMessage(message) {
+    var messageElement = $('<div class="message user-message"></div>');
+    messageElement.text(message.content); // 텍스트로 처리
+    $('#chatArea').append(messageElement);
+    $('#chatArea').scrollTop($('#chatArea')[0].scrollHeight); // 스크롤을 아래로
+}
+
+$(function () {
+    $('#connectBtn').click(function() {
+        connect();
+    });
+    $('#sendBtn').click(function() {
+        sendMessage();
+    });
+});
