@@ -14,8 +14,9 @@ import java.util.Map;
 
 @Service
 public class OpenAIService {
+//todo : open ai 사용할 때 이거 주석 해제해야 됨
 
-    @Value("${openai.api.key}")
+//    @Value("${openai.api.key}")
     private String apiKey;
 
     private final String apiUrl = "https://api.openai.com/v1/chat/completions";

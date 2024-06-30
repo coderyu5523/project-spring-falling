@@ -32,6 +32,9 @@
 @import url(subscription-list.css);
 @import url(my-subscription.css);
 
+/* ai */
+@import url(ai-chat.css);
+
 a:link, a:visited {
     color: black;
 }
