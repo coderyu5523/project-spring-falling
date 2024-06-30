@@ -155,10 +155,10 @@
 
     function sendMessage() {
         var messageContent = $('#message').val();
-        var username = $('#username').val();
+        // var username = $('#username').val();
         var chatMessage = {
             content: messageContent,
-            sender: username
+            // sender: username
         };
         stompClient.send('/app/chat.sendMessage', {}, JSON.stringify(chatMessage));
         $('#message').val('');
@@ -167,14 +167,14 @@
 
     function showMessage(message) {
         var messageElement = $('<div class="message ai-message"></div>');
-        messageElement.text(message.sender + ': ' + message.content);
+        messageElement.text(message.content);
         $('#chatArea').append(messageElement);
         $('#chatArea').scrollTop($('#chatArea')[0].scrollHeight); // 스크롤을 아래로
     }
 
     function showUserMessage(message) {
         var messageElement = $('<div class="message user-message"></div>');
-        messageElement.text(message.sender + ': ' + message.content);
+        messageElement.text(message.content);
         $('#chatArea').append(messageElement);
         $('#chatArea').scrollTop($('#chatArea')[0].scrollHeight); // 스크롤을 아래로
     }

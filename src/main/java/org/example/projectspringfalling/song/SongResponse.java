@@ -263,4 +263,23 @@ public class SongResponse {
             }
         }
     }
+
+    @Data
+    public static class AIChatDTO{
+        private Integer songId;
+        private String songTitle;
+        private String genre;
+        private String artistName;
+        private String albumTitle;
+        private Long listenCount;
+
+        public AIChatDTO(Song song) {
+            this.songId = song.getId();
+            this.songTitle = song.getTitle();
+            this.genre = song.getGenre();
+            this.artistName = song.getArtist().getName();
+            this.albumTitle = song.getAlbum().getTitle();
+            this.listenCount = song.getListenCount();
+        }
+    }
 }
