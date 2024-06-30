@@ -11,5 +11,6 @@ public class PaymentRequest {
         private String subscriptionPk; // 이용권 id
         private String name; // 상품 이름
         private String amount; // 결제 금액
+        private String payMethod; // 결제 방법
     }
 }

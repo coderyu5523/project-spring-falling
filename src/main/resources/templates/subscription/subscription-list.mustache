@@ -20,8 +20,8 @@
                     <div class="price">정가 8,000원</div>
                     <div style="color: white">100원</div>
                 </div>
-                <button class="image-button" id="plan-button1" data-subscription-pk="" data-name="(첫 구매) 무제한 듣기 정기결제"
-                        data-amount="100">구매
+                <button class="image-button" id="plan-button1" data-subscription-pk="1" data-name="(첫 구매) 무제한 듣기 정기결제"
+                        data-amount="1">구매
                 </button>
             </div>
         </div>
@@ -290,6 +290,7 @@
         var name = $("#plan-button1").data("name");
         var amount = $("#plan-button1").data("amount");
         var subscription_pk = $("#plan-button1").data("subscriptionPk")
+        console.log(merchant_uid + " " + name + " " + amount + " " + subscription_pk)
 
         var IMP = window.IMP;
         IMP.init("imp86167246");
@@ -304,18 +305,20 @@
                 }, function (response) {
                     if (response.success) {
                         $.ajax({
-                            url: "/payment",
+                            url: "/pay",
                             method: "POST",
                             contentType: "application/json",
-                            data: {
-                                imp_uid: response.imp_uid, // 결제 고유번호
-                                merchant_uid: response.merchant_uid, // 주문번호
+                            data: JSON.stringify({
+                                impUid: response.imp_uid, // 결제 고유번호
+                                merchantUid: response.merchant_uid, // 주문번호
                                 name: response.name,   // 상품 이름
-                                amount: response.amount, // 결제 금액
-                                subscription_pk: response.subscription_pk
-                            },
+                                amount: amount, // 결제 금액
+                                subscriptionPk: subscription_pk,
+                                payMethod: response.pay_method // 결제 방법 추가
+                            }),
                         }).done(function (data) {
                             alert("결제가 완료되었습니다.(" + merchant_uid + ")");
+                            window.location.href = data; // 메인 페이지로 리다이렉트
                         })
                     } else {
                         alert("결제에 실패하였습니다. 에러 내용: " + response.error_msg);

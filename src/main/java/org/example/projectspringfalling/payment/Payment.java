@@ -1,4 +1,5 @@
 package org.example.projectspringfalling.payment;
+
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,7 +21,7 @@ public class Payment {
     private Integer amount; // 결제 금액
     private String means; // 결제 수단
     private String status; // 결제 상태
-    private Integer transaction_id; // 결제서비스 제공자가 주는 거래 id
+    private String transaction_id; // 결제서비스 제공자가 주는 거래 id
 
     @CreationTimestamp
     private Timestamp createdAt; // 생성날짜
@@ -32,7 +33,7 @@ public class Payment {
     private Subscription subscription; // 이용권
 
     @Builder
-    public Payment(Integer id, Integer amount, String means, String status, Integer transaction_id, Timestamp createdAt, User user, Subscription subscription) {
+    public Payment(Integer id, Integer amount, String means, String status, String transaction_id, Timestamp createdAt, User user, Subscription subscription) {
         this.id = id;
         this.amount = amount;
         this.means = means;
