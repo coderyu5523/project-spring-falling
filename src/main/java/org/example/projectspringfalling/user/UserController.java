@@ -1,5 +1,6 @@
 package org.example.projectspringfalling.user;
 
+import org.springframework.ui.Model;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
@@ -59,14 +60,18 @@ public class UserController {
 
     // 로그인 페이지
     @GetMapping("/login-form")
-    public String loginForm() {
+    public String loginForm(Model model) {
+        // 모델값 검증
+        model.addAttribute("message", "회원 가입이 완료되었습니다.");
         return "user/login-form";
     }
 
     // 로그인
     @PostMapping("/login")
     public String login(UserRequest.LoginDTO reqDTO, HttpServletRequest request) {
+        System.out.println("111111111111");
         SessionUser sessionUser = userService.login(reqDTO);
+        System.out.println("2222222222");
         rt.opsForValue().set("sessionUser:" + session.getId(), sessionUser);
         session.setAttribute("sessionUser", sessionUser);
         return "redirect:/";

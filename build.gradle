@@ -47,6 +47,11 @@ dependencies {
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
     implementation group: 'com.redis.testcontainers', name: 'testcontainers-redis', version: '1.6.4'
 
+    // ai 관련
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.17.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '3.3.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-websocket', version: '3.3.1'
+
 
 }
 

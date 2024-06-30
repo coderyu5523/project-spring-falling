@@ -84,4 +84,7 @@ public interface SongRepository extends JpaRepository<Song, Integer> {
     // 관리자 앨범 상세보기의 장르들
     @Query("SELECT DISTINCT s.genre FROM Song s, Album a WHERE s.album.id = a.id AND a.id = :albumId")
     List<String> findAlbumGenre(Integer albumId);
+
+    @Query("select s,ar,al from Song s join fetch s.album al join fetch s.artist ar")
+    List<Song> findByJoinAlbumAndArtist();
 }

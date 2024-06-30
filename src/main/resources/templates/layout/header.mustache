@@ -14,6 +14,63 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
     <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <style>
+        /*<!--   회색 뜨는거 지우면 안됨     -->*/
+        .message {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+
+        .user-message {
+            background-color: #DCF8C6;
+            text-align: right;
+            float: right;
+            clear: both;
+        }
+
+        .ai-message {
+            background-color: #EDEDED;
+            text-align: left;
+            float: left;
+            clear: both;
+        }
+
+        #chatArea {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .ai-round-button {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .ai-round-button img {
+            display: block;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .a-link:hover {
+            text-decoration: underline !important;
+            color: inherit !important;
+        }
+    </style>
 </head>
 <body>
 <header class="header-main" style="margin-top: 10px">
@@ -57,8 +114,39 @@
                 <a href="/login-form" class="text-body">로그인</a>
                 <a href="/join-section" class="text-body">회원가입</a>
             {{/sessionUser}}
+            <a href="#chatModal" class="btn ai-round-button" id="connectBtn" data-bs-toggle="modal"
+               data-bs-target="#chatModal">
+                <img src="/images/AI.png" alt="AI Chat">
+            </a>
         </div>
     </nav>
 </header>
-<!-- header end -->
-<script type="module" src="/js/header.js"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chatModalLabel">Falling AI 챗봇입니다.🥳</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <br/>
+                <div id="chatArea"></div>
+                <br/>
+                <div>
+                    <textarea id="message" rows="3" cols="40"></textarea>
+                    <br/>
+                    <button id="sendBtn" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script src="/js/header.js"></script>
+
+
