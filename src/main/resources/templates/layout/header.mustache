@@ -7,12 +7,62 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Falling</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .message {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+            max-width: 80%;
+        }
+        .user-message {
+            background-color: #DCF8C6;
+            text-align: right;
+            float: right;
+            clear: both;
+        }
+        .ai-message {
+            background-color: #EDEDED;
+            text-align: left;
+            float: left;
+            clear: both;
+        }
+        #chatArea {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .round-button {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /*background-color: #007bff;*/
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            overflow: hidden;
+            padding: 0;
+        }
+        .round-button img {
+            display: block;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
 </head>
 <body>
 <header class="header-main" style="margin-top: 10px">
@@ -56,8 +106,90 @@
                 <a href="/login-form" class="text-body">로그인</a>
                 <a href="/join-section" class="text-body">회원가입</a>
             {{/sessionUser}}
+            <a href="#chatModal" class="btn round-button" id="connectBtn" data-bs-toggle="modal" data-bs-target="#chatModal">
+                <img src="/images/AI.png" alt="AI Chat">
+            </a>
         </div>
     </nav>
 </header>
-<!-- header end -->
-<script type="module" src="/js/header.js"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chatModalLabel">Chat with AI</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+<!--                <div>-->
+<!--                    <label for="username">Username:</label>-->
+<!--                    <input type="text" id="username"/>-->
+<!--                    <button id="connectBtn" class="btn btn-secondary">Connect</button>-->
+<!--                </div>-->
+                <br/>
+                <div id="chatArea"></div>
+                <br/>
+                <div>
+                    <textarea id="message" rows="3" cols="40"></textarea>
+                    <br/>
+                    <button id="sendBtn" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var stompClient = null;
+
+    function connect() {
+        var socket = new SockJS('/chat-websocket');
+        stompClient = Stomp.over(socket);
+        stompClient.connect({}, function(frame) {
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/topic/messages', function(response) {
+                showMessage(JSON.parse(response.body));
+            });
+        });
+    }
+
+    function sendMessage() {
+        var messageContent = $('#message').val();
+        var username = $('#username').val();
+        var chatMessage = {
+            content: messageContent,
+            sender: username
+        };
+        stompClient.send('/app/chat.sendMessage', {}, JSON.stringify(chatMessage));
+        $('#message').val('');
+        showUserMessage(chatMessage); // 사용자의 메시지를 바로 표시
+    }
+
+    function showMessage(message) {
+        var messageElement = $('<div class="message ai-message"></div>');
+        messageElement.text(message.sender + ': ' + message.content);
+        $('#chatArea').append(messageElement);
+        $('#chatArea').scrollTop($('#chatArea')[0].scrollHeight); // 스크롤을 아래로
+    }
+
+    function showUserMessage(message) {
+        var messageElement = $('<div class="message user-message"></div>');
+        messageElement.text(message.sender + ': ' + message.content);
+        $('#chatArea').append(messageElement);
+        $('#chatArea').scrollTop($('#chatArea')[0].scrollHeight); // 스크롤을 아래로
+    }
+
+    $(function () {
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+        });
+        $('#connectBtn').click(function() {
+            connect();
+        });
+        $('#sendBtn').click(function() {
+            sendMessage();
+        });
+    });
+</script>
+</body>
+</html>
