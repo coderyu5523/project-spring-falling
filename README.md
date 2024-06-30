@@ -79,13 +79,14 @@ https://www.music-flo.com/
 <br>
 
 # 6. 협업 전략
+![image](https://github.com/coderyu5523/project-spring-falling/assets/153602328/f1aef585-b13b-41b7-8b17-1f773800bb41)
 
 ### 회의
 
 - 매일 오전 15~30분 회의
 - 카톡, 슬랙 메신저 활용
 - 진행 상황 확인을 위해 google meet 활용
-- 각자 공부 내용 발표
+- 각자 공부 내용 발표 및 블로그 정리
 
 ### GitHub
 - Branch : 이니셜/패키지명/기능명 ex) rjs/welcome/login
