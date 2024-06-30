@@ -12,8 +12,7 @@ https://www.music-flo.com/
 
 ## PPT
 
-
-## 팀원 소개
+# 2.팀 소개
 
 ### 팀장
 |                                                         이름                                                        |                     프로필 사진                     |       GitHub 주소        |
@@ -28,6 +27,19 @@ https://www.music-flo.com/
 |                     서지민                  | <img src="https://avatars.githubusercontent.com/u/118310514?v=4" alt="profile" width="100" height="100"> | [@minmeanmin](https://github.com/minmeanmin)  |
 
 <br>
+
+# 3. 시나리오
+
+
+# 4. 진행상황
+
+## 류재성
+
+## 김정수
+
+## 김하형
+
+## 서지민
 
 
 # 5. 개발 환경
