@@ -7015,3 +7015,11 @@ values (1, 1, 100, '현대카드', 'cancelled', 'imp_123456789123', 1234567890);
 
 insert into payment_tb (user_id, subscription_id, amount, means, status, transaction_id, created_at)
 values (1, 1, 100, '현대카드', 'paid', 'imp_123456789124', 1234567891);
+
+-- 사용자 이용권 테이블
+
+insert into user_subscription_tb (user_id,subscription_id,start_date,status,created_at)
+values (1,1,'2024-06-30','사용중','2024-06-30');
+
+insert into user_subscription_tb (user_id,subscription_id,start_date,status,created_at)
+values (1,1,'2024-06-30','사용완료','2024-05-30');
