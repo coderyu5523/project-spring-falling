@@ -43,7 +43,9 @@ spring:
     multipart:
       max-file-size: 100MB   # 최대 파일 크기를 100MB로 설정
       max-request-size: 100MB  # 최대 요청 크기를 100MB로 설정
-
+iamport:
+  imp_key: 8686240311585256
+  imp_secret: sNoldhDwRQZWh0l8BotikhHrJPcGi89p4srjKjeXDKVhAFRrfK7u3WZRc5R4qosxTP1v0cgVGvZcPNfa
 openai:
   api:
     key: ${openai.api.key}

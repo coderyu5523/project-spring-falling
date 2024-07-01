@@ -6,6 +6,9 @@ import org.example.projectspringfalling._core.utils.ApiUtil;
 import org.example.projectspringfalling.history.HistoryResponse;
 import org.example.projectspringfalling.history.HistoryService;
 import org.example.projectspringfalling.like.LikeService;
+import org.example.projectspringfalling.payment.IamportService;
+import org.example.projectspringfalling.payment.PaymentRequest;
+import org.example.projectspringfalling.payment.PaymentService;
 import org.example.projectspringfalling.playlist.PlaylistService;
 import org.example.projectspringfalling.playlistSong.PlaylistSongRequest;
 import org.example.projectspringfalling.playlistSong.PlaylistSongService;
@@ -31,6 +34,22 @@ public class RestController {
     private final UserService userService;
     private final LikeService likeService;
     private final HistoryService historyService;
+    private final PaymentService paymentService;
+    private final IamportService iamportService;
+
+    // 결제 사전 검증
+    @PostMapping("/prepare-payment")
+    public ResponseEntity<?> preparePayment(@RequestBody PaymentRequest.PrepareDTO paymentRequest) {
+        return iamportService.preparePayment(paymentRequest);
+    }
+
+    // 구매 처리
+    @PostMapping("/pay")
+    public ResponseEntity<?> pay(@RequestBody PaymentRequest.PaymentDTO paymentDTO) {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        paymentService.savePayment(paymentDTO, sessionUser.getId());
+        return ResponseEntity.ok("redirect:/");
+    }
 
     // 필터 및 정렬
     @GetMapping("/{artistId}/sort-and-filter/songs")
