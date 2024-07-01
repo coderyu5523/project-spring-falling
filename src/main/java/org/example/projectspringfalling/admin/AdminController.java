@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,15 +19,15 @@ public class AdminController {
 
     // 앨범 상세보기
     @GetMapping("/admin/albums/{id}")
-    public String albumDetail(@PathVariable Integer id, HttpServletRequest request) {
-        request.setAttribute("album", adminService.getAlbum(id));
+    public String albumDetail(@PathVariable Integer id, Model model) {
+        model.addAttribute("album", adminService.getAlbum(id));
         return "admin/album-detail";
     }
 
     // 앨범 목록보기
     @GetMapping("/admin/albums")
-    public String albumList(HttpServletRequest request) {
-        request.setAttribute("albumList", adminService.getAlbumList());
+    public String albumList(Model model) {
+        model.addAttribute("albumList", adminService.getAlbumList());
         return "admin/album-list";
     }
 
@@ -38,15 +39,15 @@ public class AdminController {
 
     // 가수 상세보기
     @GetMapping("/admin/artists/{id}")
-    public String artistDetail(@PathVariable Integer id, HttpServletRequest request) {
-        request.setAttribute("artist", adminService.getArtist(id));
+    public String artistDetail(@PathVariable Integer id, Model model) {
+        model.addAttribute("artist", adminService.getArtist(id));
         return "admin/artist-detail";
     }
 
     // 가수 목록보기
     @GetMapping("/admin/artists")
-    public String artistList(HttpServletRequest request) {
-        request.setAttribute("artistList", adminService.getArtistList());
+    public String artistList(Model model) {
+        model.addAttribute("artistList", adminService.getArtistList());
 
         return "admin/artist-list";
     }
