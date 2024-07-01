@@ -22,6 +22,33 @@ public class IamportService {
     private String impSecret;
 
     @Transactional
+    public ResponseEntity<?> refundPayment(PaymentResponse.PaymentDetail.ResponseDTO reqDTO) {
+        String accessToken = getAccessToken();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-type", "application/json;charset=utf-8");
+        headers.add("Authorization", "Bearer " + accessToken);
+
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode body = mapper.createObjectNode();
+        body.put("imp_uid", reqDTO.getImp_uid());
+        body.put("merchant_uid", reqDTO.getMerchant_uid());
+        body.put("amount", reqDTO.getAmount());
+        body.put("refund_account", 0);
+
+        HttpEntity<String> request = new HttpEntity<>(body.toString(), headers);
+
+        ResponseEntity<PaymentResponse.RefundDTO> response = rt.exchange(
+                "https://api.iamport.kr/payments/cancel",
+                HttpMethod.POST,
+                request,
+                PaymentResponse.RefundDTO.class
+        );
+
+        return response;
+    }
+
+    @Transactional
     public String getAccessToken() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
