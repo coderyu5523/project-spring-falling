@@ -6997,6 +6997,14 @@ insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
 values (3, null, null, 31, '2024-06-22');
 
 
--- 이용권
+insert into reply_tb(content, user_id, album_id, created_at)
+values ('노래 진짜 못부르네', 3, 3, now()),
+       ('메롱', 4, 3, now());
+
+insert into report_tb(content, status, created_at, user_id, reply_id)
+values ('거짓말 하고 있어요', false, '2024-06-29', 1, 1),
+       ('기분이 나빠요', false, '2024-07-01', 1, 2);
+
 insert into subscription_tb(name, description, price, duration, created_at)
 values ('(첫 구매) 무제한 듣기 정기결제', '(첫 구매) 무제한 듣기 정기결제', 100, 31, '2024-07-01');
+
