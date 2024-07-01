@@ -154,4 +154,23 @@ public class AdminResponse {
             private String albumTitle;
         }
     }
+
+    // 신고 리스트
+    @AllArgsConstructor
+    @Data
+    public static class ReportedList {
+        private Integer reportId;
+        private String replyContent;
+        private String reportContent;
+        private Timestamp createdAt;
+        private Boolean status;
+
+        public String getCreatedAt() {
+            return timestampToString(this.createdAt);
+        }
+
+        public String getStatus() {
+            return this.status ? "처리완료" : "처리중";
+        }
+    }
 }

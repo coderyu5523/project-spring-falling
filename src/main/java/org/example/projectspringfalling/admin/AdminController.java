@@ -5,7 +5,9 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @RequiredArgsConstructor
 @Controller
@@ -57,7 +59,8 @@ public class AdminController {
 
     // 신고 목록 보기
     @GetMapping("/admin/reports")
-    public String reportList() {
+    public String reportList(HttpServletRequest request) {
+        request.setAttribute("reportList", adminService.getReportList());
         return "admin/report-list";
     }
 
