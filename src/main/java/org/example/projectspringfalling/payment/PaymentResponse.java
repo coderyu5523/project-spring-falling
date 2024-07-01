@@ -63,4 +63,47 @@ public class PaymentResponse {
             private Integer paid_at; // 결제 시각(결제완료가 안 된 경우 0으로 표시)
         }
     }
+
+    @Data
+    public static class RefundDTO {
+        @JsonProperty("code") // 이렇게 해주면 access_token으로 파싱된 값이 accessToken에 들어간다.(jackson 라이브러리)
+        private Integer code;
+
+        @JsonProperty("message")
+        private String message;
+
+        @JsonProperty("response")
+        private ResponseDTO response;
+
+        @Data
+        public static class ResponseDTO {
+            @JsonProperty("imp_uid")
+            private String imp_uid;
+
+            @JsonProperty("merchant_uid")
+            private String merchant_uid;
+
+            @JsonProperty("pay_method")
+            private String pay_method;
+
+            @JsonProperty("card_name")
+            private String card_name;
+
+            @JsonProperty("name")
+            private String name;
+
+            @JsonProperty("amount")
+            private Integer amount;
+            
+            @JsonProperty("cancel_amount")
+            private Integer cancel_amount;
+
+            @JsonProperty("status")
+            private String status; // 결제 상태
+
+            @JsonProperty("paid_at")
+            private Integer paid_at; // 결제 시각(결제완료가 안 된 경우 0으로 표시)
+        }
+    }
+
 }

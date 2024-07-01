@@ -21,6 +21,35 @@ public class IamportService {
     @Value("${iamport.imp_secret}")
     private String impSecret;
 
+    // 환불
+    @Transactional
+    public ResponseEntity<PaymentResponse.RefundDTO> refundPayment(PaymentResponse.PaymentDetail.ResponseDTO reqDTO) {
+        String accessToken = getAccessToken();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-type", "application/json;charset=utf-8");
+        headers.add("Authorization", "Bearer " + accessToken);
+
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode body = mapper.createObjectNode();
+        body.put("imp_uid", reqDTO.getImp_uid());
+        body.put("merchant_uid", reqDTO.getMerchant_uid());
+        body.put("amount", reqDTO.getAmount());
+        body.put("refund_account", 0);
+
+        HttpEntity<String> request = new HttpEntity<>(body.toString(), headers);
+
+        ResponseEntity<PaymentResponse.RefundDTO> response = rt.exchange(
+                "https://api.iamport.kr/payments/cancel",
+                HttpMethod.POST,
+                request,
+                PaymentResponse.RefundDTO.class
+        );
+
+        return response;
+    }
+
+    // access 토큰 발급
     @Transactional
     public String getAccessToken() {
         HttpHeaders headers = new HttpHeaders();
@@ -40,14 +69,14 @@ public class IamportService {
                 PaymentResponse.TokenDTO.class
         );
 
-        if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
+        if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) { // HTTP 응답 상태 코드가 200번대 + 응답 본문이 비어있지 않다면
             return response.getBody().getResponse().getAccessToken();
         }
 
         throw new RuntimeException("Failed to get access token from Iamport API");
     }
 
-    @Transactional
+    // 결제 상세 정보
     public ResponseEntity<PaymentResponse.PaymentDetail> paymentDetail(String impUid, String accessToken) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-type", "application/json;charset=utf-8");
@@ -66,10 +95,9 @@ public class IamportService {
         return response;
     }
 
+    // 결제 사전 검증 (금액 위조 방지)
     @Transactional
     public ResponseEntity<String> preparePayment(PaymentRequest.PrepareDTO paymentRequest) {
-        RestTemplate rt = new RestTemplate();
-
         String accessToken = getAccessToken();
 
         HttpHeaders headers = new HttpHeaders();

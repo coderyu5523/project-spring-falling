@@ -12,6 +12,10 @@
             <div class="content">
                 <div class="header">사용 중인 이용권이 없습니다.</div>
                 <button class="plan-button">이용권 구매</button>
+                <button class="plan-button" id="refund-button" data-amount="{{payment.amount}}"
+                        data-transaction-id="{{payment.transactionId}}">
+                    이용권 환불
+                </button>
             </div>
         </div>
 
@@ -30,10 +34,10 @@
         </div>
     </div>
 </div>
-
+<script
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"
+></script>
 <script type="module" src="/js/my-subscription.js"></script>
-
-
-
 
 {{>layout/footer}}
