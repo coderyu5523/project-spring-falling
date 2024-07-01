@@ -4,11 +4,10 @@ import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.AlbumRepository;
 import org.example.projectspringfalling.artist.ArtistRepository;
+import org.example.projectspringfalling.report.ReportRepository;
 import org.example.projectspringfalling.song.SongRepository;
-import org.example.projectspringfalling.user.SessionUser;
 import org.example.projectspringfalling.user.UserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,6 +21,7 @@ public class AdminService {
     private final SongRepository songRepository;
     private final AlbumRepository albumRepository;
     private final ArtistRepository artistRepository;
+    private final ReportRepository reportRepository;
 
     // 관리자 로그인
     public Admin login(AdminRequest.LoginDTO reqDTO) {
@@ -76,5 +76,15 @@ public class AdminService {
     // 유저 목록보기
     public AdminResponse.UserListDTO getUserList() {
         return new AdminResponse.UserListDTO(userRepository.findUserList());
+    }
+
+    // 신고 목록보기
+    public List<AdminResponse.ReportedList> getReportList() {
+        return reportRepository.findAllReportedList();
+    }
+
+    // 신고 상세보기
+    public AdminResponse.ReportedDetailDTO getReportById(Integer reportId) {
+        return reportRepository.findOneReport(reportId);
     }
 }
