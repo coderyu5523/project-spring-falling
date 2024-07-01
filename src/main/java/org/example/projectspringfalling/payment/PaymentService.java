@@ -34,7 +34,7 @@ public class PaymentService {
                 .user(user)
                 .status(response.getBody().getResponse().getStatus())
                 .subscription(subscription)
-                .transaction_id(response.getBody().getResponse().getImp_uid())
+                .transactionId(response.getBody().getResponse().getImp_uid())
                 .createdAt(response.getBody().getResponse().getPaid_at())
                 .build();
         paymentRepository.save(payment);

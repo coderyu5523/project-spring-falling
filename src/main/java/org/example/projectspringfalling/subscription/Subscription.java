@@ -3,9 +3,11 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.projectspringfalling.song.Song;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
@@ -22,6 +24,7 @@ public class Subscription {
 
     @CreationTimestamp
     private Timestamp createdAt; // 생성날짜
+
 
     @Builder
     public Subscription(Integer id, String name, String description, Integer price, Integer duration, Timestamp createdAt) {

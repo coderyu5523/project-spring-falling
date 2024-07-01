@@ -31,6 +31,7 @@ public class UserSubscription {
     @ManyToOne(fetch = FetchType.LAZY)
     private Subscription subscription; // 이용권
 
+
     @Builder
     public UserSubscription(Integer id, Timestamp startDate, Timestamp endDate, String status, Timestamp createdAt, User user, Subscription subscription) {
         this.id = id;
