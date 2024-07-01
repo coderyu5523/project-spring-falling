@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -16,6 +17,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @Getter
 @EnableRedisHttpSession
 @Configuration
+@Profile("test") // "test" 프로파일에서만 활성화
 public class RedisConfig {
 
     @Value("${spring.data.redis.host}") // 이렇게 하면 yml에서 설정된 값을 가져올 수 있다.
