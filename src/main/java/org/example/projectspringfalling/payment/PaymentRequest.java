@@ -13,4 +13,10 @@ public class PaymentRequest {
         private String amount; // 결제 금액
         private String payMethod; // 결제 방법
     }
+
+    @Data
+    public static class PrepareDTO {
+        private String merchant_uid;
+        private Integer amount;
+    }
 }

@@ -1,4 +1,66 @@
 package org.example.projectspringfalling.payment;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+
 public class PaymentResponse {
+    @Data
+    public static class TokenDTO {
+        @JsonProperty("code") // 이렇게 해주면 access_token으로 파싱된 값이 accessToken에 들어간다.(jackson 라이브러리)
+        private Integer code;
+
+        @JsonProperty("message")
+        private String message;
+
+        @JsonProperty("response")
+        private ResponseDTO response;
+
+        @Data
+        public static class ResponseDTO {
+            @JsonProperty("access_token")
+            private String accessToken;
+
+            @JsonProperty("now")
+            private Long now;
+
+            @JsonProperty("expired_at")
+            private Long expiredAt;
+        }
+    }
+
+    @Data
+    public static class PaymentDetail {
+        @JsonProperty("code") // 이렇게 해주면 access_token으로 파싱된 값이 accessToken에 들어간다.(jackson 라이브러리)
+        private Integer code;
+
+        @JsonProperty("message")
+        private String message;
+
+        @JsonProperty("response")
+        private ResponseDTO response;
+
+        @Data
+        public static class ResponseDTO {
+            @JsonProperty("amount")
+            private Integer amount;
+
+            @JsonProperty("card_name")
+            private String card_name;
+
+            @JsonProperty("imp_uid")
+            private String imp_uid;
+
+            @JsonProperty("merchant_uid")
+            private String merchant_uid;
+
+            @JsonProperty("name")
+            private String name;
+
+            @JsonProperty("status")
+            private String status; // 결제 상태
+
+            @JsonProperty("paid_at")
+            private Integer paid_at; // 결제 시각(결제완료가 안 된 경우 0으로 표시)
+        }
+    }
 }
