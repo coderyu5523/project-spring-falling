@@ -3,6 +3,7 @@ package org.example.projectspringfalling.RestAPI;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
+import org.example.projectspringfalling._core.utils.RedisUtil;
 import org.example.projectspringfalling.history.HistoryResponse;
 import org.example.projectspringfalling.history.HistoryService;
 import org.example.projectspringfalling.like.LikeService;
@@ -36,11 +37,12 @@ public class RestController {
     private final HistoryService historyService;
     private final PaymentService paymentService;
     private final IamportService iamportService;
+    private final RedisUtil redisUtil;
 
     // 환불
     @PostMapping("/refund-payment")
     public ResponseEntity<?> refundPayment(@RequestBody PaymentRequest.RefundInfoDTO req) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         paymentService.refundPayment(req, sessionUser);
         return ResponseEntity.ok("redirect:/");
     }
@@ -54,7 +56,7 @@ public class RestController {
     // 구매 처리
     @PostMapping("/pay")
     public ResponseEntity<?> pay(@RequestBody PaymentRequest.PaymentDTO paymentDTO) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         paymentService.savePayment(paymentDTO, sessionUser.getId());
         return ResponseEntity.ok("redirect:/");
     }
@@ -87,35 +89,35 @@ public class RestController {
     // 플레이리스트 모달
     @GetMapping("/storage/my-list")
     public ResponseEntity<?> storageMyList() {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         return ResponseEntity.ok(new ApiUtil<>(playlistService.getMyList(sessionUser.getId())));
     }
 
     // 보관함 - 좋아요(곡)
     @GetMapping("/storage/like-song")
     public ResponseEntity<?> storageLikedSongs() {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         return ResponseEntity.ok(new ApiUtil<>(likeService.getLikedSongs(sessionUser.getId())));
     }
 
     // 보관함 - 좋아요(앨범)
     @GetMapping("/storage/like-album")
     public ResponseEntity<?> storageLikedAlbums() {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         return ResponseEntity.ok(new ApiUtil<>(likeService.getLikedAlbums(sessionUser.getId())));
     }
 
     // 보관함 - 좋아요(아티스트)
     @GetMapping("/storage/like-artist")
     public ResponseEntity<?> storageLikedArtists() {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         return ResponseEntity.ok(new ApiUtil<>(likeService.getLikedArtists(sessionUser.getId())));
     }
 
     // 보관함 - 최근 감상
     @GetMapping("/storage/recent-song")
     public ResponseEntity<?> storageRecentSongs() {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         return ResponseEntity.ok(new ApiUtil<>(historyService.getRecentSongs(sessionUser.getId())));
     }
 
@@ -136,7 +138,7 @@ public class RestController {
     // 앨범 좋아요 하기
     @PostMapping("/albums/like")
     public ResponseEntity<?> likeAlbum(@RequestBody Integer albumId) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         likeService.saveLikeAlbum(sessionUser.getId(), albumId);
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
@@ -144,7 +146,7 @@ public class RestController {
     // 앨범 좋아요 삭제
     @DeleteMapping("/albums/like")
     public ResponseEntity<?> deleteAlbumLike(@RequestBody Integer albumId) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         likeService.deleteLikeAlbum(sessionUser.getId(), albumId);
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
@@ -152,7 +154,7 @@ public class RestController {
     // 곡 좋아요 하기
     @PostMapping("/songs/like")
     public ResponseEntity<?> likeSong(@RequestBody Integer songId) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         likeService.saveLikeSong(sessionUser.getId(), songId);
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
@@ -160,7 +162,7 @@ public class RestController {
     // 곡 좋아요 삭제
     @DeleteMapping("/songs/like")
     public ResponseEntity<?> deleteSongLike(@RequestBody Integer songId) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         likeService.deleteLikeSong(sessionUser.getId(), songId);
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
@@ -168,7 +170,7 @@ public class RestController {
     // 아티스트 좋아요 하기
     @PostMapping("/artists/like")
     public ResponseEntity<?> likeArtist(@RequestBody Integer artistId) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         likeService.saveLikeArtist(sessionUser.getId(), artistId);
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
@@ -176,7 +178,7 @@ public class RestController {
     // 아티스트 좋아요 삭제
     @DeleteMapping("/artists/like")
     public ResponseEntity<?> deleteArtistLike(@RequestBody Integer artistId) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         likeService.deleteLikeArtist(sessionUser.getId(), artistId);
         return ResponseEntity.ok(new ApiUtil<>(null));
     }
@@ -190,7 +192,7 @@ public class RestController {
     // 현재 비밀번호 일치 확인
     @GetMapping("/api/password-same-check")
     public @ResponseBody ApiUtil<Boolean> passwordSameCheck(@RequestParam String inputPassword) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         Boolean isValid = userService.passwordCheck(sessionUser.getEmail(), inputPassword);
         return new ApiUtil<>(isValid);
     }
@@ -204,7 +206,7 @@ public class RestController {
 
     @PostMapping("/api/history")
     public HistoryResponse.SaveDTO history(Integer songId) {
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         return historyService.saveHistory(sessionUser, songId);
     }
 }

@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -80,24 +81,24 @@ public class AdminController {
 
     // 곡 목록보기
     @GetMapping("/admin/songs")
-    public String songList(HttpServletRequest request) {
-        request.setAttribute("songList", adminService.getSongList());
+    public String songList(Model model) {
+        model.addAttribute("songList", adminService.getSongList());
         return "admin/song-list";
     }
 
     // 회원 상세보기
     @GetMapping("/admin/users/{id}")
-    public String userDetail(@PathVariable Integer id, HttpServletRequest request) {
-        request.setAttribute("user", adminService.getUser(id));
+    public String userDetail(@PathVariable Integer id, Model model) {
+        model.addAttribute("user", adminService.getUser(id));
 
         return "admin/user-detail";
     }
 
     // 회원 목록보기
     @GetMapping("/admin/users")
-    public String userList(HttpServletRequest request) {
+    public String userList(Model model) {
 
-        request.setAttribute("userList", adminService.getUserList());
+        model.addAttribute("userList", adminService.getUserList());
 
         return "admin/user-list";
     }

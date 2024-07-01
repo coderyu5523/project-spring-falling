@@ -1,14 +1,11 @@
 package org.example.projectspringfalling.playlist;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import java.util.List;
 
 @RequiredArgsConstructor
 @Controller
@@ -24,9 +21,9 @@ public class PlaylistController {
 
     // 플레이리스트 보기
     @GetMapping("/playlists/{playlistId}")
-    public String playlist(HttpServletRequest request, @PathVariable Integer playlistId) {
+    public String playlist(Model model, @PathVariable Integer playlistId) {
         PlaylistResponse.PlaylistDetailDTO resp = playlistService.playlistDetail(playlistId);
-        request.setAttribute("playlist", resp);
+        model.addAttribute("playlist", resp);
         return "playlist/playlist";
     }
 
