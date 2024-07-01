@@ -822,7 +822,8 @@ VALUES ('The 4th Mini Album ''VERSUS''', '카카오엔터테인먼트', 'BIGPLAN
 그들이 준비한 다섯 트랙을 모두 다 듣고 나면 그들의 고민과 선택이 우리를 좋은 길로 안내할 것이란 믿음이 확신이 되어 VIVIZ에게 운명처럼 이끌릴 것이다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('H1-KEY 1st Mini Album [Rose Blossom]', 'Sony Music', 'GLG', '국내', '미니', '/upload/album/Rose Blossom.jpg', 61, '2023-01-05', '완전히 새로워진 비주얼과 더욱 당당해진 태도로 돌아온 하이키!
+VALUES ('H1-KEY 1st Mini Album [Rose Blossom]', 'Sony Music', 'GLG', '국내', '미니', '/upload/album/Rose Blossom.jpg', 61,
+        '2023-01-05', '완전히 새로워진 비주얼과 더욱 당당해진 태도로 돌아온 하이키!
 데뷔 1주년에 맞춰 2023년 1월 5일 컴백!
 꿈을 포기하지 않고 악착같이 피어나려는 이들에게 바치는 앨범 [Rose Blossom]
 
@@ -841,7 +842,8 @@ VALUES ('거북이 사요!!', null, '아이에스뮤직스', '국내', '정규',
 비행(飛行)과 비행(非行)의 의미를 유쾌하게 풀어 낸 "비행기"를 비롯, 90년대 풍의 강렬한 힙합 댄스 "우습단 말야", 후렴구를 제창해 풍성함을 살린 "Remember me", 여름을 위한 특화 곡 "여행이야"와 공백기 동안 무대 위에 벅차는 순간을 상상하며 써내려 간 "꼭" 등 전체적으로 밝고 경쾌한 매력이 인상적이다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('MILLION DOLLAR BABY', 'Universal Music Group', 'PULSE Records', '해외', '싱글', '/upload/album/MILLION DOLLAR BABY.jpg', 63, '2024-06-04', null);
+VALUES ('MILLION DOLLAR BABY', 'Universal Music Group', 'PULSE Records', '해외', '싱글',
+        '/upload/album/MILLION DOLLAR BABY.jpg', 63, '2024-06-04', null);
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
 VALUES ('청연', 'NHN벅스', '진엔원뮤직웍스', '국내', 'OST/BGM', '/upload/album/청연.jpg', 64, '2005-12-22', '최고의 아티스트 [이승철]과 최고의 영화 [청연]과의 만남만으로도 설레이는 O.S.T
@@ -864,7 +866,8 @@ VALUES ('올래', '카카오엔터테인먼트', '㈜ 아이더블유 ENTERTAINM
 그 외에도 80년대 유행했던 스타일의 복고풍 댄스곡 [불나비], [스타킹]과 가야금을 사용한 전주, 간주의 톡톡 튀는 편곡이 재미를 더한 네오 트로트 곡 [아차차]가 수록되어있다. 더불어 라틴댄스풍의 [카사노바]와 아르메니아 ‘두둑’, 인도 ‘산투르’, 일본 ‘코토’등 각 나라의 전통악기가 어우러져 만들어낸 오리엔탈느낌의 발라드곡인 [송인], [초혼]이 더해진 이번 앨범을 통해 다양한 음악적 시도를 꾀한 장윤정의 노력을 엿볼 수가 있다.');
 
 INSERT INTO album_tb (title, distributor, agency, nationality, category, album_img, artist_id, created_at, intro)
-VALUES ('내일은 미스터트롯 데스매치 PART1', '카카오엔터테인먼트', 'TV CHOSUN, (주)쇼플레이', '국내', '싱글', '/upload/album/내일은미스터트롯데스매치1.jpg', 66, '2020-01-30', '내일은 미스터트롯 <데스매치 PART1>
+VALUES ('내일은 미스터트롯 데스매치 PART1', '카카오엔터테인먼트', 'TV CHOSUN, (주)쇼플레이', '국내', '싱글', '/upload/album/내일은미스터트롯데스매치1.jpg', 66,
+        '2020-01-30', '내일은 미스터트롯 <데스매치 PART1>
 
 대한민국에 트롯열풍을 일으키고 있는 TV조선 내일은 미스터트롯!!
 예선, 본선1차전을 거쳐 올라온 30명의 1:1 데스매치 방송분 음원공개 (2020년 1월 23일 4회 방송)
@@ -6028,401 +6031,405 @@ VALUES ('MANIAC', 'Jack Brady, Jordan Roman, Chloe Copoloff, Austin Nicole Wolfe
         Yeah yeah woo woo woo', 60, 31841);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('건물 사이에 피어난 장미 (Rose Blossom)', '홍지상, Hong Ji Sang', 'Young K', '/upload/song/건물 사이에 피어난 장미.mp4', 'Dance', true, '/upload/song/건물 사이에 피어난 장미.mp3', '2023-01-05', 61,
-'건물 사이에 피어난 장미
-제발 살아남아 줬으면
-꺾이지 마 잘 자라줘
-온몸을 덮고 있는 가시
-얼마나 힘이 들었으면
-견뎌내줘서 고마워
-예쁘지 않은 꽃은 다들
-골라내고 잘라내
-예쁘면 또 예쁜 대로
-꺾어 언젠가는 시들고
-왜 내버려 두지를 못해
-그냥 가던 길 좀 가
-어렵게 나왔잖아
-악착같이 살잖아 hey
-나는 건물 사이에 피어난 장미
-삭막한 이 도시가
-아름답게 물들 때까지
-고갤 들고 버틸게 끝까지
-모두가 내 향길 맡고 취해
-웃을 때까지
-Oh oh oh oh
-No I''m not goin'' down
-I''ll be alright
-Yeh I''m only goin'' up
-and Imma be alright
-Hey
-내가 원해서 여기서 나왔냐고
-원망해 봐도 안 달라져 하나도
-지나고 돌아보면
-앞만 보던 내가 보여
-그때그때 잘 견뎌냈다고
-생각 안 해 그냥 날 믿었다고
-거센 바람이 불어와
-내 살을 베려 해도
-자꾸 벌레들이 나를
-괴롭히고 파고들어도
-No 언제나 굴하지 않고
-쓰러지지 않아 난
-어렵게 나왔잖아
-악착같이 살잖아
-나는 건물 사이에 피어난 장미
-삭막한 이 도시가
-아름답게 물들 때까지
-고갤 들고 버틸게 끝까지
-모두가 내 향길 맡고
-취해 웃을 때까지
-Keep it up
-Oh oh oh oh
-It''s a song for you and I
-Say that we''re alive
-Celebrate it now
-나는 건물 사이에 피어난 장미
-삭막한 이 도시가
-아름답게 물들 때까지
-고갤 들고 버틸게 끝까지
-모두가 내 향길 맡고
-취해 웃을 때까지
-Keep it up
-Oh oh oh oh
-No I''m not goin'' down
-I''ll be alright
-Yeh I''m only goin'' up
-and Imma be alright
-Hey
-Keep it up
-Oh oh oh oh
-No I''m not goin'' down
-I''ll be alright
-Yeh I''m growin'' up
-and Imma be alright
-Hey', 61, 55028);
+                     lyrics, artist_id, listen_count)
+VALUES ('건물 사이에 피어난 장미 (Rose Blossom)', '홍지상, Hong Ji Sang', 'Young K', '/upload/song/건물 사이에 피어난 장미.mp4', 'Dance', true,
+        '/upload/song/건물 사이에 피어난 장미.mp3', '2023-01-05', 61,
+        '건물 사이에 피어난 장미
+        제발 살아남아 줬으면
+        꺾이지 마 잘 자라줘
+        온몸을 덮고 있는 가시
+        얼마나 힘이 들었으면
+        견뎌내줘서 고마워
+        예쁘지 않은 꽃은 다들
+        골라내고 잘라내
+        예쁘면 또 예쁜 대로
+        꺾어 언젠가는 시들고
+        왜 내버려 두지를 못해
+        그냥 가던 길 좀 가
+        어렵게 나왔잖아
+        악착같이 살잖아 hey
+        나는 건물 사이에 피어난 장미
+        삭막한 이 도시가
+        아름답게 물들 때까지
+        고갤 들고 버틸게 끝까지
+        모두가 내 향길 맡고 취해
+        웃을 때까지
+        Oh oh oh oh
+        No I''m not goin'' down
+        I''ll be alright
+        Yeh I''m only goin'' up
+        and Imma be alright
+        Hey
+        내가 원해서 여기서 나왔냐고
+        원망해 봐도 안 달라져 하나도
+        지나고 돌아보면
+        앞만 보던 내가 보여
+        그때그때 잘 견뎌냈다고
+        생각 안 해 그냥 날 믿었다고
+        거센 바람이 불어와
+        내 살을 베려 해도
+        자꾸 벌레들이 나를
+        괴롭히고 파고들어도
+        No 언제나 굴하지 않고
+        쓰러지지 않아 난
+        어렵게 나왔잖아
+        악착같이 살잖아
+        나는 건물 사이에 피어난 장미
+        삭막한 이 도시가
+        아름답게 물들 때까지
+        고갤 들고 버틸게 끝까지
+        모두가 내 향길 맡고
+        취해 웃을 때까지
+        Keep it up
+        Oh oh oh oh
+        It''s a song for you and I
+        Say that we''re alive
+        Celebrate it now
+        나는 건물 사이에 피어난 장미
+        삭막한 이 도시가
+        아름답게 물들 때까지
+        고갤 들고 버틸게 끝까지
+        모두가 내 향길 맡고
+        취해 웃을 때까지
+        Keep it up
+        Oh oh oh oh
+        No I''m not goin'' down
+        I''ll be alright
+        Yeh I''m only goin'' up
+        and Imma be alright
+        Hey
+        Keep it up
+        Oh oh oh oh
+        No I''m not goin'' down
+        I''ll be alright
+        Yeh I''m growin'' up
+        and Imma be alright
+        Hey', 61, 55028);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('비행기', '임성훈', '임성훈', '/upload/song/비행기.mp4', 'Dance', true, '/upload/song/비행기.mp3', '2006-07-20', 62,
-'Yes Turtles Forth album
-New mind New song
-철없을 적 내 기억속에
-비행기 타고가요
-Yeah Let''s go
-파란 하늘위로 훨훨 날아가겠죠
-어려서 꿈꾸었던 비행기 타고
-기다리는 동안 아무말도 못해요
-내 생각 말할순 없어요
-모든 준비 다 끝났어
-곱게 차려 입고 나선
-바깥 풍경마저 들뜬 기분
-때가 왔어 하늘위로
-날으는 순간이야
-조금은 두려워도
-애써 내색 할 순 없어
-이번이 처음이지만
-전에 자주 비행했었잖아
-친구들과 말썽장이
-거북이 비행기로 올라타
-준비됐나
-수많은 사람들 속을 지나쳐
-마지막 게이트야
-나도 모르게 안절부절하고 있어
-이럴 땐 침착해 좀 자연스럽게
-파란 하늘위로 훨훨 날아가겠죠
-어려서 꿈꾸었던 비행기 타고
-기다리는 동안 아무말도 못해요
-내 생각 말할순 없어요
-Yes Remember
-비행기를 타고 가던 너
-따라가고 싶어 울었던
-철없을 적 내 기억속에
-비행기 타고가요
-Yes Fly 다들 아무 일도 없는 듯
-하늘을 나르는데 아무걱정 없는 듯
-왠지 철닥서니 없었나 문득
-이런 내 모습 촌스러 입 다문듯
-쳐다보지 말아요
-다들 처음 탈 때 이러지 않았나요
-딴 데 봐요
-신경 쓰지 마요
-나 혼자 이런게 나 좋아요
-어떤 느낌일까 정말
-새들처럼 나는 기분
-세상 모든 것이 점처럼
-보 여 지겠지
-개구쟁이 거북이
-비행기로 드디어 출발한다
-수많은 사람들 속을 지나쳐
-마지막 게이트야
-나도 모르게 안절부절하고 있어
-이럴 땐 침착해 좀 자연스럽게
-파란 하늘위로 훨훨 날아가겠죠
-어려서 꿈꾸었던 비행기 타고
-기다리는 동안 아무말도 못해요
-내 생각 말할순 없어요
-파란 하늘위로 훨훨 날아가겠죠
-어려서 꿈꾸었던 비행기 타고
-기다리는 동안 아무말도 못해요
-내 생각 말할순 없어요 Yes Remember
-비행기를 타고 가던 너
-따라가고 싶어 울었던
-철없을 적 내 기억속에
-비행기 타고가요', 62, 168130);
+        'Yes Turtles Forth album
+        New mind New song
+        철없을 적 내 기억속에
+        비행기 타고가요
+        Yeah Let''s go
+        파란 하늘위로 훨훨 날아가겠죠
+        어려서 꿈꾸었던 비행기 타고
+        기다리는 동안 아무말도 못해요
+        내 생각 말할순 없어요
+        모든 준비 다 끝났어
+        곱게 차려 입고 나선
+        바깥 풍경마저 들뜬 기분
+        때가 왔어 하늘위로
+        날으는 순간이야
+        조금은 두려워도
+        애써 내색 할 순 없어
+        이번이 처음이지만
+        전에 자주 비행했었잖아
+        친구들과 말썽장이
+        거북이 비행기로 올라타
+        준비됐나
+        수많은 사람들 속을 지나쳐
+        마지막 게이트야
+        나도 모르게 안절부절하고 있어
+        이럴 땐 침착해 좀 자연스럽게
+        파란 하늘위로 훨훨 날아가겠죠
+        어려서 꿈꾸었던 비행기 타고
+        기다리는 동안 아무말도 못해요
+        내 생각 말할순 없어요
+        Yes Remember
+        비행기를 타고 가던 너
+        따라가고 싶어 울었던
+        철없을 적 내 기억속에
+        비행기 타고가요
+        Yes Fly 다들 아무 일도 없는 듯
+        하늘을 나르는데 아무걱정 없는 듯
+        왠지 철닥서니 없었나 문득
+        이런 내 모습 촌스러 입 다문듯
+        쳐다보지 말아요
+        다들 처음 탈 때 이러지 않았나요
+        딴 데 봐요
+        신경 쓰지 마요
+        나 혼자 이런게 나 좋아요
+        어떤 느낌일까 정말
+        새들처럼 나는 기분
+        세상 모든 것이 점처럼
+        보 여 지겠지
+        개구쟁이 거북이
+        비행기로 드디어 출발한다
+        수많은 사람들 속을 지나쳐
+        마지막 게이트야
+        나도 모르게 안절부절하고 있어
+        이럴 땐 침착해 좀 자연스럽게
+        파란 하늘위로 훨훨 날아가겠죠
+        어려서 꿈꾸었던 비행기 타고
+        기다리는 동안 아무말도 못해요
+        내 생각 말할순 없어요
+        파란 하늘위로 훨훨 날아가겠죠
+        어려서 꿈꾸었던 비행기 타고
+        기다리는 동안 아무말도 못해요
+        내 생각 말할순 없어요 Yes Remember
+        비행기를 타고 가던 너
+        따라가고 싶어 울었던
+        철없을 적 내 기억속에
+        비행기 타고가요', 62, 168130);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('MILLION DOLLAR BABY', 'Tommy Richman, Gideon Endalkachew', 'Tommy Richman, Gideon Endalkachew', null, 'HipHop', true, '/upload/song/MILLION DOLLAR BABY.mp3', '2024-04-26', 63,
-'Do it, baby, do what I should think
-Do it, do it, baby, do what I could think
-Do it, do it, baby, do what I should think
-Do it, do it, baby, do what I could think
-Do it, do it, do it, baby, do what I should think
-Do it, baby, do what I could think
-Do it, do it, do it, baby, do what I should think
-Do it, do it baby, do what I could think
-I ain''t never rep a set, baby, I ain''t do no wrong
-I could clean up good for you, oh, I know right from wrong
-''Cause I wanna make it so badly
-I''m a million dollar baby, don''t at me (yeah)
-Hell nah (yeah, yeah), you rep my city for so damn long (ah, ah)
-But you still don''t notice me, my sound next
-VA next (yeah, yeah), I''m at they neck (yeah, yeah)
-I''m running up a check (yeah, yeah, yeah, yeah)
-She a bad lil'' mama, she a diva
-No matter what happens, he cannot come between
-Us again
-I know we''re better than friends (better than friends)
-I took her to Queen''s Gambit (yeah, yeah)
-Showed around my friends (right now)
-Tried to pick some energy up, it don''t matter (matter)
-I know you haven''t moved on, if you tried (oh, no)
-I don''t believe it, baby, I know you lied (oh, no)
-All night long (oh, no)
-What you mean I changed? (Oh, no) haven''t stayed the same
-I''ve been losing my mind (ooh, ooh, ooh)
-I said, "The city is mine" (ooh, ooh, ooh)
-I ain''t never rep a set, baby, I ain''t do no wrong
-I could clean up, do it for you, oh, I know right from wrong
-''Cause I wanna make it, so badly
-I''m a million dollar baby, don''t at me (yeah)
-I ain''t never rep a set, baby, I ain''t do no wrong
-I could clean up good for you, oh, I know right from wrong
-''Cause I wanna make it so badly
-I''m a million dollar baby, don''t at me (yeah)
-Hell nah
-Hell-hell nah, yeah, yeah
-Hell-hell nah (do it, do it, baby, do what I should think)
-Hell-hell nah (do it, do it, baby, do what I could think)
-Hell-hell nah (do it, do it, baby, do what I should think)
-Hell-hell nah (do it, do it, baby, do what I could think)
-Hell-hell nah, yeah, yeah
-Hell-hell nah', 63, 36000);
+                     lyrics, artist_id, listen_count)
+VALUES ('MILLION DOLLAR BABY', 'Tommy Richman, Gideon Endalkachew', 'Tommy Richman, Gideon Endalkachew', null, 'HipHop',
+        true, '/upload/song/MILLION DOLLAR BABY.mp3', '2024-04-26', 63,
+        'Do it, baby, do what I should think
+        Do it, do it, baby, do what I could think
+        Do it, do it, baby, do what I should think
+        Do it, do it, baby, do what I could think
+        Do it, do it, do it, baby, do what I should think
+        Do it, baby, do what I could think
+        Do it, do it, do it, baby, do what I should think
+        Do it, do it baby, do what I could think
+        I ain''t never rep a set, baby, I ain''t do no wrong
+        I could clean up good for you, oh, I know right from wrong
+        ''Cause I wanna make it so badly
+        I''m a million dollar baby, don''t at me (yeah)
+        Hell nah (yeah, yeah), you rep my city for so damn long (ah, ah)
+        But you still don''t notice me, my sound next
+        VA next (yeah, yeah), I''m at they neck (yeah, yeah)
+        I''m running up a check (yeah, yeah, yeah, yeah)
+        She a bad lil'' mama, she a diva
+        No matter what happens, he cannot come between
+        Us again
+        I know we''re better than friends (better than friends)
+        I took her to Queen''s Gambit (yeah, yeah)
+        Showed around my friends (right now)
+        Tried to pick some energy up, it don''t matter (matter)
+        I know you haven''t moved on, if you tried (oh, no)
+        I don''t believe it, baby, I know you lied (oh, no)
+        All night long (oh, no)
+        What you mean I changed? (Oh, no) haven''t stayed the same
+        I''ve been losing my mind (ooh, ooh, ooh)
+        I said, "The city is mine" (ooh, ooh, ooh)
+        I ain''t never rep a set, baby, I ain''t do no wrong
+        I could clean up, do it for you, oh, I know right from wrong
+        ''Cause I wanna make it, so badly
+        I''m a million dollar baby, don''t at me (yeah)
+        I ain''t never rep a set, baby, I ain''t do no wrong
+        I could clean up good for you, oh, I know right from wrong
+        ''Cause I wanna make it so badly
+        I''m a million dollar baby, don''t at me (yeah)
+        Hell nah
+        Hell-hell nah, yeah, yeah
+        Hell-hell nah (do it, do it, baby, do what I should think)
+        Hell-hell nah (do it, do it, baby, do what I could think)
+        Hell-hell nah (do it, do it, baby, do what I should think)
+        Hell-hell nah (do it, do it, baby, do what I could think)
+        Hell-hell nah, yeah, yeah
+        Hell-hell nah', 63, 36000);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('서쪽 하늘', '윤명선', '이승철', null, 'Ballad', true, '/upload/song/서쪽 하늘.mp3', '2005-12-20', 64,
-'서쪽하늘로 노을은 지고
-이젠 슬픔이 돼버린 그대를
-다시 부를수 없을 것 같아
-또 한번 불러보네
-소리쳐 불러도 늘 허공에
-부서져 돌아오는 너의 이름
-이젠 더 견딜 힘조차 없게
-날 버려두고 가지
-사랑하는 날 떠나가는 날
-하늘도 슬퍼서 울어준 날
-빗속에 떠날 나였음을
-넌 알고 있는듯이
-비가오는 날엔 난 항상
-널 그리워해
-언젠간 널 다시 만나는
-그 날을 기다리며
-비내린 하늘은 왜그리 날 슬프게해
-흩어진 내 눈물로 널
-잊고 싶은데
-비가오는 날엔 난 항상
-널 그리워해
-언젠간 널 다시 만나는
-그 날을 기다리며
-비내린 하늘은 왜그리 날 슬프게해
-흩어진 내 눈물로 널
-잊고 싶은데
-가고싶어 널 보고싶어 꼭 찾고 싶었어
-하지만 너의 모습은 아직도 그 자리에
-비가오는 날엔 난 항상
-널 그리워해
-언젠간 널 다시 만나는
-그 날을 기다리며
-비내린 하늘은 왜그리 날 슬프게해
-흩어진 내 눈물로 널
-잊고 싶은데
-하지만 난 널 사랑해', 64, 87031);
+        '서쪽하늘로 노을은 지고
+        이젠 슬픔이 돼버린 그대를
+        다시 부를수 없을 것 같아
+        또 한번 불러보네
+        소리쳐 불러도 늘 허공에
+        부서져 돌아오는 너의 이름
+        이젠 더 견딜 힘조차 없게
+        날 버려두고 가지
+        사랑하는 날 떠나가는 날
+        하늘도 슬퍼서 울어준 날
+        빗속에 떠날 나였음을
+        넌 알고 있는듯이
+        비가오는 날엔 난 항상
+        널 그리워해
+        언젠간 널 다시 만나는
+        그 날을 기다리며
+        비내린 하늘은 왜그리 날 슬프게해
+        흩어진 내 눈물로 널
+        잊고 싶은데
+        비가오는 날엔 난 항상
+        널 그리워해
+        언젠간 널 다시 만나는
+        그 날을 기다리며
+        비내린 하늘은 왜그리 날 슬프게해
+        흩어진 내 눈물로 널
+        잊고 싶은데
+        가고싶어 널 보고싶어 꼭 찾고 싶었어
+        하지만 너의 모습은 아직도 그 자리에
+        비가오는 날엔 난 항상
+        널 그리워해
+        언젠간 널 다시 만나는
+        그 날을 기다리며
+        비내린 하늘은 왜그리 날 슬프게해
+        흩어진 내 눈물로 널
+        잊고 싶은데
+        하지만 난 널 사랑해', 64, 87031);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('초혼', '임강현', '김순곤', null, 'Trot', false, '/upload/song/초혼.mp3', '2010-06-08', 65,
-'살아서는 갖지 못하는 그런 이름 하나 때문에
-그리운 맘 눈물 속에
-난 띄워 보낼 뿐이죠
-스치듯 보낼 사람이 어쩌다 내게 들어와
-장미의 가시로 남아서 날 아프게 지켜보네요
-따라가면 만날 수 있나
-멀고 먼 세상 끝까지
-그대라면 어디라도 난 그저 행복할 테니
-살아서는 갖지 못하는 그런 이름 하나 때문에
-그리운 맘 눈물 속에
-난 띄워 보낼 뿐이죠
-스치듯 보낼 사람이 어쩌다 내게 들어와
-장미의 가시로 남아서 날 아프게 지켜보네요
-따라가면 만날 수 있나
-멀고 먼 세상 끝까지
-그대라면 어디라도 난 그저 행복할 테니
-난 너무 행복할 테니', 65, 195935);
+        '살아서는 갖지 못하는 그런 이름 하나 때문에
+        그리운 맘 눈물 속에
+        난 띄워 보낼 뿐이죠
+        스치듯 보낼 사람이 어쩌다 내게 들어와
+        장미의 가시로 남아서 날 아프게 지켜보네요
+        따라가면 만날 수 있나
+        멀고 먼 세상 끝까지
+        그대라면 어디라도 난 그저 행복할 테니
+        살아서는 갖지 못하는 그런 이름 하나 때문에
+        그리운 맘 눈물 속에
+        난 띄워 보낼 뿐이죠
+        스치듯 보낼 사람이 어쩌다 내게 들어와
+        장미의 가시로 남아서 날 아프게 지켜보네요
+        따라가면 만날 수 있나
+        멀고 먼 세상 끝까지
+        그대라면 어디라도 난 그저 행복할 테니
+        난 너무 행복할 테니', 65, 195935);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('막걸리 한잔', '류선우', '류선우', null, 'Trot', true, '/upload/song/막걸리 한잔.mp3', '2020-01-30', 66,
-'막걸리 한 잔
-온 동네 소문 났던 천덕꾸러기
-막내아들 장가가던 날
-앓던 이가 빠졌다며 덩실 더덩실
-춤을 추던 우리 아버지
-아버지 우리 아들 많이 컸지요
-인물은 그래도 내가 낫지요
-고사리 손으로
-따라주는 막걸리 한잔
-아버지 생각나네
-황소처럼 일만 하셔도
-살림살이는 마냥 그 자리
-우리 엄마 고생시키는
-아버지 원망했어요
-아빠처럼 살긴 싫다며
-가슴에 대못을 박던
-못난 아들을 달래주시며
-따라주던 막걸리 한잔
-따라주던 막걸리 한잔
+        '막걸리 한 잔
+        온 동네 소문 났던 천덕꾸러기
+        막내아들 장가가던 날
+        앓던 이가 빠졌다며 덩실 더덩실
+        춤을 추던 우리 아버지
+        아버지 우리 아들 많이 컸지요
+        인물은 그래도 내가 낫지요
+        고사리 손으로
+        따라주는 막걸리 한잔
+        아버지 생각나네
+        황소처럼 일만 하셔도
+        살림살이는 마냥 그 자리
+        우리 엄마 고생시키는
+        아버지 원망했어요
+        아빠처럼 살긴 싫다며
+        가슴에 대못을 박던
+        못난 아들을 달래주시며
+        따라주던 막걸리 한잔
+        따라주던 막걸리 한잔
 
-황소처럼 일만 하셔도
-살림살이는 마냥 그 자리
-우리 엄마 고생시키는
-아버지 원망했어요
-아빠처럼 살긴 싫다며
-가슴에 대못을 박던
-못난 아들을 달래주시며
-따라주던 막걸리 한잔
-따라주던 막걸리 막걸리 한잔', 66, 66000);
+        황소처럼 일만 하셔도
+        살림살이는 마냥 그 자리
+        우리 엄마 고생시키는
+        아버지 원망했어요
+        아빠처럼 살긴 싫다며
+        가슴에 대못을 박던
+        못난 아들을 달래주시며
+        따라주던 막걸리 한잔
+        따라주던 막걸리 막걸리 한잔', 66, 66000);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('안동역에서', '최강산', '김병걸', null, 'Trot', false, '/upload/song/안동역에서.mp3', '2012-08-23', 67,
-'바람에 날려버린 허무한 맹세였나
-첫눈이 내리는 날 안동역 앞에서
-만나자고 약속한 사람 새벽부터 오는 눈이
-무릎까지 덮는데 안 오는 건지 못 오는 건지
-오지 않는 사람아 안타까운 내 마음만
-녹고 녹는다 기적소리 끊어진 밤에
-어차피 지워야 할 사랑은 꿈이였나
-첫눈이 내리는 날 안동역 앞에서
-만나자고 약속한 사람 새벽부터 오는 눈이
-무릎까지 덮는데 안 오는 건지 못 오는 건지
-대답 없는 사람아 기다리는 내 마음만
-녹고 녹는다 밤이 깊은 안동역에서
-기다리는 내 마음만 녹고 녹는다
-밤이 깊은 안동역에서', 67, 676700);
+        '바람에 날려버린 허무한 맹세였나
+        첫눈이 내리는 날 안동역 앞에서
+        만나자고 약속한 사람 새벽부터 오는 눈이
+        무릎까지 덮는데 안 오는 건지 못 오는 건지
+        오지 않는 사람아 안타까운 내 마음만
+        녹고 녹는다 기적소리 끊어진 밤에
+        어차피 지워야 할 사랑은 꿈이였나
+        첫눈이 내리는 날 안동역 앞에서
+        만나자고 약속한 사람 새벽부터 오는 눈이
+        무릎까지 덮는데 안 오는 건지 못 오는 건지
+        대답 없는 사람아 기다리는 내 마음만
+        녹고 녹는다 밤이 깊은 안동역에서
+        기다리는 내 마음만 녹고 녹는다
+        밤이 깊은 안동역에서', 67, 676700);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('넌 내게 반했어', '노브레인 (NoBrain)', '노브레인 (NoBrain)', '/upload/song/넌 내게 반했어.mp4', 'Rock/Metal', true, '/upload/song/넌 내게 반했어.mp3', '2004-12-02', 68,
-'(넌 내게 반했어)화려한 조명속에 빛나고 있는
-(넌 내게 반했어)웃지 말고 대답해봐
-(넌 내게 반했어)뜨거운 토요일밤의 열기속에
-(넌 내게 반했어)솔직하게 말을 해봐
-도도한 눈빛으로 제압하려 해도
-난 그런 속임수에 속지 않어 예예
-워우 워우 워 워
-(넌 내게 반했어)애매한 그 눈빛은
-뭘 말하는거니
-(넌 내게 반했어)춤을 춰줘
-come on come on
-내눈과 너의 눈이마주쳤던 순간
-튀었던 정열의 불꽃들
-oh stand by me stand by me stand by me
-원한다면 밤하늘의 별도 따줄텐데
-oh stand by me stand by me stand by me
-내 볼에다 입맞춰줘 오우예
-oh stand by me stand by me stand by me
-원한다면 밤하늘의 별도 따줄텐데
-oh stand by me stand by me stand by me
-내 볼에다 입맞춰줘 오우 예
-워우 워우 워 워 넌 내게 반했어', 68, 6800);
+                     lyrics, artist_id, listen_count)
+VALUES ('넌 내게 반했어', '노브레인 (NoBrain)', '노브레인 (NoBrain)', '/upload/song/넌 내게 반했어.mp4', 'Rock/Metal', true,
+        '/upload/song/넌 내게 반했어.mp3', '2004-12-02', 68,
+        '(넌 내게 반했어)화려한 조명속에 빛나고 있는
+        (넌 내게 반했어)웃지 말고 대답해봐
+        (넌 내게 반했어)뜨거운 토요일밤의 열기속에
+        (넌 내게 반했어)솔직하게 말을 해봐
+        도도한 눈빛으로 제압하려 해도
+        난 그런 속임수에 속지 않어 예예
+        워우 워우 워 워
+        (넌 내게 반했어)애매한 그 눈빛은
+        뭘 말하는거니
+        (넌 내게 반했어)춤을 춰줘
+        come on come on
+        내눈과 너의 눈이마주쳤던 순간
+        튀었던 정열의 불꽃들
+        oh stand by me stand by me stand by me
+        원한다면 밤하늘의 별도 따줄텐데
+        oh stand by me stand by me stand by me
+        내 볼에다 입맞춰줘 오우예
+        oh stand by me stand by me stand by me
+        원한다면 밤하늘의 별도 따줄텐데
+        oh stand by me stand by me stand by me
+        내 볼에다 입맞춰줘 오우 예
+        워우 워우 워 워 넌 내게 반했어', 68, 6800);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
-VALUES ('영원히 영원히', '김윤아', '김윤아', '/upload/song/영원히 영원히.mp4', 'Rock/Metal', true, '/upload/song/영원히 영원히.mp3', '2018-06-22', 69,
-'라라라라라라
-너의 손을 꼭 잡고서
-영원히 영원히 영원히
-너와 함께 있고 싶어
-라라라라라라
-사라지지마 흐려지지마
-영원히 영원히 여기 있어 줘
-사랑은 시들고
-노래는 잊혀진다고
-그렇게 사람들 말하곤 하지
-언젠가 너도 시들어
-기억에서 사라질까
-계절이 흘러 가버리는 것처럼
-노을이 지던 골목길
-너와 걷던 그 길
-별을 헤며 어느 밤에 나누던 꿈들
-다시는 돌아가지 못 할 그날들
-아른아른 눈가를 적시네
-라라라라라라
-그저 노래를 부를 뿐
-왔다 가 버리는 모든 걸
-잡아둘 수는 없으니까
-라라라라라라
-사라지지마 흐려지지마
-영원히 영원히
-영원히 영원히
-라라라라라라
-너의 손을 꼭 잡고서
-영원히 영원히 영원히
-너와 함께 있고 싶어
-라라라 라라라
-사라지지마 흐려지지마
-영원히 영원히
-영원히 영원히
-노을이 지던 골목길
-너와 걷던 그 길
-별을 헤며 어느 밤에 나누던 꿈들
-다시는 돌아가지 못 할 그날들
-아른아른 눈가를 적시네
-라라라라라라
-사라지지마 흐려지지마
-영원히 영원히', 69, 16163);
+                     lyrics, artist_id, listen_count)
+VALUES ('영원히 영원히', '김윤아', '김윤아', '/upload/song/영원히 영원히.mp4', 'Rock/Metal', true, '/upload/song/영원히 영원히.mp3',
+        '2018-06-22', 69,
+        '라라라라라라
+        너의 손을 꼭 잡고서
+        영원히 영원히 영원히
+        너와 함께 있고 싶어
+        라라라라라라
+        사라지지마 흐려지지마
+        영원히 영원히 여기 있어 줘
+        사랑은 시들고
+        노래는 잊혀진다고
+        그렇게 사람들 말하곤 하지
+        언젠가 너도 시들어
+        기억에서 사라질까
+        계절이 흘러 가버리는 것처럼
+        노을이 지던 골목길
+        너와 걷던 그 길
+        별을 헤며 어느 밤에 나누던 꿈들
+        다시는 돌아가지 못 할 그날들
+        아른아른 눈가를 적시네
+        라라라라라라
+        그저 노래를 부를 뿐
+        왔다 가 버리는 모든 걸
+        잡아둘 수는 없으니까
+        라라라라라라
+        사라지지마 흐려지지마
+        영원히 영원히
+        영원히 영원히
+        라라라라라라
+        너의 손을 꼭 잡고서
+        영원히 영원히 영원히
+        너와 함께 있고 싶어
+        라라라 라라라
+        사라지지마 흐려지지마
+        영원히 영원히
+        영원히 영원히
+        노을이 지던 골목길
+        너와 걷던 그 길
+        별을 헤며 어느 밤에 나누던 꿈들
+        다시는 돌아가지 못 할 그날들
+        아른아른 눈가를 적시네
+        라라라라라라
+        사라지지마 흐려지지마
+        영원히 영원히', 69, 16163);
 
 INSERT INTO song_tb (title, song_writer, lyricist, music_video, genre, is_title, music_file, created_at, album_id,
-                     lyrics,artist_id,listen_count)
+                     lyrics, artist_id, listen_count)
 VALUES ('와그라노', '강산에', '강산에', null, 'Rock/Metal', true, '/upload/song/와그라노.mp3', '2002-10-07', 70,
-'와그라노 니 또 와그라노
-와그라노 니 또 와그라노
-와그라노 니 또 와그라노
-와그라노 니 또 와그라노
-와그라노 워우와
-아우와 그래쌌노
-뭐라케쌓노 뭐라케쌓노 니
-니 와그라노
-우짜라꾸 이허 웃네
-우짜라고 웃네네네
-네는 어쩌라
-말이꼬
-우짤라고 웃 니
-우짤라꼬 그러라노
-니단디해라
-마 고마해라 니고마해라 니', 70, 70000);
+        '와그라노 니 또 와그라노
+        와그라노 니 또 와그라노
+        와그라노 니 또 와그라노
+        와그라노 니 또 와그라노
+        와그라노 워우와
+        아우와 그래쌌노
+        뭐라케쌓노 뭐라케쌓노 니
+        니 와그라노
+        우짜라꾸 이허 웃네
+        우짜라고 웃네네네
+        네는 어쩌라
+        말이꼬
+        우짤라고 웃 니
+        우짤라꼬 그러라노
+        니단디해라
+        마 고마해라 니고마해라 니', 70, 70000);
 
 --  테이블 : playlist
 
@@ -6988,3 +6995,8 @@ insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
 values (3, null, null, 30, '2024-06-22');
 insert into like_tb(user_id, song_id, album_id, artist_id, created_at)
 values (3, null, null, 31, '2024-06-22');
+
+
+-- 이용권
+insert into subscription_tb(name, description, price, duration, created_at)
+values ('(첫 구매) 무제한 듣기 정기결제', '(첫 구매) 무제한 듣기 정기결제', 100, 31, '2024-07-01');
