@@ -38,4 +38,8 @@ public class Payment {
         this.user = user;
         this.subscription = subscription;
     }
+
+    public void update(String status) {
+        this.status = status;
+    }
 }

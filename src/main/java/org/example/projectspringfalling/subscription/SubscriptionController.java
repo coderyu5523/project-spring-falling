@@ -27,10 +27,9 @@ public class SubscriptionController {
     // 내가 구매한 이용권
     @GetMapping("/my-subscription")
     public String mySubscription(HttpServletRequest request) {
-        //test
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
-        Optional<Payment> paymentOP = paymentRepository.findByUserId(sessionUser.getId());
-        request.setAttribute("payment", paymentOP.get());
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser"); //test
+        Optional<Payment> paymentOP = paymentRepository.findByUserId(sessionUser.getId()); //test
+        request.setAttribute("payment", paymentOP.get()); //test
         return "subscription/my-subscription";
     }
 

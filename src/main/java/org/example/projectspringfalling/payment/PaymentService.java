@@ -21,15 +21,16 @@ public class PaymentService {
 
     @Transactional
     public void refundPayment(PaymentRequest.RefundInfoDTO req, SessionUser sessionUser) {
-        User user = userRepository.findById(sessionUser.getId())
+        userRepository.findById(sessionUser.getId())
                 .orElseThrow(() -> new Exception404("존재하지 않는 회원입니다."));
-        System.out.println("^ : " + req.getTransactionId());
         Payment payment = paymentRepository.findByTransactionId(req.getTransactionId())
                 .orElseThrow(() -> new Exception404("존재하지 않는 결제내역입니다."));
 
         String accessToken = iamportService.getAccessToken();
         ResponseEntity<PaymentResponse.PaymentDetail> response = iamportService.paymentDetail(payment.getTransactionId(), accessToken);
-        ResponseEntity<?> response2 = iamportService.refundPayment(response.getBody().getResponse());
+        ResponseEntity<PaymentResponse.RefundDTO> response2 = iamportService.refundPayment(response.getBody().getResponse());
+
+        payment.update(response2.getBody().getResponse().getStatus()); // 결제 state 변경
 
         System.out.println("결제 취소 완료 : " + response2);
     }

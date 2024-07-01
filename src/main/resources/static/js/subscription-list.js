@@ -1,5 +1,5 @@
 $("#plan-button1").on("click", function () {
-    var merchant_uid = "O" + new Date().getTime(); // 고유한 주문번호 생성
+    var merchant_uid = "0" + new Date().getTime(); // 고유한 주문번호 생성
     var name = $("#plan-button1").data("name");
     var amount = $("#plan-button1").data("amount");
     var subscription_pk = $("#plan-button1").data("subscriptionPk");

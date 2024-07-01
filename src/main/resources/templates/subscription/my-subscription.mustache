@@ -12,7 +12,7 @@
             <div class="content">
                 <div class="header">사용 중인 이용권이 없습니다.</div>
                 <button class="plan-button">이용권 구매</button>
-                <button class="plan-button" id="refund-button" data-amount="1"
+                <button class="plan-button" id="refund-button" data-amount="{{payment.amount}}"
                         data-transaction-id="{{payment.transactionId}}">
                     이용권 환불
                 </button>
@@ -34,54 +34,10 @@
         </div>
     </div>
 </div>
-
-<script type="module" src="/js/my-subscription.js"></script>
 <script
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"
 ></script>
-<script>
-    $("#refund-button").on("click", function () {
-        var amount = $("#refund-button").data("amount");
-        var transaction_id = $("#refund-button").data("transactionId");
-
-        console.log("amount : " + amount);
-        console.log("transaction_id : " + transaction_id);
-
-        function refundPayment(transaction_id, amount) {
-            return new Promise(function (resolve, reject) {
-                $.ajax({
-                    url: "/refund-payment",
-                    method: "POST",
-                    contentType: "application/json",
-                    data: JSON.stringify({
-                        transactionId: transaction_id,
-                        amount: amount, // 결제 예정금액(= 결제 취소 금액)
-                    }),
-                    success: function (data) {
-                        console.log("취소 성공:", data);
-                        resolve(data);
-                    },
-                    error: function (jqXHR, textStatus, errorThrown) {
-                        console.error("취소 실패:", jqXHR, textStatus, errorThrown);
-                        reject(textStatus + ": " + errorThrown);
-                    }
-                });
-            });
-        }
-
-        refundPayment(transaction_id, amount)
-                .then(function (data) {
-                    alert("결제가 성공적으로 취소되었습니다.");
-                    // 추가 작업을 여기에 수행할 수 있습니다.
-                })
-                .catch(function (error) {
-                    alert("결제 취소에 실패했습니다: " + error);
-                });
-    });
-
-</script>
-
-
+<script type="module" src="/js/my-subscription.js"></script>
 
 {{>layout/footer}}
