@@ -173,4 +173,25 @@ public class AdminResponse {
             return this.status ? "처리완료" : "처리중";
         }
     }
+
+    // 신고 상세보기
+    @AllArgsConstructor
+    @Data
+    public static class ReportedDetailDTO {
+        private Integer reportId;
+        private String replyAuthor;
+        private String replyContent;
+        private String reportContent;
+        private String reportUsername;
+        private Timestamp replyCreatedAt;
+        private Timestamp reportCreatedAt;
+
+        public String getReplyCreatedAt() {
+            return timestampToString(this.replyCreatedAt);
+        }
+
+        public String getReportCreatedAt() {
+            return timestampToString(this.reportCreatedAt);
+        }
+    }
 }

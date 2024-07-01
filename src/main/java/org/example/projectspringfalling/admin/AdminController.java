@@ -66,7 +66,8 @@ public class AdminController {
 
     // 신고 상세보기
     @GetMapping("/admin/reports/{id}")
-    public String reportDetail(@PathVariable Integer id) {
+    public String reportDetail(@PathVariable Integer id, HttpServletRequest request) {
+        request.setAttribute("report", adminService.getReportById(id));
         return "admin/report-detail";
     }
 

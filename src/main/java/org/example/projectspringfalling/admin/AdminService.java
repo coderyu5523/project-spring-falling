@@ -82,4 +82,9 @@ public class AdminService {
     public List<AdminResponse.ReportedList> getReportList() {
         return reportRepository.findAllReportedList();
     }
+
+    // 신고 상세보기
+    public AdminResponse.ReportedDetailDTO getReportById(Integer reportId) {
+        return reportRepository.findOneReport(reportId);
+    }
 }
