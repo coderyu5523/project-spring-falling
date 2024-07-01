@@ -7008,3 +7008,10 @@ values ('거짓말 하고 있어요', false, '2024-06-29', 1, 1),
 insert into subscription_tb(name, description, price, duration, created_at)
 values ('(첫 구매) 무제한 듣기 정기결제', '(첫 구매) 무제한 듣기 정기결제', 100, 31, '2024-07-01');
 
+--  결제 테이블
+
+insert into payment_tb (user_id, subscription_id, amount, means, status, transaction_id, created_at)
+values (1, 1, 100, '현대카드', 'cancelled', 'imp_123456789123', 1234567890);
+
+insert into payment_tb (user_id, subscription_id, amount, means, status, transaction_id, created_at)
+values (1, 1, 100, '현대카드', 'paid', 'imp_123456789124', 1234567891);
