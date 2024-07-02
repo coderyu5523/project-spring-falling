@@ -55,7 +55,7 @@ https://www.music-flo.com/
   <td align=center>6. 장르별 페이지</td>
 </tr>
 <tr>
-  <td><img src=""  width="400" height="300"/></td>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/472393bd-f3ac-4b7b-b3de-12af4008a5d5"  width="400" height="300"/></td>
 <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1164cd3a-43ff-4d57-8dfe-949b9e6303bd"  width="400" height="300"/></tr>
 </tr>
 
