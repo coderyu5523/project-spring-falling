@@ -24,6 +24,7 @@ public class SongController {
     public String songDetail(HttpServletRequest request, @PathVariable Integer songId) {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
         SongResponse.DetailDTO resp = songService.songDetail(songId, sessionUser != null ? sessionUser.getId() : null);
+        System.out.println("음악없나?" + resp.getMusicFile());
         request.setAttribute("song", resp);
         return "song/song-detail";
     }

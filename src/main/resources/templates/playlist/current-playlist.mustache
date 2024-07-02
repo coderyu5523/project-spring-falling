@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="icon" href="/images/favicon-96x96.png">
     <meta charset="UTF-8">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-
 <body>
 <div class="container">
     <div class="left-panel">
@@ -64,6 +62,14 @@
         // localStorage에서 데이터 읽기
         var selectedSongs = JSON.parse(localStorage.getItem('selectedSongs')) || [];
 
+        // 다른 창에서 받은 메시지 처리
+        window.addEventListener("message", function(event) {
+            var songData = event.data;
+            addSongIfNotExists(songData);
+            renderPlaylist(selectedSongs);
+            playSong(selectedSongs.length - 1);  // 새로운 노래 재생
+        });
+
         // 플레이리스트 렌더링
         function renderPlaylist(songs) {
             $('#song-list').empty(); // 목록 초기화
@@ -83,12 +89,28 @@
                 var listIcon = $('<a>').attr('href', '#').append($('<i>').addClass('album-icon fas fa-list icon').css('margin-right', '10px'));
                 var deleteIcon = $('<a>').attr('href', '#').addClass('delete-btn').append($('<i>').addClass('fas fa-trash icon').css('color', 'white'));
 
-                iconContainer.append(listIcon).append(moreIcon).append(deleteIcon);
+                iconContainer.append(listIcon).append(deleteIcon);
 
                 li.append(img).append(infoDiv).append(iconContainer);
 
                 $('#song-list').append(li);
             });
+        }
+
+        function addSongIfNotExists(songData) {
+            // 기존 저장된 노래 목록 가져오기
+            var selectedSongs = JSON.parse(localStorage.getItem('selectedSongs')) || [];
+
+            // 중복 확인
+            var isSongExists = selectedSongs.some(function (song) {
+                return song.songId === songData.songId;
+            });
+
+            // 중복이 아닐 경우에만 추가
+            if (!isSongExists) {
+                selectedSongs.push(songData);
+                localStorage.setItem('selectedSongs', JSON.stringify(selectedSongs));
+            }
         }
 
         renderPlaylist(selectedSongs);
