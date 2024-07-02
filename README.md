@@ -108,18 +108,10 @@ https://www.music-flo.com/
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/f4ebb5ae-2070-4a83-975e-e14d4b047e45"  width="400" height="300"/></td>
 <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="400" height="300"/></tr>
 </tr>
-<tr>
-  <td align=center>19. 1분 듣기</td>
-  <td align=center>20. 가사 추가</td>
-</tr>
-<tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1db4cef1-b121-4e40-a5bc-d24890c6ba2b"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="400" height="300"/></tr>
-</tr>
 
 <tr>
-  <td align=center>21. 결제</td>
-  <td align=center>22. 환불</td>
+  <td align=center>19. 결제</td>
+  <td align=center>20. 환불</td>
 </tr>
 <tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/6095c966-1725-4304-9d23-8d83bc908cf2"  width="400" height="300"/></td>
@@ -127,12 +119,10 @@ https://www.music-flo.com/
 </tr>
 
 <tr>
-  <td align=center>23. 1분 듣기</td>
-  <td align=center>24. </td>
+  <td align=center>21. 1분 듣기</td>
 </tr>
 <tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1db4cef1-b121-4e40-a5bc-d24890c6ba2b"  width="400" height="300"/></td>
-<td><img src=""  width="400" height="300"/></tr>
 </tr>
 
 
