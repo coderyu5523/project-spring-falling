@@ -34,7 +34,10 @@ $("#plan-button1").on("click", function () {
                         }),
                     }).done(function (data) {
                         alert("결제가 완료되었습니다.(" + merchant_uid + ")");
-                        window.location.href = data; // 메인 페이지로 리다이렉트
+                        window.location.href = data; // 성공 페이지로 리다이렉트
+                    }).fail(function (xhr) {
+                        alert("결제에 실패하였습니다. 에러 내용: " + xhr.responseText);
+                        window.location.href = xhr.responseText; // 실패 페이지로 리다이렉트
                     });
                 } else {
                     alert("결제에 실패하였습니다. 에러 내용: " + response.error_msg);

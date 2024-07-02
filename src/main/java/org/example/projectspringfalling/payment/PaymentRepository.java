@@ -16,4 +16,5 @@ public interface PaymentRepository extends JpaRepository<Payment, Integer> {
 
     @Query("SELECT p FROM Payment p JOIN FETCH p.user WHERE p.user.id = :userId AND p.status ='paid' ORDER BY p.createdAt DESC")
     List<Payment> findByUserIdForRefund(@Param("userId") Integer userId);
+
 }

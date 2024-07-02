@@ -41,9 +41,9 @@ public class RestController {
 
     // 환불
     @PostMapping("/refund-payment")
-    public ResponseEntity<?> refundPayment(@RequestBody PaymentRequest.RefundInfoDTO req) {
+    public ResponseEntity<?> refundPayment() {
         SessionUser sessionUser = redisUtil.getSessionUser();
-        paymentService.refundPayment(req, sessionUser);
+        paymentService.refundPayment(sessionUser);
         return ResponseEntity.ok("redirect:/");
     }
 
@@ -57,7 +57,7 @@ public class RestController {
     @PostMapping("/pay")
     public ResponseEntity<?> pay(@RequestBody PaymentRequest.PaymentDTO paymentDTO) {
         SessionUser sessionUser = redisUtil.getSessionUser();
-        paymentService.savePayment(paymentDTO, sessionUser.getId());
+        paymentService.savePayment(paymentDTO, sessionUser);
         return ResponseEntity.ok("redirect:/");
     }
 

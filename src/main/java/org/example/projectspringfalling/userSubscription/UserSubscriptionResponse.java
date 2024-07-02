@@ -2,7 +2,6 @@ package org.example.projectspringfalling.userSubscription;
 
 import lombok.Data;
 import org.example.projectspringfalling._core.utils.DateCalcUtil;
-import org.example.projectspringfalling.payment.Payment;
 
 import java.util.List;
 
@@ -14,14 +13,10 @@ public class UserSubscriptionResponse {
     public static class UserSubscriptionDTO {
         private List<AvailableSubDTO> availableSubscriptions;
         private List<EndSubDTO> endedSubscriptions;
-        private Integer amount;
-        private String transactionId;
 
-        public UserSubscriptionDTO(List<AvailableSubDTO> availableSubscriptions, List<EndSubDTO> endedSubscriptions, Payment payment) {
+        public UserSubscriptionDTO(List<AvailableSubDTO> availableSubscriptions, List<EndSubDTO> endedSubscriptions) {
             this.availableSubscriptions = availableSubscriptions;
             this.endedSubscriptions = endedSubscriptions;
-            this.amount = payment.getAmount();
-            this.transactionId = payment.getTransactionId();
         }
 
         @Data

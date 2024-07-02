@@ -17,7 +17,7 @@ public class Payment {
     private Integer id;
     private Integer amount; // 결제 금액
     private String means; // 결제 수단
-    private String status; // 결제 상태
+    private String status; // 결제 상태 (사용중, 사용완료, 사용취소)
     private String transactionId; // 결제서비스 제공자가 주는 거래 id
     private Integer createdAt; // 생성날짜
 

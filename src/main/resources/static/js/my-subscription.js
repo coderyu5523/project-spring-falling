@@ -5,19 +5,12 @@ function activateTab(tab) {
 }
 
 $("#refund-button").on("click", function () {
-    var amount = $("#refund-button").data("amount");
-    var transaction_id = $("#refund-button").data("transactionId"); // imp_{12자리 숫자}
-
     function refundPayment(transaction_id, amount) {
         return new Promise(function (resolve, reject) {
             $.ajax({
                 url: "/refund-payment",
                 method: "POST",
                 contentType: "application/json",
-                data: JSON.stringify({ // json 형식으로 데이터 구성
-                    transactionId: transaction_id,
-                    amount: amount, // 결제 예정금액(= 결제 취소 금액)
-                }),
                 success: function (data) {
                     console.log("취소 성공:", data);
                     resolve(data);
@@ -30,7 +23,7 @@ $("#refund-button").on("click", function () {
         });
     }
 
-    refundPayment(transaction_id, amount)
+    refundPayment()
         .then(function (data) {
             alert("결제가 성공적으로 취소되었습니다.");
         })

@@ -2,7 +2,6 @@ package org.example.projectspringfalling.userSubscription;
 
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
-import org.example.projectspringfalling.payment.Payment;
 import org.example.projectspringfalling.payment.PaymentRepository;
 import org.example.projectspringfalling.user.SessionUser;
 import org.springframework.stereotype.Service;
@@ -21,7 +20,6 @@ public class UserSubscriptionService {
 
         List<UserSubscription> userSubscriptionList = userSubscriptionRepository.findByUserId(sessionUser.getId())
                 .orElseThrow(() -> new Exception404("조회된 정보가 없습니다."));
-        Payment payment = paymentRepository.findByUserIdForRefund(sessionUser.getId()).getFirst(); // 젤 최근 결제 들고오기
 
         List<UserSubscriptionResponse.UserSubscriptionDTO.AvailableSubDTO> availableSubscriptions = userSubscriptionList.stream()
                 .filter(userSubscription -> "사용중".equals(userSubscription.getStatus()))
@@ -35,6 +33,6 @@ public class UserSubscriptionService {
                 .collect(Collectors.toList());
 
 
-        return new UserSubscriptionResponse.UserSubscriptionDTO(availableSubscriptions, endedSubscriptions, payment);
+        return new UserSubscriptionResponse.UserSubscriptionDTO(availableSubscriptions, endedSubscriptions);
     }
 }
