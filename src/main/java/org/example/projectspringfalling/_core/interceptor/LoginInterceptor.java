@@ -3,12 +3,18 @@ package org.example.projectspringfalling._core.interceptor;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.errors.exception.Exception401;
-import org.example.projectspringfalling.user.SessionUser;
+import org.example.projectspringfalling._core.utils.RedisUtil;
 import org.example.projectspringfalling.admin.SessionAdmin;
+import org.example.projectspringfalling.user.SessionUser;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+@RequiredArgsConstructor
 public class LoginInterceptor implements HandlerInterceptor {
+
+    private final RedisUtil redisUtil;
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("preHandle............");
@@ -21,7 +27,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 //        return true;
 //    }
         // 일반 사용자 세션 검사
-        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        SessionUser sessionUser = redisUtil.getSessionUser();
         // 관리자 세션 검사
         SessionAdmin sessionAdmin = (SessionAdmin) session.getAttribute("sessionAdmin");
 

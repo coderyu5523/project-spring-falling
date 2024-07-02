@@ -29,6 +29,13 @@
             <p class="song-detail-icons">
                 <a href="#"><i class="song-detail-btn-add-list fas fa-list icon"></i></a>
                 <a id="myBtn" href="#"><i class="song-detail-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
+                <a href="#" class="play-btn" data-songid="{{song.songId}}"
+                   data-title="{{song.title}}"
+                   data-artist="{{song.artist}}" data-cover="{{song.albumImage}}" data-music="{{song.musicFile}}"
+                   data-lyrics="{{song.lyrics}}">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+
                 <input id="song-like" type="hidden" value="{{song.isLike}}">
                 <input id="song-id" type="hidden" value="{{song.songId}}">
             </p>
@@ -46,5 +53,55 @@
 
 <script type="module" src="/js/playlist-modal.js"></script>
 <script type="module" src="/js/song-detail.js"></script>
+<script>
+    $(document).ready(function () {
+        function addSongIfNotExists(songData) {
+            // 기존 저장된 노래 목록 가져오기
+            var selectedSongs = JSON.parse(localStorage.getItem('selectedSongs')) || [];
+
+            // 중복 확인
+            var isSongExists = selectedSongs.some(function (song) {
+                return song.songId === songData.songId;
+            });
+
+            // 중복이 아닐 경우에만 추가
+            if (!isSongExists) {
+                selectedSongs.push(songData);
+                localStorage.setItem('selectedSongs', JSON.stringify(selectedSongs));
+            }
+        }
+
+        $('.play-btn').click(function (event) {
+            event.preventDefault();
+
+            // 데이터 가져오기
+            var songData = {
+                songId: $(this).data('songid'),
+                title: $(this).data('title'),
+                artistName: $(this).data('artist'),
+                coverImg: $(this).data('cover'),
+                musicFile: $(this).data('music'),
+                lyrics: $(this).data('lyrics')
+            };
+
+            addSongIfNotExists(songData);
+
+            // 새로운 팝업 창 열기
+            var playlistWindow = window.open('/playlists/current', '플레이리스트', 'width=1200,height=700');
+
+            // 데이터 전송
+            playlistWindow.onload = function() {
+                playlistWindow.postMessage(songData, '*');
+            };
+        });
+
+        window.addEventListener("message", function (event) {
+            if (event.data === "closePopup") {
+                // 팝업 창을 닫고 로그인 페이지로 리디렉션
+                window.location.href = "/login-form";
+            }
+        });
+    });
+</script>
 
 {{>layout/footer}}

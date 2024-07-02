@@ -1,10 +1,10 @@
-.main-container{
+.main-container {
     display: flex;
     justify-content: center;
 }
 
 
-.main-subscription{
+.main-subscription {
     width: 1000px;
 }
 
@@ -39,7 +39,7 @@
 .container.my-ticket {
     padding: 20px;
     margin: 20px auto;
-    /*max-width: 55%;*/
+    max-width: 55%;
     position: relative;
 }
 
@@ -52,7 +52,7 @@
     background-color: #f9f9f9;
     border-radius: 15px;
     margin: 20px auto;
-    padding: 70px;
+    padding: 20px;
 }
 
 .header {
@@ -78,3 +78,76 @@
     border-radius: 20px;
     font-size: 16px;
 }
+
+/* 새로 추가한 것들 */
+.inner-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #525CFC;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    color: white;
+    text-align: center;
+}
+
+.ticket-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.ticket-details {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.ticket-action {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ticket-badge {
+    width: 88px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.inner-box table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.inner-box table td {
+    padding: 10px;
+}
+
