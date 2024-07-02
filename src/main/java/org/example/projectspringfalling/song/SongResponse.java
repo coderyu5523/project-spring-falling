@@ -152,6 +152,7 @@ public class SongResponse {
             this.lyricist = song.getLyricist();
             this.lyrics = song.getLyrics();
             this.isLike = isLike;
+            this.musicFile = song.getMusicFile();
         }
     }
 
@@ -265,7 +266,7 @@ public class SongResponse {
     }
 
     @Data
-    public static class AIChatDTO{
+    public static class AIChatDTO {
         private Integer songId;
         private String songTitle;
         private String genre;

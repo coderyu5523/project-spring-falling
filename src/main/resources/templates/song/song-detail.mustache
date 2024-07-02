@@ -29,9 +29,13 @@
             <p class="song-detail-icons">
                 <a href="#"><i class="song-detail-btn-add-list fas fa-list icon"></i></a>
                 <a id="myBtn" href="#"><i class="song-detail-btn-add-playlist fas fa-folder-plus custom-icon"></i></a>
-                <a href="#" class="play-btn">
+                <a href="#" class="play-btn" data-songid="{{song.songId}}"
+                   data-title="{{song.title}}"
+                   data-artist="{{song.artist}}" data-cover="{{song.albumImage}}" data-music="{{song.musicFile}}"
+                   data-lyrics="{{song.lyrics}}">
                     <i class="fa-solid fa-play"></i>
                 </a>
+
                 <input id="song-like" type="hidden" value="{{song.isLike}}">
                 <input id="song-id" type="hidden" value="{{song.songId}}">
             </p>
@@ -73,12 +77,12 @@
             // 데이터 가져오기
             var songData = {
                 songId: $(this).data('songid'),
-                index: $(this).data('index'),
+                // index: $(this).data('index'),
                 title: $(this).data('title'),
                 artistName: $(this).data('artist'),
                 coverImg: $(this).data('cover'),
                 musicFile: $(this).data('music'),
-                islogin: $(this).data('islogin')
+                // islogin: $(this).data('islogin')
 
             };
             if (songData.islogin === true) {
@@ -98,27 +102,7 @@
             window.open('/playlists/current', '플레이리스트', 'width=1200,height=700');
         });
 
-        $('#selected-play-btn').click(function (event) {
-            event.preventDefault();
 
-            // 선택된 체크박스의 노래 데이터 가져오기
-            $('.chart-main-table-body input[type="checkbox"]:checked').each(function () {
-                var row = $(this).closest('tr');
-                var songData = {
-                    songId: row.find('.play-btn').data('songid'),
-                    index: row.find('.play-btn').data('index'),
-                    title: row.find('.play-btn').data('title'),
-                    artistName: row.find('.play-btn').data('artist'),
-                    coverImg: row.find('.play-btn').data('cover'),
-                    musicFile: row.find('.play-btn').data('music'),
-                    islogin: row.find('.play-btn').data('islogin') === true // 정확하게 논리값 비교
-                };
-                addSongIfNotExists(songData);
-            });
-
-            // 새로운 팝업 창 열기
-            window.open('/playlists/current', '플레이리스트', 'width=1200,height=700');
-        });
 
         window.addEventListener("message", function (event) {
             if (event.data === "closePopup") {
