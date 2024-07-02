@@ -44,9 +44,16 @@ document.addEventListener("DOMContentLoaded", function () {
         tab.addEventListener("click", function (event) {
             event.preventDefault();
             // URL 해시 업데이트
-            window.history.replaceState(null, null, `#tab${index + 1}`);
+            // window.history.replaceState(null, null, `#tab${index + 1}`);
             // 탭 활성화
             activateTab(index);
+
+            // 탭 클릭 시 수평 스크롤 제어
+            tab.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+
+            // 페이지가 스크롤되지 않도록 방지
+            document.documentElement.scrollTop = 0;  // for Chrome, Firefox, IE and Opera
+            document.body.scrollTop = 0;  // for Safari
         });
     });
 
@@ -59,6 +66,11 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             activateTab(0);
         }
+
+        // 해시값을 초기화하여 페이지 로드 시 스크롤 방지
+        setTimeout(() => {
+            window.history.replaceState(null, null, ' ');
+        }, 0);
     } else {
         activateTab(0);
     }
