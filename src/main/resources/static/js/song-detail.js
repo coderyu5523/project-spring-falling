@@ -8,18 +8,18 @@ $(document).ready(function () {
             case 'true':
                 $(value).siblings().remove(".like-icons");
                 $(value).after("<a class='like-icons' href='#'><i id='liked-song' class='song-detail-btn-add-like fas fa-heart'></i></a>");
-                doLike("DELETE", "좋아요 취소 실패", "false");
+                doLike("DELETE", "좋아요 취소 실패", "좋아요가 취소되었습니다.", "false");
                 break;
             case 'false':
                 $(value).siblings().remove(".like-icons");
                 $(value).after("<a class='like-icons' href='#'><i id='unliked-song' class='song-detail-btn-add-like fa-regular fa-heart'></i></a>");
-                doLike("POST", "좋아요 실패", "true");
+                doLike("POST", "좋아요 실패", "좋아요 되었습니다!", "true");
                 break;
         }
     }
 
     // 좋아요, 좋아요 취소
-    function doLike(method, failMsg, value) {
+    function doLike(method, failMsg, successMsg, value) {
         $(".like-icons").click(function () {
             $.ajax({
                 url: "/songs/like",
@@ -28,6 +28,7 @@ $(document).ready(function () {
                 data: JSON.stringify(songId.val()),
                 success: function () {
                     songLike.val(value);
+                    alert(successMsg);
                     likeButtonAppear(songLike);
                 },
                 error: function () {
