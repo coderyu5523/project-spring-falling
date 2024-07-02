@@ -41,9 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     tabs.forEach((tab, index) => {
-        tab.addEventListener("click", function () {
+        tab.addEventListener("click", function (event) {
+            event.preventDefault();
             // URL 해시 업데이트
-            window.location.hash = `tab${index + 1}`;
+            window.history.replaceState(null, null, `#tab${index + 1}`);
             // 탭 활성화
             activateTab(index);
         });
