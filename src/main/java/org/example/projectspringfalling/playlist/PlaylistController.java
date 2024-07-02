@@ -3,6 +3,7 @@ package org.example.projectspringfalling.playlist;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,9 +34,9 @@ public class PlaylistController {
     // 현재 재생중인 플레이리스트
     @GetMapping("/playlists/current")
     public String currentPlaylist(Model model) {
-//        List<PlaylistResponse.PlaylistDTO> songs = playlistService.musicTest();
-//        model.addAttribute("songs", songs);
-        return "playlist/current-playlist";
+        List<RestResponse.PlaylistDTO> songs = playlistService.musicTest();
+        model.addAttribute("songs", songs);
+        return "playlist/current-test";
     }
 
 }
