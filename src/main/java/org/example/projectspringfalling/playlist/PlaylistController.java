@@ -1,6 +1,5 @@
 package org.example.projectspringfalling.playlist;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling.RestAPI.RestResponse;
@@ -25,9 +24,9 @@ public class PlaylistController {
 
     // 플레이리스트 보기
     @GetMapping("/playlists/{playlistId}")
-    public String playlist(HttpServletRequest request, @PathVariable Integer playlistId) {
+    public String playlist(Model model, @PathVariable Integer playlistId) {
         PlaylistResponse.PlaylistDetailDTO resp = playlistService.playlistDetail(playlistId);
-        request.setAttribute("playlist", resp);
+        model.addAttribute("playlist", resp);
         return "playlist/playlist";
     }
 

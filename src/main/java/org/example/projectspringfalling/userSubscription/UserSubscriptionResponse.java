@@ -1,11 +1,9 @@
 package org.example.projectspringfalling.userSubscription;
 
-import java.sql.Timestamp;
-import java.util.List;
-
 import lombok.Data;
 import org.example.projectspringfalling._core.utils.DateCalcUtil;
-import org.example.projectspringfalling._core.utils.DateUtil;
+
+import java.util.List;
 
 import static org.example.projectspringfalling._core.utils.DateUtil.timestampToString;
 
