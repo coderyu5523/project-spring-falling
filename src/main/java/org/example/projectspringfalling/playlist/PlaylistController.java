@@ -36,7 +36,8 @@ public class PlaylistController {
     public String currentPlaylist(Model model) {
         List<RestResponse.PlaylistDTO> songs = playlistService.musicTest();
         model.addAttribute("songs", songs);
-        return "playlist/current-test";
+//        return "playlist/current-test";
+        return "playlist/current-playlist";
     }
 
 }
