@@ -69,12 +69,70 @@ https://www.music-flo.com/
 </tr>
 
 <tr>
-  <td align=center>9. 곡 상세보기</td>
-  <td align=center>10. 앨범 상세보기</td>
+  <td align=center>9. 곡 상세보기,좋아요</td>
+  <td align=center>10. 앨범 상세보기,좋아요</td>
 </tr>
 <tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/0c24559e-dfd0-4b5c-a3b9-6132d37e1624"  width="400" height="300"/></td>
 <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/9c03a7ab-8bbd-48e9-a6a7-4ed55722ec7a"  width="400" height="300"/></tr>
+</tr>
+<tr>
+  <td align=center>11. 가수 상세보기,좋아요</td>
+  <td align=center>12. 검색 자동완성</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/cbfc30a6-aef9-46e7-9eb8-e6d3f79193f8"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/24262ddf-5831-4274-9921-2eaeb5d5d9a1"  width="400" height="300"/></tr>
+</tr>
+<tr>
+  <td align=center>13. 플레이리스트 추가</td>
+  <td align=center>14. 플레이리스트 체크박스 추가</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/505ca6e1-78b4-4d20-ab3b-e511bf6f255e"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/adb82cec-fc24-4762-a4a9-dc226eb2c69b"  width="400" height="300"/></tr>
+</tr>
+<tr>
+  <td align=center>15. 플레이리스트 재생,이전,다음</td>
+  <td align=center>16. 셔플 재생</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/6f3305f4-0bbb-483e-82ad-eb16573b5e1c"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/8af0ed09-f940-4be1-80a8-4fb6dc40bf1a"  width="400" height="300"/></tr>
+</tr>
+<tr>
+  <td align=center>17. 1곡 반복재생</td>
+  <td align=center>18. AI 챗봇</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/8310377c-7325-475c-b8a9-6115d4c00bdb"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/f4ebb5ae-2070-4a83-975e-e14d4b047e45"  width="400" height="300"/></tr>
+</tr>
+<tr>
+  <td align=center>19. 가사 추가</td>
+  <td align=center>20. 1분 듣기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1db4cef1-b121-4e40-a5bc-d24890c6ba2b"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>21. 가사 추가</td>
+  <td align=center>22. 결제</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/6095c966-1725-4304-9d23-8d83bc908cf2"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>23. 환불</td>
+  <td align=center>24. 1분 듣기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/8fc2336b-c357-420e-b6e0-61517d7a8169"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1db4cef1-b121-4e40-a5bc-d24890c6ba2b"  width="400" height="300"/></tr>
 </tr>
 
 
