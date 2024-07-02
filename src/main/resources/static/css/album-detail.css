@@ -258,7 +258,7 @@ tr .album-detail-btn-add-list {
 }
 
 
-.album-about .album-about-title {
+.album-detail-album-about .album-detail-album-about-title {
     width: 30%;
     font-weight: 900;
     padding-bottom: 15px;
@@ -267,11 +267,7 @@ tr .album-detail-btn-add-list {
 .album-detail-album-about .album-detail-album-about-content {
     width: 70%;
     padding-bottom: 15px;
-}
-
-.album-detail-song-intro-title {
-    padding-bottom: 15px;
-
+    padding-left: 20px;
 }
 
 .album-detail-song-intro-content {
