@@ -30,6 +30,59 @@ https://www.music-flo.com/
 
 # 3. 시나리오
 
+<table style="border: 2px;">
+<tr>
+  <td align=center>1. 회원가입,로그인</td>
+  <td align=center>2. Naver 회원가입,로그인</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-spring-falling/assets/153602328/9da38517-db03-4dfb-bcd7-2f4d65e37f46"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/af6181e6-2221-4a80-ac77-16e0f7f617f1"  width="400" height="300"/></tr>
+
+<tr>
+  <td align=center>메인 페이지</td>
+  <td align=center>목표 데이터 설정</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/7ec0f32e-1caa-4916-b9c3-8b07320c473f"  width="256" height="455"/></td>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/282a7b02-628d-487f-88df-33685ca5e70a"  width="256" height="455"/></td>
+</tr>
+<tr>
+  <td align=center>활동 페이지</td>
+  <td align=center>걸음 상세보기</td>
+
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/aa457bef-223e-41b5-8e3d-737b82406ffe"  width="256" height="455"/></td>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/280f50c3-8782-469e-8cfe-21d11f1a9a8d"  width="256" height="455"/></td>
+</tr>
+<tr>
+  <td align=center>식단 페이지</td>
+  <td align=center>식단 업로드</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/35aef2fe-a173-4ac1-82ba-2241aa3d76bd"  width="256" height="455"/></td>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/4de61583-ca47-436b-9db0-b725edc55c60"  width="256" height="455"/></td>
+</tr>
+<tr>
+  <td align=center>챌린지 상세보기</td>
+  <td align=center>챌린지 참가</td>
+
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/e178e6bd-2c43-4e4f-beea-3883c5df0688"  width="256" height="455"/></td>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/f78002dd-8b38-49ab-a749-2ce694a0c4ef"  width="256" height="455"/></td>
+</tr>
+<tr>
+  <td align=center>설문조사 페이지</td>
+  <td align=center>설문조사 작성중</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/3e5959aa-e4df-4bdf-b45c-99d6ee4947ca"  width="256" height="455"/></td>
+  <td><img src="https://github.com/coderyu5523/project-final-spring/assets/153602328/f986ded2-9567-4d68-9a36-23e23cab5115"  width="256" height="455"/></td>
+</tr>
+</table>
+
 
 # 4. 진행상황
 
