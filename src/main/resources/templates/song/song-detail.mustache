@@ -77,32 +77,23 @@
             // 데이터 가져오기
             var songData = {
                 songId: $(this).data('songid'),
-                // index: $(this).data('index'),
                 title: $(this).data('title'),
                 artistName: $(this).data('artist'),
                 coverImg: $(this).data('cover'),
                 musicFile: $(this).data('music'),
-                // islogin: $(this).data('islogin')
-
+                lyrics: $(this).data('lyrics')
             };
-            if (songData.islogin === true) {
-                $.ajax({
-                    type: "post",
-                    url: "/api/history",
-                    data: {songId: songData.songId}
-                }).done((res) => {
-                    alert("히스토리가 생성되었습니다.")
-                }).fail((res) => {
-                    alert("히스토리 오류.")
-                });
-            }
+
             addSongIfNotExists(songData);
 
             // 새로운 팝업 창 열기
-            window.open('/playlists/current', '플레이리스트', 'width=1200,height=700');
+            var playlistWindow = window.open('/playlists/current', '플레이리스트', 'width=1200,height=700');
+
+            // 데이터 전송
+            playlistWindow.onload = function() {
+                playlistWindow.postMessage(songData, '*');
+            };
         });
-
-
 
         window.addEventListener("message", function (event) {
             if (event.data === "closePopup") {
@@ -111,6 +102,6 @@
             }
         });
     });
-
 </script>
+
 {{>layout/footer}}
