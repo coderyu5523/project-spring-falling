@@ -144,6 +144,7 @@ public class FileUtil {
     // 파일 저장 메서드
     // 매개변수로 FilePathEnum 안에 있는걸 받아냄
     public static String fileSave(MultipartFile file, FilePathEnum path) {
+
         // 저장될 위치의 절대경로를 위한 File 객체
         File currentDir = new File(path.getPath());
 
@@ -162,7 +163,7 @@ public class FileUtil {
             // 서버에 파일 저장
             file.transferTo(imgPath);
             // 데이터베이스에 저장될 경로 리턴
-            return path.getPath() + fileName;
+            return "/" + path.getPath() + fileName;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

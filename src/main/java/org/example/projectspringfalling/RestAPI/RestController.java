@@ -3,7 +3,11 @@ package org.example.projectspringfalling.RestAPI;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.utils.ApiUtil;
+
+import org.example.projectspringfalling.artist.ArtistService;
+
 import org.example.projectspringfalling._core.utils.RedisUtil;
+
 import org.example.projectspringfalling.history.HistoryResponse;
 import org.example.projectspringfalling.history.HistoryService;
 import org.example.projectspringfalling.like.LikeService;
@@ -35,6 +39,9 @@ public class RestController {
     private final UserService userService;
     private final LikeService likeService;
     private final HistoryService historyService;
+
+    private final ArtistService artistService;
+
     private final PaymentService paymentService;
     private final IamportService iamportService;
     private final RedisUtil redisUtil;
@@ -83,6 +90,12 @@ public class RestController {
     public ApiUtil<List<RestResponse.SearchAutoCompleteDTO>> searchAuto(@RequestParam("keyword") String keyword) {
         List<RestResponse.SearchAutoCompleteDTO> responseDTO = songService.searchKeywordAuto(keyword);
         return new ApiUtil<>(responseDTO);
+    }
+
+    // 관리자 앨범 등록 아티스트 검색
+    @GetMapping("/search/artist")
+    public ResponseEntity<?> searchArtist(@RequestParam("keyword") String keyword) {
+        return ResponseEntity.ok(new ApiUtil<>(artistService.searchArtistWithKeyword(keyword)));
     }
 
     // 보관함 - 내 리스트

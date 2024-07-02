@@ -3,6 +3,8 @@ package org.example.projectspringfalling.album;
 import lombok.RequiredArgsConstructor;
 import org.example.projectspringfalling._core.enums.FilePathEnum;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
+import org.example.projectspringfalling.artist.Artist;
+import org.example.projectspringfalling.artist.ArtistRepository;
 import org.example.projectspringfalling.like.LikeRepository;
 import org.example.projectspringfalling.song.Song;
 import org.example.projectspringfalling.song.SongRepository;
@@ -21,6 +23,7 @@ public class AlbumService {
     private final AlbumRepository albumRepository;
     private final SongRepository songRepository;
     private final LikeRepository likeRepository;
+    private final ArtistRepository artistRepository;
 
     // 앨범 상세보기
     public AlbumResponse.DetailDTO albumDetail(Integer albumId, Integer userId) {
@@ -42,11 +45,13 @@ public class AlbumService {
     // 앨범 등록(곡 등록 포함)
     @Transactional
     public void addAlbum(AlbumRequest.SaveDTO requestDTO) {
-        String albumImg = fileSave(requestDTO.getAlbumImg(), FilePathEnum.IMAGE); // 앨범 이미지
+        String albumImg = fileSave(requestDTO.getAlbumImg(), FilePathEnum.ALBUMIMAGE); // 앨범 이미지
         List<String> songList = new ArrayList<>(); // 노래 데이터베이스 저장용
         List<String> videos = new ArrayList<>(); // 뮤직비디오 데이터베이스 저장용
 
         List<Song> songs = new ArrayList<>(); // 앨범 인서트용
+
+        Artist artist = artistRepository.findById(requestDTO.getArtistId()).orElseThrow(() -> new Exception404("아티스트를 찾을 수 없습니다."));
 
         // 음악, 비디오 저장 및 데이터베이스 저장용 String 값
         requestDTO.getSongList().forEach(saveDTO -> {
@@ -60,6 +65,6 @@ public class AlbumService {
         }
 
         // 앨범 및 노래 인서트
-        albumRepository.save(new Album(requestDTO, albumImg, songs));
+        albumRepository.save(new Album(requestDTO, artist, albumImg, songs));
     }
 }
