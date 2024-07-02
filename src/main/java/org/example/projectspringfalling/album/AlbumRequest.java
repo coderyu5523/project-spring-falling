@@ -10,6 +10,7 @@ public class AlbumRequest {
 
     @Data
     public static class SaveDTO {
+        private Integer artistId;
         private String title;
         private String intro;
         private String agency;

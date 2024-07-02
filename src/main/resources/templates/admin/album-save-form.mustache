@@ -18,7 +18,7 @@
             <form action="/albums/register" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>앨범 제목</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="앨범 제목 입력">
+                    <input type="text" class="form-control" id="album-title" name="title" placeholder="앨범 제목 입력">
                 </div>
                 <div class="form-group">
                     <label>앨범 소개</label>
@@ -62,7 +62,8 @@
                     <label>가수 선택</label>
                     <div class="input-group rounded box-tf">
                         <input class="form-control me-2 rounded-end tf-search" type="text" placeholder="가수명을 입력하세요"
-                               name="keyword" required/>
+                               name="keyword" id="search-keyword" required/>
+                        <input name="artistId" type="hidden" id="selected-artist">
                     </div>
                 </div>
 
@@ -106,11 +107,13 @@
 <script>
     let songCount = 0; // songList에 담을 때 쓰는 인덱스
 
+    // 태그 추가(곡 등록)
     function addSongElement() {
         $("#element-input-box").append(makeSongElement());
         songCount++ // 곡 추가 할때마다 인덱스 증가
     }
 
+    // 곡 추가 태그
     function makeSongElement() {
         return `
         <div class="song-registration-form">
@@ -120,7 +123,7 @@
                         </div>
                         <div class="form-group">
                             <label>노래 가사</label>
-                            <textarea class="form-control" id="lyrics" name="songList[${songCount}].lyrics" rows="4" placeholder="앨범 가사 입력"></textarea>
+                            <textarea class="form-control" id="lyrics" name="songList[${songCount}].lyrics" rows="4" placeholder="노래 가사 입력"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-3">
@@ -167,8 +170,7 @@
                             <input type="file" class="form-control-file" id="musicVideo" name="songList[${songCount}].musicVideo" accept="video/*">
                         </div>
 
-`;
-    }
+                        `;
 
-
-</script>
+    }</script>
+<script type="module" src="/js/album-save-form.js"></script>
