@@ -1,10 +1,10 @@
-.main-container{
+.main-container {
     display: flex;
     justify-content: center;
 }
 
 
-.main-subscription{
+.main-subscription {
     width: 1000px;
 }
 
@@ -141,13 +141,13 @@
     font-weight: bold;
 }
 
-table {
+.inner-box table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
 
-table td {
+.inner-box table td {
     padding: 10px;
 }
 
