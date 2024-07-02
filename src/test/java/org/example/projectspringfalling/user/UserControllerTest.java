@@ -17,9 +17,8 @@ import org.springframework.web.context.WebApplicationContext;
 import java.sql.Timestamp;
 import java.time.Instant;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
@@ -80,7 +79,6 @@ public class UserControllerTest {
     }
 
 
-
     // todo : 로그인시 리다이렉션 302 맞는데 자꾸 200 떠서 오류남.
     @Test
     public void login_test() throws Exception {
@@ -97,6 +95,29 @@ public class UserControllerTest {
                         .session(session))
                 .andExpect(status().is3xxRedirection())   // http 검증용. 리다이렉션이면 302, 성공이면 200 , 근데 이건 왜 200인지 모르겟음
                 .andExpect(redirectedUrl("/"));  // 리다이렉션 주소
+    }
+
+    @Test
+    public void update_test() throws Exception {
+        //given
+        SessionUser sessionUser = SessionUser.builder()
+                .id(1)
+                .email("email@nate.com")
+                .provider("Email")
+                .phone("01001100110")
+                .build();
+        session.setAttribute("sessionUser", sessionUser);
+
+        String password = "12345";
+        String phone = "01011112222";
+
+        // when
+        mockMvc.perform(put("/users")
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                        .param("password", password)
+                        .param("phone", phone)
+                        .session(session))
+                .andExpect(status().isOk());
     }
 
 }
