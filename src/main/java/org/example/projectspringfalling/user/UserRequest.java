@@ -5,8 +5,6 @@ import org.example.projectspringfalling._core.utils.PhoneUtil;
 
 import java.sql.Timestamp;
 
-import static org.example.projectspringfalling._core.utils.PhoneUtil.formatPhoneNumber;
-
 public class UserRequest {
 
     // 회원가입 DTO
@@ -53,7 +51,11 @@ public class UserRequest {
             this.provider = provider;
             this.email = email;
             this.subscriptionName = subscriptionName;
-            this.phone = phone;
+            if (phone == null) {
+                this.phone = "";
+            } else {
+                this.phone = phone;
+            }
         }
     }
 }
