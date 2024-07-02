@@ -17,7 +17,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <style>
-        /*<!--   회색 뜨는거 지우면 안됨     -->*/
         .message {
             padding: 5px;
             margin: 5px;
@@ -115,7 +114,7 @@
                 <a href="/join-section" class="text-body">회원가입</a>
             {{/sessionUser}}
             <a href="#chatModal" class="btn ai-round-button" id="connectBtn" data-bs-toggle="modal"
-               data-bs-target="#chatModal">
+               data-bs-target="#chatModal" data-bs-toggle="popover" title="AI 챗봇을 시작하려면 클릭하세요!">
                 <img src="/images/AI.png" alt="AI Chat">
             </a>
         </div>
@@ -144,9 +143,7 @@
     </div>
 </div>
 
-</body>
-</html>
-
 <script src="/js/header.js"></script>
 
-
+</body>
+</html>
