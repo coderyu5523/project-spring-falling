@@ -1,6 +1,6 @@
 # 1.Falling(음악 스트리밍 사이트)
 
-![Brown Beige Modern Study Music Playlist YouTube Thumbnail mp4_20240702_193003 972](https://github.com/coderyu5523/project-spring-falling/assets/153602328/ecd4b949-b33c-466a-9610-c694f6fbb88a)
+![Brown Beige Modern Study Music Playlist YouTube Thumbnail](https://github.com/coderyu5523/project-spring-falling/assets/153602328/4accb57d-5b0e-41d9-a096-9cbd796aca5b)
 
 
 ## 참고 사이트 
