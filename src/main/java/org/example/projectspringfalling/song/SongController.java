@@ -23,9 +23,11 @@ public class SongController {
 
     // 곡 상세보기
     @GetMapping("/songs/{songId}")
+
     public String songDetail(Model model, @PathVariable Integer songId) {
         SessionUser sessionUser = redisUtil.getSessionUser();
         SongResponse.DetailDTO resp = songService.songDetail(songId, sessionUser.getId());
+        System.out.println("음악없나?" + resp.getMusicFile());
         model.addAttribute("song", resp);
         return "song/song-detail";
     }
