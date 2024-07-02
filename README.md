@@ -55,9 +55,40 @@ https://www.music-flo.com/
   <td align=center>6. 장르별 페이지</td>
 </tr>
 <tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c605daad-37d3-46e0-915f-ddded00207df"  width="400" height="300"/></td>
+  <td><img src=""  width="400" height="300"/></td>
 <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1164cd3a-43ff-4d57-8dfe-949b9e6303bd"  width="400" height="300"/></tr>
 </tr>
+
+<tr>
+  <td align=center>7. 차트별 페이지</td>
+  <td align=center>8. 장르별 페이지</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/f7f22029-a1bf-4417-866f-33c0ab137177"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1164cd3a-43ff-4d57-8dfe-949b9e6303bd"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>9. 곡 상세보기</td>
+  <td align=center>10. 앨범 상세보기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/0c24559e-dfd0-4b5c-a3b9-6132d37e1624"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/9c03a7ab-8bbd-48e9-a6a7-4ed55722ec7a"  width="400" height="300"/></tr>
+</tr>
+
+
+
+
+<tr>
+  <td align=center>관리자 로그인</td>
+  <td align=center>8. 장르별 페이지</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/39c1250a-5f92-4727-bfaa-d8633921a9cb"  width="400" height="300"/></td>
+<td><img src=""  width="400" height="300"/></tr>
+</tr>
+
 
 
 
