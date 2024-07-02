@@ -30,6 +30,7 @@ https://www.music-flo.com/
 
 # 3. 시나리오
 
+## 회원
 <table style="border: 2px;">
   
 <tr>
@@ -124,20 +125,38 @@ https://www.music-flo.com/
 <tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1db4cef1-b121-4e40-a5bc-d24890c6ba2b"  width="400" height="300"/></td>
 </tr>
+</tr>
 
+</table>
+<br>
 
-
-
-<tr>
-  <td align=center>관리자 로그인</td>
-  <td align=center>8. 장르별 페이지</td>
+## 관리자
+<table>
+  <tr>
+  <td align=center>1. 관리자 로그인</td>
+  <td align=center>2. 가수 등록</td>
 </tr>
 <tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/39c1250a-5f92-4727-bfaa-d8633921a9cb"  width="400" height="300"/></td>
-<td><img src=""  width="400" height="300"/></tr>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/a01901f3-eae9-4ffe-bc40-7d5ab9ae0562"  width="400" height="300"/></tr>
 </tr>
 
-
+  <tr>
+  <td align=center>3. 가수 상세보기</td>
+  <td align=center>4. 앨범 등록</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/b31c9456-4cbe-4713-94a0-4ae8da6fa0db"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/dbafd846-f5a0-4ba2-a4ee-dd65afdb15ce"  width="400" height="300"/></tr>
+</tr>
+  <tr>
+  <td align=center>5. 앨범 상세보기</td>
+  <td align=center>6. 노래 상세보기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/7b9f4e42-c9f0-44c2-a5c9-d32643e8400f"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/5ad9faa9-cbb0-4340-b371-1bebed22d21c"  width="400" height="300"/></tr>
+</tr>
 
 
 </table>
