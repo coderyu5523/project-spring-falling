@@ -10,8 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.Optional;
-
 @RequiredArgsConstructor
 @Controller
 public class SubscriptionController {
@@ -29,9 +27,9 @@ public class SubscriptionController {
     // 내가 구매한 이용권
     @GetMapping("/my-subscription")
     public String mySubscription(Model model) {
-        SessionUser sessionUser = redisUtil.getSessionUser(); //test
-        Optional<Payment> paymentOP = paymentRepository.findByUserId(sessionUser.getId()); //test
-        model.addAttribute("payment", paymentOP.get()); //test
+        SessionUser sessionUser = redisUtil.getSessionUser();
+        Payment payment = paymentRepository.findByUserIdForRefund(sessionUser.getId()).getFirst(); // 젤 최근 결제 들고오기
+        model.addAttribute("payment", payment);
         return "subscription/my-subscription";
     }
 

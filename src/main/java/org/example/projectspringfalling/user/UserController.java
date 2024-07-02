@@ -36,7 +36,7 @@ public class UserController {
             default:
                 break;
         }
-        rt.delete("sessionUser:" + session.getId());
+        rt.delete("sessionUser");
         return "redirect:/";
     }
 
