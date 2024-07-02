@@ -1,6 +1,6 @@
 # 1.Falling(음악 스트리밍 사이트)
 
-![all](https://github.com/coderyu5523/project-spring-falling/assets/153602328/c2f13c41-82bd-4044-82e8-0c0152ccd7c5)
+![Brown Beige Modern Study Music Playlist YouTube Thumbnail mp4_20240702_193003 972](https://github.com/coderyu5523/project-spring-falling/assets/153602328/ecd4b949-b33c-466a-9610-c694f6fbb88a)
 
 
 ## 참고 사이트 
@@ -11,6 +11,7 @@ https://www.music-flo.com/
 
 
 ## PPT
+<br>
 
 # 2.팀 소개
 
@@ -121,9 +122,11 @@ https://www.music-flo.com/
 
 <tr>
   <td align=center>21. 1분 듣기</td>
+  <td align=center>22. 정렬</td>
 </tr>
 <tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1db4cef1-b121-4e40-a5bc-d24890c6ba2b"  width="400" height="300"/></td>
+  <td><img src=""  width="400" height="300"/></td>
 </tr>
 </tr>
 
@@ -161,17 +164,74 @@ https://www.music-flo.com/
 
 </table>
 
-
+<br>
 # 4. 진행상황
 
 ## 류재성
-
+- 테이블 설계
+- 로그인 회원가입 페이지
+- 메인 페이지
+- 검색 페이지
+- 관리자 곡 앨범 아티스트 페이지
+- 재생중인 플레이리스트 페이지
+- 검색어 자동완성
+- 재생중인 플레이리스트 플레이버튼 담기
+- 재생중인 플레이리스트 체크박스 담기
+- 재생중인 플레이리스트 가사
+- 히스토리
+- 곡 1분만 듣기
+  
 ## 김정수
+- 테이블 설계
+- 차트 페이지
+- 장르 페이지
+- 보관함 페이지
+- 관리자 플레이리스트 페이지
+- 관리자 아티스트 등록
+- 관리자 앨범 등록
+- 관리자 곡 상세보기
+- 관리자 앨범 상세보기
+- 관리자 아티스트 상세보기
+- 좋아요
+- 보관함(내 리스트)
+- 보관함(좋아요)
+- 보관함(최근 기록)
+- 플레이리스트 담기
+- 통합 테스트
 
 ## 김하형
+- 테이블 설계
+- 이용권 페이지
+- 마이 페이지
+- 더미데이터
+- 회원정보 수정
+- 장르별 페이지
+- 관리자 로그인 페이지
+- 관리자 로그인
+- 고객센터 페이지
+- 통합 테스트
 
 ## 서지민
+- 테이블 설계
+- 곡 상세보기 페이지
+- 앨범 상세보기 페이지
+- 아티스트 상세보기 페이지
+- 관리자 회원, 신고 페이지
+- 회원 가입,로그인
+- OAuth
+- 레디스
+- 차트별 페이지
+- 정렬
+- 메인 페이지
+- 곡 상세보기
+- 앨범 상세보기
+- 아티스트 상세보기
+- 재생중인 플레이리스트 재생, 이전, 다음 버튼
+- 재생중인 플레이리스트 셔플 재생
+- 이용권 결제
+- 이용권 환불
 
+<br>
 
 # 5. 개발 환경
 <span>
@@ -206,6 +266,7 @@ https://www.music-flo.com/
 <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>
 <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
 </span>
+<br>
 
 ## 프로젝트 아키텍쳐 : MVC 설계
 ![image](https://github.com/coderyu5523/project-final-spring/assets/153602328/79fa06c7-8b6e-479b-a0fa-bd5de6cf9f02)
@@ -215,6 +276,7 @@ https://www.music-flo.com/
 - 컨트롤러 (Controller): 사용자의 입력을 처리하고, 서비스의 메서드를 호출하여 비즈니스 로직을 수행. 그 결과를 뷰에 전달하여 사용자에게 표시한다.
 - 뷰 (View): 사용자 인터페이스 요소를 담당하며, 모델의 데이터를 사용자에게 표시하고 사용자로부터의 입력을 받아 컨트롤러로 전달한다.
       
+<br>
 
 ## 테이블 설계
 ![image](https://github.com/coderyu5523/project-spring-falling/assets/153602328/0923e4e9-a0c1-49ec-8799-396ed13bfc24)
