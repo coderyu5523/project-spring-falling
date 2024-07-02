@@ -23,7 +23,7 @@ public class SongController {
     @GetMapping("/songs/{songId}")
     public String songDetail(HttpServletRequest request, @PathVariable Integer songId) {
         SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
-        SongResponse.DetailDTO resp = songService.songDetail(songId, sessionUser.getId());
+        SongResponse.DetailDTO resp = songService.songDetail(songId, sessionUser != null ? sessionUser.getId() : null);
         request.setAttribute("song", resp);
         return "song/song-detail";
     }

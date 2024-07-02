@@ -5,6 +5,13 @@ import lombok.Data;
 public class PaymentRequest {
     // 결제 DTO
     @Data
+    public static class RefundInfoDTO {
+        private String transactionId;
+        private String amount;
+    }
+
+    // 결제 DTO
+    @Data
     public static class PaymentDTO {
         private String impUid; // 결제 고유번호
         private String merchantUid; // 주문번호
@@ -16,7 +23,16 @@ public class PaymentRequest {
 
     @Data
     public static class PrepareDTO {
-        private String merchant_uid;
+        private String merchantUid;
         private Integer amount;
+    }
+
+    @Data
+    public static class RefundDTO {
+        private String impUid;
+        private String merchantUid;
+        private Integer amount;
+        private String refundAccount;
+
     }
 }

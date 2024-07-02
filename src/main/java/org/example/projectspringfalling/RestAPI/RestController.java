@@ -37,6 +37,14 @@ public class RestController {
     private final PaymentService paymentService;
     private final IamportService iamportService;
 
+    // 환불
+    @PostMapping("/refund-payment")
+    public ResponseEntity<?> refundPayment(@RequestBody PaymentRequest.RefundInfoDTO req) {
+        SessionUser sessionUser = (SessionUser) session.getAttribute("sessionUser");
+        paymentService.refundPayment(req, sessionUser);
+        return ResponseEntity.ok("redirect:/");
+    }
+
     // 결제 사전 검증
     @PostMapping("/prepare-payment")
     public ResponseEntity<?> preparePayment(@RequestBody PaymentRequest.PrepareDTO paymentRequest) {

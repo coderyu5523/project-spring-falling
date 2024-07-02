@@ -21,7 +21,8 @@
                                 <tr>
                                     <td>이용기간 {{startDate}} ~ {{endDate}} 까지</td>
                                     <a>
-                                        <td colspan="3" class="ticket-action">환불 요청</td>
+                                        <td colspan="3" class="ticket-action plan-button" id="refund-button" data-amount="{{payment.amount}}"
+                        data-transaction-id="{{payment.transactionId}}">환불 요청</td>
                                     </a>
                                 </tr>
                             </table>
@@ -70,6 +71,11 @@
     <br>
 {{/responseDTO}}
 <script type="module" src="/js/my-subscription.js"></script>
+
+<script
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"
+></script>
 
 
 {{>layout/footer}}
