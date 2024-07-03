@@ -39,7 +39,7 @@ public interface AlbumRepository extends JpaRepository<Album, Integer> {
     Optional<Album> findAlbumAndArtistById(@Param("albumId") Integer albumId);
 
     // 관리자 앨범 목록보기
-    @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$AlbumListDTO(a.id, a.albumImg, a.title, a.artist) FROM Album a")
+    @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$AlbumListDTO(a.id, a.albumImg, a.title, a.artist) FROM Album a ORDER BY a.createdAt DESC")
     List<AdminResponse.AlbumListDTO> findAlbumList();
 
     // 관리자 앨범 상세보기

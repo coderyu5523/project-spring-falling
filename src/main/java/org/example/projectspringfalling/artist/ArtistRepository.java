@@ -1,5 +1,6 @@
 package org.example.projectspringfalling.artist;
 
+import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.example.projectspringfalling.admin.AdminResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -14,7 +15,7 @@ public interface ArtistRepository extends JpaRepository<Artist, Integer> {
     Optional<Artist> findArtistAndAlbumByArtistId(@Param("artistId") Integer artistId);
 
     // 관리자 아티스트 목록보기
-    @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$ArtistListDTO(a.id, a.artistImg, a.name, a.artistType) FROM Artist a")
+    @Query("SELECT new org.example.projectspringfalling.admin.AdminResponse$ArtistListDTO(a.id, a.artistImg, a.name, a.artistType) FROM Artist a ORDER BY a.createdAt DESC")
     List<AdminResponse.ArtistListDTO> findAllArtist();
 
     // 관리자 아티스트 상세보기
@@ -29,4 +30,7 @@ public interface ArtistRepository extends JpaRepository<Artist, Integer> {
     // 관리자 아티스트 장르
     @Query("SELECT DISTINCT s.genre FROM Album a, Song s WHERE a.artist.id = :artistId AND a.id = s.album.id")
     List<String> findArtistGenres(Integer artistId);
+
+    @Query("SELECT new org.example.projectspringfalling.RestAPI.RestResponse$SearchArtistCompleteDTO(a.id, a.name) FROM Artist a WHERE a.name like %:keyword%")
+    List<RestResponse.SearchArtistCompleteDTO> findArtistsByKeyword(String keyword);
 }

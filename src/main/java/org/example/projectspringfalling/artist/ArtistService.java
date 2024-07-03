@@ -1,6 +1,7 @@
 package org.example.projectspringfalling.artist;
 
 import lombok.RequiredArgsConstructor;
+import org.example.projectspringfalling.RestAPI.RestResponse;
 import org.example.projectspringfalling._core.enums.FilePathEnum;
 import org.example.projectspringfalling._core.errors.exception.Exception404;
 import org.example.projectspringfalling.album.Album;
@@ -48,7 +49,7 @@ public class ArtistService {
     public void addArtist(ArtistRequest.AddArtistDTO requestDTO) {
         MultipartFile artistImg = requestDTO.getArtistImg();
 
-        String imgName = fileSave(artistImg, FilePathEnum.IMAGE);
+        String imgName = fileSave(artistImg, FilePathEnum.ARTISTIMAGE);
 
         artistRepository.save(
                 Artist.builder()
@@ -62,5 +63,9 @@ public class ArtistService {
         Artist artist = artistRepository.findById(id).get();
         return artist;
 
+    }
+
+    public List<RestResponse.SearchArtistCompleteDTO> searchArtistWithKeyword(String keyword) {
+        return artistRepository.findArtistsByKeyword(keyword);
     }
 }

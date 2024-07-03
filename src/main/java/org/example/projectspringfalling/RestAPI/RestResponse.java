@@ -97,6 +97,14 @@ public class RestResponse {
         }
     }
 
+    // 관리자 아티스트 검색(앨범 등록용)
+    @AllArgsConstructor
+    @Data
+    public static class SearchArtistCompleteDTO {
+        private Integer artistId;
+        private String artistName;
+    }
+
     // 보관함 플레이리스트
     @AllArgsConstructor
     @Data

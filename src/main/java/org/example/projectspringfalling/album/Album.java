@@ -56,7 +56,8 @@ public class Album {
     // 인서트용 생성자
     // 앨범 이미지는 저장하면서 경로 받아와야 돼서 별도로 받음
     // 노래 리스트는 엔티티화 후에 받아야해서 별도로 받음
-    public Album(AlbumRequest.SaveDTO requestDTO, String albumImg, List<Song> song) {
+    public Album(AlbumRequest.SaveDTO requestDTO, Artist artist, String albumImg, List<Song> song) {
+        this.artist = artist;
         this.title = requestDTO.getTitle();
         this.distributor = requestDTO.getDistributor();
         this.agency = requestDTO.getAgency();
