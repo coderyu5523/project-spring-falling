@@ -130,6 +130,15 @@ https://youtu.be/n5tDuMhplpw
 </tr>
 </tr>
 
+<tr>
+  <td align=center>23. 내 플레이리스트 담기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-spring-falling/assets/153602328/efa6bed8-d5a3-4cec-b951-7d026f740a9c"  width="400" height="300"/></td>
+</tr>
+</tr>
+
+
 </table>
 <br>
 
