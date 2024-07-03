@@ -16,7 +16,7 @@ public class PaymentResponse {
         private ResponseDTO response;
 
         @Data
-        public static class ResponseDTO {
+        public static class ResponseDTO { // 선택적으로 가져올 수 있다.
             @JsonProperty("access_token")
             private String accessToken;
 
@@ -40,7 +40,7 @@ public class PaymentResponse {
         private ResponseDTO response;
 
         @Data
-        public static class ResponseDTO {
+        public static class ResponseDTO { // 선택적으로 가져올 수 있다.
             @JsonProperty("amount")
             private Integer amount;
 
@@ -76,7 +76,7 @@ public class PaymentResponse {
         private ResponseDTO response;
 
         @Data
-        public static class ResponseDTO {
+        public static class ResponseDTO { // 선택적으로 가져올 수 있다.
             @JsonProperty("imp_uid")
             private String imp_uid;
 
@@ -94,7 +94,7 @@ public class PaymentResponse {
 
             @JsonProperty("amount")
             private Integer amount;
-            
+
             @JsonProperty("cancel_amount")
             private Integer cancel_amount;
 
