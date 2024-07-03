@@ -34,14 +34,15 @@ https://youtu.be/n5tDuMhplpw
 # 3. 시나리오
 
 ## 자랑하고 싶은 기능
+<table style="border: 2px;">
 
 <tr>
-  <td align=center>가사 추가</td>
+  <td align=center>가사 싱크 맞추기기</td>
 </tr>
 <tr>
 <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="800" height="600"/></tr>
 </tr>
-
+</table>
 <br>
 
 ## 회원
@@ -96,28 +97,7 @@ https://youtu.be/n5tDuMhplpw
   <td align=center>12. 플레이리스트 추가</td>
 </tr>
 <tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/cbfc30a6-aef9-46e7-9eb8-e6d3f79193f8"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/505ca6e1-78b4-4d20-ab3b-e511bf6f255e"  width="400" height="300"/></tr>
-</tr>
-<tr>
-  <td align=center>13. 플레이리스트 체크박스 추가</td>
-  <td align=center>14. 플레이리스트 재생,이전,다음</td>
-</tr>
-<tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/adb82cec-fc24-4762-a4a9-dc226eb2c69b"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/6f3305f4-0bbb-483e-82ad-eb16573b5e1c"  width="400" height="300"/></tr>
-</tr>
-<tr>
-  <td align=center>15. 셔플 재생 </td>
-  <td align=center>16. 1곡 반복재생</td>
-</tr>
-<tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/8af0ed09-f940-4be1-80a8-4fb6dc40bf1a"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/8310377c-7325-475c-b8a9-6115d4c00bdb"  width="400" height="300"/></tr>
-</tr>
-<tr>
-  <td align=center>17. AI 챗봇</td>
-  <td align=center>18. 가사 추가</td>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/cbfc30a6-aef9-46e7-9eb8-e6d3f791기</td>
 </tr>
 <tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/f4ebb5ae-2070-4a83-975e-e14d4b047e45"  width="400" height="300"/></td>
