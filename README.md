@@ -20,7 +20,165 @@ https://youtu.be/n5tDuMhplpw
 ### 팀장
 |                                                         이름                                                        |                     프로필 사진                     |       GitHub 주소        |
 |:---------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------:|:--------------------------:|
-|                                                        류재성(팀장)                                                    | <img src="https://avata기
+|                                                        류재성(팀장)                                                    | <img src="https://avatars.githubusercontent.com/u/153602328?v=4" alt="profile" width="100" height="100"> | [@coderyu5523](https://github.com/coderyu5523) |
+
+### 팀원
+|                     이름                     |                     프로필 사진                     |       GitHub 주소        |
+|:-------------------------------------------:|:---------------------------------------------------:|:--------------------------:|
+|                     김정수                  | <img src="https://avatars.githubusercontent.com/u/153582376?v=4" alt="profile" width="100" height="100"> | [@zeeq123](https://github.com/zeeq123)  |
+|                     김하형                  | <img src="https://avatars.githubusercontent.com/u/153582359?v=4" alt="profile" width="100" height="100"> | [@khh8500](https://github.com/khh8500)  |
+|                     서지민                  | <img src="https://avatars.githubusercontent.com/u/118310514?v=4" alt="profile" width="100" height="100"> | [@minmeanmin](https://github.com/minmeanmin)  |
+
+<br>
+
+# 3. 시나리오
+
+## 가장 재밌던 기능 - 가사 싱크 맞추기
+<table style="border: 2px;">
+
+
+<tr>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="800" height="600"/></tr>
+</tr>
+</table>
+<br>
+
+## 회원
+<table style="border: 2px;">
+  
+<tr>
+  <td align=center>1. 회원가입,로그인</td>
+  <td align=center>2. Naver 회원가입,로그인</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-spring-falling/assets/153602328/9da38517-db03-4dfb-bcd7-2f4d65e37f46"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/af6181e6-2221-4a80-ac77-16e0f7f617f1"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>3. Kakao 회원가입,로그인</td>
+  <td align=center>4. 메인 페이지</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c605daad-37d3-46e0-915f-ddded00207df"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/388e903f-2682-4a8e-ab53-b7626b63b503"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>5. 차트별 페이지</td>
+  <td align=center>6. 장르별 페이지</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/472393bd-f3ac-4b7b-b3de-12af4008a5d5"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1164cd3a-43ff-4d57-8dfe-949b9e6303bd"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>7. 보관함 페이지</td>
+  <td align=center>8. 검색 자동완성</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/50c448c4-f342-4ce3-ab93-d0a3c82d5ddf"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/24262ddf-5831-4274-9921-2eaeb5d5d9a1"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>9. 곡 상세보기,좋아요</td>
+  <td align=center>10. 앨범 상세보기,좋아요</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/0c24559e-dfd0-4b5c-a3b9-6132d37e1624"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/9c03a7ab-8bbd-48e9-a6a7-4ed55722ec7a"  width="400" height="300"/></tr>
+</tr>
+<tr>
+  <td align=center>11. 가수 상세보기,좋아요</td>
+  <td align=center>12. 플레이리스트 추가</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/cbfc30a6-aef9-46e7-9eb8-e6d3f791기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/f4ebb5ae-2070-4a83-975e-e14d4b047e45"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>19. 결제</td>
+  <td align=center>20. 환불</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/6095c966-1725-4304-9d23-8d83bc908cf2"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/8fc2336b-c357-420e-b6e0-61517d7a8169"  width="400" height="300"/></tr>
+</tr>
+
+<tr>
+  <td align=center>21. 1분 듣기</td>
+  <td align=center>22. 정렬</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1db4cef1-b121-4e40-a5bc-d24890c6ba2b"  width="400" height="300"/></td>
+  <td><img src="https://github.com/coderyu5523/project-spring-falling/assets/153602328/3077255b-0495-4374-ab68-9ba4d257a3ec"  width="400" height="300"/></td>
+</tr>
+</tr>
+
+<tr>
+  <td align=center>23. 내 플레이리스트 담기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-spring-falling/assets/153602328/efa6bed8-d5a3-4cec-b951-7d026f740a9c"  width="400" height="300"/></td>
+</tr>
+</tr>
+
+
+</table>
+<br>
+
+## 관리자
+<table>
+  <tr>
+  <td align=center>1. 관리자 로그인</td>
+  <td align=center>2. 가수 등록</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/39c1250a-5f92-4727-bfaa-d8633921a9cb"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/a01901f3-eae9-4ffe-bc40-7d5ab9ae0562"  width="400" height="300"/></tr>
+</tr>
+
+  <tr>
+  <td align=center>3. 가수 상세보기</td>
+  <td align=center>4. 앨범 등록</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/b31c9456-4cbe-4713-94a0-4ae8da6fa0db"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/dbafd846-f5a0-4ba2-a4ee-dd65afdb15ce"  width="400" height="300"/></tr>
+</tr>
+  <tr>
+  <td align=center>5. 앨범 상세보기</td>
+  <td align=center>6. 노래 상세보기</td>
+</tr>
+<tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/7b9f4e42-c9f0-44c2-a5c9-d32643e8400f"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/5ad9faa9-cbb0-4340-b371-1bebed22d21c"  width="400" height="300"/></tr>
+</tr>
+
+
+</table>
+
+<br>
+
+# 4. 진행상황
+
+## 류재성
+- 테이블 설계
+- 로그인 회원가입 페이지
+- 메인 페이지
+- 검색 페이지
+- 관리자 곡 앨범 아티스트 페이지
+- 재생중인 플레이리스트 페이지
+- 검색어 자동완성
+- 재생중인 플레이리스트 플레이버튼 담기
+- 재생중인 플레이리스트 체크박스 담기
+- 재생중인 플레이리스트 가사
 - 히스토리
 - 곡 1분만 듣기
 - AI 챗봇
