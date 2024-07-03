@@ -33,12 +33,10 @@ https://youtu.be/n5tDuMhplpw
 
 # 3. 시나리오
 
-## 자랑하고 싶은 기능
+## 가장 재밌던 기능 - 가사 싱크 맞추기
 <table style="border: 2px;">
 
-<tr>
-  <td align=center style="font-border:600; font-size:30px">가사 싱크 맞추기기</td>
-</tr>
+
 <tr>
 <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="800" height="600"/></tr>
 </tr>
