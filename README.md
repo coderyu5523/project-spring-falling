@@ -11,6 +11,8 @@ https://www.music-flo.com/
 https://youtu.be/n5tDuMhplpw
 
 ## PPT
+[심화 1차 프로젝트 PPT.pdf](https://github.com/user-attachments/files/16076347/1.PPT.pdf)
+
 <br>
 
 # 2.팀 소개
