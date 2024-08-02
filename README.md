@@ -50,37 +50,29 @@ https://youtu.be/n5tDuMhplpw
   <td align=center>1. 회원가입,로그인</td>
   <td align=center>2. Naver 회원가입,로그인</td>
 </tr>
-<tr>
   <td><img src="https://github.com/coderyu5523/project-spring-falling/assets/153602328/9da38517-db03-4dfb-bcd7-2f4d65e37f46"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/af6181e6-2221-4a80-ac77-16e0f7f617f1"  width="400" height="300"/></tr>
-</tr>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/af6181e6-2221-4a80-ac77-16e0f7f617f1"  width="400" height="300"/></td>
 
 <tr>
   <td align=center>3. Kakao 회원가입,로그인</td>
   <td align=center>4. 메인 페이지</td>
 </tr>
-<tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c605daad-37d3-46e0-915f-ddded00207df"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/388e903f-2682-4a8e-ab53-b7626b63b503"  width="400" height="300"/></tr>
-</tr>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/388e903f-2682-4a8e-ab53-b7626b63b503"  width="400" height="300"/></td>
 
 <tr>
   <td align=center>5. 차트별 페이지</td>
   <td align=center>6. 장르별 페이지</td>
 </tr>
-<tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/472393bd-f3ac-4b7b-b3de-12af4008a5d5"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1164cd3a-43ff-4d57-8dfe-949b9e6303bd"  width="400" height="300"/></tr>
-</tr>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/472393bd-f3ac-4b7b-b3de-12af4008a5d5"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/1164cd3a-43ff-4d57-8dfe-949b9e6303bd"  width="400" height="300"/></td>
 
 <tr>
   <td align=center>7. 보관함 페이지</td>
   <td align=center>8. 검색 자동완성</td>
 </tr>
-<tr>
   <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/50c448c4-f342-4ce3-ab93-d0a3c82d5ddf"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/24262ddf-5831-4274-9921-2eaeb5d5d9a1"  width="400" height="300"/></tr>
-</tr>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/24262ddf-5831-4274-9921-2eaeb5d5d9a1"  width="400" height="300"/></td>
 
 <tr>
   <td align=center>9. 곡 상세보기,좋아요</td>
@@ -94,13 +86,9 @@ https://youtu.be/n5tDuMhplpw
   <td align=center>11. 가수 상세보기,좋아요</td>
   <td align=center>12. 플레이리스트 추가</td>
 </tr>
-<tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/cbfc30a6-aef9-46e7-9eb8-e6d3f791기</td>
-</tr>
-<tr>
-  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/f4ebb5ae-2070-4a83-975e-e14d4b047e45"  width="400" height="300"/></td>
-<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/c251c5f8-8cd8-40ab-b4bc-db1c463ed5bb"  width="400" height="300"/></tr>
-</tr>
+  <td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/cbfc30a6-aef9-46e7-9eb8-e6d3f79193f8"  width="400" height="300"/></td>
+<td><img src="https://github.com/coderyu5523/project-final-flutter/assets/153602328/505ca6e1-78b4-4d20-ab3b-e511bf6f255e"  width="400" height="300"/></td>
+
 
 <tr>
   <td align=center>19. 결제</td>
